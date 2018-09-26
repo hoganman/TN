@@ -12,7 +12,7 @@
 
 % allowed graphics extensions
 % uncomment if you prefer to add extension in \includegraphics
-\DeclareGraphicsExtensions{.pdf,.png,.jpg}
+\DeclareGraphicsExtensions{.pdf,.png,.eps}
 
 % for specifying urls and links
 \usepackage{url}
@@ -21,12 +21,12 @@
 % for defining colors
 \usepackage{xcolor}
 
-%\usepackage[labelformat=empty]{caption}
-%\usepackage{subcaption}
-%\usepackage{lmodern}
-%\usepackage{csquotes}
-%\usepackage{multirow}
-%\usepackage{multicol}
+\usepackage[labelformat=empty]{caption}
+\usepackage{subcaption}
+\usepackage{lmodern}
+\usepackage{csquotes}
+\usepackage{multirow}
+\usepackage{multicol}
 \usepackage{hepunits}
 \usepackage{hepnames}
 \usepackage{physics}
@@ -51,31 +51,7 @@
 
 \usepackage[raggedrightboxes]{ragged2e}% ,revsymb4-1}
 \usepackage{textcomp}
-
-%%%% Constant macros %%%%
-%P0D call as \pod{}
-\renewcommand{\pod}{P\O{}D}
-\newcommand{\trw}{T2KReWeight}
-\newcommand{\numu}{$\nu_\mu$}
-\newcommand{\antinumu}{$\overline{\nu}_\mu$}
-\newcommand{\muon}{$\mu$}
-\newcommand{\pion}{$\pi$}
-\newcommand{\piplus}{$\pi^+$}
-\newcommand{\pizero}{$\pi^0$}
-\newcommand{\ptheta}{$P-\theta$}
-
-%%%% Single parameter macros %%%%
-%in-line code snippet
-\newcommand{\code}[1]{\texttt{#1}}
-%to-do mark in red
-\newcommand{\todo}[1]{{\color{red} #1}}
-%mark part as done
-\newcommand{\done}{{{\Large\checkmark}}}
-%big-O notation
-\newcommand{\BigOText}[1]{$\mathcal{O} (#1)$}
-\newcommand{\BigO}[1]{\mathcal{O} (#1)}
-\newcommand{\anti}[1]{$\overline{#1}$}
-\newcommand{\tn}[1]{TN-#1}
+\usepackage{fullpage}
 
 %%%% Colors %%%%%
 %\definecolor{name}{model}{color-spec}%
@@ -149,6 +125,12 @@
 \shortcut idx
 \color #008000
 \end_index
+\paperwidth 8.5in
+\paperheight 11in
+\leftmargin 0.75in
+\topmargin 1in
+\rightmargin 0.75in
+\bottommargin 0.75in
 \secnumdepth 3
 \tocdepth 3
 \paragraph_separation indent
@@ -269,6 +251,20 @@ LatexCommand tableofcontents
 \end_inset
 
 
+\begin_inset CommandInset include
+LatexCommand input
+filename "LyxMathMacros.lyx"
+
+\end_inset
+
+
+\begin_inset CommandInset include
+LatexCommand input
+filename "LyxTextMacros.lyx"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Section
@@ -293,14 +289,22 @@ filename "Sections/Introduction.lyx"
 \end_layout
 
 \begin_layout Section
-Following Section
+P
+\begin_inset Formula $\text{\ensuremath{\mathbf{\text{\O}}}}$
+\end_inset
+
+D Samples and Selections
 \end_layout
 
 \begin_layout Standard
-There is nothing here.
-\end_layout
+\begin_inset CommandInset include
+LatexCommand input
+preview true
+filename "Sections/Selections.lyx"
 
-\begin_layout Standard
+\end_inset
+
+
 \begin_inset Newpage pagebreak
 \end_inset
 

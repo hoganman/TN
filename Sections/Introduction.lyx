@@ -108,7 +108,7 @@ There are several different equation formats that can be used in \SpecialChar Ly
  
 \end_layout
 
-\begin_layout Subsection
+\begin_layout Subsubsection
 Inline Formula
 \end_layout
 
@@ -130,21 +130,36 @@ If you run at
 
 \begin_layout Standard
 The next paragraph has begun.
- I will insert an align environment set of equations which is not referenced
- yet.
+ I will insert an align environment set of equations which has a label but
+ no reference yet.
 \end_layout
 
 \begin_layout Standard
 \begin_inset Formula 
-\[
+\begin{equation}
 \begin{aligned}f(x,y) & =f(x)\\
  & =A+Bx+Cx^{2}
 \end{aligned}
-\]
+\label{eq:polynomial}
+\end{equation}
 
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+To reference Equation 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:polynomial"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, use the Insert>Cross-Reference option.
 \end_layout
 
 \begin_layout Subsection
@@ -162,7 +177,7 @@ When adding a figure use the Insert>Float>Figure option.
 
 \begin_layout Standard
 \begin_inset Float figure
-placement h
+placement H
 wide false
 sideways false
 status open
@@ -206,44 +221,6 @@ This is an example figure.
 \end_inset
 
 
-\end_layout
-
-\begin_layout Standard
-Some have asked about correctly formatting images so that they appear correct
- when rendered as a PDF.
- Figure shows the maximum pixel size that can be used in a figure when imported
- into \SpecialChar LyX
-.
-\end_layout
-
-\begin_layout Standard
-Here are some more equations with labels.
- Right clicking on the equation will bring up a menu with options to add
- numbering and a label.
- The 'Equation Label' option is used when referencing an equation in the
- text.
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula 
-\begin{equation}
-\frac{4}{5}\alpha\iint\frac{1}{\sigma\vartheta}\label{eq:Equation One}
-\end{equation}
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-To reference Equation 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "eq:Equation One"
-
-\end_inset
-
-, use the Insert>Cross-Reference option.
 \end_layout
 
 \end_body
