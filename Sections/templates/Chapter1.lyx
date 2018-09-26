@@ -1,0 +1,232 @@
+#LyX 2.1 created this file. For more info see http://www.lyx.org/
+\lyxformat 474
+\begin_document
+\begin_header
+\textclass csuthesisLyx
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_math auto
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 0
+\use_package amssymb 0
+\use_package cancel 0
+\use_package esint 0
+\use_package mathdots 0
+\use_package mathtools 0
+\use_package mhchem 0
+\use_package stackrel 0
+\use_package stmaryrd 0
+\use_package undertilde 0
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Chapter
+Writing Using LyX
+\end_layout
+
+\begin_layout Section
+Some Helpful Pointers
+\end_layout
+
+\begin_layout Standard
+This section is to help those of you new to LyX and provide some (hopefully)
+ helpful pointers that will save you time when writing.
+ 
+\end_layout
+
+\begin_layout Section
+Equations
+\end_layout
+
+\begin_layout Standard
+There are several different equation formats that can be used in LyX.
+ 
+\end_layout
+
+\begin_layout Section
+Inline Formula
+\end_layout
+
+\begin_layout Standard
+If you run at
+\begin_inset Formula $\unitfrac[20]{km}{h}$
+\end_inset
+
+ for 
+\begin_inset Formula $\unit[5]{h}$
+\end_inset
+
+ you will have run 
+\begin_inset Formula $\unit[100]{km.}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The next paragraph has begun.
+ I will insert an align environment set of equations which is not referenced
+ yet.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\begin{aligned}f(x,y) & =f(x)\\
+ & =A+Bx+Cx^{2}
+\end{aligned}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Figures
+\end_layout
+
+\begin_layout Standard
+When adding a figure use the Insert>Float>Figure option.
+ An abbreviated description of the figure to appear in the the List of Figures
+ can be set using the Insert>Short Title option.
+ Note that references will appear as [?] when this file is rendered separately.
+ These will appear correctly when the entire document is rendered from the
+ Thesis.lyx file.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement h
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename /home/mhogan/Documents/example/Chapters/Figures/Chapter1/1.Atom.jpeg
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+This is the abbreviated text that will appear in the List of Figures.
+ 
+\end_layout
+
+\end_inset
+
+This is an example figure.
+ LyX will automatically convert the imported image to the correct format!
+ An abbreviated description of the figure to appear in the the List of Figures
+ can be set using the Insert>Short Title option.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Some have asked about correctly formatting images so that they appear correct
+ when rendered as a PDF.
+ Figure shows the maximum pixel size that can be used in a figure when imported
+ into LyX.
+\end_layout
+
+\begin_layout Standard
+Here are some more equations with labels.
+ Right clicking on the equation will bring up a menu with options to add
+ numbering and a label.
+ The 'Equation Label' option is used when referencing an equation in the
+ text.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\frac{4}{5}\alpha\iint\frac{1}{\sigma\vartheta}\label{eq:Equation One}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+To reference Equation 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:Equation One"
+
+\end_inset
+
+, use the Insert>Cross-Reference option.
+\end_layout
+
+\end_body
+\end_document

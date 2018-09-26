@@ -1,0 +1,664 @@
+#LyX 2.1 created this file. For more info see http://www.lyx.org/
+\lyxformat 474
+\begin_document
+\begin_header
+\textclass csuthesisLyx
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_math auto
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Chapter
+Theory
+\end_layout
+
+\begin_layout Section
+Foundations
+\end_layout
+
+\begin_layout Standard
+It has been an easy, and a popular expedient, of late years, to deny the
+ personal or real existence of men and things whose life and condition were
+ too much for our belief.
+ This system--which has often comforted the religious sceptic, and substituted
+ the consolations of Strauss for those of the New Testament--has been of
+ incalculable value to the historical theorists of the last and present
+ centuries.
+ To question the existence of Alexander the Great, would be a more excusable
+ act, than to believe in that of Romulus.
+ To deny a fact related in Herodotus, because it is inconsistent with a
+ theory developed from an Assyrian inscription which no two scholars read
+ in the same way, is more pardonable, than to believe in the good-natured
+ old king whom the elegant pen of Florian has idealized 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "website:PeriodicTable"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Scepticism has attained its culminating point with respect to Homer, and
+ the state of our Homeric knowledge may be described as a free permission
+ to believe any theory, provided we throw overboard all written tradition,
+ concerning the author or authors of the Iliad and Odyssey.
+ What few authorities exist on the subject, are summarily dismissed, although
+ the arguments appear to run in a circle.
+ "This cannot be true, because it is not true; and, that is not true, because
+ it cannot be true." Such seems to be the style, in which testimony upon
+ testimony, statement upon statement, is consigned to denial and oblivion
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "knuth:lp"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+It is, however, unfortunate that the professed biographies of Homer are
+ partly forgeries, partly freaks of ingenuity and imagination, in which
+ truth is the requisite most wanting.
+ Before taking a brief review of the Homeric theory in its present conditions,
+ some notice must be taken of the treatise on the Life of Homer which has
+ been attributed to Herodotus.
+ 
+\end_layout
+
+\begin_layout Section
+Additional Theory
+\end_layout
+
+\begin_layout Standard
+According to this document, the city of Cumae in Æolia, was, at an early
+ period, the seat of frequent immigrations from various parts of Greece.
+ Among the immigrants was Menapolus, the son of Ithagenes.
+ Although poor, he married, and the result of the union was a girl named
+ Critheis.
+ The girl was left an orphan at an early age, under the guardianship of
+ Cleanax, of Argos.
+ It is to the indiscretion of this maiden that we "are indebted for so much
+ happiness." Homer was the first fruit of her juvenile frailty, and received
+ the name of Melesigenes, from having been born near the river Meles, in
+ Boeotia, whither Critheis had been transported in order to save her reputation.
+\end_layout
+
+\begin_layout Standard
+"At this time," continues our narrative, "there lived at Smyrna a man named
+ Phemius, a teacher of literature and music, who, not being married, engaged
+ Critheis to manage his household, and spin the flax he received as the
+ price of his scholastic labours.
+ So satisfactory was her performance of this task, and so modest her conduct,
+ that he made proposals of marriage, declaring himself, as a further inducement,
+ willing to adopt her son, who, he asserted, would become a clever man,
+ if he were carefully brought up."
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+placement htbp
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align left
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+A Table with some information
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="2" columns="2">
+<features rotate="0" tabularvalignment="middle">
+<column alignment="center" valignment="top" width="0pt">
+<column alignment="center" valignment="top" width="0pt">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+A
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+34
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+A
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1234
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+They were married; careful cultivation ripened the talents which nature
+ had bestowed, and Melesigenes soon surpassed his schoolfellows in every
+ attainment, and, when older, rivalled his preceptor in wisdom.
+ Phemius died, leaving him sole heir to his property, and his mother soon
+ followed.
+ Melesigenes carried on his adopted father's school with great success,
+ exciting the admiration not only of the inhabitants of Smyrna, but also
+ of the strangers whom the trade carried on there, especially in the exportation
+ of corn, attracted to that city.
+ Among these visitors, one Mentes, from Leucadia, the modern Santa Maura,
+ who evinced a knowledge and intelligence rarely found in those times, persuaded
+ Melesigenes to close his school, and accompany him on his travels.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/Chapter2/2.AnotherChapter2Figure.jpeg
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Another Picture to look at.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+He promised not only to pay his expenses, but to furnish him with a further
+ stipend, urging, that, "While he was yet young, it was fitting that he
+ should see with his own 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\noun off
+\color none
+
+\backslash
+frac{4}{5}
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\noun default
+\color inherit
+eyes the countries and cities which might hereafter be the subjects of his
+ discourses." Melesigenes consented, and set out with his patron, "examining
+ all the curiosities of the countries they visited, and informing himself
+ of everything by interrogating those whom he met." We may also suppose,
+ that he wrote memoirs of all that he deemed worthy of preservation.
+ As seen in 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:1"
+
+\end_inset
+
+.
+ Having set sail from Tyrrhenia and Iberia, they reached Ithaca.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\frac{4}{5}\alpha\leq\omega\xi\label{eq:1}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Here Melesigenes, who had already suffered in his eyes, became much worse,
+ and Mentes, who was about to leave for Leucadia, left him to the medical
+ superintendence of a friend of his, named Mentor, the son of Alcinor.
+ Under his hospitable and intelligent host, Melesigenes rapidly became acquainte
+d with the legends respecting Ulysses, which afterwards formed the subject
+ of the Odyssey.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+Q_{max}=\frac{4mME_{n}}{\left(M+m\right)^{2}}\label{eq:RecoilEnergyPart1}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The inhabitants of Ithaca assert, that it was here that Melesigenes became
+ blind, but the Colophomans make their city the seat of that misfortune.
+ He then returned to Smyrna, where he applied himself to the study of poetry.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+placement htbp
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Another Table with some information
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="2" columns="2">
+<features rotate="0" tabularvalignment="middle">
+<column alignment="center" valignment="top" width="0pt">
+<column alignment="center" valignment="top" width="0pt">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+4563465
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+6789
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+465
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+879
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+"Those who maintain the Homeric poems to have been written from the beginning,
+ rest their case, not upon positive proofs, nor yet upon the existing habits
+ of society with regard to poetry--for they admit generally that the Iliad
+ and Odyssey were not read, but recited and heard,--but upon the supposed
+ necessity that there must have been manuscripts to ensure the preservation
+ of the poems--the unassisted memory of reciters being neither sufficient
+ nor trustworthy.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+Q_{max}=\frac{4\cdot1\cdot1\cdot1\mathrm{MeV}}{(1+1)^{2}}\label{eq:Recoil Energy Part 2}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+But here we only escape a smaller difficulty by running into a greater;
+ for the existence of trained bards, gifted with extraordinary memory.
+ From equations 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:RecoilEnergyPart1"
+
+\end_inset
+
+ and 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:Recoil Energy Part 2"
+
+\end_inset
+
+ even more science! Is far less astonishing than that of long manuscripts,
+ in an age essentially non-reading and non-writing, and when even suitable
+ instruments and materials for the process are not obvious 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "patashnik:bibhax"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Moreover, there is a strong positive reason for believing that the bard
+ was under no necessity of refreshing his memory by consulting a manuscript;
+ for if such had been the fact, blindness would have been a disqualification
+ for the profession, which we know that it was not, as well from the example
+ of Demodokus, in the Odyssey, as from that of the blind bard of Chios,
+ in the Hymn to the Delian Apollo, whom Thucydides, as well as the general
+ tenor of Grecian legend, identifies with Homer himself.
+ The author of that hymn, be he who he may, could never have described a
+ blind man as attaining the utmost perfection in his art, if he had been
+ conscious that the memory of the bard was only maintained by constant reference
+ to the manuscript in his chest."
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/Chapter2/1.AtomPicture.jpeg
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+An Atom!
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The loss of the digamma, that _crux_ of critics, that quicksand upon which
+ even the acumen of Bentley was shipwrecked, seems to prove beyond a doubt,
+ that the pronunciation of the Greek language had undergone a considerable
+ change.
+ Now it is certainly difficult to suppose that the Homeric poems could have
+ suffered by this change, had written copies been preserved.
+ If Chaucer's poetry, for instance, had not been written, it could only
+ have come down to us in a softened form, more like the effeminate version
+ of Dryden, than the rough, quaint, noble original.
+\end_layout
+
+\begin_layout Section
+Even More Theory
+\end_layout
+
+\begin_layout Standard
+The count went in first with Marya Dmitrievna, the countess followed on
+ the arm of a colonel of hussars, a man of importance to them because Nicholas
+ was to go with him to the regiment; then came Anna Mikhaylovna with Shinshin.
+ Berg gave his arm to Vera.
+ The smiling Julie Karagina went in with Nicholas.
+ After them other couples followed, filling the whole dining hall, and last
+ of all the children, tutors, and governesses followed singly.
+ The footmen began moving about, chairs scraped, the band struck up in the
+ gallery, and the guests settled down in their places.
+ Then the strains of the count's household band were replaced by the clatter
+ of knives and forks, the voices of visitors, and the soft steps of the
+ footmen.
+ 
+\end_layout
+
+\begin_layout Standard
+At one end of the table sat the countess with Marya Dmitrievna on her right
+ and Anna Mikhaylovna on her left, the other lady visitors were farther
+ down.
+ At the other end sat the count, with the hussar colonel on his left and
+ Shinshin and the other male visitors on his right.
+ Midway down the long table on one side sat the grownup young people: Vera
+ beside Berg, and Pierre beside Boris; and on the other side, the children,
+ tutors, and governesses.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+N_{T}=\frac{mN_{A}}{M}=\frac{127\mathrm{g}\cdot6.02\cdot10^{23}\mathrm{atoms}/\mathrm{mol}}{23\mathrm{g}/\mathrm{mol}}=3.325\cdot10^{24}\mathrm{atoms}\label{eq:Number of Atoms}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+From behind the crystal decanters and fruit vases the count kept glancing
+ at his wife and her tall cap with its light-blue ribbons, and busily filled
+ his neighbors' glasses, not neglecting his own.
+ The countess in turn, without omitting her duties as hostess, threw significant
+ glances from behind the pineapples at her husband whose face and bald head
+ seemed by their redness to contrast more than usual with his gray hair.
+ At the ladies' end an even chatter of voices was heard all the time, at
+ the men's end the voices sounded louder and louder, especially that of
+ the colonel of hussars who, growing more and more flushed, ate and drank
+ so much that the count held him up as a pattern to the other guests.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\omega=\frac{\left(\omega\sigma\varphi\right)}{\hbar}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Berg with tender smiles was saying to Vera that love is not an earthly but
+ a heavenly feeling.
+ Boris was telling his new friend Pierre who the guests were and exchanging
+ glances with Natasha, who was sitting opposite.
+ Pierre spoke little but examined the new faces, and ate a great deal.
+ Of the two soups he chose turtle with savory patties and went on to the
+ game without omitting a single dish or one of the wines.
+ These latter the butler thrust mysteriously forward, wrapped in a napkin,
+ from behind the next man's shoulders and whispered: "Dry Madeira"...
+ "Hungarian"...
+ or "Rhine wine" as the case might be.
+ Of the four crystal glasses engraved with the count's monogram that stood
+ before his plate, Pierre held out one at random and drank with enjoyment,
+ gazing with ever-increasing amiability at the other guests.
+ Natasha, who sat opposite, was looking at Boris as girls of thirteen look
+ at the boy they are in love with and have just kissed for the first time.
+ Sometimes that same look fell on Pierre, and that funny lively little girl's
+ look made him inclined to laugh without knowing why.
+\end_layout
+
+\begin_layout Standard
+Nicholas sat at some distance from Sonya, beside Julie Karagina, to whom
+ he was again talking with the same involuntary smile.
+ Sonya wore a company smile but was evidently tormented by jealousy; now
+ she turned pale, now blushed and strained every nerve to overhear what
+ Nicholas and Julie were saying to one another.
+ The governess kept looking round uneasily as if preparing to resent any
+ slight that might be put upon the children.
+ The German tutor was trying to remember all the dishes, wines, and kinds
+ of dessert, in order to send a full description of the dinner to his people
+ in Germany; and he felt greatly offended when the butler with a bottle
+ wrapped in a napkin passed him by.
+ He frowned, trying to appear as if he did not want any of that wine, but
+ was mortified because no one would understand that it was not to quench
+ his thirst or from greediness that he wanted it, but simply from a conscientiou
+s desire for knowledge.
+ 
+\end_layout
+
+\end_body
+\end_document
