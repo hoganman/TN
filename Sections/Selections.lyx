@@ -87,21 +87,220 @@ This section describes the development of
 \begin_inset Formula $\antinumu$
 \end_inset
 
- 
-\begin_inset Formula $\podtpc$
+CC-Inclusive selections in RHC beam configuration for 
+\begin_inset Formula $\pod$
 \end_inset
 
- CC-Inclusive selections in RHC beam configuration.
- The basis for these selections began with the 
+-based analyses.
+ For a further discussion of the 
+\begin_inset Formula $\pod$
+\end_inset
+
+, the reader is referred to the following sections 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+todo{Reference other 
+\backslash
+pod{} sections here}
+\end_layout
+
+\end_inset
+
+.
+ These selections are the continuation of previous works that developed
+ 
 \begin_inset Formula $\numu$
 \end_inset
 
- 
-\begin_inset Formula $\podtpc$
+CC-Inclusive selections between the 
+\begin_inset Formula $\pod$
 \end_inset
 
- CC-Inclusive selection in the FHC beam configuration which were already
- implemented in Psyche version 3.
+ and TPC1.
+ 
+\end_layout
+
+\begin_layout Standard
+A description of the 
+\begin_inset Formula $\pod$
+\end_inset
+
+, the 
+\begin_inset Quotes eld
+\end_inset
+
+Global
+\begin_inset Quotes erd
+\end_inset
+
+ reconstruction software, and selection flow is presented below.
+\end_layout
+
+\begin_layout Subsection
+The 
+\begin_inset Formula $\pod$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The 
+\begin_inset Formula $\pod$
+\end_inset
+
+, short for 
+\begin_inset Formula $\pizero$
+\end_inset
+
+ (Pi-Zero) Detector, is a plastic scintillator based tracking calorimeter
+ inside the ND280 basket.
+ The 
+\begin_inset Formula $\pod$
+\end_inset
+
+ is constructed as many sandwiches of active and inactive materials designed
+ to fully contain 
+\begin_inset Formula $\pizero$
+\end_inset
+
+decay photons.
+ The four primary regions inside the 
+\begin_inset Formula $\pod$
+\end_inset
+
+ in order of upstream to downstream of the neutrino beam are the upstream
+ ECal (USECal), upstream water target (WT), central WT, and central ECal
+ (CECal).
+ Each active module, also called a 
+\begin_inset Formula $\pod$
+\end_inset
+
+ule, consists of two orthogonal sheets of scintillator-doped, plastic, triangula
+r bars as shown in Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:PODule"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+ The ECal regions utilize Lead to contain photons and are static features.
+ The WT regions, however, can be changed to either have water or air in
+ the region between 
+\begin_inset Formula $\pod$
+\end_inset
+
+ules.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/SamplesandSelections/P0DBars.png
+	lyxscale 25
+	width 50text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+Cartoon of an Individual 
+\begin_inset Formula $\pod$
+\end_inset
+
+ule
+\end_layout
+
+\end_inset
+
+This cartoon illustrates the design of a 
+\begin_inset Formula $\pod$
+\end_inset
+
+ule with orthogonal layers of scintillating, triangular bars.
+ When a charged particle travels through the bar such as a muon from CC
+ interaction, the scintillation light is captured and wavelength shifted
+ inside a fiber bored in the center of each bar.
+ The wavelength shifted light is later observed by a photon counter.
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:PODule"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Signal Selection
+\end_layout
+
+\begin_layout Standard
+A 
+\begin_inset Formula $\numu$
+\end_inset
+
+CC interaction inside The main track selected is a minimum ionizing particle
+ (MIP).
+ While the selections were initially developed using the 
+\begin_inset Formula $\pod$
+\end_inset
+
+ and TPC subdetector reconstruction softwares separately, it was ported
+ into the Global reconstruction software for the 
+\begin_inset Formula $\numu$
+\end_inset
+
+
+\begin_inset Formula $\cczeropi$
+\end_inset
+
+ selection in the FHC beam configuration as described in technical note
+ T2K-TN-258
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Yuan:2016"
+literal "false"
+
+\end_inset
+
+.
  
 \end_layout
 
