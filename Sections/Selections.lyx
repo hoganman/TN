@@ -177,12 +177,27 @@ decay photons.
  in order of upstream to downstream of the neutrino beam are the upstream
  ECal (USECal), upstream water target (WT), central WT, and central ECal
  (CECal).
+ A representation of the entire 
+\begin_inset Formula $\pod$
+\end_inset
+
+ can be seen in Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:PODNIM"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
  Each active module, also called a 
 \begin_inset Formula $\pod$
 \end_inset
 
-ule, consists of two orthogonal sheets of scintillator-doped, plastic, triangula
-r bars as shown in Figure 
+ule, consists of two orthogonally oriented sheets of triangular, scintillator-do
+ped plastic bars as shown in Figure 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:PODule"
@@ -193,14 +208,83 @@ noprefix "false"
 \end_inset
 
 .
- The ECal regions utilize Lead to contain photons and are static features.
- The WT regions, however, can be changed to either have water or air in
- the region between 
+ The ECal regions are designed to contain decay photons inside the 
+\begin_inset Formula $\pod$
+\end_inset
+
+ by alternating the scintillator planes with Lead sheet.
+ The WT regions, as compared to the lead sheet in the ECals, alternate a
+ thin brass sheet and water target between the 
 \begin_inset Formula $\pod$
 \end_inset
 
 ules.
+ A unique feature of the 
+\begin_inset Formula $\pod$
+\end_inset
+
+ is that the water can be drained out resulting in two detector configurations:
+ water-in and water-out.
  
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/SamplesandSelections/P0D_NIM_Cartoon.png
+	lyxscale 25
+	width 50text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+Cartoon of the 
+\begin_inset Formula $\pod$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+This cartoon illustrates the concept design of the 
+\begin_inset Formula $\pod$
+\end_inset
+
+ where the neutrino beam is approaching from the left.
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:PODNIM"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -268,22 +352,92 @@ name "fig:PODule"
 \end_layout
 
 \begin_layout Subsection
+Global Reconstruction
+\end_layout
+
+\begin_layout Standard
+The task of the Global reconstruction is to combine ND280 sub-detector reconstru
+ction into an single reconstructed object.
+ It was originally designed to analyze CCQE-like events in the Tracker region
+ and has been extended with all of ND280.
+ Global attempts to match and re-fit individual sub-detector objects using
+ a Kalman filter while correcting for energy loss and multiscattering.
+ A vertex associated with the re-fit object is also extracted using a different
+ Kalman filter.
+ A detailed description of the track matching and vertex finding algorithms
+ for Global is described in T2K-TN-46
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Wikstrom:2018"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
 Signal Selection
 \end_layout
 
 \begin_layout Standard
-A 
-\begin_inset Formula $\numu$
+The selection of CC-Inclusive events use a series of cuts to select the
+ primary lepton.
+ The pre-selection cuts (
+\begin_inset Quotes eld
 \end_inset
 
-CC interaction inside The main track selected is a minimum ionizing particle
- (MIP).
- While the selections were initially developed using the 
+precuts
+\begin_inset Quotes erd
+\end_inset
+
+) are applied first to extract events that start in the 
 \begin_inset Formula $\pod$
 \end_inset
 
- and TPC subdetector reconstruction softwares separately, it was ported
- into the Global reconstruction software for the 
+ FV.
+ The candidate lepton, also referred to as the 
+\begin_inset Quotes eld
+\end_inset
+
+main track
+\begin_inset Quotes erd
+\end_inset
+
+, is then selected based upon the measured charge and momentum of all tracks
+ in TPC1.
+ 
+\end_layout
+
+\begin_layout Standard
+This following sections will describe the precuts common to all CC-Inclusive
+ selections and the branching of different cuts, after the precuts, to select
+ the main track.
+\end_layout
+
+\begin_layout Subsubsection
+Precuts
+\end_layout
+
+\begin_layout Standard
+The precuts were initially developed to select 
+\begin_inset Formula $\numu$
+\end_inset
+
+CC-Inclusive using the 
+\begin_inset Formula $\pod$
+\end_inset
+
+ and TPC sub-detector reconstruction softwares separately
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Campbell:2014"
+literal "false"
+
+\end_inset
+
+.
+ They were then used with the Global reconstruction software for the 
 \begin_inset Formula $\numu$
 \end_inset
 
@@ -301,7 +455,518 @@ literal "false"
 \end_inset
 
 .
+ The description and flow of the precuts are described here as well since
+ there is an incomplete description of the selection precuts.
  
+\end_layout
+
+\begin_layout Standard
+The precuts are performed on each bunch per beam spill as follows
+\end_layout
+
+\begin_layout Enumerate
+The event has a 
+\begin_inset Quotes eld
+\end_inset
+
+good
+\begin_inset Quotes erd
+\end_inset
+
+ data quality flag.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+An event is rejected if any sub-detector or electronics in ND280 reported
+ as 
+\begin_inset Quotes eld
+\end_inset
+
+bad
+\begin_inset Quotes erd
+\end_inset
+
+ during that bunch.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+There is at least one (1) track reconstructed in TPC1.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+A candidate main track is assigned to a specific track for each selection
+ based on a track's charge and momentum measured in TPC1.
+ The highest momentum, negatively-charged track (HMNT) is assigned as the
+ main track to the 
+\begin_inset Formula $\numu$
+\end_inset
+
+CC-Inclusive selection.
+ Likewise, the highest momentum, positively-charged track (HMPT) is the
+ main track for the 
+\begin_inset Formula $\antinumu$
+\end_inset
+
+ CC-Inclusive selection.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+The track in TPC1 must have more than 18 nodes.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+todo{Add description of what a node is.}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+The reconstructed vertex is within the 
+\begin_inset Formula $\pod$
+\end_inset
+
+ WT FV.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+The 
+\begin_inset Formula $\pod$
+\end_inset
+
+ FV is defined to include as much as the WT regions as possible.
+ Its X and Y borders are 25 cm away from the 
+\begin_inset Formula $\pod$
+\end_inset
+
+ule edges while its Z borders intersect the last and first half downstream
+ 
+\begin_inset Formula $\pod$
+\end_inset
+
+ule in the USECal and CECal, respectively.
+ The enumerated volume edges are shown in Table 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:FVDef"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+ This volume, while used for track-based analyzes in the past, was optimized
+ for 
+\begin_inset Formula $\pizero$
+\end_inset
+
+ and 
+\begin_inset Formula $\nue$
+\end_inset
+
+ analyzes
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Gilje2017"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+All tracks that enter TPC1 also pass a veto cut
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Any TPC1 track that enters the 
+\begin_inset Quotes eld
+\end_inset
+
+corridor
+\begin_inset Quotes erd
+\end_inset
+
+ volume rejects the entire event.
+ This cut was designed to eliminate broken tracks between the 
+\begin_inset Formula $\pod$
+\end_inset
+
+ and TPC1 when the separate sub-detector reconstructions were used
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Campbell:2014"
+literal "false"
+
+\end_inset
+
+.
+ In practice, this cut ensures that Global tracks entering TPC1 away from
+ its X and Y edges.
+ The corridor definition is the same as defined in T2K-TN-208 and shown
+ in Table 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:FVDef"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Float table
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="4" columns="7">
+<features booktabs="true" tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell multicolumn="1" alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Corridor Volume
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="1" alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+T2K-TN-73 WT FV
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+-988
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+< X <
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+910
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+-836
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+< X <
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+764
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+-1020
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+< Y <
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1010
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+-871
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+< Y <
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+869
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+-3139
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+< Z <
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+-900
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+-2969
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+< Z <
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1264
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+\begin_inset Formula $\pod$
+\end_inset
+
+ WT Corridor and FV Definition
+\end_layout
+
+\end_inset
+
+The 
+\begin_inset Formula $\pod$
+\end_inset
+
+ veto corridor volume (left) and WT FV (right) coordinates in ND280.
+ The corridor spans from the 5th (8th) to 40th (80th) 
+\begin_inset Formula $\pod$
+\end_inset
+
+ule (scintillator layer).
+ 
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:FVDef"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \end_body

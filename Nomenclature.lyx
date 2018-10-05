@@ -154,5 +154,96 @@ literal "true"
 
 \end_layout
 
+\begin_layout Standard
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+prefix "MIP"
+symbol "MIP"
+description "A \\textbf{M}inimum \\textbf{I}onizing \\textbf{P}article"
+literal "true"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+prefix "Tracker"
+symbol "Tracker"
+description "The region of ND280 consisting of two FGDs and TPCs		"
+literal "true"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+prefix "TPC"
+symbol "TPC"
+description "A \\textbf{T}ime \\textbf{P}rojection \\textbf{C}hamber is a device that detects and tracks charged particles with the application of strong electric fields"
+literal "true"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+prefix "FGD"
+symbol "FGD"
+description "A \\textbf{F}ine \\textbf{G}rain \\textbf{D}etector is a detector made of closely spaced, small scintillating bars designed to provide precise resolution of charged particle tracks"
+literal "true"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+prefix "TPC"
+symbol "FV"
+description "The \\textbf{F}iducial \\textbf{v}olume of a detector is the region where the detector response is well understood"
+literal "true"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+prefix "HMNT"
+symbol "HMNT"
+description "The \\textbf{H}ighest \\textbf{m}omentum \\textbf{n}egatively-charged \\textbf{t}rack in the bunch"
+literal "true"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+prefix "HMNT"
+symbol "HMPT"
+description "The \\textbf{H}ighest \\textbf{m}omentum \\textbf{p}ositively-charged \\textbf{t}rack in the bunch"
+literal "true"
+
+\end_inset
+
+
+\end_layout
+
 \end_body
 \end_document

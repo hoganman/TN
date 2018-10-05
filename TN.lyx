@@ -51,6 +51,7 @@
 
 %\usepackage{textcomp}
 \usepackage{fullpage}
+\usepackage{booktabs}
 
 %%%% Colors %%%%%
 %\definecolor{name}{model}{color-spec}%
@@ -124,7 +125,7 @@
 \use_refstyle 0
 \use_minted 0
 \branch Introduction
-\selected 1
+\selected 0
 \filename_suffix 0
 \color #faf0e6
 \end_branch
@@ -169,7 +170,7 @@
 \begin_body
 
 \begin_layout Title
-This is A Tribute To The Best Title of All Time
+This is A Tribute To The Best TN of All Time
 \end_layout
 
 \begin_layout Author

@@ -79,6 +79,7 @@
 \begin_layout Standard
 \begin_inset FormulaMacro
 \newcommand{\pod}{\text{P}\text{Ø}\text{D}}
+{\text{P}\text{Ø}\text{D}}
 \end_inset
 
 
@@ -87,6 +88,7 @@
 \begin_layout Standard
 \begin_inset FormulaMacro
 \newcommand{\podtpc}{\text{P}\text{Ø}\text{D+TPC1}}
+{\text{P}\text{Ø}\text{D+TPC1}}
 \end_inset
 
 
