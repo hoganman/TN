@@ -87,31 +87,11 @@ This section describes the development of
 \begin_inset Formula $\antinumu$
 \end_inset
 
-CC-Inclusive selections in RHC beam configuration for 
+CC-Inclusive selections in both FHC and RHC beam configuration for 
 \begin_inset Formula $\pod$
 \end_inset
 
 -based analyses.
- For a further discussion of the 
-\begin_inset Formula $\pod$
-\end_inset
-
-, the reader is referred to the following sections 
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-todo{Reference other 
-\backslash
-pod{} sections here}
-\end_layout
-
-\end_inset
-
-.
  These selections are the continuation of previous works that developed
  
 \begin_inset Formula $\numu$
@@ -158,8 +138,8 @@ The
 \begin_inset Formula $\pizero$
 \end_inset
 
- (Pi-Zero) Detector, is a plastic scintillator based tracking calorimeter
- inside the ND280 basket.
+ Detector, is a plastic scintillator based tracking calorimeter inside the
+ ND280 basket.
  The 
 \begin_inset Formula $\pod$
 \end_inset
@@ -212,9 +192,9 @@ noprefix "false"
 \begin_inset Formula $\pod$
 \end_inset
 
- by alternating the scintillator planes with Lead sheet.
- The WT regions, as compared to the lead sheet in the ECals, alternate a
- thin brass sheet and water target between the 
+ by alternating the scintillator planes with lead sheets.
+ The WT regions, as compared to the lead sheets in the ECals, alternate
+ a thin brass sheet and water filled bags between the 
 \begin_inset Formula $\pod$
 \end_inset
 
@@ -358,8 +338,15 @@ Global Reconstruction
 \begin_layout Standard
 The task of the Global reconstruction is to combine ND280 sub-detector reconstru
 ction into an single reconstructed object.
- It was originally designed to analyze CCQE-like events in the Tracker region
- and has been extended with all of ND280.
+ It was originally designed to analyze 
+\begin_inset Quotes eld
+\end_inset
+
+CCQE-like
+\begin_inset Quotes erd
+\end_inset
+
+ events in the Tracker region and has been extended with all of ND280.
  Global attempts to match and re-fit individual sub-detector objects using
  a Kalman filter while correcting for energy loss and multiscattering.
  A vertex associated with the re-fit object is also extracted using a different
@@ -497,20 +484,13 @@ There is at least one (1) track reconstructed in TPC1.
 
 \begin_deeper
 \begin_layout Itemize
-A candidate main track is assigned to a specific track for each selection
- based on a track's charge and momentum measured in TPC1.
- The highest momentum, negatively-charged track (HMNT) is assigned as the
- main track to the 
-\begin_inset Formula $\numu$
+There are no restrictions on the number of tracks fully contained in the
+ 
+\begin_inset Formula $\pod$
 \end_inset
 
-CC-Inclusive selection.
- Likewise, the highest momentum, positively-charged track (HMPT) is the
- main track for the 
-\begin_inset Formula $\antinumu$
-\end_inset
-
- CC-Inclusive selection.
+ or exiting into other sub-detectors.
+ 
 \end_layout
 
 \end_deeper
@@ -520,19 +500,21 @@ The track in TPC1 must have more than 18 nodes.
 
 \begin_deeper
 \begin_layout Itemize
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-todo{Add description of what a node is.}
-\end_layout
+The TPC reconstruction gathers vertical and horizontal hits into clusters
+ of hits.
+ The charge distribution of the cluster is used to get a vertical (horizontal)
+ position that is more accurate than the individual readout pads.
+ A node is constructed out of each cluster with associated track state informati
+on.
+ The set of nodes are used to fit the track helix
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Hillairet2011"
+literal "false"
 
 \end_inset
 
-
+.
 \end_layout
 
 \end_deeper
@@ -594,12 +576,16 @@ literal "false"
 
 \end_deeper
 \begin_layout Enumerate
-All tracks that enter TPC1 also pass a veto cut
+All tracks that enter TPC1 pass the veto cut
 \end_layout
 
 \begin_deeper
 \begin_layout Itemize
-Any TPC1 track that enters the 
+An event is rejected if any 
+\begin_inset Formula $\pod$
+\end_inset
+
+ track enters TPC1 from outside the 
 \begin_inset Quotes eld
 \end_inset
 
@@ -607,7 +593,7 @@ corridor
 \begin_inset Quotes erd
 \end_inset
 
- volume rejects the entire event.
+ volume.
  This cut was designed to eliminate broken tracks between the 
 \begin_inset Formula $\pod$
 \end_inset
@@ -617,6 +603,19 @@ corridor
 LatexCommand cite
 key "Campbell:2014"
 literal "false"
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+todo{Is this true? It seems so given the history}
+\end_layout
 
 \end_inset
 
@@ -640,6 +639,7 @@ noprefix "false"
 \end_deeper
 \begin_layout Standard
 \begin_inset Float table
+placement H
 wide false
 sideways false
 status open
@@ -661,7 +661,10 @@ status open
 \begin_inset Text
 
 \begin_layout Plain Layout
-Corridor Volume
+\begin_inset Formula $\pod$
+\end_inset
+
+ WT FV
 \end_layout
 
 \end_inset
@@ -697,7 +700,7 @@ Corridor Volume
 \begin_inset Text
 
 \begin_layout Plain Layout
-T2K-TN-73 WT FV
+Corridor Volume
 \end_layout
 
 \end_inset
@@ -726,48 +729,12 @@ T2K-TN-73 WT FV
 \begin_inset Text
 
 \begin_layout Plain Layout
--988
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-< X <
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-910
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
 -836
 \end_layout
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -776,7 +743,7 @@ T2K-TN-73 WT FV
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -785,44 +752,44 @@ T2K-TN-73 WT FV
 
 \end_inset
 </cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+-988
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+< X <
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+910
+\end_layout
+
+\end_inset
+</cell>
 </row>
 <row>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
--1020
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-< Y <
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-1010
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
 <cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
@@ -850,35 +817,6 @@ T2K-TN-73 WT FV
 
 \end_inset
 </cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" bottomline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
--3139
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-< Z <
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
--900
-\end_layout
-
-\end_inset
-</cell>
 <cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
@@ -888,6 +826,35 @@ T2K-TN-73 WT FV
 
 \end_inset
 </cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+-1020
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+< Y <
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1010
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
 <cell alignment="center" valignment="top" bottomline="true" usebox="none">
 \begin_inset Text
 
@@ -915,6 +882,42 @@ T2K-TN-73 WT FV
 
 \end_inset
 </cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+-3139
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+< Z <
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+-900
+\end_layout
+
+\end_inset
+</cell>
 </row>
 </lyxtabular>
 
@@ -934,7 +937,7 @@ status open
 \begin_inset Formula $\pod$
 \end_inset
 
- WT Corridor and FV Definition
+ WT FV and Corridor Definition
 \end_layout
 
 \end_inset
@@ -943,12 +946,13 @@ The
 \begin_inset Formula $\pod$
 \end_inset
 
- veto corridor volume (left) and WT FV (right) coordinates in ND280.
+ WT FV (left) and veto corridor volume (right) in the ND280 coordinate system.
  The corridor spans from the 5th (8th) to 40th (80th) 
 \begin_inset Formula $\pod$
 \end_inset
 
 ule (scintillator layer).
+ All the units are given in millimeters.
  
 \begin_inset CommandInset label
 LatexCommand label
@@ -967,6 +971,49 @@ name "tab:FVDef"
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+This concludes the application of precuts to all the CC-Inclusive selections.
+ What follows are the cuts that define a specific CC-Inclusive selection,
+ first in FHC mode and then RHC mode.
+ 
+\end_layout
+
+\begin_layout Subsubsection
+FHC Selections
+\end_layout
+
+\begin_layout Standard
+After passing all the precuts, a track is assigned the main track of a selection
+ based on its charge and momentum as measured in TPC1.
+ A MIP is more likely to reach TPC1 from the 
+\begin_inset Formula $\pod$
+\end_inset
+
+ FV since the 
+\begin_inset Formula $\pod$
+\end_inset
+
+ is constructed out of heavy materials especially in the CECal.
+ So the main track each selection is designed to select a muon.
+ 
+\end_layout
+
+\begin_layout Standard
+The highest momentum, negatively-charged track (HMNT) is assigned as the
+ main track to the 
+\begin_inset Formula $\numu$
+\end_inset
+
+CC-Inclusive selection.
+ Likewise, the highest momentum, positively-charged track (HMPT) is the
+ main track for the 
+\begin_inset Formula $\antinumu$
+\end_inset
+
+ CC-Inclusive selection.
+ If no main track candidate can be found, then the event is rejected.
 \end_layout
 
 \end_body

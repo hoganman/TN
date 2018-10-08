@@ -81,7 +81,7 @@
 LatexCommand nomenclature
 prefix "POD"
 symbol "PØD"
-description "The \\textbf{P}i-zero (\\textbf{Ø}) Detector"
+description "The $\\pi^0$ detector (\\textbf{p}i-\\textbf{Ø} \\textbf{d}etector)"
 literal "true"
 
 \end_inset
@@ -133,7 +133,7 @@ literal "true"
 LatexCommand nomenclature
 prefix "ND280"
 symbol "ND280"
-description "The \\textbf{N}ear \\textbf{D}etector which is \\textbf{280} meters away from the neutrino source"
+description "The \\textbf{N}ear \\textbf{D}etector of T2K which is \\textbf{280} meters away from the neutrino source."
 literal "true"
 
 \end_inset
@@ -159,7 +159,7 @@ literal "true"
 LatexCommand nomenclature
 prefix "MIP"
 symbol "MIP"
-description "A \\textbf{M}inimum \\textbf{I}onizing \\textbf{P}article"
+description "A \\textbf{m}inimum \\textbf{i}onizing \\textbf{p}article"
 literal "true"
 
 \end_inset
@@ -185,7 +185,7 @@ literal "true"
 LatexCommand nomenclature
 prefix "TPC"
 symbol "TPC"
-description "A \\textbf{T}ime \\textbf{P}rojection \\textbf{C}hamber is a device that detects and tracks charged particles with the application of strong electric fields"
+description "A \\textbf{t}ime \\textbf{p}rojection \\textbf{c}hamber is a device that detects and tracks charged particles with the application of strong electric fields"
 literal "true"
 
 \end_inset
@@ -198,7 +198,7 @@ literal "true"
 LatexCommand nomenclature
 prefix "FGD"
 symbol "FGD"
-description "A \\textbf{F}ine \\textbf{G}rain \\textbf{D}etector is a detector made of closely spaced, small scintillating bars designed to provide precise resolution of charged particle tracks"
+description "A \\textbf{f}ine \\textbf{g}rain \\textbf{d}etector is a detector made of closely spaced, small scintillating bars designed to provide precise resolution of charged particle tracks"
 literal "true"
 
 \end_inset
@@ -211,7 +211,7 @@ literal "true"
 LatexCommand nomenclature
 prefix "TPC"
 symbol "FV"
-description "The \\textbf{F}iducial \\textbf{v}olume of a detector is the region where the detector response is well understood"
+description "The \\textbf{f}iducial \\textbf{v}olume of a detector is the region where the detector response is well understood"
 literal "true"
 
 \end_inset
@@ -224,7 +224,7 @@ literal "true"
 LatexCommand nomenclature
 prefix "HMNT"
 symbol "HMNT"
-description "The \\textbf{H}ighest \\textbf{m}omentum \\textbf{n}egatively-charged \\textbf{t}rack in the bunch"
+description "The \\textbf{h}ighest \\textbf{m}omentum \\textbf{n}egatively-charged \\textbf{t}rack in the bunch"
 literal "true"
 
 \end_inset
@@ -237,7 +237,59 @@ literal "true"
 LatexCommand nomenclature
 prefix "HMNT"
 symbol "HMPT"
-description "The \\textbf{H}ighest \\textbf{m}omentum \\textbf{p}ositively-charged \\textbf{t}rack in the bunch"
+description "The \\textbf{h}ighest \\textbf{m}omentum \\textbf{p}ositively-charged \\textbf{t}rack in the bunch"
+literal "true"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+prefix "CCInc"
+symbol "CC-Inclusive"
+description "A \\textbf{c}harged \\textbf{c}urrent event selection that selects all neutrino interaction topologies with an outgoing charged lepton."
+literal "true"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+prefix "CC0pi"
+symbol "CC-0$\\pi$"
+description "A \\textbf{c}harged \\textbf{c}urrent zero pion selection is an exclusive selection that selects neutrino interaction topologies only one MIP-like particle."
+literal "true"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+prefix "FHC"
+symbol "FHC"
+description "The \\textbf{f}orward \\textbf{h}orn \\textbf{c}urrent beam configuration that focuses positively charged particles into the particle decay pipe. This configuration produces a very pure $\\nu_\\mu$ neutrino beam "
+literal "true"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+prefix "RHC"
+symbol "RHC"
+description "The \\textbf{r}everse \\textbf{h}orn \\textbf{c}urrent beam configuration that focuses negatively charged particles into the particle decay pipe. This configuration produces a $\\overline{\\nu}_\\mu$ enriched neutrino beam with a significant $\\nu_\\mu$ contribution. "
 literal "true"
 
 \end_inset
