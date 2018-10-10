@@ -383,16 +383,16 @@ precuts
 \end_inset
 
  FV.
- The candidate lepton, also referred to as the 
-\begin_inset Quotes eld
+ A MIP is more likely to reach TPC1 from the 
+\begin_inset Formula $\pod$
 \end_inset
 
-main track
-\begin_inset Quotes erd
+ FV since the 
+\begin_inset Formula $\pod$
 \end_inset
 
-, is then selected based upon the measured charge and momentum of all tracks
- in TPC1.
+ is constructed out of heavy materials especially in the CECal.
+ So the main track each selection is designed to select a muon.
  
 \end_layout
 
@@ -974,6 +974,31 @@ name "tab:FVDef"
 \end_layout
 
 \begin_layout Standard
+After passing all the precuts, a single, global track, which is observed
+ in TPC1, is assigned as the 
+\begin_inset Quotes eld
+\end_inset
+
+main track
+\begin_inset Quotes erd
+\end_inset
+
+ of a selection.
+ The main track for 
+\begin_inset Formula $\numu$
+\end_inset
+
+ selections is the highest momentum, negatively-charged track (HMNT).
+ Similarly the highest momentum, positively-charged track (HMPT) is assigned
+ the main track for 
+\begin_inset Formula $\antinumu$
+\end_inset
+
+ selections.
+ 
+\end_layout
+
+\begin_layout Standard
 This concludes the application of precuts to all the CC-Inclusive selections.
  What follows are the cuts that define a specific CC-Inclusive selection,
  first in FHC mode and then RHC mode.
@@ -981,39 +1006,48 @@ This concludes the application of precuts to all the CC-Inclusive selections.
 \end_layout
 
 \begin_layout Subsubsection
-FHC Selections
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+texorpdfstring{$
+\backslash
+nu_
+\backslash
+mu$}{NuMu}
+\end_layout
+
+\end_inset
+
+ And 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+texorpdfstring{$
+\backslash
+overline{
+\backslash
+nu}_
+\backslash
+mu$}{AntiNuMu}
+\end_layout
+
+\end_inset
+
+ FHC Selections
 \end_layout
 
 \begin_layout Standard
-After passing all the precuts, a track is assigned the main track of a selection
- based on its charge and momentum as measured in TPC1.
- A MIP is more likely to reach TPC1 from the 
-\begin_inset Formula $\pod$
-\end_inset
-
- FV since the 
-\begin_inset Formula $\pod$
-\end_inset
-
- is constructed out of heavy materials especially in the CECal.
- So the main track each selection is designed to select a muon.
+In FHC mode, the lack of a HMNT or HMPT for a particular event is the final
+ cut.
  
-\end_layout
-
-\begin_layout Standard
-The highest momentum, negatively-charged track (HMNT) is assigned as the
- main track to the 
-\begin_inset Formula $\numu$
-\end_inset
-
-CC-Inclusive selection.
- Likewise, the highest momentum, positively-charged track (HMPT) is the
- main track for the 
-\begin_inset Formula $\antinumu$
-\end_inset
-
- CC-Inclusive selection.
- If no main track candidate can be found, then the event is rejected.
 \end_layout
 
 \end_body
