@@ -215,7 +215,7 @@
 
 \begin_layout Standard
 \begin_inset FormulaMacro
-\newcommand{\cczeropi}{\text{CC}0\pion}
+\newcommand{\cczeropi}{\text{CC-}0\pion}
 \end_inset
 
 
@@ -223,7 +223,7 @@
 
 \begin_layout Standard
 \begin_inset FormulaMacro
-\newcommand{\cconepi}{\text{CC}1\pion}
+\newcommand{\cconepi}{\text{CC-}1\pion}
 \end_inset
 
 

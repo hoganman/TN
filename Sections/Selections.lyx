@@ -97,20 +97,28 @@ CC-Inclusive selections in both FHC and RHC beam configuration for
 \begin_inset Formula $\numu$
 \end_inset
 
-CC-Inclusive selections between the 
+ CC-Inclusive selections between the 
 \begin_inset Formula $\pod$
 \end_inset
 
  and TPC1.
+ The first such analyses were T2K-TN-80 and T2K-TN-100 which described the
  
-\end_layout
-
-\begin_layout Standard
-A description of the 
-\begin_inset Formula $\pod$
+\begin_inset Formula $\numu$
 \end_inset
 
-, the 
+ CC-Inclusive event selection and, later, cross-section analysis using ND280
+ Production 5 software, respectively
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Campbell:2014,Das2014"
+literal "false"
+
+\end_inset
+
+.
+ These analyzes relied on each sub-detector's reconstruction software and
+ developed a track matching algorithm since the ND280 
 \begin_inset Quotes eld
 \end_inset
 
@@ -118,7 +126,71 @@ Global
 \begin_inset Quotes erd
 \end_inset
 
- reconstruction software, and selection flow is presented below.
+ reconstruction matching was problematic in Production 5.
+ As the inter-detector matching reconstruction improved in 
+\begin_inset Quotes eld
+\end_inset
+
+Global
+\begin_inset Quotes erd
+\end_inset
+
+, two 
+\begin_inset Formula $\cczeropi$
+\end_inset
+
+ cross section analyzes, T2K-TN-258 and T2K-TN-328, were developed that
+ also used the CC-Inclusive selection as pre-selection cuts
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Yuan:2016,Campbell2017"
+literal "false"
+
+\end_inset
+
+.
+ The selections described in this technical note also employ the same pre-select
+ion cuts.
+ What follows from here in this section is a layout of the following topic
+ discussions.
+\end_layout
+
+\begin_layout Standard
+The first topic discussed in this section is a description of the 
+\begin_inset Formula $\pizero$
+\end_inset
+
+ Detector (
+\begin_inset Formula $\pod)$
+\end_inset
+
+.
+ The next topic is the event reconstruction using the 
+\begin_inset Quotes eld
+\end_inset
+
+Global
+\begin_inset Quotes erd
+\end_inset
+
+ reconstruction software.
+ Following that is the pre-selection cut flow.
+ With the pre-selection cuts established, each of the three CC-Inclusive
+ selection's cut flow is described.
+ Concluding this section is a discussion of the three samples in the following
+ order: 
+\begin_inset Formula $\numu$
+\end_inset
+
+ in FHC mode, 
+\begin_inset Formula $\numubar$
+\end_inset
+
+ in RHC, and 
+\begin_inset Formula $\numu$
+\end_inset
+
+ in RHC.
 \end_layout
 
 \begin_layout Subsection
@@ -364,7 +436,7 @@ literal "false"
 \end_layout
 
 \begin_layout Subsection
-Signal Selection
+Selection Cut Flow
 \end_layout
 
 \begin_layout Standard
@@ -404,6 +476,13 @@ This following sections will describe the precuts common to all CC-Inclusive
 
 \begin_layout Subsubsection
 Precuts
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:Precuts"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -603,19 +682,6 @@ corridor
 LatexCommand cite
 key "Campbell:2014"
 literal "false"
-
-\end_inset
-
-
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-todo{Is this true? It seems so given the history}
-\end_layout
 
 \end_inset
 
@@ -1022,31 +1088,35 @@ mu$}{NuMu}
 
 \end_inset
 
- And 
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-texorpdfstring{$
-\backslash
-overline{
-\backslash
-nu}_
-\backslash
-mu$}{AntiNuMu}
-\end_layout
-
-\end_inset
-
- FHC Selections
+ CC-Inclusive in FHC
 \end_layout
 
 \begin_layout Standard
-In FHC mode, the lack of a HMNT or HMPT for a particular event is the final
- cut.
+As discussed in the Section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "subsec:Precuts"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, this selection is the basis for the 
+\begin_inset Formula $\numu$
+\end_inset
+
+ 
+\begin_inset Formula $\cczeropi$
+\end_inset
+
+ 
+\begin_inset Formula $\podtpc$
+\end_inset
+
+ analysis.
+ In FHC mode, the lack of a HMNT for a particular event is the final cut
+ for the CC-Inclusive selection.
  
 \end_layout
 
