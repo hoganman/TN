@@ -436,7 +436,14 @@ literal "false"
 \end_layout
 
 \begin_layout Subsection
-Selection Cut Flow
+Data Sets
+\end_layout
+
+\begin_layout Subsection
+\begin_inset Formula $\pod$
+\end_inset
+
+ Selection Cuts
 \end_layout
 
 \begin_layout Standard
@@ -475,7 +482,7 @@ This following sections will describe the precuts common to all CC-Inclusive
 \end_layout
 
 \begin_layout Subsubsection
-Precuts
+Pre-Selection Cuts
 \begin_inset CommandInset label
 LatexCommand label
 name "subsec:Precuts"
@@ -486,7 +493,15 @@ name "subsec:Precuts"
 \end_layout
 
 \begin_layout Standard
-The precuts were initially developed to select 
+The pre-selection (
+\begin_inset Quotes eld
+\end_inset
+
+precuts
+\begin_inset Quotes erd
+\end_inset
+
+) were initially developed to select 
 \begin_inset Formula $\numu$
 \end_inset
 
@@ -1066,29 +1081,12 @@ main track
 
 \begin_layout Standard
 This concludes the application of precuts to all the CC-Inclusive selections.
- What follows are the cuts that define a specific CC-Inclusive selection,
+ The following subsubsections describe the CC-Inclusive selection cuts,
  first in FHC mode and then RHC mode.
- 
 \end_layout
 
 \begin_layout Subsubsection
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-texorpdfstring{$
-\backslash
-nu_
-\backslash
-mu$}{NuMu}
-\end_layout
-
-\end_inset
-
- CC-Inclusive in FHC
+CC-Inclusive in FHC
 \end_layout
 
 \begin_layout Standard
@@ -1115,9 +1113,54 @@ noprefix "false"
 \end_inset
 
  analysis.
- In FHC mode, the lack of a HMNT for a particular event is the final cut
- for the CC-Inclusive selection.
- 
+ This is FHC mode selection and so the lack of a negatively charged track
+ is the final cut for the CC-Inclusive selection.
+\end_layout
+
+\begin_layout Subsubsection
+CC-Inclusive in RHC
+\end_layout
+
+\begin_layout Subsection
+\begin_inset Formula $\pod$
+\end_inset
+
+ Water-Out Selections
+\end_layout
+
+\begin_layout Subsubsection
+CC-Inclusive
+\end_layout
+
+\begin_layout Subsubsection
+CC-1 Track (CCQE Enhanced)
+\end_layout
+
+\begin_layout Subsubsection
+CC-N Tracks (CCnQE Enhanced)
+\end_layout
+
+\begin_layout Subsection
+\begin_inset Formula $\pod$
+\end_inset
+
+ Water-In Selections
+\end_layout
+
+\begin_layout Subsubsection
+CC-Inclusive
+\end_layout
+
+\begin_layout Subsubsection
+CC-1 Track (CCQE Enhanced)
+\end_layout
+
+\begin_layout Subsubsection
+CC-N Tracks (CCnQE Enhanced)
+\end_layout
+
+\begin_layout Subsection
+Comparison Between Water-Out and Water-In Selections
 \end_layout
 
 \end_body
