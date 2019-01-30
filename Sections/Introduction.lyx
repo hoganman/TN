@@ -187,7 +187,7 @@ where
  are prior distributions which are assumed Gaussian distributions
 \begin_inset Formula 
 \begin{equation}
-\pi(\vec{y})=\left(\frac{1}{\left(2\pi\right)^{k}\det\left(V_{y}\right)}\right)^{\frac{1}{2}}e^{\left(-\frac{1}{2}\Delta\vec{y}\cdot V_{y}^{-1}\cdot\Delta y^{T}\right)},\label{eq:nuisancepriorgaussian}
+\pi(\vec{y})=\left(\frac{1}{\left(2\pi\right)^{k}\det\left(V_{y}\right)}\right)^{\frac{1}{2}}e^{\left(-\frac{1}{2}\Delta\vec{y}\cdot V_{y}^{-1}\cdot\Delta\vec{y}^{T}\right)},\label{eq:nuisancepriorgaussian}
 \end{equation}
 
 \end_inset
@@ -335,18 +335,49 @@ LL, we need to predict how they affect our detector observables.
 \end_inset
 
  of the predicted events 
-\begin_inset Formula $(\vec{N}^{p})$
+\begin_inset Formula $\left(\vec{N}^{p}\right)$
 \end_inset
 
  likelihood to the likelihood of the data events 
-\begin_inset Formula $(\vec{N}^{d})$
+\begin_inset Formula $\left(\vec{N}^{d}\right)$
 \end_inset
 
 
 \begin_inset Formula 
-\[
+\begin{equation}
 \begin{aligned}\Lambda_{\ND280}^{r} & =\frac{\mathcal{L}\left(\vec{N}^{p}\left(\xsec,\flux,\systematics\right)\left|\vec{N}^{d}\right.\right)}{\mathcal{L}\left(\vec{N}^{d}\left(\xsec,\flux,\systematics\right)\left|\vec{N}^{d}\right.\right)}\\
  & =\left(\prod_{\vec{y}=\xsec,\flux,\systematics}\frac{\pi\left(\vec{y}\right)}{\pi\left(\vec{y}_{\text{Nom}}\right)}\right)\left(\prod_{i=1}^{M}\left(\vec{N}_{i}^{p}\right)^{\vec{N}_{i}^{d}}\frac{e^{-\vec{N}_{i}^{p}}}{\vec{N}_{i}^{d}!}\right)\left(\prod_{j=1}^{M}\left(\vec{N}_{i}^{d}\right)^{\vec{N}_{i}^{d}}\frac{e^{-\vec{N}_{i}^{d}}}{\vec{N}_{i}^{d}!}\right)^{-1}
+\end{aligned}
+\label{eq:likelihoodratioND280}
+\end{equation}
+
+\end_inset
+
+where constant terms have been dropped for brevity.
+ The systematic prior terms in the likelihood ratio simplify to
+\begin_inset Formula 
+\begin{equation}
+\frac{\pi\left(\systematics\right)}{\pi\left(\systematics_{\text{Nom}}\right)}=\left(\frac{\det\left[V_{d}\left(\xsec,\flux\right)\right]}{\det\left[V_{d}\left(\xsec_{\text{Nom}},\flux_{\text{Nom}}\right)\right]}\right)^{-\frac{1}{2}}e^{\left(-\frac{1}{2}\Delta\systematics\cdot V_{d}^{-1}\left(\xsec,\flux\right)\cdot\Delta\systematics^{T}\right)}\label{eq:systematicspriorratio}
+\end{equation}
+
+\end_inset
+
+where the determinant terms of the systematic covariance matrix do not cancel
+ since MC statistical errors are included.
+ When taking 
+\begin_inset Formula $-2\log$
+\end_inset
+
+ of both sides, we use Wilks' theorem to define a chi-squared 
+\begin_inset Formula $\Delta\chi_{\ND280}^{2}=-2\log\Lambda_{\ND280}^{r}$
+\end_inset
+
+ which is
+\begin_inset Formula 
+\[
+\begin{aligned}\Delta\chi_{\ND280}^{2} & =2\sum_{i=1}^{M}\left[\vec{N}_{i}^{p}\left(\xsec,\flux,\systematics\right)-\vec{N}_{i}^{d}+\vec{N}_{i}^{d}\log\left(\frac{\vec{N}_{i}^{d}}{\vec{N}_{i}^{p}\left(\xsec,\flux,\systematics\right)}\right)\right]\\
+ & +\Delta\xsec\cdot V_{x}^{-1}\cdot\Delta\xsec^{T}+\Delta\flux\cdot V_{b}^{-1}\cdot\Delta\flux^{T}+\Delta\systematics\cdot V_{d}^{-1}\left(\xsec,\flux\right)\cdot\Delta\systematics^{T}\\
+ & +\log\left(\frac{\det\left[V_{d}\left(\xsec,\flux\right)\right]}{\det\left[V_{d}\left(\xsec_{\text{Nom}},\flux_{\text{Nom}}\right)\right]}\right)
 \end{aligned}
 \]
 
