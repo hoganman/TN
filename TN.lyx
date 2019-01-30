@@ -132,7 +132,7 @@ tabs-within-sections
 \use_refstyle 0
 \use_minted 0
 \branch Introduction
-\selected 0
+\selected 1
 \filename_suffix 0
 \color #faf0e6
 \end_branch

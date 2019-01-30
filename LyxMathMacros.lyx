@@ -229,5 +229,41 @@
 
 \end_layout
 
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\flux}{\vec{b}}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\xsec}{\vec{x}}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\systematics}{\vec{d}}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\ND}{\text{ND}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\prob}[1]{\mathcal{P}\left(#1\right)}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\Poisson}[2]{\mathcal{\mathcal{P}}_{#1}\left(#2\right)}
+\end_inset
+
+
+\end_layout
+
 \end_body
 \end_document

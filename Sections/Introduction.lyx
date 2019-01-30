@@ -79,144 +79,276 @@
 \begin_body
 
 \begin_layout Subsection
-Some Helpful Pointers
+BANFF Treatment of ND Constraint
 \end_layout
 
 \begin_layout Standard
-This section is to help those of you new to \SpecialChar LyX
- and provide some (hopefully)
- helpful pointers that will save you time when writing.
- This is a reference to the Joy Of \SpecialChar TeX
- 
-\begin_inset CommandInset citation
-LatexCommand citep
-key "spivak:ams"
-literal "false"
+The primary goal of an oscillation experiment is to measure the parameters
+ in a neutrino mixing matrix.
+ All other parameters, while having some theoretical importance to fundamental
+ physics, are nuisance parameters that must be accounted for.
+ To understand the methodology of BANFF, it is relevant to understand the
+ number of nuisance parameters that go into a ND+FD fit.
+ The BANFF implementation aims to reduce the dimensionality, and hence complexit
+y, of the problem by performing a separate analysis on the nuisance parameters
+ that only the ND can measure.
+ Then that information is propagated to the oscillation analysis for the
+ FD data.
+ Conceptually this approach has computational advantages and should provide
+ the same result with a joint ND+FD analysis.
+ However, information encoded in the ND measurements for shared nuisance
+ parameters is inevitably lost in this 
+\begin_inset Quotes eld
+\end_inset
 
+divide-and-conquer
+\begin_inset Quotes erd
+\end_inset
+
+ approach.
+\end_layout
+
+\begin_layout Standard
+The BANFF ND-only constraint between 2015 and 2018 is described in TN-220.
+ It uses a frequentist approach to find the best nuisance parameter set
+ to maximize a binned likelihood.
+ The sets of nuisance parameters are
+\end_layout
+
+\begin_layout Itemize
+cross section physics model parameters hereby denoted by 
+\begin_inset Formula $\xsec$
+\end_inset
+
+,
+\end_layout
+
+\begin_layout Itemize
+neutrino flux binned in neutrino energy hereby denoted by 
+\begin_inset Formula $\flux$
+\end_inset
+
+, and
+\end_layout
+
+\begin_layout Itemize
+detector systematics that affect detector observables hereby denoted by
+ 
+\begin_inset Formula $\systematics$
 \end_inset
 
 .
 \end_layout
 
-\begin_layout Subsection
-Equations
-\end_layout
-
 \begin_layout Standard
-There are several different equation formats that can be used in \SpecialChar LyX
-.
- 
+
+\shape italic
+A priori
+\shape default
+ (prior) knowledge of 
+\begin_inset Formula $\xsec$
+\end_inset
+
+ and 
+\begin_inset Formula $\flux$
+\end_inset
+
+ are available from external measurements and experiments.
+ The 
+\begin_inset Formula $\systematics$
+\end_inset
+
+ parameters are penalty terms whose effect can be mitigated with control
+ samples.
 \end_layout
 
 \begin_layout Subsubsection
-Inline Formula
+Constructing a Likelihood
 \end_layout
 
 \begin_layout Standard
-If you run at 
-\begin_inset Formula $20$
-\end_inset
-
- km/h for 
-\begin_inset Formula $5$
-\end_inset
-
- hours, you will have run 
-\begin_inset Formula $100$
-\end_inset
-
- km.
-\end_layout
-
-\begin_layout Standard
-The next paragraph has begun.
- I will insert an align environment set of equations which has a label but
- no reference yet.
-\end_layout
-
-\begin_layout Standard
+We can define a binned likelihood for the ND280-only constraint with the
+ nuisance parameters as
 \begin_inset Formula 
 \begin{equation}
-\begin{aligned}f(x,y) & =f(x)\\
- & =A+Bx+Cx^{2}
-\end{aligned}
-\label{eq:polynomial}
+\mathcal{L}\left(\xsec,\flux\left|\vec{N}_{\ND280}^{\text{Data}}\right.\right)=\prob{\xsec,\flux,\systematics\left|\vec{N}_{\ND280}^{\text{Data}}\right.}=\frac{\prob{\left.\vec{N}_{\ND280}^{\text{Data}}\right|\xsec,\flux,\systematics}}{\prob{\vec{N}_{\ND280}^{\text{Data}}}}\pi\left(\xsec\right)\pi\left(\flux\right)\pi\left(\systematics\right),\label{eq:likelihoodgeneral}
 \end{equation}
 
 \end_inset
 
+where 
+\begin_inset Formula $\vec{N}_{\ND280}^{\text{Data}}$
+\end_inset
 
-\end_layout
+ are the binned data measurements, 
+\begin_inset Formula $\pi\left(\vec{y}=\xsec,\flux,\systematics\right)$
+\end_inset
 
-\begin_layout Standard
-To reference Equation 
+ are prior distributions which are assumed Gaussian distributions
+\begin_inset Formula 
+\begin{equation}
+\pi(\vec{y})=\left(\frac{1}{\left(2\pi\right)^{k}\det\left(V_{y}\right)}\right)^{\frac{1}{2}}e^{\left(-\frac{1}{2}\Delta\vec{y}\cdot V_{y}^{-1}\cdot\Delta y^{T}\right)},\label{eq:nuisancepriorgaussian}
+\end{equation}
+
+\end_inset
+
+with 
+\begin_inset Formula $V_{y}$
+\end_inset
+
+ being the covariance matrix for 
+\begin_inset Formula $\vec{y}$
+\end_inset
+
+ and 
+\begin_inset Formula $\Delta\vec{y}=\vec{y}-\vec{y}_{\text{Nominal}}$
+\end_inset
+
+, and 
+\begin_inset Formula $\prob{\vec{N}_{\ND280}^{\text{Data}}}$
+\end_inset
+
+ is a normalization.
+ We have used Bayes' theorem
+\begin_inset Formula 
+\begin{equation}
+\prob{AB}=\prob B\prob{A\left|B\right.}\label{eq:bayestheorem}
+\end{equation}
+
+\end_inset
+
+to evaluate 
 \begin_inset CommandInset ref
-LatexCommand ref
-reference "eq:polynomial"
+LatexCommand formatted
+reference "eq:likelihoodgeneral"
 plural "false"
 caps "false"
 noprefix "false"
 
 \end_inset
 
-, use the Insert>Cross-Reference option.
+ as
+\begin_inset Formula 
+\begin{equation}
+\prob{\underset{A}{\underbrace{\xsec,\flux,\systematics}}\left|\underset{B}{\underbrace{\vec{N}_{\ND280}^{\text{Data}}}}\right.}=\frac{\prob{\vec{N}_{\ND280}^{\text{Data}},\left(\xsec,\flux,\systematics\right)}}{\prob{\vec{N}_{\ND280}^{\text{Data}}}}\label{eq:bayes1}
+\end{equation}
+
+\end_inset
+
+which we can further manipulate since the data are independent of the nuisance
+ parameters
+\begin_inset Formula 
+\begin{equation}
+\prob{\vec{N}_{\ND280}^{\text{Data}},\left(\xsec,\flux,\systematics\right)}=\prob{\underset{A}{\underbrace{\left(\xsec,\flux,\systematics\right)}},\underset{B}{\underbrace{\vec{N}_{\ND280}^{\text{Data}}}}}=\pi\left(\xsec\right)\pi\left(\flux\right)\pi\left(\systematics\right)\prob{\left.\vec{N}_{\ND280}^{\text{Data}}\right|\xsec,\flux,\systematics}\label{eq:bayes2}
+\end{equation}
+
+\end_inset
+
+resulting in 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "eq:likelihoodgeneral"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+ The assumption of a Gaussian prior in 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "eq:nuisancepriorgaussian"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ while not always truly Gaussian, allows for the use of a covariance matrix
+ to describe the uncertainties and correlations in parameters.
+ Once a maximum of the likelihood is found after marginalizing the effects
+ of the systematics 
+\begin_inset Formula $\systematics$
+\end_inset
+
+, the best fit values for 
+\begin_inset Formula $\flux$
+\end_inset
+
+ and 
+\begin_inset Formula $\xsec$
+\end_inset
+
+ can be propagated to the oscillation analysis.
 \end_layout
 
-\begin_layout Subsection
-Figures
+\begin_layout Subsubsection
+BANFF Likelihood
 \end_layout
 
 \begin_layout Standard
-When adding a figure use the Insert>Float>Figure option.
- An abbreviated description of the figure to appear in the the List of Figures
- can be set using the Insert>Short Title option.
- Note that references will appear as [?] when this file is rendered separately.
- These will appear correctly when the entire document is rendered from the
- Thesis.lyx file.
-\end_layout
+In practice maximizing the log-likelihood (LL) is performed instead of maximizin
+g the likelihood function.
+ In addition, multiplying the LL by -2 turns the maximization problem into
+ a minimization one which programs like MINUIT are designed to find.
+ To obtain the best set of parameters 
+\begin_inset Formula $\xsec$
+\end_inset
 
-\begin_layout Standard
-\begin_inset Float figure
-placement H
-wide false
-sideways false
-status open
+ and 
+\begin_inset Formula $\flux$
+\end_inset
 
-\begin_layout Plain Layout
-\align center
-\begin_inset Graphics
-	filename Figures/Chapter1/1.Atom.jpeg
+ from the ND280 data that minimize the 
+\begin_inset Formula $-2\times$
+\end_inset
 
+LL, we need to predict how they affect our detector observables.
+ Consider binned samples that select different charged current topologies.
+ A convenient choice of observables for all the samples are the outgoing
+ charged lepton 
+\begin_inset Formula $l$
+\end_inset
+
+ momentum 
+\begin_inset Formula $P_{l}$
+\end_inset
+
+ and angle 
+\begin_inset Formula $\cos\theta_{l}$
+\end_inset
+
+ as mesaured in the ND since all the nuisance parameters affect these quantities.
+ We have the pieces needed to define the likelihood function used in ND-only
+ BANFF analysis.
+ For each 
+\begin_inset Formula $\left(P_{l},\cos\theta_{l}\right)$
+\end_inset
+
+ bin 
+\begin_inset Formula $i=1,2,\ldots,M-1,M$
+\end_inset
+
+, the likelihood for the ND-constraint is a ratio 
+\begin_inset Formula $(r)$
+\end_inset
+
+ of the predicted events 
+\begin_inset Formula $(\vec{N}^{p})$
+\end_inset
+
+ likelihood to the likelihood of the data events 
+\begin_inset Formula $(\vec{N}^{d})$
 \end_inset
 
 
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-\begin_inset Argument 1
-status open
-
-\begin_layout Plain Layout
-This is the abbreviated text that will appear in the List of Figures.
- 
-\end_layout
-
-\end_inset
-
-This is an example figure.
- \SpecialChar LyX
- will automatically convert the imported image to the correct format! An
- abbreviated description of the figure to appear in the the List of Figures
- can be set using the Insert>Short Title option.
-\end_layout
-
-\end_inset
-
-
-\end_layout
+\begin_inset Formula 
+\[
+\begin{aligned}\Lambda_{\ND280}^{r} & =\frac{\mathcal{L}\left(\vec{N}^{p}\left(\xsec,\flux,\systematics\right)\left|\vec{N}^{d}\right.\right)}{\mathcal{L}\left(\vec{N}^{d}\left(\xsec,\flux,\systematics\right)\left|\vec{N}^{d}\right.\right)}\\
+ & =\left(\prod_{\vec{y}=\xsec,\flux,\systematics}\frac{\pi\left(\vec{y}\right)}{\pi\left(\vec{y}_{\text{Nom}}\right)}\right)\left(\prod_{i=1}^{M}\left(\vec{N}_{i}^{p}\right)^{\vec{N}_{i}^{d}}\frac{e^{-\vec{N}_{i}^{p}}}{\vec{N}_{i}^{d}!}\right)\left(\prod_{j=1}^{M}\left(\vec{N}_{i}^{d}\right)^{\vec{N}_{i}^{d}}\frac{e^{-\vec{N}_{i}^{d}}}{\vec{N}_{i}^{d}!}\right)^{-1}
+\end{aligned}
+\]
 
 \end_inset
 
