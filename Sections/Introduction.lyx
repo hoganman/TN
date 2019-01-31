@@ -44,15 +44,15 @@
 \use_package stackrel 0
 \use_package stmaryrd 0
 \use_package undertilde 0
-\cite_engine natbib
-\cite_engine_type authoryear
-\biblio_style plainnat
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
 \use_bibtopic false
 \use_indices false
 \paperorientation portrait
 \suppress_date false
 \justification true
-\use_refstyle 0
+\use_refstyle 1
 \use_minted 0
 \index Index
 \shortcut idx
@@ -109,10 +109,21 @@ divide-and-conquer
 \end_layout
 
 \begin_layout Standard
-The BANFF ND-only constraint between 2015 and 2018 is described in TN-220.
+The BANFF ND-only constraint between 2015 and 2018 is described in detail
+ in T2K-TN-220
+\begin_inset CommandInset citation
+LatexCommand citet
+key "Hartz2015"
+literal "false"
+
+\end_inset
+
+.
+ While subsequent updates to the BANFF analysis increase the sample sizes
+ and systematic parameterizations, the method has remained unchanged.
  It uses a frequentist approach to find the best nuisance parameter set
  to maximize a binned likelihood.
- The sets of nuisance parameters are
+ The sets of nuisance, also called systematic, parameters in BANFF are
 \end_layout
 
 \begin_layout Itemize
@@ -132,8 +143,8 @@ neutrino flux binned in neutrino energy hereby denoted by
 \end_layout
 
 \begin_layout Itemize
-detector systematics that affect detector observables hereby denoted by
- 
+detector systematics response weights that affect detector observables hereby
+ denoted by 
 \begin_inset Formula $\systematics$
 \end_inset
 
@@ -158,8 +169,8 @@ A priori
 \begin_inset Formula $\systematics$
 \end_inset
 
- parameters are penalty terms whose effect can be mitigated with control
- samples.
+ parameters are penalty terms whose effect can be understood and mitigated
+ with control samples.
 \end_layout
 
 \begin_layout Subsubsection
@@ -204,7 +215,8 @@ with
 \begin_inset Formula $\Delta\vec{y}=\vec{y}-\vec{y}_{\text{Nominal}}$
 \end_inset
 
-, and 
+ is the difference between the current and nominal set of vector parameters,
+ and 
 \begin_inset Formula $\prob{\vec{N}_{\ND280}^{\text{Data}}}$
 \end_inset
 
@@ -219,7 +231,7 @@ with
 
 to evaluate 
 \begin_inset CommandInset ref
-LatexCommand formatted
+LatexCommand eqref
 reference "eq:likelihoodgeneral"
 plural "false"
 caps "false"
@@ -249,7 +261,7 @@ resulting in
 LatexCommand formatted
 reference "eq:likelihoodgeneral"
 plural "false"
-caps "false"
+caps "true"
 noprefix "false"
 
 \end_inset
@@ -260,7 +272,7 @@ noprefix "false"
 LatexCommand formatted
 reference "eq:nuisancepriorgaussian"
 plural "false"
-caps "false"
+caps "true"
 noprefix "false"
 
 \end_inset
@@ -288,9 +300,9 @@ BANFF Likelihood
 \end_layout
 
 \begin_layout Standard
-In practice maximizing the log-likelihood (LL) is performed instead of maximizin
-g the likelihood function.
- In addition, multiplying the LL by -2 turns the maximization problem into
+In practice maximizing the log-likelihood (LLH) is performed instead of
+ maximizing the likelihood function.
+ In addition, multiplying the LLH by -2 turns the maximization problem into
  a minimization one which programs like MINUIT are designed to find.
  To obtain the best set of parameters 
 \begin_inset Formula $\xsec$
@@ -304,7 +316,7 @@ g the likelihood function.
 \begin_inset Formula $-2\times$
 \end_inset
 
-LL, we need to predict how they affect our detector observables.
+LLH, we need to predict how they affect our detector observables.
  Consider binned samples that select different charged current topologies.
  A convenient choice of observables for all the samples are the outgoing
  charged lepton 
@@ -320,6 +332,25 @@ LL, we need to predict how they affect our detector observables.
 \end_inset
 
  as mesaured in the ND since all the nuisance parameters affect these quantities.
+ BANFF also uses an event-by-event weighting scheme to rapidly vary the
+ event observables from detector systematics.
+ With this treatment, the detector systematics 
+\begin_inset Formula $\systematics$
+\end_inset
+
+ are treated with a response 
+\begin_inset Formula $\vec{r}$
+\end_inset
+
+ and thus 
+\begin_inset Formula $P_{l}\rightarrow P_{l}\left(\vec{r}\right)$
+\end_inset
+
+ and 
+\begin_inset Formula $\cos\theta_{l}\rightarrow\cos\theta_{l}\left(\vec{r}\right)$
+\end_inset
+
+.
  We have the pieces needed to define the likelihood function used in ND-only
  BANFF analysis.
  For each 
@@ -330,11 +361,8 @@ LL, we need to predict how they affect our detector observables.
 \begin_inset Formula $i=1,2,\ldots,M-1,M$
 \end_inset
 
-, the likelihood for the ND-constraint is a ratio 
-\begin_inset Formula $(r)$
-\end_inset
-
- of the predicted events 
+, the likelihood for the ND-constraint is a ratio of the predicted events
+ 
 \begin_inset Formula $\left(\vec{N}^{p}\right)$
 \end_inset
 
@@ -345,8 +373,8 @@ LL, we need to predict how they affect our detector observables.
 
 \begin_inset Formula 
 \begin{equation}
-\begin{aligned}\Lambda_{\ND280}^{r} & =\frac{\mathcal{L}\left(\vec{N}^{p}\left(\xsec,\flux,\systematics\right)\left|\vec{N}^{d}\right.\right)}{\mathcal{L}\left(\vec{N}^{d}\left(\xsec,\flux,\systematics\right)\left|\vec{N}^{d}\right.\right)}\\
- & =\left(\prod_{\vec{y}=\xsec,\flux,\systematics}\frac{\pi\left(\vec{y}\right)}{\pi\left(\vec{y}_{\text{Nom}}\right)}\right)\left(\prod_{i=1}^{M}\left(\vec{N}_{i}^{p}\right)^{\vec{N}_{i}^{d}}\frac{e^{-\vec{N}_{i}^{p}}}{\vec{N}_{i}^{d}!}\right)\left(\prod_{j=1}^{M}\left(\vec{N}_{i}^{d}\right)^{\vec{N}_{i}^{d}}\frac{e^{-\vec{N}_{i}^{d}}}{\vec{N}_{i}^{d}!}\right)^{-1}
+\begin{aligned}\Lambda_{\ND280}^{r} & =\frac{\mathcal{L}\left(\vec{N}^{p}\left(\xsec,\flux,\vec{r}\right)\left|\vec{N}^{d}\right.\right)}{\mathcal{L}\left(\vec{N}^{d}\left(\xsec,\flux,\vec{r}\right)\left|\vec{N}^{d}\right.\right)}\\
+ & =\left(\prod_{\vec{y}=\xsec,\flux,\vec{r}}\frac{\pi\left(\vec{y}\right)}{\pi\left(\vec{y}_{\text{Nom}}\right)}\right)\left(\prod_{i=1}^{M}\left(\vec{N}_{i}^{p}\right)^{\vec{N}_{i}^{d}}\frac{e^{-\vec{N}_{i}^{p}}}{\vec{N}_{i}^{d}!}\right)\left(\prod_{j=1}^{M}\left(\vec{N}_{i}^{d}\right)^{\vec{N}_{i}^{d}}\frac{e^{-\vec{N}_{i}^{d}}}{\vec{N}_{i}^{d}!}\right)^{-1}
 \end{aligned}
 \label{eq:likelihoodratioND280}
 \end{equation}
@@ -354,16 +382,6 @@ LL, we need to predict how they affect our detector observables.
 \end_inset
 
 where constant terms have been dropped for brevity.
- The systematic prior terms in the likelihood ratio simplify to
-\begin_inset Formula 
-\begin{equation}
-\frac{\pi\left(\systematics\right)}{\pi\left(\systematics_{\text{Nom}}\right)}=\left(\frac{\det\left[V_{d}\left(\xsec,\flux\right)\right]}{\det\left[V_{d}\left(\xsec_{\text{Nom}},\flux_{\text{Nom}}\right)\right]}\right)^{-\frac{1}{2}}e^{\left(-\frac{1}{2}\Delta\systematics\cdot V_{d}^{-1}\left(\xsec,\flux\right)\cdot\Delta\systematics^{T}\right)}\label{eq:systematicspriorratio}
-\end{equation}
-
-\end_inset
-
-where the determinant terms of the systematic covariance matrix do not cancel
- since MC statistical errors are included.
  When taking 
 \begin_inset Formula $-2\log$
 \end_inset
@@ -374,16 +392,395 @@ where the determinant terms of the systematic covariance matrix do not cancel
 
  which is
 \begin_inset Formula 
-\[
-\begin{aligned}\Delta\chi_{\ND280}^{2} & =2\sum_{i=1}^{M}\left[\vec{N}_{i}^{p}\left(\xsec,\flux,\systematics\right)-\vec{N}_{i}^{d}+\vec{N}_{i}^{d}\log\left(\frac{\vec{N}_{i}^{d}}{\vec{N}_{i}^{p}\left(\xsec,\flux,\systematics\right)}\right)\right]\\
- & +\Delta\xsec\cdot V_{x}^{-1}\cdot\Delta\xsec^{T}+\Delta\flux\cdot V_{b}^{-1}\cdot\Delta\flux^{T}+\Delta\systematics\cdot V_{d}^{-1}\left(\xsec,\flux\right)\cdot\Delta\systematics^{T}\\
- & +\log\left(\frac{\det\left[V_{d}\left(\xsec,\flux\right)\right]}{\det\left[V_{d}\left(\xsec_{\text{Nom}},\flux_{\text{Nom}}\right)\right]}\right)
+\begin{equation}
+\begin{aligned}\Delta\chi_{\ND280}^{2} & =2\sum_{i=1}^{M}\left[\vec{N}_{i}^{p}\left(\xsec,\flux,\vec{r}\right)-\vec{N}_{i}^{d}+\vec{N}_{i}^{d}\log\left(\frac{\vec{N}_{i}^{d}}{\vec{N}_{i}^{p}\left(\xsec,\flux,\systematics\right)}\right)\right]\\
+ & +\Delta\xsec\cdot V_{x}^{-1}\cdot\left(\Delta\xsec\right)^{T}+\Delta\flux\cdot V_{b}^{-1}\cdot\left(\Delta\flux\right)^{T}+\Delta\vec{r}\cdot V_{r}^{-1}\cdot\left(\Delta\vec{r}\right)^{T}
 \end{aligned}
-\]
+\label{eq:BANFFDeltaChiSqr}
+\end{equation}
+
+\end_inset
+
+where again constants were dropped from before.
+ Since 
+\begin_inset Formula $\vec{N}_{i}^{p}$
+\end_inset
+
+ is a function the nuisance parameters, this is most generally written as
+\begin_inset Formula 
+\begin{equation}
+\vec{N}_{i}^{p}\left(\xsec,\flux,\vec{r}\right)=\sum_{j=1}^{N_{i}^{\text{MC}}}\flux_{j}\left(E_{\nu}\right)\times w_{j}^{\text{norm}}\times w_{j}^{\xsec}\left(\xsec\right)\times w_{j}^{\systematics}\left(\vec{r}\right)\times\delta_{i}\left(P_{j}\left(\vec{r}\right),\cos\theta_{j}\left(\vec{r}\right),s_{j}\left(\vec{r}\right)\right)\label{eq:n-predicted-events}
+\end{equation}
+
+\end_inset
+
+where 
+\begin_inset Formula $\flux_{j}$
+\end_inset
+
+ is the flux weight as a function of 
+\begin_inset Formula $E_{\nu}$
+\end_inset
+
+, 
+\begin_inset Formula $w_{j}^{\text{norm}}$
+\end_inset
+
+ is the POT normalization
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+todo{Is this the POT weight? Originally denoted as xnorm in TN-166 which
+ denotes cross section}
+\end_layout
+
+\end_inset
+
+, 
+\begin_inset Formula $w_{j}^{\xsec}\left(\xsec\right)$
+\end_inset
+
+ is the weight function for the interaction cross section, 
+\begin_inset Formula $w_{j}^{\systematics}\left(\vec{r}\right)$
+\end_inset
+
+ is the detector systematics weights that are stored in the response functions
+ 
+\begin_inset Formula $\vec{r}$
+\end_inset
+
+, and 
+\begin_inset Formula $\delta_{i}\left(P_{j}\left(\vec{r}\right),\cos\theta_{j}\left(\vec{r}\right),s_{j}\left(\vec{r}\right)\right)$
+\end_inset
+
+ is a general delta function that indicates the correct observable bin if
+ the event belongs in sample 
+\begin_inset Formula $s_{j}\left(\vec{r}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsubsection
+Flux, Cross Section, and Detector Systematics
+\end_layout
+
+\begin_layout Standard
+The minimization of the LLH is attempted by exploring the multidimensional
+ parameter space to as best as possible match the data and prediction.
+ To understand the response of each systematic, a covariance matrix is built
+ for each source.
+ A combined covariance matrix is used in used the BANFF analysis where each
+ submatrix is initially uncorrelated with each other.
+ The parameters in the covariance matrix are usually given a nominal value
+ of one (1) unless a special value is needed with an uncertainty extracted
+ using the Cholesky decomposition method.
+ The development of each systematic uncertainty is briefly discussed below.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Flux
+\series default
+: The flux weight is binned as a function of neutrino energy 
+\begin_inset Formula $E_{\nu}$
+\end_inset
+
+ and divided by horn current (RHC or FHC) and neutrino flavor (
+\begin_inset Formula $\numu$
+\end_inset
+
+, 
+\begin_inset Formula $\numubar$
+\end_inset
+
+, 
+\begin_inset Formula $\nue$
+\end_inset
+
+, and 
+\begin_inset Formula $\nuebar$
+\end_inset
+
+).
+ Each flux bin has a preset width with parameter that describes the weight
+ and its uncertainty as shown in 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "fig:BANFF-ND280-flux"
+plural "false"
+caps "true"
+noprefix "false"
 
 \end_inset
 
 
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/Introduction/FluxParametersPrePostFitTN324.png
+	lyxscale 50
+	width 75text%
+	height 49theight%
+	keepAspectRatio
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+BANFF ND280 flux 
+\begin_inset Formula $\numu$
+\end_inset
+
+ and 
+\begin_inset Formula $\numubar$
+\end_inset
+
+ binning parameters from T2K-TN-324 data post-fit results.
+ The uncertainties are extracted from the pre-fit and post-fit covariance
+ matrices.
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:BANFF-ND280-flux"
+
+\end_inset
+
+
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+BANFF ND280 NuMu and ANuMu Flux Binning Parameters
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+.
+ Each parameter has a nominal value of one (1) and an increase of 10% (1.1)
+ indicates the corresponding bin increases by 10% also.
+ There are 50 ND and 50 SK parameters with a flux covariance matrix is shown
+ in 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "fig:BANFF-pre-fit-flux-covariance"
+plural "false"
+caps "true"
+noprefix "false"
+
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/Introduction/BANFF_Flux_matrix.png
+	lyxscale 50
+	width 49text%
+	height 49theight%
+	keepAspectRatio
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+BANFF pre-fit flux covariance matrix shown with respective detector, horn
+ current, and neutrino flavor.
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:BANFF-pre-fit-flux-covariance"
+
+\end_inset
+
+
+\begin_inset Argument 1
+status collapsed
+
+\begin_layout Plain Layout
+BANFF Pre-fit Flux Covariance Matrix
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Cross Section
+\series default
+: There are a number of cross section models and weight functions implemented
+ in BANFF.
+ A technical description of the models and weight functions is given in
+ T2K-TN-315
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Bolognesi2017"
+literal "false"
+
+\end_inset
+
+.
+ In general, there are model parameters that describe CC-0
+\begin_inset Formula $\pion$
+\end_inset
+
+, CC-1
+\begin_inset Formula $\pion$
+\end_inset
+
+, FSI (FSI: final state interactions, and smaller T2K effects.
+ There are 25 cross section parameters as shown in 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "fig:Cross-section-correlations-prefit"
+plural "false"
+caps "true"
+noprefix "false"
+
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/Introduction/BANFFXsecPrefitCorrelation.png
+	lyxscale 50
+	width 49text%
+	height 25theight%
+	keepAspectRatio
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Cross section parameters pre-fit correlation matrix from the 2017 BANFF
+ analysis.
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Cross-section-correlations-prefit"
+
+\end_inset
+
+
+\begin_inset Argument 1
+status collapsed
+
+\begin_layout Plain Layout
+Cross Section Parameters Pre-fit Correlation Matrix
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Bienstock2017"
+literal "false"
+
+\end_inset
+
+.
+ While most parameters are set to a nominal value of one (1), some are different
+ like the 2p2h (MEC) parameters.
+ Also other parameters are unconstrainted like MAQE due to limitations of
+ the dipole form factor model.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Detector Systematics
+\series default
+: Detector systematics are implemented as normalization changes to event
+ kinematics as well as sample migration.
+ Variations are stored in the event-by-event response vector 
+\begin_inset Formula $\vec{r}$
+\end_inset
+
+.
+ In order to understand how the detector systematics correlate for a set
+ of samples with varying kinematic bins, BANFF employs what are called observabl
+e normalization (obsnorm) parameters.
+ Since the event can change from sample-to-sample and in kinematic normalization
+, obsnorms correlations are understood by examining how kinematics vary
+ over many fake experiments, also called toy experiments or just toys.
+ A detector covariance matrix is contructed using all toy experiments.
+ The drawback to this method is that not all detector systematics have Gaussian
+ responses to the observables, and so the correlations are not fully accurate.
+\end_layout
+
+\begin_layout Subsection
+Usage of ND280 PSYCHE Software
 \end_layout
 
 \end_body

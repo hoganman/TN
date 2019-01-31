@@ -68,6 +68,7 @@
 
 \usepackage{nomencl}
 \def\nompreamble{\addcontentsline{toc}{section}{\nomname}\markboth{\nomname}{\nomname}}
+\usepackage{refstyle}
 \end_preamble
 \use_default_options true
 \begin_modules

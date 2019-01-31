@@ -233,12 +233,12 @@ decay photons.
 \begin_inset Formula $\pod$
 \end_inset
 
- can be seen in Figure 
+ can be seen in 
 \begin_inset CommandInset ref
-LatexCommand ref
+LatexCommand formatted
 reference "fig:PODNIM"
 plural "false"
-caps "false"
+caps "true"
 noprefix "false"
 
 \end_inset
@@ -249,12 +249,12 @@ noprefix "false"
 \end_inset
 
 ule, consists of two orthogonally oriented sheets of triangular, scintillator-do
-ped plastic bars as shown in Figure 
+ped plastic bars as shown in 
 \begin_inset CommandInset ref
-LatexCommand ref
+LatexCommand formatted
 reference "fig:PODule"
 plural "false"
-caps "false"
+caps "true"
 noprefix "false"
 
 \end_inset
@@ -303,7 +303,7 @@ status open
 
 \begin_layout Plain Layout
 \begin_inset Argument 1
-status open
+status collapsed
 
 \begin_layout Plain Layout
 Cartoon of the 
@@ -363,7 +363,7 @@ status open
 
 \begin_layout Plain Layout
 \begin_inset Argument 1
-status open
+status collapsed
 
 \begin_layout Plain Layout
 Cartoon of an Individual 
@@ -437,6 +437,10 @@ literal "false"
 
 \begin_layout Subsection
 Data Sets
+\end_layout
+
+\begin_layout Standard
+The data sets used in this analysis are runs 2-8.
 \end_layout
 
 \begin_layout Subsection
@@ -637,9 +641,9 @@ ule edges while its Z borders intersect the last and first half downstream
 \end_inset
 
 ule in the USECal and CECal, respectively.
- The enumerated volume edges are shown in Table 
+ The enumerated volume edges are shown in 
 \begin_inset CommandInset ref
-LatexCommand ref
+LatexCommand formatted
 reference "tab:FVDef"
 plural "false"
 caps "false"
@@ -704,12 +708,12 @@ literal "false"
  In practice, this cut ensures that Global tracks entering TPC1 away from
  its X and Y edges.
  The corridor definition is the same as defined in T2K-TN-208 and shown
- in Table 
+ in 
 \begin_inset CommandInset ref
-LatexCommand ref
+LatexCommand formatted
 reference "tab:FVDef"
 plural "false"
-caps "false"
+caps "true"
 noprefix "false"
 
 \end_inset
@@ -1089,12 +1093,12 @@ CC-Inclusive in FHC
 \end_layout
 
 \begin_layout Standard
-As discussed in the Section 
+As discussed in Section 
 \begin_inset CommandInset ref
-LatexCommand ref
+LatexCommand vref
 reference "subsec:Precuts"
 plural "false"
-caps "false"
+caps "true"
 noprefix "false"
 
 \end_inset
@@ -1124,11 +1128,18 @@ CC-Inclusive in RHC
 \begin_inset Formula $\pod$
 \end_inset
 
- Water-Out Selections
+ Water-Out Samples
 \end_layout
 
 \begin_layout Standard
-Look for me!!!
+This section shows the kinematic distributions for the 
+\begin_inset Formula $\pod$
+\end_inset
+
+ water-out samples.
+ First an examination of the CC-Inclusive samples and the effects of the
+ systematic weights will be explored.
+ The samples are then examined as CC 1-track and CC N-tracks.
 \end_layout
 
 \begin_layout Subsubsection
@@ -1137,6 +1148,7 @@ CC-Inclusive
 
 \begin_layout Standard
 \begin_inset Float figure
+placement H
 wide false
 sideways false
 status collapsed
@@ -1296,6 +1308,7 @@ Momentum: True Particle
 
 \begin_layout Standard
 \begin_inset Float figure
+placement H
 wide false
 sideways false
 status collapsed
@@ -1455,6 +1468,7 @@ Angle: True Particle
 
 \begin_layout Standard
 \begin_inset Float figure
+placement H
 wide false
 sideways false
 status collapsed
@@ -1612,6 +1626,7 @@ Momentum: NEUT Interaction
 
 \begin_layout Standard
 \begin_inset Float figure
+placement H
 wide false
 sideways false
 status collapsed
@@ -1771,6 +1786,7 @@ Angle: NEUT Interaction
 
 \begin_layout Standard
 \begin_inset Float figure
+placement H
 wide false
 sideways false
 status collapsed
@@ -1930,6 +1946,7 @@ Momentum: True Topology
 
 \begin_layout Standard
 \begin_inset Float figure
+placement H
 wide false
 sideways false
 status collapsed
@@ -2099,7 +2116,20 @@ CC-N Tracks (CCnQE Enhanced)
 \begin_inset Formula $\pod$
 \end_inset
 
- Water-In Selections
+ Water-In Samples
+\end_layout
+
+\begin_layout Standard
+This section shows the kinematic distributions for the 
+\begin_inset Formula $\pod$
+\end_inset
+
+ water-in samples.
+ These samples will demonstrate the similarities between it and water-out
+ modes.
+ First an examination of the CC-Inclusive samples and the effects of the
+ systematic weights will be explored.
+ The samples are then examined as CC 1-track and CC N-tracks.
 \end_layout
 
 \begin_layout Subsubsection
@@ -2108,6 +2138,7 @@ CC-Inclusive
 
 \begin_layout Standard
 \begin_inset Float figure
+placement H
 wide false
 sideways false
 status collapsed
@@ -2267,6 +2298,7 @@ Momentum: True Particle
 
 \begin_layout Standard
 \begin_inset Float figure
+placement H
 wide false
 sideways false
 status collapsed
@@ -2426,6 +2458,7 @@ Angle: True Particle
 
 \begin_layout Standard
 \begin_inset Float figure
+placement H
 wide false
 sideways false
 status collapsed
@@ -2583,6 +2616,7 @@ Momentum: NEUT Interaction
 
 \begin_layout Standard
 \begin_inset Float figure
+placement H
 wide false
 sideways false
 status collapsed
@@ -2742,6 +2776,7 @@ Angle: NEUT Interaction
 
 \begin_layout Standard
 \begin_inset Float figure
+placement H
 wide false
 sideways false
 status collapsed
@@ -2901,6 +2936,7 @@ Momentum: True Topology
 
 \begin_layout Standard
 \begin_inset Float figure
+placement H
 wide false
 sideways false
 status collapsed
@@ -3066,8 +3102,8 @@ CC-1 Track (CCQE Enhanced)
 CC-N Tracks (CCnQE Enhanced)
 \end_layout
 
-\begin_layout Subsection
-Comparison Between Water-Out and Water-In Selections
+\begin_layout Subsubsection
+Differences Between Water-Out and Water-In Samples
 \end_layout
 
 \end_body
