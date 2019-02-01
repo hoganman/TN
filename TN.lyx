@@ -45,6 +45,7 @@
   pagebackref,
   bookmarksopen,
   bookmarksnumbered]{hyperref}
+\usepackage{cleveref}
 \usepackage{colortbl}
 \usepackage{rotating} 
 \usepackage{lineno}
@@ -325,7 +326,11 @@ filename "Sections/Introduction.lyx"
 \end_layout
 
 \begin_layout Standard
-\begin_inset Newpage pagebreak
+\begin_inset Newpage clearpage
+\end_inset
+
+
+\begin_inset Newpage newpage
 \end_inset
 
 

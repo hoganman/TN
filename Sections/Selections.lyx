@@ -1147,6 +1147,31 @@ CC-Inclusive
 \end_layout
 
 \begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+Cref{fig:P0DairFHCnumuCCIncMomTrueParticle,fig:P0DairFHCnumuCCIncAngleTruePartic
+le,fig:P0DairFHCnumuCCIncMomTrueNEUTNuMode,fig:P0DairFHCnumuCCIncAngleTrueNEUTNu
+Mode,fig:P0DairFHCnumuCCIncMomTrueTopology,fig:P0DairFHCnumuCCIncAngleTrueTopolo
+gy} 
+\end_layout
+
+\end_inset
+
+show the momentum and 
+\begin_inset Formula $\cos\theta$
+\end_inset
+
+ distributions before and after applying different weights.
+ Since both flux and systematic weights are applied to all MC events, it
+ is important to validate the event weights.
+\end_layout
+
+\begin_layout Standard
 \begin_inset Float figure
 placement H
 wide false
@@ -1293,7 +1318,48 @@ Flux + systematics
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Momentum: True Particle
+Reconstructed lepton candidate momentum separated by true particle species
+ for FHC 
+\begin_inset Formula $\numu$
+\end_inset
+
+ CC-Inc.
+ events occurring in the 
+\begin_inset Formula $\pod$
+\end_inset
+
+ in water-out mode.
+ (a) The nominal MC prediction without any weights applied.
+ (b) The flux tuning is applied.
+ (c) The systematic weighting is applied.
+ (d) Both flux and systematic weighting is applied.
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+\begin_inset Formula $\pod$
+\end_inset
+
+ Air FHC 
+\begin_inset Formula $\numu$
+\end_inset
+
+ CC-Inc.
+ Lepton Cand.
+ Reco.
+ Momentum by True Particle
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:P0DairFHCnumuCCIncMomTrueParticle"
+
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -1453,7 +1519,52 @@ Flux + systematics
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Angle: True Particle
+Reconstructed lepton candidate angle separated by true particle species
+ for FHC 
+\begin_inset Formula $\numu$
+\end_inset
+
+ CC-Inc.
+ events occurring in the 
+\begin_inset Formula $\pod$
+\end_inset
+
+ in water-out mode.
+ (a) The nominal MC prediction without any weights applied.
+ (b) The flux tuning is applied.
+ (c) The systematic weighting is applied.
+ (d) Both flux and systematic weighting is applied.
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+\begin_inset Formula $\pod$
+\end_inset
+
+ Air FHC 
+\begin_inset Formula $\numu$
+\end_inset
+
+ CC-Inc.
+ Lepton Cand.
+ Reco.
+ 
+\begin_inset Formula $\cos\theta$
+\end_inset
+
+ by True Particle
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:P0DairFHCnumuCCIncAngleTrueParticle"
+
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -1611,7 +1722,48 @@ Flux + systematics
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Momentum: NEUT Interaction
+Reconstructed lepton candidate momentum separated by NEUT model interaction
+ mode for FHC 
+\begin_inset Formula $\numu$
+\end_inset
+
+ CC-Inc.
+ events occurring in the 
+\begin_inset Formula $\pod$
+\end_inset
+
+ in water-out mode.
+ (a) The nominal MC prediction without any weights applied.
+ (b) The flux tuning is applied.
+ (c) The systematic weighting is applied.
+ (d) Both flux and systematic weighting is applied.
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+\begin_inset Formula $\pod$
+\end_inset
+
+ Air FHC 
+\begin_inset Formula $\numu$
+\end_inset
+
+ CC-Inc.
+ Lepton Cand.
+ Reco.
+ Momentum by NEUT Mode
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:P0DairFHCnumuCCIncMomTrueNEUTNuMode"
+
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -1771,7 +1923,55 @@ Flux + systematics
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Angle: NEUT Interaction
+Reconstructed lepton candidate 
+\begin_inset Formula $\cos\theta$
+\end_inset
+
+ separated by NEUT model interaction mode for FHC 
+\begin_inset Formula $\numu$
+\end_inset
+
+ CC-Inc.
+ events occurring in the 
+\begin_inset Formula $\pod$
+\end_inset
+
+ in water-out mode.
+ (a) The nominal MC prediction without any weights applied.
+ (b) The flux tuning is applied.
+ (c) The systematic weighting is applied.
+ (d) Both flux and systematic weighting is applied.
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+\begin_inset Formula $\pod$
+\end_inset
+
+ Air FHC 
+\begin_inset Formula $\numu$
+\end_inset
+
+ CC-Inc.
+ Lepton Cand.
+ Reco.
+ 
+\begin_inset Formula $\cos\theta$
+\end_inset
+
+ by NEUT Mode
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:P0DairFHCnumuCCIncAngleTrueNEUTNuMode"
+
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -1931,7 +2131,47 @@ Flux + systematics
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Momentum: True Topology
+Reconstructed lepton candidate momentum separated by topology for FHC 
+\begin_inset Formula $\numu$
+\end_inset
+
+ CC-Inc.
+ events occurring in the 
+\begin_inset Formula $\pod$
+\end_inset
+
+ in water-out mode.
+ (a) The nominal MC prediction without any weights applied.
+ (b) The flux tuning is applied.
+ (c) The systematic weighting is applied.
+ (d) Both flux and systematic weighting is applied.
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+\begin_inset Formula $\pod$
+\end_inset
+
+ Air FHC 
+\begin_inset Formula $\numu$
+\end_inset
+
+ CC-Inc.
+ Lepton Cand.
+ Reco.
+ Momentum by True Topology
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:P0DairFHCnumuCCIncMomTrueTopology"
+
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -2091,7 +2331,55 @@ Flux + systematics
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Angle: True Topology
+Reconstructed lepton candidate 
+\begin_inset Formula $\cos\theta$
+\end_inset
+
+ separated by topology for FHC 
+\begin_inset Formula $\numu$
+\end_inset
+
+ CC-Inc.
+ events occurring in the 
+\begin_inset Formula $\pod$
+\end_inset
+
+ in water-out mode.
+ (a) The nominal MC prediction without any weights applied.
+ (b) The flux tuning is applied.
+ (c) The systematic weighting is applied.
+ (d) Both flux and systematic weighting is applied.
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+\begin_inset Formula $\pod$
+\end_inset
+
+ Air FHC 
+\begin_inset Formula $\numu$
+\end_inset
+
+ CC-Inc.
+ Lepton Cand.
+ Reco.
+ 
+\begin_inset Formula $\cos\theta$
+\end_inset
+
+ by True Topology
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:P0DairFHCnumuCCIncAngleTrueTopology"
+
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -2134,6 +2422,31 @@ This section shows the kinematic distributions for the
 
 \begin_layout Subsubsection
 CC-Inclusive
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+Cref{fig:P0DwaterFHCnumuCCIncMomTrueParticle,fig:P0DwaterFHCnumuCCIncAngleTruePa
+rticle,fig:P0DwaterFHCnumuCCIncMomTrueNEUTNuMode,fig:P0DwaterFHCnumuCCIncAngleTr
+ueNEUTNuMode,fig:P0DwaterFHCnumuCCIncMomTrueTopology,fig:P0DwaterFHCnumuCCIncAng
+leTrueTopology} 
+\end_layout
+
+\end_inset
+
+show the momentum and 
+\begin_inset Formula $\cos\theta$
+\end_inset
+
+ distributions before and after applying different weights.
+ Since both flux and systematic weights are applied to all MC events, it
+ is important to validate the event weights.
 \end_layout
 
 \begin_layout Standard
@@ -2283,7 +2596,48 @@ Flux + systematics
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Momentum: True Particle
+Reconstructed lepton candidate momentum separated by true particle species
+ for FHC 
+\begin_inset Formula $\numu$
+\end_inset
+
+ CC-Inc.
+ events occurring in the 
+\begin_inset Formula $\pod$
+\end_inset
+
+ in water-in mode.
+ (a) The nominal MC prediction without any weights applied.
+ (b) The flux tuning is applied.
+ (c) The systematic weighting is applied.
+ (d) Both flux and systematic weighting is applied.
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+\begin_inset Formula $\pod$
+\end_inset
+
+ Water FHC 
+\begin_inset Formula $\numu$
+\end_inset
+
+ CC-Inc.
+ Lepton Cand.
+ Reco.
+ Momentum by True Particle
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:P0DwaterFHCnumuCCIncMomTrueParticle"
+
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -2443,7 +2797,52 @@ Flux + systematics
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Angle: True Particle
+Reconstructed lepton candidate angle separated by true particle species
+ for FHC 
+\begin_inset Formula $\numu$
+\end_inset
+
+ CC-Inc.
+ events occurring in the 
+\begin_inset Formula $\pod$
+\end_inset
+
+ in water-in mode.
+ (a) The nominal MC prediction without any weights applied.
+ (b) The flux tuning is applied.
+ (c) The systematic weighting is applied.
+ (d) Both flux and systematic weighting is applied.
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+\begin_inset Formula $\pod$
+\end_inset
+
+ Water FHC 
+\begin_inset Formula $\numu$
+\end_inset
+
+ CC-Inc.
+ Lepton Cand.
+ Reco.
+ 
+\begin_inset Formula $\cos\theta$
+\end_inset
+
+ by True Particle
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:P0DwaterFHCnumuCCIncAngleTrueParticle"
+
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -2601,7 +3000,48 @@ Flux + systematics
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Momentum: NEUT Interaction
+Reconstructed lepton candidate momentum separated by NEUT model interaction
+ mode for FHC 
+\begin_inset Formula $\numu$
+\end_inset
+
+ CC-Inc.
+ events occurring in the 
+\begin_inset Formula $\pod$
+\end_inset
+
+ in water-in mode.
+ (a) The nominal MC prediction without any weights applied.
+ (b) The flux tuning is applied.
+ (c) The systematic weighting is applied.
+ (d) Both flux and systematic weighting is applied.
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+\begin_inset Formula $\pod$
+\end_inset
+
+ Water FHC 
+\begin_inset Formula $\numu$
+\end_inset
+
+ CC-Inc.
+ Lepton Cand.
+ Reco.
+ Momentum by NEUT Mode
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:P0DwaterFHCnumuCCIncMomTrueNEUTNuMode"
+
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -2761,7 +3201,55 @@ Flux + systematics
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Angle: NEUT Interaction
+Reconstructed lepton candidate 
+\begin_inset Formula $\cos\theta$
+\end_inset
+
+ separated by NEUT model interaction mode for FHC 
+\begin_inset Formula $\numu$
+\end_inset
+
+ CC-Inc.
+ events occurring in the 
+\begin_inset Formula $\pod$
+\end_inset
+
+ in water-in mode.
+ (a) The nominal MC prediction without any weights applied.
+ (b) The flux tuning is applied.
+ (c) The systematic weighting is applied.
+ (d) Both flux and systematic weighting is applied.
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+\begin_inset Formula $\pod$
+\end_inset
+
+ Water FHC 
+\begin_inset Formula $\numu$
+\end_inset
+
+ CC-Inc.
+ Lepton Cand.
+ Reco.
+ 
+\begin_inset Formula $\cos\theta$
+\end_inset
+
+ by NEUT Mode
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:P0DwaterFHCnumuCCIncAngleTrueNEUTNuMode"
+
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -2921,7 +3409,47 @@ Flux + systematics
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Momentum: True Topology
+Reconstructed lepton candidate momentum separated by topology for FHC 
+\begin_inset Formula $\numu$
+\end_inset
+
+ CC-Inc.
+ events occurring in the 
+\begin_inset Formula $\pod$
+\end_inset
+
+ in water-in mode.
+ (a) The nominal MC prediction without any weights applied.
+ (b) The flux tuning is applied.
+ (c) The systematic weighting is applied.
+ (d) Both flux and systematic weighting is applied.
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+\begin_inset Formula $\pod$
+\end_inset
+
+ Water FHC 
+\begin_inset Formula $\numu$
+\end_inset
+
+CC-Inc.
+ Lepton Cand.
+ Reco.
+ Momentum by True Topology
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:P0DwaterFHCnumuCCIncMomTrueTopology"
+
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -3081,7 +3609,55 @@ Flux + systematics
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Angle: True Topology
+Reconstructed lepton candidate 
+\begin_inset Formula $\cos\theta$
+\end_inset
+
+ separated by topology for FHC 
+\begin_inset Formula $\numu$
+\end_inset
+
+ CC-Inc.
+ events occurring in the 
+\begin_inset Formula $\pod$
+\end_inset
+
+ in water-in mode.
+ (a) The nominal MC prediction without any weights applied.
+ (b) The flux tuning is applied.
+ (c) The systematic weighting is applied.
+ (d) Both flux and systematic weighting is applied.
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+\begin_inset Formula $\pod$
+\end_inset
+
+ Water FHC 
+\begin_inset Formula $\numu$
+\end_inset
+
+ CC-Inc.
+ Lepton Cand.
+ Reco.
+ 
+\begin_inset Formula $\cos\theta$
+\end_inset
+
+ by True Topology
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:P0DwaterFHCnumuCCIncAngleTrueTopology"
+
+\end_inset
+
+
 \end_layout
 
 \end_inset
