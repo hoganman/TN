@@ -3747,11 +3747,24 @@ name "fig:P0DairFHCnumuCCIncEnuTrueNEUTNuMode"
 \series bold
 RHC
 \series default
-:
+: 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+Cref{fig:P0DairRHCnumubarCCIncMomTrueParticle,fig:P0DairRHCnumubarCCIncAngleTrue
+Particle,fig:P0DairRHCnumubarCCIncMomTrueNEUTAntiNuMode,fig:P0DairRHCnumubarCCIn
+cAngleTrueNEUTAntiNuMode,fig:P0DairRHCnumubarCCIncMomTrueTopology,fig:P0DairRHCn
+umubarCCIncAngleTrueTopology,fig:P0DairRHCnumubarCCIncEnuTrueNEUTNuMode}
+ 
 \end_layout
 
-\begin_layout Standard
-LOOK FOR ME TOP AIR
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -3956,7 +3969,1227 @@ name "fig:P0DairRHCnumubarCCIncMomTrueParticle"
 \end_layout
 
 \begin_layout Standard
-LOOK FOR ME BOTTOM AIR
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/SamplesandSelections/numubarRHCCCInc/numubarRHCCCIncWaterIn_recocosq_mu_MC_only_LeptonCandidateTruePDG_rhc_water.png
+	lyxscale 49
+	width 48text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Nominal MC
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/SamplesandSelections/numubarRHCCCInc/numubarRHCCCIncWaterIn_recocosq_mu_MC_only_LeptonCandidateTruePDG_rhc_water_fluxtuned.png
+	lyxscale 50
+	width 48text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Flux
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/SamplesandSelections/numubarRHCCCInc/numubarRHCCCIncWaterIn_recocosq_mu_MC_only_LeptonCandidateTruePDG_rhc_water_systematicweighted.png
+	lyxscale 50
+	width 48text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Systematics
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/SamplesandSelections/numubarRHCCCInc/numubarRHCCCIncWaterIn_recocosq_mu_MC_only_LeptonCandidateTruePDG_rhc_water_fluxtuned_systematicweighted.png
+	lyxscale 50
+	width 48text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Flux + systematics
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Reconstructed lepton candidate angle separated by true particle species
+ for RHC 
+\begin_inset Formula $\numubar$
+\end_inset
+
+ CC-Inc.
+ events occurring in the 
+\begin_inset Formula $\pod$
+\end_inset
+
+ in water-out mode.
+ (a) The nominal MC prediction without any weights applied.
+ (b) The flux tuning is applied.
+ (c) The systematic weighting is applied.
+ (d) Both flux and systematic weighting is applied.
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+\begin_inset Formula $\pod$
+\end_inset
+
+ Air RHC 
+\begin_inset Formula $\numubar$
+\end_inset
+
+ CC-Inc.
+ Lepton Cand.
+ Reco.
+ 
+\begin_inset Formula $\cos\theta$
+\end_inset
+
+ by True Particle
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:P0DairRHCnumubarCCIncAngleTrueParticle"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/SamplesandSelections/numubarRHCCCInc/numubarRHCCCIncWaterOut_recoP_mu_MC_only_NEUTAntiNuReactionCodes_rhc_air.png
+	lyxscale 49
+	width 48text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Nominal MC
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/SamplesandSelections/numubarRHCCCInc/numubarRHCCCIncWaterOut_recoP_mu_MC_only_NEUTAntiNuReactionCodes_rhc_air_fluxtuned.png
+	lyxscale 50
+	width 48text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Flux
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/SamplesandSelections/numubarRHCCCInc/numubarRHCCCIncWaterOut_recoP_mu_MC_only_NEUTAntiNuReactionCodes_rhc_air_systematicweighted.png
+	lyxscale 50
+	width 48text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Systematics
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/SamplesandSelections/numubarRHCCCInc/numubarRHCCCIncWaterOut_recoP_mu_MC_only_NEUTAntiNuReactionCodes_rhc_air_fluxtuned_systematicweighted.png
+	lyxscale 50
+	width 48text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Flux + systematics
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Reconstructed lepton candidate momentum separated by NEUT model interaction
+ mode for RHC 
+\begin_inset Formula $\numubar$
+\end_inset
+
+ CC-Inc.
+ events occurring in the 
+\begin_inset Formula $\pod$
+\end_inset
+
+ in water-out mode.
+ (a) The nominal MC prediction without any weights applied.
+ (b) The flux tuning is applied.
+ (c) The systematic weighting is applied.
+ (d) Both flux and systematic weighting is applied.
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+\begin_inset Formula $\pod$
+\end_inset
+
+ Air RHC 
+\begin_inset Formula $\numubar$
+\end_inset
+
+ CC-Inc.
+ Lepton Cand.
+ Reco.
+ Momentum by NEUT Mode
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:P0DairRHCnumubarCCIncMomTrueNEUTAntiNuMode"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/SamplesandSelections/numubarRHCCCInc/numubarRHCCCIncWaterOut_recocosq_mu_MC_only_NEUTAntiNuReactionCodes_rhc_air.png
+	lyxscale 49
+	width 48text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Nominal MC
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/SamplesandSelections/numubarRHCCCInc/numubarRHCCCIncWaterOut_recocosq_mu_MC_only_NEUTAntiNuReactionCodes_rhc_air_fluxtuned.png
+	lyxscale 50
+	width 48text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Flux
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/SamplesandSelections/numubarRHCCCInc/numubarRHCCCIncWaterOut_recocosq_mu_MC_only_NEUTAntiNuReactionCodes_rhc_air_systematicweighted.png
+	lyxscale 50
+	width 48text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Systematics
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/SamplesandSelections/numubarRHCCCInc/numubarRHCCCIncWaterOut_recocosq_mu_MC_only_NEUTAntiNuReactionCodes_rhc_air_fluxtuned_systematicweighted.png
+	lyxscale 50
+	width 48text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Flux + systematics
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Reconstructed lepton candidate 
+\begin_inset Formula $\cos\theta$
+\end_inset
+
+ separated by NEUT model interaction mode for RHC 
+\begin_inset Formula $\numubar$
+\end_inset
+
+ CC-Inc.
+ events occurring in the 
+\begin_inset Formula $\pod$
+\end_inset
+
+ in water-out mode.
+ (a) The nominal MC prediction without any weights applied.
+ (b) The flux tuning is applied.
+ (c) The systematic weighting is applied.
+ (d) Both flux and systematic weighting is applied.
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+\begin_inset Formula $\pod$
+\end_inset
+
+ Air RHC 
+\begin_inset Formula $\numubar$
+\end_inset
+
+ CC-Inc.
+ Lepton Cand.
+ Reco.
+ 
+\begin_inset Formula $\cos\theta$
+\end_inset
+
+ by NEUT Mode
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:P0DairRHCnumubarCCIncAngleTrueNEUTAntiNuMode"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/SamplesandSelections/numubarRHCCCInc/numubarRHCCCIncWaterOut_recoP_mu_MC_only_TrueTopology_rhc_air.png
+	lyxscale 49
+	width 48text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Nominal MC
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/SamplesandSelections/numubarRHCCCInc/numubarRHCCCIncWaterOut_recoP_mu_MC_only_TrueTopology_rhc_air_fluxtuned.png
+	lyxscale 50
+	width 48text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Flux
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/SamplesandSelections/numubarRHCCCInc/numubarRHCCCIncWaterOut_recoP_mu_MC_only_TrueTopology_rhc_air_systematicweighted.png
+	lyxscale 50
+	width 48text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Systematics
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/SamplesandSelections/numubarRHCCCInc/numubarRHCCCIncWaterOut_recoP_mu_MC_only_TrueTopology_rhc_air_fluxtuned_systematicweighted.png
+	lyxscale 50
+	width 48text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Flux + systematics
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Reconstructed lepton candidate momentum separated by topology for RHC 
+\begin_inset Formula $\numubar$
+\end_inset
+
+ CC-Inc.
+ events occurring in the 
+\begin_inset Formula $\pod$
+\end_inset
+
+ in water-out mode.
+ (a) The nominal MC prediction without any weights applied.
+ (b) The flux tuning is applied.
+ (c) The systematic weighting is applied.
+ (d) Both flux and systematic weighting is applied.
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+\begin_inset Formula $\pod$
+\end_inset
+
+ Air RHC 
+\begin_inset Formula $\numubar$
+\end_inset
+
+ CC-Inc.
+ Lepton Cand.
+ Reco.
+ Momentum by True Topology
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:P0DairRHCnumubarCCIncMomTrueTopology"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/SamplesandSelections/numubarRHCCCInc/numubarRHCCCIncWaterOut_recocosq_mu_MC_only_TrueTopology_rhc_air.png
+	lyxscale 49
+	width 48text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Nominal MC
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/SamplesandSelections/numubarRHCCCInc/numubarRHCCCIncWaterOut_recocosq_mu_MC_only_TrueTopology_rhc_air_fluxtuned.png
+	lyxscale 50
+	width 48text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Flux
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/SamplesandSelections/numubarRHCCCInc/numubarRHCCCIncWaterOut_recocosq_mu_MC_only_TrueTopology_rhc_air_systematicweighted.png
+	lyxscale 50
+	width 48text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Systematics
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/SamplesandSelections/numubarRHCCCInc/numubarRHCCCIncWaterOut_recocosq_mu_MC_only_TrueTopology_rhc_air_fluxtuned_systematicweighted.png
+	lyxscale 50
+	width 48text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Flux + systematics
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Reconstructed lepton candidate 
+\begin_inset Formula $\cos\theta$
+\end_inset
+
+ separated by topology for RHC 
+\begin_inset Formula $\numubar$
+\end_inset
+
+ CC-Inc.
+ events occurring in the 
+\begin_inset Formula $\pod$
+\end_inset
+
+ in water-out mode.
+ (a) The nominal MC prediction without any weights applied.
+ (b) The flux tuning is applied.
+ (c) The systematic weighting is applied.
+ (d) Both flux and systematic weighting is applied.
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+\begin_inset Formula $\pod$
+\end_inset
+
+ Air RHC 
+\begin_inset Formula $\numubar$
+\end_inset
+
+ CC-Inc.
+ Lepton Cand.
+ Reco.
+ 
+\begin_inset Formula $\cos\theta$
+\end_inset
+
+ by True Topology
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:P0DairRHCnumubarCCIncAngleTrueTopology"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/SamplesandSelections/numubarRHCCCInc/numubarRHCCCIncWaterOut_trueE_nu_MC_only_NEUTAntiNuReactionCodes_rhc_air.png
+	lyxscale 49
+	width 48text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Nominal MC
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/SamplesandSelections/numubarRHCCCInc/numubarRHCCCIncWaterOut_trueE_nu_MC_only_NEUTAntiNuReactionCodes_rhc_air_fluxtuned.png
+	lyxscale 50
+	width 48text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Flux
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/SamplesandSelections/numubarRHCCCInc/numubarRHCCCIncWaterOut_trueE_nu_MC_only_NEUTAntiNuReactionCodes_rhc_air_systematicweighted.png
+	lyxscale 50
+	width 48text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Systematics
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/SamplesandSelections/numubarRHCCCInc/numubarRHCCCIncWaterOut_trueE_nu_MC_only_NEUTAntiNuReactionCodes_rhc_air_fluxtuned_systematicweighted.png
+	lyxscale 50
+	width 48text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Flux + systematics
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+True neutrino energy associated with the lepton candidate separated by NEUT
+ model interaction mode for RHC 
+\begin_inset Formula $\numubar$
+\end_inset
+
+ CC-Inc.
+ events occurring in the 
+\begin_inset Formula $\pod$
+\end_inset
+
+ in water-out mode.
+ (a) The nominal MC prediction without any weights applied.
+ (b) The flux tuning is applied.
+ (c) The systematic weighting is applied.
+ (d) Both flux and systematic weighting is applied.
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+\begin_inset Formula $\pod$
+\end_inset
+
+ Air FHC 
+\begin_inset Formula $\numubar$
+\end_inset
+
+ CC-Inc.
+ Lepton Cand.
+ True 
+\begin_inset Formula $E_{\nu}$
+\end_inset
+
+ by NEUT Mode
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:P0DairRHCnumubarCCIncEnuTrueNEUTNuMode"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -4015,7 +5248,23 @@ noprefix "false"
 
 .
  Since both flux and systematic weights are applied to all MC events in
- BANFF, it is important to validate the event weights.
+ BANFF, it is important to validate the event weights.show the momentum and
+ 
+\begin_inset Formula $\cos\theta$
+\end_inset
+
+ distributions before and after applying different weights.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\begin_inset Formula $\boldsymbol{\nu_{\mu}}$
+\end_inset
+
+ FHC
+\series default
+: 
 \begin_inset ERT
 status open
 
@@ -4031,22 +5280,7 @@ leTrueTopology,fig:P0DwaterFHCnumuCCIncEnuTrueNEUTNuMode}
 
 \end_inset
 
-show the momentum and 
-\begin_inset Formula $\cos\theta$
-\end_inset
 
- distributions before and after applying different weights.
-\end_layout
-
-\begin_layout Standard
-
-\series bold
-\begin_inset Formula $\boldsymbol{\nu_{\mu}}$
-\end_inset
-
- FHC
-\series default
-:
 \end_layout
 
 \begin_layout Standard
@@ -5483,6 +6717,1448 @@ name "fig:P0DwaterFHCnumuCCIncEnuTrueNEUTNuMode"
 RHC
 \series default
 :
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+Cref{fig:P0DwaterRHCnumubarCCIncMomTrueParticle,fig:P0DwaterRHCnumubarCCIncAngle
+TrueParticle,fig:P0DwaterRHCnumubarCCIncMomTrueNEUTAntiNuMode,fig:P0DwaterRHCnum
+ubarCCIncAngleTrueNEUTAntiNuMode,fig:P0DwaterRHCnumubarCCIncMomTrueTopology,fig:
+P0DwaterRHCnumubarCCIncAngleTrueTopology,fig:P0DwaterRHCnumubarCCIncEnuTrueNEUTN
+uMode} 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/SamplesandSelections/numubarRHCCCInc/numubarRHCCCIncWaterIn_recoP_mu_MC_only_LeptonCandidateTruePDG_rhc_water.png
+	lyxscale 49
+	width 48text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Nominal MC
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/SamplesandSelections/numubarRHCCCInc/numubarRHCCCIncWaterIn_recoP_mu_MC_only_LeptonCandidateTruePDG_rhc_water_fluxtuned.png
+	lyxscale 50
+	width 48text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Flux
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/SamplesandSelections/numubarRHCCCInc/numubarRHCCCIncWaterIn_recoP_mu_MC_only_LeptonCandidateTruePDG_rhc_water_systematicweighted.png
+	lyxscale 50
+	width 48text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Systematics
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/SamplesandSelections/numubarRHCCCInc/numubarRHCCCIncWaterIn_recoP_mu_MC_only_LeptonCandidateTruePDG_rhc_water_fluxtuned_systematicweighted.png
+	lyxscale 50
+	width 48text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Flux + systematics
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Reconstructed lepton candidate momentum separated by true particle species
+ for RHC 
+\begin_inset Formula $\numubar$
+\end_inset
+
+ CC-Inc.
+ events occurring in the 
+\begin_inset Formula $\pod$
+\end_inset
+
+ in water-out mode.
+ (a) The nominal MC prediction without any weights applied.
+ (b) The flux tuning is applied.
+ (c) The systematic weighting is applied.
+ (d) Both flux and systematic weighting is applied.
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+\begin_inset Formula $\pod$
+\end_inset
+
+ Water RHC 
+\begin_inset Formula $\numubar$
+\end_inset
+
+ CC-Inc.
+ Lepton Cand.
+ Reco.
+ Momentum by True Particle
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:P0DwaterRHCnumubarCCIncMomTrueParticle"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/SamplesandSelections/numubarRHCCCInc/numubarRHCCCIncWaterIn_recocosq_mu_MC_only_LeptonCandidateTruePDG_rhc_water.png
+	lyxscale 49
+	width 48text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Nominal MC
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/SamplesandSelections/numubarRHCCCInc/numubarRHCCCIncWaterIn_recocosq_mu_MC_only_LeptonCandidateTruePDG_rhc_water_fluxtuned.png
+	lyxscale 50
+	width 48text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Flux
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/SamplesandSelections/numubarRHCCCInc/numubarRHCCCIncWaterIn_recocosq_mu_MC_only_LeptonCandidateTruePDG_rhc_water_systematicweighted.png
+	lyxscale 50
+	width 48text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Systematics
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/SamplesandSelections/numubarRHCCCInc/numubarRHCCCIncWaterIn_recocosq_mu_MC_only_LeptonCandidateTruePDG_rhc_water_fluxtuned_systematicweighted.png
+	lyxscale 50
+	width 48text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Flux + systematics
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Reconstructed lepton candidate angle separated by true particle species
+ for RHC 
+\begin_inset Formula $\numubar$
+\end_inset
+
+ CC-Inc.
+ events occurring in the 
+\begin_inset Formula $\pod$
+\end_inset
+
+ in water-out mode.
+ (a) The nominal MC prediction without any weights applied.
+ (b) The flux tuning is applied.
+ (c) The systematic weighting is applied.
+ (d) Both flux and systematic weighting is applied.
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+\begin_inset Formula $\pod$
+\end_inset
+
+ Water RHC 
+\begin_inset Formula $\numubar$
+\end_inset
+
+ CC-Inc.
+ Lepton Cand.
+ Reco.
+ 
+\begin_inset Formula $\cos\theta$
+\end_inset
+
+ by True Particle
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:P0DwaterRHCnumubarCCIncAngleTrueParticle"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/SamplesandSelections/numubarRHCCCInc/numubarRHCCCIncWaterIn_recoP_mu_MC_only_NEUTAntiNuReactionCodes_rhc_water.png
+	lyxscale 49
+	width 48text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Nominal MC
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/SamplesandSelections/numubarRHCCCInc/numubarRHCCCIncWaterIn_recoP_mu_MC_only_NEUTAntiNuReactionCodes_rhc_water_fluxtuned.png
+	lyxscale 50
+	width 48text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Flux
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/SamplesandSelections/numubarRHCCCInc/numubarRHCCCIncWaterIn_recoP_mu_MC_only_NEUTAntiNuReactionCodes_rhc_water_systematicweighted.png
+	lyxscale 50
+	width 48text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Systematics
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/SamplesandSelections/numubarRHCCCInc/numubarRHCCCIncWaterIn_recoP_mu_MC_only_NEUTAntiNuReactionCodes_rhc_water_fluxtuned_systematicweighted.png
+	lyxscale 50
+	width 48text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Flux + systematics
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Reconstructed lepton candidate momentum separated by NEUT model interaction
+ mode for RHC 
+\begin_inset Formula $\numubar$
+\end_inset
+
+ CC-Inc.
+ events occurring in the 
+\begin_inset Formula $\pod$
+\end_inset
+
+ in water-out mode.
+ (a) The nominal MC prediction without any weights applied.
+ (b) The flux tuning is applied.
+ (c) The systematic weighting is applied.
+ (d) Both flux and systematic weighting is applied.
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+\begin_inset Formula $\pod$
+\end_inset
+
+ Water RHC 
+\begin_inset Formula $\numubar$
+\end_inset
+
+ CC-Inc.
+ Lepton Cand.
+ Reco.
+ Momentum by NEUT Mode
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:P0DwaterRHCnumubarCCIncMomTrueNEUTAntiNuMode"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/SamplesandSelections/numubarRHCCCInc/numubarRHCCCIncWaterIn_recocosq_mu_MC_only_NEUTAntiNuReactionCodes_rhc_water.png
+	lyxscale 49
+	width 48text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Nominal MC
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/SamplesandSelections/numubarRHCCCInc/numubarRHCCCIncWaterIn_recocosq_mu_MC_only_NEUTAntiNuReactionCodes_rhc_water_fluxtuned.png
+	lyxscale 50
+	width 48text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Flux
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/SamplesandSelections/numubarRHCCCInc/numubarRHCCCIncWaterIn_recocosq_mu_MC_only_NEUTAntiNuReactionCodes_rhc_water_systematicweighted.png
+	lyxscale 50
+	width 48text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Systematics
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/SamplesandSelections/numubarRHCCCInc/numubarRHCCCIncWaterIn_recocosq_mu_MC_only_NEUTAntiNuReactionCodes_rhc_water_fluxtuned_systematicweighted.png
+	lyxscale 50
+	width 48text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Flux + systematics
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Reconstructed lepton candidate 
+\begin_inset Formula $\cos\theta$
+\end_inset
+
+ separated by NEUT model interaction mode for RHC 
+\begin_inset Formula $\numubar$
+\end_inset
+
+ CC-Inc.
+ events occurring in the 
+\begin_inset Formula $\pod$
+\end_inset
+
+ in water-out mode.
+ (a) The nominal MC prediction without any weights applied.
+ (b) The flux tuning is applied.
+ (c) The systematic weighting is applied.
+ (d) Both flux and systematic weighting is applied.
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+\begin_inset Formula $\pod$
+\end_inset
+
+ Water RHC 
+\begin_inset Formula $\numubar$
+\end_inset
+
+ CC-Inc.
+ Lepton Cand.
+ Reco.
+ 
+\begin_inset Formula $\cos\theta$
+\end_inset
+
+ by NEUT Mode
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:P0DwaterRHCnumubarCCIncAngleTrueNEUTAntiNuMode"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/SamplesandSelections/numubarRHCCCInc/numubarRHCCCIncWaterIn_recoP_mu_MC_only_TrueTopology_rhc_water.png
+	lyxscale 49
+	width 48text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Nominal MC
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/SamplesandSelections/numubarRHCCCInc/numubarRHCCCIncWaterIn_recoP_mu_MC_only_TrueTopology_rhc_water_fluxtuned.png
+	lyxscale 50
+	width 48text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Flux
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/SamplesandSelections/numubarRHCCCInc/numubarRHCCCIncWaterIn_recoP_mu_MC_only_TrueTopology_rhc_water_systematicweighted.png
+	lyxscale 50
+	width 48text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Systematics
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/SamplesandSelections/numubarRHCCCInc/numubarRHCCCIncWaterIn_recoP_mu_MC_only_TrueTopology_rhc_water_fluxtuned_systematicweighted.png
+	lyxscale 50
+	width 48text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Flux + systematics
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Reconstructed lepton candidate momentum separated by topology for RHC 
+\begin_inset Formula $\numubar$
+\end_inset
+
+ CC-Inc.
+ events occurring in the 
+\begin_inset Formula $\pod$
+\end_inset
+
+ in water-out mode.
+ (a) The nominal MC prediction without any weights applied.
+ (b) The flux tuning is applied.
+ (c) The systematic weighting is applied.
+ (d) Both flux and systematic weighting is applied.
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+\begin_inset Formula $\pod$
+\end_inset
+
+ Water RHC 
+\begin_inset Formula $\numubar$
+\end_inset
+
+ CC-Inc.
+ Lepton Cand.
+ Reco.
+ Momentum by True Topology
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:P0DwaterRHCnumubarCCIncMomTrueTopology"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/SamplesandSelections/numubarRHCCCInc/numubarRHCCCIncWaterIn_recocosq_mu_MC_only_TrueTopology_rhc_water.png
+	lyxscale 49
+	width 48text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Nominal MC
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/SamplesandSelections/numubarRHCCCInc/numubarRHCCCIncWaterIn_recocosq_mu_MC_only_TrueTopology_rhc_water_fluxtuned.png
+	lyxscale 50
+	width 48text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Flux
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/SamplesandSelections/numubarRHCCCInc/numubarRHCCCIncWaterIn_recocosq_mu_MC_only_TrueTopology_rhc_water_systematicweighted.png
+	lyxscale 50
+	width 48text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Systematics
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/SamplesandSelections/numubarRHCCCInc/numubarRHCCCIncWaterIn_recocosq_mu_MC_only_TrueTopology_rhc_water_fluxtuned_systematicweighted.png
+	lyxscale 50
+	width 48text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Flux + systematics
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Reconstructed lepton candidate 
+\begin_inset Formula $\cos\theta$
+\end_inset
+
+ separated by topology for RHC 
+\begin_inset Formula $\numubar$
+\end_inset
+
+ CC-Inc.
+ events occurring in the 
+\begin_inset Formula $\pod$
+\end_inset
+
+ in water-out mode.
+ (a) The nominal MC prediction without any weights applied.
+ (b) The flux tuning is applied.
+ (c) The systematic weighting is applied.
+ (d) Both flux and systematic weighting is applied.
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+\begin_inset Formula $\pod$
+\end_inset
+
+ Water RHC 
+\begin_inset Formula $\numubar$
+\end_inset
+
+ CC-Inc.
+ Lepton Cand.
+ Reco.
+ 
+\begin_inset Formula $\cos\theta$
+\end_inset
+
+ by True Topology
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:P0DwaterRHCnumubarCCIncAngleTrueTopology"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/SamplesandSelections/numubarRHCCCInc/numubarRHCCCIncWaterIn_trueE_nu_MC_only_NEUTAntiNuReactionCodes_rhc_water.png
+	lyxscale 49
+	width 48text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Nominal MC
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/SamplesandSelections/numubarRHCCCInc/numubarRHCCCIncWaterIn_trueE_nu_MC_only_NEUTAntiNuReactionCodes_rhc_water_fluxtuned.png
+	lyxscale 50
+	width 48text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Flux
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/SamplesandSelections/numubarRHCCCInc/numubarRHCCCIncWaterIn_trueE_nu_MC_only_NEUTAntiNuReactionCodes_rhc_water_systematicweighted.png
+	lyxscale 50
+	width 48text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Systematics
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/SamplesandSelections/numubarRHCCCInc/numubarRHCCCIncWaterIn_trueE_nu_MC_only_NEUTAntiNuReactionCodes_rhc_water_fluxtuned_systematicweighted.png
+	lyxscale 50
+	width 48text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Flux + systematics
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+True neutrino energy associated with the lepton candidate separated by NEUT
+ model interaction mode for RHC 
+\begin_inset Formula $\numubar$
+\end_inset
+
+ CC-Inc.
+ events occurring in the 
+\begin_inset Formula $\pod$
+\end_inset
+
+ in water-out mode.
+ (a) The nominal MC prediction without any weights applied.
+ (b) The flux tuning is applied.
+ (c) The systematic weighting is applied.
+ (d) Both flux and systematic weighting is applied.
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+\begin_inset Formula $\pod$
+\end_inset
+
+ Water FHC 
+\begin_inset Formula $\numubar$
+\end_inset
+
+ CC-Inc.
+ Lepton Cand.
+ True 
+\begin_inset Formula $E_{\nu}$
+\end_inset
+
+ by NEUT Mode
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:P0DwaterRHCnumubarCCIncEnuTrueNEUTNuMode"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
