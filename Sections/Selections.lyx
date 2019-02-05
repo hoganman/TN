@@ -3740,6 +3740,96 @@ name "fig:P0DairFHCnumuCCIncEnuTrueNEUTNuMode"
 \end_layout
 
 \begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/SamplesandSelections/numuFHCCCInc/numuWaterOutFHCCC_recoP_effpur_reactionCC.png
+	lyxscale 50
+	width 49text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+True Momentum
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/SamplesandSelections/numuFHCCCInc/numuWaterOutFHCCC_recocostheta_effpur_reactionCC.png
+	lyxscale 50
+	width 49text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+True Angle
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Efficiency and purity plots for the CC Inclusive sample
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 \begin_inset Formula $\boldsymbol{\antinumu}$
 \end_inset
 
@@ -5207,8 +5297,210 @@ RHC
 CC-1 Track (CCQE Enhanced)
 \end_layout
 
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/SamplesandSelections/numuFHCCCInc/numuWaterOutFHCCC1track_recoP_effpur_reactionCCQE.png
+	lyxscale 50
+	width 49text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+True Momentum
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/SamplesandSelections/numuFHCCCInc/numuWaterOutFHCCC1track_recocostheta_effpur_reactionCCQE.png
+	lyxscale 50
+	width 49text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+True Angle
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+The intergrated 1-track efficiency is 23% for both CCQE and CC-0
+\begin_inset Formula $\pion$
+\end_inset
+
+.
+ Its purity is 67% (81%) for CCQE (CC-0
+\begin_inset Formula $\pion$
+\end_inset
+
+)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Subsubsection
 CC-N Tracks (CCnQE Enhanced)
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/SamplesandSelections/numuFHCCCInc/numuWaterOutFHCCCNtrack_recoP_effpur_reactionCCnQE.png
+	lyxscale 50
+	width 49text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+True Momentum
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/SamplesandSelections/numuFHCCCInc/numuWaterOutFHCCCNtrack_recocostheta_effpur_reactionCCnQE.png
+	lyxscale 50
+	width 49text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+True Angle
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+The integrated N-tracks eff is 33% for both CCnQE and CC-N
+\begin_inset Formula $\pion$
+\end_inset
+
+ where CC-N
+\begin_inset Formula $\pion$
+\end_inset
+
+ refers to any process the process multiple charged pions.
+ Its purity is 70% (67%) for CCnQE (CC-N
+\begin_inset Formula $\pion$
+\end_inset
+
+)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection
