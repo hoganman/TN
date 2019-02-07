@@ -2281,6 +2281,7 @@ noprefix "false"
 .
  Since both flux and systematic weights are applied to all MC events in
  BANFF, it is important to validate the event weights.
+ Using neither set of weights is referred to as the nominal MC.
 \end_layout
 
 \begin_layout Standard
@@ -2291,7 +2292,7 @@ noprefix "false"
 
  FHC
 \series default
-:
+: Shown in
 \begin_inset ERT
 status open
 
@@ -2307,11 +2308,25 @@ gy,fig:P0DairFHCnumuCCIncEnuTrueNEUTNuMode}
 
 \end_inset
 
-show the momentum and 
+are the momentum and 
 \begin_inset Formula $\cos\theta$
 \end_inset
 
- distributions before and after applying different weights.
+ distributions for 
+\begin_inset Formula $\numu$
+\end_inset
+
+CC-Inclusive events in FHC mode.
+ There are three pairs of 
+\begin_inset Formula $P,\theta$
+\end_inset
+
+ figures with the same truth information break down accompanied by one of
+ neutrino energy.
+ The truth information categories are lepton candidate particle, NEUT reaction,
+ and topology.
+ Each figure consists of a set of four sub-figures which illustrate the
+ application of flux and detector systematic weights.
 \end_layout
 
 \begin_layout Standard
@@ -3747,7 +3762,7 @@ name "fig:P0DairFHCnumuCCIncEnuTrueNEUTNuMode"
 \series bold
 RHC
 \series default
-: 
+: Shown in 
 \begin_inset ERT
 status open
 
@@ -3764,7 +3779,21 @@ umubarCCIncAngleTrueTopology,fig:P0DairRHCnumubarCCIncEnuTrueNEUTNuMode}
 
 \end_inset
 
+for 
+\begin_inset Formula $\antinumu$
+\end_inset
 
+CC-Inclusive events in RHC mode.
+ There are three pairs of 
+\begin_inset Formula $P,\theta$
+\end_inset
+
+ figures with the same truth information break down accompanied by one of
+ neutrino energy.
+ The truth information categories are lepton candidate particle, NEUT reaction,
+ and topology.
+ Each figure consists of a set of four sub-figures which illustrate the
+ application of flux and detector systematic weights.
 \end_layout
 
 \begin_layout Standard
@@ -5201,14 +5230,59 @@ name "fig:P0DairRHCnumubarCCIncEnuTrueNEUTNuMode"
 RHC
 \series default
 :
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+todo{Add figures here}
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsubsection
 CC-1 Track (CCQE Enhanced)
 \end_layout
 
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+todo{Add figures here}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Subsubsection
 CC-N Tracks (CCnQE Enhanced)
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+todo{Add figures here}
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection
@@ -5247,13 +5321,9 @@ noprefix "false"
 \end_inset
 
 .
- Since both flux and systematic weights are applied to all MC events in
- BANFF, it is important to validate the event weights.show the momentum and
- 
-\begin_inset Formula $\cos\theta$
-\end_inset
-
- distributions before and after applying different weights.
+ Since both flux and detector systematic weights are applied to all MC events
+ in BANFF, it is important to validate the event weights.
+ Using neither set of weights is referred to as the nominal MC.
 \end_layout
 
 \begin_layout Standard
@@ -5264,7 +5334,7 @@ noprefix "false"
 
  FHC
 \series default
-: 
+: Shown in 
 \begin_inset ERT
 status open
 
@@ -5280,7 +5350,25 @@ leTrueTopology,fig:P0DwaterFHCnumuCCIncEnuTrueNEUTNuMode}
 
 \end_inset
 
+are the momentum and 
+\begin_inset Formula $\cos\theta$
+\end_inset
 
+ distributions for 
+\begin_inset Formula $\numu$
+\end_inset
+
+CC-Inclusive events in FHC mode.
+ There are three pairs of 
+\begin_inset Formula $P,\theta$
+\end_inset
+
+ figures with the same truth information break down accompanied by one of
+ neutrino energy.
+ The truth information categories are lepton candidate particle, NEUT reaction,
+ and topology.
+ Each figure consists of a set of four sub-figures which illustrate the
+ application of flux and detector systematic weights.
 \end_layout
 
 \begin_layout Standard
@@ -6716,7 +6804,7 @@ name "fig:P0DwaterFHCnumuCCIncEnuTrueNEUTNuMode"
 \series bold
 RHC
 \series default
-:
+: Shown in 
 \begin_inset ERT
 status open
 
@@ -6733,7 +6821,21 @@ uMode}
 
 \end_inset
 
+for 
+\begin_inset Formula $\antinumu$
+\end_inset
 
+CC-Inclusive events in RHC mode.
+ There are three pairs of 
+\begin_inset Formula $P,\theta$
+\end_inset
+
+ figures with the same truth information break down accompanied by one of
+ neutrino energy.
+ The truth information categories are lepton candidate particle, NEUT reaction,
+ and topology.
+ Each figure consists of a set of four sub-figures which illustrate the
+ application of flux and detector systematic weights.
 \end_layout
 
 \begin_layout Standard
@@ -8170,14 +8272,59 @@ name "fig:P0DwaterRHCnumubarCCIncEnuTrueNEUTNuMode"
 RHC
 \series default
 :
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+todo{Add figures here}
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsubsection
 CC-1 Track (CCQE Enhanced)
 \end_layout
 
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+todo{Add figures here}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Subsubsection
 CC-N Tracks (CCnQE Enhanced)
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+todo{Add figures here}
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsubsection
