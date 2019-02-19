@@ -148,6 +148,31 @@ tabs-within-sections
 \filename_suffix 0
 \color #faf0e6
 \end_branch
+\branch BANFFLikelihood
+\selected 1
+\filename_suffix 0
+\color #faf0e6
+\end_branch
+\branch P0DBANFFParameterization
+\selected 1
+\filename_suffix 0
+\color #faf0e6
+\end_branch
+\branch FitterValidation
+\selected 1
+\filename_suffix 0
+\color #faf0e6
+\end_branch
+\branch FitterResults
+\selected 1
+\filename_suffix 0
+\color #faf0e6
+\end_branch
+\branch Discussion
+\selected 1
+\filename_suffix 0
+\color #faf0e6
+\end_branch
 \index Index
 \shortcut idx
 \color #008000
@@ -177,6 +202,30 @@ tabs-within-sections
 \end_header
 
 \begin_body
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand input
+filename "LyxMathMacros.lyx"
+
+\end_inset
+
+
+\begin_inset CommandInset include
+LatexCommand input
+filename "LyxTextMacros.lyx"
+
+\end_inset
+
+
+\begin_inset CommandInset include
+LatexCommand input
+filename "Nomenclature.lyx"
+
+\end_inset
+
+
+\end_layout
 
 \begin_layout Title
 This is A Tribute To The Best TN of All Time
@@ -278,30 +327,6 @@ LatexCommand tableofcontents
 \end_inset
 
 
-\begin_inset CommandInset include
-LatexCommand input
-filename "LyxMathMacros.lyx"
-
-\end_inset
-
-
-\begin_inset CommandInset include
-LatexCommand input
-filename "LyxTextMacros.lyx"
-
-\end_inset
-
-
-\begin_inset CommandInset include
-LatexCommand input
-filename "Nomenclature.lyx"
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
 \begin_inset Branch Introduction
 inverted 0
 status open
@@ -311,6 +336,19 @@ Introduction
 \end_layout
 
 \begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+%Intro to fitting in long baseline experiments, focus on BANFF.
+ Physics implications.
+ P0D Introduction
+\end_layout
+
+\end_inset
+
+
 \begin_inset CommandInset include
 LatexCommand input
 filename "Sections/Introduction.lyx"
@@ -334,15 +372,41 @@ filename "Sections/Introduction.lyx"
 \end_inset
 
 
+\begin_inset Branch BANFFLikelihood
+inverted 0
+status open
+
+\begin_layout Section
+BANFF Likelihood
 \end_layout
 
 \begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand input
+filename "Sections/BANFFLikelihood.lyx"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newpage clearpage
+\end_inset
+
+
+\begin_inset Newpage newpage
+\end_inset
+
+
 \begin_inset Branch SamplesandSelections
 inverted 0
 status open
 
 \begin_layout Section
-PØD Event Selection And Cuts
+PØD Selections and Data Samples
 \end_layout
 
 \begin_layout Standard
@@ -350,6 +414,125 @@ PØD Event Selection And Cuts
 LatexCommand input
 preview true
 filename "Sections/Selections.lyx"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newpage clearpage
+\end_inset
+
+
+\begin_inset Newpage newpage
+\end_inset
+
+
+\begin_inset Branch P0DBANFFParameterization
+inverted 0
+status open
+
+\begin_layout Section
+\begin_inset Formula $\pod$
+\end_inset
+
+-Only BANFF Parameterization
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand input
+filename "Sections/P0DBANFFParameterization.lyx"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newpage clearpage
+\end_inset
+
+
+\begin_inset Newpage newpage
+\end_inset
+
+
+\begin_inset Branch FitterValidation
+inverted 0
+status open
+
+\begin_layout Section
+Fitter Validation
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand input
+filename "Sections/FitterValidation.lyx"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newpage clearpage
+\end_inset
+
+
+\begin_inset Newpage newpage
+\end_inset
+
+
+\begin_inset Branch FitterResults
+inverted 0
+status open
+
+\begin_layout Section
+Fitter Results
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand input
+filename "Sections/FitterResults.lyx"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newpage clearpage
+\end_inset
+
+
+\begin_inset Newpage newpage
+\end_inset
+
+
+\begin_inset Branch Discussion
+inverted 0
+status open
+
+\begin_layout Section
+Discussion
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand input
+filename "Sections/Discussion.lyx"
 
 \end_inset
 

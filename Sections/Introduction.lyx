@@ -79,782 +79,57 @@
 \begin_body
 
 \begin_layout Subsection
-BANFF Treatment of ND Constraint
-\end_layout
-
-\begin_layout Standard
-The primary goal of an oscillation experiment is to measure the parameters
- in a neutrino mixing matrix.
- All other parameters, while having some theoretical importance to fundamental
- physics, are nuisance parameters that must be accounted for.
- To understand the methodology of BANFF, it is relevant to understand the
- number of nuisance parameters that go into a ND+FD fit.
- The BANFF implementation aims to reduce the dimensionality, and hence complexit
-y, of the problem by performing a separate analysis on the nuisance parameters
- that only the ND can measure.
- Then that information is propagated to the oscillation analysis for the
- FD data.
- Conceptually this approach has computational advantages and should provide
- the same result with a joint ND+FD analysis.
- However, information encoded in the ND measurements for shared nuisance
- parameters is inevitably lost in this 
-\begin_inset Quotes eld
-\end_inset
-
-divide-and-conquer
-\begin_inset Quotes erd
-\end_inset
-
- approach.
-\end_layout
-
-\begin_layout Standard
-The BANFF ND-only constraint between 2015 and 2018 is described in detail
- in T2K-TN-220
-\begin_inset CommandInset citation
-LatexCommand citet
-key "Hartz2015"
-literal "false"
-
-\end_inset
-
-.
- While subsequent updates to the BANFF analysis increase the sample sizes
- and systematic parameterizations, the method has remained unchanged.
- It uses a frequentist approach to find the best nuisance parameter set
- to maximize a binned likelihood.
- The sets of nuisance, also called systematic, parameters in BANFF are
-\end_layout
-
-\begin_layout Itemize
-cross section physics model parameters hereby denoted by 
-\begin_inset Formula $\xsec$
-\end_inset
-
-,
-\end_layout
-
-\begin_layout Itemize
-neutrino flux binned in neutrino energy hereby denoted by 
-\begin_inset Formula $\flux$
-\end_inset
-
-, and
-\end_layout
-
-\begin_layout Itemize
-detector systematics response weights that affect detector observables hereby
- denoted by 
-\begin_inset Formula $\systematics$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-
-\shape italic
-A priori
-\shape default
- (prior) knowledge of 
-\begin_inset Formula $\xsec$
-\end_inset
-
- and 
-\begin_inset Formula $\flux$
-\end_inset
-
- are available from external measurements and experiments.
- The 
-\begin_inset Formula $\systematics$
-\end_inset
-
- parameters are penalty terms whose effect can be understood and mitigated
- with control samples.
-\end_layout
-
-\begin_layout Subsubsection
-Constructing a Likelihood
-\end_layout
-
-\begin_layout Standard
-We can define a binned likelihood for the ND280-only constraint with the
- nuisance parameters as
-\begin_inset Formula 
-\begin{equation}
-\mathcal{L}\left(\xsec,\flux\left|\vec{N}_{\ND280}^{\text{Data}}\right.\right)=\prob{\xsec,\flux,\systematics\left|\vec{N}_{\ND280}^{\text{Data}}\right.}=\frac{\prob{\left.\vec{N}_{\ND280}^{\text{Data}}\right|\xsec,\flux,\systematics}}{\prob{\vec{N}_{\ND280}^{\text{Data}}}}\pi\left(\xsec\right)\pi\left(\flux\right)\pi\left(\systematics\right),\label{eq:likelihoodgeneral}
-\end{equation}
-
-\end_inset
-
-where 
-\begin_inset Formula $\vec{N}_{\ND280}^{\text{Data}}$
-\end_inset
-
- are the binned data measurements, 
-\begin_inset Formula $\pi\left(\vec{y}=\xsec,\flux,\systematics\right)$
-\end_inset
-
- are prior distributions which are assumed Gaussian distributions
-\begin_inset Formula 
-\begin{equation}
-\pi(\vec{y})=\left(\frac{1}{\left(2\pi\right)^{k}\det\left(V_{y}\right)}\right)^{\frac{1}{2}}e^{\left(-\frac{1}{2}\Delta\vec{y}\cdot V_{y}^{-1}\cdot\Delta\vec{y}^{T}\right)},\label{eq:nuisancepriorgaussian}
-\end{equation}
-
-\end_inset
-
-with 
-\begin_inset Formula $V_{y}$
-\end_inset
-
- being the covariance matrix for 
-\begin_inset Formula $\vec{y}$
-\end_inset
-
- and 
-\begin_inset Formula $\Delta\vec{y}=\vec{y}-\vec{y}_{\text{Nominal}}$
-\end_inset
-
- is the difference between the current and nominal set of vector parameters,
- and 
-\begin_inset Formula $\prob{\vec{N}_{\ND280}^{\text{Data}}}$
-\end_inset
-
- is a normalization.
- We have used Bayes' theorem
-\begin_inset Formula 
-\begin{equation}
-\prob{AB}=\prob B\prob{A\left|B\right.}\label{eq:bayestheorem}
-\end{equation}
-
-\end_inset
-
-to evaluate 
-\begin_inset CommandInset ref
-LatexCommand eqref
-reference "eq:likelihoodgeneral"
-plural "false"
-caps "false"
-noprefix "false"
-
-\end_inset
-
- as
-\begin_inset Formula 
-\begin{equation}
-\prob{\underset{A}{\underbrace{\xsec,\flux,\systematics}}\left|\underset{B}{\underbrace{\vec{N}_{\ND280}^{\text{Data}}}}\right.}=\frac{\prob{\vec{N}_{\ND280}^{\text{Data}},\left(\xsec,\flux,\systematics\right)}}{\prob{\vec{N}_{\ND280}^{\text{Data}}}}\label{eq:bayes1}
-\end{equation}
-
-\end_inset
-
-which we can further manipulate since the data are independent of the nuisance
- parameters
-\begin_inset Formula 
-\begin{equation}
-\prob{\vec{N}_{\ND280}^{\text{Data}},\left(\xsec,\flux,\systematics\right)}=\prob{\underset{A}{\underbrace{\left(\xsec,\flux,\systematics\right)}},\underset{B}{\underbrace{\vec{N}_{\ND280}^{\text{Data}}}}}=\pi\left(\xsec\right)\pi\left(\flux\right)\pi\left(\systematics\right)\prob{\left.\vec{N}_{\ND280}^{\text{Data}}\right|\xsec,\flux,\systematics}\label{eq:bayes2}
-\end{equation}
-
-\end_inset
-
-resulting in 
-\begin_inset CommandInset ref
-LatexCommand formatted
-reference "eq:likelihoodgeneral"
-plural "false"
-caps "true"
-noprefix "false"
-
-\end_inset
-
-.
- The assumption of a Gaussian prior in 
-\begin_inset CommandInset ref
-LatexCommand formatted
-reference "eq:nuisancepriorgaussian"
-plural "false"
-caps "true"
-noprefix "false"
-
-\end_inset
-
- while not always truly Gaussian, allows for the use of a covariance matrix
- to describe the uncertainties and correlations in parameters.
- Once a maximum of the likelihood is found after marginalizing the effects
- of the systematics 
-\begin_inset Formula $\systematics$
-\end_inset
-
-, the best fit values for 
-\begin_inset Formula $\flux$
-\end_inset
-
- and 
-\begin_inset Formula $\xsec$
-\end_inset
-
- can be propagated to the oscillation analysis.
-\end_layout
-
-\begin_layout Subsubsection
-BANFF Likelihood
-\end_layout
-
-\begin_layout Standard
-In practice maximizing the log-likelihood (LLH) is performed instead of
- maximizing the likelihood function.
- In addition, multiplying the LLH by -2 turns the maximization problem into
- a minimization one which programs like MINUIT are designed to find.
- To obtain the best set of parameters 
-\begin_inset Formula $\xsec$
-\end_inset
-
- and 
-\begin_inset Formula $\flux$
-\end_inset
-
- from the ND280 data that minimize the 
-\begin_inset Formula $-2\times$
-\end_inset
-
-LLH, we need to predict how they affect our detector observables.
- Consider binned samples that select different charged current topologies.
- A convenient choice of observables for all the samples are the outgoing
- charged lepton 
-\begin_inset Formula $l$
-\end_inset
-
- momentum 
-\begin_inset Formula $P_{l}$
-\end_inset
-
- and angle 
-\begin_inset Formula $\cos\theta_{l}$
-\end_inset
-
- as mesaured in the ND since all the nuisance parameters affect these quantities.
- BANFF also uses an event-by-event weighting scheme to rapidly vary the
- event observables from detector systematics.
- With this treatment, the detector systematics 
-\begin_inset Formula $\systematics$
-\end_inset
-
- are treated with a response 
-\begin_inset Formula $\vec{r}$
-\end_inset
-
- and thus 
-\begin_inset Formula $P_{l}\rightarrow P_{l}\left(\vec{r}\right)$
-\end_inset
-
- and 
-\begin_inset Formula $\cos\theta_{l}\rightarrow\cos\theta_{l}\left(\vec{r}\right)$
-\end_inset
-
-.
- We have the pieces needed to define the likelihood function used in ND-only
- BANFF analysis.
- For each 
-\begin_inset Formula $\left(P_{l},\cos\theta_{l}\right)$
-\end_inset
-
- bin 
-\begin_inset Formula $i=1,2,\ldots,M-1,M$
-\end_inset
-
-, the likelihood for the ND-constraint is a ratio of the predicted events
- 
-\begin_inset Formula $\left(\vec{N}^{p}\right)$
-\end_inset
-
- likelihood to the likelihood of the data events 
-\begin_inset Formula $\left(\vec{N}^{d}\right)$
-\end_inset
-
-
-\begin_inset Formula 
-\begin{equation}
-\begin{aligned}\Lambda_{\ND280}^{r} & =\frac{\mathcal{L}\left(\vec{N}^{p}\left(\xsec,\flux,\vec{r}\right)\left|\vec{N}^{d}\right.\right)}{\mathcal{L}\left(\vec{N}^{d}\left(\xsec,\flux,\vec{r}\right)\left|\vec{N}^{d}\right.\right)}\\
- & =\left(\prod_{\vec{y}=\xsec,\flux,\vec{r}}\frac{\pi\left(\vec{y}\right)}{\pi\left(\vec{y}_{\text{Nom}}\right)}\right)\left(\prod_{i=1}^{M}\left(\vec{N}_{i}^{p}\right)^{\vec{N}_{i}^{d}}\frac{e^{-\vec{N}_{i}^{p}}}{\vec{N}_{i}^{d}!}\right)\left(\prod_{j=1}^{M}\left(\vec{N}_{i}^{d}\right)^{\vec{N}_{i}^{d}}\frac{e^{-\vec{N}_{i}^{d}}}{\vec{N}_{i}^{d}!}\right)^{-1}
-\end{aligned}
-\label{eq:likelihoodratioND280}
-\end{equation}
-
-\end_inset
-
-where constant terms have been dropped for brevity.
- When taking 
-\begin_inset Formula $-2\log$
-\end_inset
-
- of both sides, we use Wilks' theorem to define a chi-squared 
-\begin_inset Formula $\Delta\chi_{\ND280}^{2}=-2\log\Lambda_{\ND280}^{r}$
-\end_inset
-
- which is
-\begin_inset Formula 
-\begin{equation}
-\begin{aligned}\Delta\chi_{\ND280}^{2} & =2\sum_{i=1}^{M}\left[\vec{N}_{i}^{p}\left(\xsec,\flux,\vec{r}\right)-\vec{N}_{i}^{d}+\vec{N}_{i}^{d}\log\left(\frac{\vec{N}_{i}^{d}}{\vec{N}_{i}^{p}\left(\xsec,\flux,\systematics\right)}\right)\right]\\
- & +\Delta\xsec\cdot V_{x}^{-1}\cdot\left(\Delta\xsec\right)^{T}+\Delta\flux\cdot V_{b}^{-1}\cdot\left(\Delta\flux\right)^{T}+\Delta\vec{r}\cdot V_{r}^{-1}\cdot\left(\Delta\vec{r}\right)^{T}
-\end{aligned}
-\label{eq:BANFFDeltaChiSqr}
-\end{equation}
-
-\end_inset
-
-where again constants were dropped from before.
- Since 
-\begin_inset Formula $\vec{N}_{i}^{p}$
-\end_inset
-
- is a function the nuisance parameters, this is most generally written as
-\begin_inset Formula 
-\begin{equation}
-\vec{N}_{i}^{p}\left(\xsec,\flux,\vec{r}\right)=\sum_{j=1}^{N_{i}^{\text{MC}}}\flux_{j}\left(E_{\nu}\right)\times w_{j}^{\text{norm}}\times w_{j}^{\xsec}\left(\xsec\right)\times w_{j}^{\systematics}\left(\vec{r}\right)\times\delta_{i}\left(P_{j}\left(\vec{r}\right),\cos\theta_{j}\left(\vec{r}\right),s_{j}\left(\vec{r}\right)\right)\label{eq:n-predicted-events}
-\end{equation}
-
-\end_inset
-
-where 
-\begin_inset Formula $\flux_{j}$
-\end_inset
-
- is the flux weight as a function of 
-\begin_inset Formula $E_{\nu}$
-\end_inset
-
-, 
-\begin_inset Formula $w_{j}^{\text{norm}}$
-\end_inset
-
- is the POT normalization 
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-todo{Is this the POT weight? Originally denoted as xnorm in TN-166 which
- usually denotes cross section parameters}
-\end_layout
-
-\end_inset
-
-, 
-\begin_inset Formula $w_{j}^{\xsec}\left(\xsec\right)$
-\end_inset
-
- is the weight function for the interaction cross section, 
-\begin_inset Formula $w_{j}^{\systematics}\left(\vec{r}\right)$
-\end_inset
-
- is the detector systematics weights that are stored in the response functions
- 
-\begin_inset Formula $\vec{r}$
-\end_inset
-
-, and 
-\begin_inset Formula $\delta_{i}\left(P_{j}\left(\vec{r}\right),\cos\theta_{j}\left(\vec{r}\right),s_{j}\left(\vec{r}\right)\right)$
-\end_inset
-
- is like a Kronecker delta that indicates the correct observable bin if
- the event belongs in sample 
-\begin_inset Formula $s_{j}\left(\vec{r}\right)$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Subsubsection
-Flux, Cross Section, and Detector Systematics
-\end_layout
-
-\begin_layout Standard
-The minimization of the LLH is attempted by exploring the multidimensional
- parameter space to as best as possible match the data and prediction.
- To understand the response of each systematic, a covariance matrix is built
- for each source.
- A combined covariance matrix is used in used the BANFF analysis where each
- submatrix is initially uncorrelated with each other.
- The parameters in the covariance matrix are usually given a nominal value
- of one (1) unless a special value is needed with an uncertainty extracted
- using the Cholesky decomposition method.
- The development of each systematic uncertainty is briefly discussed below.
-\end_layout
-
-\begin_layout Standard
-
-\series bold
-Flux
-\series default
-: The flux weight is binned as a function of neutrino energy 
-\begin_inset Formula $E_{\nu}$
-\end_inset
-
- and divided by horn current (RHC or FHC) and neutrino flavor (
-\begin_inset Formula $\numu$
-\end_inset
-
-, 
-\begin_inset Formula $\numubar$
-\end_inset
-
-, 
-\begin_inset Formula $\nue$
-\end_inset
-
-, and 
-\begin_inset Formula $\nuebar$
-\end_inset
-
-).
- Each flux bin has a preset width with parameter that describes the weight
- and its uncertainty as shown in 
-\begin_inset CommandInset ref
-LatexCommand formatted
-reference "fig:BANFF-ND280-flux"
-plural "false"
-caps "true"
-noprefix "false"
-
-\end_inset
-
-
-\begin_inset Float figure
-wide false
-sideways false
-status collapsed
-
-\begin_layout Plain Layout
-\align center
-\begin_inset Graphics
-	filename Figures/Introduction/FluxParametersPrePostFitTN324.png
-	lyxscale 50
-	width 75text%
-	height 49theight%
-	keepAspectRatio
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-BANFF ND280 flux 
-\begin_inset Formula $\numu$
-\end_inset
-
- and 
-\begin_inset Formula $\numubar$
-\end_inset
-
- binning parameters from T2K-TN-324 data post-fit results.
- The uncertainties are extracted from the pre-fit and post-fit covariance
- matrices.
-\begin_inset CommandInset label
-LatexCommand label
-name "fig:BANFF-ND280-flux"
-
-\end_inset
-
-
-\begin_inset Argument 1
-status open
-
-\begin_layout Plain Layout
-BANFF ND280 NuMu and ANuMu Flux Binning Parameters
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-.
- Each parameter has a nominal value of one (1) and an increase of 10% (1.1)
- indicates the corresponding bin increases by 10% also.
- There are 50 ND and 50 SK parameters with a flux covariance matrix is shown
- in 
-\begin_inset CommandInset ref
-LatexCommand formatted
-reference "fig:BANFF-pre-fit-flux-covariance"
-plural "false"
-caps "true"
-noprefix "false"
-
-\end_inset
-
-
-\begin_inset Float figure
-wide false
-sideways false
-status collapsed
-
-\begin_layout Plain Layout
-\align center
-\begin_inset Graphics
-	filename Figures/Introduction/BANFF_Flux_matrix.png
-	lyxscale 50
-	width 49text%
-	height 49theight%
-	keepAspectRatio
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-BANFF pre-fit flux covariance matrix shown with respective detector, horn
- current, and neutrino flavor.
-\begin_inset CommandInset label
-LatexCommand label
-name "fig:BANFF-pre-fit-flux-covariance"
-
-\end_inset
-
-
-\begin_inset Argument 1
-status collapsed
-
-\begin_layout Plain Layout
-BANFF Pre-fit Flux Covariance Matrix
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-
-\series bold
-Cross Section
-\series default
-: There are a number of cross section models and weight functions implemented
- in BANFF.
- A technical description of the models and weight functions is given in
- T2K-TN-315
-\begin_inset CommandInset citation
-LatexCommand cite
-key "Bolognesi2017"
-literal "false"
-
-\end_inset
-
-.
- In general, there are model parameters that describe CC-0
-\begin_inset Formula $\pion$
-\end_inset
-
-, CC-1
-\begin_inset Formula $\pion$
-\end_inset
-
-, FSI (FSI: final state interactions, and smaller T2K effects.
- There are 25 cross section parameters as shown in 
-\begin_inset CommandInset ref
-LatexCommand formatted
-reference "fig:Cross-section-correlations-prefit"
-plural "false"
-caps "true"
-noprefix "false"
-
-\end_inset
-
-
-\begin_inset Float figure
-wide false
-sideways false
-status collapsed
-
-\begin_layout Plain Layout
-\align center
-\begin_inset Graphics
-	filename Figures/Introduction/BANFFXsecPrefitCorrelation.png
-	lyxscale 50
-	width 49text%
-	height 25theight%
-	keepAspectRatio
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-Cross section parameters pre-fit correlation matrix from the 2017 BANFF
- analysis.
-\begin_inset CommandInset label
-LatexCommand label
-name "fig:Cross-section-correlations-prefit"
-
-\end_inset
-
-
-\begin_inset Argument 1
-status collapsed
-
-\begin_layout Plain Layout
-Cross Section Parameters Pre-fit Correlation Matrix
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\begin_inset CommandInset citation
-LatexCommand cite
-key "Bienstock2017"
-literal "false"
-
-\end_inset
-
-.
- While most parameters are set to a nominal value of one (1), some are different
- like the 2p2h (MEC) parameters.
- Also other parameters are unconstrainted like MAQE due to limitations of
- the dipole form factor model.
-\end_layout
-
-\begin_layout Standard
-
-\series bold
-Detector Systematics
-\series default
-: Detector systematics are implemented as normalization changes to event
- kinematics as well as sample migration.
- Variations are stored in the event-by-event response vector 
-\begin_inset Formula $\vec{r}$
-\end_inset
-
-.
- In order to understand how the detector systematics correlate for a set
- of samples with varying kinematic bins, BANFF employs what are called observabl
-e normalization (obsnorm) parameters.
- Since the event can change from sample-to-sample and in kinematic normalization
-, obsnorms correlations are understood by examining how kinematics vary
- over many fake experiments, also called toy experiments or just toys.
- Therefore the nominal value for each obsnorm parameter is not one (1).
- The number of obsnorm parameters are determined by the analyzer by defining
- a set of bins that can encapsulate how events migrate across bins.
- A detector covariance matrix is contructed using all toy experiments.
- The drawback to this method is that not all detector systematics have Gaussian
- responses to the observables, and so the correlations are not fully accurate.
-\end_layout
-
-\begin_layout Subsection
-Usage of ND280 Psyche Software
-\end_layout
-
-\begin_layout Standard
-Psyche is a general framework for data handling, event selections, and systemati
-c evaluations with toy experiments.
- Psyche is a 
-\begin_inset Quotes eld
-\end_inset
-
-lean
-\begin_inset Quotes erd
-\end_inset
-
- package from the perspective of analyzing MC events since that functionality
- is built heavily into Highland2.
- The analysis performed in this technical note required making additions
- to psyche in order replicate features available in Highland2.
- It would be wise for future analyses to build a selection in Highland2
- and migrate that psyche once mature.
-\end_layout
-
-\begin_layout Standard
-BANFF uses a psyche package called psycheSteering that interfaces with all
- the psyche tools to manage the migration of samples into its analysis code.
- New 
+The 
 \begin_inset Formula $\pod$
 \end_inset
 
- selections were added to the psycheSelections package and validated using
- the psycheSteering AnalysisManager class.
- The AnalysisManager provides the functionality to get the true and reconstructe
-d detector observables from each reconstructed event along with the flux
- tunning and detector systematic weights.
+
 \end_layout
 
 \begin_layout Standard
-Flux tunning is the process of applying an event weight based on the true
- neutrino energy, flavor, and run period.
- Since the ND280 MC uses a series of models to describe the expected neutrino
- flux, it cannot perfectly model the true flux nor know the beam conditions
- at run time.
- The beam group is responsible for releasing the expected and measured neutrino
- flux in order to account for these differences.
- To flux tune an event, the relevant neutrino flavor flux histogram must
- be referenced.
- The weight is extracted by taking the ratio of the tuned flux to the nominal
- flux in the MC for a given neutrino energy.
- As an example 
-\begin_inset CommandInset ref
-LatexCommand formatted
-reference "fig:Fluxing-tuning-histogram"
-plural "false"
-caps "true"
-noprefix "false"
-
+The 
+\begin_inset Formula $\pod$
 \end_inset
 
- 
+, short for 
+\begin_inset Formula $\pizero$
+\end_inset
+
+ Detector, is a plastic scintillator based tracking calorimeter inside the
+ ND280 basket.
+ The 
+\begin_inset Formula $\pod$
+\end_inset
+
+ is constructed as many sandwiches of active and inactive materials designed
+ to fully contain 
+\begin_inset Formula $\pizero$
+\end_inset
+
+decay photons.
+ The four primary regions inside the 
+\begin_inset Formula $\pod$
+\end_inset
+
+ in order of upstream to downstream of the neutrino beam are the upstream
+ ECal (USECal), upstream water target (WT), central WT, and central ECal
+ (CECal).
+ A representation of the entire 
+\begin_inset Formula $\pod$
+\end_inset
+
+ can be seen in 
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename Figures/Introduction/FluxTunningnumuFHC.png
-	lyxscale 50
-	width 49text%
-	height 25theight%
-	keepAspectRatio
+	filename Figures/SamplesandSelections/P0D_NIM_Cartoon.png
+	lyxscale 25
+	width 50text%
 
 \end_inset
 
@@ -865,24 +140,31 @@ status collapsed
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Fluxing tuning histogram for 
-\begin_inset Formula $\numu$
-\end_inset
-
- FHC events taken from the 13av3 flux release.
- 
-\begin_inset CommandInset label
-LatexCommand label
-name "fig:Fluxing-tuning-histogram"
-
-\end_inset
-
-
 \begin_inset Argument 1
 status collapsed
 
 \begin_layout Plain Layout
-Fluxing Tuning Histogram for FHC Events
+Cartoon of the 
+\begin_inset Formula $\pod$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+This cartoon illustrates the concept design of the 
+\begin_inset Formula $\pod$
+\end_inset
+
+ where the neutrino beam is approaching from the left.
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:PODNIM"
+
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -893,15 +175,110 @@ Fluxing Tuning Histogram for FHC Events
 \end_inset
 
 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "fig:PODNIM"
+plural "false"
+caps "true"
+noprefix "false"
+
+\end_inset
+
+.
+ Each active module, also called a 
+\begin_inset Formula $\pod$
+\end_inset
+
+ule, consists of two orthogonally oriented sheets of triangular, scintillator-do
+ped plastic bars as shown in 
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/SamplesandSelections/P0DBars.png
+	lyxscale 25
+	width 50text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset Argument 1
+status collapsed
+
+\begin_layout Plain Layout
+Cartoon of an Individual 
+\begin_inset Formula $\pod$
+\end_inset
+
+ule
 \end_layout
 
 \end_inset
 
-shows the flux tuning weights for true 
-\begin_inset Formula $\numu$
+This cartoon illustrates the design of a 
+\begin_inset Formula $\pod$
 \end_inset
 
- FHC events.
+ule with orthogonal layers of scintillating, triangular bars.
+ When a charged particle travels through the bar such as a muon from CC
+ interaction, the scintillation light is captured and wavelength shifted
+ inside a fiber bored in the center of each bar.
+ The wavelength shifted light is later observed by a photon counter.
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:PODule"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "fig:PODule"
+plural "false"
+caps "true"
+noprefix "false"
+
+\end_inset
+
+.
+ The ECal regions are designed to contain decay photons inside the 
+\begin_inset Formula $\pod$
+\end_inset
+
+ by alternating the scintillator planes with lead sheets.
+ The WT regions, as compared to the lead sheets in the ECals, alternate
+ a thin brass sheet and water filled bags between the 
+\begin_inset Formula $\pod$
+\end_inset
+
+ules.
+ A unique feature of the 
+\begin_inset Formula $\pod$
+\end_inset
+
+ is that the water can be drained out resulting in two detector configurations:
+ water-in and water-out.
 \end_layout
 
 \end_body
