@@ -79,6 +79,45 @@
 \begin_layout Standard
 \begin_inset CommandInset nomenclature
 LatexCommand nomenclature
+prefix "BANFF"
+symbol "BANFF"
+description "The \\textbf{b}eam \\textbf{a}nd \\textbf{n}ear detector task \\textbf{f}orce is the group responsible for providing near detector constraints on cross section and flux model parameters."
+literal "true"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+prefix "ND"
+symbol "ND"
+description "The \\textbf{n}ear \\textbf{d}etector refers to the particle detector in a long baseline neutrino oscillation experiment that is located close to the neutrino production source before neutrino oscillations occur."
+literal "true"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+prefix "FD"
+symbol "FD"
+description "The \\textbf{f}ar \\textbf{d}etector refers to the particle detector in a long baseline neutrino oscillation experiment that is located far away from the neutrino production source where oscillated neutrinos are observed."
+literal "true"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
 prefix "POD"
 symbol "PØD"
 description "The $\\pi^0$ detector (\\textbf{p}i-\\textbf{Ø} \\textbf{d}etector)"

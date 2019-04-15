@@ -158,19 +158,20 @@ BANFF Treatment of ND Constraint
 \end_layout
 
 \begin_layout Standard
-The primary goal of an oscillation experiment is to measure the parameters
- in a neutrino mixing matrix.
- All other parameters, while having some theoretical importance to fundamental
- physics, are nuisance parameters that must be accounted for.
- To understand the methodology of BANFF, it is relevant to understand the
- number of nuisance parameters that go into a ND+FD fit.
- The BANFF implementation aims to reduce the dimensionality, and hence complexit
-y, of the problem by performing a separate analysis on the nuisance parameters
- that only the ND can measure.
- Then that information is propagated to the oscillation analysis for the
- FD data.
- Conceptually this approach has computational advantages and should provide
- the same result with a joint ND+FD analysis.
+The BANFF implementation aims to reduce the dimensionality, and hence complexity
+, of the joint near detector (ND) and far detector (FD) problem by performing
+ a separate analysis on the nuisance parameters that only the ND can measure.
+ In a joint ND and FD joint fit, the measurements from both detectors are
+ considered along with their respective systematic uncertainties.
+ This approach is computationally expensive since the time to perform a
+ fit increases non-linearly with dimensionality.
+ BANFF considers a ND-only fit in order to decrease the computational demands.
+ The BANFF post-fit parameters and their covariances are then propagated
+ to the oscillation analysis using FD-only data.
+ This allows for more rapidly completed studies on the effects of model
+ parameters and biases present.
+ Conceptually this approach should provide the same result with a joint
+ ND and FD analysis.
  However, information encoded in the ND measurements for shared nuisance
  parameters is inevitably lost in this 
 \begin_inset Quotes eld
@@ -246,128 +247,6 @@ A priori
 
  parameters are penalty terms whose effect can be understood and mitigated
  with control samples.
-\end_layout
-
-\begin_layout Subsubsection
-Constructing a Likelihood
-\end_layout
-
-\begin_layout Standard
-We can define a binned likelihood for the ND280-only constraint with the
- nuisance parameters as
-\begin_inset Formula 
-\begin{equation}
-\mathcal{L}\left(\xsec,\flux\left|\vec{N}_{\ND280}^{\text{Data}}\right.\right)=\prob{\xsec,\flux,\systematics\left|\vec{N}_{\ND280}^{\text{Data}}\right.}=\frac{\prob{\left.\vec{N}_{\ND280}^{\text{Data}}\right|\xsec,\flux,\systematics}}{\prob{\vec{N}_{\ND280}^{\text{Data}}}}\pi\left(\xsec\right)\pi\left(\flux\right)\pi\left(\systematics\right),\label{eq:likelihoodgeneral}
-\end{equation}
-
-\end_inset
-
-where 
-\begin_inset Formula $\vec{N}_{\ND280}^{\text{Data}}$
-\end_inset
-
- are the binned data measurements, 
-\begin_inset Formula $\pi\left(\vec{y}=\xsec,\flux,\systematics\right)$
-\end_inset
-
- are prior distributions which are assumed Gaussian distributions
-\begin_inset Formula 
-\begin{equation}
-\pi(\vec{y})=\left(\frac{1}{\left(2\pi\right)^{k}\det\left(V_{y}\right)}\right)^{\frac{1}{2}}e^{\left(-\frac{1}{2}\Delta\vec{y}\cdot V_{y}^{-1}\cdot\Delta\vec{y}^{T}\right)},\label{eq:nuisancepriorgaussian}
-\end{equation}
-
-\end_inset
-
-with 
-\begin_inset Formula $V_{y}$
-\end_inset
-
- being the covariance matrix for 
-\begin_inset Formula $\vec{y}$
-\end_inset
-
- and 
-\begin_inset Formula $\Delta\vec{y}=\vec{y}-\vec{y}_{\text{Nominal}}$
-\end_inset
-
- is the difference between the current and nominal set of vector parameters,
- and 
-\begin_inset Formula $\prob{\vec{N}_{\ND280}^{\text{Data}}}$
-\end_inset
-
- is a normalization.
- We have used Bayes' theorem
-\begin_inset Formula 
-\begin{equation}
-\prob{AB}=\prob B\prob{A\left|B\right.}\label{eq:bayestheorem}
-\end{equation}
-
-\end_inset
-
-to evaluate 
-\begin_inset CommandInset ref
-LatexCommand eqref
-reference "eq:likelihoodgeneral"
-plural "false"
-caps "false"
-noprefix "false"
-
-\end_inset
-
- as
-\begin_inset Formula 
-\begin{equation}
-\prob{\underset{A}{\underbrace{\xsec,\flux,\systematics}}\left|\underset{B}{\underbrace{\vec{N}_{\ND280}^{\text{Data}}}}\right.}=\frac{\prob{\vec{N}_{\ND280}^{\text{Data}},\left(\xsec,\flux,\systematics\right)}}{\prob{\vec{N}_{\ND280}^{\text{Data}}}}\label{eq:bayes1}
-\end{equation}
-
-\end_inset
-
-which we can further manipulate since the data are independent of the nuisance
- parameters
-\begin_inset Formula 
-\begin{equation}
-\prob{\vec{N}_{\ND280}^{\text{Data}},\left(\xsec,\flux,\systematics\right)}=\prob{\underset{A}{\underbrace{\left(\xsec,\flux,\systematics\right)}},\underset{B}{\underbrace{\vec{N}_{\ND280}^{\text{Data}}}}}=\pi\left(\xsec\right)\pi\left(\flux\right)\pi\left(\systematics\right)\prob{\left.\vec{N}_{\ND280}^{\text{Data}}\right|\xsec,\flux,\systematics}\label{eq:bayes2}
-\end{equation}
-
-\end_inset
-
-resulting in 
-\begin_inset CommandInset ref
-LatexCommand formatted
-reference "eq:likelihoodgeneral"
-plural "false"
-caps "true"
-noprefix "false"
-
-\end_inset
-
-.
- The assumption of a Gaussian prior in 
-\begin_inset CommandInset ref
-LatexCommand formatted
-reference "eq:nuisancepriorgaussian"
-plural "false"
-caps "true"
-noprefix "false"
-
-\end_inset
-
- while not always truly Gaussian, allows for the use of a covariance matrix
- to describe the uncertainties and correlations in parameters.
- Once a maximum of the likelihood is found after marginalizing the effects
- of the systematics 
-\begin_inset Formula $\systematics$
-\end_inset
-
-, the best fit values for 
-\begin_inset Formula $\flux$
-\end_inset
-
- and 
-\begin_inset Formula $\xsec$
-\end_inset
-
- can be propagated to the oscillation analysis.
 \end_layout
 
 \begin_layout Subsubsection
@@ -457,6 +336,31 @@ LLH, we need to predict how they affect our detector observables.
 \end_inset
 
 where constant terms have been dropped for brevity.
+ The prior distributions 
+\begin_inset Formula $\pi\left(\vec{y}=\xsec,\flux,\systematics\right)$
+\end_inset
+
+ are assumed Gaussian distributions
+\begin_inset Formula 
+\begin{equation}
+\pi(\vec{y})=\left(\frac{1}{\left(2\pi\right)^{k}\det\left(V_{y}\right)}\right)^{\frac{1}{2}}e^{\left(-\frac{1}{2}\Delta\vec{y}\cdot V_{y}^{-1}\cdot\Delta\vec{y}^{T}\right)},\label{eq:nuisancepriorgaussian-1}
+\end{equation}
+
+\end_inset
+
+with 
+\begin_inset Formula $V_{y}$
+\end_inset
+
+ being the covariance matrix for 
+\begin_inset Formula $\vec{y}$
+\end_inset
+
+ and 
+\begin_inset Formula $\Delta\vec{y}=\vec{y}-\vec{y}_{\text{Nominal}}$
+\end_inset
+
+ is the difference between the current and nominal set of vector parameters.
  When taking 
 \begin_inset Formula $-2\log$
 \end_inset
