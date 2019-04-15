@@ -258,7 +258,20 @@ In practice maximizing the log-likelihood (LLH) is performed instead of
  maximizing the likelihood function.
  In addition, multiplying the LLH by -2 turns the maximization problem into
  a minimization one which programs like MINUIT are designed to find.
- To obtain the best set of parameters 
+ For an introduction into the use of likelihood functions in fits to histograms,
+ see 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "baker-cousins"
+literal "false"
+
+\end_inset
+
+ and the PDG review on Statistics.
+\end_layout
+
+\begin_layout Standard
+To obtain the best set of parameters 
 \begin_inset Formula $\xsec$
 \end_inset
 
@@ -388,60 +401,59 @@ where again constants were dropped from before.
  is a function the nuisance parameters, this is most generally written as
 \begin_inset Formula 
 \begin{equation}
-\vec{N}_{i}^{p}\left(\xsec,\flux,\vec{r}\right)=\sum_{j=1}^{N_{i}^{\text{MC}}}\flux_{j}\left(E_{\nu}\right)\times w_{j}^{\text{norm}}\times w_{j}^{\xsec}\left(\xsec\right)\times w_{j}^{\systematics}\left(\vec{r}\right)\times\delta_{i}\left(P_{j}\left(\vec{r}\right),\cos\theta_{j}\left(\vec{r}\right),s_{j}\left(\vec{r}\right)\right)\label{eq:n-predicted-events}
+\vec{N}_{i}^{p}\left(\xsec,\flux,\vec{r}\right)=w_{i}^{\text{POT}}\systematics_{i}\sum_{j=1}^{N_{i}^{\text{MC}}}\left[\sum_{k=1}^{N^{\text{Flux}}}\left(\delta_{j,k}^{\text{Flux}}\flux_{k}\right)\prod_{l=1}^{N^{\text{Syst}}}w_{j,l}\left(x_{l}^{\text{xsec}}\right)\right].\label{eq:n-predicted-events}
 \end{equation}
 
 \end_inset
 
-where 
-\begin_inset Formula $\flux_{j}$
+Here 
+\begin_inset Formula $w_{i}^{\text{POT}}$
 \end_inset
 
- is the flux weight as a function of 
-\begin_inset Formula $E_{\nu}$
+ is the the ratio of of the number of true to simulated (MC) protons on
+ target (POT) and 
+\begin_inset Formula $N_{i}^{\text{MC}}$
 \end_inset
 
-, 
-\begin_inset Formula $w_{j}^{\text{norm}}$
+ is the number of events in the 
+\begin_inset Formula $i$
 \end_inset
 
- is the POT normalization 
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-todo{Is this the POT weight? Originally denoted as xnorm in TN-166 which
- usually denotes cross section parameters}
-\end_layout
-
+th analysis bin.
+ The 
+\begin_inset Formula $\systematics_{i}$
 \end_inset
 
-, 
-\begin_inset Formula $w_{j}^{\xsec}\left(\xsec\right)$
+ parameters vary the total number of predicted events in analysis bin.
+ The 
+\begin_inset Formula $\flux_{k}$
 \end_inset
 
- is the weight function for the interaction cross section, 
-\begin_inset Formula $w_{j}^{\systematics}\left(\vec{r}\right)$
+ are the flux normalizations for each event with a total of 
+\begin_inset Formula $N^{\text{Flux}}$
 \end_inset
 
- is the detector systematics weights that are stored in the response functions
- 
-\begin_inset Formula $\vec{r}$
+ flux bins.
+ Since the flux bins are categorized by neutrino flavor, energy, and horn
+ (focusing magnet) current, the 
+\begin_inset Formula $\delta_{j,k}^{\text{Flux}}$
 \end_inset
 
-, and 
-\begin_inset Formula $\delta_{i}\left(P_{j}\left(\vec{r}\right),\cos\theta_{j}\left(\vec{r}\right),s_{j}\left(\vec{r}\right)\right)$
+ term selects the correct flux bin.
+ The 
+\begin_inset Formula $w_{j,l}\left(x_{l}^{\text{xsec}}\right)$
 \end_inset
 
- is like a Kronecker delta that indicates the correct observable bin if
- the event belongs in sample 
-\begin_inset Formula $s_{j}\left(\vec{r}\right)$
+ are pre-calculated event weight functions for each cross section (xsec)
+ model parameter 
+\begin_inset Formula $x_{l}^{\text{xsec}}$
 \end_inset
 
-.
+ out of a total of 
+\begin_inset Formula $N^{\text{Syst}}$
+\end_inset
+
+ xsec systematics.
 \end_layout
 
 \begin_layout Subsubsection
