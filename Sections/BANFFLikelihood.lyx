@@ -766,146 +766,19 @@ Detector Systematics
  also commonly refered to as obsnorms.
  Since neutrino interaction events can migrate from sample-to-sample, bin-to-bin
 , or both depending on the relevant systematics, numerous toy experiments
- are performed by varying systematic model parameters known to affect event
- or bin migration.
- After many toy experiments, usually ~2000, the mean values and covariances
- are extracted from all the experiments over all observable normalization
- bins.
- Therefore the nominal value for each obsnorm parameter is not one (1).
- The number of obsnorm parameters are determined by the analyzer by defining
- a set of bins that can encapsulate how events migrate across bins.
- A detector covariance matrix is contructed using all toy experiments.
+ are performed by varying detector systematic model parameters .
+ After many toy experiments, usually ~2000, all the toy experiments are
+ examined together to create a covariance matrix.
  The drawback to this method is that not all detector systematics have Gaussian
  responses to the observables, and so the correlations are not fully accurate.
 \end_layout
 
 \begin_layout Standard
-Ideally there would be one normalization for each analysis bin.
+Ideally there would be one observable normalization for each analysis bin.
  However due to computational and time limitations, a single observable
  normalization parameter are assigned to multiple analysis bins.
- 
-\end_layout
-
-\begin_layout Subsection
-Usage of ND280 Psyche Software
-\end_layout
-
-\begin_layout Standard
-Psyche is a general framework for data handling, event selections, and systemati
-c evaluations with toy experiments.
- Psyche is a 
-\begin_inset Quotes eld
-\end_inset
-
-lean
-\begin_inset Quotes erd
-\end_inset
-
- package from the perspective of analyzing MC events since that functionality
- is built heavily into Highland2.
- The analysis performed in this technical note required making additions
- to psyche in order replicate features available in Highland2.
- It would be wise for future analyses to build a selection in Highland2
- and migrate that psyche once mature.
-\end_layout
-
-\begin_layout Standard
-BANFF uses a psyche package called psycheSteering that interfaces with all
- the psyche tools to manage the migration of samples into its analysis code.
- New 
-\begin_inset Formula $\pod$
-\end_inset
-
- selections were added to the psycheSelections package and validated using
- the psycheSteering AnalysisManager class.
- The AnalysisManager provides the functionality to get the true and reconstructe
-d detector observables from each reconstructed event along with the flux
- tunning and detector systematic weights.
-\end_layout
-
-\begin_layout Standard
-Flux tunning is the process of applying an event weight based on the true
- neutrino energy, flavor, and run period.
- Since the ND280 MC uses a series of models to describe the expected neutrino
- flux, it cannot perfectly model the true flux nor know the beam conditions
- at run time.
- The beam group is responsible for releasing the expected and measured neutrino
- flux in order to account for these differences.
- To flux tune an event, the relevant neutrino flavor flux histogram must
- be referenced.
- The weight is extracted by taking the ratio of the tuned flux to the nominal
- flux in the MC for a given neutrino energy.
- As an example 
-\begin_inset Float figure
-wide false
-sideways false
-status open
-
-\begin_layout Plain Layout
-\align center
-\begin_inset Graphics
-	filename Figures/Introduction/FluxTunningnumuFHC.png
-	lyxscale 50
-	width 49text%
-	height 25theight%
-	keepAspectRatio
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-Fluxing tuning histogram for 
-\begin_inset Formula $\numu$
-\end_inset
-
- FHC events taken from the 13av3 flux release.
- 
-\begin_inset CommandInset label
-LatexCommand label
-name "fig:Fluxing-tuning-histogram"
-
-\end_inset
-
-
-\begin_inset Argument 1
-status collapsed
-
-\begin_layout Plain Layout
-Fluxing Tuning Histogram for FHC Events
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\begin_inset CommandInset ref
-LatexCommand formatted
-reference "fig:Fluxing-tuning-histogram"
-plural "false"
-caps "true"
-noprefix "false"
-
-\end_inset
-
- shows the flux tuning weights for true 
-\begin_inset Formula $\numu$
-\end_inset
-
- FHC events.
+ The number of observable normalization parameters are determined by the
+ analyzer by merging the sets of analysis bins.
 \end_layout
 
 \end_body
