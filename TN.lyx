@@ -336,19 +336,6 @@ Introduction
 \end_layout
 
 \begin_layout Standard
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-%Intro to fitting in long baseline experiments, focus on BANFF.
- Physics implications.
- P0D Introduction
-\end_layout
-
-\end_inset
-
-
 \begin_inset CommandInset include
 LatexCommand input
 filename "Sections/Introduction.lyx"
