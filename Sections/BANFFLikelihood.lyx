@@ -185,7 +185,7 @@ divide-and-conquer
 \end_layout
 
 \begin_layout Standard
-The BANFF ND-only constraint between 2015 and 2018 is described in detail
+The BANFF ND-only constraint between 2015 through 2018 is described in detail
  in T2K-TN-220
 \begin_inset CommandInset citation
 LatexCommand citet
@@ -300,44 +300,43 @@ LLH, we need to predict how they affect our detector observables.
 
  as mesaured in the ND since all the nuisance parameters affect these quantities.
  BANFF also uses an event-by-event weighting scheme to rapidly vary the
- event observables from detector systematics.
- With this treatment, the detector systematics 
-\begin_inset Formula $\systematics$
-\end_inset
+ event weights each of the cross section parameters.
+ 
+\end_layout
 
- are treated with a response 
-\begin_inset Formula $\vec{r}$
-\end_inset
-
- and thus 
-\begin_inset Formula $P_{l}\rightarrow P_{l}\left(\vec{r}\right)$
-\end_inset
-
- and 
-\begin_inset Formula $\cos\theta_{l}\rightarrow\cos\theta_{l}\left(\vec{r}\right)$
-\end_inset
-
-.
- We have the pieces needed to define the likelihood function used in ND-only
+\begin_layout Standard
+We have the pieces needed to define the likelihood function used in ND-only
  BANFF analysis.
+ Much of this is also documented in T2K-TN-220
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Hartz2015"
+literal "false"
+
+\end_inset
+
+ where additional details can be found.
  For each 
 \begin_inset Formula $\left(P_{l},\cos\theta_{l}\right)$
 \end_inset
 
- bin 
+ analysis bin 
 \begin_inset Formula $i=1,2,\ldots,M-1,M$
 \end_inset
 
-, the likelihood for the ND-constraint is a ratio of the predicted events
- 
-\begin_inset Formula $\left(\vec{N}^{p}\right)$
+, the likelihood for the ND-constraint, 
+\begin_inset Formula $\Lambda_{\ND280}^{r}$
 \end_inset
 
- likelihood to the likelihood of the data events 
-\begin_inset Formula $\left(\vec{N}^{d}\right)$
+, is a ratio of the predicted events,
+\begin_inset Formula $\text{\vec{N}^{p}}$
 \end_inset
 
+, likelihood to the likelihood of the data events, 
+\begin_inset Formula $\vec{N}^{d}$
+\end_inset
 
+, given as
 \begin_inset Formula 
 \begin{equation}
 \begin{aligned}\Lambda_{\ND280}^{r} & =\frac{\mathcal{L}\left(\vec{N}^{p}\left(\xsec,\flux,\vec{r}\right)\left|\vec{N}^{d}\right.\right)}{\mathcal{L}\left(\vec{N}^{d}\left(\xsec,\flux,\vec{r}\right)\left|\vec{N}^{d}\right.\right)}\\
@@ -349,11 +348,11 @@ LLH, we need to predict how they affect our detector observables.
 \end_inset
 
 where constant terms have been dropped for brevity.
- The prior distributions 
+ Each of the prior distributions 
 \begin_inset Formula $\pi\left(\vec{y}=\xsec,\flux,\systematics\right)$
 \end_inset
 
- are assumed Gaussian distributions
+ are assumed as Gaussians
 \begin_inset Formula 
 \begin{equation}
 \pi(\vec{y})=\left(\frac{1}{\left(2\pi\right)^{k}\det\left(V_{y}\right)}\right)^{\frac{1}{2}}e^{\left(-\frac{1}{2}\Delta\vec{y}\cdot V_{y}^{-1}\cdot\Delta\vec{y}^{T}\right)},\label{eq:nuisancepriorgaussian-1}
@@ -378,11 +377,12 @@ with
 \begin_inset Formula $-2\log$
 \end_inset
 
- of both sides, we use Wilks' theorem to define a chi-squared 
+ of both sides, we use Wilks' theorem to define a chi-squared test statistic
+ 
 \begin_inset Formula $\Delta\chi_{\ND280}^{2}=-2\log\Lambda_{\ND280}^{r}$
 \end_inset
 
- which is
+ which is given by
 \begin_inset Formula 
 \begin{equation}
 \begin{aligned}\Delta\chi_{\ND280}^{2} & =2\sum_{i=1}^{M}\left[\vec{N}_{i}^{p}\left(\xsec,\flux,\vec{r}\right)-\vec{N}_{i}^{d}+\vec{N}_{i}^{d}\log\left(\frac{\vec{N}_{i}^{d}}{\vec{N}_{i}^{p}\left(\xsec,\flux,\systematics\right)}\right)\right]\\
@@ -398,7 +398,7 @@ where again constants were dropped from before.
 \begin_inset Formula $\vec{N}_{i}^{p}$
 \end_inset
 
- is a function the nuisance parameters, this is most generally written as
+ is a function the nuisance parameters, this is calculated as
 \begin_inset Formula 
 \begin{equation}
 \vec{N}_{i}^{p}\left(\xsec,\flux,\vec{r}\right)=w_{i}^{\text{POT}}\systematics_{i}\sum_{j=1}^{N_{i}^{\text{MC}}}\left[\sum_{k=1}^{N^{\text{Flux}}}\left(\delta_{j,k}^{\text{Flux}}\flux_{k}\right)\prod_{l=1}^{N^{\text{Syst}}}w_{j,l}\left(x_{l}^{\text{xsec}}\right)\right].\label{eq:n-predicted-events}
@@ -424,16 +424,17 @@ th analysis bin.
 \begin_inset Formula $\systematics_{i}$
 \end_inset
 
- parameters vary the total number of predicted events in analysis bin.
+ parameters are observable normalization systematic parameters and vary
+ the total number of predicted events in the analysis bin.
  The 
 \begin_inset Formula $\flux_{k}$
 \end_inset
 
- are the flux normalizations for each event with a total of 
+ parmaeters, out of a total of 
 \begin_inset Formula $N^{\text{Flux}}$
 \end_inset
 
- flux bins.
+, are flux normalization systematics for each flux bin.
  Since the flux bins are categorized by neutrino flavor, energy, and horn
  (focusing magnet) current, the 
 \begin_inset Formula $\delta_{j,k}^{\text{Flux}}$
@@ -444,16 +445,21 @@ th analysis bin.
 \begin_inset Formula $w_{j,l}\left(x_{l}^{\text{xsec}}\right)$
 \end_inset
 
- are pre-calculated event weight functions for each cross section (xsec)
- model parameter 
+ parameters are pre-calculated event weight functions for each cross section
+ (xsec) model parameter, 
 \begin_inset Formula $x_{l}^{\text{xsec}}$
 \end_inset
 
- out of a total of 
+, out of a total of 
 \begin_inset Formula $N^{\text{Syst}}$
 \end_inset
 
- xsec systematics.
+ cross section systematics.
+\end_layout
+
+\begin_layout Standard
+What follows here is a further description of the systematics and their
+ implementation.
 \end_layout
 
 \begin_layout Subsubsection
@@ -647,11 +653,19 @@ Cross Section
 \series default
 : There are a number of cross section models and weight functions implemented
  in BANFF.
- A technical description of the models and weight functions is given in
- T2K-TN-315
+ The cross section model used in this analysis is the 2017 NIWG parameterization.
+ A technical description of the 2017 parameterization is given in T2K-TN-315
 \begin_inset CommandInset citation
 LatexCommand cite
 key "Bolognesi2017"
+literal "false"
+
+\end_inset
+
+ and T2K-TN-307
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Mahn2017"
 literal "false"
 
 \end_inset
@@ -737,10 +751,7 @@ literal "false"
 \end_inset
 
 .
- While most parameters are set to a nominal value of one (1), some are different
- like the 2p2h (MEC) parameters.
- Also other parameters are unconstrainted like MAQE due to limitations of
- the dipole form factor model.
+ 
 \end_layout
 
 \begin_layout Standard
@@ -750,23 +761,29 @@ Detector Systematics
 \series default
 : Detector systematics are implemented as normalization changes to event
  kinematics as well as sample migration.
- Variations are stored in the event-by-event response vector 
-\begin_inset Formula $\vec{r}$
-\end_inset
-
-.
- In order to understand how the detector systematics correlate for a set
- of samples with varying kinematic bins, BANFF employs what are called observabl
-e normalization (obsnorm) parameters.
- Since the event can change from sample-to-sample and in kinematic normalization
-, obsnorms correlations are understood by examining how kinematics vary
- over many fake experiments, also called toy experiments or just toys.
+ In order to understand the how the detector systematics affect analysis
+ bins, BANFF employs what are called observable normalization parameters,
+ also commonly refered to as obsnorms.
+ Since neutrino interaction events can migrate from sample-to-sample, bin-to-bin
+, or both depending on the relevant systematics, numerous toy experiments
+ are performed by varying systematic model parameters known to affect event
+ or bin migration.
+ After many toy experiments, usually ~2000, the mean values and covariances
+ are extracted from all the experiments over all observable normalization
+ bins.
  Therefore the nominal value for each obsnorm parameter is not one (1).
  The number of obsnorm parameters are determined by the analyzer by defining
  a set of bins that can encapsulate how events migrate across bins.
  A detector covariance matrix is contructed using all toy experiments.
  The drawback to this method is that not all detector systematics have Gaussian
  responses to the observables, and so the correlations are not fully accurate.
+\end_layout
+
+\begin_layout Standard
+Ideally there would be one normalization for each analysis bin.
+ However due to computational and time limitations, a single observable
+ normalization parameter are assigned to multiple analysis bins.
+ 
 \end_layout
 
 \begin_layout Subsection
