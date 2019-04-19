@@ -199,54 +199,6 @@ literal "false"
  and systematic parameterizations, the method has remained unchanged.
  It uses a frequentist approach to find the best nuisance parameter set
  to maximize a binned likelihood.
- The sets of nuisance, also called systematic, parameters in BANFF are
-\end_layout
-
-\begin_layout Itemize
-cross section physics model parameters hereby denoted by 
-\begin_inset Formula $\xsec$
-\end_inset
-
-,
-\end_layout
-
-\begin_layout Itemize
-neutrino flux binned in neutrino energy hereby denoted by 
-\begin_inset Formula $\flux$
-\end_inset
-
-, and
-\end_layout
-
-\begin_layout Itemize
-detector systematics response weights that affect detector observables hereby
- denoted by 
-\begin_inset Formula $\systematics$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-
-\shape italic
-A priori
-\shape default
- (prior) knowledge of 
-\begin_inset Formula $\xsec$
-\end_inset
-
- and 
-\begin_inset Formula $\flux$
-\end_inset
-
- are available from external measurements and experiments.
- The 
-\begin_inset Formula $\systematics$
-\end_inset
-
- parameters are penalty terms whose effect can be understood and mitigated
- with control samples.
 \end_layout
 
 \begin_layout Subsubsection
@@ -345,24 +297,7 @@ noprefix "false"
 \end_layout
 
 \begin_layout Subsubsection
-BANFF Likelihood
-\end_layout
-
-\begin_layout Standard
-In practice maximizing the log-likelihood (LLH) is performed instead of
- maximizing the likelihood function.
- In addition, multiplying the LLH by -2 turns the maximization problem into
- a minimization one which programs like MINUIT are designed to find.
- For an introduction into the use of likelihood functions in fits to histograms,
- see 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "baker-cousins"
-literal "false"
-
-\end_inset
-
- and the PDG review on Statistics.
+BANFF Likelihood and Test Statistic
 \end_layout
 
 \begin_layout Standard
@@ -374,11 +309,8 @@ To obtain the best set of parameters
 \begin_inset Formula $\flux$
 \end_inset
 
- from the ND280 data that minimize the 
-\begin_inset Formula $-2\times$
-\end_inset
-
-LLH, we need to predict how they affect our detector observables.
+ from the ND280 data, we need to predict how they affect our detector observable
+s.
  Consider binned samples that select different charged current topologies.
  A convenient choice of observables for all the samples are the outgoing
  charged lepton 
@@ -400,8 +332,8 @@ LLH, we need to predict how they affect our detector observables.
 \end_layout
 
 \begin_layout Standard
-We have the pieces needed to define the likelihood function used in ND-only
- BANFF analysis.
+We have the pieces needed to define working pieces of the likelihood function
+ used in ND-only BANFF analysis.
  Much of this is also documented in T2K-TN-220
 \begin_inset CommandInset citation
 LatexCommand cite
@@ -411,6 +343,16 @@ literal "false"
 \end_inset
 
  where additional details can be found.
+ For an introduction into the use of likelihood functions in fits to histograms,
+ see 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "baker-cousins"
+literal "false"
+
+\end_inset
+
+ and the PDG review on Statistics.
  For each 
 \begin_inset Formula $\left(P_{l},\cos\theta_{l}\right)$
 \end_inset
@@ -419,84 +361,48 @@ literal "false"
 \begin_inset Formula $i=1,2,\ldots,M-1,M$
 \end_inset
 
-, the likelihood for the ND-constraint, 
-\begin_inset Formula $\Lambda_{\ND280}^{r}$
+, the likelihood 
+\begin_inset Formula $\mathcal{L}$
 \end_inset
 
-, is a ratio of the predicted events,
-\begin_inset Formula $\text{\vec{N}^{p}}$
+ is given by
+\begin_inset Formula 
+\[
+\begin{aligned}\mathcal{L}\left(\vec{N}^{p}\left|\vec{N}^{d}\right.\right) & =\left(\prod_{i=1}^{M}\left(\vec{N}_{i}^{p}\right)^{\vec{N}_{i}^{d}}\frac{e^{-\vec{N}_{i}^{p}}}{\vec{N}_{i}^{d}!}\right)\end{aligned}
+\]
+
 \end_inset
 
-, likelihood to the likelihood of the data events, 
+where 
 \begin_inset Formula $\vec{N}^{d}$
 \end_inset
 
-, given as
+ is the number of observed data events and 
+\begin_inset Formula $\vec{N}^{p}$
+\end_inset
+
+ is the number of predicted events as a function of many nuisance parameters.
+ The sets of nuisance, also called systematic, parameters in BANFF are
+\end_layout
+
+\begin_layout Itemize
+cross section physics model parameters,
+\end_layout
+
+\begin_layout Itemize
+neutrino flux, and
+\end_layout
+
+\begin_layout Itemize
+detector systematics.
+\end_layout
+
+\begin_layout Standard
+Given these three sets of systematics, the number of predicted events is
+ given by
 \begin_inset Formula 
 \begin{equation}
-\begin{aligned}\Lambda_{\ND280}^{r} & =\frac{\mathcal{L}\left(\vec{N}^{p}\left(\xsec,\flux,\vec{r}\right)\left|\vec{N}^{d}\right.\right)}{\mathcal{L}\left(\vec{N}^{d}\left(\xsec,\flux,\vec{r}\right)\left|\vec{N}^{d}\right.\right)}\frac{\pi\left(\xsec\right)}{\pi\left(\xsec_{\text{Nom}}\right)}\frac{\pi\left(\flux\right)}{\pi\left(\flux_{\text{Nom}}\right)}\frac{\pi\left(\systematics\right)}{\pi\left(\systematics_{\text{Nom}}\right)}\\
- & =\left(\prod_{\vec{y}=\xsec,\flux,\vec{r}}\frac{\pi\left(\vec{y}\right)}{\pi\left(\vec{y}_{\text{Nom}}\right)}\right)\left(\prod_{i=1}^{M}\left(\vec{N}_{i}^{p}\right)^{\vec{N}_{i}^{d}}\frac{e^{-\vec{N}_{i}^{p}}}{\vec{N}_{i}^{d}!}\right)\left(\prod_{j=1}^{M}\left(\vec{N}_{i}^{d}\right)^{\vec{N}_{i}^{d}}\frac{e^{-\vec{N}_{i}^{d}}}{\vec{N}_{i}^{d}!}\right)^{-1}
-\end{aligned}
-\label{eq:likelihoodratioND280}
-\end{equation}
-
-\end_inset
-
-where constant terms have been dropped for brevity.
- Each of the prior distributions 
-\begin_inset Formula $\pi\left(\vec{y}=\xsec,\flux,\systematics\right)$
-\end_inset
-
- are assumed as Gaussians
-\begin_inset Formula 
-\begin{equation}
-\pi(\vec{y})=\left(\frac{1}{\left(2\pi\right)^{k}\det\left(V_{y}\right)}\right)^{\frac{1}{2}}e^{\left(-\frac{1}{2}\Delta\vec{y}\cdot V_{y}^{-1}\cdot\Delta\vec{y}^{T}\right)},\label{eq:nuisancepriorgaussian-1}
-\end{equation}
-
-\end_inset
-
-with 
-\begin_inset Formula $V_{y}$
-\end_inset
-
- being the covariance matrix for 
-\begin_inset Formula $\vec{y}$
-\end_inset
-
- and 
-\begin_inset Formula $\Delta\vec{y}=\vec{y}-\vec{y}_{\text{Nominal}}$
-\end_inset
-
- is the difference between the current and nominal set of vector parameters.
- When taking 
-\begin_inset Formula $-2\log$
-\end_inset
-
- of both sides, we use Wilks' theorem to define a chi-squared test statistic
- 
-\begin_inset Formula $\Delta\chi_{\ND280}^{2}=-2\log\Lambda_{\ND280}^{r}$
-\end_inset
-
- which is given by
-\begin_inset Formula 
-\begin{equation}
-\begin{aligned}\Delta\chi_{\ND280}^{2} & =2\sum_{i=1}^{M}\left[\vec{N}_{i}^{p}\left(\xsec,\flux,\vec{r}\right)-\vec{N}_{i}^{d}+\vec{N}_{i}^{d}\log\left(\frac{\vec{N}_{i}^{d}}{\vec{N}_{i}^{p}\left(\xsec,\flux,\systematics\right)}\right)\right]\\
- & +\Delta\xsec\cdot V_{x}^{-1}\cdot\left(\Delta\xsec\right)^{T}+\Delta\flux\cdot V_{b}^{-1}\cdot\left(\Delta\flux\right)^{T}+\Delta\vec{r}\cdot V_{r}^{-1}\cdot\left(\Delta\vec{r}\right)^{T}
-\end{aligned}
-\label{eq:BANFFDeltaChiSqr}
-\end{equation}
-
-\end_inset
-
-where again constants were dropped from before.
- Since 
-\begin_inset Formula $\vec{N}_{i}^{p}$
-\end_inset
-
- is a function the nuisance parameters, this is calculated as
-\begin_inset Formula 
-\begin{equation}
-\vec{N}_{i}^{p}\left(\xsec,\flux,\vec{r}\right)=w_{i}^{\text{POT}}\systematics_{i}\sum_{j=1}^{N_{i}^{\text{MC}}}\left[\sum_{k=1}^{N^{\text{Flux}}}\left(\delta_{j,k}^{\text{Flux}}\flux_{k}\right)\prod_{l=1}^{N^{\text{Syst}}}w_{j,l}\left(x_{l}^{\text{xsec}}\right)\right].\label{eq:n-predicted-events}
+\vec{N}_{i}^{p}\left(\xsec,\flux,\vec{r}\right)=w_{i}^{\text{POT}}\systematics_{i}\sum_{j=1}^{N_{i}^{\text{MC}}}\left[\sum_{k=1}^{N^{\text{Flux}}}\left(\delta_{j,k}^{\text{Flux}}\flux_{k}\right)\prod_{l=1}^{N^{\text{Syst}}}w_{j,l}\left(\xsec_{l}^{\text{xsec}}\right)\right].\label{eq:n-predicted-events}
 \end{equation}
 
 \end_inset
@@ -519,13 +425,13 @@ th analysis bin.
 \begin_inset Formula $\systematics_{i}$
 \end_inset
 
- parameters are observable normalization systematic parameters and vary
- the total number of predicted events in the analysis bin.
+ parameters are observable normalization detector systematic parameters
+ that vary the total number of predicted events in the analysis bin.
  The 
 \begin_inset Formula $\flux_{k}$
 \end_inset
 
- parmaeters, out of a total of 
+ parameters, out of a total of 
 \begin_inset Formula $N^{\text{Flux}}$
 \end_inset
 
@@ -537,12 +443,12 @@ th analysis bin.
 
  term selects the correct flux bin.
  The 
-\begin_inset Formula $w_{j,l}\left(x_{l}^{\text{xsec}}\right)$
+\begin_inset Formula $w_{j,l}\left(\xsec_{l}^{\text{xsec}}\right)$
 \end_inset
 
  parameters are pre-calculated event weight functions for each cross section
  (xsec) model parameter, 
-\begin_inset Formula $x_{l}^{\text{xsec}}$
+\begin_inset Formula $\xsec_{l}^{\text{xsec}}$
 \end_inset
 
 , out of a total of 
@@ -553,6 +459,82 @@ th analysis bin.
 \end_layout
 
 \begin_layout Standard
+In practice one tries to minimization a test statistic which programs like
+ MINUIT are designed to find.
+ Using the likelihood ratio test theorem, a test statistic can be defined
+ using a ratio of two likelihoods
+\begin_inset Formula 
+\[
+\Delta\chi_{\ND280}^{2}=-2\log\frac{\mathcal{L}\left(\vec{N}^{p}\left|\vec{N}^{d}\right.\right)}{\mathcal{L}\left(\vec{N}^{d}\right)}
+\]
+
+\end_inset
+
+where this test statistic 
+\begin_inset Formula $\Delta\chi_{\ND280}^{2}$
+\end_inset
+
+ obeys a true chi-squared distribution for asymptotically large statistics.
+ Penalty terms from the cross section, flux, and detector systematics are
+ included in order to account for their systematic effect.
+ The updated test statistic is given by
+\begin_inset Formula 
+\[
+\Delta\chi_{\ND280}^{2}=-2\log\frac{\mathcal{L}\left(\vec{N}^{p}\left|\vec{N}^{d}\right.\right)}{\mathcal{L}\left(\vec{N}^{d}\right)}-2\left(\sum_{\vec{y}=\xsec,\flux,\vec{r}}\log\left[\frac{\pi\left(\vec{y}\right)}{\pi\left(\vec{y}_{\text{Nom}}\right)}\right]\right)
+\]
+
+\end_inset
+
+with each of the prior distributions 
+\begin_inset Formula $\pi\left(\vec{y}=\xsec,\flux,\systematics\right)$
+\end_inset
+
+ assumed as normally distributed priors
+\begin_inset Formula 
+\begin{equation}
+\pi(\vec{y})=\left(\frac{1}{\left(2\pi\right)^{k_{y}}\det\left(V_{y}\right)}\right)^{\frac{1}{2}}e^{\left(-\frac{1}{2}\Delta\vec{y}\cdot V_{y}^{-1}\cdot\Delta\vec{y}^{T}\right)},\label{eq:nuisancepriorgaussian-1}
+\end{equation}
+
+\end_inset
+
+with 
+\begin_inset Formula $V_{y}$
+\end_inset
+
+ being the covariance matrix for a 
+\begin_inset Formula $k_{y}$
+\end_inset
+
+ size vector
+\begin_inset Formula $\vec{y}$
+\end_inset
+
+, 
+\begin_inset Formula $\Delta\vec{y}=\vec{y}-\vec{y}_{\text{Nom}}$
+\end_inset
+
+ is the difference between the current/explored and nominal set of vector
+ parameters, and 
+\begin_inset Formula $T$
+\end_inset
+
+ corresponds to the transpose of a vector.
+ The full expanded form of the test 
+\begin_inset Formula $\Delta\chi_{\ND280}^{2}$
+\end_inset
+
+is given by
+\begin_inset Formula 
+\begin{equation}
+\begin{aligned}\Delta\chi_{\ND280}^{2} & =2\sum_{i=1}^{M}\left[\vec{N}_{i}^{p}-\vec{N}_{i}^{d}+\vec{N}_{i}^{d}\log\left(\frac{\vec{N}_{i}^{d}}{\vec{N}_{i}^{p}}\right)\right]\\
+ & +\Delta\xsec\cdot V_{x}^{-1}\cdot\left(\Delta\xsec\right)^{T}+\Delta\flux\cdot V_{b}^{-1}\cdot\left(\Delta\flux\right)^{T}+\Delta\systematics\cdot V_{d}^{-1}\cdot\left(\Delta\systematics\right)^{T}\\
+ & +2\left(\log\left[\left(2\pi\right)^{k_{x}}\det\left(V_{x}\right)\right]+\log\left[\left(2\pi\right)^{k_{b}}\det\left(V_{b}\right)\right]+\log\left[\left(2\pi\right)^{k_{d}}\det\left(V_{d}\right)\right]\right)
+\end{aligned}
+\label{eq:BANFFDeltaChiSqr}
+\end{equation}
+
+\end_inset
+
 What follows here is a further description of the systematics and their
  implementation.
 \end_layout
