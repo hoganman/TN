@@ -206,43 +206,47 @@ Constructing a Likelihood
 \end_layout
 
 \begin_layout Standard
-We can define a binned likelihood for the ND280-only constraint with the
+One can define a binned likelihood for the ND280-only constraint with the
  nuisance parameters.
  Consider the problem of extracting physics parameters 
 \begin_inset Formula $\vec{y}$
 \end_inset
 
- given some data.
- The probability to measure these parameters given the data is given as
+ given some data 
+\begin_inset Formula $\vec{N}$
+\end_inset
+
+.
+ The probability 
+\begin_inset Formula $\mathcal{P}$
+\end_inset
+
+ to measure these parameters is given as
 \begin_inset Formula 
 \begin{equation}
-\prob{\vec{y}\left|\vec{N}_{\ND280}^{\text{Data}}\right.}=\frac{\mathcal{L}\left(\left.\vec{N}_{\ND280}^{\text{Data}}\right|\vec{y}\right)}{\prob{\vec{N}_{\ND280}^{\text{Data}}}}\pi\left(\vec{y}\right),\label{eq:likelihoodgeneral}
+\prob{\vec{y}\left|\vec{N}\right.}=\frac{\mathcal{L}\left(\left.\vec{N}\right|\vec{y}\right)}{\prob{\vec{N}}}\pi\left(\vec{y}\right),\label{eq:likelihoodgeneral}
 \end{equation}
 
 \end_inset
 
 where 
-\begin_inset Formula $\vec{N}_{\ND280}^{\text{Data}}$
+\begin_inset Formula $\mathcal{L}\left(\left.\vec{N}\right|\vec{y}\right)$
 \end_inset
 
- are the binned data measurements, 
-\begin_inset Formula $\prob{\vec{N}_{\ND280}^{\text{Data}}}$
+ is the likelihood, 
+\begin_inset Formula $\prob{\vec{N}}$
 \end_inset
 
  is a constant normalization, and 
-\begin_inset Formula $\pi(y)$
+\begin_inset Formula $\pi(\vec{y})$
 \end_inset
 
- are prior terms.
- We have used Bayes' theorem
-\begin_inset Formula 
-\begin{equation}
-\prob{AB}=\prob B\prob{A\left|B\right.}\label{eq:bayestheorem}
-\end{equation}
-
+ are priors on the 
+\begin_inset Formula $\vec{y}$
 \end_inset
 
-to evaluate 
+ terms.
+ One arrives at 
 \begin_inset CommandInset ref
 LatexCommand eqref
 reference "eq:likelihoodgeneral"
@@ -252,26 +256,34 @@ noprefix "false"
 
 \end_inset
 
- as
+ by using Bayes' theorem
 \begin_inset Formula 
 \begin{equation}
-\prob{\underset{A}{\underbrace{\vec{y}}}\left|\underset{B}{\underbrace{\vec{N}_{\ND280}^{\text{Data}}}}\right.}=\frac{\prob{\vec{N}_{\ND280}^{\text{Data}},\vec{y}}}{\prob{\vec{N}_{\ND280}^{\text{Data}}}}\label{eq:bayes1}
+\prob{AB}=\prob B\prob{A\left|B\right.}\label{eq:bayestheorem}
 \end{equation}
 
 \end_inset
 
-which we can further manipulate since the data are independent of the nuisance
+to evaluate
+\begin_inset Formula 
+\begin{equation}
+\prob{\underset{A}{\underbrace{\vec{y}}}\left|\underset{B}{\underbrace{\vec{N}}}\right.}=\frac{\prob{\vec{N},\vec{y}}}{\prob{\vec{N}}}\label{eq:bayes1}
+\end{equation}
+
+\end_inset
+
+which we can further manipulated since the data are independent of the nuisance
  parameters
 \begin_inset Formula 
 \begin{equation}
-\prob{\vec{N}_{\ND280}^{\text{Data}},\vec{y}}=\prob{\underset{A}{\underbrace{\vec{y}}},\underset{B}{\underbrace{\vec{N}_{\ND280}^{\text{Data}}}}}=\mathcal{L}\left(\left.\vec{N}_{\ND280}^{\text{Data}}\right|\vec{y}\right)\pi\left(\vec{y}\right)\label{eq:bayes2}
+\prob{\vec{N},\vec{y}}=\prob{\underset{A}{\underbrace{\vec{y}}},\underset{B}{\underbrace{\vec{N}}}}=\mathcal{L}\left(\left.\vec{N}\right|\vec{y}\right)\pi\left(\vec{y}\right)\label{eq:bayes2}
 \end{equation}
 
 \end_inset
 
 resulting in the original expression 
 \begin_inset CommandInset ref
-LatexCommand formatted
+LatexCommand eqref
 reference "eq:likelihoodgeneral"
 plural "false"
 caps "true"
@@ -353,8 +365,17 @@ where
 \end_inset
 
  is the number of predicted events as a function of many nuisance parameters.
- One recognizes the likelihood function as a Poisson distribution given
- this is a counting experiment.
+ One recognizes the likelihood function in 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:likelihoodPoisson"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ as a Poisson distribution given this is a counting experiment.
  The sets of dependent nuisance, also called systematic, parameters that
  affect the predicted event rate are
 \end_layout
@@ -469,7 +490,7 @@ with each of the prior distributions
  assumed as normally distributed priors
 \begin_inset Formula 
 \begin{equation}
-\pi(\vec{y})=\left(\frac{1}{\left(2\pi\right)^{k_{y}}\det\left(V_{y}\right)}\right)^{\frac{1}{2}}e^{\left(-\frac{1}{2}\Delta\vec{y}\cdot V_{y}^{-1}\cdot\Delta\vec{y}^{T}\right)},\label{eq:nuisancepriorgaussian}
+\pi(\vec{y})=\left(\left(2\pi\right)^{k_{y}}\det\left(V_{y}\right)\right)^{-\frac{1}{2}}e^{\left(-\frac{1}{2}\Delta\vec{y}\cdot V_{y}^{-1}\cdot\Delta\vec{y}^{T}\right)},\label{eq:nuisancepriorgaussian}
 \end{equation}
 
 \end_inset
@@ -482,7 +503,7 @@ with
 \begin_inset Formula $k_{y}$
 \end_inset
 
- size vector
+ size vector 
 \begin_inset Formula $\vec{y}$
 \end_inset
 
@@ -506,15 +527,31 @@ is given by
 \begin{aligned}\Delta\chi_{\ND280}^{2} & =2\sum_{i=1}^{M}\left[\vec{N}_{i}^{p}-\vec{N}_{i}^{d}+\vec{N}_{i}^{d}\log\left(\frac{\vec{N}_{i}^{d}}{\vec{N}_{i}^{p}}\right)\right]\\
  & +\Delta\xsec\cdot V_{x}^{-1}\cdot\Delta\xsec^{T}+\Delta\flux\cdot V_{b}^{-1}\cdot\Delta\flux^{T}+\Delta\systematics\cdot V_{d}^{-1}\cdot\Delta\systematics^{T}\\
  & +\log\left[\det\left(V_{x}\right)\right]+\log\left[\det\left(V_{b}\right)\right]+\log\left[\det\left(V_{d}\right)\right]\\
- & +\log\left[\det\left(V_{x}^{\text{Nom}}\right)\right]+\log\left[\det\left(V_{b}^{\text{Nom}}\right)\right]+\log\left[\det\left(V_{d}^{\text{Nom}}\right)\right]
+ & +\log\left[\det\left(V_{x}^{\text{Nom}}\right)\right]+\log\left[\det\left(V_{b}^{\text{Nom}}\right)\right]+\log\left[\det\left(V_{d}^{\text{Nom}}\right)\right].
 \end{aligned}
 \label{eq:BANFFDeltaChiSqr}
 \end{equation}
 
 \end_inset
 
-What follows here is a further description of the systematics and their
- implementation.
+Once the global minimum of the test statistic is found, the covariance matrix
+ is extracted using the Hessian matrix
+\begin_inset Formula 
+\begin{equation}
+H_{i,j}=\frac{\partial^{2}}{\partial y_{i}\partial y_{j}}\left(\Delta\chi_{\ND280}^{2}\right)\label{eq:HessianMatrix}
+\end{equation}
+
+\end_inset
+
+where 
+\begin_inset Formula $y$
+\end_inset
+
+ is the set of all systematic terms and 
+\begin_inset Formula $i,j$
+\end_inset
+
+ are the indices.
 \end_layout
 
 \begin_layout Subsubsection
@@ -522,16 +559,7 @@ Flux, Cross Section, and Detector Systematics
 \end_layout
 
 \begin_layout Standard
-The minimization of the LLH is attempted by exploring the multidimensional
- parameter space to as best as possible match the data and prediction.
- To understand the response of each systematic, a covariance matrix is built
- for each source.
- A combined covariance matrix is used in used the BANFF analysis where each
- sub-matrix is initially uncorrelated with each other.
- The parameters in the covariance matrix are usually given a nominal value
- of one (1) unless a special value is needed with an uncertainty extracted
- using the Cholesky decomposition method.
- The development of each systematic uncertainty is briefly discussed below.
+Below is a description for each of the systematic terms in the BANFF likelihood.
 \end_layout
 
 \begin_layout Standard
@@ -543,7 +571,7 @@ Flux
 \begin_inset Formula $E_{\nu}$
 \end_inset
 
- and divided by horn current (RHC or FHC) and neutrino flavor (
+, horn current/polarity (FHC and RHC), and neutrino flavor (
 \begin_inset Formula $\numu$
 \end_inset
 
@@ -560,8 +588,16 @@ Flux
 \end_inset
 
 ).
- Each flux bin has a preset width with parameter that describes the weight
- and its uncertainty as shown in 
+ Each flux bin is a normalization for all events in a set energy range.
+ The flux normalization and uncertainty for 
+\begin_inset Formula $\numu$
+\end_inset
+
+ and 
+\begin_inset Formula $\numubar$
+\end_inset
+
+ in FHC from the 2017 analysis are shown in 
 \begin_inset CommandInset ref
 LatexCommand formatted
 reference "fig:BANFF-ND280-flux"
@@ -633,9 +669,10 @@ BANFF ND280 NuMu and ANuMu Flux Binning Parameters
 \end_inset
 
 .
- Each parameter has a nominal value of one (1) and an increase of 10% (1.1)
- indicates the corresponding bin increases by 10% also.
- There are 50 ND and 50 SK parameters with a flux covariance matrix is shown
+ Each parameter has a nominal value of one (1).
+ A flux bin value of 1.1 indicates that any event in that bin has an additional
+ weight of 1.1.
+ There are 50 ND and 50 SK parameters with a covariance matrix is shown
  in 
 \begin_inset CommandInset ref
 LatexCommand formatted
@@ -726,7 +763,7 @@ literal "false"
 \end_inset
 
 .
- In general, there are model parameters that describe CC-0
+ There are model parameters that alter the cross section of CC-0
 \begin_inset Formula $\pion$
 \end_inset
 
@@ -734,7 +771,7 @@ literal "false"
 \begin_inset Formula $\pion$
 \end_inset
 
-, FSI (FSI: final state interactions, and smaller T2K effects.
+, final state interactions (FSI), and smaller T2K effects.
  There are 25 cross section parameters as shown in 
 \begin_inset CommandInset ref
 LatexCommand formatted
