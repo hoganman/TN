@@ -269,7 +269,7 @@ which we can further manipulate since the data are independent of the nuisance
 
 \end_inset
 
-resulting in 
+resulting in the original expression 
 \begin_inset CommandInset ref
 LatexCommand formatted
 reference "eq:likelihoodgeneral"
@@ -280,20 +280,6 @@ noprefix "false"
 \end_inset
 
 .
- Once a maximum of the likelihood is found after marginalizing the effects
- of the systematics 
-\begin_inset Formula $\systematics$
-\end_inset
-
-, the best fit values for 
-\begin_inset Formula $\flux$
-\end_inset
-
- and 
-\begin_inset Formula $\xsec$
-\end_inset
-
- can be propagated to the oscillation analysis.
 \end_layout
 
 \begin_layout Subsubsection
@@ -301,17 +287,19 @@ BANFF Likelihood and Test Statistic
 \end_layout
 
 \begin_layout Standard
-To obtain the best set of parameters 
-\begin_inset Formula $\xsec$
+Given the likelihood, one desires to find maximal agreement between the
+ predicted and measured data points.
+ For an introduction into the use of likelihood functions in fits to histograms,
+ see 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "baker-cousins"
+literal "false"
+
 \end_inset
 
- and 
-\begin_inset Formula $\flux$
-\end_inset
-
- from the ND280 data, we need to predict how they affect our detector observable
-s.
- Consider binned samples that select different charged current topologies.
+ and the PDG review on Statistics.
+ Consider many binned samples that select different charged current topologies.
  A convenient choice of observables for all the samples are the outgoing
  charged lepton 
 \begin_inset Formula $l$
@@ -325,15 +313,7 @@ s.
 \begin_inset Formula $\cos\theta_{l}$
 \end_inset
 
- as mesaured in the ND since all the nuisance parameters affect these quantities.
- BANFF also uses an event-by-event weighting scheme to rapidly vary the
- event weights each of the cross section parameters.
- 
-\end_layout
-
-\begin_layout Standard
-We have the pieces needed to define working pieces of the likelihood function
- used in ND-only BANFF analysis.
+ as measured in the ND.
  Much of this is also documented in T2K-TN-220
 \begin_inset CommandInset citation
 LatexCommand cite
@@ -343,16 +323,6 @@ literal "false"
 \end_inset
 
  where additional details can be found.
- For an introduction into the use of likelihood functions in fits to histograms,
- see 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "baker-cousins"
-literal "false"
-
-\end_inset
-
- and the PDG review on Statistics.
  For each 
 \begin_inset Formula $\left(P_{l},\cos\theta_{l}\right)$
 \end_inset
@@ -367,9 +337,10 @@ literal "false"
 
  is given by
 \begin_inset Formula 
-\[
+\begin{equation}
 \begin{aligned}\mathcal{L}\left(\vec{N}^{p}\left|\vec{N}^{d}\right.\right) & =\left(\prod_{i=1}^{M}\left(\vec{N}_{i}^{p}\right)^{\vec{N}_{i}^{d}}\frac{e^{-\vec{N}_{i}^{p}}}{\vec{N}_{i}^{d}!}\right)\end{aligned}
-\]
+\label{eq:likelihoodPoisson}
+\end{equation}
 
 \end_inset
 
@@ -382,11 +353,14 @@ where
 \end_inset
 
  is the number of predicted events as a function of many nuisance parameters.
- The sets of nuisance, also called systematic, parameters in BANFF are
+ One recognizes the likelihood function as a Poisson distribution given
+ this is a counting experiment.
+ The sets of dependent nuisance, also called systematic, parameters that
+ affect the predicted event rate are
 \end_layout
 
 \begin_layout Itemize
-cross section physics model parameters,
+cross section (xsec) physics model parameters,
 \end_layout
 
 \begin_layout Itemize
@@ -464,9 +438,9 @@ In practice one tries to minimization a test statistic which programs like
  Using the likelihood ratio test theorem, a test statistic can be defined
  using a ratio of two likelihoods
 \begin_inset Formula 
-\[
-\Delta\chi_{\ND280}^{2}=-2\log\frac{\mathcal{L}\left(\vec{N}^{p}\left|\vec{N}^{d}\right.\right)}{\mathcal{L}\left(\vec{N}^{d}\right)}
-\]
+\begin{equation}
+\Delta\chi_{\ND280}^{2}=-2\log\frac{\mathcal{L}\left(\vec{N}^{p}\left|\vec{N}^{d}\right.\right)}{\mathcal{L}\left(\vec{N}^{d}\right)}\label{eq:LLHRatio}
+\end{equation}
 
 \end_inset
 
@@ -479,9 +453,12 @@ where this test statistic
  included in order to account for their systematic effect.
  The updated test statistic is given by
 \begin_inset Formula 
-\[
-\Delta\chi_{\ND280}^{2}=-2\log\frac{\mathcal{L}\left(\vec{N}^{p}\left|\vec{N}^{d}\right.\right)}{\mathcal{L}\left(\vec{N}^{d}\right)}-2\left(\sum_{\vec{y}=\xsec,\flux,\vec{r}}\log\left[\frac{\pi\left(\vec{y}\right)}{\pi\left(\vec{y}_{\text{Nom}}\right)}\right]\right)
-\]
+\begin{equation}
+\begin{aligned}\Delta\chi_{\ND280}^{2} & =-2\log\frac{\mathcal{L}\left(\vec{N}^{p}\left|\vec{N}^{d}\right.\right)}{\mathcal{L}\left(\vec{N}^{d}\right)}+\Delta\chi_{\text{xsec}}^{2}+\Delta\chi_{\text{Flux}}^{2}+\Delta\chi_{\text{Det}}^{2}\\
+ & -2\log\frac{\mathcal{L}\left(\vec{N}^{p}\left|\vec{N}^{d}\right.\right)}{\mathcal{L}\left(\vec{N}^{d}\right)}-2\left(\sum_{\vec{y}=\xsec,\flux,\vec{r}}\log\left[\frac{\pi\left(\vec{y}\right)}{\pi\left(\vec{y}_{\text{Nom}}\right)}\right]\right)
+\end{aligned}
+\label{eq:LLHRatioWithPenaltyTerms}
+\end{equation}
 
 \end_inset
 
@@ -492,7 +469,7 @@ with each of the prior distributions
  assumed as normally distributed priors
 \begin_inset Formula 
 \begin{equation}
-\pi(\vec{y})=\left(\frac{1}{\left(2\pi\right)^{k_{y}}\det\left(V_{y}\right)}\right)^{\frac{1}{2}}e^{\left(-\frac{1}{2}\Delta\vec{y}\cdot V_{y}^{-1}\cdot\Delta\vec{y}^{T}\right)},\label{eq:nuisancepriorgaussian-1}
+\pi(\vec{y})=\left(\frac{1}{\left(2\pi\right)^{k_{y}}\det\left(V_{y}\right)}\right)^{\frac{1}{2}}e^{\left(-\frac{1}{2}\Delta\vec{y}\cdot V_{y}^{-1}\cdot\Delta\vec{y}^{T}\right)},\label{eq:nuisancepriorgaussian}
 \end{equation}
 
 \end_inset
@@ -527,8 +504,9 @@ is given by
 \begin_inset Formula 
 \begin{equation}
 \begin{aligned}\Delta\chi_{\ND280}^{2} & =2\sum_{i=1}^{M}\left[\vec{N}_{i}^{p}-\vec{N}_{i}^{d}+\vec{N}_{i}^{d}\log\left(\frac{\vec{N}_{i}^{d}}{\vec{N}_{i}^{p}}\right)\right]\\
- & +\Delta\xsec\cdot V_{x}^{-1}\cdot\left(\Delta\xsec\right)^{T}+\Delta\flux\cdot V_{b}^{-1}\cdot\left(\Delta\flux\right)^{T}+\Delta\systematics\cdot V_{d}^{-1}\cdot\left(\Delta\systematics\right)^{T}\\
- & +2\left(\log\left[\left(2\pi\right)^{k_{x}}\det\left(V_{x}\right)\right]+\log\left[\left(2\pi\right)^{k_{b}}\det\left(V_{b}\right)\right]+\log\left[\left(2\pi\right)^{k_{d}}\det\left(V_{d}\right)\right]\right)
+ & +\Delta\xsec\cdot V_{x}^{-1}\cdot\Delta\xsec^{T}+\Delta\flux\cdot V_{b}^{-1}\cdot\Delta\flux^{T}+\Delta\systematics\cdot V_{d}^{-1}\cdot\Delta\systematics^{T}\\
+ & +\log\left[\det\left(V_{x}\right)\right]+\log\left[\det\left(V_{b}\right)\right]+\log\left[\det\left(V_{d}\right)\right]\\
+ & +\log\left[\det\left(V_{x}^{\text{Nom}}\right)\right]+\log\left[\det\left(V_{b}^{\text{Nom}}\right)\right]+\log\left[\det\left(V_{d}^{\text{Nom}}\right)\right]
 \end{aligned}
 \label{eq:BANFFDeltaChiSqr}
 \end{equation}
@@ -549,7 +527,7 @@ The minimization of the LLH is attempted by exploring the multidimensional
  To understand the response of each systematic, a covariance matrix is built
  for each source.
  A combined covariance matrix is used in used the BANFF analysis where each
- submatrix is initially uncorrelated with each other.
+ sub-matrix is initially uncorrelated with each other.
  The parameters in the covariance matrix are usually given a nominal value
  of one (1) unless a special value is needed with an uncertainty extracted
  using the Cholesky decomposition method.
@@ -844,8 +822,8 @@ Detector Systematics
  Since neutrino interaction events can migrate from sample-to-sample, bin-to-bin
 , or both depending on the relevant systematics, numerous toy experiments
  are performed by varying detector systematic model parameters .
- After many toy experiments, usually ~2000, all the toy experiments are
- examined together to create a covariance matrix.
+ After many toy experiments, usually 2000, all the toy experiments are examined
+ together to create a covariance matrix.
  The drawback to this method is that not all detector systematics have Gaussian
  responses to the observables, and so the correlations are not fully accurate.
 \end_layout
@@ -853,7 +831,7 @@ Detector Systematics
 \begin_layout Standard
 Ideally there would be one observable normalization for each analysis bin.
  However due to computational and time limitations, a single observable
- normalization parameter are assigned to multiple analysis bins.
+ normalization parameter is assigned to multiple analysis bins.
  The number of observable normalization parameters are determined by the
  analyzer by merging the sets of analysis bins.
 \end_layout
