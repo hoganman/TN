@@ -202,13 +202,11 @@ literal "false"
 \end_layout
 
 \begin_layout Subsubsection
-Constructing a Likelihood
+Likelihood Functions
 \end_layout
 
 \begin_layout Standard
-One can define a binned likelihood for the ND280-only constraint with the
- nuisance parameters.
- Consider the problem of extracting physics parameters 
+Consider the problem of extracting physics parameters 
 \begin_inset Formula $\vec{y}$
 \end_inset
 
@@ -233,7 +231,7 @@ where
 \begin_inset Formula $\mathcal{L}\left(\left.\vec{N}\right|\vec{y}\right)$
 \end_inset
 
- is the likelihood, 
+ is the likelihood function, 
 \begin_inset Formula $\prob{\vec{N}}$
 \end_inset
 
@@ -302,7 +300,7 @@ BANFF Likelihood and Test Statistic
 Given the likelihood, one desires to find maximal agreement between the
  predicted and measured data points.
  For an introduction into the use of likelihood functions in fits to histograms,
- see 
+ see reference 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "baker-cousins"
@@ -311,8 +309,8 @@ literal "false"
 \end_inset
 
  and the PDG review on Statistics.
- Consider many binned samples that select different charged current topologies.
- A convenient choice of observables for all the samples are the outgoing
+ Consider binned samples that describe different charged current topologies.
+ A convenient choice of binned observables for all the samples are the outgoing
  charged lepton 
 \begin_inset Formula $l$
 \end_inset
@@ -343,14 +341,10 @@ literal "false"
 \begin_inset Formula $i=1,2,\ldots,M-1,M$
 \end_inset
 
-, the likelihood 
-\begin_inset Formula $\mathcal{L}$
-\end_inset
-
- is given by
+, the likelihood is given by
 \begin_inset Formula 
 \begin{equation}
-\begin{aligned}\mathcal{L}\left(\vec{N}^{p}\left|\vec{N}^{d}\right.\right) & =\left(\prod_{i=1}^{M}\left(\vec{N}_{i}^{p}\right)^{\vec{N}_{i}^{d}}\frac{e^{-\vec{N}_{i}^{p}}}{\vec{N}_{i}^{d}!}\right)\end{aligned}
+\begin{aligned}\mathcal{L}\left(\vec{N}^{p}\left|\vec{N}^{d}\right.\right) & =\prod_{i=1}^{M}\left(\vec{N}_{i}^{p}\right)^{\vec{N}_{i}^{d}}\frac{e^{-\vec{N}_{i}^{p}}}{\vec{N}_{i}^{d}!}\end{aligned}
 \label{eq:likelihoodPoisson}
 \end{equation}
 
@@ -394,7 +388,7 @@ detector systematics.
 
 \begin_layout Standard
 Given these three sets of systematics, the number of predicted events is
- given by
+ described as
 \begin_inset Formula 
 \begin{equation}
 \vec{N}_{i}^{p}\left(\xsec,\flux,\vec{r}\right)=w_{i}^{\text{POT}}\systematics_{i}\sum_{j=1}^{N_{i}^{\text{MC}}}\left[\sum_{k=1}^{N^{\text{Flux}}}\left(\delta_{j,k}^{\text{Flux}}\flux_{k}\right)\prod_{l=1}^{N^{\text{Syst}}}w_{j,l}\left(\xsec_{l}^{\text{xsec}}\right)\right].\label{eq:n-predicted-events}
@@ -476,18 +470,18 @@ where this test statistic
 \begin_inset Formula 
 \begin{equation}
 \begin{aligned}\Delta\chi_{\ND280}^{2} & =-2\log\frac{\mathcal{L}\left(\vec{N}^{p}\left|\vec{N}^{d}\right.\right)}{\mathcal{L}\left(\vec{N}^{d}\right)}+\Delta\chi_{\text{xsec}}^{2}+\Delta\chi_{\text{Flux}}^{2}+\Delta\chi_{\text{Det}}^{2}\\
- & -2\log\frac{\mathcal{L}\left(\vec{N}^{p}\left|\vec{N}^{d}\right.\right)}{\mathcal{L}\left(\vec{N}^{d}\right)}-2\left(\sum_{\vec{y}=\xsec,\flux,\vec{r}}\log\left[\frac{\pi\left(\vec{y}\right)}{\pi\left(\vec{y}_{\text{Nom}}\right)}\right]\right)
+ & =-2\log\frac{\mathcal{L}\left(\vec{N}^{p}\left|\vec{N}^{d}\right.\right)}{\mathcal{L}\left(\vec{N}^{d}\right)}-2\left(\sum_{\vec{y}=\xsec,\flux,\vec{r}}\log\left[\frac{\pi\left(\vec{y}\right)}{\pi\left(\vec{y}_{\text{Nom}}\right)}\right]\right)
 \end{aligned}
 \label{eq:LLHRatioWithPenaltyTerms}
 \end{equation}
 
 \end_inset
 
-with each of the prior distributions 
+where each of the prior distributions 
 \begin_inset Formula $\pi\left(\vec{y}=\xsec,\flux,\systematics\right)$
 \end_inset
 
- assumed as normally distributed priors
+ are assumed as normally distributed priors
 \begin_inset Formula 
 \begin{equation}
 \pi(\vec{y})=\left(\left(2\pi\right)^{k_{y}}\det\left(V_{y}\right)\right)^{-\frac{1}{2}}e^{\left(-\frac{1}{2}\Delta\vec{y}\cdot V_{y}^{-1}\cdot\Delta\vec{y}^{T}\right)},\label{eq:nuisancepriorgaussian}
@@ -535,10 +529,10 @@ is given by
 \end_inset
 
 Once the global minimum of the test statistic is found, the covariance matrix
- is extracted using the Hessian matrix
+ is extracted using the local curvature at the global minimum
 \begin_inset Formula 
 \begin{equation}
-H_{i,j}=\frac{\partial^{2}}{\partial y_{i}\partial y_{j}}\left(\Delta\chi_{\ND280}^{2}\right)\label{eq:HessianMatrix}
+V_{i,j}=\frac{\partial^{2}}{\partial y_{i}\partial y_{j}}\left(\Delta\chi_{\ND280}^{2}\right)\label{eq:HessianMatrix}
 \end{equation}
 
 \end_inset
@@ -547,11 +541,15 @@ where
 \begin_inset Formula $y$
 \end_inset
 
- is the set of all systematic terms and 
+ is the union set of all systematic terms and 
 \begin_inset Formula $i,j$
 \end_inset
 
- are the indices.
+ are the indices that span 
+\begin_inset Formula $\vec{y}$
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Subsubsection
@@ -559,7 +557,7 @@ Flux, Cross Section, and Detector Systematics
 \end_layout
 
 \begin_layout Standard
-Below is a description for each of the systematic terms in the BANFF likelihood.
+Below is a description for each of the systematic terms in the BANFF fit.
 \end_layout
 
 \begin_layout Standard
@@ -597,7 +595,7 @@ Flux
 \begin_inset Formula $\numubar$
 \end_inset
 
- in FHC from the 2017 analysis are shown in 
+ in FHC mode from the 2017 analysis are shown in 
 \begin_inset CommandInset ref
 LatexCommand formatted
 reference "fig:BANFF-ND280-flux"
@@ -855,7 +853,15 @@ Detector Systematics
  kinematics as well as sample migration.
  In order to understand the how the detector systematics affect analysis
  bins, BANFF employs what are called observable normalization parameters,
- also commonly refered to as obsnorms.
+ also commonly referred to as 
+\begin_inset Quotes eld
+\end_inset
+
+obsnorms
+\begin_inset Quotes erd
+\end_inset
+
+.
  Since neutrino interaction events can migrate from sample-to-sample, bin-to-bin
 , or both depending on the relevant systematics, numerous toy experiments
  are performed by varying detector systematic model parameters .
@@ -867,8 +873,8 @@ Detector Systematics
 
 \begin_layout Standard
 Ideally there would be one observable normalization for each analysis bin.
- However due to computational and time limitations, a single observable
- normalization parameter is assigned to multiple analysis bins.
+ To reduce the number of fit parameters, a single observable normalization
+ parameter can be assigned to multiple analysis bins.
  The number of observable normalization parameters are determined by the
  analyzer by merging the sets of analysis bins.
 \end_layout
