@@ -232,7 +232,6 @@ where
 \end_inset
 
  is the likelihood of the parameters, 
-
 \begin_inset Formula $\pi(\vec{y})$
 \end_inset
 
@@ -343,7 +342,6 @@ For the BANFF fit, one considers the problem of trying to maximize the agreement
  of the data given the a set of parameters that predict the measured rate.
  The use of likelihood functions in fits to histogram is explained further
  in reference 
-
 \begin_inset CommandInset citation
 LatexCommand cite
 key "baker-cousins"
@@ -425,8 +423,8 @@ noprefix "false"
 \end_inset
 
  as a Poisson distribution given this is a counting experiment.
- The sets of dependent nuisance, also called systematic, parameters that
- affect the predicted event rate are
+ The sets of dependent nuisance parameters, also sometimes called systematics,
+ that affect the predicted event rate are
 \end_layout
 
 \begin_layout Itemize
@@ -438,7 +436,7 @@ neutrino flux, and
 \end_layout
 
 \begin_layout Itemize
-detector systematics.
+detector biases and inefficencies.
 \end_layout
 
 \begin_layout Standard
@@ -446,7 +444,7 @@ Given these three sets of systematics, the number of predicted events is
  described as
 \begin_inset Formula 
 \begin{equation}
-\vec{N}_{i}^{p}\left(\xsec,\flux,\vec{r}\right)=w_{i}^{\text{POT}}\systematics_{i}\sum_{j=1}^{N_{i}^{\text{MC}}}\left[\sum_{k=1}^{N^{\text{Flux}}}\left(\delta_{j,k}^{\text{Flux}}\flux_{k}\right)\prod_{l=1}^{N^{\text{Syst}}}w_{j,l}\left(\xsec_{l}^{\text{xsec}}\right)\right].\label{eq:n-predicted-events}
+\vec{N}_{i}^{p}\left(\xsec,\flux,\systematics\right)=w_{i}^{\text{POT}}\systematics_{i}^{\text{Det}}\sum_{j=1}^{N_{i}^{\text{MC}}}\left[\sum_{k=1}^{N^{\text{Flux}}}\left(\delta_{j,k}^{\text{Flux}}\flux_{k}\right)\prod_{l=1}^{N^{\text{Syst}}}w_{j,l}\left(\xsec_{l}^{\text{xsec}}\right)\right].\label{eq:n-predicted-events}
 \end{equation}
 
 \end_inset
@@ -466,11 +464,15 @@ Here
 
 th analysis bin.
  The 
-\begin_inset Formula $\systematics_{i}$
+\begin_inset Formula $\systematics_{i}^{\text{Det}}$
 \end_inset
 
- parameters are observable normalization detector systematic parameters
- that vary the total number of predicted events in the analysis bin.
+ parameters are normalization parameters that vary the total number of predicted
+ events in the 
+\begin_inset Formula $i$
+\end_inset
+
+th bin with nominal values based on the detector systematic studies.
  The 
 \begin_inset Formula $\flux_{k}$
 \end_inset
@@ -619,6 +621,7 @@ normalization terms are excluded in the calculation
 \begin_inset Formula 
 \begin{equation}
 V_{i,j}\left(\hat{\vec{y}}\right)=\left(H_{i,j}\right)^{-1}=\left(\left.\frac{\partial^{2}}{\partial y_{i}\partial y_{j}}\left(\Delta\chi_{\ND280}^{2}\right)\right|_{\vec{y}=\hat{\vec{y}}}\right)^{-1}\label{eq:HessianMatrix}
+\end{equation}
 
 \end_inset
 
