@@ -186,7 +186,7 @@ divide-and-conquer
 
 \begin_layout Standard
 The BANFF ND-only constraint between 2015 through 2018 is described in detail
- in T2K-TN-220
+ in TN-220
 \begin_inset CommandInset citation
 LatexCommand citet
 key "Hartz2015"
@@ -224,7 +224,7 @@ One can define a binned likelihood for the ND280-only constraint with the
  to measure these parameters is given as
 \begin_inset Formula 
 \begin{equation}
-\prob{\vec{y}\left|\vec{N}\right.}=\frac{\mathcal{L}\left(\left.\vec{N}\right|\vec{y}\right)}{\prob{\vec{N}}}\pi\left(\vec{y}\right),\label{eq:likelihoodgeneral}
+\prob{\vec{y}\left|\vec{N}\right.}=\frac{\mathcal{L}\left(\left.\vec{N}\right|\vec{y}\right)\pi\left(\vec{y}\right)}{\int\mathcal{L}\left(\left.\vec{N}\right|\vec{y}\right)\pi\left(\vec{y}\right)d\vec{y}},\label{eq:likelihoodgeneral}
 \end{equation}
 
 \end_inset
@@ -233,11 +233,7 @@ where
 \begin_inset Formula $\mathcal{L}\left(\left.\vec{N}\right|\vec{y}\right)$
 \end_inset
 
- is the likelihood, 
-\begin_inset Formula $\prob{\vec{N}}$
-\end_inset
-
- is a constant normalization, and 
+ is the likelihood of the parameters, 
 \begin_inset Formula $\pi(\vec{y})$
 \end_inset
 
@@ -245,7 +241,7 @@ where
 \begin_inset Formula $\vec{y}$
 \end_inset
 
- terms.
+ terms, and the denominator is the normalization.
  One arrives at 
 \begin_inset CommandInset ref
 LatexCommand eqref
@@ -264,24 +260,64 @@ noprefix "false"
 
 \end_inset
 
-to evaluate
+to evaluate 
+\begin_inset Formula $\prob{\vec{y}\left|\vec{N}\right.}$
+\end_inset
+
+ as
 \begin_inset Formula 
 \begin{equation}
-\prob{\underset{A}{\underbrace{\vec{y}}}\left|\underset{B}{\underbrace{\vec{N}}}\right.}=\frac{\prob{\vec{N},\vec{y}}}{\prob{\vec{N}}}\label{eq:bayes1}
+\prob{\underset{A}{\underbrace{\vec{y}}}\left|\underset{B}{\underbrace{\vec{N}}}\right.}=\frac{\prob{\vec{N},\vec{y}}}{\prob{\vec{N}}}.\label{eq:bayes1}
 \end{equation}
 
 \end_inset
 
-which we can further manipulated since the data are independent of the nuisance
- parameters
+with the demoninator here is recognized as the normalization.
+ Since the data measurements are independent of the nuisance parameters,
+ Bayes' theorem can be applied again on the numerator in 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:bayes1"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ 
 \begin_inset Formula 
 \begin{equation}
-\prob{\vec{N},\vec{y}}=\prob{\underset{A}{\underbrace{\vec{y}}},\underset{B}{\underbrace{\vec{N}}}}=\mathcal{L}\left(\left.\vec{N}\right|\vec{y}\right)\pi\left(\vec{y}\right)\label{eq:bayes2}
+\prob{\underset{A}{\underbrace{\vec{y}}},\underset{B}{\underbrace{\vec{N}}}}=\prob{\left.\vec{N}\right|\vec{y}}\times\prob{\vec{y}},\label{eq:bayes2}
 \end{equation}
 
 \end_inset
 
-resulting in the original expression 
+where the PDFs to the left and right of the 
+\begin_inset Formula $\times$
+\end_inset
+
+ operator are recognized as the likelihoods and priors, respectively.
+ Combining resulting in 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:bayes1"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ and 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:bayes2"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ reproduces the original expression of 
 \begin_inset CommandInset ref
 LatexCommand eqref
 reference "eq:likelihoodgeneral"
@@ -299,10 +335,15 @@ BANFF Likelihood and Test Statistic
 \end_layout
 
 \begin_layout Standard
-Given the likelihood, one desires to find maximal agreement between the
- predicted and measured data points.
- For an introduction into the use of likelihood functions in fits to histograms,
- see 
+For the BANFF fit, one considers the problem of trying to maximize the agreement
+ between measured and predicted data histrograms.
+ This is equivalent to maximizing a binned likelihood function 
+\begin_inset Formula $\mathcal{L}$
+\end_inset
+
+ of the data given the a set of parameters that predict the measured rate.
+ The use of likelihood functions in fits to histogram is explained further
+ in reference 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "baker-cousins"
@@ -311,7 +352,10 @@ literal "false"
 \end_inset
 
  and the PDG review on Statistics.
- Consider many binned samples that select different charged current topologies.
+\end_layout
+
+\begin_layout Standard
+Consider many binned samples that select different charged current topologies.
  A convenient choice of observables for all the samples are the outgoing
  charged lepton 
 \begin_inset Formula $l$
@@ -326,7 +370,7 @@ literal "false"
 \end_inset
 
  as measured in the ND.
- Much of this is also documented in T2K-TN-220
+ Much of this is also documented in TN-220
 \begin_inset CommandInset citation
 LatexCommand cite
 key "Hartz2015"
@@ -350,21 +394,30 @@ literal "false"
  is given by
 \begin_inset Formula 
 \begin{equation}
-\begin{aligned}\mathcal{L}\left(\vec{N}^{p}\left|\vec{N}^{d}\right.\right) & =\left(\prod_{i=1}^{M}\left(\vec{N}_{i}^{p}\right)^{\vec{N}_{i}^{d}}\frac{e^{-\vec{N}_{i}^{p}}}{\vec{N}_{i}^{d}!}\right)\end{aligned}
+\begin{aligned}\mathcal{L}\left(\vec{N}^{d}\left|\vec{N}^{p}\right.\right) & =\left(\prod_{i=1}^{M}\left(\vec{N}_{i}^{p}\right)^{\vec{N}_{i}^{d}}\frac{e^{-\vec{N}_{i}^{p}}}{\vec{N}_{i}^{d}!}\right)\end{aligned}
 \label{eq:likelihoodPoisson}
 \end{equation}
 
 \end_inset
 
 where 
-\begin_inset Formula $\vec{N}^{d}$
+\begin_inset Formula $\vec{N}_{i}^{d}$
 \end_inset
 
- is the number of observed data events and 
-\begin_inset Formula $\vec{N}^{p}$
+ is the number of observed data events in the 
+\begin_inset Formula $i$
 \end_inset
 
- is the number of predicted events as a function of many nuisance parameters.
+th bin and 
+\begin_inset Formula $\vec{N}_{i}^{p}$
+\end_inset
+
+ is the number of predicted events as a function of nuisance parameters
+ in the 
+\begin_inset Formula $i$
+\end_inset
+
+th bin.
  One recognizes the likelihood function in 
 \begin_inset CommandInset ref
 LatexCommand eqref
@@ -460,37 +513,62 @@ In practice one tries to minimization a test statistic which programs like
  using a ratio of two likelihoods
 \begin_inset Formula 
 \begin{equation}
-\Delta\chi_{\ND280}^{2}=-2\log\frac{\mathcal{L}\left(\vec{N}^{p}\left|\vec{N}^{d}\right.\right)}{\mathcal{L}\left(\vec{N}^{d}\right)}\label{eq:LLHRatio}
+\Delta\chi_{\text{LLR}}^{2}=-2\log\frac{\mathcal{L}\left(\vec{N}^{d}\left|\vec{N}^{p}\right.\right)}{\mathcal{L}\left(\vec{N}^{d}\left|\vec{N}^{d}\right.\right)}\label{eq:LLHRatio}
 \end{equation}
 
 \end_inset
 
 where this test statistic 
-\begin_inset Formula $\Delta\chi_{\ND280}^{2}$
+\begin_inset Formula $\Delta\chi_{\text{LLR}}^{2}$
 \end_inset
 
  obeys a true chi-squared distribution for asymptotically large statistics.
  Penalty terms from the cross section, flux, and detector systematics are
- included in order to account for their systematic effect.
- The updated test statistic is given by
+ included in order to account for their effect.
+ The new test statistic for all of ND280, 
+\begin_inset Formula $\Delta\chi_{\ND280}^{2}$
+\end_inset
+
+, is given by
 \begin_inset Formula 
 \begin{equation}
-\begin{aligned}\Delta\chi_{\ND280}^{2} & =-2\log\frac{\mathcal{L}\left(\vec{N}^{p}\left|\vec{N}^{d}\right.\right)}{\mathcal{L}\left(\vec{N}^{d}\right)}+\Delta\chi_{\text{xsec}}^{2}+\Delta\chi_{\text{Flux}}^{2}+\Delta\chi_{\text{Det}}^{2}\\
- & -2\log\frac{\mathcal{L}\left(\vec{N}^{p}\left|\vec{N}^{d}\right.\right)}{\mathcal{L}\left(\vec{N}^{d}\right)}-2\left(\sum_{\vec{y}=\xsec,\flux,\vec{r}}\log\left[\frac{\pi\left(\vec{y}\right)}{\pi\left(\vec{y}_{\text{Nom}}\right)}\right]\right)
+\begin{aligned}\Delta\chi_{\ND280}^{2} & =\Delta\chi_{\text{LLR}}^{2}+\Delta\chi_{\text{xsec}}^{2}+\Delta\chi_{\text{Flux}}^{2}+\Delta\chi_{\text{Det}}^{2}\\
+ & -2\left(\log\frac{\mathcal{L}\left(\vec{N}^{d}\left|\vec{N}^{p}\right.\right)}{\mathcal{L}\left(\vec{N}^{d}\left|\vec{N}^{d}\right.\right)}+\log\underset{\text{xsec}}{\underbrace{\pi\left(\xsec\right)}}+\log\underset{\text{Flux}}{\underbrace{\pi\left(\flux\right)}}+\log\underset{\text{Det}}{\underbrace{\pi\left(\systematics\right)}}\right)
 \end{aligned}
 \label{eq:LLHRatioWithPenaltyTerms}
 \end{equation}
 
 \end_inset
 
-with each of the prior distributions 
+with each of the priors probability density functions 
 \begin_inset Formula $\pi\left(\vec{y}=\xsec,\flux,\systematics\right)$
 \end_inset
 
- assumed as normally distributed priors
+ are multivariate normal distributions
 \begin_inset Formula 
 \begin{equation}
-\pi(\vec{y})=\left(\left(2\pi\right)^{k_{y}}\det\left(V_{y}\right)\right)^{-\frac{1}{2}}e^{\left(-\frac{1}{2}\Delta\vec{y}\cdot V_{y}^{-1}\cdot\Delta\vec{y}^{T}\right)},\label{eq:nuisancepriorgaussian}
+\pi(\vec{y})=C_{y}e^{\left(-\frac{1}{2}\Delta\vec{y}\cdot V_{y}^{-1}\cdot\Delta\vec{y}^{T}\right)},\label{eq:nuisancepriorgaussian}
+\end{equation}
+
+\end_inset
+
+where 
+\begin_inset Formula $\Delta\vec{y}$
+\end_inset
+
+ is a vector with the difference between the current/explored and nominal
+ set of vector parameters 
+\begin_inset Formula $\vec{y}$
+\end_inset
+
+, 
+\begin_inset Formula $T$
+\end_inset
+
+ corresponds to the transpose operator, and the normalization is given by
+\begin_inset Formula 
+\begin{equation}
+C_{y}=\left(\left(2\pi\right)^{k_{y}}\det\left(V_{y}\right)\right)^{-\frac{1}{2}}\label{eq:nuisancepriorgaussiannormalization}
 \end{equation}
 
 \end_inset
@@ -499,59 +577,69 @@ with
 \begin_inset Formula $V_{y}$
 \end_inset
 
- being the covariance matrix for a 
-\begin_inset Formula $k_{y}$
-\end_inset
-
- size vector 
+ being the covariance matrix for a vector 
 \begin_inset Formula $\vec{y}$
 \end_inset
 
-, 
-\begin_inset Formula $\Delta\vec{y}=\vec{y}-\vec{y}_{\text{Nom}}$
+ with 
+\begin_inset Formula $k_{y}$
 \end_inset
 
- is the difference between the current/explored and nominal set of vector
- parameters, and 
-\begin_inset Formula $T$
-\end_inset
-
- corresponds to the transpose of a vector.
- The full expanded form of the test 
+ rows.
+ The expanded form of the test statistic 
 \begin_inset Formula $\Delta\chi_{\ND280}^{2}$
 \end_inset
 
-is given by
+ is given by
 \begin_inset Formula 
 \begin{equation}
 \begin{aligned}\Delta\chi_{\ND280}^{2} & =2\sum_{i=1}^{M}\left[\vec{N}_{i}^{p}-\vec{N}_{i}^{d}+\vec{N}_{i}^{d}\log\left(\frac{\vec{N}_{i}^{d}}{\vec{N}_{i}^{p}}\right)\right]\\
- & +\Delta\xsec\cdot V_{x}^{-1}\cdot\Delta\xsec^{T}+\Delta\flux\cdot V_{b}^{-1}\cdot\Delta\flux^{T}+\Delta\systematics\cdot V_{d}^{-1}\cdot\Delta\systematics^{T}\\
- & +\log\left[\det\left(V_{x}\right)\right]+\log\left[\det\left(V_{b}\right)\right]+\log\left[\det\left(V_{d}\right)\right]\\
- & +\log\left[\det\left(V_{x}^{\text{Nom}}\right)\right]+\log\left[\det\left(V_{b}^{\text{Nom}}\right)\right]+\log\left[\det\left(V_{d}^{\text{Nom}}\right)\right].
+ & +\Delta\xsec\cdot\left(V_{x}^{-1}\right)\cdot\Delta\xsec^{T}+\Delta\flux\cdot\left(V_{b}^{-1}\right)\cdot\Delta\flux^{T}+\Delta\systematics\cdot\left(V_{d}^{-1}\right)\cdot\Delta\systematics^{T}
 \end{aligned}
 \label{eq:BANFFDeltaChiSqr}
 \end{equation}
 
 \end_inset
 
-Once the global minimum of the test statistic is found, the covariance matrix
- is extracted using the Hessian matrix
+where the 
+\begin_inset Formula $\cdot$
+\end_inset
+
+ is the matrix multiplication operator and the 
+\series bold
+normalization terms are excluded in the calculation
+\series default
+.
+ Once the global minimum of the test statistic is found, the postfit covariance
+ matrix 
+\begin_inset Formula $V$
+\end_inset
+
+ is calculated as the inverse of the Hessian matrix 
+\begin_inset Formula $H$
+\end_inset
+
+
 \begin_inset Formula 
 \begin{equation}
-H_{i,j}=\frac{\partial^{2}}{\partial y_{i}\partial y_{j}}\left(\Delta\chi_{\ND280}^{2}\right)\label{eq:HessianMatrix}
+V_{i,j}\left(\hat{\vec{y}}\right)=\left(H_{i,j}\right)^{-1}=\left(\left.\frac{\partial^{2}}{\partial y_{i}\partial y_{j}}\left(\Delta\chi_{\ND280}^{2}\right)\right|_{\vec{y}=\hat{\vec{y}}}\right)^{-1}\label{eq:HessianMatrix}
 \end{equation}
 
 \end_inset
 
 where 
-\begin_inset Formula $y$
+\begin_inset Formula $y_{i},y_{j}\in\vec{y}$
 \end_inset
 
- is the set of all systematic terms and 
-\begin_inset Formula $i,j$
+ and 
+\begin_inset Formula $\hat{\vec{y}}$
 \end_inset
 
- are the indices.
+ is the maximum likelihood estimate for the parmeters 
+\begin_inset Formula $\vec{y}$
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Subsubsection
@@ -559,7 +647,10 @@ Flux, Cross Section, and Detector Systematics
 \end_layout
 
 \begin_layout Standard
-Below is a description for each of the systematic terms in the BANFF likelihood.
+Below is a description for each of the systematics in the BANFF likelihood
+ and test statistic penalty terms.
+ First is a description of flux parameters, followed by the cross section,
+ and finally the detector systematics.
 \end_layout
 
 \begin_layout Standard
@@ -858,7 +949,7 @@ Detector Systematics
  also commonly refered to as obsnorms.
  Since neutrino interaction events can migrate from sample-to-sample, bin-to-bin
 , or both depending on the relevant systematics, numerous toy experiments
- are performed by varying detector systematic model parameters .
+ are performed by varying detector systematic model parameters.
  After many toy experiments, usually 2000, all the toy experiments are examined
  together to create a covariance matrix.
  The drawback to this method is that not all detector systematics have Gaussian
