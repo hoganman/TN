@@ -3808,7 +3808,7 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename Figures/SamplesandSelections/numubarRHCCCInc/numubarRHCCCIncWaterIn_recocosq_mu_MC_only_LeptonCandidateTruePDG_rhc_water.png
+	filename Figures/SamplesandSelections/numubarRHCCCInc/numubarRHCCCIncWaterOut_recocosq_mu_MC_only_LeptonCandidateTruePDG_rhc_air.png
 	lyxscale 49
 	width 48text%
 
@@ -3840,7 +3840,7 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename Figures/SamplesandSelections/numubarRHCCCInc/numubarRHCCCIncWaterIn_recocosq_mu_MC_only_LeptonCandidateTruePDG_rhc_water_fluxtuned.png
+	filename Figures/SamplesandSelections/numubarRHCCCInc/numubarRHCCCIncWaterOut_recocosq_mu_MC_only_LeptonCandidateTruePDG_rhc_air_fluxtuned.png
 	lyxscale 50
 	width 48text%
 
@@ -3876,7 +3876,7 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename Figures/SamplesandSelections/numubarRHCCCInc/numubarRHCCCIncWaterIn_recocosq_mu_MC_only_LeptonCandidateTruePDG_rhc_water_systematicweighted.png
+	filename Figures/SamplesandSelections/numubarRHCCCInc/numubarRHCCCIncWaterOut_recocosq_mu_MC_only_LeptonCandidateTruePDG_rhc_air_systematicweighted.png
 	lyxscale 50
 	width 48text%
 
@@ -3908,7 +3908,7 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename Figures/SamplesandSelections/numubarRHCCCInc/numubarRHCCCIncWaterIn_recocosq_mu_MC_only_LeptonCandidateTruePDG_rhc_water_fluxtuned_systematicweighted.png
+	filename Figures/SamplesandSelections/numubarRHCCCInc/numubarRHCCCIncWaterOut_recocosq_mu_MC_only_LeptonCandidateTruePDG_rhc_air_fluxtuned_systematicweighted.png
 	lyxscale 50
 	width 48text%
 

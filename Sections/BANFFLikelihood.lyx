@@ -153,27 +153,29 @@
 
 \begin_body
 
-\begin_layout Subsection
-BANFF Treatment of ND Constraint
-\end_layout
-
 \begin_layout Standard
-The BANFF implementation aims to reduce the dimensionality, and hence complexity
-, of the joint near detector (ND) and far detector (FD) problem by performing
- a separate analysis on the nuisance parameters that only the ND can measure.
- In a joint ND and FD joint fit, the measurements from both detectors are
- considered along with their respective systematic uncertainties.
+The BANFF likelihood maximization procedure is the method of performing
+ a binned likelihood maximization fit of the ND280 data separate from the
+ Super-Kamiodande (SK) data.
+ In a joint ND280 and SK joint fit, the measurements from both detectors
+ are considered along with their respective nuisance parameters.
  This approach is computationally expensive since the time to perform a
  fit increases non-linearly with dimensionality.
- BANFF considers a ND-only fit in order to decrease the computational demands.
- The BANFF post-fit parameters and their covariances are then propagated
- to the oscillation analysis using FD-only data.
- This allows for more rapidly completed studies on the effects of model
- parameters and biases present.
- Conceptually this approach should provide the same result with a joint
- ND and FD analysis.
- However, information encoded in the ND measurements for shared nuisance
- parameters is inevitably lost in this 
+ It is, however, pursued in the Markov Chain Monte Carlo analysis (MaCh3)
+ and will not be explained here.
+ The BANFF likelihood maximization, hitherto referred to as the 
+\begin_inset Quotes eld
+\end_inset
+
+BANFF-fit
+\begin_inset Quotes erd
+\end_inset
+
+, includes nuisance parameters that while affect the measurement of the
+ oscillation parameters, are not physics goals of T2K.
+ The BANFF-fit parameters and their respective covariances are then used
+ as inputs in the oscillation analysis.
+ This 
 \begin_inset Quotes eld
 \end_inset
 
@@ -181,12 +183,16 @@ divide-and-conquer
 \begin_inset Quotes erd
 \end_inset
 
- approach.
+ approach allows for more rapidly completed studies on the effects of model
+ parameters and biases present.
+ Also this approach should provide the same result with a joint ND280 and
+ SK analysis as is performed in MaCh3.
+ However, information encoded in the ND280 measurements for shared nuisance
+ parameters like the neutrino flux is inevitably lost in the BANFF-fit.
 \end_layout
 
 \begin_layout Standard
-The BANFF ND-only constraint between 2015 through 2018 is described in detail
- in TN-220
+The modern BANFF-fit likelihood is described in detail in TN-220
 \begin_inset CommandInset citation
 LatexCommand citet
 key "Hartz2015"
@@ -195,14 +201,22 @@ literal "false"
 \end_inset
 
 .
- While subsequent updates to the BANFF analysis increase the sample sizes
- and systematic parameterizations, the method has remained unchanged.
+ While subsequent updates to the BANFF analysis
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Hartz2016,Bienstock2017,Bienstock2018"
+literal "false"
+
+\end_inset
+
+ increase the sample sizes and systematic parameterizations, the method
+ has remained unchanged.
  It uses a frequentist approach to find the best nuisance parameter set
  to maximize a binned likelihood.
 \end_layout
 
-\begin_layout Subsubsection
-Likelihood Functions
+\begin_layout Subsection
+Introduction to Conditional PDFs and Likelihoods
 \end_layout
 
 \begin_layout Standard
@@ -210,50 +224,59 @@ Consider the problem of extracting physics parameters
 \begin_inset Formula $\vec{y}$
 \end_inset
 
- given some data 
+ given some data vector 
 \begin_inset Formula $\vec{N}$
 \end_inset
 
 .
- The probability 
+ The conditional probability density function (PDF) 
 \begin_inset Formula $\mathcal{P}$
 \end_inset
 
  to measure these parameters is given as
 \begin_inset Formula 
 \begin{equation}
-\prob{\vec{y}\left|\vec{N}\right.}=\frac{\mathcal{L}\left(\left.\vec{N}\right|\vec{y}\right)\pi\left(\vec{y}\right)}{\int\mathcal{L}\left(\left.\vec{N}\right|\vec{y}\right)\pi\left(\vec{y}\right)d\vec{y}},\label{eq:likelihoodgeneral}
+\prob{\vec{y}\left|\vec{N}\right.}=\frac{\mathcal{L}\left(\left.\vec{N}\right|\vec{y}\right)\prob{\vec{y}}}{\int\mathcal{L}\left(\left.\vec{N}\right|\vec{x}\right)\prob{\vec{x}}d\vec{x}},\label{eq:pdfgeneral}
 \end{equation}
 
 \end_inset
 
-where 
+where anything right of the vertical line represents a condition on the
+ probability, 
 \begin_inset Formula $\mathcal{L}\left(\left.\vec{N}\right|\vec{y}\right)$
 \end_inset
 
- is the likelihood of the parameters, 
-\begin_inset Formula $\pi(\vec{y})$
-\end_inset
-
- are priors on the 
+ is the likelihood of the model with parameters 
 \begin_inset Formula $\vec{y}$
 \end_inset
 
- terms, and the denominator is the normalization.
- One arrives at 
+, 
+\begin_inset Formula $\prob{\vec{y}}$
+\end_inset
+
+ is the probability for the model, and the denominator is the normalization
+ over all possible constraints.
+ A likelihood function is an expression of the probability of observing
+ data as a function of the model parameters in their appropriate ranges.
+ Extensive literature is available on this subject with only the necessary
+ details explained here.
+\end_layout
+
+\begin_layout Standard
+One arrives at 
 \begin_inset CommandInset ref
 LatexCommand eqref
-reference "eq:likelihoodgeneral"
+reference "eq:pdfgeneral"
 plural "false"
 caps "false"
 noprefix "false"
 
 \end_inset
 
- by using Bayes' theorem
+ by using the definition of compound probabilities
 \begin_inset Formula 
 \begin{equation}
-\prob{AB}=\prob B\prob{A\left|B\right.}\label{eq:bayestheorem}
+\prob{A,B}=\prob{B\left|A\right.}\prob A\label{eq:compoundpdfrule}
 \end{equation}
 
 \end_inset
@@ -265,27 +288,38 @@ to evaluate
  as
 \begin_inset Formula 
 \begin{equation}
-\prob{\underset{A}{\underbrace{\vec{y}}}\left|\underset{B}{\underbrace{\vec{N}}}\right.}=\frac{\prob{\vec{N},\vec{y}}}{\prob{\vec{N}}}.\label{eq:bayes1}
+\prob{\underset{B}{\underbrace{\vec{y}}}\left|\underset{A}{\underbrace{\vec{N}}}\right.}=\frac{\prob{\vec{N},\vec{y}}}{\prob{\vec{N}}}\label{eq:pdfproof1}
 \end{equation}
 
 \end_inset
 
-with the demoninator here is recognized as the normalization.
- Since the data measurements are independent of the nuisance parameters,
- Bayes' theorem can be applied again on the numerator in 
+with the denominator here is recognized as the normalization of the PDF.
+ The compound PDF 
+\begin_inset Formula $\prob{\vec{N},\vec{y}}$
+\end_inset
+
+ can expanded using Bayes' theorem which states
+\begin_inset Formula 
+\begin{equation}
+\prob{A\left|B\right.}\prob B=\prob{B\left|A\right.}\prob A,\label{eq:bayestheorem}
+\end{equation}
+
+\end_inset
+
+ and combined with 
 \begin_inset CommandInset ref
 LatexCommand eqref
-reference "eq:bayes1"
+reference "eq:compoundpdfrule"
 plural "false"
 caps "false"
 noprefix "false"
 
 \end_inset
 
- 
+ yielding
 \begin_inset Formula 
 \begin{equation}
-\prob{\underset{A}{\underbrace{\vec{y}}},\underset{B}{\underbrace{\vec{N}}}}=\prob{\left.\vec{N}\right|\vec{y}}\times\prob{\vec{y}},\label{eq:bayes2}
+\prob{\underset{A}{\underbrace{\vec{N}}},\underset{B}{\underbrace{\vec{y}}}}=\prob{\left.\vec{N}\right|\vec{y}}\times\prob{\vec{y}},\label{eq:pdfproof2}
 \end{equation}
 
 \end_inset
@@ -298,7 +332,7 @@ where the PDFs to the left and right of the
  Combining resulting in 
 \begin_inset CommandInset ref
 LatexCommand eqref
-reference "eq:bayes1"
+reference "eq:pdfproof1"
 plural "false"
 caps "false"
 noprefix "false"
@@ -308,7 +342,7 @@ noprefix "false"
  and 
 \begin_inset CommandInset ref
 LatexCommand eqref
-reference "eq:bayes2"
+reference "eq:pdfproof2"
 plural "false"
 caps "false"
 noprefix "false"
@@ -318,7 +352,7 @@ noprefix "false"
  reproduces the original expression of 
 \begin_inset CommandInset ref
 LatexCommand eqref
-reference "eq:likelihoodgeneral"
+reference "eq:pdfgeneral"
 plural "false"
 caps "true"
 noprefix "false"
@@ -328,13 +362,13 @@ noprefix "false"
 .
 \end_layout
 
-\begin_layout Subsubsection
-BANFF Likelihood and Test Statistic
+\begin_layout Subsection
+BANFF Fit Test Statistic
 \end_layout
 
 \begin_layout Standard
 For the BANFF fit, one considers the problem of trying to maximize the agreement
- between measured and predicted data histrograms.
+ between measured and predicted data histograms.
  This is equivalent to maximizing a binned likelihood function 
 \begin_inset Formula $\mathcal{L}$
 \end_inset
@@ -428,7 +462,15 @@ noprefix "false"
 \end_layout
 
 \begin_layout Itemize
-cross section (xsec) physics model parameters,
+cross section physics models, labeled as 
+\begin_inset Quotes eld
+\end_inset
+
+xsec
+\begin_inset Quotes erd
+\end_inset
+
+,
 \end_layout
 
 \begin_layout Itemize
@@ -436,15 +478,70 @@ neutrino flux, and
 \end_layout
 
 \begin_layout Itemize
-detector biases and inefficencies.
+detector biases and inefficiencies.
 \end_layout
 
 \begin_layout Standard
-Given these three sets of systematics, the number of predicted events is
- described as
+Given these three sets of systematics, the number of predicted CC events
+ from any neutrino flavor 
+\begin_inset Formula $\nu_{l}$
+\end_inset
+
+ at ND280 is generally calculated considering the general formula
 \begin_inset Formula 
 \begin{equation}
-\vec{N}_{i}^{p}\left(\xsec,\flux,\systematics\right)=w_{i}^{\text{POT}}\systematics_{i}^{\text{Det}}\sum_{j=1}^{N_{i}^{\text{MC}}}\left[\sum_{k=1}^{N^{\text{Flux}}}\left(\delta_{j,k}^{\text{Flux}}\flux_{k}\right)\prod_{l=1}^{N^{\text{Syst}}}w_{j,l}\left(\xsec_{l}^{\text{xsec}}\right)\right].\label{eq:n-predicted-events}
+N_{\nu_{l}}=\Phi_{\nu_{l}}\times\sigma_{\nu_{l}}\times\epsilon_{\nu_{l}},\label{eq:n-predicted-general}
+\end{equation}
+
+\end_inset
+
+where 
+\begin_inset Formula $\Phi_{\nu_{l}}$
+\end_inset
+
+ is the flux of 
+\begin_inset Formula $l$
+\end_inset
+
+-flavor neutrinos intersecting ND280, 
+\begin_inset Formula $\sigma_{\nu_{l}}$
+\end_inset
+
+ is the cross section of the interaction for flavor 
+\begin_inset Formula $l$
+\end_inset
+
+, and 
+\begin_inset Formula $\epsilon_{\nu_{l}}$
+\end_inset
+
+ is the total efficiency to reconstruct and properly identify the event
+ as 
+\begin_inset Formula $\nu_{l}$
+\end_inset
+
+CC.
+ Each term in 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:n-predicted-general"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ is modeled carefully and studied using large statistical samples generated
+ by Monte Carlo (MC) simulations.
+ Using the power of MC statistics, the number of predicted events is for
+ a given analysis bin 
+\begin_inset Formula $i$
+\end_inset
+
+ is
+\begin_inset Formula 
+\begin{equation}
+\vec{N}_{i}^{p}\left(\flux,\xsec,\systematics\right)=w_{i}^{\text{POT}}\systematics_{i}^{\text{Det}}\sum_{j=1}^{N_{i}^{\text{MC}}}\left[\sum_{k=1}^{N^{\text{Flux}}}\left(\delta_{j,k}^{\text{Flux}}\flux_{k}\right)\prod_{l=1}^{N^{\text{xSyst}}}w_{j,l}\left(\xsec_{l}^{\text{xsec}}\right)\right].\label{eq:n-predicted-BANFF}
 \end{equation}
 
 \end_inset
@@ -453,17 +550,12 @@ Here
 \begin_inset Formula $w_{i}^{\text{POT}}$
 \end_inset
 
- is the the ratio of of the number of true to simulated (MC) protons on
- target (POT) and 
-\begin_inset Formula $N_{i}^{\text{MC}}$
-\end_inset
-
- is the number of events in the 
+ is the protons on target (POT) weight for the 
 \begin_inset Formula $i$
 \end_inset
 
-th analysis bin.
- The 
+th analysis which normalizes the MC statistics to expected data statistics.
+ To account for the detector inefficiencies, the 
 \begin_inset Formula $\systematics_{i}^{\text{Det}}$
 \end_inset
 
@@ -472,7 +564,22 @@ th analysis bin.
 \begin_inset Formula $i$
 \end_inset
 
-th bin with nominal values based on the detector systematic studies.
+th bin.
+ Each 
+\begin_inset Formula $\systematics_{i}^{\text{Det}}$
+\end_inset
+
+ is determined prior to the fit by conducting a large number of fake data
+ studies with detector systematics varied in each fake data set.
+ A sum over 
+\begin_inset Formula $j=1,2,\ldots,N_{i}^{\text{MC}}-1,N_{i}^{\text{MC}}$
+\end_inset
+
+ considers the contribution of all MC events in the 
+\begin_inset Formula $i$
+\end_inset
+
+th analysis bin.
  The 
 \begin_inset Formula $\flux_{k}$
 \end_inset
@@ -483,25 +590,32 @@ th bin with nominal values based on the detector systematic studies.
 
 , are flux normalization systematics for each flux bin.
  Since the flux bins are categorized by neutrino flavor, energy, and horn
- (focusing magnet) current, the 
+ (focusing magnet) current/polarity, the sum over 
+\begin_inset Formula $k$
+\end_inset
+
+ and the 
 \begin_inset Formula $\delta_{j,k}^{\text{Flux}}$
 \end_inset
 
  term selects the correct flux bin.
- The 
-\begin_inset Formula $w_{j,l}\left(\xsec_{l}^{\text{xsec}}\right)$
+ And finally the parameters 
+\begin_inset Formula $w_{j,l}$
 \end_inset
 
- parameters are pre-calculated event weight functions for each cross section
- (xsec) model parameter, 
+ are pre-calculated weights as a function for the 
+\begin_inset Formula $l$
+\end_inset
+
+th cross section model, 
 \begin_inset Formula $\xsec_{l}^{\text{xsec}}$
 \end_inset
 
-, out of a total of 
-\begin_inset Formula $N^{\text{Syst}}$
+, with a total of 
+\begin_inset Formula $N^{\text{xSyst}}$
 \end_inset
 
- cross section systematics.
+ cross section model terms.
 \end_layout
 
 \begin_layout Standard
