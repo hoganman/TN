@@ -228,7 +228,11 @@ filename "Nomenclature.lyx"
 \end_layout
 
 \begin_layout Title
-This is A Tribute To The Best TN of All Time
+Impact of 
+\begin_inset Formula $\pod$
+\end_inset
+
+ NuMu Samples in BANFF
 \end_layout
 
 \begin_layout Author
