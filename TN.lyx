@@ -159,7 +159,7 @@ tabs-within-sections
 \color #faf0e6
 \end_branch
 \branch FitterValidation
-\selected 1
+\selected 0
 \filename_suffix 0
 \color #faf0e6
 \end_branch
@@ -455,7 +455,7 @@ filename "Sections/P0DBANFFParameterization.lyx"
 
 
 \begin_inset Branch FitterValidation
-inverted 0
+inverted 1
 status open
 
 \begin_layout Section
