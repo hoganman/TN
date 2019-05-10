@@ -156,7 +156,7 @@
 \begin_layout Standard
 The BANFF likelihood maximization procedure is the method of performing
  a binned likelihood maximization fit of the ND280 data separate from the
- Super-Kamiodande (SK) data.
+ Super-Kamiokande (SK) data.
  In a joint ND280 and SK joint fit, the measurements from both detectors
  are considered along with their respective nuisance parameters.
  This approach is computationally expensive since the time to perform a
@@ -216,6 +216,56 @@ literal "false"
 \end_layout
 
 \begin_layout Subsection
+Motivation
+\end_layout
+
+\begin_layout Standard
+Curve fitting is commonly found in the particle physics community literature
+ due to the need to compare two models or constrain unknown model parameters
+ using one or more histograms.
+ For the first case, this involves two competing models, 
+\begin_inset Formula $H_{0}$
+\end_inset
+
+ and 
+\begin_inset Formula $H_{1}$
+\end_inset
+
+, in order to establish if the data supports new Physics (
+\begin_inset Formula $H_{1}$
+\end_inset
+
+) not predicted in the Standard Model (
+\begin_inset Formula $H_{0}$
+\end_inset
+
+).
+ The second case finds the 
+\begin_inset Quotes eld
+\end_inset
+
+best
+\begin_inset Quotes erd
+\end_inset
+
+ set of the model predictions, 
+\begin_inset Formula $\theta$
+\end_inset
+
+, that match the data as is the case for the BANFF-fit.
+ In both cases, chi-squared tests are performed to provide goodness of fit,
+ parameter estimation (also referred to as 
+\begin_inset Quotes eld
+\end_inset
+
+best fit parameters
+\begin_inset Quotes erd
+\end_inset
+
+), and error/confidence estimation.
+\end_layout
+
+\begin_layout Subsection
 Introduction to Conditional PDFs and Likelihoods
 \end_layout
 
@@ -241,8 +291,8 @@ Consider the problem of extracting physics parameters
 
 \end_inset
 
-where anything right of the vertical line represents a condition on the
- probability, 
+where anything right of a vertical line represents a condition on the probabilit
+y, 
 \begin_inset Formula $\mathcal{L}\left(\left.\vec{N}\right|\vec{y}\right)$
 \end_inset
 
@@ -255,11 +305,11 @@ where anything right of the vertical line represents a condition on the
 \end_inset
 
  is the probability for the model, and the denominator is the normalization
- over all possible constraints.
+ over all possible constraints on the observations.
+ A frequentist interpretation of a PDF is a proportion of outcomes of repeated
+ trials or experiments.
  A likelihood function is an expression of the probability of observing
  data as a function of the model parameters in their appropriate ranges.
- Extensive literature is available on this subject with only the necessary
- details explained here.
 \end_layout
 
 \begin_layout Standard
@@ -384,6 +434,14 @@ literal "false"
 \end_inset
 
  and the PDG review on Statistics.
+ By invoking Wilks' theorem, also known as the likelihood ratio theorem,
+ the likelihood maximization procedure is converted into a minimization
+ problem involving a test statistic denoted as a chi-squared.
+ Below is an explanation of the BANFF test statistic, 
+\begin_inset Formula $\Delta\chi^{2}$
+\end_inset
+
+, and its systematic model terms.
 \end_layout
 
 \begin_layout Standard
@@ -487,7 +545,7 @@ Given these three sets of systematics, the number of predicted CC events
 \begin_inset Formula $\nu_{l}$
 \end_inset
 
- at ND280 is generally calculated considering the general formula
+ at ND280 is calculated considering the general formula
 \begin_inset Formula 
 \begin{equation}
 N_{\nu_{l}}=\Phi_{\nu_{l}}\times\sigma_{\nu_{l}}\times\epsilon_{\nu_{l}},\label{eq:n-predicted-general}
@@ -503,11 +561,11 @@ where
 \begin_inset Formula $l$
 \end_inset
 
--flavor neutrinos intersecting ND280, 
+ flavor neutrinos, 
 \begin_inset Formula $\sigma_{\nu_{l}}$
 \end_inset
 
- is the cross section of the interaction for flavor 
+ is the cross section of the interaction for neutrino flavor 
 \begin_inset Formula $l$
 \end_inset
 
@@ -520,7 +578,7 @@ where
 \begin_inset Formula $\nu_{l}$
 \end_inset
 
-CC.
+CC interactions.
  Each term in 
 \begin_inset CommandInset ref
 LatexCommand eqref
@@ -531,10 +589,10 @@ noprefix "false"
 
 \end_inset
 
- is modeled carefully and studied using large statistical samples generated
- by Monte Carlo (MC) simulations.
- Using the power of MC statistics, the number of predicted events is for
- a given analysis bin 
+ is modeled carefully and the efficiency term is estimated using Monte Carlo
+ (MC) simulations and control samples.
+ Using the MC statistics, the number of predicted events is for a given
+ analysis bin 
 \begin_inset Formula $i$
 \end_inset
 
@@ -747,7 +805,7 @@ where
 \begin_inset Formula $\hat{\vec{y}}$
 \end_inset
 
- is the maximum likelihood estimate for the parmeters 
+ is the maximum likelihood estimate for the parameters 
 \begin_inset Formula $\vec{y}$
 \end_inset
 

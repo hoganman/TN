@@ -88,68 +88,6 @@ al physics, are nuisance parameters.
 \end_layout
 
 \begin_layout Subsection
-Curve Fitting
-\end_layout
-
-\begin_layout Standard
-Curve fitting is commonly found in the particle physics community literature
- due to the need to compare two models or constrain unknown model parameters
- using one or more histograms.
- For the first case, this involves two competing models, 
-\begin_inset Formula $H_{0}$
-\end_inset
-
- and 
-\begin_inset Formula $H_{1}$
-\end_inset
-
-, in order to establish if the data supports new Physics (
-\begin_inset Formula $H_{1}$
-\end_inset
-
-) not predicted in the Standard Model (
-\begin_inset Formula $H_{0}$
-\end_inset
-
-).
- The second case finds the 
-\begin_inset Quotes eld
-\end_inset
-
-best
-\begin_inset Quotes erd
-\end_inset
-
- set of the model predictions, 
-\begin_inset Formula $\theta$
-\end_inset
-
-, that match the data as is the case for the BANFF fit.
- In both cases, chi-squared (
-\begin_inset Formula $\chi^{2}$
-\end_inset
-
-) tests are performed to provide goodness of fit, parameter estimation (also
- referred to as 
-\begin_inset Quotes eld
-\end_inset
-
-best fit parameters
-\begin_inset Quotes erd
-\end_inset
-
-), and error/confidence estimation.
- The chi-squared statistic is derived from a likelihood ratio which asymptotical
-ly approaches the classical chi-square distribution.
- Wilks' theorem guarantees for large data samples that -2 times the logarithm
- of the likelihood ratio approaches a chi-square distribution.
-\end_layout
-
-\begin_layout Subsubsection
-
-\end_layout
-
-\begin_layout Subsection
 ND280
 \end_layout
 
