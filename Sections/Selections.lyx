@@ -2135,14 +2135,14 @@ status collapsed
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
 	filename Figures/SamplesandSelections/numuFHCCCInc/numuCCIncWaterOut_recoP_mu_MC_only_LeptonCandidateTruePDG_fhc_air.png
 	lyxscale 49
-	width 48text%
+	width 40text%
 
 \end_inset
 
@@ -2167,14 +2167,50 @@ Nominal MC
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/SamplesandSelections/numuFHCCCInc/HL2/Run4_Air/NumuFHCCCInc_momentum_particle_nominal_mc.png
+	lyxscale 49
+	width 40text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Nominal MC from Highland2
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
 
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
 	filename Figures/SamplesandSelections/numuFHCCCInc/numuCCIncWaterOut_recoP_mu_MC_only_LeptonCandidateTruePDG_fhc_air_fluxtuned.png
 	lyxscale 50
-	width 48text%
+	width 40text%
 
 \end_inset
 
@@ -2196,21 +2232,17 @@ Flux
 \end_inset
 
 
-\end_layout
-
-\begin_layout Plain Layout
-\align center
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
 	filename Figures/SamplesandSelections/numuFHCCCInc/numuCCIncWaterOut_recoP_mu_MC_only_LeptonCandidateTruePDG_fhc_air_systematicweighted.png
 	lyxscale 50
-	width 48text%
+	width 40text%
 
 \end_inset
 
@@ -2232,17 +2264,21 @@ Systematics
 \end_inset
 
 
+\end_layout
+
+\begin_layout Plain Layout
+\align center
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
 	filename Figures/SamplesandSelections/numuFHCCCInc/numuCCIncWaterOut_recoP_mu_MC_only_LeptonCandidateTruePDG_fhc_air_fluxtuned_systematicweighted.png
 	lyxscale 50
-	width 48text%
+	width 40text%
 
 \end_inset
 
@@ -2264,9 +2300,38 @@ Flux + systematics
 \end_inset
 
 
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/SamplesandSelections/numuFHCCCInc/HL2/Run4_Air/NumuFHCCCInc_momentum_particle_fluxtuned_systematicweighted.png
+	lyxscale 50
+	width 40text%
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Fully weighted in Highland2
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
@@ -2282,9 +2347,20 @@ Reconstructed lepton candidate momentum separated by true particle species
 
  in water-out mode.
  (a) The nominal MC prediction without any weights applied.
- (b) The flux tuning is applied.
- (c) The systematic weighting is applied.
- (d) Both flux and systematic weighting is applied.
+ (b) Highland2 comparison for (a) without any weights applied using the
+ 
+\begin_inset Quotes eld
+\end_inset
+
+NOW
+\begin_inset Quotes erd
+\end_inset
+
+ draw option.
+ (c) The flux tuning is applied.
+ (d) The systematic weighting is applied.
+ (e) Both flux and systematic weighting is applied.
+ (f) Highland2 comparison for (e).
 \begin_inset Argument 1
 status open
 
@@ -2336,14 +2412,14 @@ status collapsed
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
 	filename Figures/SamplesandSelections/numuFHCCCInc/numuCCIncWaterOut_recocosq_mu_MC_only_LeptonCandidateTruePDG_fhc_air.png
 	lyxscale 49
-	width 48text%
+	width 40text%
 
 \end_inset
 
@@ -2368,14 +2444,50 @@ Nominal MC
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/SamplesandSelections/numuFHCCCInc/HL2/Run4_Air/NumuFHCCCInc_costheta_particle_nominal_mc.png
+	lyxscale 50
+	width 40text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Nominal MC from Highland2
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
 
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
 	filename Figures/SamplesandSelections/numuFHCCCInc/numuCCIncWaterOut_recocosq_mu_MC_only_LeptonCandidateTruePDG_fhc_air_fluxtuned.png
 	lyxscale 50
-	width 48text%
+	width 40text%
 
 \end_inset
 
@@ -2397,21 +2509,17 @@ Flux
 \end_inset
 
 
-\end_layout
-
-\begin_layout Plain Layout
-\align center
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
 	filename Figures/SamplesandSelections/numuFHCCCInc/numuCCIncWaterOut_recocosq_mu_MC_only_LeptonCandidateTruePDG_fhc_air_systematicweighted.png
 	lyxscale 50
-	width 48text%
+	width 40text%
 
 \end_inset
 
@@ -2433,17 +2541,21 @@ Systematics
 \end_inset
 
 
+\end_layout
+
+\begin_layout Plain Layout
+\align center
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
 	filename Figures/SamplesandSelections/numuFHCCCInc/numuCCIncWaterOut_recocosq_mu_MC_only_LeptonCandidateTruePDG_fhc_air_fluxtuned_systematicweighted.png
 	lyxscale 50
-	width 48text%
+	width 40text%
 
 \end_inset
 
@@ -2455,6 +2567,38 @@ status open
 
 \begin_layout Plain Layout
 Flux + systematics
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/SamplesandSelections/numuFHCCCInc/HL2/Run4_Air/NumuFHCCCInc_costheta_particle_fluxtuned_systematicweighted.png
+	lyxscale 50
+	width 40text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Fully weighted in Highland2
 \end_layout
 
 \end_inset
@@ -2483,9 +2627,21 @@ Reconstructed lepton candidate angle separated by true particle species
 
  in water-out mode.
  (a) The nominal MC prediction without any weights applied.
- (b) The flux tuning is applied.
- (c) The systematic weighting is applied.
- (d) Both flux and systematic weighting is applied.
+ (b) Highland2 comparison for (a) without any weights applied using the
+ 
+\begin_inset Quotes eld
+\end_inset
+
+NOW
+\begin_inset Quotes erd
+\end_inset
+
+ draw option.
+ (c) The flux tuning is applied.
+ (d) The systematic weighting is applied.
+ (e) Both flux and systematic weighting is applied.
+ (f) Highland2 comparison for (e).
+ 
 \begin_inset Argument 1
 status open
 
@@ -2537,17 +2693,18 @@ sideways false
 status collapsed
 
 \begin_layout Plain Layout
+\align center
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
 	filename Figures/SamplesandSelections/numuFHCCCInc/numuCCIncWaterOut_recoP_mu_MC_only_NEUTNuReactionCodes_fhc_air.png
 	lyxscale 49
-	width 48text%
+	width 40text%
 
 \end_inset
 
@@ -2572,14 +2729,14 @@ Nominal MC
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
 	filename Figures/SamplesandSelections/numuFHCCCInc/numuCCIncWaterOut_recoP_mu_MC_only_NEUTNuReactionCodes_fhc_air_fluxtuned.png
 	lyxscale 50
-	width 48text%
+	width 40text%
 
 \end_inset
 
@@ -2604,17 +2761,18 @@ Flux
 \end_layout
 
 \begin_layout Plain Layout
+\align center
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
 	filename Figures/SamplesandSelections/numuFHCCCInc/numuCCIncWaterOut_recoP_mu_MC_only_NEUTNuReactionCodes_fhc_air_systematicweighted.png
 	lyxscale 50
-	width 48text%
+	width 40text%
 
 \end_inset
 
@@ -2639,14 +2797,14 @@ Systematics
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
 	filename Figures/SamplesandSelections/numuFHCCCInc/numuCCIncWaterOut_recoP_mu_MC_only_NEUTNuReactionCodes_fhc_air_fluxtuned_systematicweighted.png
 	lyxscale 50
-	width 48text%
+	width 40text%
 
 \end_inset
 
@@ -2747,7 +2905,7 @@ status collapsed
 \begin_inset Graphics
 	filename Figures/SamplesandSelections/numuFHCCCInc/numuCCIncWaterOut_recocosq_mu_MC_only_NEUTNuReactionCodes_fhc_air.png
 	lyxscale 49
-	width 48text%
+	width 40text%
 
 \end_inset
 
@@ -2772,14 +2930,14 @@ Nominal MC
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
 	filename Figures/SamplesandSelections/numuFHCCCInc/numuCCIncWaterOut_recocosq_mu_MC_only_NEUTNuReactionCodes_fhc_air_fluxtuned.png
 	lyxscale 50
-	width 48text%
+	width 40text%
 
 \end_inset
 
@@ -2808,14 +2966,14 @@ Flux
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
 	filename Figures/SamplesandSelections/numuFHCCCInc/numuCCIncWaterOut_recocosq_mu_MC_only_NEUTNuReactionCodes_fhc_air_systematicweighted.png
 	lyxscale 50
-	width 48text%
+	width 40text%
 
 \end_inset
 
@@ -2840,14 +2998,14 @@ Systematics
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
 	filename Figures/SamplesandSelections/numuFHCCCInc/numuCCIncWaterOut_recocosq_mu_MC_only_NEUTNuReactionCodes_fhc_air_fluxtuned_systematicweighted.png
 	lyxscale 50
-	width 48text%
+	width 40text%
 
 \end_inset
 
@@ -2948,14 +3106,14 @@ status collapsed
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
 	filename Figures/SamplesandSelections/numuFHCCCInc/numuCCIncWaterOut_recoP_mu_MC_only_TrueTopology_fhc_air.png
 	lyxscale 49
-	width 48text%
+	width 40text%
 
 \end_inset
 
@@ -2980,14 +3138,14 @@ Nominal MC
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
 	filename Figures/SamplesandSelections/numuFHCCCInc/numuCCIncWaterOut_recoP_mu_MC_only_TrueTopology_fhc_air_fluxtuned.png
 	lyxscale 50
-	width 48text%
+	width 40text%
 
 \end_inset
 
@@ -3016,14 +3174,14 @@ Flux
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
 	filename Figures/SamplesandSelections/numuFHCCCInc/numuCCIncWaterOut_recoP_mu_MC_only_TrueTopology_fhc_air_systematicweighted.png
 	lyxscale 50
-	width 48text%
+	width 40text%
 
 \end_inset
 
@@ -3048,14 +3206,14 @@ Systematics
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
 	filename Figures/SamplesandSelections/numuFHCCCInc/numuCCIncWaterOut_recoP_mu_MC_only_TrueTopology_fhc_air_fluxtuned_systematicweighted.png
 	lyxscale 50
-	width 48text%
+	width 40text%
 
 \end_inset
 
@@ -3148,14 +3306,14 @@ status collapsed
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
 	filename Figures/SamplesandSelections/numuFHCCCInc/numuCCIncWaterOut_recocosq_mu_MC_only_TrueTopology_fhc_air.png
 	lyxscale 49
-	width 48text%
+	width 40text%
 
 \end_inset
 
@@ -3180,14 +3338,14 @@ Nominal MC
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
 	filename Figures/SamplesandSelections/numuFHCCCInc/numuCCIncWaterOut_recocosq_mu_MC_only_TrueTopology_fhc_air_fluxtuned.png
 	lyxscale 50
-	width 48text%
+	width 40text%
 
 \end_inset
 
@@ -3216,14 +3374,14 @@ Flux
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
 	filename Figures/SamplesandSelections/numuFHCCCInc/numuCCIncWaterOut_recocosq_mu_MC_only_TrueTopology_fhc_air_systematicweighted.png
 	lyxscale 50
-	width 48text%
+	width 40text%
 
 \end_inset
 
@@ -3248,14 +3406,14 @@ Systematics
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
 	filename Figures/SamplesandSelections/numuFHCCCInc/numuCCIncWaterOut_recocosq_mu_MC_only_TrueTopology_fhc_air_fluxtuned_systematicweighted.png
 	lyxscale 50
-	width 48text%
+	width 40text%
 
 \end_inset
 
@@ -3356,14 +3514,14 @@ status collapsed
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
 	filename Figures/SamplesandSelections/numuFHCCCInc/numuCCIncWaterOut_trueE_nu_MC_only_NEUTNuReactionCodes_fhc_air.png
 	lyxscale 49
-	width 48text%
+	width 40text%
 
 \end_inset
 
@@ -3388,14 +3546,14 @@ Nominal MC
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
 	filename Figures/SamplesandSelections/numuFHCCCInc/numuCCIncWaterOut_trueE_nu_MC_only_NEUTNuReactionCodes_fhc_air_fluxtuned.png
 	lyxscale 50
-	width 48text%
+	width 40text%
 
 \end_inset
 
@@ -3424,14 +3582,14 @@ Flux
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
 	filename Figures/SamplesandSelections/numuFHCCCInc/numuCCIncWaterOut_trueE_nu_MC_only_NEUTNuReactionCodes_fhc_air_systematicweighted.png
 	lyxscale 50
-	width 48text%
+	width 40text%
 
 \end_inset
 
@@ -3456,14 +3614,14 @@ Systematics
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
 	filename Figures/SamplesandSelections/numuFHCCCInc/numuCCIncWaterOut_trueE_nu_MC_only_NEUTNuReactionCodes_fhc_air_fluxtuned_systematicweighted.png
 	lyxscale 50
-	width 48text%
+	width 40text%
 
 \end_inset
 
@@ -3602,14 +3760,14 @@ status collapsed
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
 	filename Figures/SamplesandSelections/numubarRHCCCInc/numubarRHCCCIncWaterOut_recoP_mu_MC_only_LeptonCandidateTruePDG_rhc_air.png
 	lyxscale 49
-	width 48text%
+	width 40text%
 
 \end_inset
 
@@ -3634,14 +3792,50 @@ Nominal MC
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/SamplesandSelections/numubarRHCCCInc/HL2/Run6e_Air/NumubarinRHCCCInc_momentum_particle_nominal_mc.png
+	lyxscale 49
+	width 40text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Nominal MC from Highland2
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
 
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
 	filename Figures/SamplesandSelections/numubarRHCCCInc/numubarRHCCCIncWaterOut_recoP_mu_MC_only_LeptonCandidateTruePDG_rhc_air_fluxtuned.png
 	lyxscale 50
-	width 48text%
+	width 40text%
 
 \end_inset
 
@@ -3663,21 +3857,17 @@ Flux
 \end_inset
 
 
-\end_layout
-
-\begin_layout Plain Layout
-\align center
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
 	filename Figures/SamplesandSelections/numubarRHCCCInc/numubarRHCCCIncWaterOut_recoP_mu_MC_only_LeptonCandidateTruePDG_rhc_air_systematicweighted.png
 	lyxscale 50
-	width 48text%
+	width 40text%
 
 \end_inset
 
@@ -3699,17 +3889,21 @@ Systematics
 \end_inset
 
 
+\end_layout
+
+\begin_layout Plain Layout
+\align center
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
 	filename Figures/SamplesandSelections/numubarRHCCCInc/numubarRHCCCIncWaterOut_recoP_mu_MC_only_LeptonCandidateTruePDG_rhc_air_fluxtuned_systematicweighted.png
 	lyxscale 50
-	width 48text%
+	width 40text%
 
 \end_inset
 
@@ -3731,9 +3925,38 @@ Flux + systematics
 \end_inset
 
 
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/SamplesandSelections/numubarRHCCCInc/HL2/Run6e_Air/NumubarinRHCCCInc_momentum_particle_fluxtuned_systematicweighted.png
+	lyxscale 50
+	width 40text%
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Fully weighted in Highland2
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
@@ -3748,12 +3971,35 @@ Reconstructed lepton candidate momentum separated by true particle species
 \end_inset
 
  in water-out mode.
+ Reconstructed lepton candidate angle separated by true particle species
+ for RHC 
+\begin_inset Formula $\numubar$
+\end_inset
+
+ CC-Inc.
+ events occurring in the 
+\begin_inset Formula $\pod$
+\end_inset
+
+ in water-in mode.
  (a) The nominal MC prediction without any weights applied.
- (b) The flux tuning is applied.
- (c) The systematic weighting is applied.
- (d) Both flux and systematic weighting is applied.
+ (b) Highland2 comparison for (a) without any weights applied using the
+ 
+\begin_inset Quotes eld
+\end_inset
+
+NOW
+\begin_inset Quotes erd
+\end_inset
+
+ draw option.
+ (c) The flux tuning is applied.
+ (d) The systematic weighting is applied.
+ (e) Both flux and systematic weighting is applied.
+ (f) Highland2 comparison for (e).
+ 
 \begin_inset Argument 1
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Formula $\pod$
@@ -3803,14 +4049,14 @@ status collapsed
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
 	filename Figures/SamplesandSelections/numubarRHCCCInc/numubarRHCCCIncWaterOut_recocosq_mu_MC_only_LeptonCandidateTruePDG_rhc_air.png
 	lyxscale 49
-	width 48text%
+	width 40text%
 
 \end_inset
 
@@ -3840,9 +4086,45 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
+	filename Figures/SamplesandSelections/numubarRHCCCInc/HL2/Run6e_Air/NumubarinRHCCCInc_costheta_particle_nominal_mc.png
+	lyxscale 49
+	width 40text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Nominal MC from Highland2
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
 	filename Figures/SamplesandSelections/numubarRHCCCInc/numubarRHCCCIncWaterOut_recocosq_mu_MC_only_LeptonCandidateTruePDG_rhc_air_fluxtuned.png
 	lyxscale 50
-	width 48text%
+	width 40text%
 
 \end_inset
 
@@ -3864,21 +4146,17 @@ Flux
 \end_inset
 
 
-\end_layout
-
-\begin_layout Plain Layout
-\align center
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
 	filename Figures/SamplesandSelections/numubarRHCCCInc/numubarRHCCCIncWaterOut_recocosq_mu_MC_only_LeptonCandidateTruePDG_rhc_air_systematicweighted.png
 	lyxscale 50
-	width 48text%
+	width 40text%
 
 \end_inset
 
@@ -3900,17 +4178,21 @@ Systematics
 \end_inset
 
 
+\end_layout
+
+\begin_layout Plain Layout
+\align center
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
 	filename Figures/SamplesandSelections/numubarRHCCCInc/numubarRHCCCIncWaterOut_recocosq_mu_MC_only_LeptonCandidateTruePDG_rhc_air_fluxtuned_systematicweighted.png
 	lyxscale 50
-	width 48text%
+	width 40text%
 
 \end_inset
 
@@ -3922,6 +4204,38 @@ status open
 
 \begin_layout Plain Layout
 Flux + systematics
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/SamplesandSelections/numubarRHCCCInc/HL2/Run6e_Air/NumubarinRHCCCInc_costheta_particle_fluxtuned_systematicweighted.png
+	lyxscale 50
+	width 40text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Fully weighted in Highland2
 \end_layout
 
 \end_inset
@@ -3950,9 +4264,21 @@ Reconstructed lepton candidate angle separated by true particle species
 
  in water-out mode.
  (a) The nominal MC prediction without any weights applied.
- (b) The flux tuning is applied.
- (c) The systematic weighting is applied.
- (d) Both flux and systematic weighting is applied.
+ (b) Highland2 comparison for (a) without any weights applied using the
+ 
+\begin_inset Quotes eld
+\end_inset
+
+NOW
+\begin_inset Quotes erd
+\end_inset
+
+ draw option.
+ (c) The flux tuning is applied.
+ (d) The systematic weighting is applied.
+ (e) Both flux and systematic weighting is applied.
+ (f) Highland2 comparison for (e).
+ 
 \begin_inset Argument 1
 status open
 
@@ -4004,17 +4330,18 @@ sideways false
 status collapsed
 
 \begin_layout Plain Layout
+\align center
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
 	filename Figures/SamplesandSelections/numubarRHCCCInc/numubarRHCCCIncWaterOut_recoP_mu_MC_only_NEUTAntiNuReactionCodes_rhc_air.png
 	lyxscale 49
-	width 48text%
+	width 40text%
 
 \end_inset
 
@@ -4039,14 +4366,14 @@ Nominal MC
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
 	filename Figures/SamplesandSelections/numubarRHCCCInc/numubarRHCCCIncWaterOut_recoP_mu_MC_only_NEUTAntiNuReactionCodes_rhc_air_fluxtuned.png
 	lyxscale 50
-	width 48text%
+	width 40text%
 
 \end_inset
 
@@ -4071,17 +4398,18 @@ Flux
 \end_layout
 
 \begin_layout Plain Layout
+\align center
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
 	filename Figures/SamplesandSelections/numubarRHCCCInc/numubarRHCCCIncWaterOut_recoP_mu_MC_only_NEUTAntiNuReactionCodes_rhc_air_systematicweighted.png
 	lyxscale 50
-	width 48text%
+	width 40text%
 
 \end_inset
 
@@ -4106,14 +4434,14 @@ Systematics
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
 	filename Figures/SamplesandSelections/numubarRHCCCInc/numubarRHCCCIncWaterOut_recoP_mu_MC_only_NEUTAntiNuReactionCodes_rhc_air_fluxtuned_systematicweighted.png
 	lyxscale 50
-	width 48text%
+	width 40text%
 
 \end_inset
 
@@ -4214,7 +4542,7 @@ status collapsed
 \begin_inset Graphics
 	filename Figures/SamplesandSelections/numubarRHCCCInc/numubarRHCCCIncWaterOut_recocosq_mu_MC_only_NEUTAntiNuReactionCodes_rhc_air.png
 	lyxscale 49
-	width 48text%
+	width 40text%
 
 \end_inset
 
@@ -4246,7 +4574,7 @@ status open
 \begin_inset Graphics
 	filename Figures/SamplesandSelections/numubarRHCCCInc/numubarRHCCCIncWaterOut_recocosq_mu_MC_only_NEUTAntiNuReactionCodes_rhc_air_fluxtuned.png
 	lyxscale 50
-	width 48text%
+	width 40text%
 
 \end_inset
 
@@ -4282,7 +4610,7 @@ status open
 \begin_inset Graphics
 	filename Figures/SamplesandSelections/numubarRHCCCInc/numubarRHCCCIncWaterOut_recocosq_mu_MC_only_NEUTAntiNuReactionCodes_rhc_air_systematicweighted.png
 	lyxscale 50
-	width 48text%
+	width 40text%
 
 \end_inset
 
@@ -4314,7 +4642,7 @@ status open
 \begin_inset Graphics
 	filename Figures/SamplesandSelections/numubarRHCCCInc/numubarRHCCCIncWaterOut_recocosq_mu_MC_only_NEUTAntiNuReactionCodes_rhc_air_fluxtuned_systematicweighted.png
 	lyxscale 50
-	width 48text%
+	width 40text%
 
 \end_inset
 
@@ -4422,7 +4750,7 @@ status open
 \begin_inset Graphics
 	filename Figures/SamplesandSelections/numubarRHCCCInc/numubarRHCCCIncWaterOut_recoP_mu_MC_only_TrueTopology_rhc_air.png
 	lyxscale 49
-	width 48text%
+	width 40text%
 
 \end_inset
 
@@ -4454,7 +4782,7 @@ status open
 \begin_inset Graphics
 	filename Figures/SamplesandSelections/numubarRHCCCInc/numubarRHCCCIncWaterOut_recoP_mu_MC_only_TrueTopology_rhc_air_fluxtuned.png
 	lyxscale 50
-	width 48text%
+	width 40text%
 
 \end_inset
 
@@ -4490,7 +4818,7 @@ status open
 \begin_inset Graphics
 	filename Figures/SamplesandSelections/numubarRHCCCInc/numubarRHCCCIncWaterOut_recoP_mu_MC_only_TrueTopology_rhc_air_systematicweighted.png
 	lyxscale 50
-	width 48text%
+	width 40text%
 
 \end_inset
 
@@ -4522,7 +4850,7 @@ status open
 \begin_inset Graphics
 	filename Figures/SamplesandSelections/numubarRHCCCInc/numubarRHCCCIncWaterOut_recoP_mu_MC_only_TrueTopology_rhc_air_fluxtuned_systematicweighted.png
 	lyxscale 50
-	width 48text%
+	width 40text%
 
 \end_inset
 
@@ -4622,7 +4950,7 @@ status open
 \begin_inset Graphics
 	filename Figures/SamplesandSelections/numubarRHCCCInc/numubarRHCCCIncWaterOut_recocosq_mu_MC_only_TrueTopology_rhc_air.png
 	lyxscale 49
-	width 48text%
+	width 40text%
 
 \end_inset
 
@@ -4654,7 +4982,7 @@ status open
 \begin_inset Graphics
 	filename Figures/SamplesandSelections/numubarRHCCCInc/numubarRHCCCIncWaterOut_recocosq_mu_MC_only_TrueTopology_rhc_air_fluxtuned.png
 	lyxscale 50
-	width 48text%
+	width 40text%
 
 \end_inset
 
@@ -4690,7 +5018,7 @@ status open
 \begin_inset Graphics
 	filename Figures/SamplesandSelections/numubarRHCCCInc/numubarRHCCCIncWaterOut_recocosq_mu_MC_only_TrueTopology_rhc_air_systematicweighted.png
 	lyxscale 50
-	width 48text%
+	width 40text%
 
 \end_inset
 
@@ -4722,7 +5050,7 @@ status open
 \begin_inset Graphics
 	filename Figures/SamplesandSelections/numubarRHCCCInc/numubarRHCCCIncWaterOut_recocosq_mu_MC_only_TrueTopology_rhc_air_fluxtuned_systematicweighted.png
 	lyxscale 50
-	width 48text%
+	width 40text%
 
 \end_inset
 
@@ -4830,7 +5158,7 @@ status open
 \begin_inset Graphics
 	filename Figures/SamplesandSelections/numubarRHCCCInc/numubarRHCCCIncWaterOut_trueE_nu_MC_only_NEUTAntiNuReactionCodes_rhc_air.png
 	lyxscale 49
-	width 48text%
+	width 40text%
 
 \end_inset
 
@@ -4862,7 +5190,7 @@ status open
 \begin_inset Graphics
 	filename Figures/SamplesandSelections/numubarRHCCCInc/numubarRHCCCIncWaterOut_trueE_nu_MC_only_NEUTAntiNuReactionCodes_rhc_air_fluxtuned.png
 	lyxscale 50
-	width 48text%
+	width 40text%
 
 \end_inset
 
@@ -4898,7 +5226,7 @@ status open
 \begin_inset Graphics
 	filename Figures/SamplesandSelections/numubarRHCCCInc/numubarRHCCCIncWaterOut_trueE_nu_MC_only_NEUTAntiNuReactionCodes_rhc_air_systematicweighted.png
 	lyxscale 50
-	width 48text%
+	width 40text%
 
 \end_inset
 
@@ -4930,7 +5258,7 @@ status open
 \begin_inset Graphics
 	filename Figures/SamplesandSelections/numubarRHCCCInc/numubarRHCCCIncWaterOut_trueE_nu_MC_only_NEUTAntiNuReactionCodes_rhc_air_fluxtuned_systematicweighted.png
 	lyxscale 50
-	width 48text%
+	width 40text%
 
 \end_inset
 
@@ -5031,7 +5359,1590 @@ status open
 
 
 \backslash
-todo{Add figures here}
+todo{Add HL2 figures here}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/SamplesandSelections/numuRHCCCInc/numubkgRHCCCIncWaterOut_recoP_mu_MC_only_LeptonCandidateTruePDG_rhc_air.png
+	lyxscale 49
+	width 40text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Nominal MC
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/SamplesandSelections/numuFHCCCInc/HL2
+	lyxscale 49
+	width 40text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Nominal MC from Highland2
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/SamplesandSelections/numuRHCCCInc/numubkgRHCCCIncWaterOut_recoP_mu_MC_only_LeptonCandidateTruePDG_rhc_air_fluxtuned.png
+	lyxscale 50
+	width 40text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Flux
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/SamplesandSelections/numuRHCCCInc/numubkgRHCCCIncWaterOut_recoP_mu_MC_only_LeptonCandidateTruePDG_rhc_air_systematicweighted.png
+	lyxscale 50
+	width 40text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Systematics
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/SamplesandSelections/numuRHCCCInc/numubkgRHCCCIncWaterOut_recoP_mu_MC_only_LeptonCandidateTruePDG_rhc_air_fluxtuned_systematicweighted.png
+	lyxscale 50
+	width 40text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Flux + systematics
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/SamplesandSelections/numuFHCCCInc/HL2
+	lyxscale 50
+	width 40text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Fully weighted in Highland2
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Reconstructed lepton candidate momentum separated by true particle species
+ for RHC 
+\begin_inset Formula $\numu$
+\end_inset
+
+ CC-Inc.
+ events occurring in the 
+\begin_inset Formula $\pod$
+\end_inset
+
+ in water-out mode.
+ (a) The nominal MC prediction without any weights applied.
+ (b) Highland2 comparison for (a) without any weights applied using the
+ 
+\begin_inset Quotes eld
+\end_inset
+
+NOW
+\begin_inset Quotes erd
+\end_inset
+
+ draw option.
+ (c) The flux tuning is applied.
+ (d) The systematic weighting is applied.
+ (e) Both flux and systematic weighting is applied.
+ (f) Highland2 comparison for (e).
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+\begin_inset Formula $\pod$
+\end_inset
+
+ Air RHC 
+\begin_inset Formula $\numu$
+\end_inset
+
+ CC-Inc.
+ Lepton Cand.
+ Reco.
+ Momentum by True Particle
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:P0DairRHCnumuCCIncMomTrueParticle"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/SamplesandSelections/numuRHCCCInc/numubkgRHCCCIncWaterOut_recocosq_mu_MC_only_LeptonCandidateTruePDG_rhc_air.png
+	lyxscale 49
+	width 40text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Nominal MC
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/SamplesandSelections/numuFHCCCInc/HL2
+	lyxscale 50
+	width 40text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Nominal MC from Highland2
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/SamplesandSelections/numuRHCCCInc/numubkgRHCCCIncWaterOut_recocosq_mu_MC_only_LeptonCandidateTruePDG_rhc_air_fluxtuned.png
+	lyxscale 50
+	width 40text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Flux
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/SamplesandSelections/numuRHCCCInc/numubkgRHCCCIncWaterOut_recocosq_mu_MC_only_LeptonCandidateTruePDG_rhc_air_systematicweighted.png
+	lyxscale 50
+	width 40text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Systematics
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/SamplesandSelections/numuRHCCCInc/numubkgRHCCCIncWaterOut_recocosq_mu_MC_only_LeptonCandidateTruePDG_rhc_air_fluxtuned_systematicweighted.png
+	lyxscale 50
+	width 40text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Flux + systematics
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/SamplesandSelections/numuFHCCCInc/HL2
+	lyxscale 50
+	width 40text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Fully weighted in Highland2
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Reconstructed lepton candidate angle separated by true particle species
+ for RHC 
+\begin_inset Formula $\numu$
+\end_inset
+
+ CC-Inc.
+ events occurring in the 
+\begin_inset Formula $\pod$
+\end_inset
+
+ in water-out mode.
+ (a) The nominal MC prediction without any weights applied.
+ (b) Highland2 comparison for (a) without any weights applied using the
+ 
+\begin_inset Quotes eld
+\end_inset
+
+NOW
+\begin_inset Quotes erd
+\end_inset
+
+ draw option.
+ (c) The flux tuning is applied.
+ (d) The systematic weighting is applied.
+ (e) Both flux and systematic weighting is applied.
+ (f) Highland2 comparison for (e).
+ 
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+\begin_inset Formula $\pod$
+\end_inset
+
+ Air RHC 
+\begin_inset Formula $\numu$
+\end_inset
+
+ CC-Inc.
+ Lepton Cand.
+ Reco.
+ 
+\begin_inset Formula $\cos\theta$
+\end_inset
+
+ by True Particle
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:P0DairRHCnumuCCIncAngleTrueParticle"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/SamplesandSelections/numuRHCCCInc/numubkgRHCCCIncWaterOut_recoP_mu_MC_only_NEUTNuReactionCodes_rhc_air.png
+	lyxscale 49
+	width 40text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Nominal MC
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/SamplesandSelections/numuRHCCCInc/numubkgRHCCCIncWaterOut_recoP_mu_MC_only_NEUTNuReactionCodes_rhc_air_fluxtuned.png
+	lyxscale 50
+	width 40text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Flux
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/SamplesandSelections/numuRHCCCInc/numubkgRHCCCIncWaterOut_recoP_mu_MC_only_NEUTNuReactionCodes_rhc_air_systematicweighted.png
+	lyxscale 50
+	width 40text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Systematics
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/SamplesandSelections/numuRHCCCInc/numubkgRHCCCIncWaterOut_recoP_mu_MC_only_NEUTNuReactionCodes_rhc_air_fluxtuned_systematicweighted.png
+	lyxscale 50
+	width 40text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Flux + systematics
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Reconstructed lepton candidate momentum separated by NEUT model interaction
+ mode for RHC 
+\begin_inset Formula $\numu$
+\end_inset
+
+ CC-Inc.
+ events occurring in the 
+\begin_inset Formula $\pod$
+\end_inset
+
+ in water-out mode.
+ (a) The nominal MC prediction without any weights applied.
+ (b) The flux tuning is applied.
+ (c) The systematic weighting is applied.
+ (d) Both flux and systematic weighting is applied.
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+\begin_inset Formula $\pod$
+\end_inset
+
+ Air FHC 
+\begin_inset Formula $\numu$
+\end_inset
+
+ CC-Inc.
+ Lepton Cand.
+ Reco.
+ Momentum by NEUT Mode
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:P0DairFHCnumuCCIncMomTrueNEUTNuMode-1"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/SamplesandSelections/numuRHCCCInc/numubkgRHCCCIncWaterOut_recocosq_mu_MC_only_NEUTNuReactionCodes_rhc_air.png
+	lyxscale 49
+	width 40text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Nominal MC
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/SamplesandSelections/numuRHCCCInc/numubkgRHCCCIncWaterOut_recocosq_mu_MC_only_NEUTNuReactionCodes_rhc_air_fluxtuned.png
+	lyxscale 50
+	width 40text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Flux
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/SamplesandSelections/numuRHCCCInc/numubkgRHCCCIncWaterOut_recocosq_mu_MC_only_NEUTNuReactionCodes_rhc_air_systematicweighted.png
+	lyxscale 50
+	width 40text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Systematics
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/SamplesandSelections/numuRHCCCInc/numubkgRHCCCIncWaterOut_recocosq_mu_MC_only_NEUTNuReactionCodes_rhc_air_fluxtuned_systematicweighted.png
+	lyxscale 50
+	width 40text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Flux + systematics
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Reconstructed lepton candidate 
+\begin_inset Formula $\cos\theta$
+\end_inset
+
+ separated by NEUT model interaction mode for FHC 
+\begin_inset Formula $\numu$
+\end_inset
+
+ CC-Inc.
+ events occurring in the 
+\begin_inset Formula $\pod$
+\end_inset
+
+ in water-out mode.
+ (a) The nominal MC prediction without any weights applied.
+ (b) The flux tuning is applied.
+ (c) The systematic weighting is applied.
+ (d) Both flux and systematic weighting is applied.
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+\begin_inset Formula $\pod$
+\end_inset
+
+ Air FHC 
+\begin_inset Formula $\numu$
+\end_inset
+
+ CC-Inc.
+ Lepton Cand.
+ Reco.
+ 
+\begin_inset Formula $\cos\theta$
+\end_inset
+
+ by NEUT Mode
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:P0DairFHCnumuCCIncAngleTrueNEUTNuMode-1"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/SamplesandSelections/numuRHCCCInc/numubkgRHCCCIncWaterOut_recoP_mu_MC_only_TrueTopology_rhc_air.png
+	lyxscale 49
+	width 40text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Nominal MC
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/SamplesandSelections/numuRHCCCInc/numubkgRHCCCIncWaterOut_recoP_mu_MC_only_TrueTopology_rhc_air_fluxtuned.png
+	lyxscale 50
+	width 40text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Flux
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/SamplesandSelections/numuRHCCCInc/numubkgRHCCCIncWaterOut_recoP_mu_MC_only_TrueTopology_rhc_air_systematicweighted.png
+	lyxscale 50
+	width 40text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Systematics
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/SamplesandSelections/numuRHCCCInc/numubkgRHCCCIncWaterOut_recoP_mu_MC_only_TrueTopology_rhc_air_fluxtuned_systematicweighted.png
+	lyxscale 50
+	width 40text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Flux + systematics
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Reconstructed lepton candidate momentum separated by topology for FHC 
+\begin_inset Formula $\numu$
+\end_inset
+
+ CC-Inc.
+ events occurring in the 
+\begin_inset Formula $\pod$
+\end_inset
+
+ in water-out mode.
+ (a) The nominal MC prediction without any weights applied.
+ (b) The flux tuning is applied.
+ (c) The systematic weighting is applied.
+ (d) Both flux and systematic weighting is applied.
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+\begin_inset Formula $\pod$
+\end_inset
+
+ Air FHC 
+\begin_inset Formula $\numu$
+\end_inset
+
+ CC-Inc.
+ Lepton Cand.
+ Reco.
+ Momentum by True Topology
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:P0DairFHCnumuCCIncMomTrueTopology-1"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/SamplesandSelections/numuRHCCCInc/numubkgRHCCCIncWaterOut_recocosq_mu_MC_only_TrueTopology_rhc_air.png
+	lyxscale 49
+	width 40text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Nominal MC
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/SamplesandSelections/numuRHCCCInc/numubkgRHCCCIncWaterOut_recocosq_mu_MC_only_TrueTopology_rhc_air_fluxtuned.png
+	lyxscale 50
+	width 40text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Flux
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/SamplesandSelections/numuRHCCCInc/numubkgRHCCCIncWaterOut_recocosq_mu_MC_only_TrueTopology_rhc_air_systematicweighted.png
+	lyxscale 50
+	width 40text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Systematics
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/SamplesandSelections/numuRHCCCInc/numubkgRHCCCIncWaterOut_recocosq_mu_MC_only_TrueTopology_rhc_air_fluxtuned_systematicweighted.png
+	lyxscale 50
+	width 40text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Flux + systematics
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Reconstructed lepton candidate 
+\begin_inset Formula $\cos\theta$
+\end_inset
+
+ separated by topology for FHC 
+\begin_inset Formula $\numu$
+\end_inset
+
+ CC-Inc.
+ events occurring in the 
+\begin_inset Formula $\pod$
+\end_inset
+
+ in water-out mode.
+ (a) The nominal MC prediction without any weights applied.
+ (b) The flux tuning is applied.
+ (c) The systematic weighting is applied.
+ (d) Both flux and systematic weighting is applied.
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+\begin_inset Formula $\pod$
+\end_inset
+
+ Air FHC 
+\begin_inset Formula $\numu$
+\end_inset
+
+ CC-Inc.
+ Lepton Cand.
+ Reco.
+ 
+\begin_inset Formula $\cos\theta$
+\end_inset
+
+ by True Topology
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:P0DairFHCnumuCCIncAngleTrueTopology-1"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/SamplesandSelections/numuRHCCCInc/numubkgRHCCCIncWaterOut_trueE_nu_MC_only_NEUTNuReactionCodes_rhc_air.png
+	lyxscale 49
+	width 40text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Nominal MC
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/SamplesandSelections/numuRHCCCInc/numubkgRHCCCIncWaterOut_trueE_nu_MC_only_NEUTNuReactionCodes_rhc_air_fluxtuned.png
+	lyxscale 50
+	width 40text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Flux
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/SamplesandSelections/numuRHCCCInc/numubkgRHCCCIncWaterOut_trueE_nu_MC_only_NEUTNuReactionCodes_rhc_air_systematicweighted.png
+	lyxscale 50
+	width 40text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Systematics
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/SamplesandSelections/numuRHCCCInc/numubkgRHCCCIncWaterOut_trueE_nu_MC_only_NEUTNuReactionCodes_rhc_air_fluxtuned_systematicweighted.png
+	lyxscale 50
+	width 40text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Flux + systematics
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+True neutrino energy associated with the lepton candidate separated by NEUT
+ model interaction mode for FHC 
+\begin_inset Formula $\numu$
+\end_inset
+
+ CC-Inc.
+ events occurring in the 
+\begin_inset Formula $\pod$
+\end_inset
+
+ in water-out mode.
+ (a) The nominal MC prediction without any weights applied.
+ (b) The flux tuning is applied.
+ (c) The systematic weighting is applied.
+ (d) Both flux and systematic weighting is applied.
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+\begin_inset Formula $\pod$
+\end_inset
+
+ Air FHC 
+\begin_inset Formula $\numu$
+\end_inset
+
+ CC-Inc.
+ Lepton Cand.
+ True 
+\begin_inset Formula $E_{\nu}$
+\end_inset
+
+ by NEUT Mode
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:P0DairFHCnumuCCIncEnuTrueNEUTNuMode-1"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -5177,14 +7088,14 @@ status collapsed
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
 	filename Figures/SamplesandSelections/numuFHCCCInc/numuCCIncWaterIn_recoP_mu_MC_only_LeptonCandidateTruePDG_fhc_water.png
 	lyxscale 49
-	width 48text%
+	width 40text%
 
 \end_inset
 
@@ -5209,14 +7120,50 @@ Nominal MC
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/SamplesandSelections/numuFHCCCInc/numuCCIncWaterIn_recoP_mu_MC_only_LeptonCandidateTruePDG_fhc_water.png
+	lyxscale 49
+	width 40text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Nominal MC from Highland2
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
 
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
 	filename Figures/SamplesandSelections/numuFHCCCInc/numuCCIncWaterIn_recoP_mu_MC_only_LeptonCandidateTruePDG_fhc_water_fluxtuned.png
 	lyxscale 50
-	width 48text%
+	width 40text%
 
 \end_inset
 
@@ -5238,21 +7185,17 @@ Flux
 \end_inset
 
 
-\end_layout
-
-\begin_layout Plain Layout
-\align center
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
 	filename Figures/SamplesandSelections/numuFHCCCInc/numuCCIncWaterIn_recoP_mu_MC_only_LeptonCandidateTruePDG_fhc_water_systematicweighted.png
 	lyxscale 50
-	width 48text%
+	width 40text%
 
 \end_inset
 
@@ -5274,17 +7217,21 @@ Systematics
 \end_inset
 
 
+\end_layout
+
+\begin_layout Plain Layout
+\align center
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
 	filename Figures/SamplesandSelections/numuFHCCCInc/numuCCIncWaterIn_recoP_mu_MC_only_LeptonCandidateTruePDG_fhc_water_fluxtuned_systematicweighted.png
 	lyxscale 50
-	width 48text%
+	width 40text%
 
 \end_inset
 
@@ -5296,6 +7243,38 @@ status open
 
 \begin_layout Plain Layout
 Flux + systematics
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/SamplesandSelections/numuFHCCCInc/numuCCIncWaterIn_recoP_mu_MC_only_LeptonCandidateTruePDG_fhc_water_fluxtuned_systematicweighted.png
+	lyxscale 50
+	width 40text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Fully weighted in Highland2
 \end_layout
 
 \end_inset
@@ -5324,9 +7303,21 @@ Reconstructed lepton candidate momentum separated by true particle species
 
  in water-in mode.
  (a) The nominal MC prediction without any weights applied.
- (b) The flux tuning is applied.
- (c) The systematic weighting is applied.
- (d) Both flux and systematic weighting is applied.
+ (b) Highland2 comparison for (a) without any weights applied using the
+ 
+\begin_inset Quotes eld
+\end_inset
+
+NOW
+\begin_inset Quotes erd
+\end_inset
+
+ draw option.
+ (c) The flux tuning is applied.
+ (d) The systematic weighting is applied.
+ (e) Both flux and systematic weighting is applied.
+ (f) Highland2 comparison for (e).
+ 
 \begin_inset Argument 1
 status open
 
@@ -5371,21 +7362,21 @@ name "fig:P0DwaterFHCnumuCCIncMomTrueParticle"
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
 	filename Figures/SamplesandSelections/numuFHCCCInc/numuCCIncWaterIn_recocosq_mu_MC_only_LeptonCandidateTruePDG_fhc_water.png
 	lyxscale 49
-	width 48text%
+	width 40text%
 
 \end_inset
 
@@ -5415,9 +7406,45 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
+	filename Figures/SamplesandSelections/numuFHCCCInc/HL2
+	lyxscale 49
+	width 40text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Nominal MC from Highland2
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
 	filename Figures/SamplesandSelections/numuFHCCCInc/numuCCIncWaterIn_recocosq_mu_MC_only_LeptonCandidateTruePDG_fhc_water_fluxtuned.png
 	lyxscale 50
-	width 48text%
+	width 40text%
 
 \end_inset
 
@@ -5439,21 +7466,17 @@ Flux
 \end_inset
 
 
-\end_layout
-
-\begin_layout Plain Layout
-\align center
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
 	filename Figures/SamplesandSelections/numuFHCCCInc/numuCCIncWaterIn_recocosq_mu_MC_only_LeptonCandidateTruePDG_fhc_water_systematicweighted.png
 	lyxscale 50
-	width 48text%
+	width 40text%
 
 \end_inset
 
@@ -5475,17 +7498,21 @@ Systematics
 \end_inset
 
 
+\end_layout
+
+\begin_layout Plain Layout
+\align center
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
 	filename Figures/SamplesandSelections/numuFHCCCInc/numuCCIncWaterIn_recocosq_mu_MC_only_LeptonCandidateTruePDG_fhc_water_fluxtuned_systematicweighted.png
 	lyxscale 50
-	width 48text%
+	width 40text%
 
 \end_inset
 
@@ -5497,6 +7524,38 @@ status open
 
 \begin_layout Plain Layout
 Flux + systematics
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/SamplesandSelections/numuFHCCCInc/HL2
+	lyxscale 50
+	width 40text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Fully weighted in Highland2
 \end_layout
 
 \end_inset
@@ -5525,9 +7584,21 @@ Reconstructed lepton candidate angle separated by true particle species
 
  in water-in mode.
  (a) The nominal MC prediction without any weights applied.
- (b) The flux tuning is applied.
- (c) The systematic weighting is applied.
- (d) Both flux and systematic weighting is applied.
+ (b) Highland2 comparison for (a) without any weights applied using the
+ 
+\begin_inset Quotes eld
+\end_inset
+
+NOW
+\begin_inset Quotes erd
+\end_inset
+
+ draw option.
+ (c) The flux tuning is applied.
+ (d) The systematic weighting is applied.
+ (e) Both flux and systematic weighting is applied.
+ (f) Highland2 comparison for (e).
+ 
 \begin_inset Argument 1
 status open
 
@@ -5579,17 +7650,18 @@ sideways false
 status collapsed
 
 \begin_layout Plain Layout
+\align center
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
 	filename Figures/SamplesandSelections/numuFHCCCInc/numuCCIncWaterIn_recoP_mu_MC_only_NEUTNuReactionCodes_fhc_water.png
 	lyxscale 49
-	width 48text%
+	width 40text%
 
 \end_inset
 
@@ -5614,14 +7686,14 @@ Nominal MC
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
 	filename Figures/SamplesandSelections/numuFHCCCInc/numuCCIncWaterIn_recoP_mu_MC_only_NEUTNuReactionCodes_fhc_water_fluxtuned.png
 	lyxscale 50
-	width 48text%
+	width 40text%
 
 \end_inset
 
@@ -5646,17 +7718,18 @@ Flux
 \end_layout
 
 \begin_layout Plain Layout
+\align center
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
 	filename Figures/SamplesandSelections/numuFHCCCInc/numuCCIncWaterIn_recoP_mu_MC_only_NEUTNuReactionCodes_fhc_water_systematicweighted.png
 	lyxscale 50
-	width 48text%
+	width 40text%
 
 \end_inset
 
@@ -5681,14 +7754,14 @@ Systematics
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
 	filename Figures/SamplesandSelections/numuFHCCCInc/numuCCIncWaterIn_recoP_mu_MC_only_NEUTNuReactionCodes_fhc_water_fluxtuned_systematicweighted.png
 	lyxscale 50
-	width 48text%
+	width 40text%
 
 \end_inset
 
@@ -5789,7 +7862,7 @@ status collapsed
 \begin_inset Graphics
 	filename Figures/SamplesandSelections/numuFHCCCInc/numuCCIncWaterIn_recocosq_mu_MC_only_NEUTNuReactionCodes_fhc_water.png
 	lyxscale 49
-	width 48text%
+	width 40text%
 
 \end_inset
 
@@ -5821,7 +7894,7 @@ status open
 \begin_inset Graphics
 	filename Figures/SamplesandSelections/numuFHCCCInc/numuCCIncWaterIn_recocosq_mu_MC_only_NEUTNuReactionCodes_fhc_water_fluxtuned.png
 	lyxscale 50
-	width 48text%
+	width 40text%
 
 \end_inset
 
@@ -5857,7 +7930,7 @@ status open
 \begin_inset Graphics
 	filename Figures/SamplesandSelections/numuFHCCCInc/numuCCIncWaterIn_recocosq_mu_MC_only_NEUTNuReactionCodes_fhc_water_systematicweighted.png
 	lyxscale 50
-	width 48text%
+	width 40text%
 
 \end_inset
 
@@ -5889,7 +7962,7 @@ status open
 \begin_inset Graphics
 	filename Figures/SamplesandSelections/numuFHCCCInc/numuCCIncWaterIn_recocosq_mu_MC_only_NEUTNuReactionCodes_fhc_water_fluxtuned_systematicweighted.png
 	lyxscale 50
-	width 48text%
+	width 40text%
 
 \end_inset
 
@@ -5997,7 +8070,7 @@ status open
 \begin_inset Graphics
 	filename Figures/SamplesandSelections/numuFHCCCInc/numuCCIncWaterIn_recoP_mu_MC_only_TrueTopology_fhc_water.png
 	lyxscale 49
-	width 48text%
+	width 40text%
 
 \end_inset
 
@@ -6029,7 +8102,7 @@ status open
 \begin_inset Graphics
 	filename Figures/SamplesandSelections/numuFHCCCInc/numuCCIncWaterIn_recoP_mu_MC_only_TrueTopology_fhc_water_fluxtuned.png
 	lyxscale 50
-	width 48text%
+	width 40text%
 
 \end_inset
 
@@ -6065,7 +8138,7 @@ status open
 \begin_inset Graphics
 	filename Figures/SamplesandSelections/numuFHCCCInc/numuCCIncWaterIn_recoP_mu_MC_only_TrueTopology_fhc_water_systematicweighted.png
 	lyxscale 50
-	width 48text%
+	width 40text%
 
 \end_inset
 
@@ -6097,7 +8170,7 @@ status open
 \begin_inset Graphics
 	filename Figures/SamplesandSelections/numuFHCCCInc/numuCCIncWaterIn_recoP_mu_MC_only_TrueTopology_fhc_water_fluxtuned_systematicweighted.png
 	lyxscale 50
-	width 48text%
+	width 40text%
 
 \end_inset
 
@@ -6197,7 +8270,7 @@ status open
 \begin_inset Graphics
 	filename Figures/SamplesandSelections/numuFHCCCInc/numuCCIncWaterIn_recocosq_mu_MC_only_TrueTopology_fhc_water.png
 	lyxscale 49
-	width 48text%
+	width 40text%
 
 \end_inset
 
@@ -6229,7 +8302,7 @@ status open
 \begin_inset Graphics
 	filename Figures/SamplesandSelections/numuFHCCCInc/numuCCIncWaterIn_recocosq_mu_MC_only_TrueTopology_fhc_water_fluxtuned.png
 	lyxscale 50
-	width 48text%
+	width 40text%
 
 \end_inset
 
@@ -6265,7 +8338,7 @@ status open
 \begin_inset Graphics
 	filename Figures/SamplesandSelections/numuFHCCCInc/numuCCIncWaterIn_recocosq_mu_MC_only_TrueTopology_fhc_water_systematicweighted.png
 	lyxscale 50
-	width 48text%
+	width 40text%
 
 \end_inset
 
@@ -6297,7 +8370,7 @@ status open
 \begin_inset Graphics
 	filename Figures/SamplesandSelections/numuFHCCCInc/numuCCIncWaterIn_recocosq_mu_MC_only_TrueTopology_fhc_water_fluxtuned_systematicweighted.png
 	lyxscale 50
-	width 48text%
+	width 40text%
 
 \end_inset
 
@@ -6405,7 +8478,7 @@ status open
 \begin_inset Graphics
 	filename Figures/SamplesandSelections/numuFHCCCInc/numuCCIncWaterIn_trueE_nu_MC_only_NEUTNuReactionCodes_fhc_water.png
 	lyxscale 49
-	width 48text%
+	width 40text%
 
 \end_inset
 
@@ -6437,7 +8510,7 @@ status open
 \begin_inset Graphics
 	filename Figures/SamplesandSelections/numuFHCCCInc/numuCCIncWaterIn_trueE_nu_MC_only_NEUTNuReactionCodes_fhc_water_fluxtuned.png
 	lyxscale 50
-	width 48text%
+	width 40text%
 
 \end_inset
 
@@ -6473,7 +8546,7 @@ status open
 \begin_inset Graphics
 	filename Figures/SamplesandSelections/numuFHCCCInc/numuCCIncWaterIn_trueE_nu_MC_only_NEUTNuReactionCodes_fhc_water_systematicweighted.png
 	lyxscale 50
-	width 48text%
+	width 40text%
 
 \end_inset
 
@@ -6505,7 +8578,7 @@ status open
 \begin_inset Graphics
 	filename Figures/SamplesandSelections/numuFHCCCInc/numuCCIncWaterIn_trueE_nu_MC_only_NEUTNuReactionCodes_fhc_water_fluxtuned_systematicweighted.png
 	lyxscale 50
-	width 48text%
+	width 40text%
 
 \end_inset
 
@@ -6651,7 +8724,7 @@ status open
 \begin_inset Graphics
 	filename Figures/SamplesandSelections/numubarRHCCCInc/numubarRHCCCIncWaterIn_recoP_mu_MC_only_LeptonCandidateTruePDG_rhc_water.png
 	lyxscale 49
-	width 48text%
+	width 40text%
 
 \end_inset
 
@@ -6683,7 +8756,7 @@ status open
 \begin_inset Graphics
 	filename Figures/SamplesandSelections/numubarRHCCCInc/numubarRHCCCIncWaterIn_recoP_mu_MC_only_LeptonCandidateTruePDG_rhc_water_fluxtuned.png
 	lyxscale 50
-	width 48text%
+	width 40text%
 
 \end_inset
 
@@ -6719,7 +8792,7 @@ status open
 \begin_inset Graphics
 	filename Figures/SamplesandSelections/numubarRHCCCInc/numubarRHCCCIncWaterIn_recoP_mu_MC_only_LeptonCandidateTruePDG_rhc_water_systematicweighted.png
 	lyxscale 50
-	width 48text%
+	width 40text%
 
 \end_inset
 
@@ -6751,7 +8824,7 @@ status open
 \begin_inset Graphics
 	filename Figures/SamplesandSelections/numubarRHCCCInc/numubarRHCCCIncWaterIn_recoP_mu_MC_only_LeptonCandidateTruePDG_rhc_water_fluxtuned_systematicweighted.png
 	lyxscale 50
-	width 48text%
+	width 40text%
 
 \end_inset
 
@@ -6838,7 +8911,7 @@ name "fig:P0DwaterRHCnumubarCCIncMomTrueParticle"
 placement H
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
@@ -6882,7 +8955,7 @@ status collapsed
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename Figures/SamplesandSelections/numubarRHCCCInc/HL2/NumubarinRHCCCInc_costheta_particle_nominal_mc.png
+	filename Figures/SamplesandSelections/numubarRHCCCInc/HL2/Run7b_Water/NumubarinRHCCCInc_costheta_particle_nominal_mc.png
 	lyxscale 49
 	width 40text%
 
@@ -7018,7 +9091,7 @@ status collapsed
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename Figures/SamplesandSelections/numubarRHCCCInc/HL2/NumubarinRHCCCInc_costheta_particle_fluxtuned_systematicweighted.png
+	filename Figures/SamplesandSelections/numubarRHCCCInc/HL2/Run7b_Water/NumubarinRHCCCInc_costheta_particle_fluxtuned_systematicweighted.png
 	lyxscale 50
 	width 40text%
 
@@ -7058,7 +9131,7 @@ Reconstructed lepton candidate angle separated by true particle species
 \begin_inset Formula $\pod$
 \end_inset
 
- in water-out mode.
+ in water-in mode.
  (a) The nominal MC prediction without any weights applied.
  (b) Highland2 comparison for (a) without any weights applied using the
  
@@ -7126,17 +9199,18 @@ sideways false
 status collapsed
 
 \begin_layout Plain Layout
+\align center
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
 	filename Figures/SamplesandSelections/numubarRHCCCInc/numubarRHCCCIncWaterIn_recoP_mu_MC_only_NEUTAntiNuReactionCodes_rhc_water.png
 	lyxscale 49
-	width 48text%
+	width 40text%
 
 \end_inset
 
@@ -7161,14 +9235,14 @@ Nominal MC
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
 	filename Figures/SamplesandSelections/numubarRHCCCInc/numubarRHCCCIncWaterIn_recoP_mu_MC_only_NEUTAntiNuReactionCodes_rhc_water_fluxtuned.png
 	lyxscale 50
-	width 48text%
+	width 40text%
 
 \end_inset
 
@@ -7193,17 +9267,18 @@ Flux
 \end_layout
 
 \begin_layout Plain Layout
+\align center
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
 	filename Figures/SamplesandSelections/numubarRHCCCInc/numubarRHCCCIncWaterIn_recoP_mu_MC_only_NEUTAntiNuReactionCodes_rhc_water_systematicweighted.png
 	lyxscale 50
-	width 48text%
+	width 40text%
 
 \end_inset
 
@@ -7228,14 +9303,14 @@ Systematics
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
 	filename Figures/SamplesandSelections/numubarRHCCCInc/numubarRHCCCIncWaterIn_recoP_mu_MC_only_NEUTAntiNuReactionCodes_rhc_water_fluxtuned_systematicweighted.png
 	lyxscale 50
-	width 48text%
+	width 40text%
 
 \end_inset
 
@@ -7336,7 +9411,7 @@ status open
 \begin_inset Graphics
 	filename Figures/SamplesandSelections/numubarRHCCCInc/numubarRHCCCIncWaterIn_recocosq_mu_MC_only_NEUTAntiNuReactionCodes_rhc_water.png
 	lyxscale 49
-	width 48text%
+	width 40text%
 
 \end_inset
 
@@ -7368,7 +9443,7 @@ status open
 \begin_inset Graphics
 	filename Figures/SamplesandSelections/numubarRHCCCInc/numubarRHCCCIncWaterIn_recocosq_mu_MC_only_NEUTAntiNuReactionCodes_rhc_water_fluxtuned.png
 	lyxscale 50
-	width 48text%
+	width 40text%
 
 \end_inset
 
@@ -7404,7 +9479,7 @@ status open
 \begin_inset Graphics
 	filename Figures/SamplesandSelections/numubarRHCCCInc/numubarRHCCCIncWaterIn_recocosq_mu_MC_only_NEUTAntiNuReactionCodes_rhc_water_systematicweighted.png
 	lyxscale 50
-	width 48text%
+	width 40text%
 
 \end_inset
 
@@ -7436,7 +9511,7 @@ status open
 \begin_inset Graphics
 	filename Figures/SamplesandSelections/numubarRHCCCInc/numubarRHCCCIncWaterIn_recocosq_mu_MC_only_NEUTAntiNuReactionCodes_rhc_water_fluxtuned_systematicweighted.png
 	lyxscale 50
-	width 48text%
+	width 40text%
 
 \end_inset
 
@@ -7544,7 +9619,7 @@ status open
 \begin_inset Graphics
 	filename Figures/SamplesandSelections/numubarRHCCCInc/numubarRHCCCIncWaterIn_recoP_mu_MC_only_TrueTopology_rhc_water.png
 	lyxscale 49
-	width 48text%
+	width 40text%
 
 \end_inset
 
@@ -7576,7 +9651,7 @@ status open
 \begin_inset Graphics
 	filename Figures/SamplesandSelections/numubarRHCCCInc/numubarRHCCCIncWaterIn_recoP_mu_MC_only_TrueTopology_rhc_water_fluxtuned.png
 	lyxscale 50
-	width 48text%
+	width 40text%
 
 \end_inset
 
@@ -7612,7 +9687,7 @@ status open
 \begin_inset Graphics
 	filename Figures/SamplesandSelections/numubarRHCCCInc/numubarRHCCCIncWaterIn_recoP_mu_MC_only_TrueTopology_rhc_water_systematicweighted.png
 	lyxscale 50
-	width 48text%
+	width 40text%
 
 \end_inset
 
@@ -7644,7 +9719,7 @@ status open
 \begin_inset Graphics
 	filename Figures/SamplesandSelections/numubarRHCCCInc/numubarRHCCCIncWaterIn_recoP_mu_MC_only_TrueTopology_rhc_water_fluxtuned_systematicweighted.png
 	lyxscale 50
-	width 48text%
+	width 40text%
 
 \end_inset
 
@@ -7744,7 +9819,7 @@ status open
 \begin_inset Graphics
 	filename Figures/SamplesandSelections/numubarRHCCCInc/numubarRHCCCIncWaterIn_recocosq_mu_MC_only_TrueTopology_rhc_water.png
 	lyxscale 49
-	width 48text%
+	width 40text%
 
 \end_inset
 
@@ -7776,7 +9851,7 @@ status open
 \begin_inset Graphics
 	filename Figures/SamplesandSelections/numubarRHCCCInc/numubarRHCCCIncWaterIn_recocosq_mu_MC_only_TrueTopology_rhc_water_fluxtuned.png
 	lyxscale 50
-	width 48text%
+	width 40text%
 
 \end_inset
 
@@ -7812,7 +9887,7 @@ status open
 \begin_inset Graphics
 	filename Figures/SamplesandSelections/numubarRHCCCInc/numubarRHCCCIncWaterIn_recocosq_mu_MC_only_TrueTopology_rhc_water_systematicweighted.png
 	lyxscale 50
-	width 48text%
+	width 40text%
 
 \end_inset
 
@@ -7844,7 +9919,7 @@ status open
 \begin_inset Graphics
 	filename Figures/SamplesandSelections/numubarRHCCCInc/numubarRHCCCIncWaterIn_recocosq_mu_MC_only_TrueTopology_rhc_water_fluxtuned_systematicweighted.png
 	lyxscale 50
-	width 48text%
+	width 40text%
 
 \end_inset
 
@@ -7952,7 +10027,7 @@ status open
 \begin_inset Graphics
 	filename Figures/SamplesandSelections/numubarRHCCCInc/numubarRHCCCIncWaterIn_trueE_nu_MC_only_NEUTAntiNuReactionCodes_rhc_water.png
 	lyxscale 49
-	width 48text%
+	width 40text%
 
 \end_inset
 
@@ -7984,7 +10059,7 @@ status open
 \begin_inset Graphics
 	filename Figures/SamplesandSelections/numubarRHCCCInc/numubarRHCCCIncWaterIn_trueE_nu_MC_only_NEUTAntiNuReactionCodes_rhc_water_fluxtuned.png
 	lyxscale 50
-	width 48text%
+	width 40text%
 
 \end_inset
 
@@ -8020,7 +10095,7 @@ status open
 \begin_inset Graphics
 	filename Figures/SamplesandSelections/numubarRHCCCInc/numubarRHCCCIncWaterIn_trueE_nu_MC_only_NEUTAntiNuReactionCodes_rhc_water_systematicweighted.png
 	lyxscale 50
-	width 48text%
+	width 40text%
 
 \end_inset
 
@@ -8052,7 +10127,7 @@ status open
 \begin_inset Graphics
 	filename Figures/SamplesandSelections/numubarRHCCCInc/numubarRHCCCIncWaterIn_trueE_nu_MC_only_NEUTAntiNuReactionCodes_rhc_water_fluxtuned_systematicweighted.png
 	lyxscale 50
-	width 48text%
+	width 40text%
 
 \end_inset
 
