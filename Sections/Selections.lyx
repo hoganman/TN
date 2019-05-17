@@ -2140,7 +2140,7 @@ status collapsed
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename Figures/SamplesandSelections/numuFHCCCInc/numuCCIncWaterOut_recoP_mu_MC_only_LeptonCandidateTruePDG_fhc_air.png
+	filename Figures/SamplesandSelections/numuFHC/CCInc/numuCCIncWaterOut_recoP_mu_MC_only_LeptonCandidateTruePDG_fhc_air.png
 	lyxscale 49
 	width 40text%
 
@@ -2172,7 +2172,7 @@ status collapsed
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename Figures/SamplesandSelections/numuFHCCCInc/HL2/Run4_Air/NumuFHCCCInc_momentum_particle_nominal_mc.png
+	filename Figures/SamplesandSelections/numuFHC/CCInc/HL2/Run4_Air/NumuFHCCCInc_momentum_particle_nominal_mc.png
 	lyxscale 49
 	width 40text%
 
@@ -2208,7 +2208,7 @@ status collapsed
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename Figures/SamplesandSelections/numuFHCCCInc/numuCCIncWaterOut_recoP_mu_MC_only_LeptonCandidateTruePDG_fhc_air_fluxtuned.png
+	filename Figures/SamplesandSelections/numuFHC/CCInc/numuCCIncWaterOut_recoP_mu_MC_only_LeptonCandidateTruePDG_fhc_air_fluxtuned.png
 	lyxscale 50
 	width 40text%
 
@@ -2240,7 +2240,7 @@ status collapsed
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename Figures/SamplesandSelections/numuFHCCCInc/numuCCIncWaterOut_recoP_mu_MC_only_LeptonCandidateTruePDG_fhc_air_systematicweighted.png
+	filename Figures/SamplesandSelections/numuFHC/CCInc/numuCCIncWaterOut_recoP_mu_MC_only_LeptonCandidateTruePDG_fhc_air_systematicweighted.png
 	lyxscale 50
 	width 40text%
 
@@ -2276,7 +2276,7 @@ status collapsed
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename Figures/SamplesandSelections/numuFHCCCInc/numuCCIncWaterOut_recoP_mu_MC_only_LeptonCandidateTruePDG_fhc_air_fluxtuned_systematicweighted.png
+	filename Figures/SamplesandSelections/numuFHC/CCInc/numuCCIncWaterOut_recoP_mu_MC_only_LeptonCandidateTruePDG_fhc_air_fluxtuned_systematicweighted.png
 	lyxscale 50
 	width 40text%
 
@@ -2308,7 +2308,7 @@ status collapsed
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename Figures/SamplesandSelections/numuFHCCCInc/HL2/Run4_Air/NumuFHCCCInc_momentum_particle_fluxtuned_systematicweighted.png
+	filename Figures/SamplesandSelections/numuFHC/CCInc/HL2/Run4_Air/NumuFHCCCInc_momentum_particle_fluxtuned_systematicweighted.png
 	lyxscale 50
 	width 40text%
 
@@ -2417,7 +2417,7 @@ status collapsed
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename Figures/SamplesandSelections/numuFHCCCInc/numuCCIncWaterOut_recocosq_mu_MC_only_LeptonCandidateTruePDG_fhc_air.png
+	filename Figures/SamplesandSelections/numuFHC/CCInc/numuCCIncWaterOut_recocosq_mu_MC_only_LeptonCandidateTruePDG_fhc_air.png
 	lyxscale 49
 	width 40text%
 
@@ -2449,7 +2449,7 @@ status collapsed
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename Figures/SamplesandSelections/numuFHCCCInc/HL2/Run4_Air/NumuFHCCCInc_costheta_particle_nominal_mc.png
+	filename Figures/SamplesandSelections/numuFHC/CCInc/HL2/Run4_Air/NumuFHCCCInc_costheta_particle_nominal_mc.png
 	lyxscale 50
 	width 40text%
 
@@ -2485,7 +2485,7 @@ status collapsed
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename Figures/SamplesandSelections/numuFHCCCInc/numuCCIncWaterOut_recocosq_mu_MC_only_LeptonCandidateTruePDG_fhc_air_fluxtuned.png
+	filename Figures/SamplesandSelections/numuFHC/CCInc/numuCCIncWaterOut_recocosq_mu_MC_only_LeptonCandidateTruePDG_fhc_air_fluxtuned.png
 	lyxscale 50
 	width 40text%
 
@@ -2517,7 +2517,7 @@ status collapsed
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename Figures/SamplesandSelections/numuFHCCCInc/numuCCIncWaterOut_recocosq_mu_MC_only_LeptonCandidateTruePDG_fhc_air_systematicweighted.png
+	filename Figures/SamplesandSelections/numuFHC/CCInc/numuCCIncWaterOut_recocosq_mu_MC_only_LeptonCandidateTruePDG_fhc_air_systematicweighted.png
 	lyxscale 50
 	width 40text%
 
@@ -2553,7 +2553,7 @@ status collapsed
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename Figures/SamplesandSelections/numuFHCCCInc/numuCCIncWaterOut_recocosq_mu_MC_only_LeptonCandidateTruePDG_fhc_air_fluxtuned_systematicweighted.png
+	filename Figures/SamplesandSelections/numuFHC/CCInc/numuCCIncWaterOut_recocosq_mu_MC_only_LeptonCandidateTruePDG_fhc_air_fluxtuned_systematicweighted.png
 	lyxscale 50
 	width 40text%
 
@@ -2585,7 +2585,7 @@ status collapsed
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename Figures/SamplesandSelections/numuFHCCCInc/HL2/Run4_Air/NumuFHCCCInc_costheta_particle_fluxtuned_systematicweighted.png
+	filename Figures/SamplesandSelections/numuFHC/CCInc/HL2/Run4_Air/NumuFHCCCInc_costheta_particle_fluxtuned_systematicweighted.png
 	lyxscale 50
 	width 40text%
 
@@ -2702,7 +2702,7 @@ status collapsed
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename Figures/SamplesandSelections/numuFHCCCInc/numuCCIncWaterOut_recoP_mu_MC_only_NEUTNuReactionCodes_fhc_air.png
+	filename Figures/SamplesandSelections/numuFHC/CCInc/numuCCIncWaterOut_recoP_mu_MC_only_NEUTNuReactionCodes_fhc_air.png
 	lyxscale 49
 	width 40text%
 
@@ -2734,7 +2734,7 @@ status collapsed
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename Figures/SamplesandSelections/numuFHCCCInc/numuCCIncWaterOut_recoP_mu_MC_only_NEUTNuReactionCodes_fhc_air_fluxtuned.png
+	filename Figures/SamplesandSelections/numuFHC/CCInc/numuCCIncWaterOut_recoP_mu_MC_only_NEUTNuReactionCodes_fhc_air_fluxtuned.png
 	lyxscale 50
 	width 40text%
 
@@ -2770,7 +2770,7 @@ status collapsed
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename Figures/SamplesandSelections/numuFHCCCInc/numuCCIncWaterOut_recoP_mu_MC_only_NEUTNuReactionCodes_fhc_air_systematicweighted.png
+	filename Figures/SamplesandSelections/numuFHC/CCInc/numuCCIncWaterOut_recoP_mu_MC_only_NEUTNuReactionCodes_fhc_air_systematicweighted.png
 	lyxscale 50
 	width 40text%
 
@@ -2802,7 +2802,7 @@ status collapsed
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename Figures/SamplesandSelections/numuFHCCCInc/numuCCIncWaterOut_recoP_mu_MC_only_NEUTNuReactionCodes_fhc_air_fluxtuned_systematicweighted.png
+	filename Figures/SamplesandSelections/numuFHC/CCInc/numuCCIncWaterOut_recoP_mu_MC_only_NEUTNuReactionCodes_fhc_air_fluxtuned_systematicweighted.png
 	lyxscale 50
 	width 40text%
 
@@ -2903,7 +2903,7 @@ status collapsed
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename Figures/SamplesandSelections/numuFHCCCInc/numuCCIncWaterOut_recocosq_mu_MC_only_NEUTNuReactionCodes_fhc_air.png
+	filename Figures/SamplesandSelections/numuFHC/CCInc/numuCCIncWaterOut_recocosq_mu_MC_only_NEUTNuReactionCodes_fhc_air.png
 	lyxscale 49
 	width 40text%
 
@@ -2935,7 +2935,7 @@ status collapsed
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename Figures/SamplesandSelections/numuFHCCCInc/numuCCIncWaterOut_recocosq_mu_MC_only_NEUTNuReactionCodes_fhc_air_fluxtuned.png
+	filename Figures/SamplesandSelections/numuFHC/CCInc/numuCCIncWaterOut_recocosq_mu_MC_only_NEUTNuReactionCodes_fhc_air_fluxtuned.png
 	lyxscale 50
 	width 40text%
 
@@ -2971,7 +2971,7 @@ status collapsed
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename Figures/SamplesandSelections/numuFHCCCInc/numuCCIncWaterOut_recocosq_mu_MC_only_NEUTNuReactionCodes_fhc_air_systematicweighted.png
+	filename Figures/SamplesandSelections/numuFHC/CCInc/numuCCIncWaterOut_recocosq_mu_MC_only_NEUTNuReactionCodes_fhc_air_systematicweighted.png
 	lyxscale 50
 	width 40text%
 
@@ -3003,7 +3003,7 @@ status collapsed
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename Figures/SamplesandSelections/numuFHCCCInc/numuCCIncWaterOut_recocosq_mu_MC_only_NEUTNuReactionCodes_fhc_air_fluxtuned_systematicweighted.png
+	filename Figures/SamplesandSelections/numuFHC/CCInc/numuCCIncWaterOut_recocosq_mu_MC_only_NEUTNuReactionCodes_fhc_air_fluxtuned_systematicweighted.png
 	lyxscale 50
 	width 40text%
 
@@ -3111,7 +3111,7 @@ status collapsed
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename Figures/SamplesandSelections/numuFHCCCInc/numuCCIncWaterOut_recoP_mu_MC_only_TrueTopology_fhc_air.png
+	filename Figures/SamplesandSelections/numuFHC/CCInc/numuCCIncWaterOut_recoP_mu_MC_only_TrueTopology_fhc_air.png
 	lyxscale 49
 	width 40text%
 
@@ -3143,7 +3143,7 @@ status collapsed
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename Figures/SamplesandSelections/numuFHCCCInc/numuCCIncWaterOut_recoP_mu_MC_only_TrueTopology_fhc_air_fluxtuned.png
+	filename Figures/SamplesandSelections/numuFHC/CCInc/numuCCIncWaterOut_recoP_mu_MC_only_TrueTopology_fhc_air_fluxtuned.png
 	lyxscale 50
 	width 40text%
 
@@ -3179,7 +3179,7 @@ status collapsed
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename Figures/SamplesandSelections/numuFHCCCInc/numuCCIncWaterOut_recoP_mu_MC_only_TrueTopology_fhc_air_systematicweighted.png
+	filename Figures/SamplesandSelections/numuFHC/CCInc/numuCCIncWaterOut_recoP_mu_MC_only_TrueTopology_fhc_air_systematicweighted.png
 	lyxscale 50
 	width 40text%
 
@@ -3211,7 +3211,7 @@ status collapsed
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename Figures/SamplesandSelections/numuFHCCCInc/numuCCIncWaterOut_recoP_mu_MC_only_TrueTopology_fhc_air_fluxtuned_systematicweighted.png
+	filename Figures/SamplesandSelections/numuFHC/CCInc/numuCCIncWaterOut_recoP_mu_MC_only_TrueTopology_fhc_air_fluxtuned_systematicweighted.png
 	lyxscale 50
 	width 40text%
 
@@ -3311,7 +3311,7 @@ status collapsed
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename Figures/SamplesandSelections/numuFHCCCInc/numuCCIncWaterOut_recocosq_mu_MC_only_TrueTopology_fhc_air.png
+	filename Figures/SamplesandSelections/numuFHC/CCInc/numuCCIncWaterOut_recocosq_mu_MC_only_TrueTopology_fhc_air.png
 	lyxscale 49
 	width 40text%
 
@@ -3343,7 +3343,7 @@ status collapsed
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename Figures/SamplesandSelections/numuFHCCCInc/numuCCIncWaterOut_recocosq_mu_MC_only_TrueTopology_fhc_air_fluxtuned.png
+	filename Figures/SamplesandSelections/numuFHC/CCInc/numuCCIncWaterOut_recocosq_mu_MC_only_TrueTopology_fhc_air_fluxtuned.png
 	lyxscale 50
 	width 40text%
 
@@ -3379,7 +3379,7 @@ status collapsed
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename Figures/SamplesandSelections/numuFHCCCInc/numuCCIncWaterOut_recocosq_mu_MC_only_TrueTopology_fhc_air_systematicweighted.png
+	filename Figures/SamplesandSelections/numuFHC/CCInc/numuCCIncWaterOut_recocosq_mu_MC_only_TrueTopology_fhc_air_systematicweighted.png
 	lyxscale 50
 	width 40text%
 
@@ -3411,7 +3411,7 @@ status collapsed
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename Figures/SamplesandSelections/numuFHCCCInc/numuCCIncWaterOut_recocosq_mu_MC_only_TrueTopology_fhc_air_fluxtuned_systematicweighted.png
+	filename Figures/SamplesandSelections/numuFHC/CCInc/numuCCIncWaterOut_recocosq_mu_MC_only_TrueTopology_fhc_air_fluxtuned_systematicweighted.png
 	lyxscale 50
 	width 40text%
 
@@ -3519,7 +3519,7 @@ status collapsed
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename Figures/SamplesandSelections/numuFHCCCInc/numuCCIncWaterOut_trueE_nu_MC_only_NEUTNuReactionCodes_fhc_air.png
+	filename Figures/SamplesandSelections/numuFHC/CCInc/numuCCIncWaterOut_trueE_nu_MC_only_NEUTNuReactionCodes_fhc_air.png
 	lyxscale 49
 	width 40text%
 
@@ -3551,7 +3551,7 @@ status collapsed
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename Figures/SamplesandSelections/numuFHCCCInc/numuCCIncWaterOut_trueE_nu_MC_only_NEUTNuReactionCodes_fhc_air_fluxtuned.png
+	filename Figures/SamplesandSelections/numuFHC/CCInc/numuCCIncWaterOut_trueE_nu_MC_only_NEUTNuReactionCodes_fhc_air_fluxtuned.png
 	lyxscale 50
 	width 40text%
 
@@ -3587,7 +3587,7 @@ status collapsed
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename Figures/SamplesandSelections/numuFHCCCInc/numuCCIncWaterOut_trueE_nu_MC_only_NEUTNuReactionCodes_fhc_air_systematicweighted.png
+	filename Figures/SamplesandSelections/numuFHC/CCInc/numuCCIncWaterOut_trueE_nu_MC_only_NEUTNuReactionCodes_fhc_air_systematicweighted.png
 	lyxscale 50
 	width 40text%
 
@@ -3619,7 +3619,7 @@ status collapsed
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename Figures/SamplesandSelections/numuFHCCCInc/numuCCIncWaterOut_trueE_nu_MC_only_NEUTNuReactionCodes_fhc_air_fluxtuned_systematicweighted.png
+	filename Figures/SamplesandSelections/numuFHC/CCInc/numuCCIncWaterOut_trueE_nu_MC_only_NEUTNuReactionCodes_fhc_air_fluxtuned_systematicweighted.png
 	lyxscale 50
 	width 40text%
 
@@ -5416,7 +5416,7 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename Figures/SamplesandSelections/numuFHCCCInc/HL2
+	filename Figures/SamplesandSelections/numuFHC/CCInc/HL2
 	lyxscale 49
 	width 40text%
 
@@ -5552,7 +5552,7 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename Figures/SamplesandSelections/numuFHCCCInc/HL2
+	filename Figures/SamplesandSelections/numuFHC/CCInc/HL2
 	lyxscale 50
 	width 40text%
 
@@ -5693,7 +5693,7 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename Figures/SamplesandSelections/numuFHCCCInc/HL2
+	filename Figures/SamplesandSelections/numuFHC/CCInc/HL2
 	lyxscale 50
 	width 40text%
 
@@ -5829,7 +5829,7 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename Figures/SamplesandSelections/numuFHCCCInc/HL2
+	filename Figures/SamplesandSelections/numuFHC/CCInc/HL2
 	lyxscale 50
 	width 40text%
 
@@ -7093,7 +7093,7 @@ status collapsed
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename Figures/SamplesandSelections/numuFHCCCInc/numuCCIncWaterIn_recoP_mu_MC_only_LeptonCandidateTruePDG_fhc_water.png
+	filename Figures/SamplesandSelections/numuFHC/CCInc/numuCCIncWaterIn_recoP_mu_MC_only_LeptonCandidateTruePDG_fhc_water.png
 	lyxscale 49
 	width 40text%
 
@@ -7125,7 +7125,7 @@ status collapsed
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename Figures/SamplesandSelections/numuFHCCCInc/numuCCIncWaterIn_recoP_mu_MC_only_LeptonCandidateTruePDG_fhc_water.png
+	filename Figures/SamplesandSelections/numuFHC/CCInc/numuCCIncWaterIn_recoP_mu_MC_only_LeptonCandidateTruePDG_fhc_water.png
 	lyxscale 49
 	width 40text%
 
@@ -7161,7 +7161,7 @@ status collapsed
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename Figures/SamplesandSelections/numuFHCCCInc/numuCCIncWaterIn_recoP_mu_MC_only_LeptonCandidateTruePDG_fhc_water_fluxtuned.png
+	filename Figures/SamplesandSelections/numuFHC/CCInc/numuCCIncWaterIn_recoP_mu_MC_only_LeptonCandidateTruePDG_fhc_water_fluxtuned.png
 	lyxscale 50
 	width 40text%
 
@@ -7193,7 +7193,7 @@ status collapsed
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename Figures/SamplesandSelections/numuFHCCCInc/numuCCIncWaterIn_recoP_mu_MC_only_LeptonCandidateTruePDG_fhc_water_systematicweighted.png
+	filename Figures/SamplesandSelections/numuFHC/CCInc/numuCCIncWaterIn_recoP_mu_MC_only_LeptonCandidateTruePDG_fhc_water_systematicweighted.png
 	lyxscale 50
 	width 40text%
 
@@ -7229,7 +7229,7 @@ status collapsed
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename Figures/SamplesandSelections/numuFHCCCInc/numuCCIncWaterIn_recoP_mu_MC_only_LeptonCandidateTruePDG_fhc_water_fluxtuned_systematicweighted.png
+	filename Figures/SamplesandSelections/numuFHC/CCInc/numuCCIncWaterIn_recoP_mu_MC_only_LeptonCandidateTruePDG_fhc_water_fluxtuned_systematicweighted.png
 	lyxscale 50
 	width 40text%
 
@@ -7261,7 +7261,7 @@ status collapsed
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename Figures/SamplesandSelections/numuFHCCCInc/numuCCIncWaterIn_recoP_mu_MC_only_LeptonCandidateTruePDG_fhc_water_fluxtuned_systematicweighted.png
+	filename Figures/SamplesandSelections/numuFHC/CCInc/numuCCIncWaterIn_recoP_mu_MC_only_LeptonCandidateTruePDG_fhc_water_fluxtuned_systematicweighted.png
 	lyxscale 50
 	width 40text%
 
@@ -7374,7 +7374,7 @@ status collapsed
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename Figures/SamplesandSelections/numuFHCCCInc/numuCCIncWaterIn_recocosq_mu_MC_only_LeptonCandidateTruePDG_fhc_water.png
+	filename Figures/SamplesandSelections/numuFHC/CCInc/numuCCIncWaterIn_recocosq_mu_MC_only_LeptonCandidateTruePDG_fhc_water.png
 	lyxscale 49
 	width 40text%
 
@@ -7406,7 +7406,7 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename Figures/SamplesandSelections/numuFHCCCInc/HL2
+	filename Figures/SamplesandSelections/numuFHC/CCInc/HL2
 	lyxscale 49
 	width 40text%
 
@@ -7442,7 +7442,7 @@ status collapsed
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename Figures/SamplesandSelections/numuFHCCCInc/numuCCIncWaterIn_recocosq_mu_MC_only_LeptonCandidateTruePDG_fhc_water_fluxtuned.png
+	filename Figures/SamplesandSelections/numuFHC/CCInc/numuCCIncWaterIn_recocosq_mu_MC_only_LeptonCandidateTruePDG_fhc_water_fluxtuned.png
 	lyxscale 50
 	width 40text%
 
@@ -7474,7 +7474,7 @@ status collapsed
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename Figures/SamplesandSelections/numuFHCCCInc/numuCCIncWaterIn_recocosq_mu_MC_only_LeptonCandidateTruePDG_fhc_water_systematicweighted.png
+	filename Figures/SamplesandSelections/numuFHC/CCInc/numuCCIncWaterIn_recocosq_mu_MC_only_LeptonCandidateTruePDG_fhc_water_systematicweighted.png
 	lyxscale 50
 	width 40text%
 
@@ -7510,7 +7510,7 @@ status collapsed
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename Figures/SamplesandSelections/numuFHCCCInc/numuCCIncWaterIn_recocosq_mu_MC_only_LeptonCandidateTruePDG_fhc_water_fluxtuned_systematicweighted.png
+	filename Figures/SamplesandSelections/numuFHC/CCInc/numuCCIncWaterIn_recocosq_mu_MC_only_LeptonCandidateTruePDG_fhc_water_fluxtuned_systematicweighted.png
 	lyxscale 50
 	width 40text%
 
@@ -7542,7 +7542,7 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename Figures/SamplesandSelections/numuFHCCCInc/HL2
+	filename Figures/SamplesandSelections/numuFHC/CCInc/HL2
 	lyxscale 50
 	width 40text%
 
@@ -7659,7 +7659,7 @@ status collapsed
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename Figures/SamplesandSelections/numuFHCCCInc/numuCCIncWaterIn_recoP_mu_MC_only_NEUTNuReactionCodes_fhc_water.png
+	filename Figures/SamplesandSelections/numuFHC/CCInc/numuCCIncWaterIn_recoP_mu_MC_only_NEUTNuReactionCodes_fhc_water.png
 	lyxscale 49
 	width 40text%
 
@@ -7691,7 +7691,7 @@ status collapsed
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename Figures/SamplesandSelections/numuFHCCCInc/numuCCIncWaterIn_recoP_mu_MC_only_NEUTNuReactionCodes_fhc_water_fluxtuned.png
+	filename Figures/SamplesandSelections/numuFHC/CCInc/numuCCIncWaterIn_recoP_mu_MC_only_NEUTNuReactionCodes_fhc_water_fluxtuned.png
 	lyxscale 50
 	width 40text%
 
@@ -7727,7 +7727,7 @@ status collapsed
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename Figures/SamplesandSelections/numuFHCCCInc/numuCCIncWaterIn_recoP_mu_MC_only_NEUTNuReactionCodes_fhc_water_systematicweighted.png
+	filename Figures/SamplesandSelections/numuFHC/CCInc/numuCCIncWaterIn_recoP_mu_MC_only_NEUTNuReactionCodes_fhc_water_systematicweighted.png
 	lyxscale 50
 	width 40text%
 
@@ -7759,7 +7759,7 @@ status collapsed
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename Figures/SamplesandSelections/numuFHCCCInc/numuCCIncWaterIn_recoP_mu_MC_only_NEUTNuReactionCodes_fhc_water_fluxtuned_systematicweighted.png
+	filename Figures/SamplesandSelections/numuFHC/CCInc/numuCCIncWaterIn_recoP_mu_MC_only_NEUTNuReactionCodes_fhc_water_fluxtuned_systematicweighted.png
 	lyxscale 50
 	width 40text%
 
@@ -7860,7 +7860,7 @@ status collapsed
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename Figures/SamplesandSelections/numuFHCCCInc/numuCCIncWaterIn_recocosq_mu_MC_only_NEUTNuReactionCodes_fhc_water.png
+	filename Figures/SamplesandSelections/numuFHC/CCInc/numuCCIncWaterIn_recocosq_mu_MC_only_NEUTNuReactionCodes_fhc_water.png
 	lyxscale 49
 	width 40text%
 
@@ -7892,7 +7892,7 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename Figures/SamplesandSelections/numuFHCCCInc/numuCCIncWaterIn_recocosq_mu_MC_only_NEUTNuReactionCodes_fhc_water_fluxtuned.png
+	filename Figures/SamplesandSelections/numuFHC/CCInc/numuCCIncWaterIn_recocosq_mu_MC_only_NEUTNuReactionCodes_fhc_water_fluxtuned.png
 	lyxscale 50
 	width 40text%
 
@@ -7928,7 +7928,7 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename Figures/SamplesandSelections/numuFHCCCInc/numuCCIncWaterIn_recocosq_mu_MC_only_NEUTNuReactionCodes_fhc_water_systematicweighted.png
+	filename Figures/SamplesandSelections/numuFHC/CCInc/numuCCIncWaterIn_recocosq_mu_MC_only_NEUTNuReactionCodes_fhc_water_systematicweighted.png
 	lyxscale 50
 	width 40text%
 
@@ -7960,7 +7960,7 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename Figures/SamplesandSelections/numuFHCCCInc/numuCCIncWaterIn_recocosq_mu_MC_only_NEUTNuReactionCodes_fhc_water_fluxtuned_systematicweighted.png
+	filename Figures/SamplesandSelections/numuFHC/CCInc/numuCCIncWaterIn_recocosq_mu_MC_only_NEUTNuReactionCodes_fhc_water_fluxtuned_systematicweighted.png
 	lyxscale 50
 	width 40text%
 
@@ -8068,7 +8068,7 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename Figures/SamplesandSelections/numuFHCCCInc/numuCCIncWaterIn_recoP_mu_MC_only_TrueTopology_fhc_water.png
+	filename Figures/SamplesandSelections/numuFHC/CCInc/numuCCIncWaterIn_recoP_mu_MC_only_TrueTopology_fhc_water.png
 	lyxscale 49
 	width 40text%
 
@@ -8100,7 +8100,7 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename Figures/SamplesandSelections/numuFHCCCInc/numuCCIncWaterIn_recoP_mu_MC_only_TrueTopology_fhc_water_fluxtuned.png
+	filename Figures/SamplesandSelections/numuFHC/CCInc/numuCCIncWaterIn_recoP_mu_MC_only_TrueTopology_fhc_water_fluxtuned.png
 	lyxscale 50
 	width 40text%
 
@@ -8136,7 +8136,7 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename Figures/SamplesandSelections/numuFHCCCInc/numuCCIncWaterIn_recoP_mu_MC_only_TrueTopology_fhc_water_systematicweighted.png
+	filename Figures/SamplesandSelections/numuFHC/CCInc/numuCCIncWaterIn_recoP_mu_MC_only_TrueTopology_fhc_water_systematicweighted.png
 	lyxscale 50
 	width 40text%
 
@@ -8168,7 +8168,7 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename Figures/SamplesandSelections/numuFHCCCInc/numuCCIncWaterIn_recoP_mu_MC_only_TrueTopology_fhc_water_fluxtuned_systematicweighted.png
+	filename Figures/SamplesandSelections/numuFHC/CCInc/numuCCIncWaterIn_recoP_mu_MC_only_TrueTopology_fhc_water_fluxtuned_systematicweighted.png
 	lyxscale 50
 	width 40text%
 
@@ -8268,7 +8268,7 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename Figures/SamplesandSelections/numuFHCCCInc/numuCCIncWaterIn_recocosq_mu_MC_only_TrueTopology_fhc_water.png
+	filename Figures/SamplesandSelections/numuFHC/CCInc/numuCCIncWaterIn_recocosq_mu_MC_only_TrueTopology_fhc_water.png
 	lyxscale 49
 	width 40text%
 
@@ -8300,7 +8300,7 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename Figures/SamplesandSelections/numuFHCCCInc/numuCCIncWaterIn_recocosq_mu_MC_only_TrueTopology_fhc_water_fluxtuned.png
+	filename Figures/SamplesandSelections/numuFHC/CCInc/numuCCIncWaterIn_recocosq_mu_MC_only_TrueTopology_fhc_water_fluxtuned.png
 	lyxscale 50
 	width 40text%
 
@@ -8336,7 +8336,7 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename Figures/SamplesandSelections/numuFHCCCInc/numuCCIncWaterIn_recocosq_mu_MC_only_TrueTopology_fhc_water_systematicweighted.png
+	filename Figures/SamplesandSelections/numuFHC/CCInc/numuCCIncWaterIn_recocosq_mu_MC_only_TrueTopology_fhc_water_systematicweighted.png
 	lyxscale 50
 	width 40text%
 
@@ -8368,7 +8368,7 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename Figures/SamplesandSelections/numuFHCCCInc/numuCCIncWaterIn_recocosq_mu_MC_only_TrueTopology_fhc_water_fluxtuned_systematicweighted.png
+	filename Figures/SamplesandSelections/numuFHC/CCInc/numuCCIncWaterIn_recocosq_mu_MC_only_TrueTopology_fhc_water_fluxtuned_systematicweighted.png
 	lyxscale 50
 	width 40text%
 
@@ -8476,7 +8476,7 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename Figures/SamplesandSelections/numuFHCCCInc/numuCCIncWaterIn_trueE_nu_MC_only_NEUTNuReactionCodes_fhc_water.png
+	filename Figures/SamplesandSelections/numuFHC/CCInc/numuCCIncWaterIn_trueE_nu_MC_only_NEUTNuReactionCodes_fhc_water.png
 	lyxscale 49
 	width 40text%
 
@@ -8508,7 +8508,7 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename Figures/SamplesandSelections/numuFHCCCInc/numuCCIncWaterIn_trueE_nu_MC_only_NEUTNuReactionCodes_fhc_water_fluxtuned.png
+	filename Figures/SamplesandSelections/numuFHC/CCInc/numuCCIncWaterIn_trueE_nu_MC_only_NEUTNuReactionCodes_fhc_water_fluxtuned.png
 	lyxscale 50
 	width 40text%
 
@@ -8544,7 +8544,7 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename Figures/SamplesandSelections/numuFHCCCInc/numuCCIncWaterIn_trueE_nu_MC_only_NEUTNuReactionCodes_fhc_water_systematicweighted.png
+	filename Figures/SamplesandSelections/numuFHC/CCInc/numuCCIncWaterIn_trueE_nu_MC_only_NEUTNuReactionCodes_fhc_water_systematicweighted.png
 	lyxscale 50
 	width 40text%
 
@@ -8576,7 +8576,7 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename Figures/SamplesandSelections/numuFHCCCInc/numuCCIncWaterIn_trueE_nu_MC_only_NEUTNuReactionCodes_fhc_water_fluxtuned_systematicweighted.png
+	filename Figures/SamplesandSelections/numuFHC/CCInc/numuCCIncWaterIn_trueE_nu_MC_only_NEUTNuReactionCodes_fhc_water_fluxtuned_systematicweighted.png
 	lyxscale 50
 	width 40text%
 
