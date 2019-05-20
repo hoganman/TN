@@ -138,7 +138,7 @@ tabs-within-sections
 \filename_suffix 0
 \color #faf0e6
 \end_branch
-\branch SamplesandSelections
+\branch Selections
 \selected 1
 \filename_suffix 0
 \color #faf0e6
@@ -392,7 +392,7 @@ filename "Sections/BANFFLikelihood.lyx"
 \end_inset
 
 
-\begin_inset Branch SamplesandSelections
+\begin_inset Branch Selections
 inverted 0
 status open
 

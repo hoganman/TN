@@ -54,6 +54,36 @@
 \justification true
 \use_refstyle 1
 \use_minted 0
+\branch SelectionsP0DWaterOut
+\selected 1
+\filename_suffix 0
+\color #faf0e6
+\end_branch
+\branch SelectionsP0DWaterIn
+\selected 1
+\filename_suffix 0
+\color #faf0e6
+\end_branch
+\branch SelectionsCuts
+\selected 1
+\filename_suffix 0
+\color #faf0e6
+\end_branch
+\branch SelectionsKinematics
+\selected 1
+\filename_suffix 0
+\color #faf0e6
+\end_branch
+\branch SelectionsGlobal
+\selected 1
+\filename_suffix 0
+\color #faf0e6
+\end_branch
+\branch SelectionsIntroduction
+\selected 1
+\filename_suffix 0
+\color #faf0e6
+\end_branch
 \index Index
 \shortcut idx
 \color #008000
@@ -77,6 +107,11 @@
 \end_header
 
 \begin_body
+
+\begin_layout Standard
+\begin_inset Branch SelectionsIntroduction
+inverted 0
+status collapsed
 
 \begin_layout Standard
 This section describes the development of 
@@ -190,20 +225,26 @@ Global
 \begin_inset Formula $\numu$
 \end_inset
 
- in RHC.
+ background in RHC.
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
- 
-\end_layout
+\begin_inset Branch SelectionsGlobal
+inverted 0
+status collapsed
 
 \begin_layout Subsection
 Global Reconstruction
 \end_layout
 
 \begin_layout Standard
-The task of the Global reconstruction is to combine ND280 sub-detector reconstru
-ction into an single reconstructed object.
+The task of the Global reconstruction is to combine all the ND280 information
+ into a combined reconstructed object.
  It was originally designed to analyze 
 \begin_inset Quotes eld
 \end_inset
@@ -212,13 +253,83 @@ CCQE-like
 \begin_inset Quotes erd
 \end_inset
 
- events in the Tracker region and has been extended with all of ND280.
- Global attempts to match and re-fit individual sub-detector objects using
- a Kalman filter while correcting for energy loss and multiscattering.
+ events in the Tracker region and has been extended to operate with all
+ of ND280.
+ A brief description of the Global reconstruction is described below.
+ First the specific detector technologies and electronics of ND280 are explained.
+ That is followed by the calibration procedure to properly tune each detector's
+ response.
+ And finally a general outline of the reconstruction algorithms to form
+ tracks and vertices in ND280 is presented.
+\end_layout
+
+\begin_layout Standard
+ND280 events are first collected in the form of electronic signals from
+ either multipixel photon counters (MPPCs) in the scintillator-based sub-detecto
+rs or charge collected collection planes of the time projection chambers
+ (TPCs).
+ MPPCs were chosen for the scintillator-based sub-detectors since they are
+ insensitive to the strong 0.2T magnetic field present in ND280.
+ The 
+\begin_inset Formula $\pod$
+\end_inset
+
+, ECals, and SMRD all share the same 
+\begin_inset Quotes eld
+\end_inset
+
+Trip-T
+\begin_inset Quotes erd
+\end_inset
+
+ frontend board (TFB) electronics of which collect the photoelectrons released
+ when photons interact with a pixel in the MPPCs.
+ The FGDs operate with the same MPPC technology while using different frontend
+ electronics.
+ The TPCs utilize a locally strong electric field to collect ionization
+ electrons from an Argon-based gas.
+ Collected charge in the TPCs are collected and enhanced using micromega
+ technology
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Abe:2011ks"
+literal "false"
+
+\end_inset
+
+.
+ With the collected information from each sub-detector, the next step is
+ the data calibration.
+\end_layout
+
+\begin_layout Standard
+Data calibration in ND280 is the process where the charge and timing information
+ collected from each sub-detector is adjusted to match with expected parameters.
+ This is an important process that takes into account environmental changes,
+ aging effects, and other behavior that might be present.
+ Calibration data is collected frequently before and during operational
+ runtime and is stored in a database for later use.
+ A common calibration is to measure the detector's cosmic ray response since
+ most cosmic rays deposit the same energy per unit length.
+ After the data has been calibrated, reconstruction algorithms now attempt
+ to find charged particle tracks in the data.
+\end_layout
+
+\begin_layout Standard
+The Global reconstruction, hereto referred to as Global, is a software package
+ that attempts to recognize patterns of data to form tracks.
+ Particle shower reconstruction will not be discussed in this TN.
+ Each sub-detector reconstruction is run before Global since Global wants
+ to match tracks first.
+ Global attempts to match and re-fit individual sub-detector tracks using
+ a Kalman filter while correcting for particle energy loss as a function
+ of length and multi-scattering processes.
+ In either sub-detector track or Global track re-fit, not all data collected
+ may considered due to timing or locality considerations.
  A vertex associated with the re-fit object is also extracted using a different
  Kalman filter.
- A detailed description of the track matching and vertex finding algorithms
- for Global is described in T2K-TN-46
+ A further detailed description of the track matching and vertex finding
+ algorithms for Global is described in T2K-TN-46
 \begin_inset CommandInset citation
 LatexCommand cite
 key "Wikstrom:2018"
@@ -229,12 +340,723 @@ literal "false"
 .
 \end_layout
 
-\begin_layout Subsection
-Data Sets
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
-The data sets used in this analysis are runs 2-8 in both 
+\begin_inset Branch SelectionsCuts
+inverted 0
+status collapsed
+
+\begin_layout Subsection
+\begin_inset Formula $\pod$
+\end_inset
+
+ Selection Cuts
+\end_layout
+
+\begin_layout Standard
+The selection of CC-Inclusive events use a series of cuts to select the
+ primary lepton.
+ The pre-selection cuts (
+\begin_inset Quotes eld
+\end_inset
+
+precuts
+\begin_inset Quotes erd
+\end_inset
+
+) are applied first to extract events that start in the 
+\begin_inset Formula $\pod$
+\end_inset
+
+ FV.
+ A MIP is more likely to reach TPC1 from the 
+\begin_inset Formula $\pod$
+\end_inset
+
+ FV since the 
+\begin_inset Formula $\pod$
+\end_inset
+
+ is constructed out of heavy materials especially in the CECal.
+ So the main track each selection is designed to select a muon.
+ 
+\end_layout
+
+\begin_layout Standard
+This following sections will describe the precuts common to all CC-Inclusive
+ selections and the branching of different cuts, after the precuts, to select
+ the main track.
+\end_layout
+
+\begin_layout Subsubsection
+Pre-Selection Cuts
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:Precuts"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The pre-selection (
+\begin_inset Quotes eld
+\end_inset
+
+precuts
+\begin_inset Quotes erd
+\end_inset
+
+) were initially developed to select 
+\begin_inset Formula $\numu$
+\end_inset
+
+CC-Inclusive using the 
+\begin_inset Formula $\pod$
+\end_inset
+
+ and TPC sub-detector reconstruction softwares separately
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Campbell:2014"
+literal "false"
+
+\end_inset
+
+.
+ They were then used with the Global reconstruction software for the 
+\begin_inset Formula $\numu$
+\end_inset
+
+
+\begin_inset Formula $\cczeropi$
+\end_inset
+
+ selection in the FHC beam configuration as described in technical note
+ T2K-TN-258
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Yuan:2016"
+literal "false"
+
+\end_inset
+
+.
+ The description and flow of the precuts are described here as well since
+ there is an incomplete description of the selection precuts.
+ 
+\end_layout
+
+\begin_layout Standard
+The precuts are performed on each bunch per beam spill as follows
+\end_layout
+
+\begin_layout Enumerate
+The event has a 
+\begin_inset Quotes eld
+\end_inset
+
+good
+\begin_inset Quotes erd
+\end_inset
+
+ data quality flag.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+An event is rejected if any sub-detector or electronics in ND280 reported
+ as 
+\begin_inset Quotes eld
+\end_inset
+
+bad
+\begin_inset Quotes erd
+\end_inset
+
+ during that bunch.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+There is at least one (1) track reconstructed in TPC1.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+There are no restrictions on the number of tracks fully contained in the
+ 
+\begin_inset Formula $\pod$
+\end_inset
+
+ or exiting into other sub-detectors.
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+The track in TPC1 must have more than 18 nodes.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+The TPC reconstruction gathers vertical and horizontal hits into clusters
+ of hits.
+ The charge distribution of the cluster is used to get a vertical (horizontal)
+ position that is more accurate than the individual readout pads.
+ A node is constructed out of each cluster with associated track state informati
+on.
+ The set of nodes are used to fit the track helix
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Hillairet2011"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+The reconstructed vertex is within the 
+\begin_inset Formula $\pod$
+\end_inset
+
+ WT FV.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+The 
+\begin_inset Formula $\pod$
+\end_inset
+
+ FV is defined to include as much as the WT regions as possible.
+ Its X and Y borders are 25 cm away from the 
+\begin_inset Formula $\pod$
+\end_inset
+
+ule edges while its Z borders intersect the last and first half downstream
+ 
+\begin_inset Formula $\pod$
+\end_inset
+
+ule in the USECal and CECal, respectively.
+ The enumerated volume edges are shown in 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "tab:FVDef"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+ This volume, while used for track-based analyzes in the past, was optimized
+ for 
+\begin_inset Formula $\pizero$
+\end_inset
+
+ and 
+\begin_inset Formula $\nue$
+\end_inset
+
+ analyzes
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Gilje2017"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+All tracks that enter TPC1 pass the veto cut
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+An event is rejected if any 
+\begin_inset Formula $\pod$
+\end_inset
+
+ track enters TPC1 from outside the 
+\begin_inset Quotes eld
+\end_inset
+
+corridor
+\begin_inset Quotes erd
+\end_inset
+
+ volume.
+ This cut was designed to eliminate broken tracks between the 
+\begin_inset Formula $\pod$
+\end_inset
+
+ and TPC1 when the separate sub-detector reconstructions were used
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Campbell:2014"
+literal "false"
+
+\end_inset
+
+.
+ In practice, this cut ensures that Global tracks entering TPC1 away from
+ its X and Y edges.
+ The corridor definition is the same as defined in T2K-TN-208 and shown
+ in 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "tab:FVDef"
+plural "false"
+caps "true"
+noprefix "false"
+
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Float table
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="4" columns="7">
+<features booktabs="true" tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell multicolumn="1" alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\pod$
+\end_inset
+
+ WT FV
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="1" alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Corridor Volume
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+-836
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+< X <
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+764
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+-988
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+< X <
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+910
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+-871
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+< Y <
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+869
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+-1020
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+< Y <
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1010
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+-2969
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+< Z <
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1264
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+-3139
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+< Z <
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+-900
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+\begin_inset Formula $\pod$
+\end_inset
+
+ WT FV and Corridor Definition
+\end_layout
+
+\end_inset
+
+The 
+\begin_inset Formula $\pod$
+\end_inset
+
+ WT FV (left) and veto corridor volume (right) in the ND280 coordinate system.
+ The corridor spans from the 5th (8th) to 40th (80th) 
+\begin_inset Formula $\pod$
+\end_inset
+
+ule (scintillator layer).
+ All the units are given in millimeters.
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:FVDef"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+After passing all the precuts, a single, global track, which is observed
+ in TPC1, is assigned as the 
+\begin_inset Quotes eld
+\end_inset
+
+main track
+\begin_inset Quotes erd
+\end_inset
+
+ of a selection.
+ The main track for 
+\begin_inset Formula $\numu$
+\end_inset
+
+ selections is the highest momentum, negatively-charged track (HMNT).
+ Similarly the highest momentum, positively-charged track (HMPT) is assigned
+ the main track for 
+\begin_inset Formula $\antinumu$
+\end_inset
+
+ selections.
+ 
+\end_layout
+
+\begin_layout Standard
+This concludes the application of precuts to all the CC-Inclusive selections.
+ The following subsubsections describe the CC-Inclusive selection cuts,
+ first in FHC mode and then RHC mode.
+\end_layout
+
+\begin_layout Subsubsection
+CC-Inclusive in FHC
+\end_layout
+
+\begin_layout Standard
+As discussed in Section 
+\begin_inset CommandInset ref
+LatexCommand vref
+reference "subsec:Precuts"
+plural "false"
+caps "true"
+noprefix "false"
+
+\end_inset
+
+, this selection is the basis for the 
+\begin_inset Formula $\numu$
+\end_inset
+
+ 
+\begin_inset Formula $\cczeropi$
+\end_inset
+
+ 
+\begin_inset Formula $\podtpc$
+\end_inset
+
+ analysis.
+ This is a FHC mode selection and the vast majority of neutrino interaction
+ events occur with muon-type neutrinos with an outgoing muon from the interactio
+n vertex.
+ If there is no negatively charged track in the TPC, the event is rejected.
+\end_layout
+
+\begin_layout Subsubsection
+CC-Inclusive in RHC
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Branch SelectionsKinematics
+inverted 0
+status collapsed
+
+\begin_layout Subsection
+Sample Kinematics and Validation
+\end_layout
+
+\begin_layout Standard
+This section examines the kinematics for each of selections while differentiatin
+g between water-in and water-out mode.
+ The selection cuts were implemented in Psyche which is the software interface
+ that BANFF uses to select events.
+ An analysis of the kinematics are carefully cross validated with the same
+ selection cuts in the T2K high level analysis framework called Highland.
+ Comparing the results between Highland and Psyche is important since they
+ are complementary frameworks within T2K.
+ The data sets used in this analysis are runs 2-8 in both 
 \begin_inset Formula $\pod$
 \end_inset
 
@@ -249,6 +1071,9 @@ noprefix "false"
 \end_inset
 
 .
+\end_layout
+
+\begin_layout Standard
 \begin_inset Float table
 wide false
 sideways false
@@ -1349,695 +2174,15 @@ POT Used in This Analysis
 
 \end_layout
 
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Subsection
-\begin_inset Formula $\pod$
-\end_inset
-
- Selection Cuts
-\end_layout
-
-\begin_layout Standard
-The selection of CC-Inclusive events use a series of cuts to select the
- primary lepton.
- The pre-selection cuts (
-\begin_inset Quotes eld
-\end_inset
-
-precuts
-\begin_inset Quotes erd
-\end_inset
-
-) are applied first to extract events that start in the 
-\begin_inset Formula $\pod$
-\end_inset
-
- FV.
- A MIP is more likely to reach TPC1 from the 
-\begin_inset Formula $\pod$
-\end_inset
-
- FV since the 
-\begin_inset Formula $\pod$
-\end_inset
-
- is constructed out of heavy materials especially in the CECal.
- So the main track each selection is designed to select a muon.
- 
-\end_layout
-
-\begin_layout Standard
-This following sections will describe the precuts common to all CC-Inclusive
- selections and the branching of different cuts, after the precuts, to select
- the main track.
-\end_layout
-
-\begin_layout Subsubsection
-Pre-Selection Cuts
-\begin_inset CommandInset label
-LatexCommand label
-name "subsec:Precuts"
-
 \end_inset
 
 
 \end_layout
 
 \begin_layout Standard
-The pre-selection (
-\begin_inset Quotes eld
-\end_inset
-
-precuts
-\begin_inset Quotes erd
-\end_inset
-
-) were initially developed to select 
-\begin_inset Formula $\numu$
-\end_inset
-
-CC-Inclusive using the 
-\begin_inset Formula $\pod$
-\end_inset
-
- and TPC sub-detector reconstruction softwares separately
-\begin_inset CommandInset citation
-LatexCommand cite
-key "Campbell:2014"
-literal "false"
-
-\end_inset
-
-.
- They were then used with the Global reconstruction software for the 
-\begin_inset Formula $\numu$
-\end_inset
-
-
-\begin_inset Formula $\cczeropi$
-\end_inset
-
- selection in the FHC beam configuration as described in technical note
- T2K-TN-258
-\begin_inset CommandInset citation
-LatexCommand cite
-key "Yuan:2016"
-literal "false"
-
-\end_inset
-
-.
- The description and flow of the precuts are described here as well since
- there is an incomplete description of the selection precuts.
- 
-\end_layout
-
-\begin_layout Standard
-The precuts are performed on each bunch per beam spill as follows
-\end_layout
-
-\begin_layout Enumerate
-The event has a 
-\begin_inset Quotes eld
-\end_inset
-
-good
-\begin_inset Quotes erd
-\end_inset
-
- data quality flag.
-\end_layout
-
-\begin_deeper
-\begin_layout Itemize
-An event is rejected if any sub-detector or electronics in ND280 reported
- as 
-\begin_inset Quotes eld
-\end_inset
-
-bad
-\begin_inset Quotes erd
-\end_inset
-
- during that bunch.
-\end_layout
-
-\end_deeper
-\begin_layout Enumerate
-There is at least one (1) track reconstructed in TPC1.
-\end_layout
-
-\begin_deeper
-\begin_layout Itemize
-There are no restrictions on the number of tracks fully contained in the
- 
-\begin_inset Formula $\pod$
-\end_inset
-
- or exiting into other sub-detectors.
- 
-\end_layout
-
-\end_deeper
-\begin_layout Enumerate
-The track in TPC1 must have more than 18 nodes.
-\end_layout
-
-\begin_deeper
-\begin_layout Itemize
-The TPC reconstruction gathers vertical and horizontal hits into clusters
- of hits.
- The charge distribution of the cluster is used to get a vertical (horizontal)
- position that is more accurate than the individual readout pads.
- A node is constructed out of each cluster with associated track state informati
-on.
- The set of nodes are used to fit the track helix
-\begin_inset CommandInset citation
-LatexCommand cite
-key "Hillairet2011"
-literal "false"
-
-\end_inset
-
-.
-\end_layout
-
-\end_deeper
-\begin_layout Enumerate
-The reconstructed vertex is within the 
-\begin_inset Formula $\pod$
-\end_inset
-
- WT FV.
-\end_layout
-
-\begin_deeper
-\begin_layout Itemize
-The 
-\begin_inset Formula $\pod$
-\end_inset
-
- FV is defined to include as much as the WT regions as possible.
- Its X and Y borders are 25 cm away from the 
-\begin_inset Formula $\pod$
-\end_inset
-
-ule edges while its Z borders intersect the last and first half downstream
- 
-\begin_inset Formula $\pod$
-\end_inset
-
-ule in the USECal and CECal, respectively.
- The enumerated volume edges are shown in 
-\begin_inset CommandInset ref
-LatexCommand formatted
-reference "tab:FVDef"
-plural "false"
-caps "false"
-noprefix "false"
-
-\end_inset
-
-.
- This volume, while used for track-based analyzes in the past, was optimized
- for 
-\begin_inset Formula $\pizero$
-\end_inset
-
- and 
-\begin_inset Formula $\nue$
-\end_inset
-
- analyzes
-\begin_inset CommandInset citation
-LatexCommand cite
-key "Gilje2017"
-literal "false"
-
-\end_inset
-
-.
-\end_layout
-
-\end_deeper
-\begin_layout Enumerate
-All tracks that enter TPC1 pass the veto cut
-\end_layout
-
-\begin_deeper
-\begin_layout Itemize
-An event is rejected if any 
-\begin_inset Formula $\pod$
-\end_inset
-
- track enters TPC1 from outside the 
-\begin_inset Quotes eld
-\end_inset
-
-corridor
-\begin_inset Quotes erd
-\end_inset
-
- volume.
- This cut was designed to eliminate broken tracks between the 
-\begin_inset Formula $\pod$
-\end_inset
-
- and TPC1 when the separate sub-detector reconstructions were used
-\begin_inset CommandInset citation
-LatexCommand cite
-key "Campbell:2014"
-literal "false"
-
-\end_inset
-
-.
- In practice, this cut ensures that Global tracks entering TPC1 away from
- its X and Y edges.
- The corridor definition is the same as defined in T2K-TN-208 and shown
- in 
-\begin_inset CommandInset ref
-LatexCommand formatted
-reference "tab:FVDef"
-plural "false"
-caps "true"
-noprefix "false"
-
-\end_inset
-
-.
-\end_layout
-
-\end_deeper
-\begin_layout Standard
-\begin_inset Float table
-placement H
-wide false
-sideways false
-status open
-
-\begin_layout Plain Layout
-\align center
-\begin_inset Tabular
-<lyxtabular version="3" rows="4" columns="7">
-<features booktabs="true" tabularvalignment="middle">
-<column alignment="center" valignment="top">
-<column alignment="center" valignment="top">
-<column alignment="center" valignment="top">
-<column alignment="center" valignment="top">
-<column alignment="center" valignment="top">
-<column alignment="center" valignment="top">
-<column alignment="center" valignment="top">
-<row>
-<cell multicolumn="1" alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Formula $\pod$
-\end_inset
-
- WT FV
-\end_layout
-
-\end_inset
-</cell>
-<cell multicolumn="2" alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell multicolumn="2" alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell multicolumn="1" alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Corridor Volume
-\end_layout
-
-\end_inset
-</cell>
-<cell multicolumn="2" alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell multicolumn="2" alignment="center" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
--836
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-< X <
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-764
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
--988
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-< X <
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-910
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
--871
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-< Y <
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-869
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
--1020
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-< Y <
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-1010
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" bottomline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
--2969
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-< Z <
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-1264
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" bottomline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
--3139
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-< Z <
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
--900
-\end_layout
-
-\end_inset
-</cell>
-</row>
-</lyxtabular>
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-\begin_inset Argument 1
-status open
-
-\begin_layout Plain Layout
-\begin_inset Formula $\pod$
-\end_inset
-
- WT FV and Corridor Definition
-\end_layout
-
-\end_inset
-
-The 
-\begin_inset Formula $\pod$
-\end_inset
-
- WT FV (left) and veto corridor volume (right) in the ND280 coordinate system.
- The corridor spans from the 5th (8th) to 40th (80th) 
-\begin_inset Formula $\pod$
-\end_inset
-
-ule (scintillator layer).
- All the units are given in millimeters.
-\begin_inset CommandInset label
-LatexCommand label
-name "tab:FVDef"
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-After passing all the precuts, a single, global track, which is observed
- in TPC1, is assigned as the 
-\begin_inset Quotes eld
-\end_inset
-
-main track
-\begin_inset Quotes erd
-\end_inset
-
- of a selection.
- The main track for 
-\begin_inset Formula $\numu$
-\end_inset
-
- selections is the highest momentum, negatively-charged track (HMNT).
- Similarly the highest momentum, positively-charged track (HMPT) is assigned
- the main track for 
-\begin_inset Formula $\antinumu$
-\end_inset
-
- selections.
- 
-\end_layout
-
-\begin_layout Standard
-This concludes the application of precuts to all the CC-Inclusive selections.
- The following subsubsections describe the CC-Inclusive selection cuts,
- first in FHC mode and then RHC mode.
-\end_layout
-
-\begin_layout Subsubsection
-CC-Inclusive in FHC
-\end_layout
-
-\begin_layout Standard
-As discussed in Section 
-\begin_inset CommandInset ref
-LatexCommand vref
-reference "subsec:Precuts"
-plural "false"
-caps "true"
-noprefix "false"
-
-\end_inset
-
-, this selection is the basis for the 
-\begin_inset Formula $\numu$
-\end_inset
-
- 
-\begin_inset Formula $\cczeropi$
-\end_inset
-
- 
-\begin_inset Formula $\podtpc$
-\end_inset
-
- analysis.
- This is FHC mode selection and so the lack of a negatively charged track
- is the final cut for the CC-Inclusive selection.
-\end_layout
-
-\begin_layout Subsubsection
-CC-Inclusive in RHC
-\end_layout
+\begin_inset Branch SelectionsP0DWaterOut
+inverted 0
+status collapsed
 
 \begin_layout Subsection
 \begin_inset Formula $\pod$
@@ -2078,15 +2223,17 @@ noprefix "false"
  Using neither set of weights is referred to as the nominal MC.
 \end_layout
 
-\begin_layout Standard
+\begin_layout Paragraph
 
 \series bold
 \begin_inset Formula $\boldsymbol{\nu_{\mu}}$
 \end_inset
 
- FHC
-\series default
-: Shown in
+ Selection in FHC Mode:
+\end_layout
+
+\begin_layout Standard
+Shown in
 \begin_inset ERT
 status open
 
@@ -3706,15 +3853,17 @@ name "fig:P0DairFHCnumuCCIncEnuTrueNEUTNuMode"
 
 \end_layout
 
-\begin_layout Standard
+\begin_layout Paragraph
 \begin_inset Formula $\boldsymbol{\antinumu}$
 \end_inset
 
  
 \series bold
-RHC
-\series default
-: Shown in 
+Selection in RHC Mode:
+\end_layout
+
+\begin_layout Standard
+Shown in 
 \begin_inset ERT
 status open
 
@@ -3765,7 +3914,7 @@ status collapsed
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename Figures/SamplesandSelections/numubarRHCCCInc/numubarRHCCCIncWaterOut_recoP_mu_MC_only_LeptonCandidateTruePDG_rhc_air.png
+	filename Figures/SamplesandSelections/numubarRHC/CCInc/numubarRHCCCIncWaterOut_recoP_mu_MC_only_LeptonCandidateTruePDG_rhc_air.png
 	lyxscale 49
 	width 40text%
 
@@ -3797,7 +3946,7 @@ status collapsed
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename Figures/SamplesandSelections/numubarRHCCCInc/HL2/Run6e_Air/NumubarinRHCCCInc_momentum_particle_nominal_mc.png
+	filename Figures/SamplesandSelections/numubarRHC/CCInc/HL2/Run6e_Air/NumubarinRHCCCInc_momentum_particle_nominal_mc.png
 	lyxscale 49
 	width 40text%
 
@@ -3833,7 +3982,7 @@ status collapsed
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename Figures/SamplesandSelections/numubarRHCCCInc/numubarRHCCCIncWaterOut_recoP_mu_MC_only_LeptonCandidateTruePDG_rhc_air_fluxtuned.png
+	filename Figures/SamplesandSelections/numubarRHC/CCInc/numubarRHCCCIncWaterOut_recoP_mu_MC_only_LeptonCandidateTruePDG_rhc_air_fluxtuned.png
 	lyxscale 50
 	width 40text%
 
@@ -3865,7 +4014,7 @@ status collapsed
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename Figures/SamplesandSelections/numubarRHCCCInc/numubarRHCCCIncWaterOut_recoP_mu_MC_only_LeptonCandidateTruePDG_rhc_air_systematicweighted.png
+	filename Figures/SamplesandSelections/numubarRHC/CCInc/numubarRHCCCIncWaterOut_recoP_mu_MC_only_LeptonCandidateTruePDG_rhc_air_systematicweighted.png
 	lyxscale 50
 	width 40text%
 
@@ -3901,7 +4050,7 @@ status collapsed
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename Figures/SamplesandSelections/numubarRHCCCInc/numubarRHCCCIncWaterOut_recoP_mu_MC_only_LeptonCandidateTruePDG_rhc_air_fluxtuned_systematicweighted.png
+	filename Figures/SamplesandSelections/numubarRHC/CCInc/numubarRHCCCIncWaterOut_recoP_mu_MC_only_LeptonCandidateTruePDG_rhc_air_fluxtuned_systematicweighted.png
 	lyxscale 50
 	width 40text%
 
@@ -3933,7 +4082,7 @@ status collapsed
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename Figures/SamplesandSelections/numubarRHCCCInc/HL2/Run6e_Air/NumubarinRHCCCInc_momentum_particle_fluxtuned_systematicweighted.png
+	filename Figures/SamplesandSelections/numubarRHC/CCInc/HL2/Run6e_Air/NumubarinRHCCCInc_momentum_particle_fluxtuned_systematicweighted.png
 	lyxscale 50
 	width 40text%
 
@@ -4054,7 +4203,7 @@ status collapsed
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename Figures/SamplesandSelections/numubarRHCCCInc/numubarRHCCCIncWaterOut_recocosq_mu_MC_only_LeptonCandidateTruePDG_rhc_air.png
+	filename Figures/SamplesandSelections/numubarRHC/CCInc/numubarRHCCCIncWaterOut_recocosq_mu_MC_only_LeptonCandidateTruePDG_rhc_air.png
 	lyxscale 49
 	width 40text%
 
@@ -4086,7 +4235,7 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename Figures/SamplesandSelections/numubarRHCCCInc/HL2/Run6e_Air/NumubarinRHCCCInc_costheta_particle_nominal_mc.png
+	filename Figures/SamplesandSelections/numubarRHC/CCInc/HL2/Run6e_Air/NumubarinRHCCCInc_costheta_particle_nominal_mc.png
 	lyxscale 49
 	width 40text%
 
@@ -4122,7 +4271,7 @@ status collapsed
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename Figures/SamplesandSelections/numubarRHCCCInc/numubarRHCCCIncWaterOut_recocosq_mu_MC_only_LeptonCandidateTruePDG_rhc_air_fluxtuned.png
+	filename Figures/SamplesandSelections/numubarRHC/CCInc/numubarRHCCCIncWaterOut_recocosq_mu_MC_only_LeptonCandidateTruePDG_rhc_air_fluxtuned.png
 	lyxscale 50
 	width 40text%
 
@@ -4154,7 +4303,7 @@ status collapsed
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename Figures/SamplesandSelections/numubarRHCCCInc/numubarRHCCCIncWaterOut_recocosq_mu_MC_only_LeptonCandidateTruePDG_rhc_air_systematicweighted.png
+	filename Figures/SamplesandSelections/numubarRHC/CCInc/numubarRHCCCIncWaterOut_recocosq_mu_MC_only_LeptonCandidateTruePDG_rhc_air_systematicweighted.png
 	lyxscale 50
 	width 40text%
 
@@ -4190,7 +4339,7 @@ status collapsed
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename Figures/SamplesandSelections/numubarRHCCCInc/numubarRHCCCIncWaterOut_recocosq_mu_MC_only_LeptonCandidateTruePDG_rhc_air_fluxtuned_systematicweighted.png
+	filename Figures/SamplesandSelections/numubarRHC/CCInc/numubarRHCCCIncWaterOut_recocosq_mu_MC_only_LeptonCandidateTruePDG_rhc_air_fluxtuned_systematicweighted.png
 	lyxscale 50
 	width 40text%
 
@@ -4222,7 +4371,7 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename Figures/SamplesandSelections/numubarRHCCCInc/HL2/Run6e_Air/NumubarinRHCCCInc_costheta_particle_fluxtuned_systematicweighted.png
+	filename Figures/SamplesandSelections/numubarRHC/CCInc/HL2/Run6e_Air/NumubarinRHCCCInc_costheta_particle_fluxtuned_systematicweighted.png
 	lyxscale 50
 	width 40text%
 
@@ -4339,7 +4488,7 @@ status collapsed
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename Figures/SamplesandSelections/numubarRHCCCInc/numubarRHCCCIncWaterOut_recoP_mu_MC_only_NEUTAntiNuReactionCodes_rhc_air.png
+	filename Figures/SamplesandSelections/numubarRHC/CCInc/numubarRHCCCIncWaterOut_recoP_mu_MC_only_NEUTAntiNuReactionCodes_rhc_air.png
 	lyxscale 49
 	width 40text%
 
@@ -4371,7 +4520,7 @@ status collapsed
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename Figures/SamplesandSelections/numubarRHCCCInc/numubarRHCCCIncWaterOut_recoP_mu_MC_only_NEUTAntiNuReactionCodes_rhc_air_fluxtuned.png
+	filename Figures/SamplesandSelections/numubarRHC/CCInc/numubarRHCCCIncWaterOut_recoP_mu_MC_only_NEUTAntiNuReactionCodes_rhc_air_fluxtuned.png
 	lyxscale 50
 	width 40text%
 
@@ -4407,7 +4556,7 @@ status collapsed
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename Figures/SamplesandSelections/numubarRHCCCInc/numubarRHCCCIncWaterOut_recoP_mu_MC_only_NEUTAntiNuReactionCodes_rhc_air_systematicweighted.png
+	filename Figures/SamplesandSelections/numubarRHC/CCInc/numubarRHCCCIncWaterOut_recoP_mu_MC_only_NEUTAntiNuReactionCodes_rhc_air_systematicweighted.png
 	lyxscale 50
 	width 40text%
 
@@ -4439,7 +4588,7 @@ status collapsed
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename Figures/SamplesandSelections/numubarRHCCCInc/numubarRHCCCIncWaterOut_recoP_mu_MC_only_NEUTAntiNuReactionCodes_rhc_air_fluxtuned_systematicweighted.png
+	filename Figures/SamplesandSelections/numubarRHC/CCInc/numubarRHCCCIncWaterOut_recoP_mu_MC_only_NEUTAntiNuReactionCodes_rhc_air_fluxtuned_systematicweighted.png
 	lyxscale 50
 	width 40text%
 
@@ -4540,7 +4689,7 @@ status collapsed
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename Figures/SamplesandSelections/numubarRHCCCInc/numubarRHCCCIncWaterOut_recocosq_mu_MC_only_NEUTAntiNuReactionCodes_rhc_air.png
+	filename Figures/SamplesandSelections/numubarRHC/CCInc/numubarRHCCCIncWaterOut_recocosq_mu_MC_only_NEUTAntiNuReactionCodes_rhc_air.png
 	lyxscale 49
 	width 40text%
 
@@ -4572,7 +4721,7 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename Figures/SamplesandSelections/numubarRHCCCInc/numubarRHCCCIncWaterOut_recocosq_mu_MC_only_NEUTAntiNuReactionCodes_rhc_air_fluxtuned.png
+	filename Figures/SamplesandSelections/numubarRHC/CCInc/numubarRHCCCIncWaterOut_recocosq_mu_MC_only_NEUTAntiNuReactionCodes_rhc_air_fluxtuned.png
 	lyxscale 50
 	width 40text%
 
@@ -4608,7 +4757,7 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename Figures/SamplesandSelections/numubarRHCCCInc/numubarRHCCCIncWaterOut_recocosq_mu_MC_only_NEUTAntiNuReactionCodes_rhc_air_systematicweighted.png
+	filename Figures/SamplesandSelections/numubarRHC/CCInc/numubarRHCCCIncWaterOut_recocosq_mu_MC_only_NEUTAntiNuReactionCodes_rhc_air_systematicweighted.png
 	lyxscale 50
 	width 40text%
 
@@ -4640,7 +4789,7 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename Figures/SamplesandSelections/numubarRHCCCInc/numubarRHCCCIncWaterOut_recocosq_mu_MC_only_NEUTAntiNuReactionCodes_rhc_air_fluxtuned_systematicweighted.png
+	filename Figures/SamplesandSelections/numubarRHC/CCInc/numubarRHCCCIncWaterOut_recocosq_mu_MC_only_NEUTAntiNuReactionCodes_rhc_air_fluxtuned_systematicweighted.png
 	lyxscale 50
 	width 40text%
 
@@ -4748,7 +4897,7 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename Figures/SamplesandSelections/numubarRHCCCInc/numubarRHCCCIncWaterOut_recoP_mu_MC_only_TrueTopology_rhc_air.png
+	filename Figures/SamplesandSelections/numubarRHC/CCInc/numubarRHCCCIncWaterOut_recoP_mu_MC_only_TrueTopology_rhc_air.png
 	lyxscale 49
 	width 40text%
 
@@ -4780,7 +4929,7 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename Figures/SamplesandSelections/numubarRHCCCInc/numubarRHCCCIncWaterOut_recoP_mu_MC_only_TrueTopology_rhc_air_fluxtuned.png
+	filename Figures/SamplesandSelections/numubarRHC/CCInc/numubarRHCCCIncWaterOut_recoP_mu_MC_only_TrueTopology_rhc_air_fluxtuned.png
 	lyxscale 50
 	width 40text%
 
@@ -4816,7 +4965,7 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename Figures/SamplesandSelections/numubarRHCCCInc/numubarRHCCCIncWaterOut_recoP_mu_MC_only_TrueTopology_rhc_air_systematicweighted.png
+	filename Figures/SamplesandSelections/numubarRHC/CCInc/numubarRHCCCIncWaterOut_recoP_mu_MC_only_TrueTopology_rhc_air_systematicweighted.png
 	lyxscale 50
 	width 40text%
 
@@ -4848,7 +4997,7 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename Figures/SamplesandSelections/numubarRHCCCInc/numubarRHCCCIncWaterOut_recoP_mu_MC_only_TrueTopology_rhc_air_fluxtuned_systematicweighted.png
+	filename Figures/SamplesandSelections/numubarRHC/CCInc/numubarRHCCCIncWaterOut_recoP_mu_MC_only_TrueTopology_rhc_air_fluxtuned_systematicweighted.png
 	lyxscale 50
 	width 40text%
 
@@ -4948,7 +5097,7 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename Figures/SamplesandSelections/numubarRHCCCInc/numubarRHCCCIncWaterOut_recocosq_mu_MC_only_TrueTopology_rhc_air.png
+	filename Figures/SamplesandSelections/numubarRHC/CCInc/numubarRHCCCIncWaterOut_recocosq_mu_MC_only_TrueTopology_rhc_air.png
 	lyxscale 49
 	width 40text%
 
@@ -4980,7 +5129,7 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename Figures/SamplesandSelections/numubarRHCCCInc/numubarRHCCCIncWaterOut_recocosq_mu_MC_only_TrueTopology_rhc_air_fluxtuned.png
+	filename Figures/SamplesandSelections/numubarRHC/CCInc/numubarRHCCCIncWaterOut_recocosq_mu_MC_only_TrueTopology_rhc_air_fluxtuned.png
 	lyxscale 50
 	width 40text%
 
@@ -5016,7 +5165,7 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename Figures/SamplesandSelections/numubarRHCCCInc/numubarRHCCCIncWaterOut_recocosq_mu_MC_only_TrueTopology_rhc_air_systematicweighted.png
+	filename Figures/SamplesandSelections/numubarRHC/CCInc/numubarRHCCCIncWaterOut_recocosq_mu_MC_only_TrueTopology_rhc_air_systematicweighted.png
 	lyxscale 50
 	width 40text%
 
@@ -5048,7 +5197,7 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename Figures/SamplesandSelections/numubarRHCCCInc/numubarRHCCCIncWaterOut_recocosq_mu_MC_only_TrueTopology_rhc_air_fluxtuned_systematicweighted.png
+	filename Figures/SamplesandSelections/numubarRHC/CCInc/numubarRHCCCIncWaterOut_recocosq_mu_MC_only_TrueTopology_rhc_air_fluxtuned_systematicweighted.png
 	lyxscale 50
 	width 40text%
 
@@ -5156,7 +5305,7 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename Figures/SamplesandSelections/numubarRHCCCInc/numubarRHCCCIncWaterOut_trueE_nu_MC_only_NEUTAntiNuReactionCodes_rhc_air.png
+	filename Figures/SamplesandSelections/numubarRHC/CCInc/numubarRHCCCIncWaterOut_trueE_nu_MC_only_NEUTAntiNuReactionCodes_rhc_air.png
 	lyxscale 49
 	width 40text%
 
@@ -5188,7 +5337,7 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename Figures/SamplesandSelections/numubarRHCCCInc/numubarRHCCCIncWaterOut_trueE_nu_MC_only_NEUTAntiNuReactionCodes_rhc_air_fluxtuned.png
+	filename Figures/SamplesandSelections/numubarRHC/CCInc/numubarRHCCCIncWaterOut_trueE_nu_MC_only_NEUTAntiNuReactionCodes_rhc_air_fluxtuned.png
 	lyxscale 50
 	width 40text%
 
@@ -5224,7 +5373,7 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename Figures/SamplesandSelections/numubarRHCCCInc/numubarRHCCCIncWaterOut_trueE_nu_MC_only_NEUTAntiNuReactionCodes_rhc_air_systematicweighted.png
+	filename Figures/SamplesandSelections/numubarRHC/CCInc/numubarRHCCCIncWaterOut_trueE_nu_MC_only_NEUTAntiNuReactionCodes_rhc_air_systematicweighted.png
 	lyxscale 50
 	width 40text%
 
@@ -5256,7 +5405,7 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename Figures/SamplesandSelections/numubarRHCCCInc/numubarRHCCCIncWaterOut_trueE_nu_MC_only_NEUTAntiNuReactionCodes_rhc_air_fluxtuned_systematicweighted.png
+	filename Figures/SamplesandSelections/numubarRHC/CCInc/numubarRHCCCIncWaterOut_trueE_nu_MC_only_NEUTAntiNuReactionCodes_rhc_air_fluxtuned_systematicweighted.png
 	lyxscale 50
 	width 40text%
 
@@ -5343,15 +5492,38 @@ name "fig:P0DairRHCnumubarCCIncEnuTrueNEUTNuMode"
 
 \end_layout
 
-\begin_layout Standard
+\begin_layout Paragraph
 \begin_inset Formula $\boldsymbol{\numu}$
 \end_inset
 
  
 \series bold
-RHC
+Background Selection in RHC
 \series default
-:
+ Mode:
+\end_layout
+
+\begin_layout Standard
+Shown in 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+Cref{fig:P0DairRHCnumuCCIncMomTrueParticle,fig:P0DairRHCnumuCCIncAngleTruePartic
+le,fig:P0DairRHCnumuCCIncMomTrueNEUTAntiNuMode,fig:P0DairRHCnumuCCIncAngleTrueNE
+UTAntiNuMode,fig:P0DairRHCnumuCCIncMomTrueTopology,fig:P0DairRHCnumuCCIncAngleTr
+ueTopology,fig:P0DairRHCnumuCCIncEnuTrueNEUTNuMode} 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 \begin_inset ERT
 status open
 
@@ -5379,12 +5551,12 @@ status collapsed
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename Figures/SamplesandSelections/numuRHCCCInc/numubkgRHCCCIncWaterOut_recoP_mu_MC_only_LeptonCandidateTruePDG_rhc_air.png
+	filename Figures/SamplesandSelections/numuBkgRHC/CCInc/numubkgRHCCCIncWaterOut_recoP_mu_MC_only_LeptonCandidateTruePDG_rhc_air.png
 	lyxscale 49
 	width 40text%
 
@@ -5411,7 +5583,7 @@ Nominal MC
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
@@ -5447,12 +5619,12 @@ Nominal MC from Highland2
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename Figures/SamplesandSelections/numuRHCCCInc/numubkgRHCCCIncWaterOut_recoP_mu_MC_only_LeptonCandidateTruePDG_rhc_air_fluxtuned.png
+	filename Figures/SamplesandSelections/numuBkgRHC/CCInc/numubkgRHCCCIncWaterOut_recoP_mu_MC_only_LeptonCandidateTruePDG_rhc_air_fluxtuned.png
 	lyxscale 50
 	width 40text%
 
@@ -5479,12 +5651,12 @@ Flux
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename Figures/SamplesandSelections/numuRHCCCInc/numubkgRHCCCIncWaterOut_recoP_mu_MC_only_LeptonCandidateTruePDG_rhc_air_systematicweighted.png
+	filename Figures/SamplesandSelections/numuBkgRHC/CCInc/numubkgRHCCCIncWaterOut_recoP_mu_MC_only_LeptonCandidateTruePDG_rhc_air_systematicweighted.png
 	lyxscale 50
 	width 40text%
 
@@ -5515,12 +5687,12 @@ Systematics
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename Figures/SamplesandSelections/numuRHCCCInc/numubkgRHCCCIncWaterOut_recoP_mu_MC_only_LeptonCandidateTruePDG_rhc_air_fluxtuned_systematicweighted.png
+	filename Figures/SamplesandSelections/numuBkgRHC/CCInc/numubkgRHCCCIncWaterOut_recoP_mu_MC_only_LeptonCandidateTruePDG_rhc_air_fluxtuned_systematicweighted.png
 	lyxscale 50
 	width 40text%
 
@@ -5547,7 +5719,7 @@ Flux + systematics
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
@@ -5656,12 +5828,12 @@ status collapsed
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename Figures/SamplesandSelections/numuRHCCCInc/numubkgRHCCCIncWaterOut_recocosq_mu_MC_only_LeptonCandidateTruePDG_rhc_air.png
+	filename Figures/SamplesandSelections/numuBkgRHC/CCInc/numubkgRHCCCIncWaterOut_recocosq_mu_MC_only_LeptonCandidateTruePDG_rhc_air.png
 	lyxscale 49
 	width 40text%
 
@@ -5688,7 +5860,7 @@ Nominal MC
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
@@ -5724,12 +5896,12 @@ Nominal MC from Highland2
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename Figures/SamplesandSelections/numuRHCCCInc/numubkgRHCCCIncWaterOut_recocosq_mu_MC_only_LeptonCandidateTruePDG_rhc_air_fluxtuned.png
+	filename Figures/SamplesandSelections/numuBkgRHC/CCInc/numubkgRHCCCIncWaterOut_recocosq_mu_MC_only_LeptonCandidateTruePDG_rhc_air_fluxtuned.png
 	lyxscale 50
 	width 40text%
 
@@ -5756,12 +5928,12 @@ Flux
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename Figures/SamplesandSelections/numuRHCCCInc/numubkgRHCCCIncWaterOut_recocosq_mu_MC_only_LeptonCandidateTruePDG_rhc_air_systematicweighted.png
+	filename Figures/SamplesandSelections/numuBkgRHC/CCInc/numubkgRHCCCIncWaterOut_recocosq_mu_MC_only_LeptonCandidateTruePDG_rhc_air_systematicweighted.png
 	lyxscale 50
 	width 40text%
 
@@ -5792,12 +5964,12 @@ Systematics
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename Figures/SamplesandSelections/numuRHCCCInc/numubkgRHCCCIncWaterOut_recocosq_mu_MC_only_LeptonCandidateTruePDG_rhc_air_fluxtuned_systematicweighted.png
+	filename Figures/SamplesandSelections/numuBkgRHC/CCInc/numubkgRHCCCIncWaterOut_recocosq_mu_MC_only_LeptonCandidateTruePDG_rhc_air_fluxtuned_systematicweighted.png
 	lyxscale 50
 	width 40text%
 
@@ -5824,7 +5996,7 @@ Flux + systematics
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
@@ -5946,7 +6118,7 @@ status collapsed
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename Figures/SamplesandSelections/numuRHCCCInc/numubkgRHCCCIncWaterOut_recoP_mu_MC_only_NEUTNuReactionCodes_rhc_air.png
+	filename Figures/SamplesandSelections/numuBkgRHC/CCInc/numubkgRHCCCIncWaterOut_recoP_mu_MC_only_NEUTNuReactionCodes_rhc_air.png
 	lyxscale 49
 	width 40text%
 
@@ -5978,7 +6150,7 @@ status collapsed
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename Figures/SamplesandSelections/numuRHCCCInc/numubkgRHCCCIncWaterOut_recoP_mu_MC_only_NEUTNuReactionCodes_rhc_air_fluxtuned.png
+	filename Figures/SamplesandSelections/numuBkgRHC/CCInc/numubkgRHCCCIncWaterOut_recoP_mu_MC_only_NEUTNuReactionCodes_rhc_air_fluxtuned.png
 	lyxscale 50
 	width 40text%
 
@@ -6014,7 +6186,7 @@ status collapsed
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename Figures/SamplesandSelections/numuRHCCCInc/numubkgRHCCCIncWaterOut_recoP_mu_MC_only_NEUTNuReactionCodes_rhc_air_systematicweighted.png
+	filename Figures/SamplesandSelections/numuBkgRHC/CCInc/numubkgRHCCCIncWaterOut_recoP_mu_MC_only_NEUTNuReactionCodes_rhc_air_systematicweighted.png
 	lyxscale 50
 	width 40text%
 
@@ -6046,7 +6218,7 @@ status collapsed
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename Figures/SamplesandSelections/numuRHCCCInc/numubkgRHCCCIncWaterOut_recoP_mu_MC_only_NEUTNuReactionCodes_rhc_air_fluxtuned_systematicweighted.png
+	filename Figures/SamplesandSelections/numuBkgRHC/CCInc/numubkgRHCCCIncWaterOut_recoP_mu_MC_only_NEUTNuReactionCodes_rhc_air_fluxtuned_systematicweighted.png
 	lyxscale 50
 	width 40text%
 
@@ -6113,7 +6285,7 @@ status open
 
 \begin_inset CommandInset label
 LatexCommand label
-name "fig:P0DairFHCnumuCCIncMomTrueNEUTNuMode-1"
+name "fig:P0DairRHCnumuCCIncMomTrueNEUTNuMode"
 
 \end_inset
 
@@ -6147,7 +6319,7 @@ status collapsed
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename Figures/SamplesandSelections/numuRHCCCInc/numubkgRHCCCIncWaterOut_recocosq_mu_MC_only_NEUTNuReactionCodes_rhc_air.png
+	filename Figures/SamplesandSelections/numuBkgRHC/CCInc/numubkgRHCCCIncWaterOut_recocosq_mu_MC_only_NEUTNuReactionCodes_rhc_air.png
 	lyxscale 49
 	width 40text%
 
@@ -6174,12 +6346,12 @@ Nominal MC
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename Figures/SamplesandSelections/numuRHCCCInc/numubkgRHCCCIncWaterOut_recocosq_mu_MC_only_NEUTNuReactionCodes_rhc_air_fluxtuned.png
+	filename Figures/SamplesandSelections/numuBkgRHC/CCInc/numubkgRHCCCIncWaterOut_recocosq_mu_MC_only_NEUTNuReactionCodes_rhc_air_fluxtuned.png
 	lyxscale 50
 	width 40text%
 
@@ -6210,12 +6382,12 @@ Flux
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename Figures/SamplesandSelections/numuRHCCCInc/numubkgRHCCCIncWaterOut_recocosq_mu_MC_only_NEUTNuReactionCodes_rhc_air_systematicweighted.png
+	filename Figures/SamplesandSelections/numuBkgRHC/CCInc/numubkgRHCCCIncWaterOut_recocosq_mu_MC_only_NEUTNuReactionCodes_rhc_air_systematicweighted.png
 	lyxscale 50
 	width 40text%
 
@@ -6242,12 +6414,12 @@ Systematics
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename Figures/SamplesandSelections/numuRHCCCInc/numubkgRHCCCIncWaterOut_recocosq_mu_MC_only_NEUTNuReactionCodes_rhc_air_fluxtuned_systematicweighted.png
+	filename Figures/SamplesandSelections/numuBkgRHC/CCInc/numubkgRHCCCIncWaterOut_recocosq_mu_MC_only_NEUTNuReactionCodes_rhc_air_fluxtuned_systematicweighted.png
 	lyxscale 50
 	width 40text%
 
@@ -6321,7 +6493,7 @@ status open
 
 \begin_inset CommandInset label
 LatexCommand label
-name "fig:P0DairFHCnumuCCIncAngleTrueNEUTNuMode-1"
+name "fig:P0DairRHCnumuCCIncAngleTrueNEUTNuMode"
 
 \end_inset
 
@@ -6350,12 +6522,12 @@ status collapsed
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename Figures/SamplesandSelections/numuRHCCCInc/numubkgRHCCCIncWaterOut_recoP_mu_MC_only_TrueTopology_rhc_air.png
+	filename Figures/SamplesandSelections/numuBkgRHC/CCInc/numubkgRHCCCIncWaterOut_recoP_mu_MC_only_TrueTopology_rhc_air.png
 	lyxscale 49
 	width 40text%
 
@@ -6382,12 +6554,12 @@ Nominal MC
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename Figures/SamplesandSelections/numuRHCCCInc/numubkgRHCCCIncWaterOut_recoP_mu_MC_only_TrueTopology_rhc_air_fluxtuned.png
+	filename Figures/SamplesandSelections/numuBkgRHC/CCInc/numubkgRHCCCIncWaterOut_recoP_mu_MC_only_TrueTopology_rhc_air_fluxtuned.png
 	lyxscale 50
 	width 40text%
 
@@ -6418,12 +6590,12 @@ Flux
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename Figures/SamplesandSelections/numuRHCCCInc/numubkgRHCCCIncWaterOut_recoP_mu_MC_only_TrueTopology_rhc_air_systematicweighted.png
+	filename Figures/SamplesandSelections/numuBkgRHC/CCInc/numubkgRHCCCIncWaterOut_recoP_mu_MC_only_TrueTopology_rhc_air_systematicweighted.png
 	lyxscale 50
 	width 40text%
 
@@ -6450,12 +6622,12 @@ Systematics
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename Figures/SamplesandSelections/numuRHCCCInc/numubkgRHCCCIncWaterOut_recoP_mu_MC_only_TrueTopology_rhc_air_fluxtuned_systematicweighted.png
+	filename Figures/SamplesandSelections/numuBkgRHC/CCInc/numubkgRHCCCIncWaterOut_recoP_mu_MC_only_TrueTopology_rhc_air_fluxtuned_systematicweighted.png
 	lyxscale 50
 	width 40text%
 
@@ -6521,7 +6693,7 @@ status open
 
 \begin_inset CommandInset label
 LatexCommand label
-name "fig:P0DairFHCnumuCCIncMomTrueTopology-1"
+name "fig:P0DairRHCnumuCCIncMomTrueTopology"
 
 \end_inset
 
@@ -6550,12 +6722,12 @@ status collapsed
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename Figures/SamplesandSelections/numuRHCCCInc/numubkgRHCCCIncWaterOut_recocosq_mu_MC_only_TrueTopology_rhc_air.png
+	filename Figures/SamplesandSelections/numuBkgRHC/CCInc/numubkgRHCCCIncWaterOut_recocosq_mu_MC_only_TrueTopology_rhc_air.png
 	lyxscale 49
 	width 40text%
 
@@ -6582,12 +6754,12 @@ Nominal MC
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename Figures/SamplesandSelections/numuRHCCCInc/numubkgRHCCCIncWaterOut_recocosq_mu_MC_only_TrueTopology_rhc_air_fluxtuned.png
+	filename Figures/SamplesandSelections/numuBkgRHC/CCInc/numubkgRHCCCIncWaterOut_recocosq_mu_MC_only_TrueTopology_rhc_air_fluxtuned.png
 	lyxscale 50
 	width 40text%
 
@@ -6618,12 +6790,12 @@ Flux
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename Figures/SamplesandSelections/numuRHCCCInc/numubkgRHCCCIncWaterOut_recocosq_mu_MC_only_TrueTopology_rhc_air_systematicweighted.png
+	filename Figures/SamplesandSelections/numuBkgRHC/CCInc/numubkgRHCCCIncWaterOut_recocosq_mu_MC_only_TrueTopology_rhc_air_systematicweighted.png
 	lyxscale 50
 	width 40text%
 
@@ -6650,12 +6822,12 @@ Systematics
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename Figures/SamplesandSelections/numuRHCCCInc/numubkgRHCCCIncWaterOut_recocosq_mu_MC_only_TrueTopology_rhc_air_fluxtuned_systematicweighted.png
+	filename Figures/SamplesandSelections/numuBkgRHC/CCInc/numubkgRHCCCIncWaterOut_recocosq_mu_MC_only_TrueTopology_rhc_air_fluxtuned_systematicweighted.png
 	lyxscale 50
 	width 40text%
 
@@ -6729,7 +6901,7 @@ status open
 
 \begin_inset CommandInset label
 LatexCommand label
-name "fig:P0DairFHCnumuCCIncAngleTrueTopology-1"
+name "fig:P0DairRHCnumuCCIncAngleTrueTopology"
 
 \end_inset
 
@@ -6758,12 +6930,12 @@ status collapsed
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename Figures/SamplesandSelections/numuRHCCCInc/numubkgRHCCCIncWaterOut_trueE_nu_MC_only_NEUTNuReactionCodes_rhc_air.png
+	filename Figures/SamplesandSelections/numuBkgRHC/CCInc/numubkgRHCCCIncWaterOut_trueE_nu_MC_only_NEUTNuReactionCodes_rhc_air.png
 	lyxscale 49
 	width 40text%
 
@@ -6790,12 +6962,12 @@ Nominal MC
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename Figures/SamplesandSelections/numuRHCCCInc/numubkgRHCCCIncWaterOut_trueE_nu_MC_only_NEUTNuReactionCodes_rhc_air_fluxtuned.png
+	filename Figures/SamplesandSelections/numuBkgRHC/CCInc/numubkgRHCCCIncWaterOut_trueE_nu_MC_only_NEUTNuReactionCodes_rhc_air_fluxtuned.png
 	lyxscale 50
 	width 40text%
 
@@ -6826,12 +6998,12 @@ Flux
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename Figures/SamplesandSelections/numuRHCCCInc/numubkgRHCCCIncWaterOut_trueE_nu_MC_only_NEUTNuReactionCodes_rhc_air_systematicweighted.png
+	filename Figures/SamplesandSelections/numuBkgRHC/CCInc/numubkgRHCCCIncWaterOut_trueE_nu_MC_only_NEUTNuReactionCodes_rhc_air_systematicweighted.png
 	lyxscale 50
 	width 40text%
 
@@ -6858,12 +7030,12 @@ Systematics
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename Figures/SamplesandSelections/numuRHCCCInc/numubkgRHCCCIncWaterOut_trueE_nu_MC_only_NEUTNuReactionCodes_rhc_air_fluxtuned_systematicweighted.png
+	filename Figures/SamplesandSelections/numuBkgRHC/CCInc/numubkgRHCCCIncWaterOut_trueE_nu_MC_only_NEUTNuReactionCodes_rhc_air_fluxtuned_systematicweighted.png
 	lyxscale 50
 	width 40text%
 
@@ -6933,7 +7105,7 @@ status open
 
 \begin_inset CommandInset label
 LatexCommand label
-name "fig:P0DairFHCnumuCCIncEnuTrueNEUTNuMode-1"
+name "fig:P0DairRHCnumuCCIncEnuTrueNEUTNuMode"
 
 \end_inset
 
@@ -6954,6 +7126,3237 @@ name "fig:P0DairFHCnumuCCIncEnuTrueNEUTNuMode-1"
 CC-1 Track (CCQE Enhanced)
 \end_layout
 
+\begin_layout Paragraph
+
+\series bold
+\begin_inset Formula $\boldsymbol{\nu_{\mu}}$
+\end_inset
+
+ Selection in FHC Mode:
+\end_layout
+
+\begin_layout Standard
+Shown in
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/SamplesandSelections/numuFHC/CC1Track/numuCC1TrackWaterOut_recoP_mu_MC_only_LeptonCandidateTruePDG_fhc_air.png
+	lyxscale 49
+	width 40text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Nominal MC
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/SamplesandSelections/numuFHC/CC1Track/HL2/Run4_Air/NumuFHCCC1Track_momentum_particle_nominal_mc.png
+	lyxscale 49
+	width 40text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Nominal MC from Highland2
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/SamplesandSelections/numuFHC/CC1Track/numuCC1TrackWaterOut_recoP_mu_MC_only_LeptonCandidateTruePDG_fhc_air_fluxtuned.png
+	lyxscale 50
+	width 40text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Flux
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/SamplesandSelections/numuFHC/CC1Track/numuCC1TrackWaterOut_recoP_mu_MC_only_LeptonCandidateTruePDG_fhc_air_systematicweighted.png
+	lyxscale 50
+	width 40text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Systematics
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/SamplesandSelections/numuFHC/CC1Track/numuCC1TrackWaterOut_recoP_mu_MC_only_LeptonCandidateTruePDG_fhc_air_fluxtuned_systematicweighted.png
+	lyxscale 50
+	width 40text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Flux + systematics
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/SamplesandSelections/numuFHC/CC1Track/HL2/Run4_Air/NumuFHCCC1Track_momentum_particle_fluxtuned_systematicweighted.png
+	lyxscale 50
+	width 40text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Fully weighted in Highland2
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Reconstructed lepton candidate momentum separated by true particle species
+ for FHC 
+\begin_inset Formula $\numu$
+\end_inset
+
+ CC-Inc.
+ events occurring in the 
+\begin_inset Formula $\pod$
+\end_inset
+
+ in water-out mode.
+ (a) The nominal MC prediction without any weights applied.
+ (b) Highland2 comparison for (a) without any weights applied using the
+ 
+\begin_inset Quotes eld
+\end_inset
+
+NOW
+\begin_inset Quotes erd
+\end_inset
+
+ draw option.
+ (c) The flux tuning is applied.
+ (d) The systematic weighting is applied.
+ (e) Both flux and systematic weighting is applied.
+ (f) Highland2 comparison for (e).
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+\begin_inset Formula $\pod$
+\end_inset
+
+ Air FHC 
+\begin_inset Formula $\numu$
+\end_inset
+
+ CC-Inc.
+ Lepton Cand.
+ Reco.
+ Momentum by True Particle
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:P0DairFHCnumuCC1TrackMomTrueParticle"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/SamplesandSelections/numuFHC/CC1Track/numuCC1TrackWaterOut_recocosq_mu_MC_only_LeptonCandidateTruePDG_fhc_air.png
+	lyxscale 49
+	width 40text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Nominal MC
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/SamplesandSelections/numuFHC/CC1Track/HL2/Run4_Air/NumuFHCCC1Track_costheta_particle_nominal_mc.png
+	lyxscale 50
+	width 40text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Nominal MC from Highland2
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/SamplesandSelections/numuFHC/CC1Track/numuCC1TrackWaterOut_recocosq_mu_MC_only_LeptonCandidateTruePDG_fhc_air_fluxtuned.png
+	lyxscale 50
+	width 40text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Flux
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/SamplesandSelections/numuFHC/CC1Track/numuCC1TrackWaterOut_recocosq_mu_MC_only_LeptonCandidateTruePDG_fhc_air_systematicweighted.png
+	lyxscale 50
+	width 40text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Systematics
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/SamplesandSelections/numuFHC/CC1Track/numuCC1TrackWaterOut_recocosq_mu_MC_only_LeptonCandidateTruePDG_fhc_air_fluxtuned_systematicweighted.png
+	lyxscale 50
+	width 40text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Flux + systematics
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/SamplesandSelections/numuFHC/CC1Track/HL2/Run4_Air/NumuFHCCC1Track_costheta_particle_fluxtuned_systematicweighted.png
+	lyxscale 50
+	width 40text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Fully weighted in Highland2
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Reconstructed lepton candidate angle separated by true particle species
+ for FHC 
+\begin_inset Formula $\numu$
+\end_inset
+
+ CC-Inc.
+ events occurring in the 
+\begin_inset Formula $\pod$
+\end_inset
+
+ in water-out mode.
+ (a) The nominal MC prediction without any weights applied.
+ (b) Highland2 comparison for (a) without any weights applied using the
+ 
+\begin_inset Quotes eld
+\end_inset
+
+NOW
+\begin_inset Quotes erd
+\end_inset
+
+ draw option.
+ (c) The flux tuning is applied.
+ (d) The systematic weighting is applied.
+ (e) Both flux and systematic weighting is applied.
+ (f) Highland2 comparison for (e).
+ 
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+\begin_inset Formula $\pod$
+\end_inset
+
+ Air FHC 
+\begin_inset Formula $\numu$
+\end_inset
+
+ CC-Inc.
+ Lepton Cand.
+ Reco.
+ 
+\begin_inset Formula $\cos\theta$
+\end_inset
+
+ by True Particle
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:P0DairFHCnumuCC1TrackAngleTrueParticle"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/SamplesandSelections/numuFHC/CC1Track/numuCC1TrackWaterOut_recoP_mu_MC_only_NEUTNuReactionCodes_fhc_air.png
+	lyxscale 49
+	width 40text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Nominal MC
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/SamplesandSelections/numuFHC/CC1Track/numuCC1TrackWaterOut_recoP_mu_MC_only_NEUTNuReactionCodes_fhc_air_fluxtuned.png
+	lyxscale 50
+	width 40text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Flux
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/SamplesandSelections/numuFHC/CC1Track/numuCC1TrackWaterOut_recoP_mu_MC_only_NEUTNuReactionCodes_fhc_air_systematicweighted.png
+	lyxscale 50
+	width 40text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Systematics
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/SamplesandSelections/numuFHC/CC1Track/numuCC1TrackWaterOut_recoP_mu_MC_only_NEUTNuReactionCodes_fhc_air_fluxtuned_systematicweighted.png
+	lyxscale 50
+	width 40text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Flux + systematics
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Reconstructed lepton candidate momentum separated by NEUT model interaction
+ mode for FHC 
+\begin_inset Formula $\numu$
+\end_inset
+
+ CC-Inc.
+ events occurring in the 
+\begin_inset Formula $\pod$
+\end_inset
+
+ in water-out mode.
+ (a) The nominal MC prediction without any weights applied.
+ (b) The flux tuning is applied.
+ (c) The systematic weighting is applied.
+ (d) Both flux and systematic weighting is applied.
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+\begin_inset Formula $\pod$
+\end_inset
+
+ Air FHC 
+\begin_inset Formula $\numu$
+\end_inset
+
+ CC-Inc.
+ Lepton Cand.
+ Reco.
+ Momentum by NEUT Mode
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:P0DairFHCnumuCC1TrackMomTrueNEUTNuMode"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/SamplesandSelections/numuFHC/CC1Track/numuCC1TrackWaterOut_recocosq_mu_MC_only_NEUTNuReactionCodes_fhc_air.png
+	lyxscale 49
+	width 40text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Nominal MC
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/SamplesandSelections/numuFHC/CC1Track/numuCC1TrackWaterOut_recocosq_mu_MC_only_NEUTNuReactionCodes_fhc_air_fluxtuned.png
+	lyxscale 50
+	width 40text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Flux
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/SamplesandSelections/numuFHC/CC1Track/numuCC1TrackWaterOut_recocosq_mu_MC_only_NEUTNuReactionCodes_fhc_air_systematicweighted.png
+	lyxscale 50
+	width 40text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Systematics
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/SamplesandSelections/numuFHC/CC1Track/numuCC1TrackWaterOut_recocosq_mu_MC_only_NEUTNuReactionCodes_fhc_air_fluxtuned_systematicweighted.png
+	lyxscale 50
+	width 40text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Flux + systematics
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Reconstructed lepton candidate 
+\begin_inset Formula $\cos\theta$
+\end_inset
+
+ separated by NEUT model interaction mode for FHC 
+\begin_inset Formula $\numu$
+\end_inset
+
+ CC-Inc.
+ events occurring in the 
+\begin_inset Formula $\pod$
+\end_inset
+
+ in water-out mode.
+ (a) The nominal MC prediction without any weights applied.
+ (b) The flux tuning is applied.
+ (c) The systematic weighting is applied.
+ (d) Both flux and systematic weighting is applied.
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+\begin_inset Formula $\pod$
+\end_inset
+
+ Air FHC 
+\begin_inset Formula $\numu$
+\end_inset
+
+ CC-Inc.
+ Lepton Cand.
+ Reco.
+ 
+\begin_inset Formula $\cos\theta$
+\end_inset
+
+ by NEUT Mode
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:P0DairFHCnumuCC1TrackAngleTrueNEUTNuMode"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/SamplesandSelections/numuFHC/CC1Track/numuCC1TrackWaterOut_recoP_mu_MC_only_TrueTopology_fhc_air.png
+	lyxscale 49
+	width 40text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Nominal MC
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/SamplesandSelections/numuFHC/CC1Track/numuCC1TrackWaterOut_recoP_mu_MC_only_TrueTopology_fhc_air_fluxtuned.png
+	lyxscale 50
+	width 40text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Flux
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/SamplesandSelections/numuFHC/CC1Track/numuCC1TrackWaterOut_recoP_mu_MC_only_TrueTopology_fhc_air_systematicweighted.png
+	lyxscale 50
+	width 40text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Systematics
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/SamplesandSelections/numuFHC/CC1Track/numuCC1TrackWaterOut_recoP_mu_MC_only_TrueTopology_fhc_air_fluxtuned_systematicweighted.png
+	lyxscale 50
+	width 40text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Flux + systematics
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Reconstructed lepton candidate momentum separated by topology for FHC 
+\begin_inset Formula $\numu$
+\end_inset
+
+ CC-Inc.
+ events occurring in the 
+\begin_inset Formula $\pod$
+\end_inset
+
+ in water-out mode.
+ (a) The nominal MC prediction without any weights applied.
+ (b) The flux tuning is applied.
+ (c) The systematic weighting is applied.
+ (d) Both flux and systematic weighting is applied.
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+\begin_inset Formula $\pod$
+\end_inset
+
+ Air FHC 
+\begin_inset Formula $\numu$
+\end_inset
+
+ CC-Inc.
+ Lepton Cand.
+ Reco.
+ Momentum by True Topology
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:P0DairFHCnumuCC1TrackMomTrueTopology"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/SamplesandSelections/numuFHC/CC1Track/numuCC1TrackWaterOut_recocosq_mu_MC_only_TrueTopology_fhc_air.png
+	lyxscale 49
+	width 40text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Nominal MC
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/SamplesandSelections/numuFHC/CC1Track/numuCC1TrackWaterOut_recocosq_mu_MC_only_TrueTopology_fhc_air_fluxtuned.png
+	lyxscale 50
+	width 40text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Flux
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/SamplesandSelections/numuFHC/CC1Track/numuCC1TrackWaterOut_recocosq_mu_MC_only_TrueTopology_fhc_air_systematicweighted.png
+	lyxscale 50
+	width 40text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Systematics
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/SamplesandSelections/numuFHC/CC1Track/numuCC1TrackWaterOut_recocosq_mu_MC_only_TrueTopology_fhc_air_fluxtuned_systematicweighted.png
+	lyxscale 50
+	width 40text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Flux + systematics
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Reconstructed lepton candidate 
+\begin_inset Formula $\cos\theta$
+\end_inset
+
+ separated by topology for FHC 
+\begin_inset Formula $\numu$
+\end_inset
+
+ CC-Inc.
+ events occurring in the 
+\begin_inset Formula $\pod$
+\end_inset
+
+ in water-out mode.
+ (a) The nominal MC prediction without any weights applied.
+ (b) The flux tuning is applied.
+ (c) The systematic weighting is applied.
+ (d) Both flux and systematic weighting is applied.
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+\begin_inset Formula $\pod$
+\end_inset
+
+ Air FHC 
+\begin_inset Formula $\numu$
+\end_inset
+
+ CC-Inc.
+ Lepton Cand.
+ Reco.
+ 
+\begin_inset Formula $\cos\theta$
+\end_inset
+
+ by True Topology
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:P0DairFHCnumuCC1TrackAngleTrueTopology"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/SamplesandSelections/numuFHC/CC1Track/numuCC1TrackWaterOut_trueE_nu_MC_only_NEUTNuReactionCodes_fhc_air.png
+	lyxscale 49
+	width 40text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Nominal MC
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/SamplesandSelections/numuFHC/CC1Track/numuCC1TrackWaterOut_trueE_nu_MC_only_NEUTNuReactionCodes_fhc_air_fluxtuned.png
+	lyxscale 50
+	width 40text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Flux
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/SamplesandSelections/numuFHC/CC1Track/numuCC1TrackWaterOut_trueE_nu_MC_only_NEUTNuReactionCodes_fhc_air_systematicweighted.png
+	lyxscale 50
+	width 40text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Systematics
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/SamplesandSelections/numuFHC/CC1Track/numuCC1TrackWaterOut_trueE_nu_MC_only_NEUTNuReactionCodes_fhc_air_fluxtuned_systematicweighted.png
+	lyxscale 50
+	width 40text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Flux + systematics
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+True neutrino energy associated with the lepton candidate separated by NEUT
+ model interaction mode for FHC 
+\begin_inset Formula $\numu$
+\end_inset
+
+ CC-Inc.
+ events occurring in the 
+\begin_inset Formula $\pod$
+\end_inset
+
+ in water-out mode.
+ (a) The nominal MC prediction without any weights applied.
+ (b) The flux tuning is applied.
+ (c) The systematic weighting is applied.
+ (d) Both flux and systematic weighting is applied.
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+\begin_inset Formula $\pod$
+\end_inset
+
+ Air FHC 
+\begin_inset Formula $\numu$
+\end_inset
+
+ CC-Inc.
+ Lepton Cand.
+ True 
+\begin_inset Formula $E_{\nu}$
+\end_inset
+
+ by NEUT Mode
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:P0DairFHCnumuCC1TrackEnuTrueNEUTNuMode"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+\begin_inset Formula $\boldsymbol{\antinumu}$
+\end_inset
+
+ 
+\series bold
+Selection in RHC Mode:
+\end_layout
+
+\begin_layout Standard
+Figures
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/SamplesandSelections/numubarRHC/CC1Track/numubarRHCCC1TrackWaterOut_recoP_mu_MC_only_LeptonCandidateTruePDG_rhc_air.png
+	lyxscale 49
+	width 40text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Nominal MC
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/SamplesandSelections/numubarRHC/CC1Track/HL2/Run6e_Air/NumubarinRHCCC1Track_momentum_particle_nominal_mc.png
+	lyxscale 49
+	width 40text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Nominal MC from Highland2
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/SamplesandSelections/numubarRHC/CC1Track/numubarRHCCC1TrackWaterOut_recoP_mu_MC_only_LeptonCandidateTruePDG_rhc_air_fluxtuned.png
+	lyxscale 50
+	width 40text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Flux
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/SamplesandSelections/numubarRHC/CC1Track/numubarRHCCC1TrackWaterOut_recoP_mu_MC_only_LeptonCandidateTruePDG_rhc_air_systematicweighted.png
+	lyxscale 50
+	width 40text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Systematics
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/SamplesandSelections/numubarRHC/CC1Track/numubarRHCCC1TrackWaterOut_recoP_mu_MC_only_LeptonCandidateTruePDG_rhc_air_fluxtuned_systematicweighted.png
+	lyxscale 50
+	width 40text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Flux + systematics
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/SamplesandSelections/numubarRHC/CC1Track/HL2/Run6e_Air/NumubarinRHCCC1Track_momentum_particle_fluxtuned_systematicweighted.png
+	lyxscale 50
+	width 40text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Fully weighted in Highland2
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Reconstructed lepton candidate momentum separated by true particle species
+ for RHC 
+\begin_inset Formula $\numubar$
+\end_inset
+
+ CC-Inc.
+ events occurring in the 
+\begin_inset Formula $\pod$
+\end_inset
+
+ in water-out mode.
+ Reconstructed lepton candidate angle separated by true particle species
+ for RHC 
+\begin_inset Formula $\numubar$
+\end_inset
+
+ CC-Inc.
+ events occurring in the 
+\begin_inset Formula $\pod$
+\end_inset
+
+ in water-in mode.
+ (a) The nominal MC prediction without any weights applied.
+ (b) Highland2 comparison for (a) without any weights applied using the
+ 
+\begin_inset Quotes eld
+\end_inset
+
+NOW
+\begin_inset Quotes erd
+\end_inset
+
+ draw option.
+ (c) The flux tuning is applied.
+ (d) The systematic weighting is applied.
+ (e) Both flux and systematic weighting is applied.
+ (f) Highland2 comparison for (e).
+ 
+\begin_inset Argument 1
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Formula $\pod$
+\end_inset
+
+ Air RHC 
+\begin_inset Formula $\numubar$
+\end_inset
+
+ CC-Inc.
+ Lepton Cand.
+ Reco.
+ Momentum by True Particle
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:P0DairRHCnumubarCC1TrackMomTrueParticle"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/SamplesandSelections/numubarRHC/CC1Track/numubarRHCCC1TrackWaterOut_recocosq_mu_MC_only_LeptonCandidateTruePDG_rhc_air.png
+	lyxscale 49
+	width 40text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Nominal MC
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/SamplesandSelections/numubarRHC/CC1Track/HL2/Run6e_Air/NumubarinRHCCC1Track_costheta_particle_nominal_mc.png
+	lyxscale 49
+	width 40text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Nominal MC from Highland2
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/SamplesandSelections/numubarRHC/CC1Track/numubarRHCCC1TrackWaterOut_recocosq_mu_MC_only_LeptonCandidateTruePDG_rhc_air_fluxtuned.png
+	lyxscale 50
+	width 40text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Flux
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/SamplesandSelections/numubarRHC/CC1Track/numubarRHCCC1TrackWaterOut_recocosq_mu_MC_only_LeptonCandidateTruePDG_rhc_air_systematicweighted.png
+	lyxscale 50
+	width 40text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Systematics
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/SamplesandSelections/numubarRHC/CC1Track/numubarRHCCC1TrackWaterOut_recocosq_mu_MC_only_LeptonCandidateTruePDG_rhc_air_fluxtuned_systematicweighted.png
+	lyxscale 50
+	width 40text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Flux + systematics
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/SamplesandSelections/numubarRHC/CC1Track/HL2/Run6e_Air/NumubarinRHCCC1Track_costheta_particle_fluxtuned_systematicweighted.png
+	lyxscale 50
+	width 40text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Fully weighted in Highland2
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Reconstructed lepton candidate angle separated by true particle species
+ for RHC 
+\begin_inset Formula $\numubar$
+\end_inset
+
+ CC-Inc.
+ events occurring in the 
+\begin_inset Formula $\pod$
+\end_inset
+
+ in water-out mode.
+ (a) The nominal MC prediction without any weights applied.
+ (b) Highland2 comparison for (a) without any weights applied using the
+ 
+\begin_inset Quotes eld
+\end_inset
+
+NOW
+\begin_inset Quotes erd
+\end_inset
+
+ draw option.
+ (c) The flux tuning is applied.
+ (d) The systematic weighting is applied.
+ (e) Both flux and systematic weighting is applied.
+ (f) Highland2 comparison for (e).
+ 
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+\begin_inset Formula $\pod$
+\end_inset
+
+ Air RHC 
+\begin_inset Formula $\numubar$
+\end_inset
+
+ CC-Inc.
+ Lepton Cand.
+ Reco.
+ 
+\begin_inset Formula $\cos\theta$
+\end_inset
+
+ by True Particle
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:P0DairRHCnumubarCC1TrackAngleTrueParticle"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/SamplesandSelections/numubarRHC/CC1Track/numubarRHCCC1TrackWaterOut_recoP_mu_MC_only_NEUTAntiNuReactionCodes_rhc_air.png
+	lyxscale 49
+	width 40text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Nominal MC
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/SamplesandSelections/numubarRHC/CC1Track/numubarRHCCC1TrackWaterOut_recoP_mu_MC_only_NEUTAntiNuReactionCodes_rhc_air_fluxtuned.png
+	lyxscale 50
+	width 40text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Flux
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/SamplesandSelections/numubarRHC/CC1Track/numubarRHCCC1TrackWaterOut_recoP_mu_MC_only_NEUTAntiNuReactionCodes_rhc_air_systematicweighted.png
+	lyxscale 50
+	width 40text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Systematics
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/SamplesandSelections/numubarRHC/CC1Track/numubarRHCCC1TrackWaterOut_recoP_mu_MC_only_NEUTAntiNuReactionCodes_rhc_air_fluxtuned_systematicweighted.png
+	lyxscale 50
+	width 40text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Flux + systematics
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Reconstructed lepton candidate momentum separated by NEUT model interaction
+ mode for RHC 
+\begin_inset Formula $\numubar$
+\end_inset
+
+ CC-Inc.
+ events occurring in the 
+\begin_inset Formula $\pod$
+\end_inset
+
+ in water-out mode.
+ (a) The nominal MC prediction without any weights applied.
+ (b) The flux tuning is applied.
+ (c) The systematic weighting is applied.
+ (d) Both flux and systematic weighting is applied.
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+\begin_inset Formula $\pod$
+\end_inset
+
+ Air RHC 
+\begin_inset Formula $\numubar$
+\end_inset
+
+ CC-Inc.
+ Lepton Cand.
+ Reco.
+ Momentum by NEUT Mode
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:P0DairRHCnumubarCC1TrackMomTrueNEUTAntiNuMode"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/SamplesandSelections/numubarRHC/CC1Track/numubarRHCCC1TrackWaterOut_recocosq_mu_MC_only_NEUTAntiNuReactionCodes_rhc_air.png
+	lyxscale 49
+	width 40text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Nominal MC
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/SamplesandSelections/numubarRHC/CC1Track/numubarRHCCC1TrackWaterOut_recocosq_mu_MC_only_NEUTAntiNuReactionCodes_rhc_air_fluxtuned.png
+	lyxscale 50
+	width 40text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Flux
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/SamplesandSelections/numubarRHC/CC1Track/numubarRHCCC1TrackWaterOut_recocosq_mu_MC_only_NEUTAntiNuReactionCodes_rhc_air_systematicweighted.png
+	lyxscale 50
+	width 40text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Systematics
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/SamplesandSelections/numubarRHC/CC1Track/numubarRHCCC1TrackWaterOut_recocosq_mu_MC_only_NEUTAntiNuReactionCodes_rhc_air_fluxtuned_systematicweighted.png
+	lyxscale 50
+	width 40text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Flux + systematics
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Reconstructed lepton candidate 
+\begin_inset Formula $\cos\theta$
+\end_inset
+
+ separated by NEUT model interaction mode for RHC 
+\begin_inset Formula $\numubar$
+\end_inset
+
+ CC-Inc.
+ events occurring in the 
+\begin_inset Formula $\pod$
+\end_inset
+
+ in water-out mode.
+ (a) The nominal MC prediction without any weights applied.
+ (b) The flux tuning is applied.
+ (c) The systematic weighting is applied.
+ (d) Both flux and systematic weighting is applied.
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+\begin_inset Formula $\pod$
+\end_inset
+
+ Air RHC 
+\begin_inset Formula $\numubar$
+\end_inset
+
+ CC-Inc.
+ Lepton Cand.
+ Reco.
+ 
+\begin_inset Formula $\cos\theta$
+\end_inset
+
+ by NEUT Mode
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:P0DairRHCnumubarCC1TrackAngleTrueNEUTAntiNuMode"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/SamplesandSelections/numubarRHC/CC1Track/numubarRHCCC1TrackWaterOut_recoP_mu_MC_only_TrueTopology_rhc_air.png
+	lyxscale 49
+	width 40text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Nominal MC
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/SamplesandSelections/numubarRHC/CC1Track/numubarRHCCC1TrackWaterOut_recoP_mu_MC_only_TrueTopology_rhc_air_fluxtuned.png
+	lyxscale 50
+	width 40text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Flux
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/SamplesandSelections/numubarRHC/CC1Track/numubarRHCCC1TrackWaterOut_recoP_mu_MC_only_TrueTopology_rhc_air_systematicweighted.png
+	lyxscale 50
+	width 40text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Systematics
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/SamplesandSelections/numubarRHC/CC1Track/numubarRHCCC1TrackWaterOut_recoP_mu_MC_only_TrueTopology_rhc_air_fluxtuned_systematicweighted.png
+	lyxscale 50
+	width 40text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Flux + systematics
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Reconstructed lepton candidate momentum separated by topology for RHC 
+\begin_inset Formula $\numubar$
+\end_inset
+
+ CC-Inc.
+ events occurring in the 
+\begin_inset Formula $\pod$
+\end_inset
+
+ in water-out mode.
+ (a) The nominal MC prediction without any weights applied.
+ (b) The flux tuning is applied.
+ (c) The systematic weighting is applied.
+ (d) Both flux and systematic weighting is applied.
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+\begin_inset Formula $\pod$
+\end_inset
+
+ Air RHC 
+\begin_inset Formula $\numubar$
+\end_inset
+
+ CC-Inc.
+ Lepton Cand.
+ Reco.
+ Momentum by True Topology
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:P0DairRHCnumubarCC1TrackMomTrueTopology"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/SamplesandSelections/numubarRHC/CC1Track/numubarRHCCC1TrackWaterOut_recocosq_mu_MC_only_TrueTopology_rhc_air.png
+	lyxscale 49
+	width 40text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Nominal MC
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/SamplesandSelections/numubarRHC/CC1Track/numubarRHCCC1TrackWaterOut_recocosq_mu_MC_only_TrueTopology_rhc_air_fluxtuned.png
+	lyxscale 50
+	width 40text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Flux
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/SamplesandSelections/numubarRHC/CC1Track/numubarRHCCC1TrackWaterOut_recocosq_mu_MC_only_TrueTopology_rhc_air_systematicweighted.png
+	lyxscale 50
+	width 40text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Systematics
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/SamplesandSelections/numubarRHC/CC1Track/numubarRHCCC1TrackWaterOut_recocosq_mu_MC_only_TrueTopology_rhc_air_fluxtuned_systematicweighted.png
+	lyxscale 50
+	width 40text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Flux + systematics
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Reconstructed lepton candidate 
+\begin_inset Formula $\cos\theta$
+\end_inset
+
+ separated by topology for RHC 
+\begin_inset Formula $\numubar$
+\end_inset
+
+ CC-Inc.
+ events occurring in the 
+\begin_inset Formula $\pod$
+\end_inset
+
+ in water-out mode.
+ (a) The nominal MC prediction without any weights applied.
+ (b) The flux tuning is applied.
+ (c) The systematic weighting is applied.
+ (d) Both flux and systematic weighting is applied.
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+\begin_inset Formula $\pod$
+\end_inset
+
+ Air RHC 
+\begin_inset Formula $\numubar$
+\end_inset
+
+ CC-Inc.
+ Lepton Cand.
+ Reco.
+ 
+\begin_inset Formula $\cos\theta$
+\end_inset
+
+ by True Topology
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:P0DairRHCnumubarCC1TrackAngleTrueTopology"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/SamplesandSelections/numubarRHC/CC1Track/numubarRHCCC1TrackWaterOut_trueE_nu_MC_only_NEUTAntiNuReactionCodes_rhc_air.png
+	lyxscale 49
+	width 40text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Nominal MC
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/SamplesandSelections/numubarRHC/CC1Track/numubarRHCCC1TrackWaterOut_trueE_nu_MC_only_NEUTAntiNuReactionCodes_rhc_air_fluxtuned.png
+	lyxscale 50
+	width 40text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Flux
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/SamplesandSelections/numubarRHC/CC1Track/numubarRHCCC1TrackWaterOut_trueE_nu_MC_only_NEUTAntiNuReactionCodes_rhc_air_systematicweighted.png
+	lyxscale 50
+	width 40text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Systematics
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/SamplesandSelections/numubarRHC/CC1Track/numubarRHCCC1TrackWaterOut_trueE_nu_MC_only_NEUTAntiNuReactionCodes_rhc_air_fluxtuned_systematicweighted.png
+	lyxscale 50
+	width 40text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Flux + systematics
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+True neutrino energy associated with the lepton candidate separated by NEUT
+ model interaction mode for RHC 
+\begin_inset Formula $\numubar$
+\end_inset
+
+ CC-Inc.
+ events occurring in the 
+\begin_inset Formula $\pod$
+\end_inset
+
+ in water-out mode.
+ (a) The nominal MC prediction without any weights applied.
+ (b) The flux tuning is applied.
+ (c) The systematic weighting is applied.
+ (d) Both flux and systematic weighting is applied.
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+\begin_inset Formula $\pod$
+\end_inset
+
+ Air FHC 
+\begin_inset Formula $\numubar$
+\end_inset
+
+ CC-Inc.
+ Lepton Cand.
+ True 
+\begin_inset Formula $E_{\nu}$
+\end_inset
+
+ by NEUT Mode
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:P0DairRHCnumubarCC1TrackEnuTrueNEUTNuMode"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+\begin_inset Formula $\boldsymbol{\numu}$
+\end_inset
+
+ 
+\series bold
+Background Selection in RHC
+\series default
+ Mode:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+todo{A-to}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Standard
 \begin_inset ERT
 status open
@@ -6963,6 +10366,22 @@ status open
 
 \backslash
 todo{Add figures here}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+todo{A-to}
 \end_layout
 
 \end_inset
@@ -6989,6 +10408,16 @@ todo{Add figures here}
 
 
 \end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Branch SelectionsP0DWaterIn
+inverted 0
+status collapsed
 
 \begin_layout Subsection
 \begin_inset Formula $\pod$
@@ -7362,7 +10791,7 @@ name "fig:P0DwaterFHCnumuCCIncMomTrueParticle"
 placement H
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
@@ -10276,8 +13705,18 @@ todo{Add figures here}
 
 \end_layout
 
+\end_inset
+
+
+\end_layout
+
 \begin_layout Subsubsection
 Differences Between Water-Out and Water-In Samples
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \end_body
