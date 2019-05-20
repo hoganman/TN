@@ -316,18 +316,20 @@ Data calibration in ND280 is the process where the charge and timing information
 \end_layout
 
 \begin_layout Standard
-The Global reconstruction, hereto referred to as Global, is a software package
- that attempts to recognize patterns of data to form tracks.
- Particle shower reconstruction will not be discussed in this TN.
- Each sub-detector reconstruction is run before Global since Global wants
- to match tracks first.
- Global attempts to match and re-fit individual sub-detector tracks using
- a Kalman filter while correcting for particle energy loss as a function
- of length and multi-scattering processes.
- In either sub-detector track or Global track re-fit, not all data collected
- may considered due to timing or locality considerations.
- A vertex associated with the re-fit object is also extracted using a different
- Kalman filter.
+The Global reconstruction is a software package that attempts to recognize
+ patterns of data to form tracks and find vertices for those tracks.
+ Particle shower reconstruction in Global will not be discussed in this
+ TN since no shower objects are used.
+ Each sub-detector reconstruction is run to seeds Global's track matching
+ algorithms.
+ Global attempts to then re-fit sub-detector tracks using a Kalman filter
+ while correcting for particle energy loss as a function of length (
+\begin_inset Formula $dE/dx$
+\end_inset
+
+) and multi-scattering processes.
+ A vertex is then associated with the re-fit track using another Kalman
+ filter algorithm.
  A further detailed description of the track matching and vertex finding
  algorithms for Global is described in T2K-TN-46
 \begin_inset CommandInset citation
@@ -348,7 +350,7 @@ literal "false"
 \begin_layout Standard
 \begin_inset Branch SelectionsCuts
 inverted 0
-status collapsed
+status open
 
 \begin_layout Subsection
 \begin_inset Formula $\pod$
@@ -1023,10 +1025,13 @@ noprefix "false"
 \end_inset
 
  analysis.
- This is a FHC mode selection and the vast majority of neutrino interaction
- events occur with muon-type neutrinos with an outgoing muon from the interactio
-n vertex.
- If there is no negatively charged track in the TPC, the event is rejected.
+ In FHC mode, the vast majority of neutrino interactions are 
+\begin_inset Formula $\numu$
+\end_inset
+
+CC events producing an outgoing, negatively charged muon.
+ So if there is no negatively charged track in the TPC, the event is rejected.
+ The highest momentum, negatively charged track is the lepton candidate.
 \end_layout
 
 \begin_layout Subsubsection
