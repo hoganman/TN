@@ -54,12 +54,12 @@
 \justification true
 \use_refstyle 1
 \use_minted 0
-\branch SelectionsP0DWaterOut
+\branch SelectionsKinematicsP0DWaterOut
 \selected 1
 \filename_suffix 0
 \color #faf0e6
 \end_branch
-\branch SelectionsP0DWaterIn
+\branch SelectionsKinematicsP0DWaterIn
 \selected 1
 \filename_suffix 0
 \color #faf0e6
@@ -998,7 +998,10 @@ This concludes the application of precuts to all the CC-Inclusive selections.
 \end_layout
 
 \begin_layout Subsubsection
-CC-Inclusive in FHC
+\begin_inset Formula $\numu$
+\end_inset
+
+ CC-Inclusive in FHC Cut
 \end_layout
 
 \begin_layout Standard
@@ -1031,11 +1034,69 @@ noprefix "false"
 
 CC events producing an outgoing, negatively charged muon.
  So if there is no negatively charged track in the TPC, the event is rejected.
- The highest momentum, negatively charged track is the lepton candidate.
+ The highest momentum negatively charged track (HMNT) is the lepton candidate.
 \end_layout
 
 \begin_layout Subsubsection
-CC-Inclusive in RHC
+\begin_inset Formula $\numubar$
+\end_inset
+
+ CC-Inclusive in RHC Cuts
+\end_layout
+
+\begin_layout Standard
+In RHC, the majority of neutrinos in the beam is 
+\begin_inset Formula $\numubar$
+\end_inset
+
+ since the horn focuses negatively charged pions.
+ To select 
+\begin_inset Formula $\numubar$
+\end_inset
+
+CC interaction events by selecting positively charged muons, the lepton
+ candidate is the highest momentum positively charged track (HMPT) in the
+ TPC.
+ However, since the RHC mode beam is not as 
+\begin_inset Formula $\numubar$
+\end_inset
+
+ pure as the FHC beam, another cut was added to reduce this effect.
+\end_layout
+
+\begin_layout Standard
+Since RHC neutrino beam can be described as a 
+\begin_inset Formula $\numubar$
+\end_inset
+
+-enhanced beam, the HMPT must also be the highest momentum track (HMT).
+ due to the significant 
+\begin_inset Quotes eld
+\end_inset
+
+wrong-sign
+\begin_inset Quotes erd
+\end_inset
+
+ 
+\begin_inset Formula $\numu$
+\end_inset
+
+ background.
+ This effect is two fold due to the nature of the neutrino source and the
+ cross section between neutrinos and antineutrinos.
+ Since the source of neutrinos are from protons, the excess of positive
+ charge is more likely to produce positively charged pions than negatively
+ charged one.
+ are many more positively charged pions produced that are not deflected
+ Due to this background, an additional cut was
+\end_layout
+
+\begin_layout Subsubsection
+\begin_inset Formula $\numu$
+\end_inset
+
+ Background CC-Inclusive in RHC Cuts
 \end_layout
 
 \end_inset
@@ -1046,7 +1107,7 @@ CC-Inclusive in RHC
 \begin_layout Standard
 \begin_inset Branch SelectionsKinematics
 inverted 0
-status collapsed
+status open
 
 \begin_layout Subsection
 Sample Kinematics and Validation
@@ -2185,7 +2246,7 @@ POT Used in This Analysis
 \end_layout
 
 \begin_layout Standard
-\begin_inset Branch SelectionsP0DWaterOut
+\begin_inset Branch SelectionsKinematicsP0DWaterOut
 inverted 0
 status collapsed
 
@@ -10420,7 +10481,7 @@ todo{Add figures here}
 \end_layout
 
 \begin_layout Standard
-\begin_inset Branch SelectionsP0DWaterIn
+\begin_inset Branch SelectionsKinematicsP0DWaterIn
 inverted 0
 status collapsed
 

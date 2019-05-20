@@ -397,7 +397,10 @@ inverted 0
 status open
 
 \begin_layout Section
-PØD Selections and Data Samples
+\begin_inset Formula $\pod$
+\end_inset
+
+ Selections and Data Samples
 \end_layout
 
 \begin_layout Standard
