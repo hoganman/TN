@@ -134,7 +134,7 @@ tabs-within-sections
 \use_refstyle 0
 \use_minted 0
 \branch Introduction
-\selected 1
+\selected 0
 \filename_suffix 0
 \color #faf0e6
 \end_branch
@@ -149,17 +149,17 @@ tabs-within-sections
 \color #faf0e6
 \end_branch
 \branch BANFFLikelihood
-\selected 1
+\selected 0
 \filename_suffix 0
 \color #faf0e6
 \end_branch
 \branch P0DBANFFParameterization
-\selected 1
+\selected 0
 \filename_suffix 0
 \color #faf0e6
 \end_branch
 \branch FitterValidation
-\selected 0
+\selected 1
 \filename_suffix 0
 \color #faf0e6
 \end_branch
@@ -169,7 +169,7 @@ tabs-within-sections
 \color #faf0e6
 \end_branch
 \branch Discussion
-\selected 1
+\selected 0
 \filename_suffix 0
 \color #faf0e6
 \end_branch
@@ -487,7 +487,7 @@ filename "Sections/FitterValidation.lyx"
 
 
 \begin_inset Branch FitterResults
-inverted 0
+inverted 1
 status open
 
 \begin_layout Section
