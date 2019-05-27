@@ -2248,7 +2248,7 @@ POT Used in This Analysis
 \begin_layout Standard
 \begin_inset Branch SelectionsKinematicsP0DWaterOut
 inverted 0
-status collapsed
+status open
 
 \begin_layout Subsection
 \begin_inset Formula $\pod$
@@ -2341,7 +2341,7 @@ CC-Inclusive events in FHC mode.
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -2662,42 +2662,6 @@ status collapsed
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename Figures/SamplesandSelections/numuFHC/CCInc/HL2/Run4_Air/NumuFHCCCInc_costheta_particle_nominal_mc.png
-	lyxscale 50
-	width 40text%
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-Nominal MC from Highland2
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\align center
-\begin_inset Float figure
-wide false
-sideways false
-status collapsed
-
-\begin_layout Plain Layout
-\align center
-\begin_inset Graphics
 	filename Figures/SamplesandSelections/numuFHC/CCInc/numuCCIncWaterOut_recocosq_mu_MC_only_LeptonCandidateTruePDG_fhc_air_fluxtuned.png
 	lyxscale 50
 	width 40text%
@@ -2722,6 +2686,10 @@ Flux
 \end_inset
 
 
+\end_layout
+
+\begin_layout Plain Layout
+\align center
 \begin_inset Float figure
 wide false
 sideways false
@@ -2754,10 +2722,6 @@ Systematics
 \end_inset
 
 
-\end_layout
-
-\begin_layout Plain Layout
-\align center
 \begin_inset Float figure
 wide false
 sideways false
@@ -2790,38 +2754,6 @@ Flux + systematics
 \end_inset
 
 
-\begin_inset Float figure
-wide false
-sideways false
-status collapsed
-
-\begin_layout Plain Layout
-\align center
-\begin_inset Graphics
-	filename Figures/SamplesandSelections/numuFHC/CCInc/HL2/Run4_Air/NumuFHCCCInc_costheta_particle_fluxtuned_systematicweighted.png
-	lyxscale 50
-	width 40text%
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-Fully weighted in Highland2
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Plain Layout
@@ -2840,20 +2772,9 @@ Reconstructed lepton candidate angle separated by true particle species
 
  in water-out mode.
  (a) The nominal MC prediction without any weights applied.
- (b) Highland2 comparison for (a) without any weights applied using the
- 
-\begin_inset Quotes eld
-\end_inset
-
-NOW
-\begin_inset Quotes erd
-\end_inset
-
- draw option.
- (c) The flux tuning is applied.
- (d) The systematic weighting is applied.
- (e) Both flux and systematic weighting is applied.
- (f) Highland2 comparison for (e).
+ (b) The flux tuning is applied.
+ (c) The systematic weighting is applied.
+ (d) Both flux and systematic weighting is applied.
  
 \begin_inset Argument 1
 status open
@@ -3968,7 +3889,7 @@ CC-Inclusive events in RHC mode.
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -4007,7 +3928,7 @@ Nominal MC
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -4143,7 +4064,7 @@ Flux + systematics
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -7531,42 +7452,6 @@ status collapsed
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename Figures/SamplesandSelections/numuFHC/CC1Track/HL2/Run4_Air/NumuFHCCC1Track_costheta_particle_nominal_mc.png
-	lyxscale 50
-	width 40text%
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-Nominal MC from Highland2
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\align center
-\begin_inset Float figure
-wide false
-sideways false
-status collapsed
-
-\begin_layout Plain Layout
-\align center
-\begin_inset Graphics
 	filename Figures/SamplesandSelections/numuFHC/CC1Track/numuCC1TrackWaterOut_recocosq_mu_MC_only_LeptonCandidateTruePDG_fhc_air_fluxtuned.png
 	lyxscale 50
 	width 40text%
@@ -7591,6 +7476,10 @@ Flux
 \end_inset
 
 
+\end_layout
+
+\begin_layout Plain Layout
+\align center
 \begin_inset Float figure
 wide false
 sideways false
@@ -7623,10 +7512,6 @@ Systematics
 \end_inset
 
 
-\end_layout
-
-\begin_layout Plain Layout
-\align center
 \begin_inset Float figure
 wide false
 sideways false
@@ -7659,38 +7544,6 @@ Flux + systematics
 \end_inset
 
 
-\begin_inset Float figure
-wide false
-sideways false
-status collapsed
-
-\begin_layout Plain Layout
-\align center
-\begin_inset Graphics
-	filename Figures/SamplesandSelections/numuFHC/CC1Track/HL2/Run4_Air/NumuFHCCC1Track_costheta_particle_fluxtuned_systematicweighted.png
-	lyxscale 50
-	width 40text%
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-Fully weighted in Highland2
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Plain Layout
@@ -7709,20 +7562,9 @@ Reconstructed lepton candidate angle separated by true particle species
 
  in water-out mode.
  (a) The nominal MC prediction without any weights applied.
- (b) Highland2 comparison for (a) without any weights applied using the
- 
-\begin_inset Quotes eld
-\end_inset
-
-NOW
-\begin_inset Quotes erd
-\end_inset
-
- draw option.
- (c) The flux tuning is applied.
- (d) The systematic weighting is applied.
- (e) Both flux and systematic weighting is applied.
- (f) Highland2 comparison for (e).
+ (b) The flux tuning is applied.
+ (c) The systematic weighting is applied.
+ (d) Both flux and systematic weighting is applied.
  
 \begin_inset Argument 1
 status open
@@ -10620,7 +10462,7 @@ status collapsed
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename Figures/SamplesandSelections/numuFHC/CCInc/numuCCIncWaterIn_recoP_mu_MC_only_LeptonCandidateTruePDG_fhc_water.png
+	filename Figures/SamplesandSelections/numuFHC/CCInc/HL2/Run4_Water/NumuFHCCCInc_momentum_particle_nominal_mc.png
 	lyxscale 49
 	width 40text%
 
@@ -10756,7 +10598,7 @@ status collapsed
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename Figures/SamplesandSelections/numuFHC/CCInc/numuCCIncWaterIn_recoP_mu_MC_only_LeptonCandidateTruePDG_fhc_water_fluxtuned_systematicweighted.png
+	filename Figures/SamplesandSelections/numuFHC/CCInc/HL2/Run4_Water/NumuFHCCCInc_momentum_particle_fluxtuned_systematicweighted.png
 	lyxscale 50
 	width 40text%
 
@@ -10896,42 +10738,6 @@ Nominal MC
 \begin_inset Float figure
 wide false
 sideways false
-status open
-
-\begin_layout Plain Layout
-\align center
-\begin_inset Graphics
-	filename Figures/SamplesandSelections/numuFHC/CCInc/HL2
-	lyxscale 49
-	width 40text%
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-Nominal MC from Highland2
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\align center
-\begin_inset Float figure
-wide false
-sideways false
 status collapsed
 
 \begin_layout Plain Layout
@@ -10961,6 +10767,10 @@ Flux
 \end_inset
 
 
+\end_layout
+
+\begin_layout Plain Layout
+\align center
 \begin_inset Float figure
 wide false
 sideways false
@@ -10993,10 +10803,6 @@ Systematics
 \end_inset
 
 
-\end_layout
-
-\begin_layout Plain Layout
-\align center
 \begin_inset Float figure
 wide false
 sideways false
@@ -11029,38 +10835,6 @@ Flux + systematics
 \end_inset
 
 
-\begin_inset Float figure
-wide false
-sideways false
-status open
-
-\begin_layout Plain Layout
-\align center
-\begin_inset Graphics
-	filename Figures/SamplesandSelections/numuFHC/CCInc/HL2
-	lyxscale 50
-	width 40text%
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-Fully weighted in Highland2
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Plain Layout
@@ -11079,20 +10853,9 @@ Reconstructed lepton candidate angle separated by true particle species
 
  in water-in mode.
  (a) The nominal MC prediction without any weights applied.
- (b) Highland2 comparison for (a) without any weights applied using the
- 
-\begin_inset Quotes eld
-\end_inset
-
-NOW
-\begin_inset Quotes erd
-\end_inset
-
- draw option.
- (c) The flux tuning is applied.
- (d) The systematic weighting is applied.
- (e) Both flux and systematic weighting is applied.
- (f) Highland2 comparison for (e).
+ (b) The flux tuning is applied.
+ (c) The systematic weighting is applied.
+ (d) Both flux and systematic weighting is applied.
  
 \begin_inset Argument 1
 status open
@@ -12212,7 +11975,7 @@ status collapsed
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
@@ -12244,7 +12007,7 @@ Nominal MC
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
@@ -12280,7 +12043,7 @@ Flux
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
@@ -12312,7 +12075,7 @@ Systematics
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
@@ -12450,42 +12213,6 @@ status collapsed
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename Figures/SamplesandSelections/numubarRHCCCInc/HL2/Run7b_Water/NumubarinRHCCCInc_costheta_particle_nominal_mc.png
-	lyxscale 49
-	width 40text%
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-Nominal MC from Highland2
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\align center
-\begin_inset Float figure
-wide false
-sideways false
-status collapsed
-
-\begin_layout Plain Layout
-\align center
-\begin_inset Graphics
 	filename Figures/SamplesandSelections/numubarRHCCCInc/numubarRHCCCIncWaterIn_recocosq_mu_MC_only_LeptonCandidateTruePDG_rhc_water_fluxtuned.png
 	lyxscale 50
 	width 40text%
@@ -12510,6 +12237,10 @@ Flux
 \end_inset
 
 
+\end_layout
+
+\begin_layout Plain Layout
+\align center
 \begin_inset Float figure
 wide false
 sideways false
@@ -12542,10 +12273,6 @@ Systematics
 \end_inset
 
 
-\end_layout
-
-\begin_layout Plain Layout
-\align center
 \begin_inset Float figure
 wide false
 sideways false
@@ -12578,38 +12305,6 @@ Flux + systematics
 \end_inset
 
 
-\begin_inset Float figure
-wide false
-sideways false
-status collapsed
-
-\begin_layout Plain Layout
-\align center
-\begin_inset Graphics
-	filename Figures/SamplesandSelections/numubarRHCCCInc/HL2/Run7b_Water/NumubarinRHCCCInc_costheta_particle_fluxtuned_systematicweighted.png
-	lyxscale 50
-	width 40text%
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-Fully weighted in Highland2
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Plain Layout
@@ -12628,20 +12323,9 @@ Reconstructed lepton candidate angle separated by true particle species
 
  in water-in mode.
  (a) The nominal MC prediction without any weights applied.
- (b) Highland2 comparison for (a) without any weights applied using the
- 
-\begin_inset Quotes eld
-\end_inset
-
-NOW
-\begin_inset Quotes erd
-\end_inset
-
- draw option.
- (c) The flux tuning is applied.
- (d) The systematic weighting is applied.
- (e) Both flux and systematic weighting is applied.
- (f) Highland2 comparison for (e).
+ (b) The flux tuning is applied.
+ (c) The systematic weighting is applied.
+ (d) Both flux and systematic weighting is applied.
  
 \begin_inset Argument 1
 status open
