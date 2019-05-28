@@ -2248,7 +2248,7 @@ POT Used in This Analysis
 \begin_layout Standard
 \begin_inset Branch SelectionsKinematicsP0DWaterOut
 inverted 0
-status collapsed
+status open
 
 \begin_layout Subsection
 \begin_inset Formula $\pod$
@@ -2350,7 +2350,7 @@ CC Inclusive events in FHC mode.
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -2579,9 +2579,9 @@ NOW
 \end_inset
 
  draw option.
- (c) The flux tuning is applied.
- (d) The systematic weighting is applied.
- (e) Both flux and systematic weighting is applied.
+ (c) The flux tuning are applied.
+ (d) The systematic weighting are applied.
+ (e) Both flux and systematic weighting are applied.
  (f) Highland2 comparison for (e).
 \begin_inset Argument 1
 status open
@@ -2781,9 +2781,9 @@ Reconstructed lepton candidate angle separated by true particle species
 
  in water-out mode.
  (a) The nominal MC prediction without any weights applied.
- (b) The flux tuning is applied.
- (c) The systematic weighting is applied.
- (d) Both flux and systematic weighting is applied.
+ (b) The flux tuning are applied.
+ (c) The systematic weighting are applied.
+ (d) Both flux and systematic weighting are applied.
  
 \begin_inset Argument 1
 status open
@@ -2987,9 +2987,9 @@ Reconstructed lepton candidate momentum separated by NEUT model interaction
 
  in water-out mode.
  (a) The nominal MC prediction without any weights applied.
- (b) The flux tuning is applied.
- (c) The systematic weighting is applied.
- (d) Both flux and systematic weighting is applied.
+ (b) The flux tuning are applied.
+ (c) The systematic weighting are applied.
+ (d) Both flux and systematic weighting are applied.
 \begin_inset Argument 1
 status open
 
@@ -3191,9 +3191,9 @@ Reconstructed lepton candidate
 
  in water-out mode.
  (a) The nominal MC prediction without any weights applied.
- (b) The flux tuning is applied.
- (c) The systematic weighting is applied.
- (d) Both flux and systematic weighting is applied.
+ (b) The flux tuning are applied.
+ (c) The systematic weighting are applied.
+ (d) Both flux and systematic weighting are applied.
 \begin_inset Argument 1
 status open
 
@@ -3395,9 +3395,9 @@ Reconstructed lepton candidate momentum separated by topology for FHC
 
  in water-out mode.
  (a) The nominal MC prediction without any weights applied.
- (b) The flux tuning is applied.
- (c) The systematic weighting is applied.
- (d) Both flux and systematic weighting is applied.
+ (b) The flux tuning are applied.
+ (c) The systematic weighting are applied.
+ (d) Both flux and systematic weighting are applied.
 \begin_inset Argument 1
 status open
 
@@ -3599,9 +3599,9 @@ Reconstructed lepton candidate
 
  in water-out mode.
  (a) The nominal MC prediction without any weights applied.
- (b) The flux tuning is applied.
- (c) The systematic weighting is applied.
- (d) Both flux and systematic weighting is applied.
+ (b) The flux tuning are applied.
+ (c) The systematic weighting are applied.
+ (d) Both flux and systematic weighting are applied.
 \begin_inset Argument 1
 status open
 
@@ -3804,9 +3804,9 @@ True neutrino energy associated with the lepton candidate separated by NEUT
 
  in water-out mode.
  (a) The nominal MC prediction without any weights applied.
- (b) The flux tuning is applied.
- (c) The systematic weighting is applied.
- (d) Both flux and systematic weighting is applied.
+ (b) The flux tuning are applied.
+ (c) The systematic weighting are applied.
+ (d) Both flux and systematic weighting are applied.
 \begin_inset Argument 1
 status open
 
@@ -3951,42 +3951,6 @@ status collapsed
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename Figures/SamplesandSelections/numubarRHC/CCInc/HL2/Run6e_Air/NumubarRHCCCInc_momentum_particle_nominal_mc.png
-	lyxscale 49
-	width 40text%
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-Nominal MC from Highland2
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\align center
-\begin_inset Float figure
-wide false
-sideways false
-status collapsed
-
-\begin_layout Plain Layout
-\align center
-\begin_inset Graphics
 	filename Figures/SamplesandSelections/numubarRHC/CCInc/numubarRHCCCIncWaterOut_recoP_mu_MC_only_LeptonCandidateTruePDG_rhc_air_fluxtuned.png
 	lyxscale 50
 	width 40text%
@@ -4011,6 +3975,10 @@ Flux
 \end_inset
 
 
+\end_layout
+
+\begin_layout Plain Layout
+\align center
 \begin_inset Float figure
 wide false
 sideways false
@@ -4043,10 +4011,6 @@ Systematics
 \end_inset
 
 
-\end_layout
-
-\begin_layout Plain Layout
-\align center
 \begin_inset Float figure
 wide false
 sideways false
@@ -4069,38 +4033,6 @@ status collapsed
 
 \begin_layout Plain Layout
 Flux + systematics
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\begin_inset Float figure
-wide false
-sideways false
-status collapsed
-
-\begin_layout Plain Layout
-\align center
-\begin_inset Graphics
-	filename Figures/SamplesandSelections/numubarRHC/CCInc/HL2/Run6e_Air/NumubarRHCCCInc_momentum_particle_fluxtuned_systematicweighted.png
-	lyxscale 50
-	width 40text%
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-Fully weighted in Highland2
 \end_layout
 
 \end_inset
@@ -4137,20 +4069,9 @@ Reconstructed lepton candidate momentum separated by true particle species
 
  in water-in mode.
  (a) The nominal MC prediction without any weights applied.
- (b) Highland2 comparison for (a) without any weights applied using the
- 
-\begin_inset Quotes eld
-\end_inset
-
-NOW
-\begin_inset Quotes erd
-\end_inset
-
- draw option.
- (c) The flux tuning is applied.
- (d) The systematic weighting is applied.
- (e) Both flux and systematic weighting is applied.
- (f) Highland2 comparison for (e).
+ (b) The flux tuning are applied.
+ (c) The systematic weighting are applied.
+ (d) Both flux and systematic weighting are applied.
  
 \begin_inset Argument 1
 status collapsed
@@ -4350,9 +4271,9 @@ Reconstructed lepton candidate angle separated by true particle species
 
  in water-out mode.
  (a) The nominal MC prediction without any weights applied.
- (b) The flux tuning is applied.
- (c) The systematic weighting is applied.
- (d) Both flux and systematic weighting is applied.
+ (b) The flux tuning are applied.
+ (c) The systematic weighting are applied.
+ (d) Both flux and systematic weighting are applied.
  
 \begin_inset Argument 1
 status open
@@ -4556,9 +4477,9 @@ Reconstructed lepton candidate momentum separated by NEUT model interaction
 
  in water-out mode.
  (a) The nominal MC prediction without any weights applied.
- (b) The flux tuning is applied.
- (c) The systematic weighting is applied.
- (d) Both flux and systematic weighting is applied.
+ (b) The flux tuning are applied.
+ (c) The systematic weighting are applied.
+ (d) Both flux and systematic weighting are applied.
 \begin_inset Argument 1
 status open
 
@@ -4760,9 +4681,9 @@ Reconstructed lepton candidate
 
  in water-out mode.
  (a) The nominal MC prediction without any weights applied.
- (b) The flux tuning is applied.
- (c) The systematic weighting is applied.
- (d) Both flux and systematic weighting is applied.
+ (b) The flux tuning are applied.
+ (c) The systematic weighting are applied.
+ (d) Both flux and systematic weighting are applied.
 \begin_inset Argument 1
 status open
 
@@ -4964,9 +4885,9 @@ Reconstructed lepton candidate momentum separated by topology for RHC
 
  in water-out mode.
  (a) The nominal MC prediction without any weights applied.
- (b) The flux tuning is applied.
- (c) The systematic weighting is applied.
- (d) Both flux and systematic weighting is applied.
+ (b) The flux tuning are applied.
+ (c) The systematic weighting are applied.
+ (d) Both flux and systematic weighting are applied.
 \begin_inset Argument 1
 status open
 
@@ -5168,9 +5089,9 @@ Reconstructed lepton candidate
 
  in water-out mode.
  (a) The nominal MC prediction without any weights applied.
- (b) The flux tuning is applied.
- (c) The systematic weighting is applied.
- (d) Both flux and systematic weighting is applied.
+ (b) The flux tuning are applied.
+ (c) The systematic weighting are applied.
+ (d) Both flux and systematic weighting are applied.
 \begin_inset Argument 1
 status open
 
@@ -5373,9 +5294,9 @@ True neutrino energy associated with the lepton candidate separated by NEUT
 
  in water-out mode.
  (a) The nominal MC prediction without any weights applied.
- (b) The flux tuning is applied.
- (c) The systematic weighting is applied.
- (d) Both flux and systematic weighting is applied.
+ (b) The flux tuning are applied.
+ (c) The systematic weighting are applied.
+ (d) Both flux and systematic weighting are applied.
 \begin_inset Argument 1
 status open
 
@@ -5459,22 +5380,6 @@ ueTopology,fig:P0DairRHCnumuCCIncEnuTrueNEUTNuMode}
 \end_layout
 
 \begin_layout Standard
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-todo{Add HL2 figures here}
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
 \begin_inset Float figure
 placement H
 wide false
@@ -5523,42 +5428,6 @@ status collapsed
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename Figures/SamplesandSelections/numuFHC/CCInc/HL2
-	lyxscale 49
-	width 40text%
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-Nominal MC from Highland2
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\align center
-\begin_inset Float figure
-wide false
-sideways false
-status collapsed
-
-\begin_layout Plain Layout
-\align center
-\begin_inset Graphics
 	filename Figures/SamplesandSelections/numuBkgRHC/CCInc/numubkgRHCCCIncWaterOut_recoP_mu_MC_only_LeptonCandidateTruePDG_rhc_air_fluxtuned.png
 	lyxscale 50
 	width 40text%
@@ -5583,6 +5452,10 @@ Flux
 \end_inset
 
 
+\end_layout
+
+\begin_layout Plain Layout
+\align center
 \begin_inset Float figure
 wide false
 sideways false
@@ -5615,10 +5488,6 @@ Systematics
 \end_inset
 
 
-\end_layout
-
-\begin_layout Plain Layout
-\align center
 \begin_inset Float figure
 wide false
 sideways false
@@ -5651,38 +5520,6 @@ Flux + systematics
 \end_inset
 
 
-\begin_inset Float figure
-wide false
-sideways false
-status collapsed
-
-\begin_layout Plain Layout
-\align center
-\begin_inset Graphics
-	filename Figures/SamplesandSelections/numuFHC/CCInc/HL2
-	lyxscale 50
-	width 40text%
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-Fully weighted in Highland2
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
@@ -5698,20 +5535,10 @@ Reconstructed lepton candidate momentum separated by true particle species
 
  in water-out mode.
  (a) The nominal MC prediction without any weights applied.
- (b) Highland2 comparison for (a) without any weights applied using the
+ (b) The flux tuning are applied.
+ (c) The systematic weighting are applied.
+ (d) Both flux and systematic weighting are applied.
  
-\begin_inset Quotes eld
-\end_inset
-
-NOW
-\begin_inset Quotes erd
-\end_inset
-
- draw option.
- (c) The flux tuning is applied.
- (d) The systematic weighting is applied.
- (e) Both flux and systematic weighting is applied.
- (f) Highland2 comparison for (e).
 \begin_inset Argument 1
 status open
 
@@ -5800,42 +5627,6 @@ status collapsed
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename Figures/SamplesandSelections/numuFHC/CCInc/HL2
-	lyxscale 50
-	width 40text%
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-Nominal MC from Highland2
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\align center
-\begin_inset Float figure
-wide false
-sideways false
-status collapsed
-
-\begin_layout Plain Layout
-\align center
-\begin_inset Graphics
 	filename Figures/SamplesandSelections/numuBkgRHC/CCInc/numubkgRHCCCIncWaterOut_recocosq_mu_MC_only_LeptonCandidateTruePDG_rhc_air_fluxtuned.png
 	lyxscale 50
 	width 40text%
@@ -5860,6 +5651,10 @@ Flux
 \end_inset
 
 
+\end_layout
+
+\begin_layout Plain Layout
+\align center
 \begin_inset Float figure
 wide false
 sideways false
@@ -5892,10 +5687,6 @@ Systematics
 \end_inset
 
 
-\end_layout
-
-\begin_layout Plain Layout
-\align center
 \begin_inset Float figure
 wide false
 sideways false
@@ -5928,38 +5719,6 @@ Flux + systematics
 \end_inset
 
 
-\begin_inset Float figure
-wide false
-sideways false
-status collapsed
-
-\begin_layout Plain Layout
-\align center
-\begin_inset Graphics
-	filename Figures/SamplesandSelections/numuFHC/CCInc/HL2
-	lyxscale 50
-	width 40text%
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-Fully weighted in Highland2
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Plain Layout
@@ -5978,20 +5737,9 @@ Reconstructed lepton candidate angle separated by true particle species
 
  in water-out mode.
  (a) The nominal MC prediction without any weights applied.
- (b) Highland2 comparison for (a) without any weights applied using the
- 
-\begin_inset Quotes eld
-\end_inset
-
-NOW
-\begin_inset Quotes erd
-\end_inset
-
- draw option.
- (c) The flux tuning is applied.
- (d) The systematic weighting is applied.
- (e) Both flux and systematic weighting is applied.
- (f) Highland2 comparison for (e).
+ (b) The flux tuning are applied.
+ (c) The systematic weighting are applied.
+ (d) Both flux and systematic weighting are applied.
  
 \begin_inset Argument 1
 status open
@@ -6195,9 +5943,9 @@ Reconstructed lepton candidate momentum separated by NEUT model interaction
 
  in water-out mode.
  (a) The nominal MC prediction without any weights applied.
- (b) The flux tuning is applied.
- (c) The systematic weighting is applied.
- (d) Both flux and systematic weighting is applied.
+ (b) The flux tuning are applied.
+ (c) The systematic weighting are applied.
+ (d) Both flux and systematic weighting are applied.
 \begin_inset Argument 1
 status open
 
@@ -6399,9 +6147,9 @@ Reconstructed lepton candidate
 
  in water-out mode.
  (a) The nominal MC prediction without any weights applied.
- (b) The flux tuning is applied.
- (c) The systematic weighting is applied.
- (d) Both flux and systematic weighting is applied.
+ (b) The flux tuning are applied.
+ (c) The systematic weighting are applied.
+ (d) Both flux and systematic weighting are applied.
 \begin_inset Argument 1
 status open
 
@@ -6603,9 +6351,9 @@ Reconstructed lepton candidate momentum separated by topology for FHC
 
  in water-out mode.
  (a) The nominal MC prediction without any weights applied.
- (b) The flux tuning is applied.
- (c) The systematic weighting is applied.
- (d) Both flux and systematic weighting is applied.
+ (b) The flux tuning are applied.
+ (c) The systematic weighting are applied.
+ (d) Both flux and systematic weighting are applied.
 \begin_inset Argument 1
 status open
 
@@ -6807,9 +6555,9 @@ Reconstructed lepton candidate
 
  in water-out mode.
  (a) The nominal MC prediction without any weights applied.
- (b) The flux tuning is applied.
- (c) The systematic weighting is applied.
- (d) Both flux and systematic weighting is applied.
+ (b) The flux tuning are applied.
+ (c) The systematic weighting are applied.
+ (d) Both flux and systematic weighting are applied.
 \begin_inset Argument 1
 status open
 
@@ -7012,9 +6760,9 @@ True neutrino energy associated with the lepton candidate separated by NEUT
 
  in water-out mode.
  (a) The nominal MC prediction without any weights applied.
- (b) The flux tuning is applied.
- (c) The systematic weighting is applied.
- (d) Both flux and systematic weighting is applied.
+ (b) The flux tuning are applied.
+ (c) The systematic weighting are applied.
+ (d) Both flux and systematic weighting are applied.
 \begin_inset Argument 1
 status open
 
@@ -7317,9 +7065,9 @@ NOW
 \end_inset
 
  draw option.
- (c) The flux tuning is applied.
- (d) The systematic weighting is applied.
- (e) Both flux and systematic weighting is applied.
+ (c) The flux tuning are applied.
+ (d) The systematic weighting are applied.
+ (e) Both flux and systematic weighting are applied.
  (f) Highland2 comparison for (e).
 \begin_inset Argument 1
 status open
@@ -7519,9 +7267,9 @@ Reconstructed lepton candidate angle separated by true particle species
 
  in water-out mode.
  (a) The nominal MC prediction without any weights applied.
- (b) The flux tuning is applied.
- (c) The systematic weighting is applied.
- (d) Both flux and systematic weighting is applied.
+ (b) The flux tuning are applied.
+ (c) The systematic weighting are applied.
+ (d) Both flux and systematic weighting are applied.
  
 \begin_inset Argument 1
 status open
@@ -7725,9 +7473,9 @@ Reconstructed lepton candidate momentum separated by NEUT model interaction
 
  in water-out mode.
  (a) The nominal MC prediction without any weights applied.
- (b) The flux tuning is applied.
- (c) The systematic weighting is applied.
- (d) Both flux and systematic weighting is applied.
+ (b) The flux tuning are applied.
+ (c) The systematic weighting are applied.
+ (d) Both flux and systematic weighting are applied.
 \begin_inset Argument 1
 status open
 
@@ -7929,9 +7677,9 @@ Reconstructed lepton candidate
 
  in water-out mode.
  (a) The nominal MC prediction without any weights applied.
- (b) The flux tuning is applied.
- (c) The systematic weighting is applied.
- (d) Both flux and systematic weighting is applied.
+ (b) The flux tuning are applied.
+ (c) The systematic weighting are applied.
+ (d) Both flux and systematic weighting are applied.
 \begin_inset Argument 1
 status open
 
@@ -8133,9 +7881,9 @@ Reconstructed lepton candidate momentum separated by topology for FHC
 
  in water-out mode.
  (a) The nominal MC prediction without any weights applied.
- (b) The flux tuning is applied.
- (c) The systematic weighting is applied.
- (d) Both flux and systematic weighting is applied.
+ (b) The flux tuning are applied.
+ (c) The systematic weighting are applied.
+ (d) Both flux and systematic weighting are applied.
 \begin_inset Argument 1
 status open
 
@@ -8337,9 +8085,9 @@ Reconstructed lepton candidate
 
  in water-out mode.
  (a) The nominal MC prediction without any weights applied.
- (b) The flux tuning is applied.
- (c) The systematic weighting is applied.
- (d) Both flux and systematic weighting is applied.
+ (b) The flux tuning are applied.
+ (c) The systematic weighting are applied.
+ (d) Both flux and systematic weighting are applied.
 \begin_inset Argument 1
 status open
 
@@ -8542,9 +8290,9 @@ True neutrino energy associated with the lepton candidate separated by NEUT
 
  in water-out mode.
  (a) The nominal MC prediction without any weights applied.
- (b) The flux tuning is applied.
- (c) The systematic weighting is applied.
- (d) Both flux and systematic weighting is applied.
+ (b) The flux tuning are applied.
+ (c) The systematic weighting are applied.
+ (d) Both flux and systematic weighting are applied.
 \begin_inset Argument 1
 status open
 
@@ -8658,42 +8406,6 @@ status collapsed
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename Figures/SamplesandSelections/numubarRHC/CC1Track/HL2/Run6e_Air/NumubarRHCCC1Track_momentum_particle_nominal_mc.png
-	lyxscale 49
-	width 40text%
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-Nominal MC from Highland2
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\align center
-\begin_inset Float figure
-wide false
-sideways false
-status collapsed
-
-\begin_layout Plain Layout
-\align center
-\begin_inset Graphics
 	filename Figures/SamplesandSelections/numubarRHC/CC1Track/numubarRHCCC1TrackWaterOut_recoP_mu_MC_only_LeptonCandidateTruePDG_rhc_air_fluxtuned.png
 	lyxscale 50
 	width 40text%
@@ -8718,6 +8430,10 @@ Flux
 \end_inset
 
 
+\end_layout
+
+\begin_layout Plain Layout
+\align center
 \begin_inset Float figure
 wide false
 sideways false
@@ -8750,10 +8466,6 @@ Systematics
 \end_inset
 
 
-\end_layout
-
-\begin_layout Plain Layout
-\align center
 \begin_inset Float figure
 wide false
 sideways false
@@ -8776,38 +8488,6 @@ status collapsed
 
 \begin_layout Plain Layout
 Flux + systematics
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\begin_inset Float figure
-wide false
-sideways false
-status collapsed
-
-\begin_layout Plain Layout
-\align center
-\begin_inset Graphics
-	filename Figures/SamplesandSelections/numubarRHC/CC1Track/HL2/Run6e_Air/NumubarRHCCC1Track_momentum_particle_fluxtuned_systematicweighted.png
-	lyxscale 50
-	width 40text%
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-Fully weighted in Highland2
 \end_layout
 
 \end_inset
@@ -8844,20 +8524,9 @@ Reconstructed lepton candidate momentum separated by true particle species
 
  in water-in mode.
  (a) The nominal MC prediction without any weights applied.
- (b) Highland2 comparison for (a) without any weights applied using the
- 
-\begin_inset Quotes eld
-\end_inset
-
-NOW
-\begin_inset Quotes erd
-\end_inset
-
- draw option.
- (c) The flux tuning is applied.
- (d) The systematic weighting is applied.
- (e) Both flux and systematic weighting is applied.
- (f) Highland2 comparison for (e).
+ (b) The flux tuning are applied.
+ (c) The systematic weighting are applied.
+ (c) Both flux and systematic weighting are applied.
  
 \begin_inset Argument 1
 status collapsed
@@ -9057,9 +8726,9 @@ Reconstructed lepton candidate angle separated by true particle species
 
  in water-out mode.
  (a) The nominal MC prediction without any weights applied.
- (b) The flux tuning is applied.
- (c) The systematic weighting is applied.
- (d) Both flux and systematic weighting is applied.
+ (b) The flux tuning are applied.
+ (c) The systematic weighting are applied.
+ (d) Both flux and systematic weighting are applied.
  
 \begin_inset Argument 1
 status open
@@ -9263,9 +8932,9 @@ Reconstructed lepton candidate momentum separated by NEUT model interaction
 
  in water-out mode.
  (a) The nominal MC prediction without any weights applied.
- (b) The flux tuning is applied.
- (c) The systematic weighting is applied.
- (d) Both flux and systematic weighting is applied.
+ (b) The flux tuning are applied.
+ (c) The systematic weighting are applied.
+ (d) Both flux and systematic weighting are applied.
 \begin_inset Argument 1
 status open
 
@@ -9467,9 +9136,9 @@ Reconstructed lepton candidate
 
  in water-out mode.
  (a) The nominal MC prediction without any weights applied.
- (b) The flux tuning is applied.
- (c) The systematic weighting is applied.
- (d) Both flux and systematic weighting is applied.
+ (b) The flux tuning are applied.
+ (c) The systematic weighting are applied.
+ (d) Both flux and systematic weighting are applied.
 \begin_inset Argument 1
 status open
 
@@ -9671,9 +9340,9 @@ Reconstructed lepton candidate momentum separated by topology for RHC
 
  in water-out mode.
  (a) The nominal MC prediction without any weights applied.
- (b) The flux tuning is applied.
- (c) The systematic weighting is applied.
- (d) Both flux and systematic weighting is applied.
+ (b) The flux tuning are applied.
+ (c) The systematic weighting are applied.
+ (d) Both flux and systematic weighting are applied.
 \begin_inset Argument 1
 status open
 
@@ -9875,9 +9544,9 @@ Reconstructed lepton candidate
 
  in water-out mode.
  (a) The nominal MC prediction without any weights applied.
- (b) The flux tuning is applied.
- (c) The systematic weighting is applied.
- (d) Both flux and systematic weighting is applied.
+ (b) The flux tuning are applied.
+ (c) The systematic weighting are applied.
+ (d) Both flux and systematic weighting are applied.
 \begin_inset Argument 1
 status open
 
@@ -10080,9 +9749,9 @@ True neutrino energy associated with the lepton candidate separated by NEUT
 
  in water-out mode.
  (a) The nominal MC prediction without any weights applied.
- (b) The flux tuning is applied.
- (c) The systematic weighting is applied.
- (d) Both flux and systematic weighting is applied.
+ (b) The flux tuning are applied.
+ (c) The systematic weighting are applied.
+ (d) Both flux and systematic weighting are applied.
 \begin_inset Argument 1
 status open
 
@@ -10254,42 +9923,6 @@ status collapsed
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename Figures/SamplesandSelections/numuFHC/CCNTracks/HL2/Run4_Air/NumuFHCCCNTracks_momentum_particle_nominal_mc.png
-	lyxscale 49
-	width 35text%
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-Nominal MC from Highland2
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\align center
-\begin_inset Float figure
-wide false
-sideways false
-status collapsed
-
-\begin_layout Plain Layout
-\align center
-\begin_inset Graphics
 	filename Figures/SamplesandSelections/numuFHC/CCNTracks/numuCCNTracksWaterOut_recoP_mu_MC_only_LeptonCandidateTruePDG_fhc_air_fluxtuned.png
 	lyxscale 50
 	width 35text%
@@ -10314,6 +9947,10 @@ Flux
 \end_inset
 
 
+\end_layout
+
+\begin_layout Plain Layout
+\align center
 \begin_inset Float figure
 wide false
 sideways false
@@ -10346,10 +9983,6 @@ Systematics
 \end_inset
 
 
-\end_layout
-
-\begin_layout Plain Layout
-\align center
 \begin_inset Float figure
 wide false
 sideways false
@@ -10382,38 +10015,6 @@ Flux + systematics
 \end_inset
 
 
-\begin_inset Float figure
-wide false
-sideways false
-status collapsed
-
-\begin_layout Plain Layout
-\align center
-\begin_inset Graphics
-	filename Figures/SamplesandSelections/numuFHC/CCNTracks/HL2/Run4_Air/NumuFHCCCNTracks_momentum_particle_fluxtuned_systematicweighted.png
-	lyxscale 50
-	width 35text%
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-Fully weighted in Highland2
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
@@ -10428,20 +10029,10 @@ Reconstructed lepton candidate momentum separated by true particle species
 
  in water-out mode.
  (a) The nominal MC prediction without any weights applied.
- (b) Highland2 comparison for (a) without any weights applied using the
+ (b) The flux tuning are applied.
+ (c) The systematic weighting are applied.
+ (e) Both flux and systematic weighting are applied.
  
-\begin_inset Quotes eld
-\end_inset
-
-NOW
-\begin_inset Quotes erd
-\end_inset
-
- draw option.
- (c) The flux tuning is applied.
- (d) The systematic weighting is applied.
- (e) Both flux and systematic weighting is applied.
- (f) Highland2 comparison for (e).
 \begin_inset Argument 1
 status open
 
@@ -10638,9 +10229,9 @@ Reconstructed lepton candidate angle separated by true particle species
 
  in water-out mode.
  (a) The nominal MC prediction without any weights applied.
- (b) The flux tuning is applied.
- (c) The systematic weighting is applied.
- (d) Both flux and systematic weighting is applied.
+ (b) The flux tuning are applied.
+ (c) The systematic weighting are applied.
+ (d) Both flux and systematic weighting are applied.
  
 \begin_inset Argument 1
 status open
@@ -10842,9 +10433,9 @@ Reconstructed lepton candidate momentum separated by NEUT model interaction
 
  in water-out mode.
  (a) The nominal MC prediction without any weights applied.
- (b) The flux tuning is applied.
- (c) The systematic weighting is applied.
- (d) Both flux and systematic weighting is applied.
+ (b) The flux tuning are applied.
+ (c) The systematic weighting are applied.
+ (d) Both flux and systematic weighting are applied.
 \begin_inset Argument 1
 status open
 
@@ -11044,9 +10635,9 @@ Reconstructed lepton candidate
 
  in water-out mode.
  (a) The nominal MC prediction without any weights applied.
- (b) The flux tuning is applied.
- (c) The systematic weighting is applied.
- (d) Both flux and systematic weighting is applied.
+ (b) The flux tuning are applied.
+ (c) The systematic weighting are applied.
+ (d) Both flux and systematic weighting are applied.
 \begin_inset Argument 1
 status open
 
@@ -11246,9 +10837,9 @@ Reconstructed lepton candidate momentum separated by topology for FHC
 
  in water-out mode.
  (a) The nominal MC prediction without any weights applied.
- (b) The flux tuning is applied.
- (c) The systematic weighting is applied.
- (d) Both flux and systematic weighting is applied.
+ (b) The flux tuning are applied.
+ (c) The systematic weighting are applied.
+ (d) Both flux and systematic weighting are applied.
 \begin_inset Argument 1
 status open
 
@@ -11448,9 +11039,9 @@ Reconstructed lepton candidate
 
  in water-out mode.
  (a) The nominal MC prediction without any weights applied.
- (b) The flux tuning is applied.
- (c) The systematic weighting is applied.
- (d) Both flux and systematic weighting is applied.
+ (b) The flux tuning are applied.
+ (c) The systematic weighting are applied.
+ (d) Both flux and systematic weighting are applied.
 \begin_inset Argument 1
 status open
 
@@ -11651,9 +11242,9 @@ True neutrino energy associated with the lepton candidate separated by NEUT
 
  in water-out mode.
  (a) The nominal MC prediction without any weights applied.
- (b) The flux tuning is applied.
- (c) The systematic weighting is applied.
- (d) Both flux and systematic weighting is applied.
+ (b) The flux tuning are applied.
+ (c) The systematic weighting are applied.
+ (d) Both flux and systematic weighting are applied.
 \begin_inset Argument 1
 status open
 
@@ -11722,7 +11313,7 @@ Text goes here
 placement H
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
@@ -11766,42 +11357,6 @@ status collapsed
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename Figures/SamplesandSelections/numubarRHC/CCNTracks/HL2/Run6e_Air/NumubarRHCCCNTracks_momentum_particle_nominal_mc.png
-	lyxscale 49
-	width 40text%
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-Nominal MC from Highland2
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\align center
-\begin_inset Float figure
-wide false
-sideways false
-status collapsed
-
-\begin_layout Plain Layout
-\align center
-\begin_inset Graphics
 	filename Figures/SamplesandSelections/numubarRHC/CCNTracks/numubarRHCCCNTracksWaterOut_recoP_mu_MC_only_LeptonCandidateTruePDG_rhc_air_fluxtuned.png
 	lyxscale 50
 	width 40text%
@@ -11826,6 +11381,10 @@ Flux
 \end_inset
 
 
+\end_layout
+
+\begin_layout Plain Layout
+\align center
 \begin_inset Float figure
 wide false
 sideways false
@@ -11858,10 +11417,6 @@ Systematics
 \end_inset
 
 
-\end_layout
-
-\begin_layout Plain Layout
-\align center
 \begin_inset Float figure
 wide false
 sideways false
@@ -11884,38 +11439,6 @@ status collapsed
 
 \begin_layout Plain Layout
 Flux + systematics
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\begin_inset Float figure
-wide false
-sideways false
-status collapsed
-
-\begin_layout Plain Layout
-\align center
-\begin_inset Graphics
-	filename Figures/SamplesandSelections/numubarRHC/CCNTracks/HL2/Run6e_Air/NumubarRHCCCNTracks_momentum_particle_fluxtuned_systematicweighted.png
-	lyxscale 50
-	width 40text%
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-Fully weighted in Highland2
 \end_layout
 
 \end_inset
@@ -11950,20 +11473,9 @@ Reconstructed lepton candidate momentum separated by true particle species
 
  in water-in mode.
  (a) The nominal MC prediction without any weights applied.
- (b) Highland2 comparison for (a) without any weights applied using the
- 
-\begin_inset Quotes eld
-\end_inset
-
-NOW
-\begin_inset Quotes erd
-\end_inset
-
- draw option.
- (c) The flux tuning is applied.
- (d) The systematic weighting is applied.
- (e) Both flux and systematic weighting is applied.
- (f) Highland2 comparison for (e).
+ (b) The flux tuning are applied.
+ (c) The systematic weighting are applied.
+ (d) Both flux and systematic weighting are applied.
  
 \begin_inset Argument 1
 status collapsed
@@ -12161,9 +11673,9 @@ Reconstructed lepton candidate angle separated by true particle species
 
  in water-out mode.
  (a) The nominal MC prediction without any weights applied.
- (b) The flux tuning is applied.
- (c) The systematic weighting is applied.
- (d) Both flux and systematic weighting is applied.
+ (b) The flux tuning are applied.
+ (c) The systematic weighting are applied.
+ (d) Both flux and systematic weighting are applied.
  
 \begin_inset Argument 1
 status open
@@ -12365,9 +11877,9 @@ Reconstructed lepton candidate momentum separated by NEUT model interaction
 
  in water-out mode.
  (a) The nominal MC prediction without any weights applied.
- (b) The flux tuning is applied.
- (c) The systematic weighting is applied.
- (d) Both flux and systematic weighting is applied.
+ (b) The flux tuning are applied.
+ (c) The systematic weighting are applied.
+ (d) Both flux and systematic weighting are applied.
 \begin_inset Argument 1
 status open
 
@@ -12567,9 +12079,9 @@ Reconstructed lepton candidate
 
  in water-out mode.
  (a) The nominal MC prediction without any weights applied.
- (b) The flux tuning is applied.
- (c) The systematic weighting is applied.
- (d) Both flux and systematic weighting is applied.
+ (b) The flux tuning are applied.
+ (c) The systematic weighting are applied.
+ (d) Both flux and systematic weighting are applied.
 \begin_inset Argument 1
 status open
 
@@ -12769,9 +12281,9 @@ Reconstructed lepton candidate momentum separated by topology for RHC
 
  in water-out mode.
  (a) The nominal MC prediction without any weights applied.
- (b) The flux tuning is applied.
- (c) The systematic weighting is applied.
- (d) Both flux and systematic weighting is applied.
+ (b) The flux tuning are applied.
+ (c) The systematic weighting are applied.
+ (d) Both flux and systematic weighting are applied.
 \begin_inset Argument 1
 status open
 
@@ -12971,9 +12483,9 @@ Reconstructed lepton candidate
 
  in water-out mode.
  (a) The nominal MC prediction without any weights applied.
- (b) The flux tuning is applied.
- (c) The systematic weighting is applied.
- (d) Both flux and systematic weighting is applied.
+ (b) The flux tuning are applied.
+ (c) The systematic weighting are applied.
+ (d) Both flux and systematic weighting are applied.
 \begin_inset Argument 1
 status open
 
@@ -13174,9 +12686,9 @@ True neutrino energy associated with the lepton candidate separated by NEUT
 
  in water-out mode.
  (a) The nominal MC prediction without any weights applied.
- (b) The flux tuning is applied.
- (c) The systematic weighting is applied.
- (d) Both flux and systematic weighting is applied.
+ (b) The flux tuning are applied.
+ (c) The systematic weighting are applied.
+ (d) Both flux and systematic weighting are applied.
 \begin_inset Argument 1
 status open
 
@@ -13250,7 +12762,7 @@ Text
 \begin_layout Standard
 \begin_inset Branch SelectionsKinematicsP0DWaterIn
 inverted 0
-status collapsed
+status open
 
 \begin_layout Subsection
 \begin_inset Formula $\pod$
@@ -13586,9 +13098,9 @@ NOW
 \end_inset
 
  draw option.
- (c) The flux tuning is applied.
- (d) The systematic weighting is applied.
- (e) Both flux and systematic weighting is applied.
+ (c) The flux tuning are applied.
+ (d) The systematic weighting are applied.
+ (e) Both flux and systematic weighting are applied.
  (f) Highland2 comparison for (e).
  
 \begin_inset Argument 1
@@ -13789,9 +13301,9 @@ Reconstructed lepton candidate angle separated by true particle species
 
  in water-in mode.
  (a) The nominal MC prediction without any weights applied.
- (b) The flux tuning is applied.
- (c) The systematic weighting is applied.
- (d) Both flux and systematic weighting is applied.
+ (b) The flux tuning are applied.
+ (c) The systematic weighting are applied.
+ (d) Both flux and systematic weighting are applied.
  
 \begin_inset Argument 1
 status open
@@ -13995,9 +13507,9 @@ Reconstructed lepton candidate momentum separated by NEUT model interaction
 
  in water-in mode.
  (a) The nominal MC prediction without any weights applied.
- (b) The flux tuning is applied.
- (c) The systematic weighting is applied.
- (d) Both flux and systematic weighting is applied.
+ (b) The flux tuning are applied.
+ (c) The systematic weighting are applied.
+ (d) Both flux and systematic weighting are applied.
 \begin_inset Argument 1
 status open
 
@@ -14199,9 +13711,9 @@ Reconstructed lepton candidate
 
  in water-in mode.
  (a) The nominal MC prediction without any weights applied.
- (b) The flux tuning is applied.
- (c) The systematic weighting is applied.
- (d) Both flux and systematic weighting is applied.
+ (b) The flux tuning are applied.
+ (c) The systematic weighting are applied.
+ (d) Both flux and systematic weighting are applied.
 \begin_inset Argument 1
 status open
 
@@ -14403,9 +13915,9 @@ Reconstructed lepton candidate momentum separated by topology for FHC
 
  in water-in mode.
  (a) The nominal MC prediction without any weights applied.
- (b) The flux tuning is applied.
- (c) The systematic weighting is applied.
- (d) Both flux and systematic weighting is applied.
+ (b) The flux tuning are applied.
+ (c) The systematic weighting are applied.
+ (d) Both flux and systematic weighting are applied.
 \begin_inset Argument 1
 status open
 
@@ -14607,9 +14119,9 @@ Reconstructed lepton candidate
 
  in water-in mode.
  (a) The nominal MC prediction without any weights applied.
- (b) The flux tuning is applied.
- (c) The systematic weighting is applied.
- (d) Both flux and systematic weighting is applied.
+ (b) The flux tuning are applied.
+ (c) The systematic weighting are applied.
+ (d) Both flux and systematic weighting are applied.
 \begin_inset Argument 1
 status open
 
@@ -14812,9 +14324,9 @@ True neutrino energy associated with the lepton candidate separated by NEUT
 
  in water-out mode.
  (a) The nominal MC prediction without any weights applied.
- (b) The flux tuning is applied.
- (c) The systematic weighting is applied.
- (d) Both flux and systematic weighting is applied.
+ (b) The flux tuning are applied.
+ (c) The systematic weighting are applied.
+ (d) Both flux and systematic weighting are applied.
 \begin_inset Argument 1
 status open
 
@@ -14959,42 +14471,6 @@ status collapsed
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename Figures/SamplesandSelections/numubarRHC/CCInc/HL2/Run7b_Water/NumubarRHCCCInc_momentum_particle_nominal_mc.png
-	lyxscale 49
-	width 40text%
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-Nominal MC from Highland2
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\align center
-\begin_inset Float figure
-wide false
-sideways false
-status collapsed
-
-\begin_layout Plain Layout
-\align center
-\begin_inset Graphics
 	filename Figures/SamplesandSelections/numubarRHC/CCInc/numubarRHCCCIncWaterIn_recoP_mu_MC_only_LeptonCandidateTruePDG_rhc_water_fluxtuned.png
 	lyxscale 50
 	width 40text%
@@ -15019,6 +14495,10 @@ Flux
 \end_inset
 
 
+\end_layout
+
+\begin_layout Plain Layout
+\align center
 \begin_inset Float figure
 wide false
 sideways false
@@ -15051,10 +14531,6 @@ Systematics
 \end_inset
 
 
-\end_layout
-
-\begin_layout Plain Layout
-\align center
 \begin_inset Float figure
 wide false
 sideways false
@@ -15087,38 +14563,6 @@ Flux + systematics
 \end_inset
 
 
-\begin_inset Float figure
-wide false
-sideways false
-status collapsed
-
-\begin_layout Plain Layout
-\align center
-\begin_inset Graphics
-	filename Figures/SamplesandSelections/numubarRHC/CCInc/HL2/Run7b_Water/NumubarRHCCCInc_momentum_particle_fluxtuned_systematicweighted.png
-	lyxscale 49
-	width 40text%
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-Nominal MC from Highland2
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Plain Layout
@@ -15137,20 +14581,10 @@ Reconstructed lepton candidate momentum separated by true particle species
 
  in water-out mode.
  (a) The nominal MC prediction without any weights applied.
- (b) Highland2 comparison for (a) without any weights applied using the
+ (b) The flux tuning are applied.
+ (c) The systematic weighting are applied.
+ (d) Both flux and systematic weighting are applied.
  
-\begin_inset Quotes eld
-\end_inset
-
-NOW
-\begin_inset Quotes erd
-\end_inset
-
- draw option.
- (c) The flux tuning is applied.
- (d) The systematic weighting is applied.
- (e) Both flux and systematic weighting is applied.
- (f) Highland2 comparison for (e).
 \begin_inset Argument 1
 status open
 
@@ -15349,9 +14783,9 @@ Reconstructed lepton candidate angle separated by true particle species
 
  in water-in mode.
  (a) The nominal MC prediction without any weights applied.
- (b) The flux tuning is applied.
- (c) The systematic weighting is applied.
- (d) Both flux and systematic weighting is applied.
+ (b) The flux tuning are applied.
+ (c) The systematic weighting are applied.
+ (d) Both flux and systematic weighting are applied.
  
 \begin_inset Argument 1
 status open
@@ -15555,9 +14989,9 @@ Reconstructed lepton candidate momentum separated by NEUT model interaction
 
  in water-out mode.
  (a) The nominal MC prediction without any weights applied.
- (b) The flux tuning is applied.
- (c) The systematic weighting is applied.
- (d) Both flux and systematic weighting is applied.
+ (b) The flux tuning are applied.
+ (c) The systematic weighting are applied.
+ (d) Both flux and systematic weighting are applied.
 \begin_inset Argument 1
 status open
 
@@ -15759,9 +15193,9 @@ Reconstructed lepton candidate
 
  in water-out mode.
  (a) The nominal MC prediction without any weights applied.
- (b) The flux tuning is applied.
- (c) The systematic weighting is applied.
- (d) Both flux and systematic weighting is applied.
+ (b) The flux tuning are applied.
+ (c) The systematic weighting are applied.
+ (d) Both flux and systematic weighting are applied.
 \begin_inset Argument 1
 status open
 
@@ -15963,9 +15397,9 @@ Reconstructed lepton candidate momentum separated by topology for RHC
 
  in water-out mode.
  (a) The nominal MC prediction without any weights applied.
- (b) The flux tuning is applied.
- (c) The systematic weighting is applied.
- (d) Both flux and systematic weighting is applied.
+ (b) The flux tuning are applied.
+ (c) The systematic weighting are applied.
+ (d) Both flux and systematic weighting are applied.
 \begin_inset Argument 1
 status open
 
@@ -16167,9 +15601,9 @@ Reconstructed lepton candidate
 
  in water-out mode.
  (a) The nominal MC prediction without any weights applied.
- (b) The flux tuning is applied.
- (c) The systematic weighting is applied.
- (d) Both flux and systematic weighting is applied.
+ (b) The flux tuning are applied.
+ (c) The systematic weighting are applied.
+ (d) Both flux and systematic weighting are applied.
 \begin_inset Argument 1
 status open
 
@@ -16372,9 +15806,9 @@ True neutrino energy associated with the lepton candidate separated by NEUT
 
  in water-out mode.
  (a) The nominal MC prediction without any weights applied.
- (b) The flux tuning is applied.
- (c) The systematic weighting is applied.
- (d) Both flux and systematic weighting is applied.
+ (b) The flux tuning are applied.
+ (c) The systematic weighting are applied.
+ (d) Both flux and systematic weighting are applied.
 \begin_inset Argument 1
 status open
 
@@ -16719,9 +16153,9 @@ NOW
 \end_inset
 
  draw option.
- (c) The flux tuning is applied.
- (d) The systematic weighting is applied.
- (e) Both flux and systematic weighting is applied.
+ (c) The flux tuning are applied.
+ (d) The systematic weighting are applied.
+ (e) Both flux and systematic weighting are applied.
  (f) Highland2 comparison for (e).
  
 \begin_inset Argument 1
@@ -16920,9 +16354,9 @@ Reconstructed lepton candidate angle separated by true particle species
 
  in water-in mode.
  (a) The nominal MC prediction without any weights applied.
- (b) The flux tuning is applied.
- (c) The systematic weighting is applied.
- (d) Both flux and systematic weighting is applied.
+ (b) The flux tuning are applied.
+ (c) The systematic weighting are applied.
+ (d) Both flux and systematic weighting are applied.
  
 \begin_inset Argument 1
 status open
@@ -17124,9 +16558,9 @@ Reconstructed lepton candidate momentum separated by NEUT model interaction
 
  in water-in mode.
  (a) The nominal MC prediction without any weights applied.
- (b) The flux tuning is applied.
- (c) The systematic weighting is applied.
- (d) Both flux and systematic weighting is applied.
+ (b) The flux tuning are applied.
+ (c) The systematic weighting are applied.
+ (d) Both flux and systematic weighting are applied.
 \begin_inset Argument 1
 status open
 
@@ -17326,9 +16760,9 @@ Reconstructed lepton candidate
 
  in water-in mode.
  (a) The nominal MC prediction without any weights applied.
- (b) The flux tuning is applied.
- (c) The systematic weighting is applied.
- (d) Both flux and systematic weighting is applied.
+ (b) The flux tuning are applied.
+ (c) The systematic weighting are applied.
+ (d) Both flux and systematic weighting are applied.
 \begin_inset Argument 1
 status open
 
@@ -17528,9 +16962,9 @@ Reconstructed lepton candidate momentum separated by topology for FHC
 
  in water-in mode.
  (a) The nominal MC prediction without any weights applied.
- (b) The flux tuning is applied.
- (c) The systematic weighting is applied.
- (d) Both flux and systematic weighting is applied.
+ (b) The flux tuning are applied.
+ (c) The systematic weighting are applied.
+ (d) Both flux and systematic weighting are applied.
 \begin_inset Argument 1
 status open
 
@@ -17730,9 +17164,9 @@ Reconstructed lepton candidate
 
  in water-in mode.
  (a) The nominal MC prediction without any weights applied.
- (b) The flux tuning is applied.
- (c) The systematic weighting is applied.
- (d) Both flux and systematic weighting is applied.
+ (b) The flux tuning are applied.
+ (c) The systematic weighting are applied.
+ (d) Both flux and systematic weighting are applied.
 \begin_inset Argument 1
 status open
 
@@ -17933,9 +17367,9 @@ True neutrino energy associated with the lepton candidate separated by NEUT
 
  in water-out mode.
  (a) The nominal MC prediction without any weights applied.
- (b) The flux tuning is applied.
- (c) The systematic weighting is applied.
- (d) Both flux and systematic weighting is applied.
+ (b) The flux tuning are applied.
+ (c) The systematic weighting are applied.
+ (d) Both flux and systematic weighting are applied.
 \begin_inset Argument 1
 status open
 
@@ -18048,42 +17482,6 @@ status collapsed
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename Figures/SamplesandSelections/numubarRHC/CC1Track/HL2/Run7b_Water/NumubarRHCCC1Track_momentum_particle_nominal_mc.png
-	lyxscale 49
-	width 40text%
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-Nominal MC from Highland2
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\align center
-\begin_inset Float figure
-wide false
-sideways false
-status collapsed
-
-\begin_layout Plain Layout
-\align center
-\begin_inset Graphics
 	filename Figures/SamplesandSelections/numubarRHC/CC1Track/numubarRHCCC1TrackWaterIn_recoP_mu_MC_only_LeptonCandidateTruePDG_rhc_water_fluxtuned.png
 	lyxscale 50
 	width 40text%
@@ -18108,6 +17506,10 @@ Flux
 \end_inset
 
 
+\end_layout
+
+\begin_layout Plain Layout
+\align center
 \begin_inset Float figure
 wide false
 sideways false
@@ -18140,10 +17542,6 @@ Systematics
 \end_inset
 
 
-\end_layout
-
-\begin_layout Plain Layout
-\align center
 \begin_inset Float figure
 wide false
 sideways false
@@ -18176,38 +17574,6 @@ Flux + systematics
 \end_inset
 
 
-\begin_inset Float figure
-wide false
-sideways false
-status collapsed
-
-\begin_layout Plain Layout
-\align center
-\begin_inset Graphics
-	filename Figures/SamplesandSelections/numubarRHC/CC1Track/HL2/Run7b_Water/NumubarRHCCC1Track_momentum_particle_fluxtuned_systematicweighted.png
-	lyxscale 49
-	width 40text%
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-Nominal MC from Highland2
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Plain Layout
@@ -18226,20 +17592,9 @@ Reconstructed lepton candidate momentum separated by true particle species
 
  in water-out mode.
  (a) The nominal MC prediction without any weights applied.
- (b) Highland2 comparison for (a) without any weights applied using the
- 
-\begin_inset Quotes eld
-\end_inset
-
-NOW
-\begin_inset Quotes erd
-\end_inset
-
- draw option.
- (c) The flux tuning is applied.
- (d) The systematic weighting is applied.
- (e) Both flux and systematic weighting is applied.
- (f) Highland2 comparison for (e).
+ (b) The flux tuning are applied.
+ (c) The systematic weighting are applied.
+ (d) Both flux and systematic weighting are applied.
 \begin_inset Argument 1
 status open
 
@@ -18438,9 +17793,9 @@ Reconstructed lepton candidate angle separated by true particle species
 
  in water-in mode.
  (a) The nominal MC prediction without any weights applied.
- (b) The flux tuning is applied.
- (c) The systematic weighting is applied.
- (d) Both flux and systematic weighting is applied.
+ (b) The flux tuning are applied.
+ (c) The systematic weighting are applied.
+ (d) Both flux and systematic weighting are applied.
  
 \begin_inset Argument 1
 status open
@@ -18644,9 +17999,9 @@ Reconstructed lepton candidate momentum separated by NEUT model interaction
 
  in water-out mode.
  (a) The nominal MC prediction without any weights applied.
- (b) The flux tuning is applied.
- (c) The systematic weighting is applied.
- (d) Both flux and systematic weighting is applied.
+ (b) The flux tuning are applied.
+ (c) The systematic weighting are applied.
+ (d) Both flux and systematic weighting are applied.
 \begin_inset Argument 1
 status open
 
@@ -18848,9 +18203,9 @@ Reconstructed lepton candidate
 
  in water-out mode.
  (a) The nominal MC prediction without any weights applied.
- (b) The flux tuning is applied.
- (c) The systematic weighting is applied.
- (d) Both flux and systematic weighting is applied.
+ (b) The flux tuning are applied.
+ (c) The systematic weighting are applied.
+ (d) Both flux and systematic weighting are applied.
 \begin_inset Argument 1
 status open
 
@@ -19052,9 +18407,9 @@ Reconstructed lepton candidate momentum separated by topology for RHC
 
  in water-out mode.
  (a) The nominal MC prediction without any weights applied.
- (b) The flux tuning is applied.
- (c) The systematic weighting is applied.
- (d) Both flux and systematic weighting is applied.
+ (b) The flux tuning are applied.
+ (c) The systematic weighting are applied.
+ (d) Both flux and systematic weighting are applied.
 \begin_inset Argument 1
 status open
 
@@ -19256,9 +18611,9 @@ Reconstructed lepton candidate
 
  in water-out mode.
  (a) The nominal MC prediction without any weights applied.
- (b) The flux tuning is applied.
- (c) The systematic weighting is applied.
- (d) Both flux and systematic weighting is applied.
+ (b) The flux tuning are applied.
+ (c) The systematic weighting are applied.
+ (d) Both flux and systematic weighting are applied.
 \begin_inset Argument 1
 status open
 
@@ -19461,9 +18816,9 @@ True neutrino energy associated with the lepton candidate separated by NEUT
 
  in water-out mode.
  (a) The nominal MC prediction without any weights applied.
- (b) The flux tuning is applied.
- (c) The systematic weighting is applied.
- (d) Both flux and systematic weighting is applied.
+ (b) The flux tuning are applied.
+ (c) The systematic weighting are applied.
+ (d) Both flux and systematic weighting are applied.
 \begin_inset Argument 1
 status open
 
