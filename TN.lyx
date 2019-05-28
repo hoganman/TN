@@ -173,6 +173,16 @@ tabs-within-sections
 \filename_suffix 0
 \color #faf0e6
 \end_branch
+\branch DetectorSystematics
+\selected 1
+\filename_suffix 0
+\color #faf0e6
+\end_branch
+\branch Test
+\selected 0
+\filename_suffix 0
+\color #faf0e6
+\end_branch
 \index Index
 \shortcut idx
 \color #008000
@@ -368,7 +378,7 @@ inverted 0
 status open
 
 \begin_layout Section
-BANFF Likelihood Maximization
+ND280 Binned Likelihood
 \end_layout
 
 \begin_layout Standard
@@ -401,6 +411,13 @@ status open
 \end_inset
 
  Selections and Data Samples
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:P0DSelections"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -449,6 +466,32 @@ filename "Sections/P0DBANFFParameterization.lyx"
 \end_inset
 
 
+\begin_inset Newpage clearpage
+\end_inset
+
+
+\begin_inset Newpage newpage
+\end_inset
+
+
+\begin_inset Branch DetectorSystematics
+inverted 0
+status open
+
+\begin_layout Section
+Detector Systematics
+\end_layout
+
+\begin_layout Standard
+Text goes here
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 \begin_inset Newpage clearpage
 \end_inset
 

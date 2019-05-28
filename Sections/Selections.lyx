@@ -2386,38 +2386,6 @@ Nominal MC
 \end_inset
 
 
-\begin_inset Float figure
-wide false
-sideways false
-status collapsed
-
-\begin_layout Plain Layout
-\align center
-\begin_inset Graphics
-	filename Figures/SamplesandSelections/numuFHC/CCInc/HL2/Run4_Air/NumuFHCCCInc_momentum_particle_nominal_mc.png
-	lyxscale 49
-	width 35text%
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-Nominal MC from Highland2
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Plain Layout
@@ -2522,38 +2490,6 @@ Flux + systematics
 \end_inset
 
 
-\begin_inset Float figure
-wide false
-sideways false
-status collapsed
-
-\begin_layout Plain Layout
-\align center
-\begin_inset Graphics
-	filename Figures/SamplesandSelections/numuFHC/CCInc/HL2/Run4_Air/NumuFHCCCInc_momentum_particle_fluxtuned_systematicweighted.png
-	lyxscale 50
-	width 35text%
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-Fully weighted in Highland2
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
@@ -2569,20 +2505,9 @@ Reconstructed lepton candidate momentum separated by true particle species
 
  in water-out mode.
  (a) The nominal MC prediction without any weights applied.
- (b) Highland2 comparison for (a) without any weights applied using the
- 
-\begin_inset Quotes eld
-\end_inset
-
-NOW
-\begin_inset Quotes erd
-\end_inset
-
- draw option.
- (c) The flux tuning are applied.
- (d) The systematic weighting are applied.
- (e) Both flux and systematic weighting are applied.
- (f) Highland2 comparison for (e).
+ (b) The flux tuning are applied.
+ (c) The systematic weighting are applied.
+ (d) Both flux and systematic weighting are applied.
 \begin_inset Argument 1
 status open
 
@@ -6836,21 +6761,21 @@ Shown in
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
 	filename Figures/SamplesandSelections/numuFHC/CC1Track/numuCC1TrackWaterOut_recoP_mu_MC_only_LeptonCandidateTruePDG_fhc_air.png
 	lyxscale 49
-	width 40text%
+	height 20theight%
 
 \end_inset
 
@@ -6875,14 +6800,14 @@ Nominal MC
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
 	filename Figures/SamplesandSelections/numuFHC/CC1Track/HL2/Run4_Air/NumuFHCCC1Track_momentum_particle_nominal_mc.png
 	lyxscale 49
-	width 40text%
+	height 20theight%
 
 \end_inset
 
@@ -6911,14 +6836,14 @@ Nominal MC from Highland2
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
 	filename Figures/SamplesandSelections/numuFHC/CC1Track/numuCC1TrackWaterOut_recoP_mu_MC_only_LeptonCandidateTruePDG_fhc_air_fluxtuned.png
 	lyxscale 50
-	width 40text%
+	height 20theight%
 
 \end_inset
 
@@ -6943,14 +6868,14 @@ Flux
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
 	filename Figures/SamplesandSelections/numuFHC/CC1Track/numuCC1TrackWaterOut_recoP_mu_MC_only_LeptonCandidateTruePDG_fhc_air_systematicweighted.png
 	lyxscale 50
-	width 40text%
+	height 20theight%
 
 \end_inset
 
@@ -6979,14 +6904,14 @@ Systematics
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
 	filename Figures/SamplesandSelections/numuFHC/CC1Track/numuCC1TrackWaterOut_recoP_mu_MC_only_LeptonCandidateTruePDG_fhc_air_fluxtuned_systematicweighted.png
 	lyxscale 50
-	width 40text%
+	height 20theight%
 
 \end_inset
 
@@ -7011,14 +6936,14 @@ Flux + systematics
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
 	filename Figures/SamplesandSelections/numuFHC/CC1Track/HL2/Run4_Air/NumuFHCCC1Track_momentum_particle_fluxtuned_systematicweighted.png
 	lyxscale 50
-	width 40text%
+	height 20theight%
 
 \end_inset
 
@@ -7069,6 +6994,13 @@ NOW
  (d) The systematic weighting are applied.
  (e) Both flux and systematic weighting are applied.
  (f) Highland2 comparison for (e).
+ There is a ~
+\begin_inset Formula $1\%$
+\end_inset
+
+ difference between Highland2 and BANFF since a subset of the MC was used
+ to generate them.
+ 
 \begin_inset Argument 1
 status open
 
@@ -7113,14 +7045,14 @@ name "fig:P0DairFHCnumuCC1TrackMomTrueParticle"
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -7152,7 +7084,7 @@ Nominal MC
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -7188,7 +7120,7 @@ Flux
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -7220,7 +7152,7 @@ Systematics
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
