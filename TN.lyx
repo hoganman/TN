@@ -134,7 +134,7 @@ tabs-within-sections
 \use_refstyle 0
 \use_minted 0
 \branch Introduction
-\selected 0
+\selected 1
 \filename_suffix 0
 \color #faf0e6
 \end_branch
@@ -149,27 +149,27 @@ tabs-within-sections
 \color #faf0e6
 \end_branch
 \branch BANFFLikelihood
-\selected 0
+\selected 1
 \filename_suffix 0
 \color #faf0e6
 \end_branch
 \branch P0DBANFFParameterization
-\selected 0
+\selected 1
 \filename_suffix 0
 \color #faf0e6
 \end_branch
 \branch FitterValidation
-\selected 1
+\selected 0
 \filename_suffix 0
 \color #faf0e6
 \end_branch
 \branch FitterResults
-\selected 1
+\selected 0
 \filename_suffix 0
 \color #faf0e6
 \end_branch
 \branch Discussion
-\selected 0
+\selected 1
 \filename_suffix 0
 \color #faf0e6
 \end_branch
@@ -183,8 +183,8 @@ tabs-within-sections
 \topmargin 1in
 \rightmargin 1in
 \bottommargin 1in
-\secnumdepth 4
-\tocdepth 3
+\secnumdepth 5
+\tocdepth 4
 \paragraph_separation indent
 \paragraph_indentation default
 \is_math_indent 0
