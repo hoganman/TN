@@ -266,7 +266,7 @@ Global
 \begin_layout Standard
 \begin_inset Branch SelectionsGlobal
 inverted 0
-status collapsed
+status open
 
 \begin_layout Subsection
 Global Reconstruction
@@ -296,8 +296,7 @@ CCQE-like
 \begin_layout Standard
 ND280 events are first collected in the form of electronic signals from
  either multipixel photon counters (MPPCs) in the scintillator-based sub-detecto
-rs or charge collected collection planes of the time projection chambers
- (TPCs).
+rs or charge collection planes of the time projection chambers (TPCs).
  MPPCs were chosen for the scintillator-based sub-detectors since they are
  insensitive to the strong 0.2T magnetic field present in ND280.
  The 
@@ -1137,7 +1136,7 @@ wrong-sign
 \begin_layout Standard
 \begin_inset Branch SelectionsKinematics
 inverted 0
-status open
+status collapsed
 
 \begin_layout Subsection
 Sample Kinematics and Validation
