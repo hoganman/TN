@@ -84,6 +84,36 @@
 \filename_suffix 0
 \color #faf0e6
 \end_branch
+\branch SelectionsKinematicsP0DWaterOutCCInc
+\selected 1
+\filename_suffix 0
+\color #faf0e6
+\end_branch
+\branch SelectionsKinematicsP0DWaterOutCC1Track
+\selected 1
+\filename_suffix 0
+\color #faf0e6
+\end_branch
+\branch SelectionsKinematicsP0DWaterOutCCNTracks
+\selected 1
+\filename_suffix 0
+\color #faf0e6
+\end_branch
+\branch SelectionsKinematicsP0DWaterInCCInc
+\selected 1
+\filename_suffix 0
+\color #faf0e6
+\end_branch
+\branch SelectionsKinematicsP0DWaterInCC1Track
+\selected 1
+\filename_suffix 0
+\color #faf0e6
+\end_branch
+\branch SelectionsKinematicsP0DWaterInCCNTracks
+\selected 1
+\filename_suffix 0
+\color #faf0e6
+\end_branch
 \index Index
 \shortcut idx
 \color #008000
@@ -2268,6 +2298,11 @@ This section shows the kinematic distributions for the
  The samples are then examined as CC 1-track and CC N-tracks.
 \end_layout
 
+\begin_layout Standard
+\begin_inset Branch SelectionsKinematicsP0DWaterOutCCInc
+inverted 0
+status collapsed
+
 \begin_layout Subsubsection
 CC Inclusive
 \end_layout
@@ -2350,7 +2385,7 @@ CC Inclusive events in FHC mode.
 placement H
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
@@ -6730,6 +6765,16 @@ name "fig:P0DairRHCnumuCCIncEnuTrueNEUTNuMode"
 
 \end_layout
 
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Branch SelectionsKinematicsP0DWaterOutCC1Track
+inverted 0
+status open
+
 \begin_layout Subsubsection
 CC 1-Track (CCQE Enhanced)
 \end_layout
@@ -6761,14 +6806,14 @@ Shown in
 placement H
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
@@ -6800,7 +6845,7 @@ Nominal MC
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
@@ -6836,7 +6881,7 @@ Nominal MC from Highland2
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
@@ -6868,7 +6913,7 @@ Flux
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
@@ -6904,7 +6949,7 @@ Systematics
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
@@ -6936,7 +6981,7 @@ Flux + systematics
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
@@ -9762,6 +9807,16 @@ todo{Add figures here}
 
 
 \end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Branch SelectionsKinematicsP0DWaterOutCCNTracks
+inverted 0
+status collapsed
 
 \begin_layout Subsubsection
 CC N-Tracks (CCnQE Enhanced)
@@ -12691,10 +12746,15 @@ Text
 
 \end_layout
 
+\end_inset
+
+
+\end_layout
+
 \begin_layout Standard
 \begin_inset Branch SelectionsKinematicsP0DWaterIn
 inverted 0
-status open
+status collapsed
 
 \begin_layout Subsection
 \begin_inset Formula $\pod$
@@ -12715,6 +12775,11 @@ This section shows the kinematic distributions for the
  systematic weights will be explored.
  The samples are then examined as CC 1-track and CC N-tracks.
 \end_layout
+
+\begin_layout Standard
+\begin_inset Branch SelectionsKinematicsP0DWaterInCCInc
+inverted 0
+status collapsed
 
 \begin_layout Subsubsection
 CC Inclusive
@@ -15819,6 +15884,16 @@ todo{Add figures here}
 
 \end_layout
 
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Branch SelectionsKinematicsP0DWaterInCC1Track
+inverted 0
+status collapsed
+
 \begin_layout Subsubsection
 CC 1-Track (CCQE Enhanced)
 \end_layout
@@ -18817,6 +18892,16 @@ Background Selection in RHC
 Text
 \end_layout
 
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Branch SelectionsKinematicsP0DWaterInCCNTracks
+inverted 0
+status collapsed
+
 \begin_layout Subsubsection
 CC N-Tracks (CCnQE Enhanced)
 \end_layout
@@ -18891,6 +18976,11 @@ Background Selection in RHC
 
 \begin_layout Standard
 Text
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \end_inset
