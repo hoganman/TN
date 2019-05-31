@@ -266,7 +266,7 @@ Global
 \begin_layout Standard
 \begin_inset Branch SelectionsGlobal
 inverted 0
-status open
+status collapsed
 
 \begin_layout Subsection
 Global Reconstruction
@@ -1136,7 +1136,7 @@ wrong-sign
 \begin_layout Standard
 \begin_inset Branch SelectionsKinematics
 inverted 0
-status collapsed
+status open
 
 \begin_layout Subsection
 Sample Kinematics and Validation
@@ -7024,26 +7024,19 @@ Reconstructed lepton candidate momentum separated by true particle species
 
  in water-out mode.
  (a) The nominal MC prediction without any weights applied.
- (b) Highland2 comparison for (a) without any weights applied using the
- 
-\begin_inset Quotes eld
-\end_inset
-
-NOW
-\begin_inset Quotes erd
-\end_inset
-
- draw option.
+ (b) The same POT-normalized plot as (a) using a subset of the water-out
+ MC in Highland.
  (c) The flux tuning are applied.
  (d) The systematic weighting are applied.
  (e) Both flux and systematic weighting are applied.
- (f) Highland2 comparison for (e).
+ (f) The same POT-normalized plot as (e) using a subset of the water-out
+ MC in Highland.
  There is a ~
 \begin_inset Formula $1\%$
 \end_inset
 
  difference between Highland2 and BANFF since a subset of the MC was used
- to generate them.
+ to generate Highland plots.
  
 \begin_inset Argument 1
 status open
@@ -7089,14 +7082,14 @@ name "fig:P0DairFHCnumuCC1TrackMomTrueParticle"
 placement H
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
@@ -7128,7 +7121,43 @@ Nominal MC
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/SamplesandSelections/numuFHC/CC1Track/HL2/Run4_Air/NumuFHCCC1Track_costheta_particle_nominal_mc.png
+	lyxscale 49
+	width 40text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Nominal MC (Highland)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
 
 \begin_layout Plain Layout
 \align center
@@ -7157,14 +7186,10 @@ Flux
 \end_inset
 
 
-\end_layout
-
-\begin_layout Plain Layout
-\align center
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
@@ -7193,10 +7218,14 @@ Systematics
 \end_inset
 
 
+\end_layout
+
+\begin_layout Plain Layout
+\align center
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
@@ -7225,6 +7254,38 @@ Flux + systematics
 \end_inset
 
 
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/SamplesandSelections/numuFHC/CC1Track/HL2/Run4_Air/NumuFHCCC1Track_costheta_particle_fluxtuned_systematicweighted.png
+	lyxscale 50
+	width 40text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Flux + systematics (Highland)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Plain Layout
@@ -7243,10 +7304,19 @@ Reconstructed lepton candidate angle separated by true particle species
 
  in water-out mode.
  (a) The nominal MC prediction without any weights applied.
- (b) The flux tuning are applied.
- (c) The systematic weighting are applied.
- (d) Both flux and systematic weighting are applied.
- 
+ (b) The same POT-normalized plot as (a) using a subset of the water-out
+ MC in Highland.
+ (c) The flux tuning are applied.
+ (d) The systematic weighting are applied.
+ (e) Both flux and systematic weighting are applied.
+ (f) The same POT-normalized plot as (e) using a subset of the water-out
+ MC in Highland.
+ There is a ~
+\begin_inset Formula $1\%$
+\end_inset
+
+ difference between Highland2 and BANFF since a subset of the MC was used
+ to generate Highland plots.
 \begin_inset Argument 1
 status open
 
