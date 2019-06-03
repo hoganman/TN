@@ -379,7 +379,7 @@ literal "false"
 \begin_layout Standard
 \begin_inset Branch SelectionsCuts
 inverted 0
-status collapsed
+status open
 
 \begin_layout Subsection
 \begin_inset Formula $\pod$
@@ -1031,6 +1031,17 @@ This concludes the application of precuts to all the CC Inclusive selections.
 \end_inset
 
  CC Inclusive in FHC Cut
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:numuCCInclusive"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+The highest momentum negatively charged track (HMNT) is the lepton candidate
 \end_layout
 
 \begin_layout Standard
@@ -1063,7 +1074,6 @@ noprefix "false"
 
 CC events producing an outgoing, negatively charged muon.
  So if there is no negatively charged track in the TPC, the event is rejected.
- The highest momentum negatively charged track (HMNT) is the lepton candidate.
 \end_layout
 
 \begin_layout Subsubsection
@@ -1071,6 +1081,21 @@ CC events producing an outgoing, negatively charged muon.
 \end_inset
 
  CC Inclusive in RHC Cuts
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:numubarRHCCCInclusive"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+The highest momentum positively charged track (HMPT) is the lepton candidate
+\end_layout
+
+\begin_layout Itemize
+The HMPT must be the highest momentum track (HMT)
 \end_layout
 
 \begin_layout Standard
@@ -1083,9 +1108,9 @@ In RHC, the majority of neutrinos in the beam is
 \begin_inset Formula $\numubar$
 \end_inset
 
-CC interaction events by selecting positively charged muons, the lepton
- candidate is the highest momentum positively charged track (HMPT) in the
- TPC.
+ CC interaction events by selecting positively charged muons, the lepton
+ candidate is the HMPT in the TPC.
+ The event is rejected if there is no postively charged track.
  However, since the RHC mode beam is not as 
 \begin_inset Formula $\numubar$
 \end_inset
@@ -1098,8 +1123,7 @@ Since RHC neutrino beam can be described as a
 \begin_inset Formula $\numubar$
 \end_inset
 
--enhanced beam, the HMPT must also be the highest momentum track (HMT).
- due to the significant 
+-enhanced beam, the HMPT must also be the HMT due to the significant 
 \begin_inset Quotes eld
 \end_inset
 
@@ -1114,11 +1138,56 @@ wrong-sign
  background.
  This effect is two fold due to the nature of the neutrino source and the
  cross section between neutrinos and antineutrinos.
- Since the source of neutrinos are from protons, the excess of positive
+ Firstly since the source of neutrinos are from protons, the excess of positive
  charge is more likely to produce positively charged pions than negatively
  charged one.
- are many more positively charged pions produced that are not deflected
- Due to this background, an additional cut was
+ Therefore there are many more positively charged pions produced that are
+ not deflected by the horns.
+ Secondly, antineutrino interactions are suppressed compared to neutrinos
+ due to helicity considerations.
+ The cross section per-nucleon for neutrinos and antineutrinos is given
+ by 
+\begin_inset Formula 
+\begin{equation}
+\begin{aligned}\frac{d\sigma}{dxdy}\left(\numu N\rightarrow\muminus X\right) & =\frac{G^{2}xs}{2\pi}\left(Q(x)+\left(1-y\right)^{2}\overline{Q}(x)\right)\\
+\frac{d\sigma}{dxdy}\left(\numubar N\rightarrow\muplus X\right) & =\frac{G^{2}xs}{2\pi}\left(\overline{Q}(x)+\left(1-y\right)^{2}Q(x)\right),
+\end{aligned}
+\label{eq:nuantinucrosssection}
+\end{equation}
+
+\end_inset
+
+where 
+\begin_inset Formula $x\ (0\leq x\leq1)$
+\end_inset
+
+ is the fraction of momentum imparted to a quark, 
+\begin_inset Formula $y\ (0\leq y\leq1)$
+\end_inset
+
+ is the fraction of energy transfered to the hadronic system, 
+\begin_inset Formula $G$
+\end_inset
+
+ is the Fermi constant, 
+\begin_inset Formula $s$
+\end_inset
+
+ is the center-of-momentum energy squared, and 
+\begin_inset Formula $Q(x)$
+\end_inset
+
+ 
+\begin_inset Formula $\left(\overline{Q}(x)\right)$
+\end_inset
+
+ is the quark (antiquark) content of nucleon.
+ Since the nucleon has a small antiquark content and the quark contribution
+ to the antineutrino cross section is multiplied by 
+\begin_inset Formula $\left(1-y\right)^{2}$
+\end_inset
+
+, the antineutrino cross section is smaller compared to neutrinos.
 \end_layout
 
 \begin_layout Subsubsection
@@ -1126,6 +1195,54 @@ wrong-sign
 \end_inset
 
  Background CC Inclusive in RHC Cuts
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:numuRHCCCInclusive"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+The highest momentum negative track (HMNT) is the lepton candidate
+\end_layout
+
+\begin_layout Itemize
+The HMNT must be the highest momentum track (HMT)
+\end_layout
+
+\begin_layout Standard
+As discussed in 
+\begin_inset CommandInset ref
+LatexCommand vref
+reference "subsec:numubarRHCCCInclusive"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, the RHC neutrino beam has a significant wrong-sign 
+\begin_inset Formula $\numu$
+\end_inset
+
+ background.
+ The selection of the HMNT is designed to select the negatively charged
+ muons.
+ To prevent selecting the antineutrino events, the HMNT must also be the
+ HMT.
+ The event is rejected if there is no negatively charged track.
+ If there are both postively and negatively charged tracks, the HMT cut
+ discriminates if the event originates from a 
+\begin_inset Formula $\numu$
+\end_inset
+
+ or 
+\begin_inset Formula $\numubar$
+\end_inset
+
+.
 \end_layout
 
 \end_inset
@@ -7017,8 +7134,7 @@ Reconstructed lepton candidate momentum separated by true particle species
 \begin_inset Formula $\numu$
 \end_inset
 
- CC Inc.
- events occurring in the 
+ CC 1-Track events occurring in the 
 \begin_inset Formula $\pod$
 \end_inset
 
@@ -7297,8 +7413,7 @@ Reconstructed lepton candidate angle separated by true particle species
 \begin_inset Formula $\numu$
 \end_inset
 
- CC Inc.
- events occurring in the 
+ CC 1-Track events occurring in the 
 \begin_inset Formula $\pod$
 \end_inset
 
@@ -7512,8 +7627,7 @@ Reconstructed lepton candidate momentum separated by NEUT model interaction
 \begin_inset Formula $\numu$
 \end_inset
 
- CC Inc.
- events occurring in the 
+ CC 1-Track events occurring in the 
 \begin_inset Formula $\pod$
 \end_inset
 
@@ -7716,8 +7830,7 @@ Reconstructed lepton candidate
 \begin_inset Formula $\numu$
 \end_inset
 
- CC Inc.
- events occurring in the 
+ CC 1-Track events occurring in the 
 \begin_inset Formula $\pod$
 \end_inset
 
@@ -7920,8 +8033,7 @@ Reconstructed lepton candidate momentum separated by topology for FHC
 \begin_inset Formula $\numu$
 \end_inset
 
- CC Inc.
- events occurring in the 
+ CC 1-Track events occurring in the 
 \begin_inset Formula $\pod$
 \end_inset
 
@@ -8124,8 +8236,7 @@ Reconstructed lepton candidate
 \begin_inset Formula $\numu$
 \end_inset
 
- CC Inc.
- events occurring in the 
+ CC 1-Track events occurring in the 
 \begin_inset Formula $\pod$
 \end_inset
 
@@ -8329,8 +8440,7 @@ True neutrino energy associated with the lepton candidate separated by NEUT
 \begin_inset Formula $\numu$
 \end_inset
 
- CC Inc.
- events occurring in the 
+ CC 1-Track events occurring in the 
 \begin_inset Formula $\pod$
 \end_inset
 
@@ -8552,8 +8662,7 @@ Reconstructed lepton candidate momentum separated by true particle species
 \begin_inset Formula $\numubar$
 \end_inset
 
- CC Inc.
- events occurring in the 
+ CC 1-Track events occurring in the 
 \begin_inset Formula $\pod$
 \end_inset
 
@@ -8765,8 +8874,7 @@ Reconstructed lepton candidate angle separated by true particle species
 \begin_inset Formula $\numubar$
 \end_inset
 
- CC Inc.
- events occurring in the 
+ CC 1-Track events occurring in the 
 \begin_inset Formula $\pod$
 \end_inset
 
@@ -8971,8 +9079,7 @@ Reconstructed lepton candidate momentum separated by NEUT model interaction
 \begin_inset Formula $\numubar$
 \end_inset
 
- CC Inc.
- events occurring in the 
+ CC 1-Track events occurring in the 
 \begin_inset Formula $\pod$
 \end_inset
 
@@ -9064,7 +9171,7 @@ Nominal MC
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
@@ -9100,7 +9207,7 @@ Flux
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
@@ -9132,7 +9239,7 @@ Systematics
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
@@ -9175,8 +9282,7 @@ Reconstructed lepton candidate
 \begin_inset Formula $\numubar$
 \end_inset
 
- CC Inc.
- events occurring in the 
+ CC 1-Tracl events occurring in the 
 \begin_inset Formula $\pod$
 \end_inset
 
@@ -9240,7 +9346,7 @@ status collapsed
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
@@ -9272,7 +9378,7 @@ Nominal MC
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
@@ -9308,7 +9414,7 @@ Flux
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
@@ -9340,7 +9446,7 @@ Systematics
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
@@ -9379,8 +9485,7 @@ Reconstructed lepton candidate momentum separated by topology for RHC
 \begin_inset Formula $\numubar$
 \end_inset
 
- CC Inc.
- events occurring in the 
+ CC 1-Track events occurring in the 
 \begin_inset Formula $\pod$
 \end_inset
 
@@ -9440,7 +9545,7 @@ status collapsed
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
@@ -9472,7 +9577,7 @@ Nominal MC
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
@@ -9508,7 +9613,7 @@ Flux
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
@@ -9540,7 +9645,7 @@ Systematics
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
@@ -9583,8 +9688,7 @@ Reconstructed lepton candidate
 \begin_inset Formula $\numubar$
 \end_inset
 
- CC Inc.
- events occurring in the 
+ CC 1-Track events occurring in the 
 \begin_inset Formula $\pod$
 \end_inset
 
@@ -9648,7 +9752,7 @@ status collapsed
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
@@ -9680,7 +9784,7 @@ Nominal MC
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
@@ -9716,7 +9820,7 @@ Flux
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
@@ -9748,7 +9852,7 @@ Systematics
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
@@ -9788,8 +9892,7 @@ True neutrino energy associated with the lepton candidate separated by NEUT
 \begin_inset Formula $\numubar$
 \end_inset
 
- CC Inc.
- events occurring in the 
+ CC 1-Track events occurring in the 
 \begin_inset Formula $\pod$
 \end_inset
 
@@ -12018,7 +12121,7 @@ Nominal MC
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
@@ -12054,7 +12157,7 @@ Flux
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
@@ -12086,7 +12189,7 @@ Systematics
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
@@ -12192,7 +12295,7 @@ status collapsed
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
@@ -12224,7 +12327,7 @@ Nominal MC
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
@@ -12260,7 +12363,7 @@ Flux
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
@@ -12292,7 +12395,7 @@ Systematics
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
@@ -15961,7 +16064,7 @@ todo{Add figures here}
 \begin_layout Standard
 \begin_inset Branch SelectionsKinematicsP0DWaterInCC1Track
 inverted 0
-status collapsed
+status open
 
 \begin_layout Subsubsection
 CC 1-Track (CCQE Enhanced)
@@ -16719,7 +16822,7 @@ Nominal MC
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
@@ -16755,7 +16858,7 @@ Flux
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
@@ -16787,7 +16890,7 @@ Systematics
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
@@ -16893,7 +16996,7 @@ status collapsed
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
@@ -16925,7 +17028,7 @@ Nominal MC
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
@@ -16961,7 +17064,7 @@ Flux
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
@@ -16993,7 +17096,7 @@ Systematics
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
@@ -17091,7 +17194,7 @@ status collapsed
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
@@ -17123,7 +17226,7 @@ Nominal MC
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
@@ -17159,7 +17262,7 @@ Flux
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
@@ -17191,7 +17294,7 @@ Systematics
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
@@ -17297,7 +17400,7 @@ status collapsed
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
@@ -17329,7 +17432,7 @@ Nominal MC
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
@@ -17365,7 +17468,7 @@ Flux
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
@@ -17397,7 +17500,7 @@ Systematics
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
@@ -17661,8 +17764,7 @@ Reconstructed lepton candidate momentum separated by true particle species
 \begin_inset Formula $\numubar$
 \end_inset
 
- CC Inc.
- events occurring in the 
+ CC 1-Track events occurring in the 
 \begin_inset Formula $\pod$
 \end_inset
 
@@ -17862,8 +17964,7 @@ Reconstructed lepton candidate angle separated by true particle species
 \begin_inset Formula $\numubar$
 \end_inset
 
- CC Inc.
- events occurring in the 
+ CC 1-Track events occurring in the 
 \begin_inset Formula $\pod$
 \end_inset
 
@@ -18068,8 +18169,7 @@ Reconstructed lepton candidate momentum separated by NEUT model interaction
 \begin_inset Formula $\numubar$
 \end_inset
 
- CC Inc.
- events occurring in the 
+ CC 1-Track events occurring in the 
 \begin_inset Formula $\pod$
 \end_inset
 
@@ -18129,7 +18229,7 @@ status collapsed
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
@@ -18161,7 +18261,7 @@ Nominal MC
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
@@ -18197,7 +18297,7 @@ Flux
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
@@ -18229,7 +18329,7 @@ Systematics
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
@@ -18272,8 +18372,7 @@ Reconstructed lepton candidate
 \begin_inset Formula $\numubar$
 \end_inset
 
- CC Inc.
- events occurring in the 
+ CC 1-Track events occurring in the 
 \begin_inset Formula $\pod$
 \end_inset
 
@@ -18337,7 +18436,7 @@ status collapsed
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
@@ -18369,7 +18468,7 @@ Nominal MC
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
@@ -18405,7 +18504,7 @@ Flux
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
@@ -18437,7 +18536,7 @@ Systematics
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
@@ -18476,8 +18575,7 @@ Reconstructed lepton candidate momentum separated by topology for RHC
 \begin_inset Formula $\numubar$
 \end_inset
 
- CC Inc.
- events occurring in the 
+ CC 1-Track events occurring in the 
 \begin_inset Formula $\pod$
 \end_inset
 
@@ -18537,7 +18635,7 @@ status collapsed
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
@@ -18569,7 +18667,7 @@ Nominal MC
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
@@ -18605,7 +18703,7 @@ Flux
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
@@ -18637,7 +18735,7 @@ Systematics
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
@@ -18680,8 +18778,7 @@ Reconstructed lepton candidate
 \begin_inset Formula $\numubar$
 \end_inset
 
- CC Inc.
- events occurring in the 
+ CC 1-Track events occurring in the 
 \begin_inset Formula $\pod$
 \end_inset
 
@@ -18745,7 +18842,7 @@ status collapsed
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
@@ -18777,7 +18874,7 @@ Nominal MC
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
@@ -18813,7 +18910,7 @@ Flux
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
@@ -18845,7 +18942,7 @@ Systematics
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
@@ -18885,8 +18982,7 @@ True neutrino energy associated with the lepton candidate separated by NEUT
 \begin_inset Formula $\numubar$
 \end_inset
 
- CC Inc.
- events occurring in the 
+ CC 1-Track events occurring in the 
 \begin_inset Formula $\pod$
 \end_inset
 

@@ -94,6 +94,15 @@
 
 \begin_layout Standard
 \begin_inset FormulaMacro
+\newcommand{\nuantinuparticle}[1]{\ ^{{\scriptscriptstyle ({\scriptstyle -}}}\negmedspace\negmedspace\negmedspace\nu_{#1}^{{\scriptscriptstyle )}}}
+{\stackrel{(-)}{\nu_{#1}}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
 \newcommand{\particle}[2]{#1^{#2}}
 \end_inset
 
