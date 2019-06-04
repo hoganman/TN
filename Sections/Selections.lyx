@@ -1110,7 +1110,7 @@ In RHC, the majority of neutrinos in the beam is
 
  CC interaction events by selecting positively charged muons, the lepton
  candidate is the HMPT in the TPC.
- The event is rejected if there is no postively charged track.
+ The event is rejected if there is no positively charged track.
  However, since the RHC mode beam is not as 
 \begin_inset Formula $\numubar$
 \end_inset
@@ -1149,23 +1149,25 @@ wrong-sign
  by 
 \begin_inset Formula 
 \begin{equation}
-\begin{aligned}\frac{d\sigma}{dxdy}\left(\numu N\rightarrow\muminus X\right) & =\frac{G^{2}xs}{2\pi}\left(Q(x)+\left(1-y\right)^{2}\overline{Q}(x)\right)\\
-\frac{d\sigma}{dxdy}\left(\numubar N\rightarrow\muplus X\right) & =\frac{G^{2}xs}{2\pi}\left(\overline{Q}(x)+\left(1-y\right)^{2}Q(x)\right),
+\begin{aligned}\frac{d^{2}\sigma}{dxdy}\left(\numu N\rightarrow\muminus X\right) & =\frac{G^{2}xs}{2\pi}\left(Q(x)+\left(1-y\right)^{2}\overline{Q}(x)\right)\\
+\frac{d^{2}\sigma}{dxdy}\left(\numubar N\rightarrow\muplus X\right) & =\frac{G^{2}xs}{2\pi}\left(\overline{Q}(x)+\left(1-y\right)^{2}Q(x)\right),
 \end{aligned}
 \label{eq:nuantinucrosssection}
 \end{equation}
 
 \end_inset
 
-where 
-\begin_inset Formula $x\ (0\leq x\leq1)$
+where
+\begin_inset Formula 
+\[
+\begin{aligned}x & =\frac{-q^{2}}{2M_{N}\left(E_{\nu}-E_{\mu}\right)}\\
+y & =1-\frac{E_{\mu}}{E_{\nu}},
+\end{aligned}
+\]
+
 \end_inset
 
- is the fraction of momentum imparted to a quark, 
-\begin_inset Formula $y\ (0\leq y\leq1)$
-\end_inset
 
- is the fraction of energy transfered to the hadronic system, 
 \begin_inset Formula $G$
 \end_inset
 
@@ -1233,7 +1235,7 @@ noprefix "false"
  To prevent selecting the antineutrino events, the HMNT must also be the
  HMT.
  The event is rejected if there is no negatively charged track.
- If there are both postively and negatively charged tracks, the HMT cut
+ If there are both positively and negatively charged tracks, the HMT cut
  discriminates if the event originates from a 
 \begin_inset Formula $\numu$
 \end_inset
