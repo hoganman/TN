@@ -648,7 +648,7 @@ noprefix "false"
  is given by
 \begin_inset Formula 
 \begin{equation}
-\vec{N}_{i}^{p}\left(\flux,\xsec,\systematics\right)=w_{i}^{\text{POT}}\systematics_{i}^{\text{Det}}\sum_{j=1}^{N_{i}^{\text{MC}}}\left[\sum_{k=1}^{N^{\text{Flux}}}\left(\delta_{j,k}^{\text{Flux}}\flux_{k}\right)\prod_{l=1}^{N^{\text{xSyst}}}w_{j,l}\left(\xsec_{l}^{\text{xsec}}\right)\right].\label{eq:n-predicted-BANFF}
+\vec{N}_{i}^{p}\left(\flux,\xsec,\systematics\right)=w_{i}^{\text{POT}}\left(\systematics\right)_{i}^{\text{Det}}\sum_{j=1}^{N_{i}^{\text{MC}}}\left[\sum_{k=1}^{N^{\text{Flux}}}\left(\delta_{j,k}^{\text{Flux}}\left(\flux\right)_{k}^{\text{Flux}}\right)\prod_{l=1}^{N^{\text{xSyst}}}w_{j,l}\left(\left(\xsec\right)_{l}^{\text{xsec}}\right)\right].\label{eq:n-predicted-BANFF}
 \end{equation}
 
 \end_inset
@@ -663,7 +663,7 @@ Here
 
 th analysis which normalizes the MC statistics to expected data statistics.
  To account for the detector inefficiencies, the 
-\begin_inset Formula $\systematics_{i}^{\text{Det}}$
+\begin_inset Formula $\left(\systematics\right)_{i}^{\text{Det}}$
 \end_inset
 
  parameters are normalization parameters that vary the total number of predicted
@@ -673,7 +673,7 @@ th analysis which normalizes the MC statistics to expected data statistics.
 
 th bin.
  Each 
-\begin_inset Formula $\systematics_{i}^{\text{Det}}$
+\begin_inset Formula $\left(\systematics\right)_{i}^{\text{Det}}$
 \end_inset
 
  is determined prior to the fit by surveying over a large number of toy
@@ -688,7 +688,7 @@ th bin.
 
 th analysis bin.
  The 
-\begin_inset Formula $\flux_{k}$
+\begin_inset Formula $\left(\flux\right)_{k}^{\text{Flux}}$
 \end_inset
 
  parameters, out of a total of 
@@ -697,7 +697,7 @@ th analysis bin.
 
 , are flux normalization systematics for each flux bin.
  Since the flux bins are categorized not only by neutrino energy, but also
- by energy and horn current, the 
+ by flavor and horn current, the 
 \begin_inset Formula $\delta_{j,k}^{\text{Flux}}$
 \end_inset
 
@@ -715,7 +715,7 @@ th analysis bin.
 \end_inset
 
 th cross section model, 
-\begin_inset Formula $\xsec_{l}^{\text{xsec}}$
+\begin_inset Formula $\left(\xsec\right)_{l}^{\text{xsec}}$
 \end_inset
 
 , with a total of 
@@ -1175,10 +1175,10 @@ literal "false"
 \begin_layout Standard
 
 \series bold
-Detector Systematics
+Detector Systematic Errors
 \series default
-: Detector systematics are implemented in BANFF to account for detector
- inefficiences.
+: Detector systematics are implemented in BANFF to account for uncertainties
+ in detector efficiencies.
  Since neutrino interaction events can migrate from sample-to-sample, bin-to-bin
 , or both depending on the relevant systematics, numerous toy experiments
  are performed by varying parameters that model known detector systematics.

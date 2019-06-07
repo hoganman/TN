@@ -1138,58 +1138,130 @@ wrong-sign
  background.
  This effect is two fold due to the nature of the neutrino source and the
  cross section between neutrinos and antineutrinos.
- Firstly since the source of neutrinos are from protons, the excess of positive
- charge is more likely to produce positively charged pions than negatively
- charged one.
- Therefore there are many more positively charged pions produced that are
- not deflected by the horns.
- Secondly, antineutrino interactions are suppressed compared to neutrinos
- due to helicity considerations.
- The cross section per-nucleon for neutrinos and antineutrinos is given
- by 
+\end_layout
+
+\begin_layout Standard
+Firstly the neutrino flux is larger in RHC mode due to neutrino production
+ at the target.
+ The source of neutrinos are from protons, which have positive charge, on
+ a graphite target.
+ This method is more likely to produce positively charged pions in the target
+ than negatively charged one.
+ While the horns are designed to select the negatively charged pions in
+ RHC mode, the excess amount of positively charged pions will penetrate
+ the horns' filter.
+ Therefore there are many more 
+\begin_inset Formula $\piplus\rightarrow\muplus+\numu$
+\end_inset
+
+ decays in RHC compared to FHC mode.
+\end_layout
+
+\begin_layout Standard
+Secondly, antineutrino interactions on matter are suppressed compared to
+ neutrinos due to helicity considerations.
+ Consider neutrino-electron scattering, the cross section for 
+\begin_inset Formula $\nu_{e}+e^{-}$
+\end_inset
+
+ is given by
 \begin_inset Formula 
 \begin{equation}
-\begin{aligned}\frac{d^{2}\sigma}{dxdy}\left(\numu N\rightarrow\muminus X\right) & =\frac{G^{2}xs}{2\pi}\left(Q(x)+\left(1-y\right)^{2}\overline{Q}(x)\right)\\
-\frac{d^{2}\sigma}{dxdy}\left(\numubar N\rightarrow\muplus X\right) & =\frac{G^{2}xs}{2\pi}\left(\overline{Q}(x)+\left(1-y\right)^{2}Q(x)\right),
-\end{aligned}
-\label{eq:nuantinucrosssection}
+\frac{d\sigma}{d\Omega}=\frac{G^{2}s}{4\pi^{2}},\label{eq:NuEScattering}
 \end{equation}
 
 \end_inset
 
-where
+where 
+\begin_inset Formula $G$
+\end_inset
+
+ is the Fermi constant and 
+\begin_inset Formula $s$
+\end_inset
+
+ is the center of mass energy squared.
+ The outgoing particles are isotropic since the initial and final spin state
+ of the system is 
+\begin_inset Formula $J=0$
+\end_inset
+
+.
+ Compare 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:NuEScattering"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ with the cross section for 
+\begin_inset Formula $\antinue+e^{-}$
+\end_inset
+
+ 
+\begin_inset Formula 
+\begin{equation}
+\frac{d\sigma}{d\Omega}=\frac{G^{2}s}{16\pi^{2}}\left(1-\cos\theta\right)^{2},\label{eq:ANuEScattering}
+\end{equation}
+
+\end_inset
+
+where 
+\begin_inset Formula $\theta$
+\end_inset
+
+ is the observed scattering angle of the electron.
+ Since the total spin of the 
+\begin_inset Formula $\antinue+e^{-}$
+\end_inset
+
+ system is 
+\begin_inset Formula $J=1$
+\end_inset
+
+ with the 
+\begin_inset Formula $J_{z}=1$
+\end_inset
+
+, the antineutrino is preferentially forward scattered.
+ Integrating over all angles, the cross sections come out to
 \begin_inset Formula 
 \[
-\begin{aligned}x & =\frac{-q^{2}}{2M_{N}\left(E_{\nu}-E_{\mu}\right)}\\
-y & =1-\frac{E_{\mu}}{E_{\nu}},
-\end{aligned}
+\sigma\left(\antinue+e^{-}\right)=\frac{1}{3}\sigma\left(\nue+e^{-}\right).
 \]
 
 \end_inset
 
-
-\begin_inset Formula $G$
+The factor 
+\begin_inset Formula $\nicefrac{1}{3}$
 \end_inset
 
- is the Fermi constant, 
-\begin_inset Formula $s$
+ arises from the fact that angular momentum conservation forbids the 
+\begin_inset Formula $J_{z}=-1$
 \end_inset
 
- is the center-of-momentum energy squared, and 
-\begin_inset Formula $Q(x)$
+ and 
+\begin_inset Formula $0$
 \end_inset
 
- 
-\begin_inset Formula $\left(\overline{Q}(x)\right)$
+ states for 
+\begin_inset Formula $\antinue+e^{-}$
 \end_inset
 
- is the quark (antiquark) content of nucleon.
- Since the nucleon has a small antiquark content and the quark contribution
- to the antineutrino cross section is multiplied by 
-\begin_inset Formula $\left(1-y\right)^{2}$
+ scattering.
+ The same 
+\begin_inset Formula $\nicefrac{1}{3}$
 \end_inset
 
-, the antineutrino cross section is smaller compared to neutrinos.
+ factor arises with 
+\begin_inset Formula $e^{-}$
+\end_inset
+
+ replaced with quarks.
+ Therefore the cross sections for neutrinos are larger than antineutrinos.
 \end_layout
 
 \begin_layout Subsubsection
