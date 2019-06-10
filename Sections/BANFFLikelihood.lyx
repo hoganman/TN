@@ -598,7 +598,7 @@ Given these three sets of systematics, the number of predicted CC events
  at ND280 is calculated using the general formula
 \begin_inset Formula 
 \begin{equation}
-N_{\nu_{l}}=\Phi_{\nu_{l}}\times\sigma_{\nu_{l}}^{T}\times T_{N}\times\epsilon_{\nu_{l}},\label{eq:n-predicted-general}
+N_{\nu_{l}}=\Phi_{\nu_{l}}\sum_{t}\left(\sigma_{\nu_{l}}^{t}M_{t}\right)\epsilon_{\nu_{l}},\label{eq:n-predicted-general}
 \end{equation}
 
 \end_inset
@@ -612,7 +612,7 @@ where
 \end_inset
 
  flavor neutrinos, 
-\begin_inset Formula $\sigma_{\nu_{l}}^{T}$
+\begin_inset Formula $\sigma_{\nu_{l}}^{t}$
 \end_inset
 
  is the cross section of the interaction for neutrino flavor 
@@ -620,15 +620,15 @@ where
 \end_inset
 
  on target 
-\begin_inset Formula $T$
+\begin_inset Formula $t$
 \end_inset
 
 , 
-\begin_inset Formula $T_{N}$
+\begin_inset Formula $M_{t}$
 \end_inset
 
  is the number of 
-\begin_inset Formula $T$
+\begin_inset Formula $t$
 \end_inset
 
  targets, and 
@@ -736,11 +736,15 @@ th cross section model,
 
  cross section model terms.
  Different 
-\begin_inset Formula $T$
+\begin_inset Formula $t$
 \end_inset
 
- target materials have separate cross section parameters and also the number
- of targets is constant.
+ target materials have separate cross section parameters.
+ Also the number of targets 
+\begin_inset Formula $M_{t}$
+\end_inset
+
+ can vary via detector systematics.
 \end_layout
 
 \begin_layout Standard
@@ -1213,10 +1217,29 @@ Detector Systematic Errors
  Since neutrino interaction events can migrate from sample-to-sample, bin-to-bin
 , or both depending on the relevant systematics, numerous toy experiments
  are performed by varying parameters that model known detector systematics.
- After many toy experiments, a covariance matrix is constructed as 
+\end_layout
+
+\begin_layout Standard
+After many toy experiments, a covariance matrix among the bins is constructed
+ considering correlations and statistical errors.
+ This detector covariance matrix is fractional to be consistent with the
+ definitions for the flux and cross section covariance matrices.
+ The detector covariance matrix, 
+\begin_inset Formula $\sigma_{\text{Det}}^{2}$
+\end_inset
+
+, between bins 
+\begin_inset Formula $x$
+\end_inset
+
+ and 
+\begin_inset Formula $y$
+\end_inset
+
+ given explicitly as
 \begin_inset Formula 
 \begin{equation}
-\sigma_{\text{Det}}^{2}\left(x,y\right)=\left(\frac{1}{xy}\right)_{\text{Nom}}\sum_{i=1}^{N_{\text{Toy}}}\sum_{j=1}^{N_{\text{Toy}}}\left(x_{i}-\overline{x}\right)\left(y_{j}-\overline{y}\right),\label{eq:detectorcovariance}
+\sigma_{\text{Det}}^{2}\left(x,y\right)=\frac{1}{x_{\text{Nom}}}\frac{1}{y_{\text{Nom}}}\left(\sigma_{\text{Cov}}^{2}\left(x,y\right)+\sigma_{\text{Stat}}^{2}\left(x,y\right)\right),\label{eq:detectorcovariance}
 \end{equation}
 
 \end_inset
@@ -1229,20 +1252,101 @@ Nom
 \begin_inset Quotes erd
 \end_inset
 
- refers to the nominal MC prediction for bins 
-\begin_inset Formula $x/y$
+, 
+\begin_inset Quotes eld
 \end_inset
 
-, 
+Cov
+\begin_inset Quotes erd
+\end_inset
+
+, and 
+\begin_inset Quotes eld
+\end_inset
+
+Stat
+\begin_inset Quotes erd
+\end_inset
+
+ refer to the nominal MC prediction, covariance, and statistical uncertainties
+ for bins 
+\begin_inset Formula $x$
+\end_inset
+
+ and 
+\begin_inset Formula $y$
+\end_inset
+
+, respectively.
+ The nominal bin expectation for bin 
+\begin_inset Formula $x$
+\end_inset
+
+ is
+\begin_inset Formula 
+\begin{equation}
+x_{\text{Nom}}=\sum_{k=1}^{N_{x}^{\text{MC}}}w_{k},\label{eq:bin-nominal}
+\end{equation}
+
+\end_inset
+
+where 
+\begin_inset Formula $N_{x}^{\text{MC}}$
+\end_inset
+
+ being the number of predicted MC events in the bin and 
+\begin_inset Formula $w_{k}$
+\end_inset
+
+ being the product of all the weights applied to the 
+\begin_inset Formula $k$
+\end_inset
+
+th event (see 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:n-predicted-BANFF"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ for all possible weights).
+ The covariance and statistical terms are given by
+\begin_inset Formula 
+\begin{equation}
+\begin{aligned}\sigma_{\text{Cov}}^{2}\left(x,y\right) & =\frac{1}{N_{\text{Toy}}}\sum_{t=1}^{N_{\text{Toy}}}\left(x_{t}-\overline{x}\right)\left(y_{t}-\overline{y}\right)\\
+\sigma_{\text{Stat}}^{2}\left(x,y\right) & =\delta\left(x,y\right)\sum_{k=1}^{N_{x}^{\text{MC}}}w_{k}^{2},
+\end{aligned}
+\label{eq:detector-cov-terms}
+\end{equation}
+
+\end_inset
+
+where 
 \begin_inset Formula $N_{\text{Toy}}$
 \end_inset
 
- is the number of toy experiments, and 
-\begin_inset Formula $\overline{x}/\overline{y}$
+ is the number of toy experiments, 
+\begin_inset Formula $\overline{x}$
 \end_inset
 
- is the mean of the all the toy experiments.
- While there could be one detector systematic normalization for each analysis
+ is the mean of the all the toy experiments in bin 
+\begin_inset Formula $x$
+\end_inset
+
+, and 
+\begin_inset Formula $\delta(x,y)$
+\end_inset
+
+ is the Kronecker delta function.
+ Additional uncertainties like fake data contributions are added to the
+ covariance in quadrature.
+\end_layout
+
+\begin_layout Standard
+While there could be one detector systematic normalization for each analysis
  bin, also called a observable normalization, a single one can be assigned
  to multiple analysis bins to reduce the number of fit parameters.
  This procedure requires careful consideration of the shared detector systematic
