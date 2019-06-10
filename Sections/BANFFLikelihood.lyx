@@ -174,15 +174,12 @@ inverted 0
 status collapsed
 
 \begin_layout Standard
-The BANFF likelihood maximization procedure is the method of performing
- a binned likelihood maximization fit of the ND280 data separate from the
- Super-Kamiokande (SK) data.
- In a joint ND280 and SK joint fit, the measurements from both detectors
- are considered along with their respective nuisance parameters.
- This approach is computationally expensive since the time to perform a
- fit increases non-linearly with dimensionality.
- It is, however, pursued in the Markov Chain Monte Carlo analysis (MaCh3)
- and will not be explained here.
+The BANFF likelihood maximization procedure is a binned likelihood maximization
+ of the ND280 data.
+ In a ND280 and Super-Kamiokande (SK) joint fit, the measurements from both
+ detectors are considered along with their respective nuisance parameters.
+ This approach is more computationally expensive compared to the Markov
+ Chain Monte Carlo analysis (MaCh3) which will not be explained here.
  The BANFF likelihood maximization, hitherto referred to as the 
 \begin_inset Quotes eld
 \end_inset
@@ -191,8 +188,8 @@ BANFF-fit
 \begin_inset Quotes erd
 \end_inset
 
-, includes nuisance parameters that while affect the measurement of the
- oscillation parameters, are not physics goals of T2K.
+, includes nuisance parameters that affect the measurement of the oscillation
+ parameters, but are not physics goals of the T2K experiment.
  The BANFF-fit parameters and their respective covariances are then used
  as inputs in the oscillation analysis.
  This 
@@ -221,7 +218,9 @@ literal "false"
 \end_inset
 
 .
- While subsequent updates to the BANFF analysis
+ It uses a frequentist approach to find the best nuisance parameter set
+ to maximize a binned likelihood.
+ Subsequent updates to the BANFF analysis
 \begin_inset CommandInset citation
 LatexCommand cite
 key "Hartz2016,Bienstock2017,Bienstock2018"
@@ -229,10 +228,7 @@ literal "false"
 
 \end_inset
 
- increase the sample sizes and systematic parameterizations, the method
- has remained unchanged.
- It uses a frequentist approach to find the best nuisance parameter set
- to maximize a binned likelihood.
+ increase the sample sizes and systematic parameterizations.
 \end_layout
 
 \end_inset
@@ -564,7 +560,11 @@ noprefix "false"
 
 \end_inset
 
- as a Poisson distribution given this is a counting experiment.
+ as a product of Poisson distributions with each corresponding to bins 
+\begin_inset Formula $i=1,2,\ldots,M-1,M$
+\end_inset
+
+.
  The sets of dependent nuisance parameters, also sometimes called systematics,
  that affect the predicted event rate are
 \end_layout
@@ -595,10 +595,10 @@ Given these three sets of systematics, the number of predicted CC events
 \begin_inset Formula $\nu_{l}$
 \end_inset
 
- at ND280 is calculated considering the general formula
+ at ND280 is calculated using the general formula
 \begin_inset Formula 
 \begin{equation}
-N_{\nu_{l}}=\Phi_{\nu_{l}}\times\sigma_{\nu_{l}}\times\epsilon_{\nu_{l}},\label{eq:n-predicted-general}
+N_{\nu_{l}}=\Phi_{\nu_{l}}\times\sigma_{\nu_{l}}^{T}\times T_{N}\times\epsilon_{\nu_{l}},\label{eq:n-predicted-general}
 \end{equation}
 
 \end_inset
@@ -612,14 +612,26 @@ where
 \end_inset
 
  flavor neutrinos, 
-\begin_inset Formula $\sigma_{\nu_{l}}$
+\begin_inset Formula $\sigma_{\nu_{l}}^{T}$
 \end_inset
 
  is the cross section of the interaction for neutrino flavor 
 \begin_inset Formula $l$
 \end_inset
 
-, and 
+ on target 
+\begin_inset Formula $T$
+\end_inset
+
+, 
+\begin_inset Formula $T_{N}$
+\end_inset
+
+ is the number of 
+\begin_inset Formula $T$
+\end_inset
+
+ targets, and 
 \begin_inset Formula $\epsilon_{\nu_{l}}$
 \end_inset
 
@@ -706,7 +718,7 @@ th analysis bin.
 \end_inset
 
  selects the correct flux bin.
- And finally the parameters 
+ The parameters 
 \begin_inset Formula $w_{j,l}$
 \end_inset
 
@@ -723,6 +735,12 @@ th cross section model,
 \end_inset
 
  cross section model terms.
+ Different 
+\begin_inset Formula $T$
+\end_inset
+
+ target materials have separate cross section parameters and also the number
+ of targets is constant.
 \end_layout
 
 \begin_layout Standard
@@ -752,6 +770,18 @@ noprefix "false"
 \end_inset
 
 .
+ The denominator in 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:LLHRatio"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ is the MC predicted probability which assumes the best maximum likelihood
+ estimate is the number of observed events.
  Penalty terms from the cross section, flux, and detector systematics are
  included in order to prevent overfitting of the data.
  The new test statistic for all of ND280, 
@@ -854,9 +884,9 @@ noprefix "false"
 \end_inset
 
  purposefully 
-\series bold
+\shape italic
 excludes normalization terms
-\series default
+\shape default
 .
  Once the global minimum of the test statistic is found, the postfit covariance
  matrix 
@@ -1099,7 +1129,8 @@ literal "false"
 .
  There are a total of 25 cross section parameters for interactions like
  meson exchange current that affect the shape and normalization of the cross
- section.The cross section covariance matrix is shown in 
+ section.
+ The cross section correlation matrix is shown in 
 \begin_inset Float figure
 wide false
 sideways false
@@ -1182,8 +1213,35 @@ Detector Systematic Errors
  Since neutrino interaction events can migrate from sample-to-sample, bin-to-bin
 , or both depending on the relevant systematics, numerous toy experiments
  are performed by varying parameters that model known detector systematics.
- After many toy experiments, usually 2000, a covariance matrix is constructed
- by measuring the spread the of event rate in each analysis bin.
+ After many toy experiments, a covariance matrix is constructed as 
+\begin_inset Formula 
+\begin{equation}
+\sigma_{\text{Det}}^{2}\left(x,y\right)=\left(\frac{1}{xy}\right)_{\text{Nom}}\sum_{i=1}^{N_{\text{Toy}}}\sum_{j=1}^{N_{\text{Toy}}}\left(x_{i}-\overline{x}\right)\left(y_{j}-\overline{y}\right),\label{eq:detectorcovariance}
+\end{equation}
+
+\end_inset
+
+where 
+\begin_inset Quotes eld
+\end_inset
+
+Nom
+\begin_inset Quotes erd
+\end_inset
+
+ refers to the nominal MC prediction for bins 
+\begin_inset Formula $x/y$
+\end_inset
+
+, 
+\begin_inset Formula $N_{\text{Toy}}$
+\end_inset
+
+ is the number of toy experiments, and 
+\begin_inset Formula $\overline{x}/\overline{y}$
+\end_inset
+
+ is the mean of the all the toy experiments.
  While there could be one detector systematic normalization for each analysis
  bin, also called a observable normalization, a single one can be assigned
  to multiple analysis bins to reduce the number of fit parameters.
@@ -1195,8 +1253,8 @@ s among analysis bins.
 \begin_inset Formula $\left(P_{l},\cos\theta_{l}\right)$
 \end_inset
 
-, and so the covariance matrix is not a accurate representation of the detector
- systematics.
+, and so the covariance matrix may not be an accurate representation of
+ the detector systematics.
 \end_layout
 
 \end_inset
