@@ -997,7 +997,7 @@ name "tab:FVDef"
 
 \begin_layout Standard
 After passing all the precuts, a single, global track, which is observed
- in TPC1, is assigned as the 
+ in TPC1, is assigned as the lepton candidate or 
 \begin_inset Quotes eld
 \end_inset
 
@@ -1006,24 +1006,133 @@ main track
 \end_inset
 
  of a selection.
- The main track for 
-\begin_inset Formula $\numu$
-\end_inset
-
- selections is the highest momentum, negatively-charged track (HMNT).
- Similarly the highest momentum, positively-charged track (HMPT) is assigned
- the main track for 
-\begin_inset Formula $\antinumu$
-\end_inset
-
- selections.
- 
 \end_layout
 
 \begin_layout Standard
-This concludes the application of precuts to all the CC Inclusive selections.
- The following subsubsections describe the CC Inclusive selection cuts,
- first in FHC mode and then RHC mode.
+The momentum of the main track, 
+\begin_inset Formula $P$
+\end_inset
+
+, is sum of its momentum in the TPC, 
+\begin_inset Formula $P_{\text{TPC}}$
+\end_inset
+
+, with the estimate momentum lost in the 
+\begin_inset Formula $\pod$
+\end_inset
+
+, 
+\begin_inset Formula $\Delta P_{\pod}$
+\end_inset
+
+
+\begin_inset Formula 
+\begin{equation}
+P=P_{\text{TPC}}+\Delta P_{\pod}.\label{eq:momentumP0D}
+\end{equation}
+
+\end_inset
+
+Momentum lost in the 
+\begin_inset Formula $\pod$
+\end_inset
+
+ is estimated by summing the energy loss 
+\begin_inset Formula $\left(dT/dx\right)$
+\end_inset
+
+ in along the track path 
+\begin_inset Formula $dx$
+\end_inset
+
+
+\begin_inset Formula 
+\begin{equation}
+\Delta T=\int\left(\frac{dT}{dx}\right)dx.\label{eq:energyloss}
+\end{equation}
+
+\end_inset
+
+Using the chain rule, we can convert the energy loss into momentum loss
+\begin_inset Formula 
+\begin{equation}
+\begin{aligned}\frac{dT}{dx} & =\left(\frac{dT}{dP}\right)\left(\frac{dP}{dx}\right)\\
+ & =\left(\frac{Pc^{2}}{E}\right)\left(\frac{dP}{dx}\right)\\
+ & =\beta c\left(\frac{dP}{dx}\right),
+\end{aligned}
+\label{eq:chainrule}
+\end{equation}
+
+\end_inset
+
+where 
+\begin_inset Formula $\beta$
+\end_inset
+
+ is the particle velocity as a ratio of the speed of light 
+\begin_inset Formula $c$
+\end_inset
+
+.
+ The fundamental theorem of Calculus permits the us to write the energy
+ loss now as a momentum loss
+\begin_inset Formula 
+\[
+\Delta P_{\pod}=\int\left(\frac{dP}{dx}\right)dx=\frac{1}{c}\int\left[\left(\frac{dT}{dx}\right)\frac{1}{\beta}\right]dx.
+\]
+
+\end_inset
+
+Since we cannot take infinitesimally small steps along the track, we must
+ replace the integral with a sum and 
+\begin_inset Formula $dx\rightarrow\Delta x$
+\end_inset
+
+ to arrive at the expression of the momentum loss estimate in the 
+\begin_inset Formula $\pod$
+\end_inset
+
+ 
+\begin_inset Formula 
+\begin{equation}
+P=P_{\text{TPC}}+\frac{1}{c}\sum_{t}\left[\left(\frac{dT}{dx}\right)\left(\frac{\Delta x}{\beta}\right)\right]_{t}.\label{eq:momentumP0DFull}
+\end{equation}
+
+\end_inset
+
+For most tracks entering the TPC, they will be highly relativistic in the
+ 
+\begin_inset Formula $\pod$
+\end_inset
+
+ (
+\begin_inset Formula $\beta(x)\approx1$
+\end_inset
+
+), and 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:momentumP0DFull"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ becomes 
+\begin_inset Formula 
+\begin{equation}
+P=P_{\text{TPC}}+\frac{1}{c}\sum_{t}\left[\left(\frac{dT}{dx}\right)\Delta x\right]_{t}\label{eq:momentumP0DSimplified}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The next sections describe the selection cuts.
+ irst in FHC mode and then RHC mode.
 \end_layout
 
 \begin_layout Subsubsection
@@ -1167,7 +1276,7 @@ Secondly, antineutrino interactions on matter are suppressed compared to
  is given by
 \begin_inset Formula 
 \begin{equation}
-\frac{d\sigma}{d\Omega}=\frac{G^{2}s}{4\pi^{2}},\label{eq:NuEScattering}
+\frac{d\sigma}{d\Omega}=\left(\frac{G\hbar c}{2\pi}\right)^{2}s,\label{eq:NuEScattering}
 \end{equation}
 
 \end_inset
@@ -1204,7 +1313,7 @@ noprefix "false"
  
 \begin_inset Formula 
 \begin{equation}
-\frac{d\sigma}{d\Omega}=\frac{G^{2}s}{16\pi^{2}}\left(1-\cos\theta\right)^{2},\label{eq:ANuEScattering}
+\frac{d\sigma}{d\Omega}=\left(\frac{G\hbar c}{4\pi}\right)^{2}\left(1-\cos\theta\right)^{2}s,\label{eq:ANuEScattering}
 \end{equation}
 
 \end_inset

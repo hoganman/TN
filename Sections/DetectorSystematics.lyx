@@ -78,8 +78,25 @@
 
 \begin_body
 
+\begin_layout Standard
+Sources of systematic uncertainties, hitherto referred to as systematics,
+ must be evaluated in order to understand their effect on any analysis.
+ The BANFF fit utilizes a set of canonical systematics
+\end_layout
+
 \begin_layout Subsection
-Propagation of Systematics
+Detector Systematic Uncertainties
+\end_layout
+
+\begin_layout Standard
+All the detector systematics in BANFF are evaluated as either observable
+ variations or weights.
+ An observable variation affects the physical observables of selected events.
+ The most important variation is the energy loss in the 
+\begin_inset Formula $\pod$
+\end_inset
+
+ of the outgoing muon in CC interactions.
 \end_layout
 
 \begin_layout Subsubsection
@@ -93,7 +110,7 @@ Efficiency-like systematics are treated as weights to the MC predictions
  control samples (CS).
  A CS is designed to provide a reliable measurement with minimal influence
  from other dependent and independent factors.
- An example of a well established CS is a collection of single, isloated
+ An example of a well established CS is a collection of single, isolated
  cosmic ray (muon) tracks to measure the energy loss in a detector.
  In general, a CS may have different properties than the analysis sample
  like event topology.
@@ -101,8 +118,8 @@ Efficiency-like systematics are treated as weights to the MC predictions
  other tracks present.
  Therefore a model extrapolation is needed to map the CS to the analysis
  sample.
- The model used in psyche and BANFF is that the efficiency of the data and
- MC is the same in both analysis sample and CS 
+ The model used in psyche/BANFF is that the efficiency of the data and MC
+ is the same in both analysis sample and CS 
 \begin_inset Formula 
 \[
 \epsilon_{\text{Data}}(x)=\left(\frac{\epsilon_{\text{Data}}(x)}{\epsilon_{\text{MC}}(x)}\right)_{\text{CS}}\epsilon_{\text{MC}}(x)
@@ -160,50 +177,6 @@ w_{\text{ineff}} & =\frac{1-\epsilon_{\text{Data}}^{\prime}}{1-\epsilon_{\text{M
 
 \end_layout
 
-\begin_layout Standard
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-todo{The way efficiency-like systematics are computed is based on studies
- comparing data and MC predictions in well known control samples.
- Tracking and matching efficiencies can be easily computed using the redundancy
- between detectors.
- For example, the TPC2 track efficiency can be computed using tracks with
- segments in FGD1 and FGD2.
- Similarly, the FGD1 track efficiency can be computed using tracks with
- segments in TPC1 and TPC2.
- As these special requirements in general are not satisfied in the analysis
- sample, control samples are necessary.
- As will be shown below, a very useful control sample is the one of through-goin
-g muons, consisting of events in which a single muon track crosses the entire
- tracker.
- These muons, emerging from interactions in the sand surrounding the detector
- (sand muons), in the P0D or in the magnet, cover a limited phase space
- (in general they have small angle and high energy).
- Furthermore, as only a single track is present in those events, the effect
- of other tracks that may vary the efficiency cannot be taken into account.
- For these reasons it is possible that the efficiencies computed using those
- control samples do not correspond to the ones of the analysis samples.
- Thus, a model to extrapolate the control sample efficiency to the analysis
- sample is needed.
- The simplest model is the one assuming that the ratio between the efficiencies
- in data and MC is the same in both the analysis and control samples.
- This is a reasonable assumption and will be used in this section.
- The efficiency in the MC analysis sample can be computed using the truth
- information (given a true GEANT4 trajectory, it is always possible to know
- whether it has been reconstructed or not), while the predicted efficiency
- in the analysis data sample can be computed as follows}
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
 \begin_layout Subsubsection
 Observable Variation Systematics
 \end_layout
@@ -211,7 +184,7 @@ Observable Variation Systematics
 \begin_layout Standard
 \begin_inset Formula 
 \[
-x^{\prime}=x+\Delta x+\delta_{\sigma}\cdot\sigma_{\Delta x}
+x^{\prime}=x_{\text{Nom}}+\Delta x+\delta_{\sigma}\cdot\sigma_{\Delta x}
 \]
 
 \end_inset
