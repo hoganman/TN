@@ -239,10 +239,45 @@ filename "Nomenclature.lyx"
 
 \begin_layout Title
 Impact of 
-\begin_inset Formula $\pod$
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+podtitle{}
+\end_layout
+
 \end_inset
 
- NuMu Samples in BANFF
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+numutitle{}
+\end_layout
+
+\end_inset
+
+ and 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+numubartitle{}
+\end_layout
+
+\end_inset
+
+ Samples in BANFF
 \end_layout
 
 \begin_layout Author
@@ -447,7 +482,16 @@ inverted 0
 status open
 
 \begin_layout Section
-\begin_inset Formula $\pod$
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+podtitle
+\end_layout
+
 \end_inset
 
 -Only BANFF Parameterization
@@ -540,7 +584,19 @@ inverted 1
 status open
 
 \begin_layout Section
-Fitter Results
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+podtitle
+\end_layout
+
+\end_inset
+
+-Only Fitter Results
 \end_layout
 
 \begin_layout Standard
@@ -567,6 +623,10 @@ filename "Sections/FitterResults.lyx"
 \begin_inset Branch Discussion
 inverted 0
 status open
+
+\begin_layout Section
+FGD-P0D Comparisons
+\end_layout
 
 \begin_layout Section
 Discussion
