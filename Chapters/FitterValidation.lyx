@@ -3454,7 +3454,7 @@ We have validated that the BANFF fit works and tested its robustness in
  In the fake data sets, we saw the effect of the penalty terms and how their
  correlations influence the fit.
  While more rigorous tests could establish where biases exist, these limitations
- are beyond the scope of this thesis.
+ are beyond the scope of this technote.
  What has been established is that sensible fit results using the 
 \begin_inset Formula $\pod$
 \end_inset

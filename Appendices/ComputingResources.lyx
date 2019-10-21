@@ -181,7 +181,8 @@ status open
 \end_inset
 
  of Engineering.
- A list of the computing resources used in this thesis is provided in 
+ A list of the computing resources used in this technote is provided in
+ 
 \begin_inset CommandInset ref
 LatexCommand formatted
 reference "tab:Computing-resources-used"
@@ -204,13 +205,13 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Computing resources used in this thesis.
+Computing resources used in this technote.
  
 \begin_inset Argument 1
 status open
 
 \begin_layout Plain Layout
-Computing Resources Used in this Thesis
+Computing Resources Used in this Technote
 \end_layout
 
 \end_inset
@@ -650,7 +651,7 @@ The HPC cluster has a dedicated batch queue scheduler which supports the
  While the user can restrict jobs to specific compute nodes in the batch
  queue, the scheduler will assign jobs to any available nodes on a first
  come, first serve basis with some exceptions.
- The BANFF fit studies in this thesis usually used the default scheduler
+ The BANFF fit studies in this technote usually used the default scheduler
  options except when to prioritize certain jobs over others.
  The typical resource usage is explained in the next paragraph.
 \end_layout

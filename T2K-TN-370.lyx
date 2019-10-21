@@ -404,17 +404,12 @@ inverted 0
 status open
 
 \begin_layout Abstract
-The Tokai to Kamioka (T2K) experiment is a long-baseline neutrino oscillation
- experiment hosted in Japan searching for electron neutrino appearance in
- a high purity muon neutrino beam.
- In order to constrain the systematic uncertainties in the oscillation analysis,
- a dedicated near detector (ND) complex called ND280 is located 280 meters
- from the neutrino production source in line of the beam.
- To date, the Fine Grain Detector (FGD) in ND280 has provided the ND constraint
- using a binned maximum likelihood estimate fit.
- This thesis describes the effort to validate the ND constraint using the
- same framework, but with an independent data set from the ND280 pi-zero
- detector (
+To date, the fine-grained detector (FGD) has provided the near detector
+ (ND) constraint using a binned maximum likelihood estimate fit in the BANFF
+ fit framework.
+ This technote describes the effort to validate the ND constraint using
+ the same framework, but with an independent data set from the ND280 off-axis
+ pi-zero detector (
 \begin_inset Formula $\pod$
 \end_inset
 
@@ -483,39 +478,6 @@ Executive Summary
 \begin_inset CommandInset include
 LatexCommand input
 filename "Chapters/ExecutiveSummary.lyx"
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Branch Introduction
-inverted 0
-status open
-
-\begin_layout Chapter
-Introduction
-\size large
-
-\begin_inset CommandInset label
-LatexCommand label
-name "chap:Introduction"
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset CommandInset include
-LatexCommand input
-filename "Chapters/Introduction.lyx"
 
 \end_inset
 

@@ -1,0 +1,284 @@
+The T2K experiment has organized a task force dedicated to provide
+the near detector constraint for the oscillation analysis. This task
+force is called the ``Beam And Near detector Flux task Force (BANFF)\footnote{Banff is a national park in Canada.}.
+The BANFF group has implemented a binned likelihood maximization fit
+of the ND280 data for the oscillation analysis\cite{Abe2015c}.
+
+The BANFF near detector (ND) constraint fit is done separately from
+fitting the Super-Kamiokande (SK) data. In a joint fit, the measurements
+from both detectors are considered to estimate the oscillation parameters.
+This joint-fit approach is more computationally expensive since it
+must include all parameters that affect the both the ND and SK systematic
+uncertainties, also called nuisance parameters. Also the time to perform
+a fit increases non-linearly with increasing the number of fit parameters.
+Therefore the separate BANFF likelihood maximization, hitherto referred
+to as the ``BANFF fit'', must include parameters that affect the
+measurement of the oscillation parameters. Then those fit parameters
+and their respective covariances are used as inputs in the oscillation
+analysis. This ``divide-and-conquer'' approach allows for more rapidly
+completed studies on the effects of model parameters and biases present.
+However, information encoded in the ND280 measurements for shared
+nuisances such as the neutrino flux is inevitably lost in the BANFF
+fit.
+
+The modern BANFF fit is described in detail in the following reference
+\cite{Abe:2017vif}. To summarize the details, the BANFF fit uses
+a frequentist approach to find the best parameter set to maximize
+a binned likelihood. Subsequent updates to the BANFF fit have increased
+the sample sizes and systematic uncertainty parameterizations.
+
+This chapter describes the BANFF fit and overview of the fitting procedure.
+First we introduce the concept of likelihood functions in \prettyref{sec:Conditional-Probability-Density}.
+Then we explore the mechanics of the BANFF fit using likelihood functions
+in \prettyref{sec:The-BANFF-Fit}. The final topic is a chapter summary
+in \prettyref{sec:LikielihoodSummary}.
+
+
+\section{Conditional Probability Density Functions\label{sec:Conditional-Probability-Density}}
+
+Consider the problem of extracting physics parameters $\vec{y}$ given
+some data vector $\vec{N}$. The conditional probability density function
+(PDF) $\mathcal{P}$ to measure these parameters is given as
+\begin{equation}
+\prob{\vec{y}\left|\vec{N}\right.}=\frac{\mathcal{L}\left(\left.\vec{N}\right|\vec{y}\right)\prob{\vec{y}}}{\int\mathcal{L}\left(\left.\vec{N}\right|\vec{x}\right)\prob{\vec{x}}d\vec{x}},\label{eq:pdfgeneral}
+\end{equation}
+where everything on the right of the vertical lines represents a condition
+on the probability. $\mathcal{L}\left(\left.\vec{N}\right|\vec{y}\right)$
+is the likelihood of the model with parameters $\vec{y}$, $\prob{\vec{y}}$
+is the probability for the model, and the denominator is the normalization.
+A frequentist interpretation of the PDF is a proportion of outcomes
+of repeated trials or experiments. A likelihood function is an expression
+of the probability of observing data as a function of the model parameters
+in their appropriate ranges.
+
+One arrives at \eqref{eq:pdfgeneral} by using the definition of compound
+probabilities
+\begin{equation}
+\prob{A,B}=\prob{B\left|A\right.}\prob A,\label{eq:compoundpdfrule}
+\end{equation}
+to evaluate $\prob{\vec{y}\left|\vec{N}\right.}$ as
+\begin{equation}
+\prob{\underset{B}{\underbrace{\vec{y}}}\left|\underset{A}{\underbrace{\vec{N}}}\right.}=\frac{\prob{\vec{N},\vec{y}}}{\prob{\vec{N}}},\label{eq:pdfproof1}
+\end{equation}
+where the denominator is the normalization of the PDF. The compound
+PDF $\prob{\vec{N},\vec{y}}$ can be expanded using Bayes' theorem
+which states
+\begin{equation}
+\prob{A\left|B\right.}\prob B=\prob{B\left|A\right.}\prob A,\label{eq:bayestheorem}
+\end{equation}
+and combined with \eqref{eq:compoundpdfrule} yields
+\begin{equation}
+\prob{\underset{A}{\underbrace{\vec{N}}},\underset{B}{\underbrace{\vec{y}}}}=\prob{\left.\vec{N}\right|\vec{y}}\times\prob{\vec{y}},\label{eq:pdfproof2}
+\end{equation}
+where the PDFs to the left and right of the $\times$ operator are
+the likelihoods and priors, respectively. Combining resulting in \eqref{eq:pdfproof1}
+and \eqref{eq:pdfproof2} reproduces the original expression of \eqref{eq:pdfgeneral}.
+
+
+\section{The BANFF Fit Test Statistic\label{sec:The-BANFF-Fit}}
+
+Curve fitting is commonly used in particle physics in order to constrain
+unknown model parameters using histograms. This procedure seeks to
+find the ``best'' set of the model predictions, $\theta$, that
+match the data, as is the case for the BANFF fit. This analysis uses
+a chi-squared test to provide a goodness of fit metric, a parameter
+estimation (also referred to as ``best fit parameters''), and a
+error estimation for the BANFF fit.
+
+The BANFF fit is an attempt to maximize the agreement between the
+measured and predicted data curves at the ND280 detector. This is
+equivalent to maximizing a binned likelihood function $\mathcal{L}$
+of the ND280 data given a set of parameters in the likelihood function
+that predict the measured rate. The use of likelihood functions in
+fits to histograms is explained further in reference \cite{baker-cousins}
+and the PDG review on statistics. By invoking Wilks' theorem, also
+known as the likelihood ratio theorem, the likelihood maximization
+procedure is converted into a minimization problem involving a test
+statistic denoted as a chi-squared. Below is an explanation of the
+BANFF test statistic and the model terms.
+
+\subsection{Log-Likelihood Ratio}
+
+Consider many binned samples that select different charged current
+topologies. A convenient choice of observables for all the samples
+is the outgoing charged lepton $l$ momentum $P_{l}$ and angle $\cos\theta_{l}$
+as measured in the ND280 detector\cite{Hartz2015}. For each $\left(P_{l},\cos\theta_{l}\right)$
+analysis bin $i=1,2,\ldots,M-1,M$, the likelihood is given by
+\begin{equation}
+\begin{aligned}\mathcal{L}\left(\vec{N}^{d}\left|\vec{N}^{p}\right.\right) & =\prod_{i=1}^{M}\frac{\left(\vec{N}_{i}^{p}\right)^{\vec{N}_{i}^{d}}\exp\left(-\vec{N}_{i}^{p}\right)}{\vec{N}_{i}^{d}!}\end{aligned}
+\label{eq:likelihoodPoisson}
+\end{equation}
+where $\vec{N}_{i}^{d}$ is the number of observed data events in
+the $i$th bin and $\vec{N}_{i}^{p}$ is the number of predicted events
+as a function of the fit parameters in the same bin. One recognizes
+the likelihood function in \eqref{eq:likelihoodPoisson} as a product
+of Poisson distributions, since this is counting data measured in
+$M$ analysis bins. The parameters that affect the predicted event
+rate are:
+\begin{itemize}
+\item The cross section physics models, labeled as ``xsec'',
+\item The neutrino flux, and
+\item The detector biases and inefficiencies.
+\end{itemize}
+We use these parameters to calculate the number of predicted charged
+current (CC) events $N^{\nu_{l}}$ from any neutrino flavor $\nu_{l}$
+at ND280 as
+\begin{equation}
+N^{\nu_{l}}=\underset{\text{Flux}}{\underbrace{\Phi_{\nu_{l}}}}\times\left[\sum_{t}\underset{\text{Effective area}}{\underbrace{\left(\sigma_{\nu_{l}}^{t}M^{t}\right)}}\right]\times\underset{\text{Efficiency}}{\underbrace{\epsilon_{\nu_{l}}}},\label{eq:n-predicted-general}
+\end{equation}
+where $\Phi_{\nu_{l}}$ is the flux of $l$ flavor neutrinos, $\sigma_{\nu_{l}}^{t}$
+is the cross section of the interaction for neutrino flavor $l$ on
+target $t$, $M^{t}$ is the number of $t$ targets, and $\epsilon_{\nu_{l}}$
+is the total efficiency to reconstruct and properly identify the event
+as $\nu_{l}$CC interactions. Since the cross section is a measure
+of interaction probability in units of area, multiplication of $M_{t}$
+represents the effective cross sectional area of material $t$ in
+the detector. Each term in \eqref{eq:n-predicted-general} is modeled
+carefully using Monte Carlo (MC) simulations. For the efficiency term,
+control samples are used to constrain detector systematic uncertainties
+effects.
+
+The number of events in a given analysis bin is varied in the BANFF
+fit using weight functions. The total number of predicted events in
+the $i$th analysis bin is given by
+\begin{equation}
+\vec{N}_{i}^{p}\left(\flux,\xsec,\systematics\right)=\sum_{j=1}^{N_{i}^{\text{MC}}}\left\{ w_{i}^{\text{POT}}\sum_{k=1}^{N^{\text{Flux}}}\left(\delta_{j,k}^{\text{Flux}}\flux_{k}\right)\times\left[\prod_{l=1}^{N^{\text{xsec}}}w_{j,l}\left(\xsec_{l}\right)\right]\times\systematics_{i}\right\} ,\label{eq:n-predicted-BANFF}
+\end{equation}
+where the parameters are described in \prettyref{tab:Parameters-to-calculate}.
+While \eqref{eq:n-predicted-BANFF} looks complicated as expressed
+in the T2K model, it is functionally the same as \eqref{eq:n-predicted-general}.
+Since the flux bins are categorized by neutrino energy, neutrino flavor,
+and horn current mode, the $\delta_{j,k}^{\text{Flux}}$ term is needed
+to select the correct flux normalization bin for the $j$th MC event.
+Also the number of neutrino targets $M$ in the detector is treated
+as a detector systematic uncertainty.
+
+\begin{table}
+\caption[Parameters that Affect the Analysis Bins]{Parameters that affect the analysis bins. The top three parameters
+are fit while the others are constants set by the input data and bookkeeping.
+\label{tab:Parameters-to-calculate}}
+
+\centering{}%
+\begin{tabular}{lcc}
+\toprule 
+Description & Symbol & Fit?\tabularnewline
+\midrule
+\midrule 
+Fit bin normalizations & $\systematics$ & Yes\tabularnewline
+Flux normalizations & $\flux$ & Yes\tabularnewline
+Cross section weights and norms. & $w\left(\xsec\right)$ & Yes\tabularnewline
+POT weight for the MC & $w^{\text{POT}}$ & No\tabularnewline
+Flux bin selector & $\delta_{j,k}^{\text{Flux}}$ & No\tabularnewline
+Number of flux parameters & $N^{\text{Flux}}$ & No\tabularnewline
+Number of cross section parameters & $N^{\text{xsec}}$ & No\tabularnewline
+Number of MC events & $N^{\text{MC}}$ & No\tabularnewline
+\bottomrule
+\end{tabular}
+\end{table}
+
+Using the likelihood ratio test theorem, a test statistic is defined
+as taking -2 times the natural logarithm of the ratio of predicted
+to observed likelihoods from \eqref{eq:likelihoodPoisson}. This test
+statistic is given as
+\begin{equation}
+\begin{aligned}\chi_{\text{LLR}}^{2} & =-2\log\frac{\mathcal{L}\left(\vec{N}^{d}\left|\vec{N}^{p}\right.\right)}{\mathcal{L}\left(\vec{N}^{d}\left|\vec{N}^{d}\right.\right)}\\
+ & =2\sum_{i=1}^{M}\left[\vec{N}_{i}^{p}-\vec{N}_{i}^{d}+\vec{N}_{i}^{d}\log\left(\frac{\vec{N}_{i}^{d}}{\vec{N}_{i}^{p}}\right)\right],
+\end{aligned}
+\label{eq:LLHRatio}
+\end{equation}
+where this obeys a true chi-squared distribution for asymptotically
+large sample sizes. The denominator in \eqref{eq:LLHRatio} is the
+MC predicted probability, which assumes the best maximum likelihood
+estimate is the number of observed events.
+
+\subsection{External Constraints on the Fit}
+
+Since the BANFF ND constraint is a predictive model fit to data, it
+is subject to the bias-variance problem. This problem basically states
+that for a set of samples $s\in\mathcal{S}$, a predictive model $f_{1}\in\mathcal{F}$
+would have larger variance and smaller bias compared to a constrained
+or shrunken model $f_{2}\subseteq f_{1}$ of which has larger bias
+but smaller variance. We wish to have a ND constraint measurement
+with as little variance as possible, which is achieved by introducing
+one or more constraints, also called ``penalty'' terms, to the test
+statistic \eqref{eq:LLHRatio}. These penalty terms will introduce
+the T2K experiment's model on the flux, cross section, and detector
+inefficiencies into the fit.
+
+The new test statistic that includes the constraints, $\chi_{\ND280}^{2}$,
+is given by
+\begin{equation}
+\begin{aligned}\chi_{\ND280}^{2} & =\chi_{\text{LLR}}^{2}+\underset{\text{Penalty terms}}{\underbrace{\chi_{\text{xsec}}^{2}+\chi_{\text{Flux}}^{2}+\chi_{\text{Det}}^{2}}}\\
+ & =\chi_{\text{LLR}}^{2}-2\left(\log\underset{\text{xsec}}{\underbrace{\pi\left(\xsec\right)}}+\log\underset{\text{Flux}}{\underbrace{\pi\left(\flux\right)}}+\log\underset{\text{Det}}{\underbrace{\pi\left(\systematics\right)}}\right),
+\end{aligned}
+\label{eq:LLHRatioWithPenaltyTerms}
+\end{equation}
+where each of the PDFs $\pi\left(\vec{y}=\left\{ \xsec,\flux,\systematics\right\} \right)$
+is an assumed multivariate normal distribution
+\begin{equation}
+\pi(\vec{y})=C_{y}\exp\left(-\frac{1}{2}\left(\vec{y}-\vec{y}_{0}\right)^{T}V_{y}^{-1}\left(\vec{y}-\vec{y}_{0}\right)\right),\label{eq:nuisancepriorgaussian}
+\end{equation}
+$\vec{y}_{0}$ is a vector of the initial parameter values, $T$ corresponds
+to the transpose operator, $C_{y}$ is the normalization, and $V_{y}$
+is the covariance matrix for vector $\vec{y}$. The full form of the
+test statistic $\chi_{\ND280}^{2}$ is given by
+\begin{equation}
+\begin{aligned}\chi_{\ND280}^{2} & =2\sum_{i=1}^{M}\left[\vec{N}_{i}^{p}-\vec{N}_{i}^{d}+\vec{N}_{i}^{d}\log\left(\frac{\vec{N}_{i}^{d}}{\vec{N}_{i}^{p}}\right)\right]+\left(\Delta\vec{y}\right)^{T}\left(V_{y}^{-1}\right)\left(\Delta\vec{y}\right)\end{aligned}
+\label{eq:BANFFDeltaChiSqr}
+\end{equation}
+where $\Delta\vec{y}=\vec{y}-\vec{y}_{0}$. It must be stated that
+the test statistic \eqref{eq:BANFFDeltaChiSqr} purposefully excludes
+normalization terms since they are constants that do not affect the
+minimization. Further details on the penalty terms and covariance
+matrix in \eqref{eq:BANFFDeltaChiSqr} will be discussed in \prettyref{chap:P0DinBANFF}.
+
+The best fit parameters, $\hat{\vec{y}}$, are those that minimizes
+the chi-squared statistic
+\begin{equation}
+\begin{aligned}\hat{\vec{y}} & =\underset{\vec{y}\in\mathbb{R}^{d}}{\text{argmin}}\left\{ \chi_{\text{LLR}}^{2}\left(\vec{N}^{d},\vec{N}^{p}\left(\vec{y}\right)\right)+\chi_{\text{Penalty}}^{2}\left(\vec{y}\right)\right\} \end{aligned}
+\label{eq:minBANFFDeltaChiSqr}
+\end{equation}
+where
+\[
+\chi_{\text{Penalty}}^{2}\left(\vec{y}\right)=\left(\Delta\vec{y}\right)^{T}\left(V_{y}^{-1}\right)\left(\Delta\vec{y}\right)
+\]
+and we recall that $\vec{N}^{p}$ is a function of $\vec{y}=\left\{ \xsec,\flux,\systematics\right\} $
+as well.
+
+\subsection{Postfit Covariance}
+
+Once the global minimum is found, the postfit covariance matrix needs
+to be calculated. Consider how the chi-squared varies around the global
+minimum, or also called the maximum likelihood estimate, $\hat{\vec{y}}$.
+The test statistic is given analytically by a Taylor series
+\[
+\chi^{2}\left(\vec{y}\right)=\sum_{n=0}^{\infty}\frac{1}{n!}\left[\left(\vec{y}-\hat{\vec{y}}\right)^{T}\left.\nabla_{\vec{y}}\chi^{2}\right|_{\vec{y}=\hat{\vec{y}}}\right]^{n}.
+\]
+Since the gradient at $\hat{\vec{y}}$ is zero, the first non-zero
+$\vec{y}$-dependent term is quadratic in $\vec{y}$
+\[
+\begin{aligned}\chi^{2}\left(\vec{y}\right) & \approx\chi^{2}\left(\hat{\vec{y}}\right)+\frac{1}{2}\left(\vec{y}-\hat{\vec{y}}\right)^{T}\left(\left.\nabla_{\vec{y}}\nabla_{\vec{y}}^{T}\chi^{2}\left(\vec{y}\right)\right|_{\vec{y}=\hat{\vec{y}}}\right)\left(\vec{y}-\hat{\vec{y}}\right)\\
+ & \approx\chi^{2}\left(\hat{\vec{y}}\right)+\frac{1}{2}\left(\vec{y}-\hat{\vec{y}}\right)^{T}\mathcal{H}\left(\vec{y}-\hat{\vec{y}}\right).
+\end{aligned}
+\]
+where $\mathcal{H}$ is a square matrix called the Hessian matrix
+\begin{equation}
+\mathcal{H}_{i,j}=\left.\frac{\partial^{2}\chi^{2}}{\partial y_{i}\partial y_{j}}\right|_{\vec{y}=\hat{\vec{y}}},\label{eq:HessianMatrix}
+\end{equation}
+and $y_{i},y_{j}\in\vec{y}$. Assuming that our test statistic is
+distributed according to a multivariate normal distribution of the
+form \eqref{eq:nuisancepriorgaussian}, we find that the inverse of
+the Hessian matrix is the covariance matrix.
+
+\section{Summary\label{sec:LikielihoodSummary}}
+
+This chapter describes the mathematical preliminaries of the BANFF
+fit analysis. We first saw the role of the likelihood function to
+express the plausibility of data samples given a set of model parameters.
+We then define a binned likelihood function to estimate model parameters
+in the oscillation analysis using the ND280 data. Using Wilks' theorem,
+the likelihood maximization problem is converted to a chi-squared
+test statistic minimization that is iteratively maximized. Finally,
+penalty terms are included in the test statistic in order to assert
+parameter estimates that are consistent with prior systematic uncertainty
+measurements in T2K.

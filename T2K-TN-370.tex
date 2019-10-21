@@ -1,0 +1,234 @@
+%% LyX 2.3.3 created this file.  For more info, see http://www.lyx.org/.
+%% Do not edit unless you really know what you are doing.
+\RequirePackage{fix-cm}
+\RequirePackage{fixltx2e}
+\documentclass[letterpaper,english,letterpaper]{extreport}
+\usepackage[T1]{fontenc}
+\usepackage[latin9]{inputenc}
+\pagestyle{plain}
+\setcounter{secnumdepth}{3}
+\setcounter{tocdepth}{1}
+\usepackage{color}
+\usepackage{array}
+\usepackage{longtable}
+\usepackage{prettyref}
+\usepackage{float}
+\usepackage{booktabs}
+\usepackage{units}
+\usepackage{url}
+\usepackage{pdfpages}
+\usepackage{multirow}
+\usepackage{algorithm2e}
+\usepackage{amsbsy}
+\usepackage{amstext}
+\usepackage{graphicx}
+\usepackage{setspace}
+\doublespacing
+
+\makeatletter
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% LyX specific LaTeX commands.
+
+\let\pr@chap=\pr@cha
+\pdfpageheight\paperheight
+\pdfpagewidth\paperwidth
+
+%% Because html converters don't know tabularnewline
+\providecommand{\tabularnewline}{\\}
+%% A simple dot to overcome graphicx limitations
+\newcommand{\lyxdot}{.}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% User specified LaTeX commands.
+% ams math packages
+\usepackage[cmex10]{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage[version=3]{mhchem}
+
+% graphics packages
+\usepackage{graphicx}
+
+% allowed graphics extensions
+% uncomment if you prefer to add extension in \includegraphics
+\DeclareGraphicsExtensions{.pdf,.png}
+
+% allows the creation of subfigures
+\usepackage[caption=false]{subfig}
+
+% book tables are simple and look nice
+\usepackage{booktabs}
+
+% for specifying urls and links
+\usepackage{url}
+\urlstyle{same} % same style as regular text
+
+\usepackage{xcolor}
+\usepackage{cancel}
+\usepackage{tocbibind}
+\usepackage{pdflscape}
+\usepackage{pdfpages}
+\usepackage{lmodern}
+\usepackage{csquotes}
+\usepackage{multirow}
+\usepackage{multicol}
+\usepackage{braket}
+\usepackage{algpseudocode}
+\usepackage{isodate}
+\usepackage{geometry}
+\geometry{%
+  letterpaper,
+  top=1in,
+  bottom=1in,
+  left=1in,
+  right=1in
+}
+
+\usepackage[%
+  pdftitle={TN370},
+  pdfpagelabels,
+  pdfusetitle,
+  pdfborderstyle={/S/U/W 1}, % underline
+  linkbordercolor=red,       % color of internal links
+  citebordercolor=green,     % color of links to bibliography
+  filebordercolor=magenta,   % color of file links
+  urlbordercolor=cyan,       % color of external links
+  pagebackref,
+  bookmarksopen,
+  linktocpage,
+  bookmarksnumbered]{hyperref}
+\usepackage{cleveref}
+
+% trys to prevent splitting the references between lines
+\let\realref=\ref
+\def\ref{\unskip~\realref}
+
+% trys to add Eqn. in front of \eqref
+\let\realeqref=\eqref
+\def\eqref{Eqn.~\realeqref}
+
+\usepackage{lineno}
+\linenumbers
+
+\@ifundefined{showcaptionsetup}{}{%
+ \PassOptionsToPackage{caption=false}{subfig}}
+\usepackage{subfig}
+\makeatother
+
+\usepackage{babel}
+\begin{document}
+\title{Independent measurement of the T2K near detector constraint using
+the off-axis pi-zero detector}
+\author{Hogan, Matthew\thanks{\protect\url{hoganman@rams.colostate.edu}}\\
+Toki, Walter\thanks{\protect\url{walter.toki@colostate.edu}}}
+\date{\today}
+
+\maketitle
+\input{macros/LyxMathMacros.tex}\input{macros/LyxTextMacros.tex}
+
+\begin{abstract}
+To date, the fine-grained detector (FGD) has provided the near detector
+(ND) constraint using a binned maximum likelihood estimate fit in
+the BANFF fit framework. This technote describes the effort to validate
+the ND constraint using the same framework, but with an independent
+data set from the ND280 off-axis pi-zero detector ($\pod$). Expanding
+on previously developed $\pod$ selections, new selections have been
+developed to select neutrino and antineutrino events in one and multiple
+track topologies on water and carbon. These selections are shown to
+have similar sensitivity to the T2K flux and cross section systematic
+uncertainties. A comparison between the predicted neutrino energy
+spectrum at Super-Kamiokande is performed between the FGD-only and
+$\pod$-only fit results using the P-Theta framework.
+\end{abstract}
+
+\tableofcontents{}
+
+\listoffigures
+
+\listoftables
+
+
+\chapter{Executive Summary}
+
+\input{Chapters/ExecutiveSummary.tex}
+
+
+\chapter{The BANFF Fit Likelihood\label{chap:BANFF-Likelihood}}
+
+\input{Chapters/BANFFLikelihood.tex}
+
+
+\chapter{The \podtitle{} Selections and Samples\label{chap:P0DSelections}}
+
+\input{Chapters/Selections.tex}
+
+
+\chapter{The BANFF Fit Parameters\label{chap:P0DinBANFF}}
+
+\input{Chapters/P0DBANFFParameterization.tex}
+
+
+\chapter{Validation of the BANFF Fit Procedure\label{chap:Fitter-Validation}}
+
+\input{Chapters/FitterValidation.tex}
+
+
+\chapter{Results of the BANFF Fit Using the \podtitle{} Samples \label{chap:Fitter-Results}}
+
+\input{Chapters/FitterResults.tex}
+
+
+\chapter{Discussion\label{chap:Discussion}}
+
+\input{Chapters/Discussion.tex}
+
+\bibliographystyle{ieeetr}
+\bibliography{Bibliography/TN370}
+
+
+\appendix
+
+\chapter[Bin Normalizations]{The \podtitle{}-Only Bin Normalization Parameters\label{app:obsnorm}}
+
+\input{Appendices/Obsnorms.tex}
+
+
+\chapter{Toy Experiment Variations\label{app:Toy-Experiment-Variations}}
+
+\input{Appendices/ToyExperiments.tex}
+
+
+\chapter[Cross Section Variations]{Variations of the Cross Section Parameters \label{app:NSigmaVariations}}
+
+\input{Appendices/NSigmaVariations.tex}
+
+
+\chapter{Log-Likelihood Sample Scans\label{app:Log-Likelihood-Sample-Scans}}
+
+\input{Appendices/LikelihoodScans.tex}
+
+
+\chapter{Log-Likelihood Penalty Scans\label{app:Log-Likelihood-Penalty-Scans}}
+
+\input{Appendices/LikelihoodPenaltyScans.tex}
+
+
+\chapter{Computing Resources\label{chap:Computing-Resources}}
+
+\input{Appendices/ComputingResources.tex}
+
+
+\chapter[Postfit Parameters]{The \podtitle{}-Only Postfit Parameters\label{app:PostfitParameters}}
+
+\input{Appendices/PostfitParameters.tex}
+
+
+\chapter[Postfit ROC Curves]{Postfit Receiver Operating Characteristic Curves \label{app:Receiver-Operating-Characteristi}}
+
+\input{Appendices/ROCCurves.tex}
+
+
+\chapter[Cross-Validated Fit]{Cross-Validated \podtitle{}-Only BANFF Fit\label{app:Regularized-Solution}}
+
+\input{Appendices/CrossValidation.tex}
+\end{document}

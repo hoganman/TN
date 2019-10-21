@@ -1,0 +1,58 @@
+This appendix provides the details on the computing resources used
+to produce the BANFF fit. All the computing resources were provided
+by the W.~M.~Keck high performance computing (HPC) cluster at Colorado
+State University. The HPC cluster is maintained by the Engineering
+Technology Services team at the Walter Scott, Jr.~College of Engineering.
+A list of the computing resources used in this technote is provided
+in \prettyref{tab:Computing-resources-used}.
+
+\begin{table}
+\caption[Computing Resources Used in this Technote]{Computing resources used in this technote. \label{tab:Computing-resources-used}}
+
+\centering{}%
+\begin{tabular}{clccccc}
+\toprule 
+Avail. & Node CPU & \#CPUs & \#cores & Clock & Cache & RAM\tabularnewline
+nodes &  & per node & per CPU & rate {[}GHz{]} & {[}MB{]} & {[}GB{]}\tabularnewline
+\midrule
+\midrule 
+19 & Xeon E5-2640 & 2 & 6 & 2.5 & 15 & 256\tabularnewline
+7 & Xeon E5-2620 v3 &  &  & 2.4 &  & 64\tabularnewline
+4 &  &  &  &  &  & 256\tabularnewline
+15 & Xeon E5-2620 v4 &  & 8 & 2.1 & 20 & 64\tabularnewline
+\bottomrule
+\end{tabular}
+\end{table}
+
+The HPC cluster has a dedicated batch queue scheduler which supports
+the OpenMP and MPI parallel processing environments. While the user
+can restrict jobs to specific compute nodes in the batch queue, the
+scheduler will assign jobs to any available nodes on a first come,
+first serve basis with some exceptions. The BANFF fit studies in this
+technote usually used the default scheduler options except when to
+prioritize certain jobs over others. The typical resource usage is
+explained in the next paragraph.
+
+The $\pod$-only data BANFF fit result was calculated using a compute
+node with two E5-2620 v4 central processing units (CPUs) and 64 GB
+of random access memory (RAM). The data and Monte Carlo (MC) events
+are loaded in RAM from binary ROOT\cite{BRUN199781} files that are
+stored on the HPC cluster's hard disk drives. The total job time was
+27.5 hours using the OpenMP parallel processing environment with all
+16 cores employed, which is reasonable in terms of large scale computational
+work. This includes loading the data and MC, finding the global minimum,
+and calculating the Hess matrix. However, a significant fraction of
+the time, about 6.2 hours hours, was spent preparing the fit by preloading
+the data and MC events into RAM. The maximum consumed RAM for the
+fit was about 40 GB.
+
+In exploring a joint $\pod$+FGD BANFF fit using the canonical T2K
+2018 cross section parameterization, the Asimov fit job required two
+weeks to complete, or about 10 times longer than the $\pod$-only
+Asimov fit. The significant increase in job ``walltime'' is because
+the number of fit parameters almost doubled in comparison. This illustrates
+the nonlinear relationship between the required fit time versus number
+of fit parameters. Additionally, when using the actual $\pod$+FGD
+data, the fit failed to converge on a global minimum due to machine
+precision limits. So for a future joint analysis, careful consideration
+on the number of needed fit parameters is necessary.

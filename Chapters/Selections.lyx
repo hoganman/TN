@@ -346,7 +346,7 @@ noprefix "false"
 \end_inset
 
 .
- The selections described in this thesis also employ the same pre-selection
+ The selections described in this technote also employ the same pre-selection
  cuts with the latest stable Global reconstruction software, Production
  6.
 \end_layout
@@ -664,7 +664,7 @@ The Global reconstruction is a software package that attempts to recognize
  that a true neutrino interaction event occurred near the reconstructed
  vertex.
  Particle cascade or shower reconstruction in Global will not be discussed
- since they are not selected in this thesis.
+ since they are not selected in this technote.
 \end_layout
 
 \begin_layout Standard

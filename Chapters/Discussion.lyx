@@ -154,26 +154,14 @@
 \begin_body
 
 \begin_layout Standard
-This chapter serves to summarize the methods and results shown in this thesis.
- The Tokai to Kamioka (T2K) experiment is a long baseline, neutrino oscillation
- experiment designed to observe a 
-\begin_inset Formula $\numu$
-\end_inset
-
- beam oscillate into 
-\begin_inset Formula $\nue$
-\end_inset
-
-.
- With the aid of the Japan Proton Accelerator Research Complex (J-PARC),
- a dedicated near detector called ND280 is located downstream of the neutrino
- production source to observe the beam before oscillations occur.
- Since the start of data collection, the fine grain detector (FGD) in ND280
- has provided constraints on the neutrino flux and neutrino-water interaction
- modes important to the oscillation analysis.
- This thesis is an analysis of an independent measurement of the ND280 constrain
-t using a maximum likelihood estimate in the Beam and Near Detector Flux
- Task Force (BANFF) framework with samples from the pi-zero detector (
+This chapter serves to summarize the methods and results shown in this technote.
+ Since the start of data collection, the fine-grained detector (FGD) in
+ ND280 has provided constraints on the neutrino flux and neutrino-water
+ interaction modes important to the oscillation analysis.
+ This technote is an analysis of an independent measurement of the ND280
+ constraint using a maximum likelihood estimate in the Beam and Near Detector
+ Flux Task Force (BANFF) framework with samples from the pi-zero detector
+ (
 \begin_inset Formula $\pod$
 \end_inset
 
@@ -278,8 +266,8 @@ name "sec:Prediction-of-the"
 In this section, we analyze the BANFF fit as the input for the oscillation
  analysis.
  We are explicitly NOT performing the oscillation analysis, but we are building
- a prediction of the oscillated neutrino samples using the frequentist framework
- described in the 2017 oscillation analysis publication
+ a prediction of the oscillated neutrino samples using the P-Theta frequentist
+ framework described in the 2017 oscillation analysis publication
 \begin_inset CommandInset citation
 LatexCommand cite
 key "Abe:2017vif"
@@ -1647,7 +1635,7 @@ Looking forward, the
 \begin_inset Formula $\pod$
 \end_inset
 
- selections in this thesis are simplistic compared to the recent developments
+ selections in this technote are simplistic compared to the recent developments
  in the T2K experiment.
  The author was a part of the second generation cross section analysis of
  single pion production in the 
@@ -1691,7 +1679,7 @@ literal "false"
 \end_inset
 
  was able to achieve a high-purity CCQE-like sample using almost identical
- cuts as presented in this thesis.
+ cuts as presented in this technote.
  However, both the CC-
 \begin_inset Formula $1\pi$
 \end_inset
