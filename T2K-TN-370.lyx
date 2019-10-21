@@ -1,0 +1,1134 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass extreport
+\begin_preamble
+% ams math packages
+\usepackage[cmex10]{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage[version=3]{mhchem}
+
+% graphics packages
+\usepackage{graphicx}
+
+% allowed graphics extensions
+% uncomment if you prefer to add extension in \includegraphics
+\DeclareGraphicsExtensions{.pdf,.png}
+
+% allows the creation of subfigures
+\usepackage[caption=false]{subfig}
+
+% book tables are simple and look nice
+\usepackage{booktabs}
+
+% for specifying urls and links
+\usepackage{url}
+\urlstyle{same} % same style as regular text
+
+\usepackage{xcolor}
+\usepackage{cancel}
+\usepackage{tocbibind}
+\usepackage{pdflscape}
+\usepackage{pdfpages}
+\usepackage{lmodern}
+\usepackage{csquotes}
+\usepackage{multirow}
+\usepackage{multicol}
+\usepackage{braket}
+\usepackage{algpseudocode}
+\usepackage{isodate}
+\usepackage{geometry}
+\geometry{%
+  letterpaper,
+  top=1in,
+  bottom=1in,
+  left=1in,
+  right=1in
+}
+
+\usepackage[%
+  pdftitle={TN370},
+  pdfpagelabels,
+  pdfusetitle,
+  pdfborderstyle={/S/U/W 1}, % underline
+  linkbordercolor=red,       % color of internal links
+  citebordercolor=green,     % color of links to bibliography
+  filebordercolor=magenta,   % color of file links
+  urlbordercolor=cyan,       % color of external links
+  pagebackref,
+  bookmarksopen,
+  linktocpage,
+  bookmarksnumbered]{hyperref}
+\usepackage{cleveref}
+
+% trys to prevent splitting the references between lines
+\let\realref=\ref
+\def\ref{\unskip~\realref}
+
+% trys to add Eqn. in front of \eqref
+\let\realeqref=\eqref
+\def\eqref{Eqn.~\realeqref}
+
+\usepackage{lineno}
+\linenumbers
+\end_preamble
+\options letterpaper
+\use_default_options true
+\begin_modules
+fixltx2e
+fix-cm
+hanging
+algorithm2e
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format pdf2
+\output_sync 0
+\bibtex_command bibtex8
+\index_command default
+\paperfontsize default
+\spacing double
+\use_hyperref false
+\pdf_title "HoganThesis"
+\pdf_author "Matthew Hogan"
+\pdf_bookmarks true
+\pdf_bookmarksnumbered true
+\pdf_bookmarksopen false
+\pdf_bookmarksopenlevel 1
+\pdf_breaklinks false
+\pdf_pdfborder false
+\pdf_colorlinks true
+\pdf_backref false
+\pdf_pdfusetitle true
+\papersize letterpaper
+\use_geometry false
+\use_package amsmath 0
+\use_package amssymb 0
+\use_package cancel 0
+\use_package esint 0
+\use_package mathdots 0
+\use_package mathtools 0
+\use_package mhchem 0
+\use_package stackrel 0
+\use_package stmaryrd 0
+\use_package undertilde 0
+\cite_engine basic
+\cite_engine_type default
+\biblio_style apsrev
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 0
+\use_minted 0
+\branch Introduction
+\selected 0
+\filename_suffix 0
+\color #faf0e6
+\end_branch
+\branch PreambleAndMainMatter
+\selected 1
+\filename_suffix 0
+\color #faf0e6
+\end_branch
+\branch BANFFLikelihood
+\selected 0
+\filename_suffix 0
+\color #faf0e6
+\end_branch
+\branch P0DSelections
+\selected 1
+\filename_suffix 0
+\color #faf0e6
+\end_branch
+\branch Systematics
+\selected 0
+\filename_suffix 0
+\color #faf0e6
+\end_branch
+\branch P0DBANFFParameterization
+\selected 1
+\filename_suffix 0
+\color #faf0e6
+\end_branch
+\branch FitterValidation
+\selected 1
+\filename_suffix 0
+\color #faf0e6
+\end_branch
+\branch FitterResults
+\selected 1
+\filename_suffix 0
+\color #faf0e6
+\end_branch
+\branch P0DFDGComparisons
+\selected 0
+\filename_suffix 0
+\color #faf0e6
+\end_branch
+\branch Discussion
+\selected 1
+\filename_suffix 0
+\color #faf0e6
+\end_branch
+\branch AppendixApplicationOfWeights
+\selected 0
+\filename_suffix 0
+\color #faf0e6
+\end_branch
+\branch AppendixObsnorm
+\selected 1
+\filename_suffix 0
+\color #faf0e6
+\end_branch
+\branch AppendixSigmaVariations
+\selected 1
+\filename_suffix 0
+\color #faf0e6
+\end_branch
+\branch AppendixObsnormVariations
+\selected 1
+\filename_suffix 0
+\color #faf0e6
+\end_branch
+\branch AppendixLikelihoodScans
+\selected 1
+\filename_suffix 0
+\color #faf0e6
+\end_branch
+\branch AppendixLikelihoodPenaltyScans
+\selected 1
+\filename_suffix 0
+\color #faf0e6
+\end_branch
+\branch Abstract
+\selected 1
+\filename_suffix 0
+\color #faf0e6
+\end_branch
+\branch AppendixPostfitParameters
+\selected 1
+\filename_suffix 0
+\color #faf0e6
+\end_branch
+\branch AppendixCC1pi
+\selected 0
+\filename_suffix 0
+\color #faf0e6
+\end_branch
+\branch Preamble
+\selected 0
+\filename_suffix 0
+\color #faf0e6
+\end_branch
+\branch Acknowledgements
+\selected 1
+\filename_suffix 0
+\color #faf0e6
+\end_branch
+\branch AppendixProbCPC
+\selected 0
+\filename_suffix 0
+\color #faf0e6
+\end_branch
+\branch AppendixComputingCluster
+\selected 1
+\filename_suffix 0
+\color #faf0e6
+\end_branch
+\branch Preliminaries
+\selected 1
+\filename_suffix 0
+\color #faf0e6
+\end_branch
+\branch AppendixROCCurves
+\selected 1
+\filename_suffix 0
+\color #faf0e6
+\end_branch
+\branch AppendixRegularizedResult
+\selected 1
+\filename_suffix 0
+\color #faf0e6
+\end_branch
+\branch Bibliography
+\selected 1
+\filename_suffix 0
+\color #faf0e6
+\end_branch
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\paperwidth 11in
+\paperheight 8.5in
+\leftmargin 1in
+\topmargin 1in
+\rightmargin 1in
+\bottommargin 1in
+\secnumdepth 3
+\tocdepth 1
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle plain
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Independent measurement of the T2K near detector constraint using the off-axis
+ pi-zero detector
+\end_layout
+
+\begin_layout Author
+Hogan, Matthew
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+
+hoganman@rams.colostate.edu
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+Toki, Walter
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+
+walter.toki@colostate.edu
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Date
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+today
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Branch PreambleAndMainMatter
+inverted 0
+status open
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand input
+filename "macros/LyxMathMacros.lyx"
+
+\end_inset
+
+
+\begin_inset CommandInset include
+LatexCommand input
+filename "macros/LyxTextMacros.lyx"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Branch Abstract
+inverted 0
+status open
+
+\begin_layout Abstract
+The Tokai to Kamioka (T2K) experiment is a long-baseline neutrino oscillation
+ experiment hosted in Japan searching for electron neutrino appearance in
+ a high purity muon neutrino beam.
+ In order to constrain the systematic uncertainties in the oscillation analysis,
+ a dedicated near detector (ND) complex called ND280 is located 280 meters
+ from the neutrino production source in line of the beam.
+ To date, the Fine Grain Detector (FGD) in ND280 has provided the ND constraint
+ using a binned maximum likelihood estimate fit.
+ This thesis describes the effort to validate the ND constraint using the
+ same framework, but with an independent data set from the ND280 pi-zero
+ detector (
+\begin_inset Formula $\pod$
+\end_inset
+
+).
+ Expanding on previously developed 
+\begin_inset Formula $\pod$
+\end_inset
+
+ selections, new selections have been developed to select neutrino and antineutr
+ino events in one and multiple track topologies on water and carbon.
+ These selections are shown to have similar sensitivity to the T2K flux
+ and cross section systematic uncertainties.
+ A comparison between the predicted neutrino energy spectrum at Super-Kamiokande
+ is performed between the FGD-only and 
+\begin_inset Formula $\pod$
+\end_inset
+
+-only fit results using the P-Theta framework.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset toc
+LatexCommand tableofcontents
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset FloatList figure
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset FloatList table
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Branch Preliminaries
+inverted 0
+status open
+
+\begin_layout Chapter
+Executive Summary
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand input
+filename "Chapters/ExecutiveSummary.lyx"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Branch Introduction
+inverted 0
+status open
+
+\begin_layout Chapter
+Introduction
+\size large
+
+\begin_inset CommandInset label
+LatexCommand label
+name "chap:Introduction"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand input
+filename "Chapters/Introduction.lyx"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Branch BANFFLikelihood
+inverted 1
+status open
+
+\begin_layout Chapter
+The BANFF Fit Likelihood
+\begin_inset CommandInset label
+LatexCommand label
+name "chap:BANFF-Likelihood"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand input
+filename "Chapters/BANFFLikelihood.lyx"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Branch P0DSelections
+inverted 0
+status open
+
+\begin_layout Chapter
+The 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+podtitle{}
+\end_layout
+
+\end_inset
+
+ Selections and Samples
+\begin_inset CommandInset label
+LatexCommand label
+name "chap:P0DSelections"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand input
+filename "Chapters/Selections.lyx"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Branch P0DBANFFParameterization
+inverted 0
+status open
+
+\begin_layout Chapter
+The BANFF Fit Parameters
+\begin_inset CommandInset label
+LatexCommand label
+name "chap:P0DinBANFF"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand input
+filename "Chapters/P0DBANFFParameterization.lyx"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Branch FitterValidation
+inverted 0
+status open
+
+\begin_layout Chapter
+Validation of the BANFF Fit Procedure
+\begin_inset CommandInset label
+LatexCommand label
+name "chap:Fitter-Validation"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand input
+filename "Chapters/FitterValidation.lyx"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Branch FitterResults
+inverted 0
+status open
+
+\begin_layout Chapter
+Results of the BANFF Fit Using the 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+podtitle{}
+\end_layout
+
+\end_inset
+
+ Samples 
+\begin_inset CommandInset label
+LatexCommand label
+name "chap:Fitter-Results"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand input
+filename "Chapters/FitterResults.lyx"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Branch Discussion
+inverted 0
+status open
+
+\begin_layout Chapter
+Discussion
+\begin_inset CommandInset label
+LatexCommand label
+name "chap:Discussion"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand input
+filename "Chapters/Discussion.lyx"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Branch Bibliography
+inverted 0
+status open
+
+\begin_layout Standard
+\begin_inset CommandInset bibtex
+LatexCommand bibtex
+btprint "btPrintCited"
+bibfiles "Bibliography/TN370"
+options "ieeetr"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\start_of_appendix
+\begin_inset Branch AppendixObsnorm
+inverted 0
+status open
+
+\begin_layout Chapter
+The 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+podtitle{}
+\end_layout
+
+\end_inset
+
+-Only Bin Normalization Parameters
+\begin_inset CommandInset label
+LatexCommand label
+name "app:obsnorm"
+
+\end_inset
+
+
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+Bin Normalizations
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand input
+filename "Appendices/Obsnorms.lyx"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Branch AppendixObsnormVariations
+inverted 0
+status open
+
+\begin_layout Chapter
+Toy Experiment Variations
+\begin_inset CommandInset label
+LatexCommand label
+name "app:Toy-Experiment-Variations"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand input
+filename "Appendices/ToyExperiments.lyx"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Branch AppendixSigmaVariations
+inverted 0
+status open
+
+\begin_layout Chapter
+Variations of the Cross Section Parameters
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+Cross Section Variations
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset CommandInset label
+LatexCommand label
+name "app:NSigmaVariations"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand input
+filename "Appendices/NSigmaVariations.lyx"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Branch AppendixLikelihoodScans
+inverted 0
+status open
+
+\begin_layout Chapter
+Log-Likelihood Sample Scans
+\begin_inset CommandInset label
+LatexCommand label
+name "app:Log-Likelihood-Sample-Scans"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand input
+filename "Appendices/LikelihoodScans.lyx"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Branch AppendixLikelihoodPenaltyScans
+inverted 0
+status open
+
+\begin_layout Chapter
+Log-Likelihood Penalty Scans
+\begin_inset CommandInset label
+LatexCommand label
+name "app:Log-Likelihood-Penalty-Scans"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand input
+filename "Appendices/LikelihoodPenaltyScans.lyx"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Branch AppendixComputingCluster
+inverted 0
+status open
+
+\begin_layout Chapter
+Computing Resources
+\begin_inset CommandInset label
+LatexCommand label
+name "chap:Computing-Resources"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand input
+filename "Appendices/ComputingResources.lyx"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Branch AppendixPostfitParameters
+inverted 0
+status open
+
+\begin_layout Chapter
+The 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+podtitle{}
+\end_layout
+
+\end_inset
+
+-Only Postfit Parameters
+\begin_inset CommandInset label
+LatexCommand label
+name "app:PostfitParameters"
+
+\end_inset
+
+
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+Postfit Parameters
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand input
+filename "Appendices/PostfitParameters.lyx"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Branch AppendixROCCurves
+inverted 0
+status open
+
+\begin_layout Chapter
+Postfit Receiver Operating Characteristic Curves 
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+Postfit ROC Curves
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "app:Receiver-Operating-Characteristi"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand input
+filename "Appendices/ROCCurves.lyx"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Branch AppendixRegularizedResult
+inverted 0
+status open
+
+\begin_layout Chapter
+Cross-Validated 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+podtitle{}
+\end_layout
+
+\end_inset
+
+-Only BANFF Fit
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+Cross-Validated Fit
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "app:Regularized-Solution"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand input
+filename "Appendices/CrossValidation.lyx"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document

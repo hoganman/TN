@@ -1,0 +1,8420 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass extreport
+\begin_preamble
+% ams math packages
+\usepackage[cmex10]{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+
+% graphics packages
+\usepackage{graphicx} % remove pdftex if you are not compiling to pdf
+%\graphicspath{{./figures/}} % this places all graphics in the figures subdirectory
+
+% allowed graphics extensions
+% uncomment if you prefer to add extension in \includegraphics
+\DeclareGraphicsExtensions{.pdf,.png,.jpg}
+
+% allows the creation of subfigures
+\usepackage[caption=false]{subfig}
+
+% book tables are simple and look nice
+\usepackage{booktabs}
+
+% for specifying urls and links
+\usepackage{url}
+\urlstyle{same} % same style as regular text
+
+% for defining colors
+\usepackage{xcolor}
+
+%\usepackage[labelformat=empty]{caption}
+%\usepackage{subcaption}
+\usepackage{lmodern}
+\usepackage{csquotes}
+\usepackage{multirow}
+\usepackage{multicol}
+\usepackage{hepunits}
+\usepackage{hepnames}
+\usepackage{physics}
+
+\usepackage[%
+  pdfpagelabels,
+  pdfusetitle,
+  %hidelinks,
+  %colorlinks=true,
+  %pdfborder={0 0 0},
+  linkcolor=blue,
+  filecolor=magenta,
+  urlcolor=cyan,
+  pagebackref,
+  bookmarksopen,
+  bookmarksnumbered]{hyperref}
+
+\usepackage{sectsty}
+\chapterfont{\centering}
+
+\usepackage{braket}
+\end_preamble
+\use_default_options true
+\master ../T2K-TN-370.lyx
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "palatino" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format pdf2
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\pdf_title "HoganThesis"
+\pdf_author "Matthew Hogan"
+\pdf_bookmarks true
+\pdf_bookmarksnumbered true
+\pdf_bookmarksopen false
+\pdf_bookmarksopenlevel 1
+\pdf_breaklinks false
+\pdf_pdfborder false
+\pdf_colorlinks true
+\pdf_backref false
+\pdf_pdfusetitle true
+\papersize letterpaper
+\use_geometry true
+\use_package amsmath 0
+\use_package amssymb 0
+\use_package cancel 0
+\use_package esint 0
+\use_package mathdots 0
+\use_package mathtools 0
+\use_package mhchem 0
+\use_package stackrel 0
+\use_package stmaryrd 0
+\use_package undertilde 0
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 0
+\use_minted 0
+\branch Introduction
+\selected 1
+\filename_suffix 0
+\color #faf0e6
+\end_branch
+\branch FitterResultsPrefitDistributions
+\selected 1
+\filename_suffix 0
+\color #faf0e6
+\end_branch
+\branch FitterResultsPostfitDistributions
+\selected 1
+\filename_suffix 0
+\color #faf0e6
+\end_branch
+\branch FitterResultsPostfit
+\selected 1
+\filename_suffix 0
+\color #faf0e6
+\end_branch
+\branch FitterResultsPostfitExposureTable
+\selected 1
+\filename_suffix 0
+\color #faf0e6
+\end_branch
+\branch FitterResultsPValueAndROC
+\selected 1
+\filename_suffix 0
+\color #faf0e6
+\end_branch
+\branch StatSign
+\selected 0
+\filename_suffix 0
+\color #faf0e6
+\end_branch
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 1in
+\topmargin 1in
+\rightmargin 1in
+\bottommargin 1in
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+This chapter explores the results of performing the BANFF fit using the
+ 
+\begin_inset Formula $\pod$
+\end_inset
+
+-only samples.
+ We have confirmed that the fit machinery is working and that the samples
+ demonstrate sensitivity to flux and cross section parameters.
+ The focus in this chapter is to examine the results of the 
+\begin_inset Formula $\pod$
+\end_inset
+
+-only data fit and compare it against the FGD-only result.
+\end_layout
+
+\begin_layout Standard
+The chapter will proceed in the following order.
+ First, since we have remained purposefully blind up to this state in the
+ analysis, the data will be examined in 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "sec:Prefit-Sample-Distributions"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+ Next the postfit results will be carefully examined and compared with that
+ of the FGD-only fit in 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "sec:Postfit-Results"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+ Finally, a chapter summary is provided in 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "sec:ResultsSummary"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Branch FitterResultsPrefitDistributions
+inverted 0
+status open
+
+\begin_layout Section
+Prefit Sample Distributions
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:Prefit-Sample-Distributions"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+This section presents the first look at the data for the 12 samples according
+ to the fit bins set in 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "chap:P0DinBANFF"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+ The samples are categorized into four true interaction modes as described
+ earlier: 
+\begin_inset Formula $\nu$
+\end_inset
+
+ CCQE, 
+\begin_inset Formula $\nu$
+\end_inset
+
+ non-CCQE, 
+\begin_inset Formula $\antinu$
+\end_inset
+
+ CCQE, and 
+\begin_inset Formula $\antinu$
+\end_inset
+
+ non-CCQE.
+ However, true fiducial volume (FV) and out of FV events are not differentiated
+ in this case.
+ The prefit samples with the data shown are presented between 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "fig:Data-and-prefit-wtr-numu1Trk"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ and 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "fig:Data-and-prefit-air-numuRHCNTrks"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+ First the water-in samples are displayed, and then the water-out samples
+ are shown.
+ As we saw before, the water-in and water-out samples are qualitatively
+ the same.
+\end_layout
+
+\begin_layout Standard
+In general, we notice good agreement between the data and prefit distributions.
+ Their agreement is represented in one-dimensional profiles with the data
+ to prefit ratio shown below the histograms.
+ Evidence of the 
+\begin_inset Formula $\pod$
+\end_inset
+
+ bulging effect in the most downstream layers can be seen in all water-in
+ samples.
+ In particular, since there is more true mass in the most downstream layers,
+ particles with lower momenta are more likely to enter the TPC than predicted
+ by the MC using the as-built mass.
+ Better agreement is observed in the water-out periods, but there is some
+ data tension.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/FitterResults/Prefit/png/P0D_Water_NuMu_CC1Track_mumom_rxn_prefit.png
+	lyxscale 50
+	width 48text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Momentum in MeV/c
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/FitterResults/Prefit/png/P0D_Water_NuMu_CC1Track_mucostheta_rxn_prefit.png
+	lyxscale 50
+	width 48text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset Formula $\cos\theta$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/FitterResults/Prefit/output-0.png
+	lyxscale 50
+	width 99text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Momentum-
+\begin_inset Formula $\cos\theta$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Data and prefit expectation for the 
+\begin_inset Formula $\pod$
+\end_inset
+
+ Water-In 
+\begin_inset Formula $\numu$
+\end_inset
+
+ in FHC Mode CC 1-Track sample.
+ Sub-figure (a) shows the momentum one-dimensional profile in all but the
+ highest momentum fit bin.
+ Sub-figure (b) shows the 
+\begin_inset Formula $\cos\theta$
+\end_inset
+
+ one-dimensional profile in all but the highest angle fit bin.
+ Shown in both (a) and (b) is the ratio between data and the prefit value.
+ Sub-figure (c) shows a grid of two-dimensional data and prefit distributions
+ in the same phase space as (a) and (b).
+ Moving from top-left to bottom-right in (c) is the data, prefit, data to
+ prefit ratio, and data to prefit difference.
+ 
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Data-and-prefit-wtr-numu1Trk"
+
+\end_inset
+
+ 
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+Prefit for the Water-In 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+numutitle{}
+\end_layout
+
+\end_inset
+
+ in FHC Mode CC 1-Track Sample
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/FitterResults/Prefit/png/P0D_Water_NuMu_CCNTracks_mumom_rxn_prefit.png
+	lyxscale 50
+	width 48text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Momentum in MeV/c
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/FitterResults/Prefit/png/P0D_Water_NuMu_CCNTracks_mucostheta_rxn_prefit.png
+	lyxscale 50
+	width 48text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset Formula $\cos\theta$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/FitterResults/Prefit/output-1.png
+	lyxscale 50
+	width 99text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Momentum-
+\begin_inset Formula $\cos\theta$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Data and prefit expectation for the 
+\begin_inset Formula $\pod$
+\end_inset
+
+ Water-In 
+\begin_inset Formula $\numu$
+\end_inset
+
+ in FHC Mode CC N-Tracks sample.
+ Sub-figure (a) shows the momentum one-dimensional profile in all but the
+ highest momentum fit bin.
+ Sub-figure (b) shows the 
+\begin_inset Formula $\cos\theta$
+\end_inset
+
+ one-dimensional profile in all but the highest angle fit bin.
+ Shown in both (a) and (b) is the ratio between data and the prefit value.
+ Sub-figure (c) shows a grid of two-dimensional data and prefit distributions
+ in the same phase space as (a) and (b).
+ Moving from top-left to bottom-right in (c) is the data, prefit, data to
+ prefit ratio, and data to prefit difference.
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Data-and-prefit-wtr-numuNTrks"
+
+\end_inset
+
+ 
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+Prefit for the Water-In 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+numutitle{}
+\end_layout
+
+\end_inset
+
+ in FHC Mode CC N-Tracks Sample
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/FitterResults/Prefit/png/P0D_Water_NuMubar_in_Anti_NuMode_CC1Track_mumom_rxn_prefit.png
+	lyxscale 50
+	width 48text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Momentum in MeV/c
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/FitterResults/Prefit/png/P0D_Water_NuMubar_in_Anti_NuMode_CC1Track_mucostheta_rxn_prefit.png
+	lyxscale 50
+	width 48text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset Formula $\cos\theta$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/FitterResults/Prefit/output-2.png
+	lyxscale 50
+	width 99text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Momentum-
+\begin_inset Formula $\cos\theta$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Data and prefit expectation for the 
+\begin_inset Formula $\pod$
+\end_inset
+
+ Water-In 
+\begin_inset Formula $\numubar$
+\end_inset
+
+ in RHC Mode CC 1-Track sample.
+ Sub-figure (a) shows the momentum one-dimensional profile in all but the
+ highest momentum fit bin.
+ Sub-figure (b) shows the 
+\begin_inset Formula $\cos\theta$
+\end_inset
+
+ one-dimensional profile in all but the highest angle fit bin.
+ Shown in both (a) and (b) is the ratio between data and the prefit value.
+ Sub-figure (c) shows a grid of two-dimensional data and prefit distributions
+ in the same phase space as (a) and (b).
+ Moving from top-left to bottom-right in (c) is the data, prefit, data to
+ prefit ratio, and data to prefit difference.
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Data-and-prefit-wtr-numubarRHC1Trk"
+
+\end_inset
+
+ 
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+Prefit for the Water-In 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+numubartitle{}
+\end_layout
+
+\end_inset
+
+ in RHC Mode CC 1-Track Sample
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/FitterResults/Prefit/png/P0D_Water_NuMubar_in_Anti_NuMode_CCNTracks_mumom_rxn_prefit.png
+	lyxscale 50
+	width 48text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Momentum in MeV/c
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/FitterResults/Prefit/png/P0D_Water_NuMubar_in_Anti_NuMode_CCNTracks_mucostheta_rxn_prefit.png
+	lyxscale 50
+	width 48text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset Formula $\cos\theta$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/FitterResults/Prefit/output-3.png
+	lyxscale 50
+	width 99text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Momentum-
+\begin_inset Formula $\cos\theta$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Data and prefit expectation for the 
+\begin_inset Formula $\pod$
+\end_inset
+
+ Water-In 
+\begin_inset Formula $\numubar$
+\end_inset
+
+ in RHC Mode CC N-Tracks sample.
+ Sub-figure (a) shows the momentum one-dimensional profile in all but the
+ highest momentum fit bin.
+ Sub-figure (b) shows the 
+\begin_inset Formula $\cos\theta$
+\end_inset
+
+ one-dimensional profile in all but the highest angle fit bin.
+ Shown in both (a) and (b) is the ratio between data and the prefit value.
+ Sub-figure (c) shows a grid of two-dimensional data and prefit distributions
+ in the same phase space as (a) and (b).
+ Moving from top-left to bottom-right in (c) is the data, prefit, data to
+ prefit ratio, and data to prefit difference.
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Data-and-prefit-wtr-numubarRHCNTrks"
+
+\end_inset
+
+ 
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+Prefit for the Water-In 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+numubartitle{}
+\end_layout
+
+\end_inset
+
+ in RHC Mode CC N-Tracks Sample
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/FitterResults/Prefit/png/P0D_Water_NuMu_Bkg_in_Anti_NuMode_CC1Track_mumom_rxn_prefit.png
+	lyxscale 50
+	width 48text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Momentum in MeV/c
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/FitterResults/Prefit/png/P0D_Water_NuMu_Bkg_in_Anti_NuMode_CC1Track_mucostheta_rxn_prefit.png
+	lyxscale 50
+	width 48text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset Formula $\cos\theta$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/FitterResults/Prefit/output-4.png
+	lyxscale 50
+	width 99text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Momentum-
+\begin_inset Formula $\cos\theta$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Data and prefit expectation for the 
+\begin_inset Formula $\pod$
+\end_inset
+
+ Water-In 
+\begin_inset Formula $\numu$
+\end_inset
+
+ in RHC Mode CC 1-Track sample.
+ Sub-figure (a) shows the momentum one-dimensional profile in all but the
+ highest momentum fit bin.
+ Sub-figure (b) shows the 
+\begin_inset Formula $\cos\theta$
+\end_inset
+
+ one-dimensional profile in all but the highest angle fit bin.
+ Shown in both (a) and (b) is the ratio between data and the prefit value.
+ Sub-figure (c) shows a grid of two-dimensional data and prefit distributions
+ in the same phase space as (a) and (b).
+ Moving from top-left to bottom-right in (c) is the data, prefit, data to
+ prefit ratio, and data to prefit difference.
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Data-and-prefit-wtr-numuRHC1Trk"
+
+\end_inset
+
+ 
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+Prefit for the Water-In 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+numutitle{}
+\end_layout
+
+\end_inset
+
+ in RHC Mode CC 1-Track Sample
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/FitterResults/Prefit/png/P0D_Water_NuMu_Bkg_in_Anti_NuMode_CCNTracks_mumom_rxn_prefit.png
+	lyxscale 50
+	width 48text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Momentum in MeV/c
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/FitterResults/Prefit/png/P0D_Water_NuMu_Bkg_in_Anti_NuMode_CCNTracks_mucostheta_rxn_prefit.png
+	lyxscale 50
+	width 48text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset Formula $\cos\theta$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/FitterResults/Prefit/output-5.png
+	lyxscale 50
+	width 99text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Momentum-
+\begin_inset Formula $\cos\theta$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Data and prefit expectation for the 
+\begin_inset Formula $\pod$
+\end_inset
+
+ Water-In 
+\begin_inset Formula $\numu$
+\end_inset
+
+ in RHC Mode CC N-Tracks sample.
+ Sub-figure (a) shows the momentum one-dimensional profile in all but the
+ highest momentum fit bin.
+ Sub-figure (b) shows the 
+\begin_inset Formula $\cos\theta$
+\end_inset
+
+ one-dimensional profile in all but the highest angle fit bin.
+ Shown in both (a) and (b) is the ratio between data and the prefit value.
+ Sub-figure (c) shows a grid of two-dimensional data and prefit distributions
+ in the same phase space as (a) and (b).
+ Moving from top-left to bottom-right in (c) is the data, prefit, data to
+ prefit ratio, and data to prefit difference.
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Data-and-prefit-wtr-numuRHCNTrks"
+
+\end_inset
+
+ 
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+Prefit for the Water-In 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+numutitle{}
+\end_layout
+
+\end_inset
+
+ in RHC Mode CC N-Tracks Sample
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/FitterResults/Prefit/png/P0D_Air_NuMu_CC1Track_mumom_rxn_prefit.png
+	lyxscale 50
+	width 48text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Momentum in MeV/c
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/FitterResults/Prefit/png/P0D_Air_NuMu_CC1Track_mucostheta_rxn_prefit.png
+	lyxscale 50
+	width 48text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset Formula $\cos\theta$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/FitterResults/Prefit/output-6.png
+	lyxscale 50
+	width 99text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Momentum-
+\begin_inset Formula $\cos\theta$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Data and prefit expectation for the 
+\begin_inset Formula $\pod$
+\end_inset
+
+ Water-Out 
+\begin_inset Formula $\numu$
+\end_inset
+
+ in FHC Mode CC 1-Track sample.
+ Sub-figure (a) shows the momentum one-dimensional profile in all but the
+ highest momentum fit bin.
+ Sub-figure (b) shows the 
+\begin_inset Formula $\cos\theta$
+\end_inset
+
+ one-dimensional profile in all but the highest angle fit bin.
+ Shown in both (a) and (b) is the ratio between data and the prefit value.
+ Sub-figure (c) shows a grid of two-dimensional data and prefit distributions
+ in the same phase space as (a) and (b).
+ Moving from top-left to bottom-right in (c) is the data, prefit, data to
+ prefit ratio, and data to prefit difference.
+ 
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Data-and-prefit-air-numu1Trk"
+
+\end_inset
+
+ 
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+Prefit for the Water-Out 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+numutitle{}
+\end_layout
+
+\end_inset
+
+ in FHC Mode CC 1-Track Sample
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/FitterResults/Prefit/png/P0D_Air_NuMu_CCNTracks_mumom_rxn_prefit.png
+	lyxscale 50
+	width 48text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Momentum in MeV/c
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/FitterResults/Prefit/png/P0D_Air_NuMu_CCNTracks_mucostheta_rxn_prefit.png
+	lyxscale 50
+	width 48text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset Formula $\cos\theta$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/FitterResults/Prefit/output-7.png
+	lyxscale 50
+	width 99text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Momentum-
+\begin_inset Formula $\cos\theta$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Data and prefit expectation for the 
+\begin_inset Formula $\pod$
+\end_inset
+
+ Water-Out 
+\begin_inset Formula $\numu$
+\end_inset
+
+ in FHC Mode CC N-Tracks sample.
+ Sub-figure (a) shows the momentum one-dimensional profile in all but the
+ highest momentum fit bin.
+ Sub-figure (b) shows the 
+\begin_inset Formula $\cos\theta$
+\end_inset
+
+ one-dimensional profile in all but the highest angle fit bin.
+ Shown in both (a) and (b) is the ratio between data and the prefit value.
+ Sub-figure (c) shows a grid of two-dimensional data and prefit distributions
+ in the same phase space as (a) and (b).
+ Moving from top-left to bottom-right in (c) is the data, prefit, data to
+ prefit ratio, and data to prefit difference.
+ 
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Data-and-prefit-air-numuNTrks"
+
+\end_inset
+
+ 
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+Prefit for the Water-Out 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+numutitle{}
+\end_layout
+
+\end_inset
+
+ in FHC Mode CC N-Tracks Sample
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/FitterResults/Prefit/png/P0D_Air_NuMubar_in_Anti_NuMode_CC1Track_mumom_rxn_prefit.png
+	lyxscale 50
+	width 48text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Momentum in MeV/c
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/FitterResults/Prefit/png/P0D_Air_NuMubar_in_Anti_NuMode_CC1Track_mucostheta_rxn_prefit.png
+	lyxscale 50
+	width 48text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset Formula $\cos\theta$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/FitterResults/Prefit/output-8.png
+	lyxscale 50
+	width 99text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Momentum-
+\begin_inset Formula $\cos\theta$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Data and prefit expectation for the 
+\begin_inset Formula $\pod$
+\end_inset
+
+ Water-Out 
+\begin_inset Formula $\numubar$
+\end_inset
+
+ in RHC Mode CC 1-Track sample.
+ Sub-figure (a) shows the momentum one-dimensional profile in all but the
+ highest momentum fit bin.
+ Sub-figure (b) shows the 
+\begin_inset Formula $\cos\theta$
+\end_inset
+
+ one-dimensional profile in all but the highest angle fit bin.
+ Shown in both (a) and (b) is the ratio between data and the prefit value.
+ Sub-figure (c) shows a grid of two-dimensional data and prefit distributions
+ in the same phase space as (a) and (b).
+ Moving from top-left to bottom-right in (c) is the data, prefit, data to
+ prefit ratio, and data to prefit difference.
+ 
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Data-and-prefit-air-numubarRHC1Trk"
+
+\end_inset
+
+ 
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+Prefit for the Water-Out 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+numubartitle{}
+\end_layout
+
+\end_inset
+
+ in RHC Mode CC 1-Track Sample
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/FitterResults/Prefit/png/P0D_Air_NuMubar_in_Anti_NuMode_CCNTracks_mumom_rxn_prefit.png
+	lyxscale 50
+	width 48text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Momentum in MeV/c
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/FitterResults/Prefit/png/P0D_Air_NuMubar_in_Anti_NuMode_CCNTracks_mucostheta_rxn_prefit.png
+	lyxscale 50
+	width 48text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset Formula $\cos\theta$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/FitterResults/Prefit/output-9.png
+	lyxscale 50
+	width 99text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Momentum-
+\begin_inset Formula $\cos\theta$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Data and prefit expectation for the 
+\begin_inset Formula $\pod$
+\end_inset
+
+ Water-Out 
+\begin_inset Formula $\numubar$
+\end_inset
+
+ in RHC Mode CC N-Tracks sample.
+ Sub-figure (a) shows the momentum one-dimensional profile in all but the
+ highest momentum fit bin.
+ Sub-figure (b) shows the 
+\begin_inset Formula $\cos\theta$
+\end_inset
+
+ one-dimensional profile in all but the highest angle fit bin.
+ Shown in both (a) and (b) is the ratio between data and the prefit value.
+ Sub-figure (c) shows a grid of two-dimensional data and prefit distributions
+ in the same phase space as (a) and (b).
+ Moving from top-left to bottom-right in (c) is the data, prefit, data to
+ prefit ratio, and data to prefit difference.
+ 
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Data-and-prefit-air-numubarRHCNTrks"
+
+\end_inset
+
+ 
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+Prefit for the Water-Out 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+numubartitle{}
+\end_layout
+
+\end_inset
+
+ in RHC Mode CC N-Tracks Sample
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/FitterResults/Prefit/png/P0D_Air_NuMu_Bkg_in_Anti_NuMode_CC1Track_mumom_rxn_prefit.png
+	lyxscale 50
+	width 48text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Momentum in MeV/c
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/FitterResults/Prefit/png/P0D_Air_NuMu_Bkg_in_Anti_NuMode_CC1Track_mucostheta_rxn_prefit.png
+	lyxscale 50
+	width 48text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset Formula $\cos\theta$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/FitterResults/Prefit/output-10.png
+	lyxscale 50
+	width 99text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Momentum-
+\begin_inset Formula $\cos\theta$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Data and prefit expectation for the 
+\begin_inset Formula $\pod$
+\end_inset
+
+ Water-Out 
+\begin_inset Formula $\numu$
+\end_inset
+
+ in RHC Mode CC 1-Track sample.
+ Sub-figure (a) shows the momentum one-dimensional profile in all but the
+ highest momentum fit bin.
+ Sub-figure (b) shows the 
+\begin_inset Formula $\cos\theta$
+\end_inset
+
+ one-dimensional profile in all but the highest angle fit bin.
+ Shown in both (a) and (b) is the ratio between data and the prefit value.
+ Sub-figure (c) shows a grid of two-dimensional data and prefit distributions
+ in the same phase space as (a) and (b).
+ Moving from top-left to bottom-right in (c) is the data, prefit, data to
+ prefit ratio, and data to prefit difference.
+ 
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Data-and-prefit-air-numuRHC1Trk"
+
+\end_inset
+
+ 
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+Prefit for the Water-Out 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+numutitle{}
+\end_layout
+
+\end_inset
+
+ in RHC Mode CC 1-Track Sample
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/FitterResults/Prefit/png/P0D_Air_NuMu_Bkg_in_Anti_NuMode_CCNTracks_mumom_rxn_prefit.png
+	lyxscale 50
+	width 48text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Momentum in MeV/c
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/FitterResults/Prefit/png/P0D_Air_NuMu_Bkg_in_Anti_NuMode_CCNTracks_mucostheta_rxn_prefit.png
+	lyxscale 50
+	width 48text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset Formula $\cos\theta$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/FitterResults/Prefit/output-11.png
+	lyxscale 50
+	width 99text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Momentum-
+\begin_inset Formula $\cos\theta$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Data and prefit expectation for the 
+\begin_inset Formula $\pod$
+\end_inset
+
+ Water-Out 
+\begin_inset Formula $\numu$
+\end_inset
+
+ in RHC Mode CC N-Tracks sample.
+ Sub-figure (a) shows the momentum one-dimensional profile in all but the
+ highest momentum fit bin.
+ Sub-figure (b) shows the 
+\begin_inset Formula $\cos\theta$
+\end_inset
+
+ one-dimensional profile in all but the highest angle fit bin.
+ Shown in both (a) and (b) is the ratio between data and the prefit value.
+ Sub-figure (c) shows a grid of two-dimensional data and prefit distributions
+ in the same phase space as (a) and (b).
+ Moving from top-left to bottom-right in (c) is the data, prefit, data to
+ prefit ratio, and data to prefit difference.
+ 
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Data-and-prefit-air-numuRHCNTrks"
+
+\end_inset
+
+ 
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+Prefit for the Water-Out 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+numutitle{}
+\end_layout
+
+\end_inset
+
+ in RHC Mode CC N-Tracks Sample
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Branch FitterResultsPostfit
+inverted 0
+status open
+
+\begin_layout Section
+Postfit Results
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:Postfit-Results"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The results of the 
+\begin_inset Formula $\pod$
+\end_inset
+
+-only BANFF fit are presented here.
+ Starting with an initial test statistic of 
+\begin_inset Formula $\chi_{\text{ND}280}^{2}=3022.2$
+\end_inset
+
+, the MINUIT optimization routine required 149661 iterations to find the
+ global minimum at 
+\begin_inset Formula $\hat{\chi}_{\text{ND}280}^{2}=1412.28$
+\end_inset
+
+.
+ An additional 176000 iterations were required to calculate the Hessian
+ matrix.
+ The computing resources used for the fit are presented in Appendix 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "chap:Computing-Resources"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Specific topics on the postfit results are presented in the following order.
+ First is an examination of the postfit samples in one-dimensional profiles
+ and two-dimensional spaces.
+ Next is a comparison of the parameter values among the prefit, 
+\begin_inset Formula $\pod$
+\end_inset
+
+-only, and FGD-only results.
+ And the final topic is a hypothesis test on the level of agreement between
+ the 
+\begin_inset Formula $\pod$
+\end_inset
+
+-only and FGD-only BANFF fit results.
+\end_layout
+
+\begin_layout Subsection
+Postfit Sample Distributions
+\end_layout
+
+\begin_layout Standard
+Presented below are the 12 samples again, but with the parameters extracted
+ from the fit applied to the fit bins.
+ This ensures that we have a) not altered the data, and b) that the fitted
+ parameters (postfit) have improved the data matching as a result.
+ The samples are shown in 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "fig:Data-and-postfit-wtr-numu1Trk"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ to 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "fig:Data-and-postfit-air-numuRHCNTrks"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ in the same order as presented in the previous section.
+\end_layout
+
+\begin_layout Standard
+We see an improved agreement between the postfit prediction and the data.
+ Still, there is some poor data matching, in particular, in the lowest momentum
+ bins.
+ This seems to be balanced between the water-in and water-out modes since
+ the flux parameters affect the samples the same way.
+ Given there still is tension in those lowest momentum bins, perhaps the
+ water mass systematic uncertainty was under estimated in this analysis.
+\end_layout
+
+\begin_layout Standard
+It is hypothesized that if the mass systematic was indeed underestimated,
+ the data to postfit ratio would converge towards 1 with decreasing 
+\begin_inset Formula $\cos\theta$
+\end_inset
+
+ in the water-in sample's lowest momentum bins.
+ If better agreement is observed in those higher angle bins compared to
+ the lower angle bins, this would support the idea that the mass systematic
+ uncertainty is underestimated.
+ However, there was a weak trend observed in the water-in samples, and such
+ a weak one could be coincidental given the number of bins.
+ Therefore, it is difficult to draw any conclusions if the mass systematic
+ uncertainty was underestimated until other constraints are provided.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Branch FitterResultsPostfitDistributions
+inverted 0
+status collapsed
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/FitterResults/Postfit/png/P0D_Water_NuMu_CC1Track_mumom_rxn_postfit.png
+	lyxscale 50
+	width 48text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Momentum in MeV/c
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/FitterResults/Postfit/png/P0D_Water_NuMu_CC1Track_mucostheta_rxn_postfit.png
+	lyxscale 50
+	width 48text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset Formula $\cos\theta$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/FitterResults/Postfit/output-0.png
+	lyxscale 50
+	width 99text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Momentum-
+\begin_inset Formula $\cos\theta$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Data and postfit for the 
+\begin_inset Formula $\pod$
+\end_inset
+
+ Water-In 
+\begin_inset Formula $\numu$
+\end_inset
+
+ in FHC Mode CC 1-Track sample.
+ Sub-figure (a) shows the momentum one-dimensional profile in all but the
+ highest momentum fit bin.
+ Sub-figure (b) shows the 
+\begin_inset Formula $\cos\theta$
+\end_inset
+
+ one-dimensional profile in all but the highest angle fit bin.
+ Shown in both (a) and (b) is the ratio between data and the postfit value.
+ Sub-figure (c) shows a grid of two-dimensional data and postfit distributions
+ in the same phase space as (a) and (b).
+ Moving from top-left to bottom-right in (c) is the data, postfit, data
+ to postfit ratio, and data to postfit difference.
+ 
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Data-and-postfit-wtr-numu1Trk"
+
+\end_inset
+
+ 
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+Postfit for the Water-In 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+numutitle{}
+\end_layout
+
+\end_inset
+
+ in FHC Mode CC 1-Track Sample
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/FitterResults/Postfit/png/P0D_Water_NuMu_CCNTracks_mumom_rxn_postfit.png
+	lyxscale 50
+	width 48text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Momentum in MeV/c
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/FitterResults/Postfit/png/P0D_Water_NuMu_CCNTracks_mucostheta_rxn_postfit.png
+	lyxscale 50
+	width 48text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset Formula $\cos\theta$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/FitterResults/Postfit/output-1.png
+	lyxscale 50
+	width 99text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Momentum-
+\begin_inset Formula $\cos\theta$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Data and postfit for the 
+\begin_inset Formula $\pod$
+\end_inset
+
+ Water-In 
+\begin_inset Formula $\numu$
+\end_inset
+
+ in FHC Mode CC 1-Track sample.
+ Sub-figure (a) shows the momentum one-dimensional profile in all but the
+ highest momentum fit bin.
+ Sub-figure (b) shows the 
+\begin_inset Formula $\cos\theta$
+\end_inset
+
+ one-dimensional profile in all but the highest angle fit bin.
+ Shown in both (a) and (b) is the ratio between data and the postfit value.
+ Sub-figure (c) shows a grid of two-dimensional data and postfit distributions
+ in the same phase space as (a) and (b).
+ Moving from top-left to bottom-right in (c) is the data, postfit, data
+ to postfit ratio, and data to postfit difference.
+ 
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Data-and-postfit-wtr-numuNTrks"
+
+\end_inset
+
+ 
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+Postfit for the Water-In 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+numutitle{}
+\end_layout
+
+\end_inset
+
+ in FHC Mode CC N-Tracks Sample
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/FitterResults/Postfit/png/P0D_Water_NuMubar_in_Anti_NuMode_CC1Track_mumom_rxn_postfit.png
+	lyxscale 50
+	width 45text%
+	height 45theight%
+	keepAspectRatio
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Momentum in MeV/c
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/FitterResults/Postfit/png/P0D_Water_NuMubar_in_Anti_NuMode_CC1Track_mucostheta_rxn_postfit.png
+	lyxscale 50
+	width 45text%
+	height 45theight%
+	keepAspectRatio
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset Formula $\cos\theta$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/FitterResults/Postfit/output-2.png
+	lyxscale 50
+	width 99text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Momentum-
+\begin_inset Formula $\cos\theta$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Data and postfit for the 
+\begin_inset Formula $\pod$
+\end_inset
+
+ Water-In 
+\begin_inset Formula $\numubar$
+\end_inset
+
+ in RHC Mode CC 1-Track sample.
+ Sub-figure (a) shows the momentum one-dimensional profile in all but the
+ highest momentum fit bin.
+ Sub-figure (b) shows the 
+\begin_inset Formula $\cos\theta$
+\end_inset
+
+ one-dimensional profile in all but the highest angle fit bin.
+ Shown in both (a) and (b) is the ratio between data and the postfit value.
+ Sub-figure (c) shows a grid of two-dimensional data and postfit distributions
+ in the same phase space as (a) and (b).
+ Moving from top-left to bottom-right in (c) is the data, postfit, data
+ to postfit ratio, and data to postfit difference.
+ 
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Data-and-postfit-wtr-numubarRHC1Trk"
+
+\end_inset
+
+ 
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+Postfit for the Water-In 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+numubartitle{}
+\end_layout
+
+\end_inset
+
+ in RHC Mode CC 1-Track Sample
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/FitterResults/Postfit/png/P0D_Water_NuMubar_in_Anti_NuMode_CCNTracks_mumom_rxn_postfit.png
+	lyxscale 50
+	width 45text%
+	height 45theight%
+	keepAspectRatio
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Momentum in MeV/c
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/FitterResults/Postfit/png/P0D_Water_NuMubar_in_Anti_NuMode_CCNTracks_mucostheta_rxn_postfit.png
+	lyxscale 50
+	width 45text%
+	height 45theight%
+	keepAspectRatio
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset Formula $\cos\theta$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/FitterResults/Postfit/output-3.png
+	lyxscale 50
+	width 99text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Momentum-
+\begin_inset Formula $\cos\theta$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Data and postfit for the 
+\begin_inset Formula $\pod$
+\end_inset
+
+ Water-In 
+\begin_inset Formula $\numubar$
+\end_inset
+
+ in RHC Mode CC N-Tracks sample.
+ Sub-figure (a) shows the momentum one-dimensional profile in all but the
+ highest momentum fit bin.
+ Sub-figure (b) shows the 
+\begin_inset Formula $\cos\theta$
+\end_inset
+
+ one-dimensional profile in all but the highest angle fit bin.
+ Shown in both (a) and (b) is the ratio between data and the postfit value.
+ Sub-figure (c) shows a grid of two-dimensional data and postfit distributions
+ in the same phase space as (a) and (b).
+ Moving from top-left to bottom-right in (c) is the data, postfit, data
+ to postfit ratio, and data to postfit difference.
+ 
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Data-and-postfit-wtr-numubarRHCNTrks"
+
+\end_inset
+
+ 
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+Postfit for the Water-In 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+numubartitle{}
+\end_layout
+
+\end_inset
+
+ in RHC Mode CC 1-Track Sample
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/FitterResults/Postfit/png/P0D_Water_NuMu_Bkg_in_Anti_NuMode_CC1Track_mumom_rxn_postfit.png
+	lyxscale 50
+	width 45text%
+	height 45theight%
+	keepAspectRatio
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Momentum in MeV/c
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/FitterResults/Postfit/png/P0D_Water_NuMu_Bkg_in_Anti_NuMode_CC1Track_mucostheta_rxn_postfit.png
+	lyxscale 50
+	width 45text%
+	height 45theight%
+	keepAspectRatio
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset Formula $\cos\theta$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/FitterResults/Postfit/output-4.png
+	lyxscale 50
+	width 99text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Momentum-
+\begin_inset Formula $\cos\theta$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Data and postfit for the 
+\begin_inset Formula $\pod$
+\end_inset
+
+ Water-In 
+\begin_inset Formula $\numu$
+\end_inset
+
+ in RHC Mode CC 1-Track sample.
+ Sub-figure (a) shows the momentum one-dimensional profile in all but the
+ highest momentum fit bin.
+ Sub-figure (b) shows the 
+\begin_inset Formula $\cos\theta$
+\end_inset
+
+ one-dimensional profile in all but the highest angle fit bin.
+ Shown in both (a) and (b) is the ratio between data and the postfit value.
+ Sub-figure (c) shows a grid of two-dimensional data and postfit distributions
+ in the same phase space as (a) and (b).
+ Moving from top-left to bottom-right in (c) is the data, postfit, data
+ to postfit ratio, and data to postfit difference.
+ 
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Data-and-postfit-wtr-numuRHC1Trk"
+
+\end_inset
+
+ 
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+Postfit for the Water-In 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+numutitle{}
+\end_layout
+
+\end_inset
+
+ in RHC Mode CC 1-Track Sample
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/FitterResults/Postfit/png/P0D_Water_NuMu_Bkg_in_Anti_NuMode_CCNTracks_mumom_rxn_postfit.png
+	lyxscale 50
+	width 45text%
+	height 45theight%
+	keepAspectRatio
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Momentum in MeV/c
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/FitterResults/Postfit/png/P0D_Water_NuMu_Bkg_in_Anti_NuMode_CCNTracks_mucostheta_rxn_postfit.png
+	lyxscale 50
+	width 45text%
+	height 45theight%
+	keepAspectRatio
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset Formula $\cos\theta$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/FitterResults/Postfit/output-5.png
+	lyxscale 50
+	width 99text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Momentum-
+\begin_inset Formula $\cos\theta$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Data and postfit for the 
+\begin_inset Formula $\pod$
+\end_inset
+
+ Water-In 
+\begin_inset Formula $\numu$
+\end_inset
+
+ in RHC Mode CC N-Tracks sample.
+ Sub-figure (a) shows the momentum one-dimensional profile in all but the
+ highest momentum fit bin.
+ Sub-figure (b) shows the 
+\begin_inset Formula $\cos\theta$
+\end_inset
+
+ one-dimensional profile in all but the highest angle fit bin.
+ Shown in both (a) and (b) is the ratio between data and the postfit value.
+ Sub-figure (c) shows a grid of two-dimensional data and postfit distributions
+ in the same phase space as (a) and (b).
+ Moving from top-left to bottom-right in (c) is the data, postfit, data
+ to postfit ratio, and data to postfit difference.
+ 
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Data-and-postfit-wtr-numuRHCNTrks"
+
+\end_inset
+
+ 
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+Postfit for the Water-In 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+numutitle{}
+\end_layout
+
+\end_inset
+
+ in RHC Mode CC N-Tracks Sample
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/FitterResults/Postfit/png/P0D_Air_NuMu_CC1Track_mumom_rxn_postfit.png
+	lyxscale 50
+	width 45text%
+	height 45theight%
+	keepAspectRatio
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Momentum in MeV/c
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/FitterResults/Postfit/png/P0D_Air_NuMu_CC1Track_mucostheta_rxn_postfit.png
+	lyxscale 50
+	width 45text%
+	height 45theight%
+	keepAspectRatio
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset Formula $\cos\theta$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/FitterResults/Postfit/output-6.png
+	lyxscale 50
+	width 99text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Momentum-
+\begin_inset Formula $\cos\theta$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Data and postfit for the 
+\begin_inset Formula $\pod$
+\end_inset
+
+ Water-Out 
+\begin_inset Formula $\numu$
+\end_inset
+
+ in FHC Mode CC 1-Track sample.
+ Sub-figure (a) shows the momentum one-dimensional profile in all but the
+ highest momentum fit bin.
+ Sub-figure (b) shows the 
+\begin_inset Formula $\cos\theta$
+\end_inset
+
+ one-dimensional profile in all but the highest angle fit bin.
+ Shown in both (a) and (b) is the ratio between data and the postfit value.
+ Sub-figure (c) shows a grid of two-dimensional data and postfit distributions
+ in the same phase space as (a) and (b).
+ Moving from top-left to bottom-right in (c) is the data, postfit, data
+ to postfit ratio, and data to postfit difference.
+ 
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Data-and-postfit-air-numu1Trk"
+
+\end_inset
+
+ 
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+Postfit for the Water-Out 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+numutitle{}
+\end_layout
+
+\end_inset
+
+ in FHC Mode CC 1-Track Sample
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/FitterResults/Postfit/png/P0D_Air_NuMu_CCNTracks_mumom_rxn_postfit.png
+	lyxscale 50
+	width 45text%
+	height 45theight%
+	keepAspectRatio
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Momentum in MeV/c
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/FitterResults/Postfit/png/P0D_Air_NuMu_CCNTracks_mucostheta_rxn_postfit.png
+	lyxscale 50
+	width 45text%
+	height 45theight%
+	keepAspectRatio
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset Formula $\cos\theta$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/FitterResults/Postfit/output-7.png
+	lyxscale 50
+	width 99text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Momentum-
+\begin_inset Formula $\cos\theta$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Data and postfit for the 
+\begin_inset Formula $\pod$
+\end_inset
+
+ Water-Out 
+\begin_inset Formula $\numu$
+\end_inset
+
+ in FHC Mode CC N-Tracks sample.
+ Sub-figure (a) shows the momentum one-dimensional profile in all but the
+ highest momentum fit bin.
+ Sub-figure (b) shows the 
+\begin_inset Formula $\cos\theta$
+\end_inset
+
+ one-dimensional profile in all but the highest angle fit bin.
+ Shown in both (a) and (b) is the ratio between data and the postfit value.
+ Sub-figure (c) shows a grid of two-dimensional data and postfit distributions
+ in the same phase space as (a) and (b).
+ Moving from top-left to bottom-right in (c) is the data, postfit, data
+ to postfit ratio, and data to postfit difference.
+ 
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Data-and-postfit-air-numuNTrks"
+
+\end_inset
+
+ 
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+Postfit for the Water-Out 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+numutitle{}
+\end_layout
+
+\end_inset
+
+ in FHC Mode CC N-Tracks Sample
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/FitterResults/Postfit/png/P0D_Air_NuMubar_in_Anti_NuMode_CC1Track_mumom_rxn_postfit.png
+	lyxscale 50
+	width 45text%
+	height 45theight%
+	keepAspectRatio
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Momentum in MeV/c
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/FitterResults/Postfit/png/P0D_Air_NuMubar_in_Anti_NuMode_CC1Track_mucostheta_rxn_postfit.png
+	lyxscale 50
+	width 45text%
+	height 45theight%
+	keepAspectRatio
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset Formula $\cos\theta$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/FitterResults/Postfit/output-8.png
+	lyxscale 50
+	width 99text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Momentum-
+\begin_inset Formula $\cos\theta$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Data and postfit for the 
+\begin_inset Formula $\pod$
+\end_inset
+
+ Water-Out 
+\begin_inset Formula $\numubar$
+\end_inset
+
+ in RHC Mode CC 1-Track sample.
+ Sub-figure (a) shows the momentum one-dimensional profile in all but the
+ highest momentum fit bin.
+ Sub-figure (b) shows the 
+\begin_inset Formula $\cos\theta$
+\end_inset
+
+ one-dimensional profile in all but the highest angle fit bin.
+ Shown in both (a) and (b) is the ratio between data and the postfit value.
+ Sub-figure (c) shows a grid of two-dimensional data and postfit distributions
+ in the same phase space as (a) and (b).
+ Moving from top-left to bottom-right in (c) is the data, postfit, data
+ to postfit ratio, and data to postfit difference.
+ 
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Data-and-postfit-air-numubarRHC1Trk"
+
+\end_inset
+
+ 
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+Postfit for the Water-Out 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+numubartitle{}
+\end_layout
+
+\end_inset
+
+ in RHC Mode CC 1-Track Sample
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/FitterResults/Postfit/png/P0D_Air_NuMubar_in_Anti_NuMode_CCNTracks_mumom_rxn_postfit.png
+	lyxscale 50
+	width 45text%
+	height 45theight%
+	keepAspectRatio
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Momentum in MeV/c
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/FitterResults/Postfit/png/P0D_Air_NuMubar_in_Anti_NuMode_CCNTracks_mucostheta_rxn_postfit.png
+	lyxscale 50
+	width 45text%
+	height 45theight%
+	keepAspectRatio
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset Formula $\cos\theta$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/FitterResults/Postfit/output-9.png
+	lyxscale 50
+	width 99text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Momentum-
+\begin_inset Formula $\cos\theta$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Data and postfit for the 
+\begin_inset Formula $\pod$
+\end_inset
+
+ Water-Out 
+\begin_inset Formula $\numubar$
+\end_inset
+
+ in RHC Mode CC N-Tracks sample.
+ Sub-figure (a) shows the momentum one-dimensional profile in all but the
+ highest momentum fit bin.
+ Sub-figure (b) shows the 
+\begin_inset Formula $\cos\theta$
+\end_inset
+
+ one-dimensional profile in all but the highest angle fit bin.
+ Shown in both (a) and (b) is the ratio between data and the postfit value.
+ Sub-figure (c) shows a grid of two-dimensional data and postfit distributions
+ in the same phase space as (a) and (b).
+ Moving from top-left to bottom-right in (c) is the data, postfit, data
+ to postfit ratio, and data to postfit difference.
+ 
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Data-and-postfit-air-numubarRHCNTrks"
+
+\end_inset
+
+ 
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+Postfit for the Water-Out 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+numubartitle{}
+\end_layout
+
+\end_inset
+
+ in RHC Mode CC N-Tracks Sample
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/FitterResults/Postfit/png/P0D_Air_NuMu_Bkg_in_Anti_NuMode_CC1Track_mumom_rxn_postfit.png
+	lyxscale 50
+	width 45text%
+	height 45theight%
+	keepAspectRatio
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Momentum in MeV/c
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/FitterResults/Postfit/png/P0D_Air_NuMu_Bkg_in_Anti_NuMode_CC1Track_mucostheta_rxn_postfit.png
+	lyxscale 50
+	width 45text%
+	height 45theight%
+	keepAspectRatio
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset Formula $\cos\theta$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/FitterResults/Postfit/output-10.png
+	lyxscale 50
+	width 99text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Momentum-
+\begin_inset Formula $\cos\theta$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Data and postfit for the 
+\begin_inset Formula $\pod$
+\end_inset
+
+ Water-Out 
+\begin_inset Formula $\numu$
+\end_inset
+
+ in RHC Mode CC 1-Track sample.
+ Sub-figure (a) shows the momentum one-dimensional profile in all but the
+ highest momentum fit bin.
+ Sub-figure (b) shows the 
+\begin_inset Formula $\cos\theta$
+\end_inset
+
+ one-dimensional profile in all but the highest angle fit bin.
+ Shown in both (a) and (b) is the ratio between data and the postfit value.
+ Sub-figure (c) shows a grid of two-dimensional data and postfit distributions
+ in the same phase space as (a) and (b).
+ Moving from top-left to bottom-right in (c) is the data, postfit, data
+ to postfit ratio, and data to postfit difference.
+ 
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Data-and-postfit-air-numuRHC1Trk"
+
+\end_inset
+
+ 
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+Postfit for the Water-Out 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+numutitle{}
+\end_layout
+
+\end_inset
+
+ in RHC Mode CC 1-Track Sample
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/FitterResults/Postfit/png/P0D_Air_NuMu_Bkg_in_Anti_NuMode_CCNTracks_mumom_rxn_postfit.png
+	lyxscale 50
+	width 45text%
+	height 45theight%
+	keepAspectRatio
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Momentum in MeV/c
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/FitterResults/Postfit/png/P0D_Air_NuMu_Bkg_in_Anti_NuMode_CCNTracks_mucostheta_rxn_postfit.png
+	lyxscale 50
+	width 45text%
+	height 45theight%
+	keepAspectRatio
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset Formula $\cos\theta$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/FitterResults/Postfit/output-11.png
+	lyxscale 50
+	width 99text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Momentum-
+\begin_inset Formula $\cos\theta$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Data and postfit for the 
+\begin_inset Formula $\pod$
+\end_inset
+
+ Water-Out 
+\begin_inset Formula $\numu$
+\end_inset
+
+ in RHC Mode CC N-Tracks sample.
+ Sub-figure (a) shows the momentum one-dimensional profile in all but the
+ highest momentum fit bin.
+ Sub-figure (b) shows the 
+\begin_inset Formula $\cos\theta$
+\end_inset
+
+ one-dimensional profile in all but the highest angle fit bin.
+ Shown in both (a) and (b) is the ratio between data and the postfit value.
+ Sub-figure (c) shows a grid of two-dimensional data and postfit distributions
+ in the same phase space as (a) and (b).
+ Moving from top-left to bottom-right in (c) is the data, postfit, data
+ to postfit ratio, and data to postfit difference.
+ 
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Data-and-postfit-air-numuRHCNTrks"
+
+\end_inset
+
+ 
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+Postfit for the Water-Out 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+numutitle{}
+\end_layout
+
+\end_inset
+
+ in RHC Mode CC N-Tracks Sample
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Now that we have examined the postfit samples and seen that the prediction
+ has indeed changed, we can proceed to look at the parameter values.
+\end_layout
+
+\begin_layout Subsection
+Parameter Value and Correlation Comparisons
+\end_layout
+
+\begin_layout Standard
+The postfit parameters from the 
+\begin_inset Formula $\pod$
+\end_inset
+
+-only BANFF fit are shown in 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "fig:Postfit-ND280-flux"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ through 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "fig:Prefit-and-postfit-bin-normalization"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+ A complete listing of the prefit and postfit values is given in Appendix
+ 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "app:PostfitParameters"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+ Additionally, a comparison is made between the 
+\begin_inset Formula $\pod$
+\end_inset
+
+-only results with that of the FGD-only results.
+ It must be stated that while the 
+\begin_inset Formula $\pod$
+\end_inset
+
+-only and FGD-only fits are using the same 2017 canonical cross section
+ parameterization, the analyses had different POT exposures.
+ This 
+\begin_inset Formula $\pod$
+\end_inset
+
+-only analysis fit uses run periods 
+\begin_inset Formula $2-8$
+\end_inset
+
+, or about 
+\begin_inset Formula $11.5\times10^{20}$
+\end_inset
+
+ 
+\begin_inset Formula $\left(6.23\times10^{20}\right)$
+\end_inset
+
+ POT in FHC (RHC) mode.
+ The FGD-only fit uses runs 
+\begin_inset Formula $2-6$
+\end_inset
+
+, or about 
+\begin_inset Formula $5.81\times10^{20}$
+\end_inset
+
+ 
+\begin_inset Formula $\left(2.84\times10^{20}\right)$
+\end_inset
+
+ POT in FHC (RHC) modes.
+ So the 
+\begin_inset Formula $\pod$
+\end_inset
+
+-only fit has an additional statistical advantage.
+ This does not affect the actual fitting procedure since the POT weights
+ scale the MC prediction to the data.
+\end_layout
+
+\begin_layout Standard
+In order to understand how the two analyses compare to each other in terms
+ of sensitivity to the flux and cross section parameters, we need to examine
+ each detector's integrated mass-luminosity.
+ The number of incident neutrinos crossing either the FGD or 
+\begin_inset Formula $\pod$
+\end_inset
+
+ detector is the product of its respective fiducial mass and POT exposure.
+ While the 
+\begin_inset Formula $\pod$
+\end_inset
+
+ has much more mass, the water-in and water-out modes are mutually exclusive,
+ resulting in a reduced aggregate POT exposure as compared to each static
+ FGD for each water-in and water-out running periods.
+ Also since the FGD2 has a larger water mass fraction compared to the 
+\begin_inset Formula $\pod$
+\end_inset
+
+ water-in mode, the expected number of neutrino-oxygen interaction events
+ are very similar.
+ The comparative advantage of the 
+\begin_inset Formula $\pod$
+\end_inset
+
+-only data lies in the number of neutrino-carbon events, which is about
+ 10 times greater than the FGD.
+ These numbers and more are tabulated in 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "tab:Neutrino-exposure-P0DFGD"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Branch FitterResultsPostfitExposureTable
+inverted 0
+status collapsed
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{landscape}%
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Neutrino-nucleon exposure on target elements in the 
+\begin_inset Formula $\pod$
+\end_inset
+
+-only and FGD-only analyses.
+ The FGD1 and FGD2 masses were calculated using the following sources
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Amaudruz:2012agx,Longhin2016,Lodovico2017"
+literal "false"
+
+\end_inset
+
+.
+ The 
+\begin_inset Formula $\pod$
+\end_inset
+
+ mass was taken from the following source
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Schwehr2018"
+literal "false"
+
+\end_inset
+
+.
+ The other mass elements include hydrogen, copper, and heavier elements.
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:Neutrino-exposure-P0DFGD"
+
+\end_inset
+
+
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+Neutrino-Nucleon Exposure on Target Elements
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="10" columns="11">
+<features booktabs="true" tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell multirow="3" alignment="center" valignment="middle" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Detector
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="1" alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Fiducial volume mass
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="1" alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+POT 
+\begin_inset Formula $\left(10^{20}\right)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+kg POT
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="1" alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\pod$
+\end_inset
+
+-to-FGD (kg POT)
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multirow="4" alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+(kg)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+ce{^{12}C}
+\end_layout
+
+\end_inset
+
+ (%)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+ce{^{16}O}
+\end_layout
+
+\end_inset
+
+ (%)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+other (%)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+FHC
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+RHC
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\left(10^{24}\right)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+ce{^{12}C}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+ce{^{16}O}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+other
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\pod$
+\end_inset
+
+ Water-out
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3570
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+70
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.67
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+19.33
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+7.872
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+-
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2.81
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="3" alignment="center" valignment="middle" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3.99
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="3" alignment="center" valignment="middle" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+-
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="3" alignment="center" valignment="middle" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+9.21
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+FGD1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+985
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+86
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3.7
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+10.3
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+5.81
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+-
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.572
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="4" alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="4" alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="4" alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\pod$
+\end_inset
+
+ Water-In
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+5470
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+45
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+30
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+25
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3.657
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+-
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2.00
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="3" alignment="center" valignment="middle" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+10.63
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="3" alignment="center" valignment="middle" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1.43
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="3" alignment="center" valignment="middle" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+8.05
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+FGD2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+972
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+15
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+74
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+11
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+5.81
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+-
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.565
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="4" alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="4" alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="4" alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\pod$
+\end_inset
+
+ Water-out
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3570
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+70
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.67
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+19.33
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+-
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3.382
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1.207
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="3" alignment="center" valignment="middle" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3.513
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="3" alignment="center" valignment="middle" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+-
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="3" alignment="center" valignment="middle" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+8.10
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+FGD1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+985
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+86
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3.7
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+10.3
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+-
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2.84
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.280
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="4" alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="4" alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="4" alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\pod$
+\end_inset
+
+ Water-In
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+5470
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+45
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+30
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+25
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+-
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2.852
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1.56
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="3" alignment="center" valignment="middle" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+16.9
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="3" alignment="center" valignment="middle" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2.29
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="3" alignment="center" valignment="middle" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+12.8
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+FGD2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+972
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+15
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+74
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+11
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+-
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2.84
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.276
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="4" alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="4" alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="4" alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{landscape}%
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+There is good agreement between the 
+\begin_inset Formula $\pod$
+\end_inset
+
+-only and FGD-only BANFF flux parameter values.
+ The flux parameters in both fits follow the same shape trends, but with
+ the 
+\begin_inset Formula $\pod$
+\end_inset
+
+-only fit parameters having a higher expectation comparatively.
+ Also, the magnitude of the flux uncertainties is similar between the two,
+ which suggests that the two configurations are statistically similar.
+\end_layout
+
+\begin_layout Standard
+If we examine the bin normalization parameters for the 
+\begin_inset Formula $\pod$
+\end_inset
+
+-only fit in 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "fig:Prefit-and-postfit-bin-normalization"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, they are suggesting a reduction in the event rate across most bins.
+ This high flux, low bin normalization result is likely due to the anticorrelate
+d relationship between them as indicated in the correlation matrix shown
+ in 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "fig:Postfit-correlation-matrix"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+ This has been observed in previous BANFF analyses.
+ Interestingly, the results of the principal components analysis on the
+ bin normalizations in Section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "subsec:Bin-Normalization-Parameters"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ are observed here as well.
+ The analysis predicted most of the parameters would shift in unison, and
+ we see that trend largely replicated in the postfit values.
+ This indicates that we can possibly reduce the number of bin normalizations
+ and still obtain a similar postfit result.
+\end_layout
+
+\begin_layout Standard
+The cross section parameters are also quite similar between the two fits,
+ with some larger uncertainties in the 
+\begin_inset Formula $\pod$
+\end_inset
+
+-only result.
+ The CCQE and BeRPA parameters are in very good agreement with both preferring
+ a significant increase in the BeRPA 
+\begin_inset Formula $B$
+\end_inset
+
+ scale parameter.
+ There is tension in the fits with the 
+\begin_inset Formula $M_{A}^{\text{Res}}$
+\end_inset
+
+ parameter which is not currently understood.
+ However, if the difference in the postfit parameters is distributed according
+ to a chi-squared distribution, then this deviation is not unexpected.
+ We will explore this idea further with a hypothesis test in the next section.
+\end_layout
+
+\begin_layout Standard
+A couple of interesting features are observed in the 2p2h parameters.
+ Firstly is the 2p2h 
+\begin_inset Formula $\nu$
+\end_inset
+
+ normalization on carbon which is about two-times larger in the 
+\begin_inset Formula $\pod$
+\end_inset
+
+-only fit than the FGD-only fit.
+ This normalization result is currently an unknown phenomenon.
+ It could be explained by the fact that the 
+\begin_inset Formula $\pod$
+\end_inset
+
+ has nearly twice as much non-carbon and non-oxygen elements, which is mostly
+ brass, by mass fraction as in the FGD (see 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "tab:Neutrino-exposure-P0DFGD"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+).
+ The second feature involves the 2p2h shape parameters, 
+\shape italic
+both of which have postfit values at the physical limit of +1
+\shape default
+, or +2 as shown graphically in 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "fig:Postfit-Xsec"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+ This predicts that the 2p2h interaction has no nucleon-nucleon correlation
+ mode and is only due to the pionless-Delta-decay mode.
+ This result is an artifact of the cross section parameterization that is
+ also shared with the FGD result.
+ This issue has been addressed in the latest cross section parameterization
+ and BANFF analysis
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Morrison2019"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+To provide an uncertainty on those shape parameters, even though they are
+ situated at a discontinuity in the derivative, a 
+\begin_inset Quotes eld
+\end_inset
+
+mirrored
+\begin_inset Quotes erd
+\end_inset
+
+ spline was implemented as shown in 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "fig:The-mirrored-spline"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+ The mirrored spline was shown by the BANFF group to not affect the postfit
+ results while providing a calculable uncertainty in MINUIT for the Hessian
+ matrix
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Bienstock2017"
+literal "false"
+
+\end_inset
+
+.
+ To further investigate the impact of a mirrored spline, the oscillation
+ analysis group used the same splines in the Bayesian analysis, which uses
+ a Markov chain Monte Carlo method to explore the parameter space.
+ The Bayesian analysis observed some small relative changes in the 2p2h
+ and 
+\begin_inset Formula $I_{1/2}$
+\end_inset
+
+ background normalizations and BeRPA 
+\begin_inset Formula $E$
+\end_inset
+
+ root-mean-square using the mirrored spline.
+ However, the parameters that received the largest shifts are already poorly
+ constrained by the ND280 data, and so they have a minuscule effect on the
+ fit.
+\end_layout
+
+\begin_layout Standard
+The postfit correlations are shown in 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "fig:Postfit-correlation-matrix"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+ The full matrix shows large anticorrelations between the systematic parameters
+ sets.
+ Largest in magnitude are the flux and cross section parameters.
+ To better see the correlations for those sets, they are zoomed into on
+ 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "fig:Prefit-and-post-fluxxsec-correlation"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+ For only the cross section parameters, the correlations are shown in 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "fig:Prefit-and-post-xsec-correlation"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/FitterResults/P0DvsTN324/output_nd5_numode_numu_bins.png
+	width 45text%
+	height 18theight%
+	keepAspectRatio
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset Formula $\numu$
+\end_inset
+
+ in FHC Flux
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/FitterResults/P0DvsTN324/output_nd5_numode_numub_bins.png
+	width 45text%
+	height 18theight%
+	keepAspectRatio
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset Formula $\numubar$
+\end_inset
+
+ in FHC Flux
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/FitterResults/P0DvsTN324/output_nd5_numode_nue_bins.png
+	width 45text%
+	height 18theight%
+	keepAspectRatio
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset Formula $\nue$
+\end_inset
+
+ in FHC Flux
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/FitterResults/P0DvsTN324/output_nd5_numode_nueb_bins.png
+	width 45text%
+	height 18theight%
+	keepAspectRatio
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset Formula $\nuebar$
+\end_inset
+
+ in FHC Flux
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/FitterResults/P0DvsTN324/output_nd5_anumode_numu_bins.png
+	width 45text%
+	height 18theight%
+	keepAspectRatio
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset Formula $\numu$
+\end_inset
+
+ in RHC Flux
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/FitterResults/P0DvsTN324/output_nd5_anumode_numub_bins.png
+	width 45text%
+	height 18theight%
+	keepAspectRatio
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset Formula $\numubar$
+\end_inset
+
+ in RHC Flux
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/FitterResults/P0DvsTN324/output_nd5_anumode_nue_bins.png
+	width 45text%
+	height 18theight%
+	keepAspectRatio
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset Formula $\nue$
+\end_inset
+
+ in RHC Flux
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/FitterResults/P0DvsTN324/output_nd5_anumode_nueb_bins.png
+	width 45text%
+	height 18theight%
+	keepAspectRatio
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset Formula $\nuebar$
+\end_inset
+
+ in RHC Flux
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Postfit ND280 flux parameters for the 
+\begin_inset Formula $\pod$
+\end_inset
+
+-only (green) and FGD-only (blue) BANFF fit as functions of neutrino energy.
+ The energy that maximizes the 
+\begin_inset Formula $\numu\rightarrow\nue$
+\end_inset
+
+ oscillation 
+\begin_inset Formula $\left(0.6\text{ GeV}\right)$
+\end_inset
+
+ is shown with a dashed, black line.
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Postfit-ND280-flux"
+
+\end_inset
+
+
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+Postfit ND280 Flux Parameters for the 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+podtitle{}
+\end_layout
+
+\end_inset
+
+-only BANFF Fit
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/FitterResults/P0DvsTN324/output_sk_numode_numu_bins.png
+	width 45text%
+	height 18theight%
+	keepAspectRatio
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset Formula $\numu$
+\end_inset
+
+ in FHC Flux
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/FitterResults/P0DvsTN324/output_sk_numode_numub_bins.png
+	width 45text%
+	height 18theight%
+	keepAspectRatio
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset Formula $\numubar$
+\end_inset
+
+ in FHC Flux
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/FitterResults/P0DvsTN324/output_sk_numode_nue_bins.png
+	width 45text%
+	height 18theight%
+	keepAspectRatio
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset Formula $\nue$
+\end_inset
+
+ in FHC Flux
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/FitterResults/P0DvsTN324/output_sk_numode_nueb_bins.png
+	width 45text%
+	height 18theight%
+	keepAspectRatio
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset Formula $\nuebar$
+\end_inset
+
+ in FHC Flux
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/FitterResults/P0DvsTN324/output_sk_anumode_numu_bins.png
+	width 45text%
+	height 18theight%
+	keepAspectRatio
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset Formula $\numu$
+\end_inset
+
+ in RHC Flux
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/FitterResults/P0DvsTN324/output_sk_anumode_numub_bins.png
+	width 45text%
+	height 18theight%
+	keepAspectRatio
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset Formula $\numubar$
+\end_inset
+
+ in RHC Flux
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/FitterResults/P0DvsTN324/output_sk_anumode_nue_bins.png
+	width 45text%
+	height 18theight%
+	keepAspectRatio
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset Formula $\nue$
+\end_inset
+
+ in RHC Flux
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/FitterResults/P0DvsTN324/output_sk_anumode_nueb_bins.png
+	width 45text%
+	height 18theight%
+	keepAspectRatio
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset Formula $\nuebar$
+\end_inset
+
+ in RHC Flux
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Postfit SK flux parameters for the 
+\begin_inset Formula $\pod$
+\end_inset
+
+-only (green) and FGD-only (blue) BANFF fit as functions of neutrino energy.
+ The energy that maximizes the 
+\begin_inset Formula $\numu\rightarrow\nue$
+\end_inset
+
+ oscillation 
+\begin_inset Formula $\left(0.6\text{ GeV}\right)$
+\end_inset
+
+ is shown with a dashed, black line.
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Postfit-SK-flux"
+
+\end_inset
+
+
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+Postfit SK Flux Parameters for the 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+podtitle{}
+\end_layout
+
+\end_inset
+
+-only BANFF Fit
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/FitterResults/P0DvsTN324/output_CC-QE_and_2p2h_parameters.png
+	height 35theight%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+CC-
+\begin_inset Formula $0\pi$
+\end_inset
+
+ Parameters
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/FitterResults/P0DvsTN324/output_BeRPA_parameters.png
+	width 45text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+BeRPA Parameters
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/FitterResults/P0DvsTN324/output_CC-1#pi_parameters.png
+	width 45text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+CC-
+\begin_inset Formula $1\pi$
+\end_inset
+
+ Parameters
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/FitterResults/P0DvsTN324/output_FSI_parameters.png
+	width 45text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+FSI Parameters
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/FitterResults/P0DvsTN324/output_Other.png
+	width 45text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+CC-Other and NC-Other Parameters
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Postfit cross section parameters for the 
+\begin_inset Formula $\pod$
+\end_inset
+
+-only (green) and FGD-only (blue) BANFF fit.
+ In these figures, all shape and scale factor parameters are adjusted to
+ 1 to provide a consistent graphical representation of all fit parameters.
+ Shape parameters always have a prefit value of 0.
+ Parameters without prefit uncertainties had a flat prior applied to them
+ and an asterisk (*) represents a fixed parameter.
+ 
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+Postfit Cross Section Parameters for the 
+\begin_inset Formula $\pod$
+\end_inset
+
+-only BANFF Fit
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Postfit-Xsec"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/FitterResults/Postfit/output_P0D_Water-In_Bin_Norm..png
+	width 95text%
+	height 42.5theight%
+	keepAspectRatio
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Water-In
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/FitterResults/Postfit/output_P0D_Water-Out_Bin_Norm..png
+	width 95text%
+	height 42.5theight%
+	keepAspectRatio
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Water-Out
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Prefit and postfit 
+\begin_inset Formula $\pod$
+\end_inset
+
+ bin normalization parameters.
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Prefit-and-postfit-bin-normalization"
+
+\end_inset
+
+
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+Prefit and Postfit Bin Normalization Parameters
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/FitterResults/2p2hShapeCSpline.png
+	width 60text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+The 
+\begin_inset Quotes eld
+\end_inset
+
+mirrored
+\begin_inset Quotes erd
+\end_inset
+
+ spline for a single event.
+ The spline represents an event weight and variations from the prefit value
+ of 0 alters the event weight.
+ The 2p2h shape splines are mirrored about the value of +1 to provide an
+ uncertainty in the postfit result.
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:The-mirrored-spline"
+
+\end_inset
+
+
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+The 2p2h Shape Mirrored Spline
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/FitterResults/Postfit/covariance/corr_post.png
+	width 95text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Postfit correlation matrix.
+ The first 100 parameters are the flux parameters with the first 50 correspondin
+g to ND280 and the last 50 with Super-K.
+ Between 100 and 561 are the bin normalization parameters.
+ The last 31 are the cross section parameters.
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Postfit-correlation-matrix"
+
+\end_inset
+
+
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+Postfit Correlation Matrix
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/FitterResults/Postfit/covariance/corr_flux_xsec_pref.png
+	lyxscale 50
+	height 40theight%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Prefit flux and cross sections correlations
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/FitterResults/Postfit/covariance/corr_flux_xsec.png
+	lyxscale 50
+	height 40theight%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Postfit flux and cross section correlations
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Prefit and post flux and cross section parameter correlations.
+ In (a) and (b), the prefit and postfit, respectively, correlation matrices
+ for the flux and cross section parameters are shown.
+ The first 50 parameters correspond to the ND280 flux with the last 50 with
+ the SK flux.
+ The final 31 parameters are for the cross section.
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+Prefit and Post Flux and Cross Section Parameter Correlations
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Prefit-and-post-fluxxsec-correlation"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/FitterResults/Postfit/covariance/corr_xsec.png
+	width 98text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Postfit cross section correlation matrix
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Prefit-and-post-xsec-correlation"
+
+\end_inset
+
+
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+Prefit and Post Flux and Cross Section Parameter Correlations
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Branch FitterResultsPValueAndROC
+inverted 0
+status open
+
+\begin_layout Standard
+\begin_inset Branch StatSign
+inverted 0
+status open
+
+\begin_layout Section
+Statistical Significance of Parameter Agreement Between the 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+podtitle{}
+\end_layout
+
+\end_inset
+
+ and FGD BANFF Fits
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:Statistical-Significance-of"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+We can now quantify of the agreement between the 
+\begin_inset Formula $\pod$
+\end_inset
+
+-only BANFF fit and that of the FGD-only BANFF fit.
+ As a starting assumption, let the FGD-only result be the expectation of
+ the result.
+ We wish to test the hypothesis, 
+\begin_inset Formula $H_{1}$
+\end_inset
+
+, that the 
+\begin_inset Formula $\pod$
+\end_inset
+
+-only data and FGD-only data are sampling from two different neutrino interactio
+n populations.
+ We can also call this the alternative hypothesis.
+ The null hypothesis, 
+\begin_inset Formula $H_{0}$
+\end_inset
+
+, is that 
+\begin_inset Formula $\pod$
+\end_inset
+
+-only and FGD-only data are sampled from the same interaction population.
+ For each measurement 
+\begin_inset Formula $X_{i}$
+\end_inset
+
+ that is independently and identically distributed from a standard normal
+ 
+\begin_inset Formula $\mathcal{N}\left(\mu=0,\sigma^{2}=1\right)$
+\end_inset
+
+, then the following function
+\begin_inset Formula 
+\begin{equation}
+\chi^{2}=\sum_{i}X_{i}^{2},\label{eq:Qchi2distributed}
+\end{equation}
+
+\end_inset
+
+is distributed according to a chi-square distribution 
+\begin_inset Formula 
+\begin{equation}
+F(\chi^{2},r)=\frac{1}{2^{\nicefrac{r}{2}}\Gamma\left(\nicefrac{r}{2}\right)}\left(\chi^{2}\right)^{\left(\frac{r}{2}-1\right)}e^{\left(-\chi^{2}/2\right)},\label{eq:chisqdistribution}
+\end{equation}
+
+\end_inset
+
+where 
+\begin_inset Formula $r$
+\end_inset
+
+ is the number of degrees of freedom (NDOF) and 
+\begin_inset Formula $\Gamma(x)$
+\end_inset
+
+ is the Gamma function.
+ We can calculate a p-value to reject the null hypothesis at the 
+\begin_inset Formula $\alpha$
+\end_inset
+
+-level.
+\end_layout
+
+\begin_layout Standard
+If we let 
+\begin_inset Formula $p_{i}^{\pod}\left(p_{i}^{\text{FGD}}\right)$
+\end_inset
+
+ represent the measurement of the 
+\begin_inset Formula $i$
+\end_inset
+
+th parameter for the 
+\begin_inset Formula $\pod$
+\end_inset
+
+-only (FGD-only) BANFF fit, then our test statistic can be formally defined
+ as
+\begin_inset Formula 
+\begin{equation}
+\chi_{\pod\text{vsFGD}}^{2}=\sum_{i}\sum_{j}\frac{\left(p_{i}^{\pod}-p_{i}^{\text{FGD}}\right)\left(p_{j}^{\pod}-p_{j}^{\text{FGD}}\right)}{V_{i,j}^{\pod\text{vsFGD}}}\label{eq:chi2P0DFGDGeneral}
+\end{equation}
+
+\end_inset
+
+where 
+\begin_inset Formula $V_{i,j}^{\pod\text{vsFGD}}$
+\end_inset
+
+ is the covariance of measurement 
+\begin_inset Formula $i,j$
+\end_inset
+
+.
+ 
+\shape italic
+Since the purpose of the BANFF fit is to provide a constraint on the SK
+ flux and cross section models, we will ignore the ND flux bins and 
+\begin_inset Formula $\left(p,\cos\theta\right)$
+\end_inset
+
+ bin normalization parameters
+\shape default
+.
+ Also we assume for simplicity that the 
+\begin_inset Formula $\pod$
+\end_inset
+
+ and FGD data are completely uncorrelated.
+ This simplifies the test statistic to
+\begin_inset Formula 
+\begin{equation}
+\begin{aligned}\chi_{\text{PvF}}^{2} & =\sum_{i}\frac{\left(p_{i}^{\pod}-p_{i}^{\text{FGD}}\right)^{2}}{V_{i,i}^{\pod}+V_{i,i}^{\text{FGD}}}\\
+ & =\left(\chi_{\text{PvF}}^{2}\right)^{\text{Flux}}+\left(\chi_{\text{PvF}}^{2}\right)^{\text{xsec}}
+\end{aligned}
+,\label{eq:chi2P0DFGD}
+\end{equation}
+
+\end_inset
+
+where 
+\begin_inset Formula $V_{i,i}^{\pod}/V_{i,i}^{\text{FGD}}$
+\end_inset
+
+ is the variance of the 
+\begin_inset Formula $i$
+\end_inset
+
+th parameter in the 
+\begin_inset Formula $\pod$
+\end_inset
+
+ versus FGD-only (PvF) BANFF fit measurements.
+ We have divided the test statistic into two terms: the flux and the cross
+ section (xsec) contributions.
+\end_layout
+
+\begin_layout Standard
+We can calculate a p-value, 
+\begin_inset Formula $p$
+\end_inset
+
+, of observing a test statistic at least as extreme in a chi-square distribution
+ by integrating the right-hand tail of the chi-square distribution using
+ the inverse cumulative distribution function (ICDF)
+\begin_inset Formula 
+\begin{equation}
+p\left(\chi^{2},r\right)=\int_{\chi^{2}}^{\infty}F\left(x^{\prime},r\right)dx^{\prime},\label{eq:pValueCalc}
+\end{equation}
+
+\end_inset
+
+where 
+\begin_inset Formula $\chi^{2}$
+\end_inset
+
+ is the test-statistic from 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:chi2P0DFGD"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Now let us count the NDOF for the p-value calculation.
+ There are 50 SK flux parameters and 31 cross section parameters.
+ However, five of cross section parameters are fixed.
+ Additionally, we have assumed the FGD-only result is our expectation, and
+ so we have one less NDOF.
+ This leaves us with
+\begin_inset Formula 
+\[
+r=\underset{\text{Flux}}{\underbrace{50}}+\underset{\text{xsec}}{\underbrace{\left(31-5\right)}}-1=75\ \text{NDOF.}
+\]
+
+\end_inset
+
+If we wish to reject the null hypothesis at the 5% level, a chi-squared
+ value of 96.21 or greater is required.
+\end_layout
+
+\begin_layout Standard
+We must qualify the assumptions about the above null hypothesis test.
+ Assuming the two data fits are completely uncorrelated is not fully justified,
+ and the correct method would be to run a joint FGD-
+\begin_inset Formula $\pod$
+\end_inset
+
+ fit to extract the correlations.
+ 
+\shape italic
+By assuming that the fits are uncorrelated, this provides an upper limit
+ on rejecting the null hypothesis
+\shape default
+.
+ The reasoning for this is that the well constrained parameters in both
+ fits should be positively correlated since the same neutrino beam is being
+ observed, and this reduces the magnitude of the chi-squared test statistic.
+ We observe that the 
+\begin_inset Formula $\pod$
+\end_inset
+
+-only flux parameters are skewed above the FGD-only flux parameters, and,
+ therefore, their difference is not normally distributed about zero.
+ This indicates a large, positive correlation between the two measurements,
+ and this would decrease the magnitude of the 
+\begin_inset Formula $\left(\chi_{\text{PvF}}^{2}\right)^{\text{Flux}}$
+\end_inset
+
+ contribution in the test statistic as anticipated.
+ Since the ND280 data is most sensitive to the CC-
+\begin_inset Formula $0\pi$
+\end_inset
+
+ parameters, we observe most of the CC-
+\begin_inset Formula $0\pi$
+\end_inset
+
+ parameters in both fits are positively correlated.
+ Hence, the magnitude of the 
+\begin_inset Formula $\left(\chi_{\text{PvF}}^{2}\right)^{\text{xsec}}$
+\end_inset
+
+ term is decreased as well.
+ Since we now understand the limitations of the test statistic and its purpose,
+ we can proceed to calculate the p-value.
+\end_layout
+
+\begin_layout Standard
+We find that the reduced test statistic is 
+\begin_inset Formula 
+\[
+\tilde{\chi}_{\text{PvF}}^{2}=\frac{\chi_{\text{PvF}}^{2}}{r}=\frac{81.41}{75}\approx1.085,
+\]
+
+\end_inset
+
+of which indicates good agreement between the two measurements for the ND
+ constraint.
+ This corresponds to a p-value of 
+\begin_inset Formula $p=0.2865$
+\end_inset
+
+ or a 28.65% probability of obtaining a larger test statistic.
+ This result is shown in 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "fig:P-value"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+ Since this is not sufficiently close to the 5% level, we fail to reject
+ the null hypothesis.
+ 
+\shape italic
+We can conclude that the 
+\begin_inset Formula $\pod$
+\end_inset
+
+-only fit, FGD-only fit, and subsequent fits describe the same data in T2K
+\shape default
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/FitterResults/P0DvsTN324/P0DFGDNDFluxSKFluxXSecChi2_alternative.png
+	width 60text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+P-value for the 
+\begin_inset Formula $\pod$
+\end_inset
+
+ vs FGD ND constraint.
+ Shown in solid black is the inverse cumulative distribution function (ICDF)
+ with 75 NDOF.
+ The chi-squared PDF is shown in gray with arbitrary normalization.
+ The obtained value of the test statistic, shown as a dashed, red line,
+ is 81.41 which is below the 5% level, shown as a solid, blue arrow.
+ 
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+P-Value for the 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+podtitle{}
+\end_layout
+
+\end_inset
+
+ vs FGD ND Constraint
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:P-value"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Receiver Operating Characteristic
+\end_layout
+
+\begin_layout Standard
+To demonstrate the differences between the 
+\begin_inset Formula $\pod$
+\end_inset
+
+ and FGD parameter estimates, receiver operating characteristic (ROC) curves
+ are provided in Appendix 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "app:Receiver-Operating-Characteristi"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+ The advantage of ROC curves over a p-value calculation is that the differences
+ between the two fits can be statistically quantified for all parameters.
+ These curves provide an indication of which fit has better constraints
+ in parameter space, suggest the limitation of each fit, and provide guidance
+ for future researchers.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Summary
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:ResultsSummary"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+In this chapter, we have explored the postfit results for the 
+\begin_inset Formula $\pod$
+\end_inset
+
+-only data set and compared it against the FGD-only fit.
+ While the FGD-only data samples have about twice as many more neutrino-oxygen
+ events than the 
+\begin_inset Formula $\pod$
+\end_inset
+
+-only data, which helps with sensitivity of the oxygen cross section parameters,
+ the accumulated neutrino exposures are similar.
+ Moreover, we observe a good level of agreement between the two fits with
+ the largest differences observed with less constrained parameters like
+ those that characterize the 2p2h interaction.
+ A hypothesis test was performed to quantify if the 
+\begin_inset Formula $\pod$
+\end_inset
+
+-only and FGD-only data are similar or not.
+ In order to reject the null hypothesis, which is that the two sets are
+ similar, at the 5% level, a 
+\begin_inset Formula $\chi^{2}$
+\end_inset
+
+ of 96.21 or greater was needed.
+ A chi-squared of 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+81.41
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+ was obtained, corresponding to a p-value of 28.65, which is insufficient
+ to reject the null hypothesis.
+ Therefore, using the BANFF fit method with the current 
+\begin_inset Formula $\pod$
+\end_inset
+
+ samples and cross section parameterization, the ND280 constraint is expected
+ to be largely similar if propagated to the next stage in the oscillation
+ analysis.
+ We will examine in the final chapter the differences in the predicted neutrino
+ energy spectrum at SK using the 
+\begin_inset Formula $\pod$
+\end_inset
+
+-only and FGD-only postfit results.
+\end_layout
+
+\end_body
+\end_document

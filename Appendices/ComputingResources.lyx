@@ -1,0 +1,719 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass extreport
+\begin_preamble
+% ams math packages
+\usepackage[cmex10]{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+
+% graphics packages
+\usepackage{graphicx} % remove pdftex if you are not compiling to pdf
+%\graphicspath{{./figures/}} % this places all graphics in the figures subdirectory
+
+% allowed graphics extensions
+% uncomment if you prefer to add extension in \includegraphics
+\DeclareGraphicsExtensions{.pdf,.png,.jpg}
+
+% allows the creation of subfigures
+\usepackage[caption=false]{subfig}
+
+% book tables are simple and look nice
+\usepackage{booktabs}
+
+% for specifying urls and links
+\usepackage{url}
+\urlstyle{same} % same style as regular text
+
+% for defining colors
+\usepackage{xcolor}
+
+%\usepackage[labelformat=empty]{caption}
+%\usepackage{subcaption}
+\usepackage{lmodern}
+\usepackage{csquotes}
+\usepackage{multirow}
+\usepackage{multicol}
+\usepackage{hepunits}
+\usepackage{hepnames}
+\usepackage{physics}
+
+\usepackage[%
+  pdfpagelabels,
+  pdfusetitle,
+  %hidelinks,
+  %colorlinks=true,
+  %pdfborder={0 0 0},
+  linkcolor=blue,
+  filecolor=magenta,
+  urlcolor=cyan,
+  pagebackref,
+  bookmarksopen,
+  bookmarksnumbered]{hyperref}
+
+\usepackage{sectsty}
+\chapterfont{\centering}
+
+\usepackage{braket}
+\end_preamble
+\use_default_options true
+\master ../T2K-TN-370.lyx
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "palatino" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format pdf2
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\pdf_title "HoganThesis"
+\pdf_author "Matthew Hogan"
+\pdf_bookmarks true
+\pdf_bookmarksnumbered true
+\pdf_bookmarksopen false
+\pdf_bookmarksopenlevel 1
+\pdf_breaklinks false
+\pdf_pdfborder false
+\pdf_colorlinks true
+\pdf_backref false
+\pdf_pdfusetitle true
+\papersize letterpaper
+\use_geometry true
+\use_package amsmath 0
+\use_package amssymb 0
+\use_package cancel 0
+\use_package esint 0
+\use_package mathdots 0
+\use_package mathtools 0
+\use_package mhchem 0
+\use_package stackrel 0
+\use_package stmaryrd 0
+\use_package undertilde 0
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 0
+\use_minted 0
+\branch Introduction
+\selected 1
+\filename_suffix 0
+\color #faf0e6
+\end_branch
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 1in
+\topmargin 1in
+\rightmargin 1in
+\bottommargin 1in
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+This appendix provides the details on the computing resources used to produce
+ the BANFF fit.
+ All the computing resources were provided by the 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+W.~M.~Keck
+\end_layout
+
+\end_inset
+
+ high performance computing (HPC) cluster at Colorado State University.
+ The HPC cluster is maintained by the Engineering Technology Services team
+ at the Walter Scott
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+, Jr.~College
+\end_layout
+
+\end_inset
+
+ of Engineering.
+ A list of the computing resources used in this thesis is provided in 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "tab:Computing-resources-used"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Computing resources used in this thesis.
+ 
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+Computing Resources Used in this Thesis
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:Computing-resources-used"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="6" columns="7">
+<features booktabs="true" tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="left" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Avail.
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Node CPU
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+#CPUs
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+#cores
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Clock
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Cache
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+RAM
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+nodes
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+per node
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+per CPU
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+rate [GHz]
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+[MB]
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+[GB]
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+19
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Xeon E5-2640
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+6
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2.5
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+15
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+256
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+7
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Xeon E5-2620 v3
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2.4
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+64
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+4
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+256
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+15
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Xeon E5-2620 v4
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+8
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2.1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+20
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+64
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The HPC cluster has a dedicated batch queue scheduler which supports the
+ OpenMP and MPI parallel processing environments.
+ While the user can restrict jobs to specific compute nodes in the batch
+ queue, the scheduler will assign jobs to any available nodes on a first
+ come, first serve basis with some exceptions.
+ The BANFF fit studies in this thesis usually used the default scheduler
+ options except when to prioritize certain jobs over others.
+ The typical resource usage is explained in the next paragraph.
+\end_layout
+
+\begin_layout Standard
+The 
+\begin_inset Formula $\pod$
+\end_inset
+
+-only data BANFF fit result was calculated using a compute node with two
+ E5-2620 v4 central processing units (CPUs) and 64 GB of random access memory
+ (RAM).
+ The data and Monte Carlo (MC) events are loaded in RAM from binary ROOT
+\begin_inset CommandInset citation
+LatexCommand cite
+key "BRUN199781"
+literal "false"
+
+\end_inset
+
+ files that are stored on the HPC cluster's hard disk drives.
+ The total job time was 27.5 hours using the OpenMP parallel processing environme
+nt with all 16 cores employed, which is reasonable in terms of large scale
+ computational work.
+ This includes loading the data and MC, finding the global minimum, and
+ calculating the Hess matrix.
+ However, a significant fraction of the time, about 6.2 hours hours, was
+ spent preparing the fit by preloading the data and MC events into RAM.
+ The maximum consumed RAM for the fit was about 40 GB.
+\end_layout
+
+\begin_layout Standard
+In exploring a joint 
+\begin_inset Formula $\pod$
+\end_inset
+
++FGD BANFF fit using the canonical T2K 2018 cross section parameterization,
+ the Asimov fit job required two weeks to complete, or about 10 times longer
+ than the 
+\begin_inset Formula $\pod$
+\end_inset
+
+-only Asimov fit.
+ The significant increase in job 
+\begin_inset Quotes eld
+\end_inset
+
+walltime
+\begin_inset Quotes erd
+\end_inset
+
+ is because the number of fit parameters almost doubled in comparison.
+ This illustrates the nonlinear relationship between the required fit time
+ versus number of fit parameters.
+ Additionally, when using the actual 
+\begin_inset Formula $\pod$
+\end_inset
+
++FGD data, the fit failed to converge on a global minimum due to machine
+ precision limits.
+ So for a future joint analysis, careful consideration on the number of
+ needed fit parameters is necessary.
+\end_layout
+
+\end_body
+\end_document

@@ -1,0 +1,25 @@
+#% Do not delete the line below; configure depends on this
+#  \DeclareLaTeXClass[colostatethesisLyx]{Colorado State University Thesis Class}
+#  \DeclareCategory{Thesis}
+# Report textclass definition file. Taken from initial LyX source code
+# 2016-05-21 jdreyer Updated to LyX 2.0 format
+# 2010-08-07 jdreyer Removed amsmath include to correct problem with 'command already defined' errors. LyX *should* autoload the package as necesary.
+
+Format 49
+Input stdclass.inc
+Input numreport.inc
+
+Style Bibliography
+	TopSep                4
+	LabelString           "Bibliography"
+	LabelFont
+	  Series              Bold
+	  Size                Huge
+	EndFont
+End
+
+Preamble
+   \usepackage{amssymb}
+   \usepackage{graphicx}
+   \usepackage{url}
+EndPreamble

@@ -1,0 +1,3471 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass extreport
+\begin_preamble
+% ams math packages
+\usepackage[cmex10]{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+
+% graphics packages
+\usepackage{graphicx} % remove pdftex if you are not compiling to pdf
+%\graphicspath{{./figures/}} % this places all graphics in the figures subdirectory
+
+% allowed graphics extensions
+% uncomment if you prefer to add extension in \includegraphics
+\DeclareGraphicsExtensions{.pdf,.png,.jpg}
+
+% allows the creation of subfigures
+\usepackage[caption=false]{subfig}
+
+% book tables are simple and look nice
+\usepackage{booktabs}
+
+% for specifying urls and links
+\usepackage{url}
+\urlstyle{same} % same style as regular text
+
+% for defining colors
+\usepackage{xcolor}
+
+%\usepackage[labelformat=empty]{caption}
+%\usepackage{subcaption}
+\usepackage{lmodern}
+\usepackage{csquotes}
+\usepackage{multirow}
+\usepackage{multicol}
+\usepackage{hepunits}
+\usepackage{hepnames}
+\usepackage{physics}
+
+\usepackage[%
+  pdfpagelabels,
+  pdfusetitle,
+  %hidelinks,
+  %colorlinks=true,
+  %pdfborder={0 0 0},
+  linkcolor=blue,
+  filecolor=magenta,
+  urlcolor=cyan,
+  pagebackref,
+  bookmarksopen,
+  bookmarksnumbered]{hyperref}
+
+\usepackage{sectsty}
+\chapterfont{\centering}
+
+\usepackage{braket}
+\end_preamble
+\use_default_options true
+\master ../T2K-TN-370.lyx
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "palatino" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format pdf2
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\pdf_title "HoganThesis"
+\pdf_author "Matthew Hogan"
+\pdf_bookmarks true
+\pdf_bookmarksnumbered true
+\pdf_bookmarksopen false
+\pdf_bookmarksopenlevel 1
+\pdf_breaklinks false
+\pdf_pdfborder false
+\pdf_colorlinks true
+\pdf_backref false
+\pdf_pdfusetitle true
+\papersize letterpaper
+\use_geometry true
+\use_package amsmath 0
+\use_package amssymb 0
+\use_package cancel 0
+\use_package esint 0
+\use_package mathdots 0
+\use_package mathtools 0
+\use_package mhchem 0
+\use_package stackrel 0
+\use_package stmaryrd 0
+\use_package undertilde 0
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 0
+\use_minted 0
+\branch Introduction
+\selected 1
+\filename_suffix 0
+\color #faf0e6
+\end_branch
+\branch ValidationAsimiovEventRate
+\selected 1
+\filename_suffix 0
+\color #faf0e6
+\end_branch
+\branch ValidationAsimovScans
+\selected 1
+\filename_suffix 0
+\color #faf0e6
+\end_branch
+\branch ValidationAsimovFitResults
+\selected 1
+\filename_suffix 0
+\color #faf0e6
+\end_branch
+\branch ValidationAsimov
+\selected 1
+\filename_suffix 0
+\color #faf0e6
+\end_branch
+\branch ValidationAsimovVaryNSigma
+\selected 1
+\filename_suffix 0
+\color #faf0e6
+\end_branch
+\branch ValidationFakeData
+\selected 1
+\filename_suffix 0
+\color #faf0e6
+\end_branch
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 1in
+\topmargin 1in
+\rightmargin 1in
+\bottommargin 1in
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+This chapter will present the checks, tests and validations of the BANFF
+ fit using the MC simulation as input.
+ The test using the weighted MC as the data is referred as an Asimov
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+An Asimov data refers replacing the ensemble of simulated data sets by a
+ single representative one.
+\end_layout
+
+\end_inset
+
+ data fit
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Cowan:2010js"
+literal "false"
+
+\end_inset
+
+.
+ There next are two other validation tests that use two different data sets
+ that have altered events weights (reweighted) compared to the MC.
+ These are referred to as fake data sets.
+\end_layout
+
+\begin_layout Standard
+The chapter is presented in the following order.
+ The first topic is the Asimov data fit discussed in 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "sec:Asimov-Data-Fit"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+ The following section explores the results of the two fake data fits in
+ 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "sec:Fake-Data-Fits"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+ A chapter summary is provided in 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "sec:ValidationSummary"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Branch ValidationAsimov
+inverted 0
+status open
+
+\begin_layout Section
+Asimov Data Fit
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:Asimov-Data-Fit"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Asimov data refers to replacing the ensemble of simulated data sets by a
+ single representative one
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Cowan:2010js"
+literal "false"
+
+\end_inset
+
+.
+ In this analysis, this involves fitting the MC data set to itself for the
+ primary purpose of checking the closure of the fitting framework.
+ The Asimov set is produced with the same models as is implemented in the
+ fitter and has all parameters set to their prior central values as defined
+ in 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "chap:P0DinBANFF"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+ Instead of statistically sampling from the MC, which can insert statistical
+ variations into the fit, the Asimov data set is created by scaling the
+ set down to the full T2K POT with additional finer corrections like flux
+ and cross section weights.
+ The prefit correlation matrix is shown in 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "fig:Complete-prefit-correlation"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/Validation/Asimov/corr_pref.png
+	width 95text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Complete prefit correlation matrix for the BANFF fit.
+ The first 100 parameters are the flux bins.
+ Between 100 and 561 are the bin normalization parameters.
+ Finally 562 through 592 are the cross section parameters.
+ 
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+Complete Prefit Correlation Matrix for the BANFF Fit.
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Complete-prefit-correlation"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+In addition to running an Asimov fit, other metrics were examined in the
+ Asimov set.
+ Shown first is a comparison of the event rates before and after applying
+ weights to the MC.
+ Next is an examination of the cross section weight functions.
+ Finally is a set of scans of the test statistic space to check that the
+ sample and penalty terms are behaving as expected.
+ Then the Asimov data set fit is examined.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Branch ValidationAsimiovEventRate
+inverted 0
+status open
+
+\begin_layout Subsection
+Event Rate
+\end_layout
+
+\begin_layout Standard
+Shown in 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "tab:eventtable"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ are the event rates for the various samples for the Asimov fit.
+ The data events column refers to real T2K data collected in ND280.
+ The proceeding columns refer to MC events only after applying different
+ weights.
+ The POT weight is a gross normalization that scales the MC event rate to
+ the data rate.
+ The other weights, which were discussed in 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "chap:BANFF-Likelihood"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, are the flux, cross section, and detector corrections.
+ As expected, we see that applying the POT weight scales the MC event rate
+ close to that of the data.
+ The other weights are fine tuning corrections to the rate from known systematic
+s like flux and cross sections.
+ The set of samples after applying all the weights is referred to as Asimov
+ data set.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{landscape}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Event rate table for Asimov set.
+ The 
+\begin_inset Quotes eld
+\end_inset
+
+Raw MC
+\begin_inset Quotes erd
+\end_inset
+
+ column refers the number of events in the sample from the nominal MC prediction
+ without any weights applied.
+ From left to right, applications of weights are applied to understand their
+ affect on the samples.
+ The 
+\begin_inset Quotes eld
+\end_inset
+
+POT only
+\begin_inset Quotes erd
+\end_inset
+
+ column refers to applying the POT weight to all events.
+ Columns with 
+\begin_inset Quotes eld
+\end_inset
+
+POT+Flux
+\begin_inset Quotes erd
+\end_inset
+
+, 
+\begin_inset Quotes eld
+\end_inset
+
+POT+xsec
+\begin_inset Quotes erd
+\end_inset
+
+, and 
+\begin_inset Quotes eld
+\end_inset
+
+POT+Det
+\begin_inset Quotes erd
+\end_inset
+
+ refer to applying the POT weight together with the flux, cross section,
+ and detector weights, respectively.
+ The 
+\begin_inset Quotes eld
+\end_inset
+
+Prefit
+\begin_inset Quotes erd
+\end_inset
+
+ column has the POT, flux, cross section, and detector (POT+Flux+xsec+Det)
+ weights all multiplied together.
+ 
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+Event Rate Table for Asimov Set
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:eventtable"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset CommandInset include
+LatexCommand input
+filename "Includes/Validation/EventTable.tex"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{landscape}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Branch ValidationAsimovVaryNSigma
+inverted 0
+status open
+
+\begin_layout Subsection
+One Sigma Variation of Cross Section Parameters
+\end_layout
+
+\begin_layout Standard
+It is difficult to predict the impact of cross section parameters variations
+ in the BANFF fit since the fit samples contain many interaction modes themselve
+s.
+ In particular, a single parameter variation can also be explained by many
+ parameters individually varied.
+ To understand the effect of the cross section parameter variations on the
+ fit samples, each cross section parameter was varied by 
+\begin_inset Formula $\pm1$
+\end_inset
+
+ standard deviation.
+ This also ensures the spline weight functions, which are generated for
+ each event prior to the BANFF fit, are functioning properly.
+ The results of the variations are shown in Appendix 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "app:NSigmaVariations"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Branch ValidationAsimovScans
+inverted 0
+status open
+
+\begin_layout Subsection
+Log-Likelihood Scans
+\end_layout
+
+\begin_layout Standard
+Log-likelihood scans of the sample and penalty terms were examined in the
+ Asimov data set.
+ The results of the scans are shown in 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "fig:TestStatisticScans"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ with comparisons between the 
+\begin_inset Formula $\pod$
+\end_inset
+
+-only samples and FGD-only samples shown.
+ It can be seen that the 
+\begin_inset Formula $\pod$
+\end_inset
+
+-only data has similar sensitivity and shape dependence on the flux parameters
+ to that of the FGD-only data.
+ Also observed is that the penalties are the identical for both 
+\begin_inset Formula $\pod$
+\end_inset
+
+- and FGD-only sets and parabolic in shape as expected since the penalties
+ are modeled using a Gaussian.
+ The complete set of scans is contained in Appendix 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "app:Log-Likelihood-Sample-Scans"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ and Appendix 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "app:Log-Likelihood-Penalty-Scans"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/Validation/Asimov/Flux03Sample.png
+	lyxscale 50
+	width 45text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Flux normalization 
+\series bold
+
+\begin_inset Formula $b_{3}$
+\end_inset
+
+ 
+\series default
+
+\begin_inset Formula $\Delta\chi_{\text{LLR}}^{2}$
+\end_inset
+
+ scan
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/Validation/Asimov/FSIINELLOSample.png
+	lyxscale 50
+	width 45text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+FSI low energy inelastic shape location 
+\begin_inset Formula $\Delta\chi_{\text{LLR}}^{2}$
+\end_inset
+
+ scan
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/Validation/Asimov/Flux03Penalty.png
+	lyxscale 50
+	width 45text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Flux normalization 
+\series bold
+
+\begin_inset Formula $b_{3}$
+\end_inset
+
+ 
+\series default
+
+\begin_inset Formula $\Delta\chi_{\text{Flux}}^{2}$
+\end_inset
+
+ scan
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/Validation/Asimov/FSIINELLOPenalty.png
+	lyxscale 50
+	width 45text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+FSI low energy inelastic shape location 
+\begin_inset Formula $\Delta\chi_{\text{xsec}}^{2}$
+\end_inset
+
+ scan
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Comparison of 
+\begin_inset Formula $\Delta\chi^{2}$
+\end_inset
+
+ scans for variations in fit parameters in the Asimov set.
+ Two parameters are varied: parameter 3 (left) corresponding to a flux bin
+ normalization and 562 (right) corresponding to a FSI shape location parameter.
+ The top panel shows the change in the LLR test statistic 
+\begin_inset Formula $\Delta\chi_{\text{LLR}}^{2}$
+\end_inset
+
+ while the bottom panel shows the penalty terms.
+ In all sub-figures are comparisons between the BANFF/MaCH3 FGD 2017 results
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Abe:2017vif"
+literal "false"
+
+\end_inset
+
+ against the BANFF 
+\begin_inset Formula $\pod$
+\end_inset
+
+-only results.
+ Special thanks goes to Clarence Wret (c.wret@rochester.edu) of the University
+ of Rochester for generating the plots.
+ 
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+Test Statistic Scans for Variations of Fit Parameters in the Asimov Set
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:TestStatisticScans"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Branch ValidationAsimovFitResults
+inverted 0
+status open
+
+\begin_layout Subsection
+Fit Results
+\end_layout
+
+\begin_layout Standard
+The postfit results of the Asimov data fit are shown from 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "fig:Asimov-fit-resultsND"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ to 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "fig:Asimov-fit-resultsXSEC"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+ In order to provide a unified graphical representation for all the parameters,
+ the prefit and postfit cross section shape parameters are adjusted to be
+ relative to one (1).
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/Validation/Asimov/nd_pf_numu_flux_parms.png
+	lyxscale 50
+	height 19.5theight%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+ND280 
+\begin_inset Formula $\numu$
+\end_inset
+
+ in FHC (0-10)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/Validation/Asimov/nd_pf_numub_flux_parms.png
+	lyxscale 50
+	height 19.5theight%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+ND280 
+\begin_inset Formula $\numubar$
+\end_inset
+
+ in FHC (11-15)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/Validation/Asimov/nd_pf_nue_flux_parms.png
+	lyxscale 50
+	height 19.5theight%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+ND280 
+\begin_inset Formula $\nue$
+\end_inset
+
+ in FHC (16-22)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/Validation/Asimov/nd_pf_nueb_flux_parms.png
+	lyxscale 50
+	height 19.5theight%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+ND280 
+\begin_inset Formula $\nuebar$
+\end_inset
+
+ in FHC (23-24)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/Validation/Asimov/nd_nf_numu_flux_parms.png
+	lyxscale 50
+	height 19.5theight%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+ND280 
+\begin_inset Formula $\numu$
+\end_inset
+
+ in RHC (25-29)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/Validation/Asimov/nd_nf_numub_flux_parms.png
+	lyxscale 50
+	height 19.5theight%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+ND280 
+\begin_inset Formula $\numubar$
+\end_inset
+
+ in RHC (30-40)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/Validation/Asimov/nd_nf_nue_flux_parms.png
+	lyxscale 50
+	height 19.5theight%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+ND280 
+\begin_inset Formula $\nue$
+\end_inset
+
+ in RHC (41-42)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/Validation/Asimov/nd_nf_nueb_flux_parms.png
+	lyxscale 50
+	height 19.5theight%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+ND280 
+\begin_inset Formula $\nuebar$
+\end_inset
+
+ in RHC (43-49)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Asimov fit results for the Flux at ND280.
+ The numbers in parentheses indicate the fit indices.
+ 
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Asimov-fit-resultsND"
+
+\end_inset
+
+ 
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+Asimov Fit Results for the Flux at ND280
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/Validation/Asimov/sk_pf_numu_flux_parms.png
+	lyxscale 50
+	height 19.5theight%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+SK 
+\begin_inset Formula $\numu$
+\end_inset
+
+ in FHC (50-60)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/Validation/Asimov/sk_pf_numub_flux_parms.png
+	lyxscale 50
+	height 19.5theight%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+SK 
+\begin_inset Formula $\numubar$
+\end_inset
+
+ in FHC (61-65)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/Validation/Asimov/sk_pf_nue_flux_parms.png
+	lyxscale 50
+	height 19.5theight%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+SK 
+\begin_inset Formula $\nue$
+\end_inset
+
+ in FHC (66-72)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/Validation/Asimov/sk_pf_nueb_flux_parms.png
+	lyxscale 50
+	height 19.5theight%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+SK 
+\begin_inset Formula $\nuebar$
+\end_inset
+
+ in FHC (73-74)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/Validation/Asimov/sk_nf_numu_flux_parms.png
+	lyxscale 50
+	height 19.5theight%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+SK 
+\begin_inset Formula $\numu$
+\end_inset
+
+ in RHC (75-79)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/Validation/Asimov/sk_nf_numub_flux_parms.png
+	lyxscale 50
+	height 19.5theight%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+SK 
+\begin_inset Formula $\numubar$
+\end_inset
+
+ in RHC (80-90)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/Validation/Asimov/sk_nf_nue_flux_parms.png
+	lyxscale 50
+	height 19.5theight%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+SK 
+\begin_inset Formula $\nue$
+\end_inset
+
+ in RHC (91-92)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/Validation/Asimov/sk_nf_nueb_flux_parms.png
+	lyxscale 50
+	height 19.5theight%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+SK 
+\begin_inset Formula $\nuebar$
+\end_inset
+
+ in RHC (93-99)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Asimov fit results for the Flux at Super-K.
+ The numbers in parentheses indicate the fit indices .
+ 
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Asimov-fit-resultsSKFHC"
+
+\end_inset
+
+ 
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+Asimov Fit Results for the Flux at Super-K
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/Validation/Asimov/ParameterPlots_ObsNorm_P0D_Water.png
+	lyxscale 50
+	height 40theight%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Water-in obsnorms (100 - 330)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/Validation/Asimov/ParameterPlots_ObsNorm_P0D_Air.png
+	lyxscale 50
+	height 40theight%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Water-out obsnorms (331-561)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Asimov fit results for the obsnorm parameters.
+ The numbers in parentheses indicate the fit indices.
+ The large jumps in the bin normalization parameters is an artifact of the
+ indexing choice with the indices increasing in increasing momentum in constant
+ angular slices.
+ Compare the changes in the bin normalizations in the 
+\begin_inset Formula $\numu$
+\end_inset
+
+ in FHC Mode CC 1-Track in 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "fig:Bin-normalization-edgesNumuFHC"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+ 
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Asimov-fit-resultsObsnorm"
+
+\end_inset
+
+
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+Asimov Fit Results for the Bin Normalization Parameters
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/Validation/Asimov/FSI_parameters.png
+	lyxscale 50
+	height 40theight%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+FSI (562-567)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/Validation/Asimov/ParameterPlots_XSec.png
+	lyxscale 50
+	height 40theight%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Cross Section (568-592)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Asimov fit results for the FSI and cross section parameters.
+ The numbers in parentheses indicate the fit indices.
+ In order to provide a consistent presentation of parameter changes between
+ prefit and postfit among all parameters, shape location and scale parameters
+ are adjusted to prefits of one (1).
+ In effect, the value and uncertainties for all parameters are fractional
+ changes.
+ 
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Asimov-fit-resultsXSEC"
+
+\end_inset
+
+
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+Asimov Fit Results for the Cross Section and FSI Parameters
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+We see that the postfit parameters have uncertainties that are different
+ compared to their prefit values.
+ This is expected since correlations between the sub-matrices in the covariance
+ matrix, which were assumed uncorrelated to start, have been calculated.
+ The complete postfit correlation matrix is shown in 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "fig:Complete-postfit-correlation"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ and the flux and cross section only correlation matrix is shown in 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "fig:XsecFlux-postfit-correlation"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+ We observe significant anti-correlations between each of the sub-matrices,
+ which is predicted from 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:n-predicted-general"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ since any increase in one parameter weight forces a decrease in the others.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/Validation/Asimov/corr_post.png
+	height 40theight%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Complete postfit correlation matrix for the Asimov data fit.
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Complete-postfit-correlation"
+
+\end_inset
+
+
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+Complete Postfit Correlation Matrix for the Asimov Data Fit
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/Validation/Asimov/corr_flux_xsec.png
+	height 40theight%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Flux and cross section postfit correlation matrix for the Asimov data fit.
+ The parameters from 1-100 are the flux parameters and all parameters after
+ are the cross section.
+ 
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:XsecFlux-postfit-correlation"
+
+\end_inset
+
+
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+Flux and Cross Section Postfit Correlation Matrix for the Asimov Data Fit
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Branch ValidationFakeData
+inverted 0
+status open
+
+\begin_layout Section
+Fake Data Fits
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:Fake-Data-Fits"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+In this section, we examine the results of BANFF fits when given data sets
+ with nonphysical alterations.
+ As stated earlier, these are called fake data sets since we are treating
+ these as data in the fit.
+ The fake data sets initially start as the Asimov data set and have variations
+ applied to them.
+ Here we are only interested in varying the flux and cross section parameters
+ since they are the parameters that are propagated to the oscillation analysis.
+ There were two fake data sets generated for the tests.
+ One data set varies the neutrino flux in a single flux bin and the other
+ varies the single pion production rate.
+\end_layout
+
+\begin_layout Standard
+While other fake data sets could be generated that are more or less similar
+ to the Asimov data set, that is not the purpose of fitting to fake data
+ sets.
+ 
+\shape italic
+The purpose of these tests is to show the fit can converge when provided
+ with non-Asimov data sets and we can understand the results.
+
+\shape default
+ It is known in the BANFF group that the BANFF fitting software is not guarantee
+d to converge on a global minimum when using altered Asimov data.
+ In particular, fitting FGD-only data generated from random and uncorrelated
+ variations of all fit flux, cross section, and bin normalization parameters,
+ 127 out of 500 fits (~25%) reported fit convergence problems.
+ So convergence is not assured in all situations, but is possible.
+ We can establish that a credible 
+\begin_inset Formula $\pod$
+\end_inset
+
+-only real data fit result is possible by demonstrating 1) the BANFF fit
+ converges with 
+\begin_inset Formula $\pod$
+\end_inset
+
+-only fake data and 2) that we can sensibly understand those fit results.
+\end_layout
+
+\begin_layout Standard
+The information provided from fake data tests is also useful to understand
+ possible biases in the fit results.
+ For instance, since the 
+\begin_inset Formula $\pod$
+\end_inset
+
+ samples have a relatively low sensitivity to CC-
+\begin_inset Formula $1\pi$
+\end_inset
+
+ interactions, real differences between data and MC could be explained by
+ variations in non CC-
+\begin_inset Formula $1\pi$
+\end_inset
+
+ model parameters.
+ We will get a sense of the biases in the following two fake data tests.
+ The first fake data test analyzed is referred to as the 
+\begin_inset Quotes eld
+\end_inset
+
+High Energy Neutrino Flux Variation
+\begin_inset Quotes erd
+\end_inset
+
+ which varies the high energy 
+\begin_inset Formula $\numu$
+\end_inset
+
+ flux in FHC mode.
+ The following fake data test is referred to as the 
+\begin_inset Quotes eld
+\end_inset
+
+Single Pion Event Rate Variation
+\begin_inset Quotes erd
+\end_inset
+
+ which alters the single pion production event rate uniformly.
+\end_layout
+
+\begin_layout Subsection
+High Energy Neutrino Flux Variation
+\end_layout
+
+\begin_layout Standard
+This fake data set is almost identical to the Asimov data set expect an
+ arbitrarily large increase in the 
+\begin_inset Formula $\numu$
+\end_inset
+
+ flux between 7 and 30 GeV by +25% in FHC mode only.
+ This variation was chosen since this energy range corresponds precisely
+ to flux parameter 
+\begin_inset Formula $b_{10}$
+\end_inset
+
+ and it could affect all analysis bins.
+ The true neutrino energy distribution of the fake data used in this study
+ is shown in 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "fig:Neutrino-flux-fake-data-set"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ and 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "fig:Neutrino-flux-fake-data-set-1"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/Validation/NuMuFluxVariationFakeData/NuMu1Trk.png
+	lyxscale 25
+	height 40theight%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+The 
+\begin_inset Formula $\numu$
+\end_inset
+
+ in FHC Mode CC 1-Track sample
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/Validation/NuMuFluxVariationFakeData/NuMuNTrks.png
+	lyxscale 25
+	height 40theight%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+The 
+\begin_inset Formula $\numu$
+\end_inset
+
+ in FHC Mode CC N-Tracks sample
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Neutrino energy distributions in the High Energy Neutrino Flux variation
+ fake data set.
+ The fake data (dashed-blue) is nearly identical to the Asimov set (black)
+ except the +25% increase in the 
+\begin_inset Formula $\numu$
+\end_inset
+
+ in FHC mode rate at energies greater than 7 GeV.
+ In the figures, 
+\begin_inset Quotes eld
+\end_inset
+
+Nominal MC
+\begin_inset Quotes erd
+\end_inset
+
+ refers to the Asimov prediction and 
+\begin_inset Quotes eld
+\end_inset
+
+Fake Data
+\begin_inset Quotes erd
+\end_inset
+
+ is the altered data set.
+ The ratio of the fake data to the nominal MC is shown below each histogram
+ with the errors being statistical only.
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+Neutrino Energy Distributions in the High Energy Neutrino Flux Variation
+ Fake Data Set
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Neutrino-flux-fake-data-set"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/Validation/NuMuFluxVariationFakeData/ANuMuRHC1Trk.png
+	lyxscale 25
+	width 48text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+The 
+\begin_inset Formula $\numubar$
+\end_inset
+
+ in RHC Mode CC 1-Track sample
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/Validation/NuMuFluxVariationFakeData/ANuMuRHCNTrks.png
+	lyxscale 25
+	width 48text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+The 
+\begin_inset Formula $\numubar$
+\end_inset
+
+ in RHC Mode CC N-Tracks sample
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/Validation/NuMuFluxVariationFakeData/NuMuRHC1Trk.png
+	lyxscale 25
+	width 48text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+The 
+\begin_inset Formula $\numu$
+\end_inset
+
+ in RHC Mode CC 1-Track sample
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/Validation/NuMuFluxVariationFakeData/NuMuRHCNTrks.png
+	lyxscale 25
+	width 48text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+The 
+\begin_inset Formula $\numu$
+\end_inset
+
+ in RHC Mode CC N-Tracks sample
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Neutrino energy distributions in the High Energy Neutrino Flux variation
+ fake data set (continued).
+ The fake data (dashed-blue) is nearly identical to the Asimov set (black)
+ except the +25% increase in the 
+\begin_inset Formula $\numu$
+\end_inset
+
+ in FHC mode rate at energies greater than 7 GeV.
+ In the figures, 
+\begin_inset Quotes eld
+\end_inset
+
+Nominal MC
+\begin_inset Quotes erd
+\end_inset
+
+ refers to the Asimov prediction and 
+\begin_inset Quotes eld
+\end_inset
+
+Fake Data
+\begin_inset Quotes erd
+\end_inset
+
+ is the altered data set.
+ The ratio of the fake data to the nominal MC is shown below each histogram
+ with the errors being statistical only.
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+Neutrino Energy Distributions in the High Energy Neutrino Flux Variation
+ Fake Data Set (Continued)
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Neutrino-flux-fake-data-set-1"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The postfit parameter plots are shown in 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "fig:Postfit-numu-flux-fake-data"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+ We see that the target flux parameter 
+\begin_inset Formula $b_{10}$
+\end_inset
+
+ has significantly increased from its prefit value by almost +20%.
+ However, due to correlations in the flux covariance matrix, other flux
+ parameters have also changed.
+ The BANFF fit prefers to increase the previous energy flux parameter and
+ the high energy 
+\begin_inset Formula $\nue$
+\end_inset
+
+ flux parameters as well.
+ While we saw that the flux and hence event rate was not changed in the
+ RHC samples, the RHC flux parameters are also slightly affected.
+ However, the RHC flux parameters are still well within prefit uncertainties.
+ The statement is true for the cross section and FSI parameters.
+ We can conclude from this study that the fit will resolve large, nonphysical
+ differences between the Asimov prediction and the data with many correlated
+ parameter variations.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/Validation/NuMuFluxVariationFakeData/ND280NuMu_b10Shown.png
+	lyxscale 50
+	width 48text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+The ND280 FHC mode flux parameters
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/Validation/NuMuFluxVariationFakeData/ND280ANuMu.png
+	lyxscale 50
+	width 48text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+The ND280 RHC mode flux parameters
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/Validation/NuMuFluxVariationFakeData/XSec.png
+	lyxscale 50
+	width 48text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Cross section parameters
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/Validation/NuMuFluxVariationFakeData/FSI.png
+	lyxscale 50
+	width 48text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+The FSI parameters
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Postfit parameters for the high energy 
+\begin_inset Formula $\numu$
+\end_inset
+
+ in FHC flux variation fake data fit.
+ All the flux parameters in FHC are shown together and ordered sequentially
+ from left to right.
+ The same is true the RHC flux.
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+Postfit Parameters for the High Energy Neutrino in FHC Flux Fake Data fit
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Postfit-numu-flux-fake-data"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Single Pion Event Rate Variation
+\end_layout
+
+\begin_layout Standard
+This fake data set is very to similar to the Asimov set except for a +25%
+ increase in the number of resonant single pion events in all analysis samples.
+ This was implemented by taking all true NEUT CC-
+\begin_inset Formula $1\pi$
+\end_inset
+
+ events, extracting the event weight, and increasing it by +25%.
+ This is what is observed in the lepton candidate momentum distributions
+ as shown in 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "fig:lepton-moentum-single-pion-fake-data"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ and 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "fig:lepton-moentum-single-pion-fake-data-1"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/Validation/CA5Variation/NuMu1Trk.png
+	lyxscale 50
+	height 40theight%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+The 
+\begin_inset Formula $\numu$
+\end_inset
+
+ in FHC Mode CC 1-Track sample
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/Validation/CA5Variation/NuMuNTrks.png
+	lyxscale 25
+	height 40theight%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset Formula $\numu$
+\end_inset
+
+ in FHC Mode CC N-Tracks
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Lepton candidate momentum distributions in the Single Pion Event Rate Variation
+ fake data set.
+ The nominal MC and fake data predictions are shown as solid and dashed
+ lines, respectively.
+ True CC-
+\begin_inset Formula $1\pi$
+\end_inset
+
+ events are differentiated from all other interactions to illustrate the
+ event scaling applied.
+ A ratio plot of CC-
+\begin_inset Formula $1\pi$
+\end_inset
+
+ events to all other interaction events shown beneath each main histogram.
+ 
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+Lepton Candidate Momentum Distributions in the Single Pion Event Rate Variation
+ Fake Data Set
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:lepton-moentum-single-pion-fake-data"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/Validation/CA5Variation/ANuMuRHC1Trk.png
+	lyxscale 25
+	width 48text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset Formula $\numubar$
+\end_inset
+
+ in RHC Mode CC 1-Track
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/Validation/CA5Variation/ANuMuRHCNTrks.png
+	lyxscale 25
+	width 48text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset Formula $\numubar$
+\end_inset
+
+ in RHC Mode CC N-Tracks
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/Validation/CA5Variation/NuMuRHC1Trk.png
+	lyxscale 25
+	width 48text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset Formula $\numu$
+\end_inset
+
+ in RHC Mode CC 1-Track
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/Validation/CA5Variation/NuMuRHCNTrks.png
+	lyxscale 50
+	width 48text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset Formula $\numu$
+\end_inset
+
+ in RHC Mode CC N-Tracks
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Lepton candidate momentum distributions in the Single Pion Event Rate Variation
+ fake data set (continued).
+ The nominal MC and fake data predictions are shown as solid and dashed
+ lines, respectively.
+ True CC-
+\begin_inset Formula $1\pi$
+\end_inset
+
+ events are differentiated from all other interactions to illustrate the
+ event scaling applied.
+ A ratio plot of CC-
+\begin_inset Formula $1\pi$
+\end_inset
+
+ events to all other interaction events shown beneath each main histogram.
+ 
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+Lepton Candidate Momentum Distributions in the Single Pion Event Rate Variation
+ Fake Data Set (Continued)
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:lepton-moentum-single-pion-fake-data-1"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+This fake data test will help us understand the BANFF fit response due to
+ poor data matching with a cross section model.
+ The ideal result of this test is that the postfit value of 
+\begin_inset Formula $C_{A}^{5}$
+\end_inset
+
+ is increased by +25% and all other parameters are unchanged like the results
+ seen in Appendix 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "app:NSigmaVariations"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+ However, this is not a realistic expectation given that there are no dedicated
+ CC-
+\begin_inset Formula $1\pi$
+\end_inset
+
+ samples, thus the sensitivity to CC-
+\begin_inset Formula $1\pi$
+\end_inset
+
+ parameters is expected to be small.
+ In particular, the 
+\begin_inset Formula $C_{A}^{5}$
+\end_inset
+
+ and 
+\begin_inset Formula $M_{A}^{\text{Res}}$
+\end_inset
+
+ parameters are strongly anticorrelated with one another, meaning that these
+ parameters will be forced to shift in opposite directions.
+ From our intuition gained in the first fake data fit, we can expect non-CC-
+\begin_inset Formula $1\pi$
+\end_inset
+
+ parameters to vary especially groups of flux parameters together.
+\end_layout
+
+\begin_layout Standard
+The postfit results for this fake data set are shown in 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "fig:Postfit-single-pion-fake-data"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+ We observe that the CC-
+\begin_inset Formula $1\pi$
+\end_inset
+
+ parameter 
+\begin_inset Formula $C_{A}^{5}$
+\end_inset
+
+ increased by ~10%, but this is not enough to account for the input fake
+ data shift.
+ We also notice that due to anticorrelations, 
+\begin_inset Formula $M_{A}^{\text{Res}}$
+\end_inset
+
+ was decreased by several percent.
+ What the fit prefers is to increase the isospin=
+\begin_inset Formula $\nicefrac{1}{2}$
+\end_inset
+
+ background, 2p2h normalization, and all the flux parameters.
+ As seen in the first fake data set, we see that in the presence of nonphysical
+ variations to the physics, the fit prefers to spread out variations among
+ the other parameters.
+ However, this time the variations are shared among both the flux and cross
+ section parameters.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/Validation/CA5Variation/ND280NuMu.png
+	lyxscale 50
+	width 48text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+ND280 FHC Flux
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/Validation/CA5Variation/ND280ANuMu.png
+	lyxscale 50
+	width 48text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+ND280 RHC Flux
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/Validation/CA5Variation/FSI.png
+	lyxscale 50
+	width 48text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+FSI parameters
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/Validation/CA5Variation/XSec.png
+	width 48text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Cross section parameters
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Postfit parameters for the Single Pion Event Rate Variation fake data fit.
+ All the flux parameters in FHC are shown together and ordered sequentially
+ from left to right.
+ The same is true the RHC flux.
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+Postfit Parameters for the 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+texorpdfstring{$C_A^5$}{CA5}
+\end_layout
+
+\end_inset
+
+ Fake Data Fit
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Postfit-single-pion-fake-data"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Summary
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:ValidationSummary"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+We have validated that the BANFF fit works and tested its robustness in
+ a variety of scenarios.
+ We learned from the Asimov data set, which is the T2K nominal MC corrected
+ to data POT with fine tuning corrections, in particular how the flux and
+ cross section parameters affect the samples.
+ In the fake data sets, we saw the effect of the penalty terms and how their
+ correlations influence the fit.
+ While more rigorous tests could establish where biases exist, these limitations
+ are beyond the scope of this thesis.
+ What has been established is that sensible fit results using the 
+\begin_inset Formula $\pod$
+\end_inset
+
+ selections are possible.
+ We will now use the real 
+\begin_inset Formula $\pod$
+\end_inset
+
+ data in the BANFF fit.
+\end_layout
+
+\end_body
+\end_document

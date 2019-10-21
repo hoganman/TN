@@ -1,0 +1,8560 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass extreport
+\use_default_options true
+\master ../T2K-TN-370.lyx
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 0
+\use_package amssymb 0
+\use_package cancel 0
+\use_package esint 0
+\use_package mathdots 0
+\use_package mathtools 0
+\use_package mhchem 0
+\use_package stackrel 0
+\use_package stmaryrd 0
+\use_package undertilde 0
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 0
+\use_minted 0
+\branch IntroductionNeutrinos
+\selected 1
+\filename_suffix 0
+\color #faf0e6
+\end_branch
+\branch IntroductionT2K
+\selected 1
+\filename_suffix 0
+\color #faf0e6
+\end_branch
+\branch IntroductionT2KNeutrinoProduction
+\selected 1
+\filename_suffix 0
+\color #faf0e6
+\end_branch
+\branch IntroductionT2KNearDetectors
+\selected 1
+\filename_suffix 0
+\color #faf0e6
+\end_branch
+\branch IntroductionT2KFarDetector
+\selected 1
+\filename_suffix 0
+\color #faf0e6
+\end_branch
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 1in
+\topmargin 1in
+\rightmargin 1in
+\bottommargin 1in
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Quote
+\align center
+
+\shape italic
+Chose trop vue n'est chère tenue
+\end_layout
+
+\begin_layout Quote
+\align center
+A thing too much seen is little prized – French proverb
+\end_layout
+
+\begin_layout Standard
+\begin_inset Branch IntroductionNeutrinos
+inverted 0
+status open
+
+\begin_layout Section
+Introduction to Neutrinos
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:Introduction-to-Neutrinos"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The history of the neutrino can be traced back to the electron energy spectrum
+ observed in neutron 
+\begin_inset Formula $\beta$
+\end_inset
+
+-decay.
+ While measurements of the 
+\begin_inset Formula $\alpha$
+\end_inset
+
+- and 
+\begin_inset Formula $\gamma$
+\end_inset
+
+-decay of atomic nuclei showed discrete spectral lines, the electron (
+\begin_inset Formula $\beta$
+\end_inset
+
+ particle) exhibited a continuous energy spectrum.
+ Experimentally, there were two observed particles in each decay process
+ and classical physics dictated that the outgoing daughter particles should
+ have discrete energies.
+ The fact that the 
+\begin_inset Formula $\beta$
+\end_inset
+
+-decay spectrum was very different posed a fundamental problem for physicists
+ in the mid-1910s, which was that energy was not conserved.
+ Two solutions were postulated: either the 
+\begin_inset Quotes eld
+\end_inset
+
+energy conservation law is only valid statistically in such a 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+process~[
+\backslash
+textellipsis]~or
+\end_layout
+
+\end_inset
+
+ an additional undetectable new 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+particle~[
+\backslash
+textellipsis]~carrying
+\end_layout
+
+\end_inset
+
+ away the additional energy and 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+spin~[
+\backslash
+textellipsis]~is
+\end_layout
+
+\end_inset
+
+ emitted
+\begin_inset Quotes erd
+\end_inset
+
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Zuber2012"
+literal "false"
+
+\end_inset
+
+.
+ The latter solution was proposed by Wolfgang Pauli in a letter dated 4
+ December, 1930, to a group of physicists meeting in Tübingen, modern Germany,
+ where he first proposed the neutrino
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+In W Pauli's December 1930 letter, he referred to his proposed particle
+ as the 
+\begin_inset Quotes eld
+\end_inset
+
+neutron
+\begin_inset Quotes erd
+\end_inset
+
+, and not the neutrino.
+ It was Enrico Fermi who would coin the particle as a 
+\begin_inset Quotes eld
+\end_inset
+
+neutrino
+\begin_inset Quotes erd
+\end_inset
+
+ meaning in Italian 
+\shape italic
+little neutral one
+\shape default
+.
+\begin_inset VSpace defskip
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+.
+ Pauli's solution also predicted that the undetected neutrino would have
+ half-integer spin, a quantum mechanical property of matter, since the observed
+ particles in 
+\begin_inset Formula $\beta$
+\end_inset
+
+-decay did not conserve angular momentum.
+ The existence of the neutrino and validation of Pauli's predictions would
+ not be experimentally verified for another 20 years.
+ 
+\end_layout
+
+\begin_layout Standard
+The neutrino was first observed in 1953 by Clyde Cowan and Frederick Reines
+ using a nuclear reactor in South Carolina, United States of America.
+ Since then, three types or 
+\begin_inset Quotes eld
+\end_inset
+
+flavors
+\begin_inset Quotes erd
+\end_inset
+
+ of neutrinos and antineutrinos have been observed using accelerators and
+ also from unique sources like the Sun and a supernova.
+ Neutrino physics continues to be an active area of fundamental research
+ since the neutrino is a truly unique probe to subatomic processes.
+ For example they are observed to originate from the depths of the Sun's
+ core (over 
+\begin_inset Formula $10^{7}$
+\end_inset
+
+ degrees Kelvin) where fusion occurs.
+ 
+\end_layout
+
+\begin_layout Standard
+Neutrinos rarely interact with normal matter, meaning that they travel essential
+ly unimpeded towards one's particle detector.
+ The rarity of such interactions can be illustrated by the fact that over
+ a typical human lifetime, only one solar neutrino interaction with an individua
+l is expected out of the 
+\begin_inset Formula $7.0\times10^{10}\text{ neutrinos}/\text{cm}^{2}/\text{sec}$
+\end_inset
+
+ incident on the Earth
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+To give some perspective to this number, this means 70 billion neutrinos
+ are traveling every second through an area similar to one's own thumb nail.
+\begin_inset VSpace defskip
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+.
+ So this begs the question: how does one detect a neutrino? The short answer
+ is that one requires a large enough flux of neutrinos passing through a
+ large dense volume of matter just to detect a single neutrino with today's
+ technology.
+ 
+\end_layout
+
+\begin_layout Standard
+Scientists continue to be interested in neutrinos due to the unusual properties
+ they exhibit.
+ One of the more recent and surprising aspects of neutrinos is their ability
+ to undergo 
+\begin_inset Quotes eld
+\end_inset
+
+flavor oscillations
+\begin_inset Quotes erd
+\end_inset
+
+ where a neutrino of definite flavor (type) is created and later observed
+ as a different flavor.
+ The impact of differences between neutrino and antineutrino oscillations
+ could help explain the observed matter-antimatter asymmetry in the Universe
+ which one of the most profound mysteries in physics today.
+\end_layout
+
+\begin_layout Subsection
+Neutrinos in the Standard Model
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:nuSM"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The Standard Model (SM) of particle physics is the theory of elementary
+ or fundamental particle constituents and the forces between them.
+ These forces are the electromagnetic, the weak, and the strong.
+ String theory, which is not yet tested, attempts to incorporate the gravitation
+al force.
+ The SM forces and the gravitational force constitute the four 
+\shape italic
+known
+\shape default
+ fundamental forces of the Universe.
+ Each force in the SM has at least one 
+\begin_inset Quotes eld
+\end_inset
+
+force carrier
+\begin_inset Quotes erd
+\end_inset
+
+ particle that mediates the interactions between the matter particles.
+ The force carriers are formally called 
+\begin_inset Quotes eld
+\end_inset
+
+gauge bosons
+\begin_inset Quotes erd
+\end_inset
+
+, which indicates that they are particles with integer 
+\begin_inset Formula $(0,1,2,...)$
+\end_inset
+
+ spin that mediate the interaction.
+ The weak nuclear gauge bosons, the charged 
+\begin_inset Formula $W^{\pm}$
+\end_inset
+
+ and the neutral Z, couple to neutrinos as well as the other fermions, particles
+ with half-integer 
+\begin_inset Formula $\left(\frac{1}{2},\frac{3}{2},\frac{5}{2},...\right)$
+\end_inset
+
+ spin, in the SM.
+ All of the elementary particles of the SM are shown in 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "fig:TheStandardModel"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement t
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/Introduction/StandardModel.png
+	lyxscale 50
+	width 50text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+The Elementary Particles of the Standard Model of Particle Physics
+\end_layout
+
+\end_inset
+
+The Standard Model of particle physics consists of six quarks (up, down,
+ strange, charm, bottom, and top), six leptons (electron, muon, tau, electron
+ neutrino, muon neutrino, and tau neutrino), four force propagating bosons
+ (gluon, photon, W, and Z), and the Higgs boson.
+ The quarks, electron, muon, tau, W, and Z all gain mass through the Higgs
+ field.
+ The focus of this thesis are the neutrinos which are classified according
+ to their charged, more massive lepton cousins.
+ Image taken from 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Adams:2013qkq"
+literal "false"
+
+\end_inset
+
+.
+ 
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:TheStandardModel"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Neutrinos in the SM are electrically neutral, massless particles categorized
+ into three generations based on their more massive charged lepton cousins.
+ In the SM, the three neutrinos and the three antineutrinos are the only
+ neutral charge, spin 
+\begin_inset Formula $\nicefrac{1}{2}$
+\end_inset
+
+ particles that experience only weak interactions.
+ The neutrino and its associated charged cousin of the same flavor pair
+ into a 
+\begin_inset Quotes eld
+\end_inset
+
+weak isospin doublet
+\begin_inset Quotes erd
+\end_inset
+
+ in the SM.
+ These doublets are locally gauge invariant under a SU(2)
+\begin_inset Formula $\bigotimes$
+\end_inset
+
+U(1) symmetry which leads to the postulated existence of the photon, the
+ 
+\begin_inset Formula $W^{\pm}$
+\end_inset
+
+ and 
+\begin_inset Formula $Z$
+\end_inset
+
+ bosons.
+ They are necessary to enable local gauge invariance
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+A gauge theory describes ways to measure physical forces or fields through
+ interactions between elementary particles.
+ The electric or magnetic fields for example can only be probed by charged
+ particles.
+ In the realm of quantum field theories, fields are postulated to permeate
+ everywhere and it is excitations of these fields that produce experimental
+ observables.
+ Fields are constructed using the Lagrangian formalism and altered using
+ gauge transformations.
+ If altering the Lagrangian in some way does not affect the observables,
+ this is referred to as a gauge invariance.
+ Local gauge invariance means that under the constraints of the experiment,
+ certain gauge transformations do not affect the observables.
+ The allowed locally gauge invariant transformations require knowledge of
+ its underlying Lie, or symmetry, group.
+ With the weak isospin doublets, the Lie groups are SU(2)
+\begin_inset Formula $\bigotimes$
+\end_inset
+
+U(1) where SU(2) is the special unitary group of 
+\begin_inset Formula $2\times2$
+\end_inset
+
+ unitary matrices, and U(1) is the unitary (circle) group consisting of
+ complex numbers of magnitude 1.
+\begin_inset VSpace defskip
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+What follows is a brief introduction to weak interactions.
+ This is followed by a exploration on the nature of neutrino handedness.
+ Then this is followed by a discussion on neutrino scattering with matter.
+\end_layout
+
+\begin_layout Subsubsection
+Weak Interactions
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:Weak-Interactions"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The name 
+\begin_inset Quotes eld
+\end_inset
+
+weak force
+\begin_inset Quotes erd
+\end_inset
+
+ comes from the fact that this force is much weaker than the electromagnetic
+ and strong nuclear forces.
+ This is due to the weak mediating bosons, the 
+\begin_inset Formula $W^{\pm}$
+\end_inset
+
+ and 
+\begin_inset Formula $Z$
+\end_inset
+
+, being massive particles unlike the massless gluon (g) and photon (
+\begin_inset Formula $\gamma$
+\end_inset
+
+).
+ The 
+\begin_inset Formula $W^{\pm}/Z$
+\end_inset
+
+ have masses of 80/90 
+\begin_inset Formula $\text{GeV/c}^{2}$
+\end_inset
+
+, which is more massive than all the other elementary particles except for
+ the top quark.
+\end_layout
+
+\begin_layout Standard
+For weak interactions to occur at energies far below the rest mass (also
+ called 
+\begin_inset Quotes eld
+\end_inset
+
+off-shell
+\begin_inset Quotes erd
+\end_inset
+
+) of the 
+\begin_inset Formula $W^{\pm}$
+\end_inset
+
+ and 
+\begin_inset Formula $Z$
+\end_inset
+
+, the interaction time must be infinitesimally small as dictated by the
+ Heisenberg Uncertainty Principle
+\begin_inset Formula 
+\begin{equation}
+\Delta E\Delta t\gtrsim\hbar\label{eq:heisenberguncertainty}
+\end{equation}
+
+\end_inset
+
+where 
+\begin_inset Formula $\Delta E$
+\end_inset
+
+ is the energy of the particle and 
+\begin_inset Formula $\Delta t$
+\end_inset
+
+ is the time during which the particle exists.
+ As an example, consider a neutrino emitting a Z-boson as shown in 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "fig:NuCCFeynman"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+ If the energy of the neutrino is 
+\begin_inset Formula $1$
+\end_inset
+
+ GeV, the lifetime of the 
+\begin_inset Formula $Z$
+\end_inset
+
+ boson is about 
+\begin_inset Formula $10^{-25}$
+\end_inset
+
+ seconds according to 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "eq:heisenberguncertainty"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+ In general, the probability that a massive particle of mass 
+\begin_inset Formula $M$
+\end_inset
+
+ will be created from the collision of two particles is given by a relativistic
+ Breit–Wigner distribution
+\begin_inset Formula 
+\begin{equation}
+f(M)\propto\frac{1}{\left(M^{2}-M_{0}^{2}\right)^{2}c^{4}+M_{0}^{2}\Gamma^{2}},\label{eq:BreitWigner}
+\end{equation}
+
+\end_inset
+
+where 
+\begin_inset Formula $M_{0}$
+\end_inset
+
+ is the rest mass and 
+\begin_inset Formula $\Gamma$
+\end_inset
+
+ is the decay width of the particle.
+ For 
+\begin_inset Formula $M\ll M_{0}$
+\end_inset
+
+, the probability of creating that particle will be infinitesimally small.
+ Therefore to observe a single weak interaction requires a large number
+ of weakly interacting particles incident on a target.
+\end_layout
+
+\begin_layout Standard
+Weak interactions are classified into two classes: charged current (CC)
+ and neutral current (NC).
+ The CC interaction involves a charged W boson and changes the incident
+ neutrino into an electrically charged lepton of flavor 
+\begin_inset Formula $l$
+\end_inset
+
+ as shown 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "fig:NuCCFeynman"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+ It is through the CC interaction where the flavor of the neutrino is inferred
+ from the charged lepton.
+ For instance, an electron type neutrino, 
+\begin_inset Formula $\nue$
+\end_inset
+
+, is inferred to have interacted with matter if an electron is observed.
+ The same is not true for NC interactions, since those interactions are
+ flavor agnostic.
+ The NC interaction involves a neutral Z boson and does not change the neutrino'
+s flavor as shown in 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "fig:NCFeynman"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Float figure
+placement t
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/Introduction/CCnueJaxoDraw.png
+	lyxscale 50
+	height 2.8556in
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:NuCCFeynman"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float figure
+placement t
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/Introduction/NCScatteringJaxoDraw.png
+	lyxscale 50
+	height 2.8556in
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:NCFeynman"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+The CC and NC 
+\begin_inset Formula $\nu_{e}e^{-}\rightarrow\nu_{e}e^{-}$
+\end_inset
+
+ interaction
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+The CC and NC 
+\begin_inset Formula $\nu_{e}e^{-}\rightarrow\nu_{e}e^{-}$
+\end_inset
+
+ Interaction
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Chirality: How Neutrinos are Left Handed
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:Chirality"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Neutrinos are observed to have their spin direction vectors 
+\begin_inset Formula $\boldsymbol{\sigma}$
+\end_inset
+
+ opposite to their momentum 
+\begin_inset Formula $\boldsymbol{P}$
+\end_inset
+
+ and this is reversed for antineutrinos.
+ This property is called helicity and is given by
+\begin_inset Formula 
+\begin{equation}
+\mathcal{H}=\frac{\boldsymbol{\sigma}\cdot\boldsymbol{P}}{\left|\boldsymbol{P}\right|}.\label{eq:helicityoperator}
+\end{equation}
+
+\end_inset
+
+Although neutrino detection is difficult, the neutrino helicity is readily
+ inferred from the daughter muon's helicity in pion decay, 
+\begin_inset Formula $\pion^{+}\rightarrow\mu^{+}\numu$
+\end_inset
+
+.
+ The 
+\begin_inset Formula $\muplus$
+\end_inset
+
+ has negative helicity (
+\begin_inset Formula $\mathcal{H}=-1$
+\end_inset
+
+) and to conserve spin, the neutrino's helicity must also be negative as
+ shown in 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "fig:DecayOfPion"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+ The antineutrino's helicity is positive (+1) as shown in 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "fig:DecayOfPion"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ through use of the charge (C) conjugation and parity (P) transformations.
+ A C conjugation is a linear transformation that transforms all particles
+ into their corresponding antiparticles while the P transformation inverts
+ all spatial coordinates.
+ Thus neutrinos are referred to as 
+\shape italic
+left-handed
+\shape default
+ (LH) particles while antineutrinos are referred to as 
+\shape italic
+right-handed
+\shape default
+ (RH) particles.
+ It turns out that helicity is a useful quantum number to describe neutrinos
+ and coincides with a property called chirality.
+ To understand chirality and its relationship to helicity requires an analysis
+ of the Dirac Lagrangian and Dirac equation.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement t
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/Introduction/ChiralityPionDecay.png
+	lyxscale 50
+	width 50text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+Helicity of the Neutrino
+\end_layout
+
+\end_inset
+
+The helicity of the neutrino as inferred from pion decay.
+ Since a pion at rest has zero (0) angular momentum, the system of daughter
+ particles must have also net zero angular momentum.
+ By measuring the muon's helicity, the helicity of neutrino is inferred.
+ A neutrino (antineutrino) is a left-handed (right-handed) helicity particle
+ since its spin is anti-parallel (parallel) to its momentum.
+ 
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:DecayOfPion"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The Dirac Lagrangian for a free particle field 
+\begin_inset Formula $\psi\left(x\right)$
+\end_inset
+
+ with half-integer spin can be written as
+\begin_inset Formula 
+\begin{equation}
+\mathcal{L}=\overline{\psi}\left(x\right)\left[\frac{i\hbar}{2}\sum_{\mu=0}^{3}\gamma^{\mu}\left(\overrightarrow{\partial_{\mu}}-\overleftarrow{\partial_{\mu}}\right)-mc\right]\psi\left(x\right),\label{eq:diraclagrangian}
+\end{equation}
+
+\end_inset
+
+where 
+\begin_inset Formula $\psi\left(x\right)$
+\end_inset
+
+ is a four-component vector (spinor) describing a particle field and 
+\begin_inset Formula $\gamma^{\mu}$
+\end_inset
+
+ are a set of four 4x4 matrices.
+ The adjoint field 
+\begin_inset Formula $\overline{\psi}\left(x\right)$
+\end_inset
+
+ is defined as 
+\begin_inset Formula 
+\begin{equation}
+\overline{\psi}\left(x\right)\equiv\psi^{\dagger}\left(x\right)\gamma^{0},\label{eq:adjointfield}
+\end{equation}
+
+\end_inset
+
+where 
+\begin_inset Formula $\dagger$
+\end_inset
+
+ denotes the conjugate and transpose operations.
+ The 
+\begin_inset Formula $\overrightarrow{\partial_{\mu}}$
+\end_inset
+
+ operator is a four-vector defined as
+\begin_inset Formula 
+\begin{equation}
+\partial_{0}=\frac{1}{c}\partderiv t,\partial_{1}=\partderiv x,\partial_{2}=\partderiv y,\partial_{3}=\partderiv z,\label{eq:fourderivative}
+\end{equation}
+
+\end_inset
+
+that acts only to the right while 
+\begin_inset Formula $\overleftarrow{\partial_{\mu}}$
+\end_inset
+
+ only acts to the left (i.e.
+ 
+\begin_inset Formula $\overline{\psi}\overleftarrow{\partial_{\mu}}=\partial_{\mu}\overline{\psi}$
+\end_inset
+
+).
+ The 
+\begin_inset Formula $\gamma^{\mu}$
+\end_inset
+
+ matrices are not unique and different representations are more appropriate
+ for different kinematic regimes.
+ The field equations are extracted from the Lagrangian using the Euler-Lagrange
+ procedure.
+ In general for a set of 
+\begin_inset Formula $M$
+\end_inset
+
+ fields, the field equations are given by
+\begin_inset Formula 
+\begin{equation}
+\partial_{\mu}\frac{\partial\mathcal{L}}{\partial\left(\partial_{\mu}\psi_{r}\right)}-\frac{\partial\mathcal{L}}{\partial\psi_{r}}=0\quad\left(r=0,1,2,\ldots,M-1,M\right).\label{eq:eulerlagrangegeneral}
+\end{equation}
+
+\end_inset
+
+ For the Dirac Lagrangian, the field equation for 
+\begin_inset Formula $\psi$
+\end_inset
+
+ is given by
+\begin_inset Formula 
+\begin{equation}
+\partial_{\mu}\frac{\partial\mathcal{L}}{\partial\left(\partial_{\mu}\overline{\psi}\right)}-\frac{\partial\mathcal{L}}{\partial\overline{\psi}}=0,\label{eq:diracELequation}
+\end{equation}
+
+\end_inset
+
+which yields the Dirac equation
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\left[i\hbar\sum_{\mu=0}^{3}\gamma^{\mu}\partial_{\mu}-mc\right]\psi\left(x\right)=0.\label{eq:diraceqn}
+\end{equation}
+
+\end_inset
+
+The representation of the 
+\begin_inset Formula $\gamma^{\mu}$
+\end_inset
+
+ matrices that is useful to describe neutrinos is the 
+\shape italic
+Chiral representation
+\shape default
+ (also called the 
+\shape italic
+Weyl representation
+\shape default
+) where
+\begin_inset Formula 
+\begin{equation}
+\gamma^{0}=\begin{bmatrix}0 & I_{2}\\
+I_{2} & 0
+\end{bmatrix},\gamma^{1}=\begin{bmatrix}0 & \sigma_{x}\\
+-\sigma_{x} & 0
+\end{bmatrix},\gamma^{2}=\begin{bmatrix}0 & \sigma_{y}\\
+-\sigma_{y} & 0
+\end{bmatrix},\gamma^{3}=\begin{bmatrix}0 & \sigma_{z}\\
+-\sigma_{z} & 0
+\end{bmatrix},\label{eq:gammamatrices}
+\end{equation}
+
+\end_inset
+
+
+\begin_inset Formula $I_{2}$
+\end_inset
+
+ is the 
+\begin_inset Formula $2\times2$
+\end_inset
+
+ identity matrix, 
+\begin_inset Formula $\sigma_{x,y,z}$
+\end_inset
+
+ are the Pauli Spin matrices given by
+\begin_inset Formula 
+\[
+\sigma_{x}=\sigma_{1}=\begin{pmatrix}0 & 1\\
+1 & 0
+\end{pmatrix},\quad\sigma_{y}=\sigma_{2}=\begin{pmatrix}0 & -i\\
+i & 0
+\end{pmatrix},\quad\sigma_{z}=\sigma_{3}=\begin{pmatrix}1 & 0\\
+0 & -1
+\end{pmatrix}.
+\]
+
+\end_inset
+
+Using the Chiral representation, the chirality matrix, 
+\begin_inset Formula $\gamma^{5}$
+\end_inset
+
+ (the fifth gamma matrix), is defined as
+\begin_inset Formula 
+\begin{equation}
+\gamma^{5}=i\gamma^{0}\gamma^{1}\gamma^{2}\gamma^{3}=\begin{bmatrix}-I_{2} & 0\\
+0 & I_{2}
+\end{bmatrix},\label{eq:gammafivedef}
+\end{equation}
+
+\end_inset
+
+which is diagonal as well as Hermitian, meaning that its eigenvalues are
+ real and observable.
+ Let the eigenfunctions of the chirality matrix be denoted with subscripts
+ 
+\begin_inset Formula $P$
+\end_inset
+
+ and 
+\begin_inset Formula $M$
+\end_inset
+
+ such that the eigenvalue equations are
+\begin_inset Formula 
+\begin{equation}
+\begin{aligned}\gamma^{5}\psi_{P} & =+1\psi_{P},\\
+\gamma^{5}\psi_{M} & =-1\psi_{M}.
+\end{aligned}
+\label{eq:chiraloperatoreigenvalueequation}
+\end{equation}
+
+\end_inset
+
+The field equation solutions to 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "eq:diraceqn"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ can be decomposed into 
+\begin_inset Formula $\psi_{P}$
+\end_inset
+
+ and 
+\begin_inset Formula $\psi_{M}$
+\end_inset
+
+ projections using two chiral projection operators 
+\begin_inset Formula $\hat{O}_{P,M}$
+\end_inset
+
+ where
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\begin_inset Formula 
+\begin{equation}
+\psi=\left(\hat{O}_{P}+\hat{O}_{M}\right)\psi=\psi_{P}+\psi_{M}.\label{eq:chiralprojections}
+\end{equation}
+
+\end_inset
+
+The chiral operators are explicitly given by
+\begin_inset Formula 
+\begin{equation}
+\begin{aligned}\hat{O}_{M} & =\frac{1}{2}\left(I_{4}-\gamma^{5}\right)=\begin{pmatrix}0 & 0\\
+0 & I_{2}
+\end{pmatrix},\\
+\hat{O}_{P} & =\frac{1}{2}\left(I_{4}+\gamma^{5}\right)=\begin{pmatrix}I_{2} & 0\\
+0 & 0
+\end{pmatrix},
+\end{aligned}
+\label{eq:chiraloperators}
+\end{equation}
+
+\end_inset
+
+where 
+\begin_inset Formula $I_{4}$
+\end_inset
+
+ is the 
+\begin_inset Formula $4\times4$
+\end_inset
+
+ identity matrix.
+ Taken together 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "eq:chiralprojections"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ and 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "eq:chiraloperators"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ indicate the free neutrino field is a vector 
+\begin_inset Formula $\psi$
+\end_inset
+
+ minus axial vector 
+\begin_inset Formula $\gamma^{5}\psi$
+\end_inset
+
+, also referred to as V-A, under P transformations.
+ This feature is what allows for the weak force to violate P-symmetry and
+ CP-symmetry.
+ Referring back to 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "eq:diraclagrangian"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ and 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "eq:eulerlagrangegeneral"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, the Dirac equation becomes a set of coupled equations
+\begin_inset Formula 
+\begin{equation}
+\begin{aligned}i\hbar\sum_{\mu=0}^{3}\gamma^{\mu}\partial_{\mu}\psi_{P} & =mc\psi_{M}\\
+i\hbar\sum_{\mu=0}^{3}\gamma^{\mu}\partial_{\mu}\psi_{M} & =mc\psi_{P},
+\end{aligned}
+\label{eq:diraceqnchiral}
+\end{equation}
+
+\end_inset
+
+where dynamics are set by the mass.
+\end_layout
+
+\begin_layout Standard
+Since the chiral projection operators are decompositions of the identity
+ matrix, the simplest nontrivial solution to 
+\begin_inset Formula $\psi$
+\end_inset
+
+ is
+\begin_inset Formula 
+\begin{equation}
+\psi=\begin{pmatrix}\chi_{P}\\
+\chi_{M}
+\end{pmatrix}\label{eq:diracchiralspinorsgeneral}
+\end{equation}
+
+\end_inset
+
+where 
+\begin_inset Formula $\chi$
+\end_inset
+
+ represents two-component spinors.
+ Using 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:diracchiralspinorsgeneral"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ the Dirac equation in 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "eq:diraceqnchiral"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ can again be rewritten as
+\begin_inset Formula 
+\begin{equation}
+\begin{aligned}i\hbar\left[\frac{1}{c}\partderiv t+\boldsymbol{\sigma}\cdot\boldsymbol{\nabla}\right]\chi_{P} & =-mc\chi_{M}\\
+i\hbar\left[\frac{1}{c}\partderiv t-\boldsymbol{\sigma}\cdot\boldsymbol{\nabla}\right]\chi_{M} & =-mc\chi_{P},
+\end{aligned}
+\label{eq:diraceqnchiralspinors}
+\end{equation}
+
+\end_inset
+
+where
+\begin_inset Formula 
+\begin{equation}
+\boldsymbol{\sigma}\cdot\boldsymbol{\nabla}=\sigma_{x}\partderiv x+\sigma_{y}\partderiv y+\sigma_{z}\partderiv z.\label{eq:matrixdotproduct}
+\end{equation}
+
+\end_inset
+
+In the limiting case of vanishing mass 
+\begin_inset Formula $\left(m\rightarrow0\right)$
+\end_inset
+
+, as is in the SM, the free particle field equations in 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "eq:diraceqnchiralspinors"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ decouple into
+\begin_inset Formula 
+\begin{equation}
+\begin{aligned}\left(\frac{E}{c}+\boldsymbol{\sigma}\cdot\boldsymbol{P}\right)\chi_{P} & =0,\\
+\left(\frac{E}{c}-\boldsymbol{\sigma}\cdot\boldsymbol{P}\right)\chi_{M} & =0,
+\end{aligned}
+\label{eq:diraceqnchiralmassless}
+\end{equation}
+
+\end_inset
+
+where the differential operators have been evaluated as the particle's energy
+ 
+\begin_inset Formula $E$
+\end_inset
+
+ and momentum three-vector 
+\begin_inset Formula $\boldsymbol{P}$
+\end_inset
+
+.
+ For massless neutrinos, 
+\begin_inset Formula $\chi_{P}$
+\end_inset
+
+ and hence 
+\begin_inset Formula $\psi_{P}$
+\end_inset
+
+, describe particles of negative energy 
+\begin_inset Formula $E=-\left|\boldsymbol{P}\right|c$
+\end_inset
+
+ which in the context of quantum field theory are interpreted as antiparticles
+ traveling backwards in time.
+ Conversely, 
+\begin_inset Formula $\psi_{M}$
+\end_inset
+
+ have positive energy 
+\begin_inset Formula $E=\left|\boldsymbol{P}\right|c$
+\end_inset
+
+ and which means they are particles traveling forward in time.
+\end_layout
+
+\begin_layout Standard
+If one also multiplies 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "eq:diraceqnchiral"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ by 
+\begin_inset Formula $\gamma^{5}\gamma^{0}$
+\end_inset
+
+ and uses the fact that the spin operator 
+\begin_inset Formula $\boldsymbol{\boldsymbol{\sigma}}$
+\end_inset
+
+ is given by
+\begin_inset Formula 
+\begin{equation}
+\boldsymbol{\sigma}=i\left(\gamma^{2}\gamma^{3},\gamma^{3}\gamma^{1},\gamma^{1}\gamma^{2}\right)=\gamma^{0}\gamma^{k}\gamma^{5}\quad\left(k=1,2,3\right),\label{eq:spinoperatorgammamatrices}
+\end{equation}
+
+\end_inset
+
+each decoupled equation becomes
+\begin_inset Formula 
+\begin{equation}
+\frac{\boldsymbol{\sigma}\cdot\boldsymbol{P}}{\left|\boldsymbol{P}\right|}\psi_{P,M}=\gamma^{5}\psi_{P,M}=\pm\psi_{P,M},\label{eq:chiralhelicityrelationship}
+\end{equation}
+
+\end_inset
+
+where one recognizes that the helicity and chiral states are the same for
+ 
+\begin_inset Formula $m\rightarrow0$
+\end_inset
+
+ only.
+ Thus the labels 
+\begin_inset Formula $M$
+\end_inset
+
+ and 
+\begin_inset Formula $P$
+\end_inset
+
+ actually are identical to the LH and RH helicity labels, respectively.
+ Using the results above, a neutrino is always observed as a LH particle
+ while the antineutrino is always observed as a RH antiparticle.
+\end_layout
+
+\begin_layout Standard
+The observation of only LH neutrinos and RH antineutrinos is an important
+ feature in the SM.
+ However, since neutrinos are known to have mass and given that neutrinos
+ oscillate, it is theoretically possible to observe a RH neutrino and a
+ LH antineutrino.
+ That would require boosting to a highly relativistic reference frame with
+ respect to the laboratory.
+\end_layout
+
+\begin_layout Subsubsection
+Neutrino Scattering with Matter
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:Neutrino-Scattering-with-Matter"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Charged current (CC) neutrino interactions on nuclear particles are the
+ interactions investigated in this thesis.
+ These interactions produce an outgoing charged lepton and a variety of
+ hadronic states.
+ While interactions with valence electrons are possible, they are far less
+ common in large, subatomic particle detectors.
+ However, the physics of neutrino-electron scattering is very similar to
+ neutrino-nucleus scattering.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/Introduction/NueEScattering.png
+	width 50text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+A schematic of 
+\begin_inset Formula $\theta$
+\end_inset
+
+ in 
+\begin_inset Formula $\nue e^{-}$
+\end_inset
+
+ scattering.
+ The same diagram is used to describe 
+\begin_inset Formula $\antinue+e^{-}$
+\end_inset
+
+ scattering with 
+\begin_inset Formula $\nue\rightarrow\antinue$
+\end_inset
+
+.
+ 
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:NuEElectronScattering"
+
+\end_inset
+
+
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+A Schematic of 
+\begin_inset Formula $\theta$
+\end_inset
+
+ in 
+\begin_inset Formula $\nue e^{-}$
+\end_inset
+
+ Scattering
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Consider neutrino-electron scattering, the cross section for 
+\begin_inset Formula $\nu_{e}e^{-}$
+\end_inset
+
+ is given by
+\begin_inset Formula 
+\begin{equation}
+\frac{d\sigma}{d\Omega}=\left(\frac{G_{F}\hbar c}{2\pi}\right)^{2}s,\label{eq:NuEScattering}
+\end{equation}
+
+\end_inset
+
+where 
+\begin_inset Formula $G_{F}$
+\end_inset
+
+ is the Fermi constant and 
+\begin_inset Formula $s$
+\end_inset
+
+ is the center of mass energy squared.
+ Due to the V-A nature of the weak force, neutrinos couple to LH particles
+ and to RH antiparticles.
+ The outgoing particles are isotropically distributed in the center-of-mass
+ frame since the initial and final spin state of the system is 
+\begin_inset Formula $J=0$
+\end_inset
+
+.
+ Compare 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:NuEScattering"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ with the cross section for 
+\begin_inset Formula $\antinue e^{-}$
+\end_inset
+
+ 
+\begin_inset Formula 
+\begin{equation}
+\frac{d\sigma}{d\Omega}=\left(\frac{G_{F}\hbar c}{4\pi}\right)^{2}\left(1-\cos\theta\right)^{2}s,\label{eq:ANuEScattering}
+\end{equation}
+
+\end_inset
+
+where 
+\begin_inset Formula $\theta$
+\end_inset
+
+ is the observed scattering angle of the electron as shown in 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "fig:NuEElectronScattering"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+ Since the total spin of the 
+\begin_inset Formula $\antinue e^{-}$
+\end_inset
+
+ system is 
+\begin_inset Formula $J=1$
+\end_inset
+
+ with z-projection 
+\begin_inset Formula $J_{z}=1$
+\end_inset
+
+, the antineutrino is preferentially forward scattered.
+ Integrating over all angles, the cross sections are related to each other
+ by
+\begin_inset Formula 
+\[
+\sigma\left(\antinue e^{-}\right)=\frac{1}{3}\sigma\left(\nue e^{-}\right).
+\]
+
+\end_inset
+
+The factor 
+\begin_inset Formula $\nicefrac{1}{3}$
+\end_inset
+
+ arises from the fact that angular momentum conservation forbids the 
+\begin_inset Formula $J_{z}=-1$
+\end_inset
+
+ and 
+\begin_inset Formula $0$
+\end_inset
+
+ states for 
+\begin_inset Formula $\antinue e^{-}$
+\end_inset
+
+ scattering.
+ The same 
+\begin_inset Formula $\nicefrac{1}{3}$
+\end_inset
+
+ factor arises between 
+\begin_inset Formula $\numu d\rightarrow\muminus u$
+\end_inset
+
+ and 
+\begin_inset Formula $\numubar u\rightarrow\muplus d$
+\end_inset
+
+ scattering.
+\end_layout
+
+\begin_layout Standard
+In neutrino-nuclear scattering, the simple picture of free quarks must be
+ replaced with the reality of the nuclear medium.
+ Interactions with a single quark are still possible, but nuclear effects
+ can alter the products of the interactions.
+ The kinematics of the particles involved can be altered as well depending
+ on the initial state of the nucleus.
+ Distinctions must be made in neutrino physics between observables from
+ primary interactions like 
+\begin_inset Formula $\nue+e^{-}$
+\end_inset
+
+ and nuclear 
+\begin_inset Quotes eld
+\end_inset
+
+final state interactions
+\begin_inset Quotes erd
+\end_inset
+
+ (FSI).
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/Introduction/NumuScatteringOndQuark.png
+	lyxscale 50
+	width 75text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+A 
+\begin_inset Formula $\numu$
+\end_inset
+
+-induced CCQE interaction.
+ 
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+A 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+numutitle{}
+\end_layout
+
+\end_inset
+
+-Induced CCQE Interaction
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:NuMuCCQE"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+There are three neutrino-nuclear scattering classes presented in this thesis:
+ quasi-elastic (CCQE), deep inelastic scattering (CC-DIS), and single pion
+ production (CC-
+\begin_inset Formula $1\pion$
+\end_inset
+
+).
+ The 
+\begin_inset Formula $\nu$
+\end_inset
+
+ CCQE interaction refers to the process where an incoming neutrino and neutron
+ (udd) scatter to produce a charged lepton and proton (uud) as shown in
+ 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "fig:NuMuCCQE"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+ For 
+\begin_inset Formula $\overline{\nu}$
+\end_inset
+
+ CCQE, the proton is converted to a neutron instead.
+ The CCQE interaction is the lowest energy CC interaction with a nucleon
+ and has approximate mass conservation between the proton-neutron states
+ (
+\begin_inset Formula $\Delta m=1.29$
+\end_inset
+
+ MeV/
+\begin_inset Formula $c^{2}$
+\end_inset
+
+).
+ The CC-DIS interaction is a high energy transfer process that shatters
+ the nucleus apart.
+ Finally, CC-
+\begin_inset Formula $1\pion$
+\end_inset
+
+ interactions refer to processes where a post-FSI charged pion is experimentally
+ observed presumably from the decay of resonance state like the 
+\begin_inset Formula $\Delta(1232)$
+\end_inset
+
+ baryon.
+ These interactions are not well understood currently since they occur in
+ the transition between CCQE and CC-DIS interaction modes.
+\end_layout
+
+\begin_layout Subsection
+Neutrino Oscillations
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:Neutrino-Oscillations"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Neutrino oscillations is the physical process of a neutrino produced with
+ a particular, definite flavor is later observed as a different flavor.
+ This phenomenon was first observed as a deficit of neutrinos for a number
+ of atmospheric and solar neutrino experiments.
+ The deficit also seemed more pronounced for atmospheric neutrinos as the
+ distance from their source increased.
+ For neutrino oscillations to occur, at most one neutrino can be massless.
+ This observation firmly established that the SM is incorrect with its assumptio
+n of massless neutrinos.
+\end_layout
+
+\begin_layout Standard
+The first indication of neutrino oscillations was from the Ray Davis Homestake
+ Mine experiment 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "1998ApJ...496..505C"
+literal "false"
+
+\end_inset
+
+ which began operation in the 1960s.
+ Ray Davis was an expert chemist and designed a radiochemical experiment
+ to measure the flux of neutrinos from the sun.
+ The purpose of this experiment was to test John Bahcall's prediction of
+ the fusion rate in the Sun and neutrino flux from it as well.
+ Davis' experiment would need to operate for many years to collect enough
+ statistics due to the expected low capture rate.
+ Measurements continued into the 1980s and showed that the flux of neutrinos
+ was about one-third the expected rate and this became known as the 
+\begin_inset Quotes eld
+\end_inset
+
+Solar Neutrino Problem.
+\begin_inset Quotes erd
+\end_inset
+
+ The primary explanations were either that the solar model was incorrect
+ or the neutrino capture cross section was incorrect.
+ The Sudbury Neutrino Observatory (SNO) was able to resolve this problem
+ by making a model-independent measurement of the solar neutrino flux.
+ The SNO experiment observed a 
+\begin_inset Formula $\nue$
+\end_inset
+
+ CC-to-NC ratio of 
+\begin_inset Formula $0.301\pm0.033$
+\end_inset
+
+, which confirmed that only about 30% of neutrinos arrive as 
+\begin_inset Formula $\nue$
+\end_inset
+
+ flavors on Earth.
+ In other words, the majority of neutrinos arrive as the wrong flavor
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Zuber2012"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Another outstanding problem emerged with measurements of atmospheric neutrinos,
+ which are the muon and electron types.
+ Atmospheric neutrinos are produced when high energy cosmic rays strike
+ atmospheric particles.
+ These cosmic ray collisions generate mostly pions and kaons that decay
+ into neutrinos.
+ When trying to measure the 
+\begin_inset Formula $\numu/\nue$
+\end_inset
+
+ ratio, there was another significant deficit.
+ This was particularly apparent for the Super-Kamiokande (SK) experiment,
+ which is a 50 kt tank of pure water lined with thousands of photomultiplier
+ tubes designed to observe solar and atmospheric neutrinos.
+ It was the first experiment to perform a neutrino oscillation analysis
+ that successfully and definitely explained the deficit.
+\end_layout
+
+\begin_layout Standard
+The observation of neutrino oscillations is a relatively new discovery.
+ Bruno Pontecorvo 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Pontecorvo:1957cp"
+literal "false"
+
+\end_inset
+
+ first proposed such a mechanism in 1957 between neutrinos and antineutrinos
+ much like known neutral K-mesons oscillations.
+ However, oscillations between flavored neutrinos was not expected since
+ it requires the neutrino to have mass.
+ The reasons why are explained in the next subsection.
+\end_layout
+
+\begin_layout Subsubsection
+Two Flavor Derivation of Neutrino Oscillations
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:Two-Flavor-Derivation"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The phenomenon of neutrino oscillations can be described with elementary,
+ non-relativistic quantum mechanics using the Schrödinger Equation
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\begin{aligned}-\frac{\hbar}{i}\frac{d}{dt}\diracket{\nu(\mathbf{r},t)} & =\hat{H}\diracket{\nu(\mathbf{r},t)},\end{aligned}
+\label{eq:schroeqn}
+\end{equation}
+
+\end_inset
+
+where 
+\begin_inset Formula $\hat{H}$
+\end_inset
+
+ is the Hamiltonian for the physical system.
+ Here we consider massive neutrinos of mass 
+\begin_inset Formula $m_{j}$
+\end_inset
+
+ in its rest frame (free particle).
+ The Hamiltonian is diagonal in this case, which acting on 
+\begin_inset Formula $\diracket{\nu_{j}}$
+\end_inset
+
+ results in the eigenvalue equation
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\hat{H}\diracket{\nu_{j}(\mathbf{r},t)}=E_{j}\diracket{\nu_{j}(\mathbf{r},t)},\label{eq:schroeqntimeindep}
+\end{equation}
+
+\end_inset
+
+where 
+\begin_inset Formula $E_{j}$
+\end_inset
+
+ is the energy of the neutrino 
+\begin_inset Formula $\diracket{\nu_{j}}$
+\end_inset
+
+.
+ Substituting 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "eq:schroeqntimeindep"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ into 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "eq:schroeqn"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ and solving for 
+\begin_inset Formula $\diracket{\nu(\mathbf{r},t)}$
+\end_inset
+
+, one obtains
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\diracket{\nu_{j}(\mathbf{r},t)}=e^{-iE_{j}t/\hbar}\diracket{\nu_{j}(\mathbf{r},t=0)},\label{eq:schroeqnsolution}
+\end{equation}
+
+\end_inset
+
+where 
+\begin_inset Formula $\diracket{\nu_{j}(\mathbf{r},t=0)}$
+\end_inset
+
+ is created with momentum 
+\begin_inset Formula $\mathbf{p}$
+\end_inset
+
+ at the origin 
+\begin_inset Formula $\mathbf{r}=0$
+\end_inset
+
+.
+ The time-independent solution to 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "eq:schroeqn"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ is a plane-wave given by
+\begin_inset Formula 
+\begin{equation}
+\diracket{\nu_{j}(\mathbf{r},t=0)}=e^{i\mathbf{p}\cdot\mathbf{r}/\hbar}\diracket{\nu_{j}}.\label{eq:schroeqnsolutiontimeindep}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Before being able to describe neutrino oscillations, the basis states must
+ be defined.
+ For this example, consider that there are only two eigenstates, labeled
+ 
+\begin_inset Formula $\nu_{1}$
+\end_inset
+
+ and 
+\begin_inset Formula $\nu_{2}$
+\end_inset
+
+, in the 
+\begin_inset Quotes eld
+\end_inset
+
+mass
+\begin_inset Quotes erd
+\end_inset
+
+ basis with definite mass 
+\begin_inset Formula $m_{1}$
+\end_inset
+
+ and 
+\begin_inset Formula $m_{2}$
+\end_inset
+
+, respectively.
+ However, experiments can produce neutrinos, as well as probe them, only
+ in a definite flavor state, denoted by a Greek letter subscript.
+ Let the generated neutrino, which is a linear superposition of mass states
+ 1 and 2, have momentum 
+\begin_inset Formula $\mathbf{p}$
+\end_inset
+
+ and flavor 
+\begin_inset Formula $\alpha$
+\end_inset
+
+.
+ Since both mass eigenstates share the same momentum 
+\begin_inset Formula $\mathbf{p}$
+\end_inset
+
+ (but not energy!), the exponential term in 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "eq:schroeqnsolutiontimeindep"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ is an overall phase that will cancel out later.
+ One can postulate a linear transformation, 
+\begin_inset Formula $U$
+\end_inset
+
+, between the basis states given by
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\begin{bmatrix}\nu_{\alpha}\\
+\nu_{\beta}
+\end{bmatrix}=\begin{bmatrix}U_{11} & U_{12}\\
+U_{21} & U_{22}
+\end{bmatrix}\begin{bmatrix}\nu_{1}\\
+\nu_{2}
+\end{bmatrix}\label{eq:pmnstwodimgen}
+\end{equation}
+
+\end_inset
+
+This linear transformation must be a unitary matrix 
+\begin_inset Formula $\left(U^{-1}=U^{\dagger},\dagger=\text{transpose conjugate}\right)$
+\end_inset
+
+ since the states 
+\begin_inset Formula $\nu_{1,2}$
+\end_inset
+
+ constitute a complete orthonormal basis in the mass basis.
+ With this unitary property, 
+\begin_inset Formula $U$
+\end_inset
+
+ can be written as a rotation matrix
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\begin{bmatrix}\nu_{\alpha}\\
+\nu_{\beta}
+\end{bmatrix}=\begin{bmatrix}\begin{array}{rc}
+\cos(\theta) & \sin(\theta)\\
+-\sin(\theta) & \cos(\theta)
+\end{array}\end{bmatrix}\begin{bmatrix}\nu_{1}\\
+\nu_{2}
+\end{bmatrix},\label{eq:pmnstwodimangle}
+\end{equation}
+
+\end_inset
+
+where 
+\begin_inset Formula $\theta$
+\end_inset
+
+ is the angle between the two bases.
+ One can imagine this transformation between bases as shown in 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "fig:twoflavorrotation"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+ The probability of creating a neutrino of flavor 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ and later observing it as flavor 
+\begin_inset Formula $\beta\neq\alpha$
+\end_inset
+
+ at time 
+\begin_inset Formula $t=T>0$
+\end_inset
+
+ is given by
+\end_layout
+
+\begin_layout Standard
+\align left
+\begin_inset Formula 
+\begin{equation}
+\begin{aligned}\mathcal{P}\left(\nu_{\alpha}\rightarrow\nu_{\beta}\right) & =\left|\braket{\nu_{\alpha}(t=0)|\nu_{\beta}(t=T)}\right|^{2}\\
+ & =\left|\left\{ \cos(\theta)\diracbra{\nu_{1}(t=0)}+\sin(\theta)\diracbra{\nu_{2}(t=0)}\right\} \right.\\
+ & \times\left.\left\{ -\sin(\theta)\diracket{\nu_{1}(t=T)}+\cos(\theta)\diracket{\nu_{2}(t=T)}\right\} \right|^{2}.
+\end{aligned}
+\label{eq:prob2flavorexpanded}
+\end{equation}
+
+\end_inset
+
+Evaluating all inner products and simplifying terms in 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "eq:prob2flavorexpanded"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ results in the following equation
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\mathcal{P}\left(\nu_{\alpha}\rightarrow\nu_{\beta}\right)=\sin^{2}(2\theta)\sin^{2}\left(\frac{E_{1}-E_{2}}{2\hbar}T\right).\label{eq:prob2flavorsimplified}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/Introduction/RotationMatrix.png
+	lyxscale 50
+	height 20theight%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Illustration of a mixing matrix in two dimension.
+ 
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+Illustration of a Mixing Matrix in Two Dimensions
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:twoflavorrotation"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The terminology of 
+\begin_inset Quotes eld
+\end_inset
+
+neutrino oscillations
+\begin_inset Quotes erd
+\end_inset
+
+ should be more apparent now since 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "eq:prob2flavorsimplified"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ demonstrates that the probability changes sinusoidally as a function of
+ time 
+\begin_inset Formula $T$
+\end_inset
+
+.
+ This equation is not, however, terribly useful in the laboratory frame
+ since it is hard to design an experiment where the travel time an individual
+ neutrino is actually measured.
+ Since neutrinos are nearly massless, they travel very close to the speed
+ of light.
+ Therefore time 
+\begin_inset Formula $T$
+\end_inset
+
+ is replaced with 
+\begin_inset Formula $L/c$
+\end_inset
+
+ where 
+\begin_inset Formula $L$
+\end_inset
+
+ is the distance between the neutrino origin and detection.
+ One can also approximate the energy of the mass eigenstate as 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\begin{aligned}E_{j} & =\left(m_{j}^{2}c^{4}+p_{j}^{2}c^{2}\right)^{\frac{1}{2}}=p_{j}c\left(1+\frac{m_{j}^{2}c^{2}}{p_{j}^{2}}\right)^{\frac{1}{2}}\\
+ & \approx p_{j}c\left(1+\frac{m_{j}^{2}c^{2}}{2p_{j}^{2}}+\mathcal{O}\left(\frac{m_{j}c}{p_{j}}\right)^{4}\right)\\
+ & \approx E_{\nu}+\frac{m_{j}^{2}c^{4}}{2E_{\nu}},
+\end{aligned}
+\label{eq:enuapprox}
+\end{equation}
+
+\end_inset
+
+where for oscillation experiments 
+\begin_inset Formula $p_{j}\gg m_{j}c$
+\end_inset
+
+ and 
+\begin_inset Formula $p_{j}c\approx E_{\nu}$
+\end_inset
+
+ where 
+\begin_inset Formula $E_{\nu}$
+\end_inset
+
+ is the neutrino energy as measured in the laboratory.
+ Substituting these assumptions in 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "eq:prob2flavorsimplified"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, the oscillation probability is given by
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\begin{aligned}\mathcal{\mathcal{P}}\left(\nu_{\alpha}\rightarrow\nu_{\beta}\right) & =\sin^{2}(2\theta)\sin^{2}\left(\frac{\Delta m^{2}c^{3}}{4\hbar}\frac{L}{E_{\nu}}\right),\end{aligned}
+\label{eq:prob2flavorapprox}
+\end{equation}
+
+\end_inset
+
+where 
+\begin_inset Formula $\Delta m^{2}=m_{2}^{2}-m_{1}^{2}$
+\end_inset
+
+ is the mass-squared difference between the mass states.
+\end_layout
+
+\begin_layout Standard
+For a moment consider evaluating all the physical constants in natural units
+ (
+\begin_inset Formula $c=\hbar=1)$
+\end_inset
+
+, the 
+\begin_inset Formula $\Delta m^{2}$
+\end_inset
+
+ in 
+\begin_inset Formula $\text{eV}{}^{2}$
+\end_inset
+
+, 
+\begin_inset Formula $L$
+\end_inset
+
+ in km, and 
+\begin_inset Formula $E_{\nu}$
+\end_inset
+
+ in GeV.
+ The oscillation probability from between states 
+\begin_inset Formula $\nu_{\alpha}$
+\end_inset
+
+ to 
+\begin_inset Formula $\nu_{\beta}$
+\end_inset
+
+ is given by
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\mathcal{\mathcal{P}}\left(\nu_{\alpha}\rightarrow\nu_{\beta}\right)=\sin^{2}(2\theta)\sin^{2}\left(1.27\frac{\Delta m^{2}}{\left[\text{eV}^{2}\right]}\frac{\nicefrac{L}{E_{\nu}}}{\left[\nicefrac{\text{km}}{\text{GeV}}\right]}\right)\text{ [natural units]}\label{eq:prob2flavorapproxnaturalunits}
+\end{equation}
+
+\end_inset
+
+which more clearly illustrates the physics of neutrino oscillations.
+ The oscillation probability has an amplitude of 
+\begin_inset Formula $\sin^{2}(2\theta)$
+\end_inset
+
+ and varies with frequency inversely proportional to 
+\begin_inset Formula $\Delta m^{2}$
+\end_inset
+
+ as shown in 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "fig:Two-flavor-oscillation"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+ Since 
+\begin_inset Formula $L$
+\end_inset
+
+ and 
+\begin_inset Formula $E_{\nu}$
+\end_inset
+
+ are the only controllable parameters for an oscillation experiment, probing
+ 
+\begin_inset Formula $\theta$
+\end_inset
+
+ or 
+\begin_inset Formula $\Delta m^{2}$
+\end_inset
+
+ can be difficult unless the experiment can probe a large range of 
+\begin_inset Formula $L/E_{\nu}$
+\end_inset
+
+ as shown in 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "fig:Two-flavor-oscillation-2"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement t
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/Introduction/TwoNeutrinoOscillations.png
+	lyxscale 50
+	width 75text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+Survival and Disappearance Probability
+\end_layout
+
+\end_inset
+
+Two flavor oscillation probability as a function 
+\begin_inset Formula $L/E$
+\end_inset
+
+ is shown using 
+\begin_inset Formula $\theta=20^{\circ}$
+\end_inset
+
+ and 
+\begin_inset Formula $\Delta m^{2}=10^{-3}\text{ eV}^{2}/c^{4}$
+\end_inset
+
+.
+ The spacing between adjacent peaks/troughs is proportional to the inverse
+ of 
+\begin_inset Formula $\Delta m^{2}$
+\end_inset
+
+.
+ Note that 
+\begin_inset Formula $\mathcal{P}\left(\nu_{\alpha}\rightarrow\nu_{\alpha}\right)=1-\mathcal{P}\left(\nu_{\alpha}\rightarrow\nu_{\beta}\right)$
+\end_inset
+
+ since the oscillation probability must always sum to 1.
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Two-flavor-oscillation"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement t
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/Introduction/OscillationProb2FlavorLog.png
+	lyxscale 50
+	width 75text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+Semi-logarithmic Plot of the Two Flavor Survival Probability
+\end_layout
+
+\end_inset
+
+Semi-logarithmic plot of the survival probability of flavor 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ 
+\begin_inset Formula $\left(1-\mathcal{P}\left(\nu_{\alpha}\rightarrow\nu_{\beta}\right)=\mathcal{P}\left(\nu_{\alpha}\rightarrow\nu_{\alpha}\right)\right)$
+\end_inset
+
+ over a wide range of 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $L/E$
+\end_inset
+
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+ values for 
+\begin_inset Formula $\theta=40^{\circ}$
+\end_inset
+
+.
+ The arrows above the plot coarsely denote three possible cases: (a) no
+ oscillations (
+\begin_inset Formula $L/E\ll1/\Delta m^{2})$
+\end_inset
+
+; (b) sensitivity to oscillations 
+\begin_inset Formula $(L/E\sim1/\Delta m^{2})$
+\end_inset
+
+; (c) only average measurement 
+\begin_inset Formula $(L/E\gg1/\Delta m^{2})$
+\end_inset
+
+.
+ Image originally inspired by reference 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Schmitz1997"
+literal "false"
+
+\end_inset
+
+.
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Two-flavor-oscillation-2"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Three Flavor Oscillations
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:Three-Flavor-Oscillations"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+In the general case of oscillations using a 
+\begin_inset Formula $n\times n$
+\end_inset
+
+ mixing matrix, the unitary transformation can be written as a rotation
+ matrix with 
+\begin_inset Formula $\frac{n}{2}(n-1)$
+\end_inset
+
+ weak mixing angles with 
+\begin_inset Formula $\frac{1}{2}(n-2)(n-1)$
+\end_inset
+
+ Charge-Parity (CP) violating phases.
+ In addition, oscillations are dictated by a total of 
+\begin_inset Formula $n-1$
+\end_inset
+
+ mass-squared splittings
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Zuber2012"
+literal "false"
+
+\end_inset
+
+.
+ This all assumes that neutrinos obey the Dirac Equation, or that they are
+ not their own antiparticles.
+ The favored mixing model is a 
+\begin_inset Formula $3\times3$
+\end_inset
+
+ matrix since there are three known neutrino flavors, 
+\begin_inset Formula $\nue$
+\end_inset
+
+, 
+\begin_inset Formula $\numu$
+\end_inset
+
+, and 
+\begin_inset Formula $\nutau$
+\end_inset
+
+.
+ This means that there are three (3) mixing angles, one (1) CP violating
+ phase, and three (3) mass-squared splittings.
+ 
+\end_layout
+
+\begin_layout Standard
+The most frequently used matrix parameterization is the MNSP (MNSP: Maki-Nakagaw
+a-Sakata-Pontecorvo) matrix.
+ Pontecorvo is credited with first conceiving of neutrino oscillations,
+ albeit between neutrino and antineutrinos
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Ponte1957"
+literal "false"
+
+\end_inset
+
+.
+ It was Maki, Nakagawa, and Sakata who conceived of the parameterization
+ based on the ideas of Pontecorvo
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Maki1962"
+literal "false"
+
+\end_inset
+
+.
+ The MNSP matrix is decomposed into separate rotation matrices as given
+ by 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "eq:mnspdecomposed"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
+\begin_inset Newpage pagebreak
+\end_inset
+
+ 
+\begin_inset Formula 
+\begin{equation}
+\begin{aligned}U_{\text{MNSP}} & =\stackrel{U_{32}=U_{\text{atm}}}{\overbrace{\begin{bmatrix}\begin{array}{rrr}
+1 & 0 & 0\\
+0 & c_{32} & s_{32}\\
+0 & -s_{32} & c_{32}
+\end{array}\end{bmatrix}}}\times\stackrel{U_{31}=U_{\text{rea}}}{\overbrace{\begin{bmatrix}c_{31} & 0 & s_{31}e^{i\delta_{\text{CP}}}\\
+0 & 1 & 0\\
+-s_{31}e^{-i\delta_{\text{CP}}} & 0 & c_{31}
+\end{bmatrix}}}\times\stackrel{U_{21}=U_{\text{sol}}}{\overbrace{\begin{bmatrix}\begin{array}{rrr}
+c_{21} & s_{21} & 0\\
+-s_{21} & c_{21} & 0\\
+0 & 0 & 1
+\end{array}\end{bmatrix}}}\end{aligned}
+,\label{eq:mnspdecomposed}
+\end{equation}
+
+\end_inset
+
+where 
+\begin_inset Formula 
+\begin{equation}
+\cc{ij}=\cos\theta_{ij},\quad\ss{ij}=\sin\theta_{ij},\label{eq:cossinshorthand}
+\end{equation}
+
+\end_inset
+
+and 
+\begin_inset Formula $\delta_{\text{CP}}$
+\end_inset
+
+ represents the CP violating phase.
+ Each rotation matrix 
+\begin_inset Formula $U_{ij}$
+\end_inset
+
+ represents the different sources for neutrino oscillations experiments
+ with 
+\begin_inset Quotes eld
+\end_inset
+
+atm
+\begin_inset Quotes erd
+\end_inset
+
+, 
+\begin_inset Quotes eld
+\end_inset
+
+rea
+\begin_inset Quotes erd
+\end_inset
+
+, and 
+\begin_inset Quotes eld
+\end_inset
+
+sol
+\begin_inset Quotes erd
+\end_inset
+
+ representing atmospheric 
+\begin_inset Formula $\nu$
+\end_inset
+
+'s, nuclear reactor 
+\begin_inset Formula $\nu$
+\end_inset
+
+'s, and solar 
+\begin_inset Formula $\nu$
+\end_inset
+
+'s, respectively.
+ The sensitivity of neutrino oscillations for different sources is given
+ in 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "tab:SensitivityOscill"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+\begin_inset Float table
+placement t
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+Sensitivity of Different Oscillation Experiments
+\end_layout
+
+\end_inset
+
+Sensitivity of different oscillation experiments originally published in
+ reference
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Tanabashi2018"
+literal "false"
+
+\end_inset
+
+.
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:SensitivityOscill"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="7" columns="5">
+<features booktabs="true" tabularvalignment="middle">
+<column alignment="left" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="left" valignment="top">
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Source
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Species
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Baseline
+\series bold
+ 
+\series default
+[km]
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Mean
+\series bold
+ 
+\series default
+Energy
+\series bold
+ 
+\series default
+[GeV]
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\min\left(\Delta m^{2}\right)$
+\end_inset
+
+ 
+\begin_inset Formula $\left[\text{eV}{}^{2}\right]$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Reactor
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\antinue$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $1$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\sim10^{-3}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\sim10^{-3}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Reactor
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\antinue$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $100$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\sim10^{-3}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\sim10^{-5}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Accelerator
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\numu,\antinumu$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $1$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\sim1$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\sim1$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Accelerator
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\numu,\antinumu$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $10^{3}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\sim1$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\sim10^{-3}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Atmospheric 
+\begin_inset Formula $\nu$
+\end_inset
+
+'s
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\nuparticle{e,\mu},\antinuparticle{\mu,e}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $10^{4}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\sim1$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\sim10^{-4}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Sun
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\nue$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $1.5\times10^{8}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\sim10^{-3}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\sim10^{-11}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+If neutrinos are their own antiparticles, they are not described by the
+ Dirac Equation but instead are described the Majorana Equation.
+ This adds two (in general 
+\begin_inset Formula $n-1$
+\end_inset
+
+) more CP violating Majorana phases, 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ and 
+\begin_inset Formula $\beta$
+\end_inset
+
+, to the MNSP matrix
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+U_{\text{MNSP}}\rightarrow U_{\text{MNSP}}\times\stackrel{U_{\text{Majorana}}}{\overbrace{\begin{bmatrix}1 & 0 & 0\\
+0 & e^{i\alpha} & 0\\
+0 & 0 & e^{i\beta}
+\end{bmatrix}}}.\label{eq:mnspdecomposedmajorana}
+\end{equation}
+
+\end_inset
+
+Unfortunately, neutrino oscillations are not able to probe the Majorana
+ phases since the Majorana matrix is diagonal.
+ The question of as to whether neutrinos are Majorana (
+\begin_inset Formula $\nu=\overline{\nu})$
+\end_inset
+
+ or Dirac (
+\begin_inset Formula $\nu\neq\overline{\nu})$
+\end_inset
+
+ particles is an open question that is being explored by neutrino-less double
+ beta decay experiments
+\begin_inset CommandInset citation
+LatexCommand cite
+key "1982PhRvD..25.2951S"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+The full three flavor oscillation probability is given by
+\begin_inset Formula 
+\begin{equation}
+\begin{aligned}\mathcal{P}\left(\nu_{\alpha}\rightarrow\nu_{\beta}\right)=\delta_{\alpha\beta}-4 & \sum_{j=1}^{3}\left[\sum_{i>j}^{3}\text{Re}\left(K_{\alpha\beta,ij}\right)\sin^{2}\left(\phi_{ij}\right)\right]\\
++4 & \sum_{j=1}^{3}\left[\sum_{i>j}^{3}\text{Im}\left(K_{\alpha\beta,ij}\right)\sin\left(\phi_{ij}\right)\cos\left(\phi_{ij}\right)\right],
+\end{aligned}
+\label{eq:threeflavorprobgeneral}
+\end{equation}
+
+\end_inset
+
+where
+\begin_inset Formula 
+\begin{equation}
+K_{\alpha\beta,ij}=U_{\alpha i}U_{\beta_{i}}^{*}U_{\alpha j}^{*}U_{\beta j}\label{eq:threeflavorprobgeneralK}
+\end{equation}
+
+\end_inset
+
+encapsulates the MNSP matrix elements and
+\begin_inset Formula 
+\begin{equation}
+\phi_{ij}=\frac{\Dm ijc^{3}}{4\hbar}\frac{L}{E_{\nu}}.\label{eq:threeflavorprobgeneralphi}
+\end{equation}
+
+\end_inset
+
+Since CP violation means that 
+\begin_inset Formula $\mathcal{P}\left(\nuparticle{\alpha}\rightarrow\nuparticle{\beta\neq\alpha}\right)\neq\mathcal{P}\left(\antinuparticle{\alpha}\rightarrow\antinuparticle{\beta\neq\alpha}\right),$
+\end_inset
+
+ CP violating terms must be odd function of 
+\begin_inset Formula $\delta_{\text{CP}}$
+\end_inset
+
+.
+ Consider the following two examples, muon neutrino survival and muon neutrino
+ to electron neutrino appearance.
+\end_layout
+
+\begin_layout Paragraph
+Muon Neutrino Survival
+\end_layout
+
+\begin_layout Standard
+The probability of a muon type neutrinos (antineutrinos) surviving is given
+ by 
+\begin_inset Formula 
+\begin{equation}
+\begin{aligned}\mathcal{P}\left(\nuantinuparticle{\mu}\rightarrow\nuantinuparticle{\mu}\right)=1-4 & \sss{23}\ccc{13}\left(V_{\cos\delta_{\text{CP}}}\right)\sin^{2}\phi_{31}\\
+-4 & \sss{23}\ccc{13}\left(Z_{\cos\delta_{\text{CP}}}\right)\sin^{2}\phi_{32}\\
+-4 & \left(V_{\cos\delta_{\text{CP}}}\right)\left(Z_{\cos\delta_{\text{CP}}}\right)\sin^{2}\phi_{21},
+\end{aligned}
+\label{eq:numu2numuthreeflavorfull}
+\end{equation}
+
+\end_inset
+
+where
+\begin_inset Formula 
+\begin{equation}
+V_{\cos\delta_{\text{CP}}}=\sss{12}\ccc{23}+\sss{13}\sss{23}\ccc{12}+2\ss{12}\ss{13}\ss{23}\cc{12}\cc{23}\cos\delta_{\text{CP}},\label{eq:Vcosdelta}
+\end{equation}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{equation}
+Z_{\cos\delta_{\text{CP}}}=\ccc{12}\ccc{23}+\sss{13}\sss{23}\sss{12}-2\ss{12}\ss{13}\ss{23}\cc{12}\cc{23}\cos\delta_{\text{CP}},\label{eq:Zcosdelta}
+\end{equation}
+
+\end_inset
+
+and 
+\begin_inset Formula $\nuantinuparticle{\mu}$
+\end_inset
+
+ represents either 
+\begin_inset Formula $\numu$
+\end_inset
+
+ or 
+\begin_inset Formula $\antinumu$
+\end_inset
+
+.
+ If a definitive measurement of 
+\begin_inset Formula $\prob{\numu\rightarrow\numu}$
+\end_inset
+
+
+\begin_inset Formula $\neq$
+\end_inset
+
+
+\begin_inset Formula $\prob{\numubar\rightarrow\numubar}$
+\end_inset
+
+ in vacuum occurs, it implies that the combined C, P and time (CPT) symmetry
+ is violated
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+When going to through matter however, the oscillation probability is affected.
+ This is explained more in Section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "subsubsec:Matter-Effects"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+\begin_inset VSpace defskip
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement t
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/Introduction/FlavorComponentsOfMassStates.png
+	lyxscale 25
+	width 45text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Mass hierarchy as shown in 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "deGouvea:2013onf"
+literal "false"
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Mass-hierarchy"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/Introduction/MassComponentsOfFlavorStates.png
+	lyxscale 25
+	width 45text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Mass eigenstate components as shown in 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Adams:2013qkq"
+literal "false"
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Mass-eigenstate-components"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+Neutrino Mass Hierarchy Problem and MNSP Representation
+\end_layout
+
+\end_inset
+
+Neutrino mass hierarchy problem and MNSP representation.
+ Left: the mass hierarchy problem is shown.
+ 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+The colored bars for each mass eigenstate correspond to the approximate
+ flavor content of the neutrino.
+ For example, state 
+\begin_inset Quotes eld
+\end_inset
+
+2
+\begin_inset Quotes erd
+\end_inset
+
+ has about equal three portions of all three flavors.
+ Right: the mass eigenstate components of each flavor eigenstate.
+ This is a complementary demonstration of the MNSP matrix.
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+ 
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:masshierarchy"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+Electron Neutrino Appearance
+\end_layout
+
+\begin_layout Standard
+The previous subsection briefly explored the muon disappearance probability,
+ which is not tested as a channel for CP violation.
+ Electron neutrino appearance, however, does provide insight into CP violation
+ in the lepton sector.
+ The appearance probability of electron neutrino types from muon neutrino
+ types is given by
+\begin_inset Formula 
+\begin{equation}
+\begin{aligned}\mathcal{P}\left(\nuantinuparticle{\mu}\rightarrow\nuantinuparticle e\right)= & 4\ccc{13}\sss{13}\sss{23}\sin^{2}\phi_{31}\\
+ & +8\left(X_{\cos\delta_{\text{CP}}}\right)\cos\phi_{23}\sin\phi_{31}\sin\phi_{21}\\
+ & \overset{_{(+)}}{-}\underset{\text{CP violating}}{8\underbrace{\left(Y_{\sin\delta_{\text{CP}}}\right)}}\sin\phi_{32}\sin\phi_{31}\sin\phi_{21}\\
+ & +4\left(Z_{\cos\delta_{\text{CP}}}\right)\sss{12}\ccc{13}\sin^{2}\phi_{21},
+\end{aligned}
+\label{eq:numu2nuethreeflavorfull}
+\end{equation}
+
+\end_inset
+
+where
+\begin_inset Formula 
+\begin{equation}
+X_{\cos\delta_{\text{CP}}}=\ccc{13}\ss{12}\ss{13}\ss{23}\left(\cc{12}\cc{23}\cos\delta_{\text{CP}}-\ss{12}\ss{13}\right),\label{eq:Xcosdelta}
+\end{equation}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{equation}
+Y_{\sin\delta_{\text{CP}}}=\frac{1}{8}\sin\left(2\theta_{12}\right)\sin\left(2\theta_{13}\right)\sin\left(2\theta_{23}\right)\cc{13}\sin\delta_{\text{CP}},\label{eq:Ysindelta}
+\end{equation}
+
+\end_inset
+
+and (+) represents the sign change from neutrinos to antineutrinos.
+ The CP violating term 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "eq:Ysindelta"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ is also known as the Jarlskog Invariant and is a measure of CP violation
+ independent of the mixing parameterization
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Jarlskog1985"
+literal "false"
+
+\end_inset
+
+.
+ This oscillation channel is of primary importance in current and future
+ proposed accelerator and atmospheric neutrino oscillation experiments.
+\end_layout
+
+\begin_layout Standard
+Current and next generation experiments aim to improve knowledge of the
+ mixing parameters.
+ There are a couple of degeneracies to unravel as well as precise measurement
+ of 
+\begin_inset Formula $\deltacp$
+\end_inset
+
+.
+ While the two defined mass-squared splittings 
+\begin_inset Formula $\Dm 21=\Delta m_{\text{sol}}^{2}$
+\end_inset
+
+ and 
+\begin_inset Formula $\Dm 32=\Delta m_{\text{atm}}^{2}$
+\end_inset
+
+ are known, it is unknown which eigenstates are more massive.
+ This problem is known as the mass hierarchy problem and is illustrated
+ in 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "fig:Mass-hierarchy"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+ Normal hierarchy refers to the case where 
+\begin_inset Formula $m_{3}>m_{2}>m_{1}$
+\end_inset
+
+ whereas the inverted hierarchy has 
+\begin_inset Formula $m_{2}>m_{1}>m_{3}$
+\end_inset
+
+.
+ Also distinguishing if 
+\begin_inset Formula $\theta_{23}$
+\end_inset
+
+ is in the first octant 
+\begin_inset Formula $\theta\in(0,\nicefrac{\pi}{2})$
+\end_inset
+
+ or second octant 
+\begin_inset Formula $\theta\in(\nicefrac{\pi}{2},\nicefrac{\pi}{4})$
+\end_inset
+
+ of the unit circle requires large statistics.
+ Finally the value of 
+\begin_inset Formula $\deltacp$
+\end_inset
+
+ is quite uncertain with values in the 3rd and 4th quadrants.
+ Best fit measurements of the oscillations parameters are given in 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "tab:mnspparameters"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+placement t
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+Global Best Fit for the Oscillation Parameters
+\end_layout
+
+\end_inset
+
+Global best fit for the oscillation parameters.
+ All values except for 
+\begin_inset Formula $\deltacp$
+\end_inset
+
+ are combined values from the Particle Data Group and 
+\begin_inset Formula $\deltacp$
+\end_inset
+
+ is from the 2018 NuFit analysis 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Tanabashi2018,Esteban:2018azc"
+literal "false"
+
+\end_inset
+
+.
+ 
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:mnspparameters"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="7" columns="4">
+<features booktabs="true" tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top" width="0pt">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+Parameter
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+Normal Hierarchy
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+Inverted Hierarchy
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+Units
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row topspace="default" bottomspace="default">
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\Dm 32$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $2.51\pm0.05$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $-2.56\pm0.04$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $10^{-3}\text{ eV}^{2}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row bottomspace="default">
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\Dm 21$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="1" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $7.53\pm0.18$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $10^{-5}\text{ eV}^{2}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row bottomspace="default">
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\sin^{2}\left(\theta_{21}\right)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="1" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $0.307_{-0.012}^{+0.013}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row bottomspace="default">
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\sin^{2}\left(\theta_{32}\right)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\begin{cases}
+0.417_{-0.028}^{+0.025} & \theta_{32}\in(0,\frac{\pi}{2})\\
+0.597_{-0.030}^{+0.024} & \theta_{32}\in(\frac{\pi}{2},\frac{\pi}{4})
+\end{cases}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\begin{cases}
+0.421_{-0.025}^{+0.033} & \theta_{32}\in(0,\frac{\pi}{2})\\
+0.592_{-0.030}^{+0.023} & \theta_{32}\in(\frac{\pi}{2},\frac{\pi}{4})
+\end{cases}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row bottomspace="default">
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\sin^{2}\left(\theta_{31}\right)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="1" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $2.12\pm0.08$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $10^{-2}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row topspace="default" bottomspace="default" interlinespace="default">
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\delta_{\text{CP}}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $217_{-28}^{+40}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $280_{-28}^{+25}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+degrees
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Matter Effects
+\begin_inset CommandInset label
+LatexCommand label
+name "subsubsec:Matter-Effects"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Traveling through matter has the potential to increase the sensitivity of
+ neutrino oscillation measurements if the baseline is long enough.
+ Known as the Mikheyev-Smirnov-Wolfenstein (MSW) effect 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "PhysRevD.17.2369"
+literal "false"
+
+\end_inset
+
+, all oscillations are affected by coherent forward scattering of neutrinos
+ with electrons in the media.
+ Taking the example of 
+\begin_inset Formula $\nuantinuparticle{\mu}\rightarrow\nuantinuparticle e$
+\end_inset
+
+ from 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "eq:numu2numuthreeflavorfull"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+, the MSW effect to first order is 
+\begin_inset Formula 
+\begin{equation}
+\begin{aligned}\mathcal{P}\left(\nuantinuparticle{\mu}\rightarrow\nuantinuparticle e\right)\rightarrow & \mathcal{P}\left(\nuantinuparticle{\mu}\rightarrow\nuantinuparticle e\right)+\frac{8\alpha}{\Dm 31}\left(\ccc{13}\sss{13}\sss{23}\right)\left(1-2\sss{13}\right)\\
+ & \times\left(\sin^{2}\phi_{31}\overset{_{(+)}}{-}\underset{\phi_{31}}{\underbrace{\left(\frac{\Dm 31c^{3}}{4\hbar}\frac{L}{E_{\nu}}\right)}}\cos\phi_{32}\sin\phi_{31}\right),
+\end{aligned}
+\label{eq:numu2nuethreeflavormasseffect}
+\end{equation}
+
+\end_inset
+
+where 
+\begin_inset Formula 
+\begin{equation}
+\alpha=2\sqrt{2}G_{F}n_{e}E_{\nu},\label{eq:alphaMSW}
+\end{equation}
+
+\end_inset
+
+and 
+\begin_inset Formula $n_{e}$
+\end_inset
+
+ is the average electron density of the Earth through which the neutrinos
+ travel
+\begin_inset CommandInset citation
+LatexCommand cite
+key "PhysRevD.56.3093"
+literal "false"
+
+\end_inset
+
+.
+ Carefully studying 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "eq:numu2nuethreeflavormasseffect"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ reveals that the MSW effect alters the oscillation probability as a function
+ of the electron density and increases in magnitude with baseline.
+\end_layout
+
+\begin_layout Subsection
+CP Violation: Origins of Matter
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:CPVMatter"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The observation of CP violation in the lepton sector might provide critical
+ insight into the origins of the matter.
+ CP violation dictates that certain interactions behave differently between
+ matter or antimatter like 
+\begin_inset Formula $\mathcal{P}\left(\numu\rightarrow\nue\right)$
+\end_inset
+
+
+\begin_inset Formula $\neq$
+\end_inset
+
+
+\begin_inset Formula $\mathcal{P}\left(\antinumu\rightarrow\antinue\right)$
+\end_inset
+
+.
+ The Big Bang Theory suggests that in the first fractions of a second of
+ the Universe, equal amounts of matter and antimatter were created.
+ However, observational evidence shows the Universe consists of only 4.5%
+ baryonic matter (i.e.
+ protons and neutrons) from cosmological models as shown in 
+\begin_inset Float figure
+placement t
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/Introduction/LambdaCDM.png
+	lyxscale 50
+	width 45text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+The matter and energy content of the Universe.
+ The observable Universe contains about 4.5% of atoms (baryons and electrons)
+ and an estimated neutrino content less than 
+\begin_inset Formula $1.2$
+\end_inset
+
+%.
+ The rest of the Universe consists of Dark Matter at 22.4% and a form of
+ energy called Dark Energy at 71.9%.
+ These inferred parameters are taken from the 
+\begin_inset Formula $\Lambda$
+\end_inset
+
+CDM model, the simplest model that describes the cosmos
+\begin_inset CommandInset citation
+LatexCommand cite
+key "2011ApJS..192...18K"
+literal "false"
+
+\end_inset
+
+.
+ 
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+The Matter and Energy Content of the Universe
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Matter-Content-of-universe"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "fig:Matter-Content-of-universe"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+ The anti-baryonic fraction of the baryonic matter is infinitesimally low
+ from external constraints on data from gamma-ray telescopes like Fermi-GLAST
+\begin_inset CommandInset citation
+LatexCommand cite
+key "vonBallmoos2014"
+literal "false"
+
+\end_inset
+
+.
+ This problem is known as the Baryon Asymmetry of the Universe (BAU).
+\end_layout
+
+\begin_layout Standard
+The process of Baryogenesis
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+Baryogenesis is the mechanism by which matter and antimatter baryons are
+ created in the early Universe.
+\begin_inset VSpace defskip
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+ is a favored model to explain the BAU and lacks a necessary precursor mechanism.
+ One of the necessary conditions for Baryogenesis
+\begin_inset CommandInset citation
+LatexCommand cite
+key "0038-5670-34-5-A08"
+literal "false"
+
+\end_inset
+
+ is C symmetry violation and CP violation.
+ Evidence of CP violation has been experimentally confirmed in the quarks,
+ but not to the level which resolves the BAU.
+ Baryogenesis can be achieved by having Leptogenesis
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+Leptogenesis is the mechanism by which leptons and anti-leptons are created
+ in the early Universe.
+\begin_inset VSpace defskip
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+ occur first through the decay of very heavy, right handed Majorana neutrino
+ (
+\begin_inset Formula $\nu=\overline{\nu}$
+\end_inset
+
+) through the 
+\shape italic
+see-saw
+\shape default
+ mechanism.
+ Detailed discussions on Leptogenesis and the 
+\shape italic
+see-saw
+\shape default
+ mechanism can found in the following reference 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Adams:2013qkq"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+Long-Baseline Neutrino Oscillation Experiments
+\end_layout
+
+\begin_layout Standard
+The KEK to Kamioka (K2K) experiment was the first neutrino oscillation experimen
+t where researchers controlled the production and observation of neutrinos.
+ In K2K, a beam of muon neutrinos were directed from the 12 GeV proton synchrotr
+on at KEK to the Kamioka Observatory at a distance of 250 km.
+ While traveling through the Earth, the neutrinos oscillate before they
+ are observed at Kamioka.
+ Prior to K2K, neutrino sources only included the atmosphere, the Sun, and
+ one supernova.
+\end_layout
+
+\begin_layout Standard
+The K2K experiment established the experimental methods for current and
+ planned next generation long-baseline neutrino oscillation experiments
+ from accelerators.
+ The accelerator neutrinos are produced when a high energy proton beam hits
+ a target.
+ The secondary particles are then forward focused using electrically pulsed
+ magnets and allowed to decay in a large decay volume.
+ This generates a highly pure muon neutrino beam with order 1% electron
+ neutrino contamination.
+ Prior to any oscillations, a 
+\begin_inset Quotes eld
+\end_inset
+
+near
+\begin_inset Quotes erd
+\end_inset
+
+ detector is used to measure the neutrino flux as function of neutrino energy
+ and study detector systematic uncertainties associated at the 
+\begin_inset Quotes eld
+\end_inset
+
+far
+\begin_inset Quotes erd
+\end_inset
+
+ detector at Kamioka.
+ The successor experiment to K2K called Tokai to Kamioka (T2K), closely
+ followed this design methodology.
+ Other notable accelerator-based long-baseline experiments include MINOS
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Zuber2012"
+literal "false"
+
+\end_inset
+
+ and NO
+\begin_inset Formula $\nu$
+\end_inset
+
+A
+\begin_inset CommandInset citation
+LatexCommand cite
+key "PhysRevD.98.032012"
+literal "false"
+
+\end_inset
+
+, both in the United States.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Branch IntroductionT2K
+inverted 0
+status open
+
+\begin_layout Section
+The Tokai to Kamioka Experiment
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+The T2K Experiment
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:T2KExperiment"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The Tokai to Kamioka (T2K) experiment is a long-baseline, neutrino oscillation
+ experiment hosted in Japan
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Abe:2011ks"
+literal "false"
+
+\end_inset
+
+ as shown in 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "fig:T2KBirdsEye"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+ It is the successor experiment to the K2K neutrino oscillation experiment
+ that was also hosted in Japan.
+ The T2K experiment produces a high intensity, relatively pure muon neutrino
+ beam at the Japan Proton Accelerator Complex (J-PARC) which is a world
+ class particle accelerator facility.
+ The beam is directed at the Super-Kamiokande (SK)
+\begin_inset CommandInset citation
+LatexCommand cite
+key "FUKUDA2003418"
+literal "false"
+
+\end_inset
+
+ detector, which is 295 km away from the source.
+ Additionally, the beam is designed to maximize the 
+\begin_inset Formula $\numu\rightarrow\nue$
+\end_inset
+
+ probability at the far detector 
+\begin_inset Formula $L=$
+\end_inset
+
+295 km baseline using a neutrino energy spectrum sharply peaked at 
+\begin_inset Formula $\Enu=0.6$
+\end_inset
+
+ GeV as shown in 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "fig:T2K-unoscillated-flux"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+ This spectrum is achieved by directing the center of the beam axis 2.5 degrees
+ off center from SK.
+ Along the beamline at 280 m from the beam source is the near detector facility
+ called ND280
+\begin_inset CommandInset citation
+LatexCommand cite
+key "doi:10.1063/1.3274192"
+literal "false"
+
+\end_inset
+
+, whose data is used in thesis.
+ The ND280 facility is designed to observe and characterize the unoscillated
+ neutrino beam.
+ There are two detectors at ND280: the primary, off-axis detector and on-axis
+ detector.
+ The measurement in this thesis uses data collected from the off-axis near
+ detector.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement t
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/Introduction/T2KBirdsEye.png
+	lyxscale 50
+	width 95text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+Birds Eye View of the T2K experiment on the Japanese Archipelago
+\end_layout
+
+\end_inset
+
+Birds eye view of the T2K experiment on the Japanese archipelago.
+ An intense beam of neutrinos is produced at the J-PARC site (bottom right
+ red box) using high energy protons.
+ The beam is directed towards the Super-Kamiokande detector (top left blue
+ box) at a distance of 295 km away from J-PARC.
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:T2KBirdsEye"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The T2K experiment was primarily designed to measure the last unknown MNSP
+ mixing angle 
+\begin_inset Formula $\theta_{13}$
+\end_inset
+
+, which was thought to be nearly zero, via the 
+\begin_inset Formula $\numu\rightarrow\nue$
+\end_inset
+
+ channel.
+ In addition it aims to make a precision measurement the atmospheric mixing
+ parameters, 
+\begin_inset Formula $\theta_{23}$
+\end_inset
+
+ and 
+\begin_inset Formula $\Dm23$
+\end_inset
+
+ via the 
+\begin_inset Formula $\numu\rightarrow\numu$
+\end_inset
+
+ channel.
+ An early landmark for the T2K experiment was a 7.3
+\begin_inset Formula $\sigma$
+\end_inset
+
+ measurement excluding non-zero 
+\begin_inset Formula $\theta_{13}$
+\end_inset
+
+ in 2013
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Abe:2013hdq"
+literal "false"
+
+\end_inset
+
+.
+ It continues to be a world leader in oscillation physics and as of 2018
+ rejects CP conserving values (
+\begin_inset Formula $\deltacp=0,\pi)$
+\end_inset
+
+ at the 
+\begin_inset Formula $2\sigma$
+\end_inset
+
+ level
+\begin_inset CommandInset citation
+LatexCommand cite
+key "PhysRevLett.121.171802"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/Introduction/OffAxisFluxUnoscillatedNumu.png
+	width 60text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+The T2K experiment's unoscillated 
+\begin_inset Formula $\numu$
+\end_inset
+
+ flux at Super-Kamiokande at the off-axis angle of 
+\begin_inset Formula $2.5\textdegree$
+\end_inset
+
+.
+ 
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+The Unoscillated 
+\begin_inset Formula $\numu$
+\end_inset
+
+ Flux at Super-Kamiokande
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:T2K-unoscillated-flux"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The following topics will be discussed in the following order.
+ First a look how neutrinos are produced at J-PARC.
+ Next a detailed look at the T2K near detectors which are used in this thesis.
+ This is followed by a discussion on Super-Kamiokande, the T2K far detector.
+ The final topic is an examination of the near detector constraint and its
+ importance in the oscillation analysis.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Branch IntroductionT2KNeutrinoProduction
+inverted 0
+status open
+
+\begin_layout Subsection
+Neutrino Production at J-PARC
+\end_layout
+
+\begin_layout Standard
+To facilitate the high intensity neutrino beam requirements for T2K, the
+ J-PARC site generates a high intensity proton beam through a series of
+ particle accelerators.
+ A bird's eye view of J-PARC can be seen in 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "fig:BirdsEyeJPARC"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ which highlights its accelerators and other facilities.
+ For this section, note that all beam energies are kinetic energies.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement t
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/Introduction/JPARCBirdsEye.png
+	lyxscale 50
+	width 50text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+Bird's Eye View of the J-PARC Laboratory
+\end_layout
+
+\end_inset
+
+Bird's eye view of the J-PARC laboratory showing the primary components
+ of its accelerator programs.
+ To generate the high intensity neutrino beam, first the linear accelerator
+ (Linac, red) accelerates protons into the 3 GeV Synchrotron (also red)
+ called the rapid-cycle synchrotron (RCS).
+ The RCS then injects some of its protons into the 50 GeV Synchrotron (yellow)
+ called the main ring (MR), which currently runs at 30 GeV.
+ Finally the MR protons are directed into a target material along the neutrino
+ beamline (teal)
+\begin_inset CommandInset citation
+LatexCommand cite
+key "JPARCCenter2019"
+literal "false"
+
+\end_inset
+
+.
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:BirdsEyeJPARC"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Protons for the T2K beamline are first accelerated in the J-PARC linear
+ accelerator
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+A linear accelerator accelerates particles using time varying electric fields
+ along a one direction, terminal beamline.
+ Linear accelerators are also used in the medical field to generate X-rays.
+\begin_inset VSpace defskip
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+ (linac) and then the rapid cycle synchrotron
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+A synchrotron is cyclic particle accelerator that relies on time varying
+ magnetic fields to accelerate particles.
+ Since they require many magnets and large spaces to operate, they are usually
+ operated at national laboratories for others uses like material and life
+ sciences.
+\begin_inset VSpace defskip
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+ (RCS).
+ Hydrogen ions (
+\begin_inset Formula $_{1}^{1}\text{H}^{-}$
+\end_inset
+
+) are extracted from plasma in a electrical discharge chamber and fed through
+ a series of linac elements as shown in 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "fig:LINAC"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+ Each linac element, except for the initial quadrapole magnet, accelerates
+ the ions using carefully synchronized oscillating electric fields generated
+ by radio frequency pulses.
+ After traveling 240 m along the linac, the ions have been boosted to 181
+ MeV of kinetic energy and transported into the RCS.
+ While in transit to the RCS, the ions are stripped of their electrons via
+ charge stripping foils.
+ The 348 m circumference RCS then further boosts the protons to 3 GeV at
+ an operating frequency of 25 Hz.
+ While being accelerated, protons are aggregated into two bunches and focused
+ using particle collimators as shown in 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "fig:3-GeV-RCS"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/Introduction/JPARCLINAC.png
+	lyxscale 25
+	height 20theight%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+400 MeV linac
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:LINAC"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/Introduction/JPARC3GeVRCS.png
+	lyxscale 50
+	height 27theight%
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+3 GeV RCS
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:3-GeV-RCS"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/Introduction/JPARCMR.png
+	lyxscale 30
+	height 27theight%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+50 GeV MR
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:50-GeV-MR"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Schematics of the J-PARC accelerators.
+ (a) The linac accelerates hydrogen ions to 181 MeV of kinetic energy, designed
+ for 400 MeV, from the ion source
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Yamazaki2003"
+literal "false"
+
+\end_inset
+
+.
+ (b) Protons from the linac are collected into the RCS and accelerated to
+ 3 GeV
+\begin_inset CommandInset citation
+LatexCommand cite
+key "PhysRevAccelBeams.21.024203"
+literal "false"
+
+\end_inset
+
+.
+ (c) Protons from the RCS are injected into the MR synchrotron.
+ While the MR is designed for 50 GeV, it currently operates at 30 GeV.
+ 
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:schemeJPARC"
+
+\end_inset
+
+ 
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+Schematics of the J-PARC Accelerators
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The next stage for the protons intended for the neutrino beamline is the
+ much larger main ring (MR) synchrotron as shown in 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "fig:50-GeV-MR"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ which has a circumference of 1567 m.
+ While nominally designed to boost protons to 50 GeV, it currently operates
+ at 30 GeV.
+ Protons are injected into the MR to form eight proton bunches (spill),
+ initially six when T2K first ran, before entering the neutrino beamline.
+ The total temporal width of the spill is approximately 
+\begin_inset Formula $0.5\ \mu\text{s}$
+\end_inset
+
+
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Abe:2011ks"
+literal "false"
+
+\end_inset
+
+.
+ At a spill cycle frequency of 0.5Hz, the bunches are extracted from the
+ MR into the neutrino beamline.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/Introduction/JPARCNuBeamline.png
+	height 25theight%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Neutrino beamline
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Neutrino-beamline"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/Introduction/JPARCNuBeamlineZoomed.png
+	height 25theight%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Secondary beamline
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Secondary-beamline"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/Introduction/T2KHorns.png
+	height 25theight%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Beamline horns
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:T2K-horns"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+The neutrino beamline at J-PARC consists of a primary and secondary beamline.
+ (a) The primary beamline redirects the protons towards the secondary beamline
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Abe:2011ks"
+literal "false"
+
+\end_inset
+
+.
+ (b) In the secondary beamline, the protons are impinged on a cylindrical
+ target producing mostly pions.
+ The pions are focused using in sequence horns and decay in a long decay
+ volume.
+ Any non-decayed particles are stopped at the beam dump.
+ (c) A further zoomed in cross section of the target station showing the
+ target and focusing horns
+\begin_inset CommandInset citation
+LatexCommand cite
+key "SEKIGUCHI201557"
+literal "false"
+
+\end_inset
+
+.
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+The Neutrino Beamline at J-PARC
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:JPARCNeutrinobeamline"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The neutrino beamline is designed to direct the protons toward SK and generate
+ neutrinos by striking them into the end of a cylindrical target.
+ 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "fig:Neutrino-beamline"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ shows the process of proton extraction from the MR for both primary and
+ secondary neutrino beamlines.
+ In the primary beamline, a series of normal and superconducting magnets
+ steer the proton beam away from the MR first along a 54 m preparation section
+ and then a 147 m arc section to bend the beam towards SK.
+ A final focusing section in the primary beamline focuses the protons into
+ the secondary beam while directing it downwards 
+\begin_inset Formula $3.637\text{°}$
+\end_inset
+
+ with respect to the local horizontal.
+ Since a well-tuned and stable proton beam is necessary for neutrino production,
+ numerous beam monitors are installed along the primary beamline to measure
+ any losses.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement !t
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/Introduction/horn2.png
+	width 45text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+A graphite target at the target station
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:targetstation"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/Introduction/horn1.png
+	width 45text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+A magnetic focusing horn
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:focusinghorn"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Photographs of the T2K target station.
+ (a) The graphite rod being extracted from the target station is shown in
+ the black-dashed box.
+ (b) One focusing horn in T2K.
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+Photographs of the T2K Target Station
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:JPARCTargetStationPhotos"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The secondary beamline marks the end of the proton beam and production of
+ a neutrino beam as shown in 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "fig:Secondary-beamline"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+ It consists of a target station, a decay volume for the outgoing particles
+ from the target station, and a beam dump for any remaining particles.
+ The target station houses a 91.4 cm long, 2.6 cm diameter, and 
+\begin_inset Formula $1.8\text{ g/cm}^{3}$
+\end_inset
+
+ graphite rod, which corresponds to 1.9 radiation lengths.
+ When the protons strike the target, strong (nuclear) interactions produce
+ pi(
+\begin_inset Formula $\pi$
+\end_inset
+
+)-mesons (pions) and K-mesons (kaons) like those produced from cosmic ray
+ collisions in the upper atmosphere.
+ To enhance the flux of neutrinos, a series of three current pulsed, focusing
+ magnets called horns
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+The name horn derives from the fact that the focusing magnets are shaped
+ like brass horns in a music ensemble or marching band.
+ One can think of these horns like a focusing lens for charged particles.
+\begin_inset VSpace defskip
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+ as shown in 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "fig:T2K-horns"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ are used to focus the mesons of the correct charge towards SK.
+ Photographs of a graphite target and focusing horn are shown in 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "fig:JPARCTargetStationPhotos"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+ The horns are pulsed at +250 kA (-250 kA) to select positively (negatively)
+ charged pions.
+ The focused pions then decay in the 96 m long decay volume creating a neutrino
+ beam boosted along the secondary beamline direction.
+ For safety reasons, the decay volume is filled with gaseous helium at 1
+ atm of pressure which has a low pion absorption rate.
+ A beam dump is placed at the end of the decay volume to stop particles
+ like muons that have not yet decayed from contaminating the beam with their
+ decay neutrinos.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement !t
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/Introduction/T2KPOTDelivery.png
+	width 95text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+The accumulated protons on target for the T2K experiment since 2010 shows
+ a steady increase in beam power over time.
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+Accumulated Protons on Target for T2K
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:T2K-accumulated-POT"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Along both beamlines are numerous monitors and timing systems to ensure
+ stable production of neutrinos.
+ Proton beam monitors are placed along the primary beamline to ensure the
+ proton beam is properly steered into the secondary beamline.
+ An optical transition radiation monitor is situated around the target to
+ observe any protons not intersecting with the target region itself.
+ The last monitor along the secondary beamline is the a muon monitor (MUMON),
+ which is placed downstream of the beam dump to characterize the flux of
+ daughter muons of 
+\begin_inset Formula $>5\text{ GeV/c}$
+\end_inset
+
+ momentum
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Abe:2011ks"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+In order to provide timing information for the neutrino beam at SK, a global
+ positioning system (GPS) is used to synchronize clocks at SK and J-PARC.
+ Any event outside the beam timing window is rejected in the T2K oscillation
+ analysis, and so having precise timing information for the neutrino beam
+ is critical for the experiment.
+ The GPS has an internal accuracy of 50 ns, or about 
+\begin_inset Formula $\sim150$
+\end_inset
+
+ m assuming that the neutrinos are traveling near the speed of light.
+ This is well within the time it takes for a neutrino to travel the 295
+ km between J-PARC and SK.
+\end_layout
+
+\begin_layout Standard
+J-PARC continues to improve the proton delivery and neutrino flux intensity
+ since T2K begin in 2010.
+ The T2K experiment has run in two horn current modes: 
+\begin_inset Formula $\nu$
+\end_inset
+
+-mode and 
+\begin_inset Formula $\numubar$
+\end_inset
+
+-mode.
+ Focusing positively charged pions with +250 kA horn current is called forward
+ horn current (FHC) mode.
+ Similarly, using -250 kA horn current is called reverse horn current (RHC)
+ mode.
+ The aggregate running of T2K for both FHC and RHC modes is shown in 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "fig:T2K-accumulated-POT"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ in units of protons on target (POT).
+\end_layout
+
+\begin_layout Standard
+In addition the proton beam intensity, as measured in kW, has been increased
+ over time which increases the number of neutrino interactions observed
+ at SK.
+ Note that while 
+\begin_inset Formula $\pm250$
+\end_inset
+
+ kA is the preferred horn current in both FHC and RHC modes, the horns were
+ run briefly at +205 kA when operations resumed after 2011 Tōhoku earthquake.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Branch IntroductionT2KNearDetectors
+inverted 0
+status open
+
+\begin_layout Subsection
+Neutrino Near Detectors: ND280
+\end_layout
+
+\begin_layout Standard
+The T2K experiment has a near detector (ND) site at J-PARC that is designed
+ specifically to observe the neutrino beam in flight aimed at Super-K.
+ The primary purpose of a ND site is to 
+\shape italic
+constrain the neutrino flux and interaction rate
+\shape default
+ at SK in order to reduce the impact of their systematic uncertainties on
+ the oscillation analysis.
+ The analysis in this thesis uses the data collected by the off-axis ND.
+ The site is called ND280 and is located 280 m away from the production
+ target.
+ The primary detector is an off-axis, magnetized tracking detector consisting
+ of different subdetectors.
+ A separate detector array called the Interactive Neutrino Grid (INGRID)
+ measures the neutrino beam profile.
+\end_layout
+
+\begin_layout Standard
+The following subsections begin with a description of INGRID and its purpose
+ at ND280.
+ This is followed by a general description primary off-axis, magnetized
+ detector.
+ The last two subsections are descriptions of two primary subdetectors in
+ the off axis detector.
+ The first and second being the pi-zero detector (
+\begin_inset Formula $\pod$
+\end_inset
+
+) and time projection chamber (TPC), respectively.
+\end_layout
+
+\begin_layout Standard
+From here on, unless specified, INGRID will refer only to the on-axis ND
+ and ND280 will refer only to off-axis ND.
+\end_layout
+
+\begin_layout Subsubsection
+On-Axis Detector
+\end_layout
+
+\begin_layout Standard
+The on-axis near detector called the Interactive Neutrino Grid (INGRID)
+ is a tracking scintillator detector designed to directly measure the neutrino
+ beam profile.
+ As shown in 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "fig:INGRID"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, it is a grid of tracking modules in the shape of a cross centered at the
+ designed neutrino beam center (
+\begin_inset Formula $\theta=0$
+\end_inset
+
+).
+ The INGRID detector is capable of measuring the on-axis neutrino beam in
+ a 10 m 
+\begin_inset Formula $\times$
+\end_inset
+
+ 10 m transverse area.
+ Each module consists of alternating layers of iron plates and scintillator
+ bars except for the two most downstream scintillating layers which lack
+ iron plates.
+ To monitor any beam asymmetry, two separate modules are placed off the
+ grid axis.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/Introduction/INGRID.png
+	width 50text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+A schematic of the INGRID detector showing the arrangement of the tracking
+ scintillating modules.
+ There are 16 identical modules total with seven in the vertical row, seven
+ in the horizontal row, and two at off-axis positions.
+ With the vertical row upstream of the horizontal row, the designed beam
+ center intersects each row's center module
+\begin_inset CommandInset citation
+LatexCommand cite
+key "ingrid"
+literal "false"
+
+\end_inset
+
+.
+ 
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:INGRID"
+
+\end_inset
+
+
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+Schematic of the INGRID Detector
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Each scintillating bar consists of scintillator-doped polystyrene, which
+ emits light when a charged particle deposits energy in the medium.
+ Each bar contains a single wavelength-shifting (WLS) fiber to collect and
+ shift the light to a different wavelength.
+ The light trapped in the fiber is then collected by a device called a multipixe
+l photon counter (MPPC) and converted into an electrical signal.
+ A MPPC is a compact device containing many sensitive avalanche photodiode
+ pixels that act as Geiger micro-counters as shown in 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "fig:T2KMPPC"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+ The MPPCs are well matched with the spectral emission of the WLS fibers
+ and operate in a strong magnetic fields, unlike traditional photomultiplier
+ tubes.
+ In order to enhance the collection efficiency, a reflective 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+ce{TiO_2}
+\end_layout
+
+\end_inset
+
+ doped polystyrene shell surrounds each bar.
+ The bars are assembled into planes to provide tracking capabilities.
+ Veto planes also surround each module to prevent false signals to trigger.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/Introduction/MPPC.png
+	width 75text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Photographs of the specially designed MPPC in T2K.
+ A magnified face view is shown on the left with an entire unit shown on
+ the right.
+ Each device has 667-pixel sensors with an effective area of 
+\begin_inset Formula $1.3\text{ mm}\times1.3\text{ mm}$
+\end_inset
+
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Abe:2011ks"
+literal "false"
+
+\end_inset
+
+.
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+Photographs of the T2K MPPC
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:T2KMPPC"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The INGRID detector is continuously operated to check that the neutrino
+ beam center was properly aligned at its designed center.
+ Diagnostic plots such as 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "fig:INGRIDBeamProfile"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ are collected on a monthly basis to ensure that the neutrino flux at Super-Kami
+okande (SK) is consistent with T2K's requirements.
+ A history of the beam profile and event rate on INGRID between January
+ 2010 and October 2016 is shown in 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "fig:INGRIDBeamProfileHistory"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/Introduction/INGRIDBeamProfile.png
+	width 95text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+A beam profile taken with INGRID in April 2010 shows the Gaussian nature
+ of the beam.
+ The errors on the data points are about 
+\begin_inset Formula $1\%$
+\end_inset
+
+.
+\begin_inset CommandInset citation
+LatexCommand cite
+key "ingrid"
+literal "false"
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:INGRIDBeamProfile"
+
+\end_inset
+
+
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+The T2K On-Axis Beam Profile
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/Introduction/INGRIDBeamProfileHistory.png
+	lyxscale 45
+	width 95text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+The INGRID detector interaction event rate and beam profiles are shown.
+ The top panel shows the event rate for the three different horn currents.
+ The middle and bottom panels show the horizontal and vertical beam directions
+ with respect to the beam center, respectively.
+ A deviation of 1 mrad corresponds to a little under 30 cm.
+ The error bars shown are the statistical errors on the mean.
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+The INGRID Detector Event Rate
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:INGRIDBeamProfileHistory"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Off-Axis Detector
+\end_layout
+
+\begin_layout Standard
+The primary ND used for T2K is ND280, which is an off-axis, magnetized tracking
+ detector.
+ It is a collection of different detector technologies designed to facilitate
+ three primary measurements:
+\end_layout
+
+\begin_layout Enumerate
+The flux of 
+\begin_inset Formula $\numu$
+\end_inset
+
+ at SK,
+\end_layout
+
+\begin_layout Enumerate
+The irreducible 
+\begin_inset Formula $\nue$
+\end_inset
+
+ background flux at SK, and
+\end_layout
+
+\begin_layout Enumerate
+The rate of background 
+\begin_inset Formula $\numu$
+\end_inset
+
+ interactions and cross sections for the 
+\begin_inset Formula $\numu\rightarrow\nue$
+\end_inset
+
+ search.
+\end_layout
+
+\begin_layout Standard
+The ND280 detector consists of a pi-zero detector (
+\begin_inset Formula $\pod$
+\end_inset
+
+), a tracker region consisting of a fine grain detector (FGD) and a time
+ projection chamber (TPC), an electromagnetic calorimeter (ECal), and a
+ side muon range detector (SMRD).
+ The ND280 subdetectors are instrumented inside the UA1/NOMAD magnet, that
+ was recycled from the European Organization for Nuclear Research (CERN),
+ with the SMRD in the magnetic field return yoke itself.
+ All but the FGD are instrumented with the same MPPC technology mentioned
+ above.
+ A schematic of the different detector components of ND280 is shown in 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "fig:ND280Exploded"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/Introduction/ND280Exploded-Text-White.png
+	lyxscale 75
+	width 95text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+An exploded view of the ND280 off-axis detector.
+ The magnetic field is generated from the Solenoid Coil via an electrical
+ current which produces a dipole magnetic field of strength 0.2 T.
+ The field is designed to return to the Magnetic Yoke.
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:ND280Exploded"
+
+\end_inset
+
+
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+Schematic of the Off-Axis Near Detector ND280
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The analysis in this thesis uses measurements from the 
+\begin_inset Formula $\pod$
+\end_inset
+
+ and the TPC subdetectors.
+ The 
+\begin_inset Formula $\pod$
+\end_inset
+
+ serves as a massive target for the incident neutrino beam and the TPC serves
+ to measure the charge and momentum of the outgoing particles.
+\end_layout
+
+\begin_layout Standard
+The ND280 magnetic field is generated using electrical current fed through
+ solenoid coils to generate a dipole field of strength 0.2 T
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+This is a powerful magnetic field.
+ According to the The US/UK World Magnetic Model for 2015-2020, the magnetic
+ field strength on the surface of the Earth is about 
+\begin_inset Formula $0.294385$
+\end_inset
+
+ Gauss or 
+\begin_inset Formula $2.94385\times10^{-5}$
+\end_inset
+
+ T.
+ So the field inside ND280 is about 6800 times more forceful than the Earth's
+ influence
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Chulliat2015"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset VSpace defskip
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+ in the x direction.
+ The field is highly uniform near the center of the detector which is where
+ the majority of the TPC system is located.
+ However, it has significant deviations from 0.2 T near the solenoid edges.
+ In order to fully understand the field inside ND280, a precise 3D model
+ was generated using a machine controlled Hall probe.
+ The operating field strength during the mapping process was 0.07 T due to
+ power restrictions at the time.
+ The model was then compared with measurements in the TPC region as shown
+ in 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "fig:ND280magneticfieldmapping"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+ After scaling the model to the nominal operating strength of 0.2 T, a fractional
+ uncertainty of 
+\begin_inset Formula $10^{-3}$
+\end_inset
+
+ or uncertainty of 2 Gauss in each direction was obtained.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/Introduction/ND280BFieldDeviations.png
+	width 75text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+The ND280 detector magnetic field measurement in all three directions.
+ Each of the magnetic field components are compared between a fit of the
+ data and the actual measurements near the center of ND280.
+ The systematic uncertainty on the field is extracted from the RMS of the
+ mapping
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Abe:2011ks"
+literal "false"
+
+\end_inset
+
+.
+ 
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+The ND280 Detector Magnetic Field Measurement
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:ND280magneticfieldmapping"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The ND280 magnetic field permits the measurements of particle charge and
+ momentum.
+ A particle of charge 
+\begin_inset Formula $q$
+\end_inset
+
+, rest mass 
+\begin_inset Formula $m_{0}$
+\end_inset
+
+, and velocity 
+\begin_inset Formula $\mathbf{v}$
+\end_inset
+
+ under the influence of an external electric and magnetic fields, 
+\begin_inset Formula $\mathbf{E}$
+\end_inset
+
+ and 
+\begin_inset Formula $\mathbf{B}$
+\end_inset
+
+, respectively, experiences a force 
+\begin_inset Formula $\mathbf{F}$
+\end_inset
+
+ given by the Lorentz force equation
+\begin_inset Formula 
+\begin{equation}
+\mathbf{F}=q\left(\mathbf{E}+\mathbf{v}\times\mathbf{B}\right).\label{eq:Lorentzforce}
+\end{equation}
+
+\end_inset
+
+Assuming for now that there is no external electric field, the force on
+ the particle is 
+\begin_inset Formula 
+\begin{equation}
+\mathbf{F}=q\mathbf{v}\times\mathbf{B},\label{eq:LorentzforceNoE}
+\end{equation}
+
+\end_inset
+
+which is both orthogonal to 
+\begin_inset Formula $\mathbf{v}$
+\end_inset
+
+ and 
+\begin_inset Formula $\mathbf{B}$
+\end_inset
+
+.
+ Since the mechanical work performed on a particle in a magnetic field is
+ zero, the particle's energy is unchanged (
+\begin_inset Formula $\left|\mathbf{v}\right|$
+\end_inset
+
+ = 
+\begin_inset Formula $v$
+\end_inset
+
+ = constant).
+ Newton's Second Law allows us to rewrite the force as an change in momentum
+ 
+\begin_inset Formula $\mathbf{P}$
+\end_inset
+
+
+\begin_inset Formula 
+\begin{equation}
+\begin{aligned}\mathbf{F} & =\frac{d\mathbf{P}}{dt}\\
+ & =\frac{d}{dt}\left(\gamma(v)m_{0}\mathbf{v}\right)\\
+ & =m_{0}\mathbf{v}\left(\frac{d\gamma(v)}{dt}\right)+\gamma(v)m_{0}\left(\frac{d\mathbf{v}}{dt}\right)\\
+ & =m_{0}\mathbf{v}\left(\frac{d\gamma(v)}{dv}\right)\cancelto{0}{\left(\frac{dv}{dt}\right)}+\gamma(v)m_{0}\mathbf{a}\\
+ & =\gamma(v)m_{0}\mathbf{\mathbf{a}},
+\end{aligned}
+\label{eq:relativisticforceInBfield}
+\end{equation}
+
+\end_inset
+
+where 
+\begin_inset Formula $\mathbf{P=\gamma}(v)m_{0}\mathbf{v}$
+\end_inset
+
+ is the relativistic momentum and 
+\begin_inset Formula $\gamma(v)=\left(1-\left(v/c\right)^{2}\right)^{\nicefrac{-1}{2}}$
+\end_inset
+
+ is the Lorentz factor.
+ For uniform circular motion, the magnitude of the acceleration is given
+ by 
+\begin_inset Formula 
+\begin{equation}
+\left|\mathbf{a}\right|=v^{2}/R,\label{eq:uniformcircularmotion}
+\end{equation}
+
+\end_inset
+
+where R is the radius of curvature for the circle.
+ Combining 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:uniformcircularmotion"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ and 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:relativisticforceInBfield"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ with some algebra yields
+\begin_inset Formula 
+\begin{equation}
+R=\frac{\gamma(v)m_{0}v}{q\left|\mathbf{B}\right|\sin\theta_{\mathbf{vB}}},\label{eq:radiusofcurvature}
+\end{equation}
+
+\end_inset
+
+where 
+\begin_inset Formula $\theta_{\mathbf{vB}}$
+\end_inset
+
+ is the angle between 
+\begin_inset Formula $\mathbf{v}$
+\end_inset
+
+ and 
+\begin_inset Formula $\mathbf{B}$
+\end_inset
+
+.
+ The numerator of 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:radiusofcurvature"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ is recognized as the magnitude of the momentum 
+\begin_inset Formula $\left|\mathbf{P}\right|$
+\end_inset
+
+.
+ Some further rearrangement yields
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\left|\mathbf{P}\right|=q\left|\mathbf{B}\right|R\sin\theta_{\mathbf{vB}},\label{eq:momentuminmagneticfield}
+\end{equation}
+
+\end_inset
+
+and thus measuring the direction and radius of curvature inside the field
+ provides the charge and momentum, respectively, as desired.
+\end_layout
+
+\begin_layout Subsubsection
+Off Axis pi-zero detector (
+\begin_inset Formula $\pod$
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Standard
+The 
+\begin_inset Formula $\pod$
+\end_inset
+
+ is the primary detector used as the neutrino target in this thesis.
+ It is a plastic scintillator-based tracking calorimeter inside the ND280
+ magnet region.
+ It was designed to measure the neutral current (NC) process 
+\begin_inset Formula $\numu+N\rightarrow\numu+N+\pizero+X$
+\end_inset
+
+ on water, where 
+\begin_inset Formula $N$
+\end_inset
+
+ is a nucleus and 
+\begin_inset Formula $X$
+\end_inset
+
+ is any set of final state particles.
+ The NC 
+\begin_inset Formula $\pizero$
+\end_inset
+
+ process was expected to be a significant background in the 
+\begin_inset Formula $\nue$
+\end_inset
+
+ appearance search in the likelihood that 
+\begin_inset Formula $\theta_{13}\approx0$
+\end_inset
+
+ since a pi-zero decay can mimic a 
+\begin_inset Formula $\nue$
+\end_inset
+
+-like signal.
+ The 
+\begin_inset Formula $\pod$
+\end_inset
+
+ can be operated with or without water, enabling the determination of water
+ target (WT) cross sections by comparing water-in data with water-out data.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement t
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/Introduction/P0D_NIM_Cartoon.png
+	lyxscale 75
+	width 45text%
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Schematic of the 
+\begin_inset Formula $\pod$
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "subfig:p0dschematic"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/Introduction/P0DBars.png
+	lyxscale 50
+	width 45text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Schematic of a 
+\begin_inset Formula $\pod$
+\end_inset
+
+ module
+\begin_inset CommandInset label
+LatexCommand label
+name "subfig:p0dmoduleschematic"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Schematics of the 
+\begin_inset Formula $\pod$
+\end_inset
+
+.
+ Left: insets detail the Water Target and ECal layers.
+ Right: A view of a 
+\begin_inset Formula $\pod$
+\end_inset
+
+ module illustrating the orthogonal layout of the scintillating planes.
+ Both: the neutrino beam is coming from the left.
+ 
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+Schematic of the 
+\begin_inset Formula $\pod$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:pod"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+A representation of the 
+\begin_inset Formula $\pod$
+\end_inset
+
+ is shown in 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "fig:pod"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+ The active detector components are very similar to INGRID's design with
+ the primary difference being that each bar is triangular in shape as shown
+ in 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "fig:P0Dbar"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+ A plane of 134 horizontal and 129 vertical bars together form a 
+\begin_inset Formula $\pod$
+\end_inset
+
+ module (
+\begin_inset Formula $\podule$
+\end_inset
+
+) as shown in 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+Figure~
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "subfig:p0dmoduleschematic"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+ The purpose of the triangular bar design is that particle tracks (muons
+ and pions) are to likely to deposit energy in only two bars for each layer
+ crossed.
+ This would not be true for electromagnetic shower events which would deposit
+ energy in many bars.
+ These differences provide a discriminant between particle tracks and electromag
+netic showers.
+\end_layout
+
+\begin_layout Standard
+The 
+\begin_inset Formula $\pod$
+\end_inset
+
+ dimensions are 
+\begin_inset Formula $2.298\times2.468\times2.350\ \text{m}^{3}$
+\end_inset
+
+, in XYZ respectively, with a fiducial mass of ∼1900 kg for water and 3570
+ kg for other materials.
+ The total mass of the 
+\begin_inset Formula $\pod$
+\end_inset
+
+ is approximately 15,800 kg when the bags are full of water.
+ The 
+\begin_inset Formula $\pod$
+\end_inset
+
+ is arranged into three regions: a water target (WT) region and two ECals.
+ The WT region contains 26 
+\begin_inset Formula $\podule$
+\end_inset
+
+s interleaved between bags of water 2.8 cm thick when filled and a 1.3 mm
+ thick brass sheets designed to help contain 
+\begin_inset Formula $\pizero$
+\end_inset
+
+ decay photons.
+ The last two regions are the upstream ECal and central ECal, each with
+ seven 
+\begin_inset Formula $\podule$
+\end_inset
+
+s interleaved with steel sheets clad with lead between them
+\begin_inset CommandInset citation
+LatexCommand cite
+key "AbePhyRevD9652017"
+literal "false"
+
+\end_inset
+
+.
+ An elemental composition of the WT is shown in 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "tab:P0DWaterTargetMass"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Elemental composition of 
+\begin_inset Formula $\pod$
+\end_inset
+
+ water target region.
+ The table is sorted from top to bottom by fraction of mass.
+ This table was originally produced in reference 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "AbePhyRevD9652017"
+literal "false"
+
+\end_inset
+
+.
+ 
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:P0DWaterTargetMass"
+
+\end_inset
+
+
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+\begin_inset Formula $\pod$
+\end_inset
+
+ Water Target Mass Composition
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="8" columns="3">
+<features booktabs="true" tabularvalignment="middle">
+<column alignment="left" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Element
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Symbol
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Fraction [%]
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Carbon
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+C
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+45.0
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Oxygen
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+O
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+29.9
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Copper
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Cu
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+14.3
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Hydrogen
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+H
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+8.0
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Zinc
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Zn
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1.6
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Chlorine
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Cl
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1.1
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Titanium
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Ti
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.1
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement t
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/Introduction/P0DBarTop.png
+	width 30text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+A cross section of a 
+\begin_inset Formula $\pod$
+\end_inset
+
+ scintillating bar.
+ The base and height is 33 mm long and 17 mm high.
+ The wavelength shifting fiber is inserted in the bored hole which is half-way
+ between the base and tip.
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:P0Dbar"
+
+\end_inset
+
+
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+Cross Section of a 
+\begin_inset Formula $\pod$
+\end_inset
+
+ Scintillating Bar
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The readout electronics for the 
+\begin_inset Formula $\pod$
+\end_inset
+
+ is based on the Trip-T application specific integrated circuit (ASIC) shared
+ among the SMRD, ECals, and INGRID.
+ Signals from 64 MPPCs are routed to Trip-T front end boards (TFB) that
+ each house four Trip-T ASICs.
+ Each Trip-T collects the MPPC charge in 23 programmable integration cycles.
+\end_layout
+
+\begin_layout Standard
+The TFBs are readout to back-end electronics which control the TFBs and
+ synchronize clocks.
+ A total of six readout merger module (RMM) electronics receive the TFB
+ data and control each TFB ASIC.
+ The RMM internal timing clocks are synchronized with a cosmic trigger module
+ and a slave clock module (SCM), both of which are synchronized with a master
+ clock module from the beamline.
+ Synchronizing the RMMs with the SCM allows for the Trip-T ASIC integration
+ windows to match with the beam.
+ The RMMs are responsible for distributing the TFB data to the data acquisition
+ (DAQ) system for storage.
+\end_layout
+
+\begin_layout Standard
+The ND280 DAQ consists of a MIDAS framework to monitor and control data
+ collection.
+ The primary purpose of the DAQ system is to merge data and package it for
+ long term storage.
+ In conjunction with the DAQ system is the Global Slow Control (GSC) system
+ which measures temperatures, voltages, and other physical quantities.
+ Together the DAQ and GSC help scientists consistently produce high quality
+ data and maintain the overall stability of the detector
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Abe:2011ks"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsubsection
+Off Axis Time Projection Chamber (TPC)
+\end_layout
+
+\begin_layout Standard
+The ND280 TPC is designed to provide momentum measurements of charged particle
+ tracks and high resolution particle counting capabilities.
+ The TPC is divided into three volumes separated by the two FGD volumes.
+ Each volume (
+\begin_inset Formula $2.3\times2.4\times1.0\ \text{m}^{3}$
+\end_inset
+
+) consists of an inner box that holds an argon-based gas and an outer box
+ that holds an insulating 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+ce{CO_2}
+\end_layout
+
+\end_inset
+
+ gas.
+ The inner gas mixture is 3000 L of 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+ce{Ar}:
+\backslash
+ce{CF_4}:
+\backslash
+ce{C_4}
+\backslash
+ce{H_10}
+\end_layout
+
+\end_inset
+
+ (95:3:2) gas.
+ It was selected for its high speed, low diffusion, and good performance
+ with a bulk micromegas detector
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Abe:2011ks"
+literal "false"
+
+\end_inset
+
+.
+ A simplified schematic of the TPC is shown in 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "fig:TPC"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/Introduction/TPC.png
+	lyxscale 75
+	width 75text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Cut-away drawing of a TPC volume in ND280
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Abe:2011ks"
+literal "false"
+
+\end_inset
+
+.
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:TPC"
+
+\end_inset
+
+
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+Cut-Away Drawing of a TPC Volume in ND280
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+A TPC works by measuring the ionization electrons left in the gaseous medium
+ as charged particles through it.
+ The electron drift acceleration is rapid due to the strong 5 kV/cm electric
+ field present.
+ Drift electrons are multiplied and sampled by micromegas detectors that
+ line the sides of the TPC, providing nearly 3 
+\begin_inset Formula $\text{m}^{2}$
+\end_inset
+
+ of active surface coverage.
+ Arrival times of the electrons provide timing information to give a full
+ three dimensional portrait of the events.
+\end_layout
+
+\begin_layout Subsubsection
+Track Reconstruction in ND280
+\end_layout
+
+\begin_layout Standard
+The goal of track reconstruction software is to capture the shape and history
+ of energy deposited in the detector.
+ Since ND280 is collection of different technologies, highly specific algorithms
+ and models are used to identify track-like patterns.
+ Since this analysis uses neutrino events incident in the 
+\begin_inset Formula $\pod$
+\end_inset
+
+ and cross into the TPC, a unified and coherent reconstruction model is
+ needed.
+ A reconstruction package called 
+\begin_inset Quotes eld
+\end_inset
+
+Global
+\begin_inset Quotes erd
+\end_inset
+
+ is designed to combine all ND280 information for this purpose.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Branch IntroductionT2KFarDetector
+inverted 0
+status open
+
+\begin_layout Subsection
+Neutrino Far Detector: Super-Kamiokande
+\end_layout
+
+\begin_layout Standard
+The Super-Kamioka neutrino detection experiment, abbreviated as Super-Kamiokande
+ (SK), is the dedicated far detector for the T2K experiment.
+ Positioned at 295 km away from the neutrino source with a 1 km overburden,
+ it is well designed to detect the elusive neutrino.
+ Containing about 50 kt of pure water, is it lined with photomultiplier
+ tubes (PMTs) in both an inner and outer detector as shown in 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "fig:Diagram-of-SK"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/Introduction/SKDrawing.png
+	width 95text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Diagram of the Super-Kamiokande detector consisting mainly of the inner
+ and outer detector segments.
+ The boundary between the two segments is cylindrical scaffolding used to
+ mount the PMTs and optically isolate the segments.
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Diagram-of-SK"
+
+\end_inset
+
+
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+Diagram of the Super-Kamiokande Detector
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+When charged particles travel through the water, a Cherenkov radiation cone
+ is produced.
+ The sharpness of the cone edge is a unique identifier for the particle
+ species that produced it.
+ An electron produces a fuzzy edge since it experiences many large multiple
+ scatterings off the water molecules.
+ A muon on the other hand produces a sharp edge since it is much more massive
+ and thus is less perturbed by the water molecules.
+ Both types of events are shown in 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "fig:Representative-T2K-events"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+ By identifying the sharpness of the cone, the particle species is deduced.
+ If a cone is coincident with the T2K neutrino beam, it can be used to infer
+ the neutrino flavor.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/Introduction/SKEventDisplay.png
+	width 99text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Representative T2K events in Super-Kamiokande for (a) a muon-like ring and
+ (b) an electron-like ring.
+ Both figures show Super-Kamiokande unrolled onto a plane with each colored
+ point representing a PMT.
+ The color of each PMT corresponds to the amount of charge collected.
+ In upper right corner shows the same unrolled hit map for the veto outer
+ detector.
+ White crosses indicate the location of the reconstructed vertex.
+ A solid diamond marks the location where a ray parallel to the beam would
+ intersect the detector wall starting from the vertex.
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+Representative T2K Events in Super-Kamiokande
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Representative-T2K-events"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+While events from SK are not used in this analysis, the goal is to try to
+ improve T2K's oscillations parameters which depend on comparing the ND
+ neutrino measurements to the far detector neutrino measurements.
+ Therefore a discussion on the T2K ND constraint on the oscillation analysis
+ is warranted.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Oscillation Analysis ND Constraint
+\end_layout
+
+\begin_layout Standard
+As stated before, the primary goals of T2K are measure to measure the oscillatio
+n parameters 
+\begin_inset Formula $\theta_{13}$
+\end_inset
+
+, 
+\begin_inset Formula $\theta_{23}$
+\end_inset
+
+, 
+\begin_inset Formula $\Delta m_{23}^{2}$
+\end_inset
+
+, and nonzero 
+\begin_inset Formula $\deltacp$
+\end_inset
+
+.
+ This is performed by fitting the oscillation parameters to the number of
+ observed flavored neutrinos at SK.
+ The number of observed neutrino events, 
+\begin_inset Formula $N_{\nu_{\alpha}}$
+\end_inset
+
+, of flavor 
+\begin_inset Formula $\nu_{\alpha}$
+\end_inset
+
+ is 
+\begin_inset Formula 
+\begin{equation}
+N_{\nu_{\alpha}}=B+S_{\nu_{\alpha}}\label{eq:Nsigplusbkg}
+\end{equation}
+
+\end_inset
+
+where 
+\begin_inset Formula $B$
+\end_inset
+
+ is the number of all misidentified 
+\begin_inset Formula $\nu_{\alpha}$
+\end_inset
+
+ events and 
+\begin_inset Formula $S_{\nu_{\alpha}}$
+\end_inset
+
+is the number of true events.
+ The expected neutrino appearance rate is given by
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\begin{aligned}S_{\nu_{\alpha}} & =\sum_{\lambda=e,\mu}\left[\mathcal{P}_{\nu_{\lambda}\rightarrow\nu_{\alpha}}\left(E_{\nu};\vec{o}\right)\right]\times\sum_{t}\left[\sigma_{\nu_{\alpha}}^{t}\left(E_{\nu}\right)\cdot t_{N}\right]\\
+ & \times\Phi_{\nu_{\alpha}}\left(E_{\nu}\right)\times\epsilon\left(p_{\alpha},\theta_{\alpha}\right),
+\end{aligned}
+\label{eq:Nsig}
+\end{equation}
+
+\end_inset
+
+where 
+\begin_inset Formula $\vec{o}$
+\end_inset
+
+ is a vector of the oscillation parameters from 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:threeflavorprobgeneral"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, 
+\begin_inset Formula $\sigma_{\nu_{\alpha}}^{t}$
+\end_inset
+
+ is the cross section for 
+\begin_inset Formula $\nu_{\alpha}$
+\end_inset
+
+ on target 
+\begin_inset Formula $t$
+\end_inset
+
+, 
+\begin_inset Formula $t_{N}$
+\end_inset
+
+ is the number of targets of type 
+\begin_inset Formula $t$
+\end_inset
+
+, 
+\begin_inset Formula $\Phi_{\nu_{\alpha}}$
+\end_inset
+
+ is the flux of neutrinos, and 
+\begin_inset Formula $\epsilon\left(p_{\alpha},\cos\theta_{\alpha}\right)$
+\end_inset
+
+ is the efficiency of reconstructing and correctly categorizing the event
+ as a function of momentum 
+\begin_inset Formula $p$
+\end_inset
+
+ and angle 
+\begin_inset Formula $\theta$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement t
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/Introduction/SKFHCnumu.png
+	lyxscale 25
+	width 45text%
+	special page=14
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset Formula $\numu$
+\end_inset
+
+ in FHC
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/Introduction/SKFHCnue.png
+	lyxscale 25
+	width 45text%
+	special page=14
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset Formula $\nue$
+\end_inset
+
+ in FHC
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/Introduction/SKRHCnumubar.png
+	lyxscale 25
+	width 45text%
+	special page=14
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset Formula $\numubar$
+\end_inset
+
+ in RHC
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/Introduction/SKRHCnuebar.png
+	lyxscale 25
+	width 45text%
+	special page=14
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset Formula $\nuebar$
+\end_inset
+
+ in RHC
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Predicted and best fit measurements for the T2K flux at Super-Kamiokande.
+ The horizontal axes are the neutrino energy and the vertical axes are the
+ fractional change in the flux normalization.
+ These figures were taken from the 2017 T2K oscillation analysis 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Abe:2017vif"
+literal "false"
+
+\end_inset
+
+.
+ A value 1.1 corresponds to a 10% increase in the number of predicted events.
+ 
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+Predicted and Best Fit Measurements for the T2K Flux at SK
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:PredictedBestFitSKFlux"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\shape italic
+Having a large, sensitive off-axis ND like ND280 provides a tool to determine
+ the oscillation analysis constraint
+\shape default
+s.
+ This includes the oscillation channel 
+\begin_inset Formula $\numu\rightarrow\nue$
+\end_inset
+
+, but also the intrinsic 
+\begin_inset Formula $\nue$
+\end_inset
+
+ background in the T2K beam.
+ These neutrinos interact the same way an oscillated neutrino would at SK.
+ Without ND280, the fractional uncertainty on the flux rate is about ~10%
+ per energy bin.
+ These constraints are obtained from the MUMON detector discussed above
+ and the NA61/SHINE experiment
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Abgrall:2016fs"
+literal "false"
+
+\end_inset
+
+.
+ Adding the ND constraint reduces the uncertainty to about ~5% as seen in
+ 
+\begin_inset CommandInset ref
+LatexCommand vref
+reference "fig:PredictedBestFitSKFlux"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/Introduction/ZellerXSec.png
+	lyxscale 50
+	width 60text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Predicted CC inclusive scattering cross section at T2K relevant energies.
+ Only the most common final state modes are shown.
+ A thick, red line indicates the T2K 
+\begin_inset Formula $\nue$
+\end_inset
+
+ appearance probability maximum.
+ For CCQE-like interactions (nucleon), a single nucleon is struck.
+ Higher energy interactions like resonance (
+\begin_inset Formula $1\pi$
+\end_inset
+
+) and DIS (multi-
+\begin_inset Formula $\pi$
+\end_inset
+
+) interactions produce pion and kaon final states as well.
+ All combined, the inclusive cross section increases linearly with energy.
+ This image was edited and originally produced by Formaggio and Zeller 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Formaggio:2013kya"
+literal "false"
+
+\end_inset
+
+.
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+Predicted CCInc Cross Section at T2K Energies
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:PredictedCCincxsec"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+T2K uses the NEUT
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+NEUT is neither an initialism nor acronym.
+\begin_inset VSpace defskip
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Hayato2009"
+literal "false"
+
+\end_inset
+
+ program library to simulate neutrino interactions with nucleons and the
+ nucleus.
+ It was originally designed to simulate atmospheric neutrinos for the Kamioka
+ Nucleon Decay Experiment (Kamiokande), the predecessor to the Super-Kamiokande
+ experiment.
+ Included in NEUT are numerous models for neutrino interactions on matter
+ and intra-medium hadron spatial transport within the nucleus.
+\end_layout
+
+\begin_layout Standard
+Using the ND280 constraint tunes the NEUT cross section model to best match
+ the T2K data.
+ The canonical T2K cross section model in NEUT is problematic due to dependence
+ on effective models describing neutrino-nucleus scattering.
+ In particular, large model and data disparities exist within recent, high
+ statistics CCQE measurements
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Formaggio:2013kya"
+literal "false"
+
+\end_inset
+
+.
+ This forces T2K to constantly explore other physics models, some of which
+ are employed in this analysis.
+\end_layout
+
+\begin_layout Subsection
+Contributions to the T2K Experiment
+\end_layout
+
+\begin_layout Standard
+Since joining the T2K experiment five years ago, I have played a critical
+ role in an analysis that is currently in preparation for publication
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Schwehr2018a"
+literal "false"
+
+\end_inset
+
+.
+ This analysis was a second generation measurement of the 
+\begin_inset Formula $\numu$
+\end_inset
+
+ CC single pion production cross section on water in the 
+\begin_inset Formula $\pod$
+\end_inset
+
+.
+ I am a co-author of that paper and its internal T2K technical document
+ that outlines the analysis procedure and studies.
+ In particular, I helped develop the momentum calibration and event selection
+ using machine learning.
+ Further details on my contributions are found in Appendix 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "app:podcc1pi"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+In addition to analysis work, the majority of my contributions to the experiment
+ include on-site expertise for the ND280 detector.
+ I was involved in the 2015 work to replace two 
+\begin_inset Formula $\pod$
+\end_inset
+
+ water bags when they showed evidence of leaking.
+ Additionally, I helped measure the 
+\begin_inset Formula $\pod$
+\end_inset
+
+ water mass and deformations in the 
+\begin_inset Formula $\pod$
+\end_inset
+
+ structure due to the to internal stresses from the water mass.
+ I am certified as a Trip-T ASIC expert, 
+\begin_inset Formula $\pod$
+\end_inset
+
+ water system and calibration expert, and experienced DAQ shifter.
+ As an expert in these areas, I was solely responsible for daily reporting
+ and monitoring for the SMRD, ECal, and 
+\begin_inset Formula $\pod$
+\end_inset
+
+ detectors during beam taking periods.
+ This included being the first point-of-contact, 24/7 for those electronic
+ systems and the 
+\begin_inset Formula $\pod$
+\end_inset
+
+ water target whenever problems arose.
+\end_layout
+
+\begin_layout Standard
+My most recent contribution was participating in the 2018 SK open tank work
+ at the Kamioka Observatory.
+ My work had three primarily goals:
+\end_layout
+
+\begin_layout Itemize
+Cleaning the support structures, walls, and PMTs of non-water contaminants.
+ This includes using clean wipes to remove diesel fume residue on the support
+ structures from the initial construction and rust removal using electrolysis,
+\end_layout
+
+\begin_layout Itemize
+Collecting glass shards remaining in the tank after a major multi-PMT implosion
+ in 2001, and
+\end_layout
+
+\begin_layout Itemize
+Replacing the light-tight insulation that separates the inner and outer
+ detectors.
+\end_layout
+
+\begin_layout Standard
+These tasks helped the Kamioka Observatory identify external water leaks
+ and remove contaminants in the SK detector.
+ This is all in preparation for adding gadolinium (Gd), a rare earth metal,
+ to the pure water in the detector which will enhance the antineutrino capture
+ cross section.
+\end_layout
+
+\begin_layout Section
+Summary
+\end_layout
+
+\begin_layout Standard
+The neutrino is an elusive particle to detect.
+ The relatively new neutrino oscillation phenomenon has opened up the further
+ possibilities of exploring fundamental questions of the Universe like CP
+ violation.
+ In the T2K experiment, some of the uncertainties associated with neutrino
+ oscillations are being explored.
+ To facilitate these goals, constraining all forms of uncertainty in neutrino-nu
+clear interactions and flux help improve its sensitivity to the oscillation
+ predictions.
+\end_layout
+
+\begin_layout Standard
+The next chapters in this thesis are presented in the following order.
+ First is the ND280 constraint on the flux and cross section models using
+ the beam and near detector flux task force (BANFF) maximum likelihood fit.
+ Next is the description of the analysis samples that are used in the BANFF
+ fit.
+ With the samples defined, the parameterization of the fit bins and penalty
+ terms are defined for this analysis.
+ This is followed by the validation of the BANFF fit in a few scenarios.
+ Then the BANFF postfit results are analyzed in relation to previous analyses.
+ The final chapter is a discussion of the results and prospects for the
+ future.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document

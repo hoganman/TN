@@ -1,0 +1,1448 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass extreport
+\begin_preamble
+% ams math packages
+\usepackage[cmex10]{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+
+% graphics packages
+\usepackage{graphicx} % remove pdftex if you are not compiling to pdf
+%\graphicspath{{./figures/}} % this places all graphics in the figures subdirectory
+
+% allowed graphics extensions
+% uncomment if you prefer to add extension in \includegraphics
+\DeclareGraphicsExtensions{.pdf,.png,.jpg}
+
+% allows the creation of subfigures
+\usepackage[caption=false]{subfig}
+
+% book tables are simple and look nice
+\usepackage{booktabs}
+
+% for specifying urls and links
+\usepackage{url}
+\urlstyle{same} % same style as regular text
+
+% for defining colors
+\usepackage{xcolor}
+
+%\usepackage[labelformat=empty]{caption}
+%\usepackage{subcaption}
+\usepackage{lmodern}
+\usepackage{csquotes}
+\usepackage{multirow}
+\usepackage{multicol}
+\usepackage{hepunits}
+\usepackage{hepnames}
+\usepackage{physics}
+
+\usepackage[%
+  pdfpagelabels,
+  pdfusetitle,
+  %hidelinks,
+  %colorlinks=true,
+  %pdfborder={0 0 0},
+  linkcolor=blue,
+  filecolor=magenta,
+  urlcolor=cyan,
+  pagebackref,
+  bookmarksopen,
+  bookmarksnumbered]{hyperref}
+
+\usepackage{sectsty}
+\chapterfont{\centering}
+
+\usepackage{braket}
+\end_preamble
+\use_default_options true
+\master ../T2K-TN-370.lyx
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "palatino" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format pdf2
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\pdf_title "HoganThesis"
+\pdf_author "Matthew Hogan"
+\pdf_bookmarks true
+\pdf_bookmarksnumbered true
+\pdf_bookmarksopen false
+\pdf_bookmarksopenlevel 1
+\pdf_breaklinks false
+\pdf_pdfborder false
+\pdf_colorlinks true
+\pdf_backref false
+\pdf_pdfusetitle true
+\papersize letterpaper
+\use_geometry true
+\use_package amsmath 0
+\use_package amssymb 0
+\use_package cancel 0
+\use_package esint 0
+\use_package mathdots 0
+\use_package mathtools 0
+\use_package mhchem 0
+\use_package stackrel 0
+\use_package stmaryrd 0
+\use_package undertilde 0
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 0
+\use_minted 0
+\branch BANFFLikelihoodIntroduction
+\selected 1
+\filename_suffix 0
+\color #faf0e6
+\end_branch
+\branch BANFFLikelihoodMotivation
+\selected 1
+\filename_suffix 0
+\color #faf0e6
+\end_branch
+\branch BANFFLikelihoodIntroToPDFs
+\selected 1
+\filename_suffix 0
+\color #faf0e6
+\end_branch
+\branch BANFFLikelihoodTestStatistic
+\selected 1
+\filename_suffix 0
+\color #faf0e6
+\end_branch
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 1in
+\topmargin 1in
+\rightmargin 1in
+\bottommargin 1in
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+\begin_inset Branch BANFFLikelihoodIntroduction
+inverted 0
+status open
+
+\begin_layout Standard
+The T2K experiment has organized a task force dedicated to provide the near
+ detector constraint for the oscillation analysis.
+ This task force is called the 
+\begin_inset Quotes eld
+\end_inset
+
+Beam And Near detector Flux task Force (BANFF)
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+Banff is a national park in Canada.
+\end_layout
+
+\end_inset
+
+.
+ The BANFF group has implemented a binned likelihood maximization fit of
+ the ND280 data for the oscillation analysis
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Abe2015c"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+The BANFF near detector (ND) constraint fit is done separately from fitting
+ the Super-Kamiokande (SK) data.
+ In a joint fit, the measurements from both detectors are considered to
+ estimate the oscillation parameters.
+ This joint-fit approach is more computationally expensive since it must
+ include all parameters that affect the both the ND and SK systematic uncertaint
+ies, also called nuisance parameters.
+ Also the time to perform a fit increases non-linearly with increasing the
+ number of fit parameters.
+ Therefore the separate BANFF likelihood maximization, hitherto referred
+ to as the 
+\begin_inset Quotes eld
+\end_inset
+
+BANFF fit
+\begin_inset Quotes erd
+\end_inset
+
+, must include parameters that affect the measurement of the oscillation
+ parameters.
+ Then those fit parameters and their respective covariances are used as
+ inputs in the oscillation analysis.
+ This 
+\begin_inset Quotes eld
+\end_inset
+
+divide-and-conquer
+\begin_inset Quotes erd
+\end_inset
+
+ approach allows for more rapidly completed studies on the effects of model
+ parameters and biases present.
+ However, information encoded in the ND280 measurements for shared nuisances
+ such as the neutrino flux is inevitably lost in the BANFF fit.
+\end_layout
+
+\begin_layout Standard
+The modern BANFF fit is described in detail in the following reference 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Abe:2017vif"
+literal "false"
+
+\end_inset
+
+.
+ To summarize the details, the BANFF fit uses a frequentist approach to
+ find the best parameter set to maximize a binned likelihood.
+ Subsequent updates to the BANFF fit have increased the sample sizes and
+ systematic uncertainty parameterizations.
+\end_layout
+
+\begin_layout Standard
+This chapter describes the BANFF fit and overview of the fitting procedure.
+ First we introduce the concept of likelihood functions in 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "sec:Conditional-Probability-Density"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+ Then we explore the mechanics of the BANFF fit using likelihood functions
+ in 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "sec:The-BANFF-Fit"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+ The final topic is a chapter summary in 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "sec:LikielihoodSummary"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Branch BANFFLikelihoodIntroToPDFs
+inverted 0
+status open
+
+\begin_layout Section
+Conditional Probability Density Functions
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:Conditional-Probability-Density"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Consider the problem of extracting physics parameters 
+\begin_inset Formula $\vec{y}$
+\end_inset
+
+ given some data vector 
+\begin_inset Formula $\vec{N}$
+\end_inset
+
+.
+ The conditional probability density function (PDF) 
+\begin_inset Formula $\mathcal{P}$
+\end_inset
+
+ to measure these parameters is given as
+\begin_inset Formula 
+\begin{equation}
+\prob{\vec{y}\left|\vec{N}\right.}=\frac{\mathcal{L}\left(\left.\vec{N}\right|\vec{y}\right)\prob{\vec{y}}}{\int\mathcal{L}\left(\left.\vec{N}\right|\vec{x}\right)\prob{\vec{x}}d\vec{x}},\label{eq:pdfgeneral}
+\end{equation}
+
+\end_inset
+
+where everything on the right of the vertical lines represents a condition
+ on the probability.
+ 
+\begin_inset Formula $\mathcal{L}\left(\left.\vec{N}\right|\vec{y}\right)$
+\end_inset
+
+ is the likelihood of the model with parameters 
+\begin_inset Formula $\vec{y}$
+\end_inset
+
+, 
+\begin_inset Formula $\prob{\vec{y}}$
+\end_inset
+
+ is the probability for the model, and the denominator is the normalization.
+ A frequentist interpretation of the PDF is a proportion of outcomes of
+ repeated trials or experiments.
+ A likelihood function is an expression of the probability of observing
+ data as a function of the model parameters in their appropriate ranges.
+\end_layout
+
+\begin_layout Standard
+One arrives at 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:pdfgeneral"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ by using the definition of compound probabilities
+\begin_inset Formula 
+\begin{equation}
+\prob{A,B}=\prob{B\left|A\right.}\prob A,\label{eq:compoundpdfrule}
+\end{equation}
+
+\end_inset
+
+to evaluate 
+\begin_inset Formula $\prob{\vec{y}\left|\vec{N}\right.}$
+\end_inset
+
+ as
+\begin_inset Formula 
+\begin{equation}
+\prob{\underset{B}{\underbrace{\vec{y}}}\left|\underset{A}{\underbrace{\vec{N}}}\right.}=\frac{\prob{\vec{N},\vec{y}}}{\prob{\vec{N}}},\label{eq:pdfproof1}
+\end{equation}
+
+\end_inset
+
+where the denominator is the normalization of the PDF.
+ The compound PDF 
+\begin_inset Formula $\prob{\vec{N},\vec{y}}$
+\end_inset
+
+ can be expanded using Bayes' theorem which states
+\begin_inset Formula 
+\begin{equation}
+\prob{A\left|B\right.}\prob B=\prob{B\left|A\right.}\prob A,\label{eq:bayestheorem}
+\end{equation}
+
+\end_inset
+
+and combined with 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:compoundpdfrule"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ yields
+\begin_inset Formula 
+\begin{equation}
+\prob{\underset{A}{\underbrace{\vec{N}}},\underset{B}{\underbrace{\vec{y}}}}=\prob{\left.\vec{N}\right|\vec{y}}\times\prob{\vec{y}},\label{eq:pdfproof2}
+\end{equation}
+
+\end_inset
+
+where the PDFs to the left and right of the 
+\begin_inset Formula $\times$
+\end_inset
+
+ operator are the likelihoods and priors, respectively.
+ Combining resulting in 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:pdfproof1"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ and 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:pdfproof2"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ reproduces the original expression of 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:pdfgeneral"
+plural "false"
+caps "true"
+noprefix "false"
+
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Branch BANFFLikelihoodTestStatistic
+inverted 0
+status open
+
+\begin_layout Section
+The BANFF Fit Test Statistic
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:The-BANFF-Fit"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Curve fitting is commonly used in particle physics in order to constrain
+ unknown model parameters using histograms.
+ This procedure seeks to find the 
+\begin_inset Quotes eld
+\end_inset
+
+best
+\begin_inset Quotes erd
+\end_inset
+
+ set of the model predictions, 
+\begin_inset Formula $\theta$
+\end_inset
+
+, that match the data, as is the case for the BANFF fit.
+ This analysis uses a chi-squared test to provide a goodness of fit metric,
+ a parameter estimation (also referred to as 
+\begin_inset Quotes eld
+\end_inset
+
+best fit parameters
+\begin_inset Quotes erd
+\end_inset
+
+), and a error estimation for the BANFF fit.
+\end_layout
+
+\begin_layout Standard
+The BANFF fit is an attempt to maximize the agreement between the measured
+ and predicted data curves at the ND280 detector.
+ This is equivalent to maximizing a binned likelihood function 
+\begin_inset Formula $\mathcal{L}$
+\end_inset
+
+ of the ND280 data given a set of parameters in the likelihood function
+ that predict the measured rate.
+ The use of likelihood functions in fits to histograms is explained further
+ in reference 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "baker-cousins"
+literal "false"
+
+\end_inset
+
+ and the PDG review on statistics.
+ By invoking Wilks' theorem, also known as the likelihood ratio theorem,
+ the likelihood maximization procedure is converted into a minimization
+ problem involving a test statistic denoted as a chi-squared.
+ Below is an explanation of the BANFF test statistic and the model terms.
+\end_layout
+
+\begin_layout Subsection
+Log-Likelihood Ratio
+\end_layout
+
+\begin_layout Standard
+Consider many binned samples that select different charged current topologies.
+ A convenient choice of observables for all the samples is the outgoing
+ charged lepton 
+\begin_inset Formula $l$
+\end_inset
+
+ momentum 
+\begin_inset Formula $P_{l}$
+\end_inset
+
+ and angle 
+\begin_inset Formula $\cos\theta_{l}$
+\end_inset
+
+ as measured in the ND280 detector
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Hartz2015"
+literal "false"
+
+\end_inset
+
+.
+ For each 
+\begin_inset Formula $\left(P_{l},\cos\theta_{l}\right)$
+\end_inset
+
+ analysis bin 
+\begin_inset Formula $i=1,2,\ldots,M-1,M$
+\end_inset
+
+, the likelihood is given by
+\begin_inset Formula 
+\begin{equation}
+\begin{aligned}\mathcal{L}\left(\vec{N}^{d}\left|\vec{N}^{p}\right.\right) & =\prod_{i=1}^{M}\frac{\left(\vec{N}_{i}^{p}\right)^{\vec{N}_{i}^{d}}\exp\left(-\vec{N}_{i}^{p}\right)}{\vec{N}_{i}^{d}!}\end{aligned}
+\label{eq:likelihoodPoisson}
+\end{equation}
+
+\end_inset
+
+where 
+\begin_inset Formula $\vec{N}_{i}^{d}$
+\end_inset
+
+ is the number of observed data events in the 
+\begin_inset Formula $i$
+\end_inset
+
+th bin and 
+\begin_inset Formula $\vec{N}_{i}^{p}$
+\end_inset
+
+ is the number of predicted events as a function of the fit parameters in
+ the same bin.
+ One recognizes the likelihood function in 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:likelihoodPoisson"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ as a product of Poisson distributions, since this is counting data measured
+ in 
+\begin_inset Formula $M$
+\end_inset
+
+ analysis bins.
+ The parameters that affect the predicted event rate are:
+\end_layout
+
+\begin_layout Itemize
+The cross section physics models, labeled as 
+\begin_inset Quotes eld
+\end_inset
+
+xsec
+\begin_inset Quotes erd
+\end_inset
+
+,
+\end_layout
+
+\begin_layout Itemize
+The neutrino flux, and
+\end_layout
+
+\begin_layout Itemize
+The detector biases and inefficiencies.
+\end_layout
+
+\begin_layout Standard
+We use these parameters to calculate the number of predicted charged current
+ (CC) events 
+\begin_inset Formula $N^{\nu_{l}}$
+\end_inset
+
+ from any neutrino flavor 
+\begin_inset Formula $\nu_{l}$
+\end_inset
+
+ at ND280 as
+\begin_inset Formula 
+\begin{equation}
+N^{\nu_{l}}=\underset{\text{Flux}}{\underbrace{\Phi_{\nu_{l}}}}\times\left[\sum_{t}\underset{\text{Effective area}}{\underbrace{\left(\sigma_{\nu_{l}}^{t}M^{t}\right)}}\right]\times\underset{\text{Efficiency}}{\underbrace{\epsilon_{\nu_{l}}}},\label{eq:n-predicted-general}
+\end{equation}
+
+\end_inset
+
+where 
+\begin_inset Formula $\Phi_{\nu_{l}}$
+\end_inset
+
+ is the flux of 
+\begin_inset Formula $l$
+\end_inset
+
+ flavor neutrinos, 
+\begin_inset Formula $\sigma_{\nu_{l}}^{t}$
+\end_inset
+
+ is the cross section of the interaction for neutrino flavor 
+\begin_inset Formula $l$
+\end_inset
+
+ on target 
+\begin_inset Formula $t$
+\end_inset
+
+, 
+\begin_inset Formula $M^{t}$
+\end_inset
+
+ is the number of 
+\begin_inset Formula $t$
+\end_inset
+
+ targets, and 
+\begin_inset Formula $\epsilon_{\nu_{l}}$
+\end_inset
+
+ is the total efficiency to reconstruct and properly identify the event
+ as 
+\begin_inset Formula $\nu_{l}$
+\end_inset
+
+CC interactions.
+ Since the cross section is a measure of interaction probability in units
+ of area, multiplication of 
+\begin_inset Formula $M_{t}$
+\end_inset
+
+ represents the effective cross sectional area of material 
+\begin_inset Formula $t$
+\end_inset
+
+ in the detector.
+ Each term in 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:n-predicted-general"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ is modeled carefully using Monte Carlo (MC) simulations.
+ For the efficiency term, control samples are used to constrain detector
+ systematic uncertainties effects.
+\end_layout
+
+\begin_layout Standard
+The number of events in a given analysis bin is varied in the BANFF fit
+ using weight functions.
+ The total number of predicted events in the 
+\begin_inset Formula $i$
+\end_inset
+
+th analysis bin is given by
+\begin_inset Formula 
+\begin{equation}
+\vec{N}_{i}^{p}\left(\flux,\xsec,\systematics\right)=\sum_{j=1}^{N_{i}^{\text{MC}}}\left\{ w_{i}^{\text{POT}}\sum_{k=1}^{N^{\text{Flux}}}\left(\delta_{j,k}^{\text{Flux}}\flux_{k}\right)\times\left[\prod_{l=1}^{N^{\text{xsec}}}w_{j,l}\left(\xsec_{l}\right)\right]\times\systematics_{i}\right\} ,\label{eq:n-predicted-BANFF}
+\end{equation}
+
+\end_inset
+
+where the parameters are described in 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "tab:Parameters-to-calculate"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+ While 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:n-predicted-BANFF"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ looks complicated as expressed in the T2K model, it is functionally the
+ same as 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:n-predicted-general"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+ Since the flux bins are categorized by neutrino energy, neutrino flavor,
+ and horn current mode, the 
+\begin_inset Formula $\delta_{j,k}^{\text{Flux}}$
+\end_inset
+
+ term is needed to select the correct flux normalization bin for the 
+\begin_inset Formula $j$
+\end_inset
+
+th MC event.
+ Also the number of neutrino targets 
+\begin_inset Formula $M$
+\end_inset
+
+ in the detector is treated as a detector systematic uncertainty.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Parameters that affect the analysis bins.
+ The top three parameters are fit while the others are constants set by
+ the input data and bookkeeping.
+ 
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+Parameters that Affect the Analysis Bins
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:Parameters-to-calculate"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="9" columns="3">
+<features booktabs="true" tabularvalignment="middle">
+<column alignment="left" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Description
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Symbol
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Fit?
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Fit bin normalizations
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\systematics$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Yes
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Flux normalizations
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\flux$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Yes
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Cross section weights and norms.
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $w\left(\xsec\right)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Yes
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+POT weight for the MC
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $w^{\text{POT}}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+No
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Flux bin selector
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\delta_{j,k}^{\text{Flux}}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+No
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Number of flux parameters
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $N^{\text{Flux}}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+No
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Number of cross section parameters
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $N^{\text{xsec}}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+No
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Number of MC events
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $N^{\text{MC}}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+No
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Using the likelihood ratio test theorem, a test statistic is defined as
+ taking -2 times the natural logarithm of the ratio of predicted to observed
+ likelihoods from 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:likelihoodPoisson"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+ This test statistic is given as
+\begin_inset Formula 
+\begin{equation}
+\begin{aligned}\chi_{\text{LLR}}^{2} & =-2\log\frac{\mathcal{L}\left(\vec{N}^{d}\left|\vec{N}^{p}\right.\right)}{\mathcal{L}\left(\vec{N}^{d}\left|\vec{N}^{d}\right.\right)}\\
+ & =2\sum_{i=1}^{M}\left[\vec{N}_{i}^{p}-\vec{N}_{i}^{d}+\vec{N}_{i}^{d}\log\left(\frac{\vec{N}_{i}^{d}}{\vec{N}_{i}^{p}}\right)\right],
+\end{aligned}
+\label{eq:LLHRatio}
+\end{equation}
+
+\end_inset
+
+where this obeys a true chi-squared distribution for asymptotically large
+ sample sizes.
+ The denominator in 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:LLHRatio"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ is the MC predicted probability, which assumes the best maximum likelihood
+ estimate is the number of observed events.
+\end_layout
+
+\begin_layout Subsection
+External Constraints on the Fit
+\end_layout
+
+\begin_layout Standard
+Since the BANFF ND constraint is a predictive model fit to data, it is subject
+ to the bias-variance problem.
+ This problem basically states that for a set of samples 
+\begin_inset Formula $s\in\mathcal{S}$
+\end_inset
+
+, a predictive model 
+\begin_inset Formula $f_{1}\in\mathcal{F}$
+\end_inset
+
+ would have larger variance and smaller bias compared to a constrained or
+ shrunken model 
+\begin_inset Formula $f_{2}\subseteq f_{1}$
+\end_inset
+
+ of which has larger bias but smaller variance.
+ We wish to have a ND constraint measurement with as little variance as
+ possible, which is achieved by introducing one or more constraints, also
+ called 
+\begin_inset Quotes eld
+\end_inset
+
+penalty
+\begin_inset Quotes erd
+\end_inset
+
+ terms, to the test statistic 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:LLHRatio"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+ These penalty terms will introduce the T2K experiment's model on the flux,
+ cross section, and detector inefficiencies into the fit.
+\end_layout
+
+\begin_layout Standard
+The new test statistic that includes the constraints, 
+\begin_inset Formula $\chi_{\ND280}^{2}$
+\end_inset
+
+, is given by
+\begin_inset Formula 
+\begin{equation}
+\begin{aligned}\chi_{\ND280}^{2} & =\chi_{\text{LLR}}^{2}+\underset{\text{Penalty terms}}{\underbrace{\chi_{\text{xsec}}^{2}+\chi_{\text{Flux}}^{2}+\chi_{\text{Det}}^{2}}}\\
+ & =\chi_{\text{LLR}}^{2}-2\left(\log\underset{\text{xsec}}{\underbrace{\pi\left(\xsec\right)}}+\log\underset{\text{Flux}}{\underbrace{\pi\left(\flux\right)}}+\log\underset{\text{Det}}{\underbrace{\pi\left(\systematics\right)}}\right),
+\end{aligned}
+\label{eq:LLHRatioWithPenaltyTerms}
+\end{equation}
+
+\end_inset
+
+where each of the PDFs 
+\begin_inset Formula $\pi\left(\vec{y}=\left\{ \xsec,\flux,\systematics\right\} \right)$
+\end_inset
+
+ is an assumed multivariate normal distribution
+\begin_inset Formula 
+\begin{equation}
+\pi(\vec{y})=C_{y}\exp\left(-\frac{1}{2}\left(\vec{y}-\vec{y}_{0}\right)^{T}V_{y}^{-1}\left(\vec{y}-\vec{y}_{0}\right)\right),\label{eq:nuisancepriorgaussian}
+\end{equation}
+
+\end_inset
+
+
+\begin_inset Formula $\vec{y}_{0}$
+\end_inset
+
+ is a vector of the initial parameter values, 
+\begin_inset Formula $T$
+\end_inset
+
+ corresponds to the transpose operator, 
+\begin_inset Formula $C_{y}$
+\end_inset
+
+ is the normalization, and 
+\begin_inset Formula $V_{y}$
+\end_inset
+
+ is the covariance matrix for vector 
+\begin_inset Formula $\vec{y}$
+\end_inset
+
+.
+ The full form of the test statistic 
+\begin_inset Formula $\chi_{\ND280}^{2}$
+\end_inset
+
+ is given by
+\begin_inset Formula 
+\begin{equation}
+\begin{aligned}\chi_{\ND280}^{2} & =2\sum_{i=1}^{M}\left[\vec{N}_{i}^{p}-\vec{N}_{i}^{d}+\vec{N}_{i}^{d}\log\left(\frac{\vec{N}_{i}^{d}}{\vec{N}_{i}^{p}}\right)\right]+\left(\Delta\vec{y}\right)^{T}\left(V_{y}^{-1}\right)\left(\Delta\vec{y}\right)\end{aligned}
+\label{eq:BANFFDeltaChiSqr}
+\end{equation}
+
+\end_inset
+
+where 
+\begin_inset Formula $\Delta\vec{y}=\vec{y}-\vec{y}_{0}$
+\end_inset
+
+.
+ It must be stated that the test statistic 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:BANFFDeltaChiSqr"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ purposefully excludes normalization terms since they are constants that
+ do not affect the minimization.
+ Further details on the penalty terms and covariance matrix in 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:BANFFDeltaChiSqr"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ will be discussed in 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "chap:P0DinBANFF"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+The best fit parameters, 
+\begin_inset Formula $\hat{\vec{y}}$
+\end_inset
+
+, are those that minimizes the chi-squared statistic
+\begin_inset Formula 
+\begin{equation}
+\begin{aligned}\hat{\vec{y}} & =\underset{\vec{y}\in\mathbb{R}^{d}}{\text{argmin}}\left\{ \chi_{\text{LLR}}^{2}\left(\vec{N}^{d},\vec{N}^{p}\left(\vec{y}\right)\right)+\chi_{\text{Penalty}}^{2}\left(\vec{y}\right)\right\} \end{aligned}
+\label{eq:minBANFFDeltaChiSqr}
+\end{equation}
+
+\end_inset
+
+where
+\begin_inset Formula 
+\[
+\chi_{\text{Penalty}}^{2}\left(\vec{y}\right)=\left(\Delta\vec{y}\right)^{T}\left(V_{y}^{-1}\right)\left(\Delta\vec{y}\right)
+\]
+
+\end_inset
+
+and we recall that 
+\begin_inset Formula $\vec{N}^{p}$
+\end_inset
+
+ is a function of 
+\begin_inset Formula $\vec{y}=\left\{ \xsec,\flux,\systematics\right\} $
+\end_inset
+
+ as well.
+\end_layout
+
+\begin_layout Subsection
+Postfit Covariance
+\end_layout
+
+\begin_layout Standard
+Once the global minimum is found, the postfit covariance matrix needs to
+ be calculated.
+ Consider how the chi-squared varies around the global minimum, or also
+ called the maximum likelihood estimate, 
+\begin_inset Formula $\hat{\vec{y}}$
+\end_inset
+
+.
+ The test statistic is given analytically by a Taylor series
+\begin_inset Formula 
+\[
+\chi^{2}\left(\vec{y}\right)=\sum_{n=0}^{\infty}\frac{1}{n!}\left[\left(\vec{y}-\hat{\vec{y}}\right)^{T}\left.\nabla_{\vec{y}}\chi^{2}\right|_{\vec{y}=\hat{\vec{y}}}\right]^{n}.
+\]
+
+\end_inset
+
+Since the gradient at 
+\begin_inset Formula $\hat{\vec{y}}$
+\end_inset
+
+ is zero, the first non-zero 
+\begin_inset Formula $\vec{y}$
+\end_inset
+
+-dependent term is quadratic in 
+\begin_inset Formula $\vec{y}$
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\begin{aligned}\chi^{2}\left(\vec{y}\right) & \approx\chi^{2}\left(\hat{\vec{y}}\right)+\frac{1}{2}\left(\vec{y}-\hat{\vec{y}}\right)^{T}\left(\left.\nabla_{\vec{y}}\nabla_{\vec{y}}^{T}\chi^{2}\left(\vec{y}\right)\right|_{\vec{y}=\hat{\vec{y}}}\right)\left(\vec{y}-\hat{\vec{y}}\right)\\
+ & \approx\chi^{2}\left(\hat{\vec{y}}\right)+\frac{1}{2}\left(\vec{y}-\hat{\vec{y}}\right)^{T}\mathcal{H}\left(\vec{y}-\hat{\vec{y}}\right).
+\end{aligned}
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $\mathcal{H}$
+\end_inset
+
+ is a square matrix called the Hessian matrix
+\begin_inset Formula 
+\begin{equation}
+\mathcal{H}_{i,j}=\left.\frac{\partial^{2}\chi^{2}}{\partial y_{i}\partial y_{j}}\right|_{\vec{y}=\hat{\vec{y}}},\label{eq:HessianMatrix}
+\end{equation}
+
+\end_inset
+
+and 
+\begin_inset Formula $y_{i},y_{j}\in\vec{y}$
+\end_inset
+
+.
+ Assuming that our test statistic is distributed according to a multivariate
+ normal distribution of the form 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:nuisancepriorgaussian"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, we find that the inverse of the Hessian matrix is the covariance matrix.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Summary
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:LikielihoodSummary"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+This chapter describes the mathematical preliminaries of the BANFF fit analysis.
+ We first saw the role of the likelihood function to express the plausibility
+ of data samples given a set of model parameters.
+ We then define a binned likelihood function to estimate model parameters
+ in the oscillation analysis using the ND280 data.
+ Using Wilks' theorem, the likelihood maximization problem is converted
+ to a chi-squared test statistic minimization that is iteratively maximized.
+ Finally, penalty terms are included in the test statistic in order to assert
+ parameter estimates that are consistent with prior systematic uncertainty
+ measurements in T2K.
+\end_layout
+
+\end_body
+\end_document

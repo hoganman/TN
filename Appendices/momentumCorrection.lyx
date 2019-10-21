@@ -1,0 +1,11526 @@
+#LyX file created by tex2lyx 2.3
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin /home/mhogan/Documents/graduateDisseration/Appendices/
+\textclass article
+\use_default_options false
+\maintain_unincluded_children false
+\language english
+\language_package none
+\inputencoding auto
+\fontencoding default
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 0
+\use_package cancel 0
+\use_package esint 1
+\use_package mathdots 0
+\use_package mathtools 0
+\use_package mhchem 0
+\use_package stackrel 0
+\use_package stmaryrd 0
+\use_package undertilde 0
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 0
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Section
+Momentum Reconstruction
+\end_layout
+
+\begin_layout Standard
+
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:MomRecon"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The algorithm to reconstruct particle momentum in this analysis integrates the average energy deposition per unit of areal density along the track through the 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+p
+\end_layout
+
+\end_inset
+
+0d. The path of the track is determined by the energy depositions in each scintillator plane of the 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+p
+\end_layout
+
+\end_inset
+
+0d associated with the reconstructed track object. The integration for contained tracks is done starting at the end of the reconstructed track, where the momentum is assumed to be close to zero to the start position of the reconstructed track. In cases where the track exits the 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+p
+\end_layout
+
+\end_inset
+
+0d into TPC1, the momentum calculated by TPC1 is used as the starting momentum and the integration begins at the point where the track exited the 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+p
+\end_layout
+
+\end_inset
+
+0d. (For this discussion the downstream ECal is considered to be part of the 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+p
+\end_layout
+
+\end_inset
+
+0d, and the difference in areal density is taken into consideration.) Events with tracks that exit the 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+p
+\end_layout
+
+\end_inset
+
+0d but do not enter TPC1 (do not have a matched track in TPC1) are excluded from the analysis.
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Relativistic particles will generally deposit energy as Minimum Ionizing Particles (MIPs) as characterized by the Bethe-Bloch curve in 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+cref
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+{
+\end_layout
+
+\end_inset
+
+eqn:bethebloch
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\begin_inset Formula \begin{align}\label{eqn:bethebloch}
+    -\frac{dT}{dx} &= K z^2\frac{Z}{A} \frac{1}{\beta^2}\left[\frac{1}{2}\ln\left(\frac{2 m_{e}c^{2}{(\beta\gamma)}^{2}T_\text{max}}{I^2}\right) - \beta^{2} - \frac{\delta\left(\beta\gamma\right)}{2}\right] \\
+    \text{~with} \nonumber \\
+    T_\text{max} &= \frac{2 m_{e}c^{2}{(\beta\gamma)}^{2}}{1+2\gamma \frac{m_e}{M} + {\left(\frac{m_e}{M}\right)}^2} \nonumber
+\end{align}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+{}
+\end_layout
+
+\end_inset
+
+where 
+\begin_inset Formula $T$
+\end_inset
+
+ is the kinetic energy, 
+\begin_inset Formula $x$
+\end_inset
+
+ is the distance traveled, 
+\begin_inset Formula $K$
+\end_inset
+
+ is proportional to the material density, 
+\begin_inset Formula $I$
+\end_inset
+
+ is the mean excitation potential in eV, 
+\begin_inset Formula $z$
+\end_inset
+
+ is the charge, 
+\begin_inset Formula $c$
+\end_inset
+
+ is the speed of light, 
+\begin_inset Formula $M$
+\end_inset
+
+ is the rest mass of the particle, 
+\begin_inset Formula $m_{e}$
+\end_inset
+
+ is the rest mass of the electron, 
+\begin_inset Formula $\beta$
+\end_inset
+
+ is the velocity as a fraction of 
+\begin_inset Formula $c$
+\end_inset
+
+, and 
+\begin_inset Formula $\gamma$
+\end_inset
+
+ is the Lorentz relativistic factor 
+\begin_inset Formula ${\left(1-\beta^{2}\right)}^{-0.5}$
+\end_inset
+
+. Both muons (
+\begin_inset Formula $m_{\mu} =
+105.6\text{~MeV}/c^{2}$
+\end_inset
+
+) and pions (
+\begin_inset Formula $m_{\pi} = 139.5
+\text{~MeV}/c^{2}$
+\end_inset
+
+) are relativistic at the energies required to be detected and reconstructed by the 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+p
+\end_layout
+
+\end_inset
+
+0d.
+\end_layout
+
+\begin_layout Subsection
+Previous Inceptions and the Current Version Of Momentum Tool
+\end_layout
+
+\begin_layout Standard
+
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:MomToolPrevIncept"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The Momentum Tool (MT), the collection of functions that estimate a particle's momentum in the 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+p
+\end_layout
+
+\end_inset
+
+0d, was initially developed to estimate the kinetic energy of protons fully contained in the 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+p
+\end_layout
+
+\end_inset
+
+0d. The MT estimated the proton's momentum by summing up the assumed ionization energy loss in each material traversed over the range of the track in the 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+p
+\end_layout
+
+\end_inset
+
+0d. A table of the areal densities for the different 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+p
+\end_layout
+
+\end_inset
+
+0d regions and their respective materials is given in 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+cref
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+{
+\end_layout
+
+\end_inset
+
+tab:arealdensities
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+}
+\end_layout
+
+\end_inset
+
+. Stopping power data for different materials came from the U.S.A. NIST PSTAR catalog as a function of kinetic energy as seen in 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+cref
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+{
+\end_layout
+
+\end_inset
+
+fig:waterdTdxKE
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+}
+\end_layout
+
+\end_inset
+
+. The MT was extended to measurements of muon and pion momenta for tracks originating in the 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+p
+\end_layout
+
+\end_inset
+
+0d and entering TPC1. The extension involved converting kinetic energy to 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+betagamma
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+{}
+\end_layout
+
+\end_inset
+
+ = 
+\begin_inset Formula $p/(Mc)$
+\end_inset
+
+, the dimensionless quantity of a particle's momentum divided by its mass. However, an error in implementation was found in this iteration of the MT. The stopping power data in terms of 
+\begin_inset Formula $dT/dx$
+\end_inset
+
+ should be converted to 
+\begin_inset Formula $d(\beta\gamma)/dx$
+\end_inset
+
+ using the differentiation chain rule,
+\end_layout
+
+\begin_layout Standard
+
+\begin_inset Formula \begin{align}\label{eqn:stoppingpowerconversion}
+    \frac{d\beta\gamma}{dx} &= {\left[\frac{dT}{d\beta\gamma}\right]}^{-1} {\left(\frac{dT}{dx}\right)} = {\left[\frac{1}{Mc^2}\frac{{\left({\left[\beta\gamma\right]}^{2}+1\right)}^{\frac{1}{2}}}{\beta\gamma}\right]} {\left(\frac{dT}{dx}\right)}, \nonumber 
+\end{align}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+
+\begin_layout Standard
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+centering
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Graphics 
+	filename plots/momentumCorrection/WaterStoppingPower_KineticE
+	width 75text%
+
+\end_inset
+
+ 
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+
+\begin_inset Argument 1
+status collapsed
+
+
+\begin_layout Standard
+Stopping Power of Protons in Water As A Function Kinetic Energy
+\end_layout
+
+\end_inset
+
+The total stopping power of protons in liquid water as a function of the proton's kinetic energy from PSTAR program
+\begin_inset CommandInset citation
+LatexCommand cite
+after ""
+key "Berger:PSTAR"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:waterdTdxKE"
+
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+
+\begin_layout Standard
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+centering
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Graphics 
+	filename plots/momentumCorrection/WaterStoppingPower_BetaGamma
+	width 75text%
+
+\end_inset
+
+ 
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+
+\begin_inset Argument 1
+status collapsed
+
+
+\begin_layout Standard
+PSTAR Data for Liquid Water As A Function of 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+betagamma
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+{}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+The total stopping power graph in liquid water from the PSTAR program as function of 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+betagamma
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+{}
+\end_layout
+
+\end_inset
+
+. By converting from proton kinetic energy to 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+betagamma
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+{}
+\end_layout
+
+\end_inset
+
+, the curve now evaluates the stopping power for muons and pions in liquid water as well.
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:waterdTdxBG"
+
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+{}
+\end_layout
+
+\end_inset
+
+which introduces a mass dependence in the denominator. The mass dependence, which must be included in the integration, was neglected and so the 
+\begin_inset Formula $d\beta\gamma/dx$
+\end_inset
+
+ conversion for muons and pions was done incorrectly. The end result was an under estimate of the momenta which was calibrated with a 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+p
+\end_layout
+
+\end_inset
+
+0d-only track-length correction of 209 (MeV/c)/meter for muons and 82.9 (MeV/c)/meter for pions. In addition, a 27.6 MeV/c and 92.95 MeV/c overall bias correction was added to the results.
+\end_layout
+
+\begin_layout Standard
+The implementation of the MT for this analysis is a hybrid approach based on its previous incarnations in that we use the NIST stopping power data from 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+tn
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+{
+\end_layout
+
+\end_inset
+
+131
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+}
+\end_layout
+
+\end_inset
+
+ while preserving the functionality for different particle hypotheses (i.e.
+\begin_inset space \space{}
+
+\end_inset
+
+muons and pions)
+\begin_inset CommandInset citation
+LatexCommand cite
+after ""
+key "TN131"
+literal "false"
+
+\end_inset
+
+. For each particle hypothesis, the MT integrates the energy loss as a function of 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+betagamma
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+{}
+\end_layout
+
+\end_inset
+
+ for the reconstructed track and converts the resulting integrated energy to momentum. An example of the NIST stopping power data can be seen in 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+cref
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+{
+\end_layout
+
+\end_inset
+
+fig:waterdTdxBG
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+}
+\end_layout
+
+\end_inset
+
+. The algorithm begins with a non-zero kinetic energy 
+\begin_inset Formula $T_{i,\alpha}$
+\end_inset
+
+ because the stopping power data cannot be evaluated at 
+\begin_inset Formula $T=0$
+\end_inset
+
+. The starting kinetic energy for the MT is given by 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+cref
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+{
+\end_layout
+
+\end_inset
+
+eqn:initialKinE
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+}
+\end_layout
+
+\end_inset
+
+,
+\end_layout
+
+\begin_layout Standard
+
+\begin_inset Formula \begin{equation}\label{eqn:initialKinE}
+    T_{i,\alpha} =
+        \begin{cases}
+            \sqrt{{(p_\text{TPC1}c)}^2 + {(m_\alpha c^2)}^2} - m_\alpha c^2 &\mbox{if }p_\text{TPC1} \neq 0 \,\\
+            \epsilon_\alpha &\mbox{otherwise} \,
+        \end{cases}
+\end{equation}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+{}
+\end_layout
+
+\end_inset
+
+where the index 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ denotes either a muon, proton, or pion. The starting kinetic energy 
+\begin_inset Formula $\epsilon$
+\end_inset
+
+ for muons and pions is 30 MeV and for protons is 50 MeV. The value of 
+\begin_inset Formula $\epsilon=50$
+\end_inset
+
+
+\begin_inset space ~
+
+\end_inset
+
+MeV was chosen for protons since that what was done in 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+tn
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+{
+\end_layout
+
+\end_inset
+
+131
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+}
+\end_layout
+
+\end_inset
+
+, while 
+\begin_inset Formula $\epsilon=30$
+\end_inset
+
+
+\begin_inset space ~
+
+\end_inset
+
+MeV was chosen for muons and pions, as an arbitrary starting point, designed to be different than the proton 
+\begin_inset Formula $\epsilon$
+\end_inset
+
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+after ""
+key "TN131"
+literal "false"
+
+\end_inset
+
+. A study showed that the resulting momentum distribution did not change when using a starting point smaller than 30 MeV. 
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The MT steps through the 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+p
+\end_layout
+
+\end_inset
+
+0d along the path defined by a collection of track-nodes. A track-node is a collection of time-correlated hits inside active material with charged-weighted position and direction. The direction vector points to the next node except in the case of the last track-node, in which case, it uses the previous node's direction. The positions of two successive nodes and the associated direction vector determine the angle, 
+\begin_inset Formula $\theta$
+\end_inset
+
+, of the track 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+wrt
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+{}
+\end_layout
+
+\end_inset
+
+ the 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+p
+\end_layout
+
+\end_inset
+
+0d z-axis. The MT numerically integrates the energy loss for each material traversed in the following manner, 
+\begin_inset Formula \begin{align*}
+    \Delta~T &= {\left(\frac{dT}{d\rho_{A}}\right)}_\text{mat} {\left(\Delta~\rho_{A}\right)} \,\\
+    T &\rightarrow T+\Delta T \,
+\end{align*}
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+{}
+\end_layout
+
+\end_inset
+
+where the index 
+\begin_inset Quotes eld
+\end_inset
+
+mat
+\begin_inset Quotes erd
+\end_inset
+
+ represents each material in the path, 
+\begin_inset Formula $\rho_{A}$
+\end_inset
+
+ is the areal density, and 
+\begin_inset Formula $\Delta~\rho_{A}$
+\end_inset
+
+ is a small step of 0.05 gram/cm
+\begin_inset Formula $^2$
+\end_inset
+
+ in areal density. The various materials inside the 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+p
+\end_layout
+
+\end_inset
+
+0d and the areal densities of each material are tabulated in 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+cref
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+{
+\end_layout
+
+\end_inset
+
+tab:arealdensities
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+}
+\end_layout
+
+\end_inset
+
+. Each 
+\begin_inset Formula $\Delta~\rho_{A}$
+\end_inset
+
+ step in 
+\begin_inset Formula $dT/d\rho_{A}$
+\end_inset
+
+ is evaluated at the point 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+betagamma
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+{}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Formula $= {(\beta\gamma)}_0 +
+\Delta(\beta\gamma)/2$
+\end_inset
+
+ where 
+\begin_inset Formula ${(\beta\gamma)}_0$
+\end_inset
+
+ is the value of 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+betagamma
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+{}
+\end_layout
+
+\end_inset
+
+ for a single particle of kinetic energy 
+\begin_inset Formula $T$
+\end_inset
+
+ and 
+\begin_inset Formula $\Delta(\beta\gamma)$
+\end_inset
+
+ is the value of 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+betagamma
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+{}
+\end_layout
+
+\end_inset
+
+ for a particle of kinetic energy 
+\begin_inset Formula $\Delta T$
+\end_inset
+
+. The term 
+\begin_inset Formula $\Delta(\beta\gamma)/2$
+\end_inset
+
+ is a density correction term as seen in 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+cref
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+{
+\end_layout
+
+\end_inset
+
+eqn:bethebloch
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+}
+\end_layout
+
+\end_inset
+
+. The conversion from 
+\begin_inset Formula $T$
+\end_inset
+
+ to 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+betagamma
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+{}
+\end_layout
+
+\end_inset
+
+ is given by,
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\begin_inset Formula \begin{align}\label{eqn:betagammaenergyconversion}
+    %T &= E - M c^2 \\
+    %T &= \sqrt{\left(p c\right)^2 + \left(M c^2\right)^2} - M c^2 \\
+    %T &= M c^2 \left[\sqrt{\left(\frac{p}{Mc}\right)^2 + 1 } - 1\right] \\
+    %T &= M c^2 \left[\sqrt{\left(\beta\gamma\right)^2 + 1 } - 1\right] \\
+    %\left(\frac{T}{M c^2} + 1\right)^2 &= \left(\beta\gamma\right)^2 +1 \\
+    \beta\gamma &= \sqrt{{\left(\frac{T}{M c^2}+1\right)}^{2}-1}\text{.}
+\end{align}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\begin_inset Float table
+placement h!
+wide false
+sideways false
+status open
+
+
+\begin_layout Standard
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+centering
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Tabular 
+<lyxtabular version="3" rows="11" columns="3">
+<features rotate="0" booktabs="true" tabularvalignment="middle" tabularwidth="0pt">
+<column alignment="left" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell multicolumn="1" alignment="none" valignment="top" usebox="none" special="c">
+\begin_inset Text
+
+\begin_layout Standard
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+p
+\end_layout
+
+\end_inset
+
+0d Areal Densities
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+P0D Region 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+Material 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+Areal density [g/cm
+\begin_inset Formula $^2$
+\end_inset
+
+] 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+podule
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+{}
+\end_layout
+
+\end_inset
+
+ Skin 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+Polystyrene 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+0.144 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+Brass radiator 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+Copper 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+1.088 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+Glue 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+Epoxy 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+0.034 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+Water target boundary 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+HDPE 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+0.597 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+Water Bag 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+HDPE 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+3.23 
+\begin_inset Formula $\times 10^{-4}$
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+ECal radiator 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+Lead 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+3.924 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+ECal radiator skin 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+Steel 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+0.36 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+Water target 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+Water 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+2.733 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+Scintillator doped plastic 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+Polystyrene 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+1.72 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+
+\begin_inset Argument 1
+status collapsed
+
+
+\begin_layout Standard
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+p
+\end_layout
+
+\end_inset
+
+0d Areal Densities
+\end_layout
+
+\end_inset
+
+A table of the areal densities in the 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+p
+\end_layout
+
+\end_inset
+
+0d used in the MT\SpecialChar endofsentence
+ Two entries that are not in this table are the TiO
+\begin_inset Formula $_2$
+\end_inset
+
+ reflective layer in each triangular bar and the air during the 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+p
+\end_layout
+
+\end_inset
+
+0d water-out configuration. Both are assumed negligible effects on the momentum estimate and not modeled by the Momentum Tool.
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:arealdensities"
+
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Sub-samples
+\end_layout
+
+\begin_layout Standard
+
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:MomToolSubsamples"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The results of the MT on selected signal events are shown in this section. Events are further divided into three sub-samples: 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+p
+\end_layout
+
+\end_inset
+
+0d contained Kalman tracks, 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+p
+\end_layout
+
+\end_inset
+
+0d-to-TPC1 Kalman tracks, and Cluster tracks which are all 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+p
+\end_layout
+
+\end_inset
+
+0d contained. These sub-samples are defined in Section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sampSelSide_sec"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+. All studies were done with a statistically independent MC sample from the events used in the data analysis. The sample used comprised 
+\begin_inset Formula $\sim1/3$
+\end_inset
+
+ of the production 6B Run 4 MC\SpecialChar endofsentence
+ First is a discussion of the basic characteristics of the sub-samples. Second is examining the method by which the momentum for the different sub-samples are calibrated for the water-in mode of the 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+p
+\end_layout
+
+\end_inset
+
+0d. For the water-out mode, please see 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+cref
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+{
+\end_layout
+
+\end_inset
+
+appsec:MomReconAir
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+}
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsubsection
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+p
+\end_layout
+
+\end_inset
+
+0d Contained Kalman tracks
+\end_layout
+
+\begin_layout Standard
+
+\begin_inset CommandInset label
+LatexCommand label
+name "subsubsec:MomToolP0DContKalmantracks"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+These are tracks that start in the fiducial volume of the 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+p
+\end_layout
+
+\end_inset
+
+0d, do not cross any face of the 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+p
+\end_layout
+
+\end_inset
+
+0d, and reconstructed using the Kalman filter
+\begin_inset CommandInset citation
+LatexCommand cite
+after ""
+key "kalmanFilter"
+literal "false"
+
+\end_inset
+
+. Theses tracks have a muon low momentum limit of 200 MeV/c since the Kalman filter requires that the particle must cross at least 5 X or Y planes (has at least 5 track-nodes). The highest momentum muon cannot exceed 600 MeV/c since forward-going muons originating at the upstream edge of the fiducial volume above this threshold will have enough energy to exit the 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+p
+\end_layout
+
+\end_inset
+
+0d. The containment requirement restricts this sample to lower energies over a wide range in angle.
+\end_layout
+
+\begin_layout Subsubsection
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+p
+\end_layout
+
+\end_inset
+
+0d-to-TPC1 Kalman tracks
+\end_layout
+
+\begin_layout Standard
+
+\begin_inset CommandInset label
+LatexCommand label
+name "subsubsec:T2PDescription"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+These are tracks that satisfy the criteria of contained Kalman tracks except that they cross the downstream face of the 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+p
+\end_layout
+
+\end_inset
+
+0d into TPC1. Kalman tracks exiting the downstream face of the 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+p
+\end_layout
+
+\end_inset
+
+0d are required to have a matching track in TPC1 as defined by the T2P criteria from 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+tn
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+{
+\end_layout
+
+\end_inset
+
+208
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+}
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset citation
+LatexCommand cite
+after ""
+key "TN208"
+literal "false"
+
+\end_inset
+
+. This ensures an accurate measurement of the momentum of the particle after it has exited the 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+p
+\end_layout
+
+\end_inset
+
+0d. Due to geometric constraints, tracks that go from the 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+p
+\end_layout
+
+\end_inset
+
+0d to TPC1 occupy a higher momentum range and more limited angular acceptance than their Kalman contained counterparts.
+\end_layout
+
+\begin_layout Subsubsection
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+p
+\end_layout
+
+\end_inset
+
+0d Contained Cluster tracks
+\end_layout
+
+\begin_layout Standard
+
+\begin_inset CommandInset label
+LatexCommand label
+name "subsubsec:MomToolClustertracks"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Cluster tracks (see Sec. 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "clusterTrackFitter_sec"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) are tracks that failed the requirements of the Kalman filter in 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+precon
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+{}
+\end_layout
+
+\end_inset
+
+ that at least 5 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+podule
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+{}
+\end_layout
+
+\end_inset
+
+ X-Y scintillator planes are crossed. The reconstruction assigns a collection of hits into a track-like cluster and this analysis attempts to fit a straight line to the cluster originating from the vertex. These particles are either low momentum, high angle 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+wrt
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+{}
+\end_layout
+
+\end_inset
+
+ the detector axis, or some combination of the two. Cluster tracks have momenta no higher than 400 MeV/c. The Cluster track algorithm succeeds in increasing pion reconstruction efficiency due to the low momentum threshold and wide angular acceptance. The cluster track reconstruction algorithm was also designed to include tracks at angles close to 90 degrees 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+wrt
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+{}
+\end_layout
+
+\end_inset
+
+ to the 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+p
+\end_layout
+
+\end_inset
+
+0d axis, which is very difficult due to the planar structure of the 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+p
+\end_layout
+
+\end_inset
+
+0d.
+\end_layout
+
+\begin_layout Subsection
+Calibrating the MT Output
+\end_layout
+
+\begin_layout Standard
+
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:MomToolResules"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The method by which this analysis calibrates the momenta for muons and pions given by the MT is presented in this subsection. First the uncalibrated momenta from the MT for a muon and pion broken down by different sub-samples is shown. (Event rates reflect MC statistics. No attempt to scale to the data exposure has been made.) Once the widths and biases at the uncalibrated distributions are explored, steps for obtaining the calibrations are presented.
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Given an observable with true value 
+\begin_inset Formula $Y$
+\end_inset
+
+ and reconstructed value 
+\begin_inset Formula $X$
+\end_inset
+
+, the resolution on 
+\begin_inset Formula $Y$
+\end_inset
+
+ is defined as 
+\begin_inset Formula \begin{equation}\label{eqn:resolutiondefinition}
+    \frac{X-Y}{Y}\,
+\end{equation}
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+{}
+\end_layout
+
+\end_inset
+
+such that a negative value corresponds to under-estimating the observable. Likewise, a positive value means that the observable is over-estimated. If the mean of the distribution is shifted away from zero, then the reconstructed quantity is biased.
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+In order to remove the biases present in the momentum reconstruction, a bias subtraction method is applied to produce a calibrated momentum response. To characterize the momentum bias, a two-dimensional histogram of the true-vs-reconstructed momenta over the full particle's phase-space is created and used to generate a profile histogram of the momentum bias as a function of the reconstructed momentum. This profile histogram is also constructed with each bin to have approximately equal statistics so as to minimize the impact of statistical fluctuations. The profile is then carefully examined for features, such as tails and maxima or minima, in order to characterize the shape with a function. Next a closed form function that described the shape of the bias is identified. The metric for a determining if the chosen function is adequate is to require at least four bins in the profile and that the fit's reduced chi-squared is close to unity. Once a suitable functional form, 
+\begin_inset Formula $R$
+\end_inset
+
+, is fitted to the profile histogram, the bias subtracted momentum is obtained using 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+cref
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+{
+\end_layout
+
+\end_inset
+
+eqn:momentumcalibration
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\begin_inset Formula \begin{equation}\label{eqn:momentumcalibration}
+    p_c = [1 - R(p_r)] \times p_r,
+\end{equation}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+{}
+\end_layout
+
+\end_inset
+
+where 
+\begin_inset Formula $p_c$
+\end_inset
+
+ (
+\begin_inset Formula $p_r$
+\end_inset
+
+) is the calibrated (raw) momentum.
+\end_layout
+
+\begin_layout Subsubsection
+Calibration of Sub Samples
+\end_layout
+
+\begin_layout Standard
+
+\begin_inset CommandInset label
+LatexCommand label
+name "subsubsec:MomToolCalibOfSubSamples"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+All events are classified as signal, which requires that they pass the precuts, and are selected using the Likelihood PID (Section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "pid_sec"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+). For each sub-sample, first a characterization of the MT output for a correctly identified signal particle is presented. Then the functional form of the bias correction 
+\begin_inset Formula $R$
+\end_inset
+
+ is given, and finally the particle's calibrated momentum is shown. The water-in sub-samples are presented first. The same procedure was applied to the water-out sub-samples resulting in similar calibrations between the 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+p
+\end_layout
+
+\end_inset
+
+0d configurations which is shown in 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+cref
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+{
+\end_layout
+
+\end_inset
+
+appsec:MomReconAir
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+p
+\end_layout
+
+\end_inset
+
+0d Water-In Contained Kalman Muon tracks
+\end_layout
+
+\begin_layout Standard
+
+\begin_inset CommandInset label
+LatexCommand label
+name "subsubsec:MomToolP0DConMuons"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The reconstructed and true momentum of these particles span 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+numrange
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+{
+\end_layout
+
+\end_inset
+
+150
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+{
+\end_layout
+
+\end_inset
+
+700
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+}
+\end_layout
+
+\end_inset
+
+ MeV/c. The angular acceptance of this sub-sample is 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+numrange
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+{
+\end_layout
+
+\end_inset
+
+0
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+{
+\end_layout
+
+\end_inset
+
+80
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+}
+\end_layout
+
+\end_inset
+
+ deg 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+wrt
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+{}
+\end_layout
+
+\end_inset
+
+ the beam direction. The number of events occupying each bin of true-vs-reconstructed momentum for muons, as reconstructed by the MT, is shown in 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+cref
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+{
+\end_layout
+
+\end_inset
+
+fig:R4WContainedMuonsUnCalibrecovstruepandbias
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+}
+\end_layout
+
+\end_inset
+
+a accompanied by the reconstructed momentum resolution in 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+cref
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+{
+\end_layout
+
+\end_inset
+
+fig:R4WContainedMuonsUnCalibrecovstruepandbias
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+}
+\end_layout
+
+\end_inset
+
+b. A Gaussian fit to the resolution shows a mean bias of about 4.0% with a similar width. The fit width (solid) and mean (dash-dot) are also presented in 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+cref
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+{
+\end_layout
+
+\end_inset
+
+fig:R4WContainedMuonsUnCalibrecovstruepandbias
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+}
+\end_layout
+
+\end_inset
+
+a.
+\end_layout
+
+\begin_layout Standard
+There is a high density of occupied bins in 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+cref
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+{
+\end_layout
+
+\end_inset
+
+fig:R4WContainedMuonsUnCalibrecovstruepandbias
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+}
+\end_layout
+
+\end_inset
+
+a above the thin, solid line which correspond to the tail in the resolution above +15%. It was discovered that this can be isolated to where the end track position is in proximity to the negative X (-X) edge of the 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+p
+\end_layout
+
+\end_inset
+
+0d as seen in 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+cref
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+{
+\end_layout
+
+\end_inset
+
+fig:MomentumBiasAnomalyEndXPosition
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+}
+\end_layout
+
+\end_inset
+
+. Those tracks were calibrated separately from the rest.
+\end_layout
+
+\begin_layout Standard
+
+\begin_inset Float figure
+placement h!
+wide false
+sideways false
+status open
+
+
+\begin_layout Standard
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+centering
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+
+\begin_layout Standard
+ 
+\begin_inset Graphics 
+	filename plots/momentumCorrection/Run4_Water/Contained_SignalMuons_UnCalib_reco_vs_true_p
+	width 48text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+
+\begin_layout Standard
+ 
+\begin_inset Graphics 
+	filename plots/momentumCorrection/Run4_Water/Contained_SignalMuons_UnCalib_reco_p_bias
+	width 48text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+
+\begin_inset Argument 1
+status collapsed
+
+
+\begin_layout Standard
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+p
+\end_layout
+
+\end_inset
+
+0d Water-In Contained Muon Momentum and Resolution Before Corrections
+\end_layout
+
+\end_inset
+
+The true vs reconstructed momentum (a) and the resolution (b) for 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+p
+\end_layout
+
+\end_inset
+
+0d contained muons. The Gaussian fit (blue, dashed) mean and width in (b) are shown as dash-dot and solid lines in (a), respectively. 
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:R4WContainedMuonsUnCalibrecovstruepandbias"
+
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+% MH: Leaving this here in case the committee wants to see these figures
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+%
+\backslash
+begin{figure}[h!]
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+%    
+\backslash
+centering
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+%    
+\backslash
+begin{subfigure}{0.48
+\backslash
+textwidth}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+%        
+\backslash
+centering
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+%        
+\backslash
+includegraphics[width=.9
+\backslash
+textwidth]{plots/momentumCorrection/AllContained_Alltracks_NoBiasAnomalyShown}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+%        
+\backslash
+caption[]{All contained muon tracks}
+\backslash
+label{fig:AllContainedMuonsAlltracksNoBiasAnomalyShown}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+%    
+\backslash
+end{subfigure}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+%    
+\backslash
+begin{subfigure}{0.48
+\backslash
+textwidth}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+%        
+\backslash
+centering
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+%        
+\backslash
+includegraphics[width=.9
+\backslash
+textwidth]{plots/momentumCorrection/AllContained_Alltracks_BiasAnomalyShown}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+%        
+\backslash
+caption[]{Contained muon tracks with 
+\backslash
+textgreater{}20
+\backslash
+% bias}
+\backslash
+label{fig:AllContainedMuonsBiasAnomalyShown}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+%    
+\backslash
+end{subfigure}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+%    
+\backslash
+caption[
+\backslash
+p0d Water-In Contained Momentum Bias Anomaly Relationship With Start-X Direction and Vertex-X Position]{The parameter space relationship for tracks that exhibit the high bias present for 
+\backslash
+p0d contained muon tracks. We see an isotropic spread for all tracks in (a) where as there is a clustering points visible in (b)}
+\backslash
+label{fig:AllContainedMuonsNoBiasShownAndBiasAnomalyShown}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+%
+\backslash
+end{figure}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+%
+\backslash
+begin{figure}[h!]
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+%    
+\backslash
+centering
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+%    
+\backslash
+begin{subfigure}{0.48
+\backslash
+textwidth}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+%        
+\backslash
+centering
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+%        
+\backslash
+includegraphics[width=.9
+\backslash
+textwidth]{plots/momentumCorrection/AllContained_Alltracks_BiasAnomalyShown_THStack}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+%        
+\backslash
+caption[]{Same as 
+\backslash
+cref{fig:R4WContainedMuonsUnCalibrecopbias}}
+\backslash
+label{fig:AllContainedMuonsAlltracksBiasAnomalyShownTHStack}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+%    
+\backslash
+end{subfigure}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+%    
+\backslash
+begin{subfigure}{0.48
+\backslash
+textwidth}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+%        
+\backslash
+centering
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+%        
+\backslash
+includegraphics[width=.9
+\backslash
+textwidth]{plots/momentumCorrection/AllContained_Alltracks_BiasAnomalyShown_WithElipses}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+%        
+\backslash
+caption[]{Same as 
+\backslash
+cref{fig:AllContainedMuonsBiasAnomalyShown}}
+\backslash
+label{fig:AllContainedMuonsAlltracksBiasAnomalyShownWithElipses}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+%    
+\backslash
+end{subfigure}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+%    
+\backslash
+caption[
+\backslash
+p0d Water-In Contained Momentum Bias Anomaly Broken Down by (Start-X,Vertex-X) Regions]{Three separate regions in (Start-X,Vertex-X) space where we calibrate the momentum for signal muons. The three selected regions are defined by being in the larger, blue ellipse, smaller, green ellipse, or neither ellipse represented in red.}
+\backslash
+label{fig:AllContainedMuonsAlltracksBiasAnomalyShownWithTHStackAndElipses}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+%
+\backslash
+end{figure}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\begin_inset Float figure
+placement h!
+wide false
+sideways false
+status open
+
+
+\begin_layout Standard
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+centering
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Graphics 
+	filename plots/momentumCorrection/endX_Vect
+	width 48text%
+
+\end_inset
+
+ 
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+
+\begin_inset Argument 1
+status collapsed
+
+
+\begin_layout Standard
+Momentum Bias Anomaly with End-X track Position
+\end_layout
+
+\end_inset
+
+The number of events as a function of the track end position in X. Events with a bias less than 15% are shown in blue, while tracks with a bias greater than 15% are shown by the red curve. This shows that the bias present in the 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+p
+\end_layout
+
+\end_inset
+
+0d contained sample is caused by tracks ending in the negative-X portion of the detector. To date we have no explanation for this bias with other track observables like the track length and track angle and it exists in the water-out sample as well.
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:MomentumBiasAnomalyEndXPosition"
+
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+%We characterize the bias for muons by separating the momentum distribution into
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+%three disjoint parameter space regions as described by
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+%
+\backslash
+cref{fig:AllContainedMuonsAlltracksBiasAnomalyShownWithTHStackAndElipses}. The
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+%three different areas with two described by disjoint ellipses and the third by
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+%the area excluded by both of ellipses. The two ellipses were designed to
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+%capture the highest concentration of points in the parameter space and show
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+%that the larger one contributes much more the high bias anomaly. Examining the
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+%bias profiles for the two ellipses, we see that the bias increases
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+%proportionally with reconstructed momentum suggesting a linear fit should
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+%sufficiently describe the shape. 
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+The profile histogram in 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+cref
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+{
+\end_layout
+
+\end_inset
+
+fig:R4WP0DMuonContainedResolutionProfile
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+}
+\end_layout
+
+\end_inset
+
+ shows the resolution as defined in 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+cref
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+{
+\end_layout
+
+\end_inset
+
+eqn:resolutiondefinition
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+}
+\end_layout
+
+\end_inset
+
+ of the reconstructed momentum. The shape is similar to a step function which changes in height at 400 MeV/c. The profile histogram was characterized with a S-shaped function called a logistic or sigmoid function and associated calibrations shown in 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+cref
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+{
+\end_layout
+
+\end_inset
+
+tab:R4WP0DMuonContainedBiasCorrections
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+}
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\begin_inset Float figure
+placement h!
+wide false
+sideways false
+status open
+
+
+\begin_layout Standard
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+centering
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+%
+\backslash
+begin{subfigure}{0.48
+\backslash
+textwidth}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+%   
+\backslash
+centering
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Graphics 
+	filename plots/momentumCorrection/Run4_Water/Contained_SignalMuons_NoAnomally_UnCalib_reco_p_biasFit
+	width 48text%
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+%
+\backslash
+end{subfigure}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+%
+\backslash
+begin{subfigure}{0.3
+\backslash
+textwidth}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+%    
+\backslash
+centering
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+%    
+\backslash
+includegraphics[width=.95
+\backslash
+textwidth]{plots/momentumCorrection/AllContained_LargerEllipse_BiasCorrection}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+%    
+\backslash
+caption[]{Larger, blue ellipse}
+\backslash
+label{fig:AllContainedMuonsLargerEllipseBiasCorrection}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+%
+\backslash
+end{subfigure}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+%
+\backslash
+begin{subfigure}{0.3
+\backslash
+textwidth}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+%    
+\backslash
+centering
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+%    
+\backslash
+includegraphics[width=.95
+\backslash
+textwidth]{plots/momentumCorrection/AllContained_SmallerEllipse_BiasCorrection}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+%    
+\backslash
+caption[]{Smaller, green ellipse}
+\backslash
+label{fig:AllContainedMuonsSmallerEllipseBiasCorrection}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+%
+\backslash
+end{subfigure}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+
+\begin_inset Argument 1
+status collapsed
+
+
+\begin_layout Standard
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+p
+\end_layout
+
+\end_inset
+
+0d Water-In Contained Muon track Momentum Resolution as a Function of Reconstructed Momentum
+\end_layout
+
+\end_inset
+
+The profile histogram for the momentum resolution as function of the reconstructed momentum for 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+p
+\end_layout
+
+\end_inset
+
+0d water-in contained muons is shown. The smooth black curve is a characterization using a logistic function. Please see 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+cref
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+{
+\end_layout
+
+\end_inset
+
+tab:R4WP0DMuonContainedBiasCorrections
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+}
+\end_layout
+
+\end_inset
+
+ for the extracted calibrations.
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:R4WP0DMuonContainedResolutionProfile"
+
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\begin_inset Float table
+placement !h
+wide false
+sideways false
+status open
+
+
+\begin_layout Standard
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+centering
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Tabular 
+<lyxtabular version="3" rows="6" columns="6">
+<features rotate="0" booktabs="true" tabularvalignment="middle" tabularwidth="0pt">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell multicolumn="1" alignment="none" valignment="top" usebox="none" special="c">
+\begin_inset Text
+
+\begin_layout Standard
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+p
+\end_layout
+
+\end_inset
+
+0d Contained Muon Momentum Calibration Constants
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multicolumn="1" alignment="none" valignment="top" usebox="none" special="c">
+\begin_inset Text
+
+\begin_layout Standard
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+p
+\end_layout
+
+\end_inset
+
+0d Water-In Configuration
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+%
+\backslash
+toprule
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+%
+\backslash
+multicolumn{6}{c}{Blue ellipse, $R(p) = A + Bp$} 
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+%Low P [Gev/c] & High P [GeV/c] & A & B & & 
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+%
+\backslash
+midrule
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+%
+\backslash
+midrule
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+%0 & 1 & -0.1602 & 0.8848 & & 
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+%%1 & $
+\backslash
+infty$ & 0.0 & 0.0 & & 
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+%
+\backslash
+bottomrule
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+%
+\backslash
+multicolumn{6}{c}{Green ellipse, $R(p) = A + Bp $} 
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+%Low P [Gev/c] & High P [GeV/c] & A & B &  & 
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+%
+\backslash
+midrule
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+%
+\backslash
+midrule
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+%0 & 1           & -0.01079& 0.2541 & & 
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+%%1 & $
+\backslash
+infty$    & 0.0     & 0.0    & & 
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+%
+\backslash
+bottomrule
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+%
+\backslash
+multicolumn{6}{c}{Neither ellipses, $R(p) = A + B/
+\backslash
+left(1+
+\backslash
+text{Exp}(-C(p-D))
+\backslash
+right)$} 
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+multicolumn{6}{c}{$R(p) = A + B/
+\backslash
+left(1+
+\backslash
+text{Exp}(-C(p-D))
+\backslash
+right)$}
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" usebox="none">
+\begin_inset Text
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" usebox="none">
+\begin_inset Text
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" usebox="none">
+\begin_inset Text
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" usebox="none">
+\begin_inset Text
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" usebox="none">
+\begin_inset Text
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+Low P [Gev/c] 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+High P [GeV/c] 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+A 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+B 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+C 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+D
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+0 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+1 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+0.02955 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+0.045662 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+24.61 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+0.4415 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+%1 & $
+\backslash
+infty$    & 0.0     & 0.0     & 0.0   & 0.0 
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+
+\begin_inset Argument 1
+status collapsed
+
+
+\begin_layout Standard
+Calibrations Constants For 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+p
+\end_layout
+
+\end_inset
+
+0d Water-In Contained Muon tracks
+\end_layout
+
+\end_inset
+
+The 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+p
+\end_layout
+
+\end_inset
+
+0d water-in contained track bias corrections for the muon momentum.
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:R4WP0DMuonContainedBiasCorrections"
+
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+There is better agreement between the true and reconstructed momenta as shown by comparing 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+cref
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+{
+\end_layout
+
+\end_inset
+
+fig:R4WContainedMuonsCalibrecovstruepandbias,fig:R4WContainedMuonsUnCalibrecovstruepandbias
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+}
+\end_layout
+
+\end_inset
+
+. The mean line in 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+cref
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+{
+\end_layout
+
+\end_inset
+
+fig:R4WContainedMuonsCalibrecovstruepandbias
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+}
+\end_layout
+
+\end_inset
+
+a is now mostly diagonal corresponding to the nearly zero bias. The resolution fit width has increased to 5.4% from 4.9%. The increase in the width is expected since a bias corrections will introduce a larger spread to the momentum distribution.
+\end_layout
+
+\begin_layout Standard
+
+\begin_inset Float figure
+placement h!
+wide false
+sideways false
+status open
+
+
+\begin_layout Standard
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+centering
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+
+\begin_layout Standard
+ 
+\begin_inset Graphics 
+	filename plots/momentumCorrection/Run4_Water/Contained_SignalMuons_Calib_reco_vs_true_p
+	width 48text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+
+\begin_layout Standard
+ 
+\begin_inset Graphics 
+	filename plots/momentumCorrection/Run4_Water/Contained_SignalMuons_Calib_reco_p_bias
+	width 48text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+
+\begin_inset Argument 1
+status collapsed
+
+
+\begin_layout Standard
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+p
+\end_layout
+
+\end_inset
+
+0d Water-In Contained Muon Momentum and Resolution After Applying Calibrations
+\end_layout
+
+\end_inset
+
+The true vs reconstructed momentum (a) and the resolution (b) for 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+p
+\end_layout
+
+\end_inset
+
+0d contained muons after applying calibrations. The Gaussian fit (blue, dashed) mean and width in (b) are shown as dash-dot and solid lines in (a), respectively. 
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:R4WContainedMuonsCalibrecovstruepandbias"
+
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+p
+\end_layout
+
+\end_inset
+
+0d Water-In Contained Kalman Pion tracks
+\end_layout
+
+\begin_layout Standard
+
+\begin_inset CommandInset label
+LatexCommand label
+name "subsubsec:MomToolP0DConPions"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Pion tracks that are reconstructed only in the 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+p
+\end_layout
+
+\end_inset
+
+0d are examined in this section. This sub-sample of signal pions is further divided into two distinct sub-samples. The first are tracks that behave as MIPs and deposit all their energy as described by the Bethe-Bloch curve. This sub-sample exhibits the same momentum reconstruction characteristics as muons with similar bias and resolution width as explained in 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+cref
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+{
+\end_layout
+
+\end_inset
+
+subsubsec:MomToolP0DConMuons
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+}
+\end_layout
+
+\end_inset
+
+. The collection of pions that deposit energy only as MIPs is henceforth referred to as 
+\begin_inset Quotes eld
+\end_inset
+
+MIP-pions
+\begin_inset Quotes erd
+\end_inset
+
+. The rest of the pions undergo hadronic Secondary Interactions (SI) and are referred to as 
+\begin_inset Quotes eld
+\end_inset
+
+SI-pions
+\begin_inset Quotes erd
+\end_inset
+
+. SI-pions exhibit a large negative bias, and a wide spread since they lose energy in the hadronic interactions that are not accounted for by the MT\SpecialChar endofsentence
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Investigations into how different pion interaction modes affect the momentum reconstruction were performed to determine how the momentum could be calibrated for hadronic interactions. No observable quantity was found to reliably identify events as being from SI-pions or MIP-pions. The studies showed that the pions decaying into muons, indicting 
+\begin_inset Quotes eld
+\end_inset
+
+ranging out
+\begin_inset Quotes erd
+\end_inset
+
+, constituted about 50% of all pion interactions in the 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+p
+\end_layout
+
+\end_inset
+
+0d which is the largest fraction of all interactions. So, without a clear method to distinguish MIP-pions and SI-pions, the pion momentum was not calibrated to any hadronic mode. Instead, the calibration was developed on MIP-pions only.
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The true-vs-reconstructed momentum distribution, and the resolution function for the full sample before calibration are shown in 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+cref
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+{
+\end_layout
+
+\end_inset
+
+fig:R4WContainedSignalPionsUnCalibrecovstruepandbias
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+}
+\end_layout
+
+\end_inset
+
+. The presence of the SI-pions in this sub-sample is evident by the number of mis-reconstructed events and the large negative bias observed in the resolution function.
+\end_layout
+
+\begin_layout Standard
+
+\begin_inset Float figure
+placement h!
+wide false
+sideways false
+status open
+
+
+\begin_layout Standard
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+centering
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+
+\begin_layout Standard
+ 
+\begin_inset Graphics 
+	filename plots/momentumCorrection/Run4_Water/Contained_SignalPions_UnCalib_reco_vs_true_p
+	width 48text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+
+\begin_layout Standard
+ 
+\begin_inset Graphics 
+	filename plots/momentumCorrection/Run4_Water/Contained_SignalPions_UnCalib_reco_p_bias
+	width 48text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+
+\begin_inset Argument 1
+status collapsed
+
+
+\begin_layout Standard
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+p
+\end_layout
+
+\end_inset
+
+0d Water-In Contained Pion Momentum and Resolution Before Calibration
+\end_layout
+
+\end_inset
+
+The 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+p
+\end_layout
+
+\end_inset
+
+0d contained pion track momentum and resolution before applying calibrations. There are two peaks present in the resolution histogram corresponding to SI-pions and MIP-pions. Truth information was used to separate the two samples and each was fit with a Gaussian. The MIP-pions (SI-pions) is shown with a dash-dot (dash) line. While the bias for MIP-pions is consistent with muons, there are a long number of poorly reconstructed SI-pions.
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:R4WContainedSignalPionsUnCalibrecovstruepandbias"
+
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+In order to study the features of the bias for pions in the MT, the contribution of SI-pions were removed using the cuts developed for this study. The first cut of the two requires that the pion does not scatter. This is determined by counting the number of times a pion trajectory ends and produces only one daughter trajectory that is itself another pion. The second cut requires that the pion trajectory ends and produces only a single muon daughter. The enumerated list of other pion interactions used in this study are given in 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+cref
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+{
+\end_layout
+
+\end_inset
+
+tab:PionTruthTagging
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+}
+\end_layout
+
+\end_inset
+
+. These cuts reduced the number of events used for bias correction by about 50% and resulted in a momentum distribution similar to muons. The difference between the MIP-pions and muon momenta distributions is that there are fewer higher momenta pions after about 500 MeV/c. The distributions for these events are shown in 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+cref
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+{
+\end_layout
+
+\end_inset
+
+fig:R4WContainedSignalPionsNonHadronicUnCalibrecovstruepandbias
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+}
+\end_layout
+
+\end_inset
+
+. There is a small mean bias of 2% with Gaussian width of 6%. As described in 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+cref
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+{
+\end_layout
+
+\end_inset
+
+subsubsec:MomToolP0DConPions
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+}
+\end_layout
+
+\end_inset
+
+, there is high bias present in the MT due to Kalman tracks that end in the -X side in the 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+p
+\end_layout
+
+\end_inset
+
+0d which can be seen in 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+cref
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+{
+\end_layout
+
+\end_inset
+
+fig:R4WContainedSignalPionsNonHadronicUnCalibrecovstruepandbias
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+}
+\end_layout
+
+\end_inset
+
+b. The procedure to separate out the high bias tail is used here as well. The resulting bias corrections developed using MIP-pions applied to all pions can be seen in 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+cref
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+{
+\end_layout
+
+\end_inset
+
+tab:R4WP0DPionContainedBiasCorrections
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+}
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\begin_inset Float figure
+placement h!
+wide false
+sideways false
+status open
+
+
+\begin_layout Standard
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+centering
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+
+\begin_layout Standard
+ 
+\begin_inset Graphics 
+	filename plots/momentumCorrection/Run4_Water/Contained_SignalPions_NonHadronic_UnCalib_reco_vs_true_p
+	width 48text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+
+\begin_layout Standard
+ 
+\begin_inset Graphics 
+	filename plots/momentumCorrection/Run4_Water/Contained_SignalPions_NonHadronic_UnCalib_reco_p_bias
+	width 48text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+
+\begin_inset Argument 1
+status collapsed
+
+
+\begin_layout Standard
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+p
+\end_layout
+
+\end_inset
+
+0d Water-In Contained Pion Momentum and Resolution Before Calibration With Hadronic Interactions Removed
+\end_layout
+
+\end_inset
+
+The momentum and resolution for 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+p
+\end_layout
+
+\end_inset
+
+0d contained pion tracks after removing hadronic interactions. The Gaussian fit (blue, dashed) mean and width in (b) are shown as dash-dot and solid lines in (a), respectively. 
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:R4WContainedSignalPionsNonHadronicUnCalibrecovstruepandbias"
+
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\begin_inset Float table
+placement !h
+wide false
+sideways false
+status open
+
+
+\begin_layout Standard
+
+\begin_inset Tabular 
+<lyxtabular version="3" rows="19" columns="3">
+<features rotate="0" booktabs="true" tabularvalignment="middle" tabularwidth="0pt">
+<column alignment="left" valignment="top">
+<column alignment="left" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell multicolumn="1" alignment="none" valignment="top" usebox="none" special="c">
+\begin_inset Text
+
+\begin_layout Standard
+Enumeration of the Pion Interaction Tags
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+Cut name 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+Cuts 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+Enumeration 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+Decay 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+Only one daughter and is a muon 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+1 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+Exit 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+p
+\end_layout
+
+\end_inset
+
+0d 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+Same trajectory exists in multiple detectors 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+2 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+Absorption 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+No daughter particles 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+3 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+Charge exchange 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+Only one daughter and is a 
+\begin_inset Formula $\pi^{0,-}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+4 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+No truth info available 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+Trajectory is NULL 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+5 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+EM shower 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+Trajectory has multiple electron, 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+position, or photon daughters
+\begin_inset Formula $^\dagger$
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+6 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+Single 
+\begin_inset Formula $e^\pm$
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+Only one daughter and is electron/position
+\begin_inset Formula $^\dagger$
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+7 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+Single gamma 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+Trajectory has a single gamma daughter
+\begin_inset Formula $^\dagger$
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+8 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+Elastic scatter 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+Only one daughter that 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+is a pion with the same charge 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+9
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+Middle hadronic 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+Trajectory produces a hadronic shower in 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+shower 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+the first 90% of the reconstructed track 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+10 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+End hadronic 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+Trajectory produces a hadronic shower in 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+shower 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+the last 90% of the reconstructed track 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+11 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+No visible 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+Any hadronic shower that does not 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+energy shower 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+in the active region of the 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+p
+\end_layout
+
+\end_inset
+
+0d 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+15 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+
+\begin_inset Argument 1
+status collapsed
+
+
+\begin_layout Standard
+Enumeration of the Pion Fag Tags
+\end_layout
+
+\end_inset
+
+The table of pion interaction tags developed for this study. The categorization is determined by the first interaction. A hadronic shower is defined as any hadronic daughter particle produced by the initial trajectory. 
+\begin_inset Formula $^\dagger$
+\end_inset
+
+Cut does not require that there be a daughter pion.
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:PionTruthTagging"
+
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\begin_inset Float figure
+placement h!
+wide false
+sideways false
+status open
+
+
+\begin_layout Standard
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+centering
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Graphics 
+	filename plots/momentumCorrection/Run4_Water/Contained_SignalPions_NonHadronic_NoAnomally_UnCalib_reco_p_biasFit
+	width 48text%
+
+\end_inset
+
+ 
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+
+\begin_inset Argument 1
+status collapsed
+
+
+\begin_layout Standard
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+p
+\end_layout
+
+\end_inset
+
+0d Water-In Contained Pion track Momentum Resolution as a Function of Reconstructed Momentum With Hadronic Interactions Removed
+\end_layout
+
+\end_inset
+
+The profile histogram for the momentum resolution as function of the reconstructed momentum for 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+p
+\end_layout
+
+\end_inset
+
+0d water-in contained pions is shown. Note that all SI-pions have been removed to develop a MIP-pion calibration. The smooth black curve is a characterization using a logistic function. See 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+cref
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+{
+\end_layout
+
+\end_inset
+
+tab:R4WP0DPionContainedBiasCorrections
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+}
+\end_layout
+
+\end_inset
+
+ for the calibrations extracted.
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:R4WP0DPionContainedResolutionProfile"
+
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\begin_inset Float table
+placement !h
+wide false
+sideways false
+status open
+
+
+\begin_layout Standard
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+centering
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Tabular 
+<lyxtabular version="3" rows="6" columns="6">
+<features rotate="0" booktabs="true" tabularvalignment="middle" tabularwidth="0pt">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell multicolumn="1" alignment="none" valignment="top" usebox="none" special="c">
+\begin_inset Text
+
+\begin_layout Standard
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+p
+\end_layout
+
+\end_inset
+
+0d Contained Pion Momentum Calibration Constants
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multicolumn="1" alignment="none" valignment="top" usebox="none" special="c">
+\begin_inset Text
+
+\begin_layout Standard
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+p
+\end_layout
+
+\end_inset
+
+0d Water-In Configuration
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+%
+\backslash
+toprule
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+%
+\backslash
+multicolumn{6}{c}{Blue ellipse, $R(p) = A + Bp$} 
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+%Low P [Gev/c] & High P [GeV/c] & A & B & & 
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+%
+\backslash
+midrule
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+%
+\backslash
+midrule
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+%0 & 1  & -0.183908 & 0.864926 & & 
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+%%1 & $
+\backslash
+infty$    & 0.0     & 0.0  & &
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+%
+\backslash
+bottomrule
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+%
+\backslash
+multicolumn{6}{c}{Green ellipse, $R(p) = A + Bp $} 
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+%Low P [Gev/c] & High P [GeV/c] & A & B & & 
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+%
+\backslash
+midrule
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+%
+\backslash
+midrule
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+%0 & 1           & -0.1243 & 0.6081 & & 
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+%%1 & $
+\backslash
+infty$    & 0.0     & 0.0    & & 
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+multicolumn{6}{c}{$R(p) = A + B/
+\backslash
+left(1+
+\backslash
+text{Exp}(-C(p-D))
+\backslash
+right)$}
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" usebox="none">
+\begin_inset Text
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" usebox="none">
+\begin_inset Text
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" usebox="none">
+\begin_inset Text
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" usebox="none">
+\begin_inset Text
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" usebox="none">
+\begin_inset Text
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+Low P [Gev/c] 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+High P [GeV/c] 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+A 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+B 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+C 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+D 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+0 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+1 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+0.01208 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+0.066381 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+40.56 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+0.4126 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+%1 & $
+\backslash
+infty$    & 0.0     &  0.0 & & 
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+
+\begin_inset Argument 1
+status collapsed
+
+
+\begin_layout Standard
+Calibration Constants For 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+p
+\end_layout
+
+\end_inset
+
+0d Water-In Contained Pion tracks
+\end_layout
+
+\end_inset
+
+The 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+p
+\end_layout
+
+\end_inset
+
+0d water-in contained pion track momentum calibrations are shown.
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:R4WP0DPionContainedBiasCorrections"
+
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\begin_inset Float figure
+placement h!
+wide false
+sideways false
+status open
+
+
+\begin_layout Standard
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+centering
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+
+\begin_layout Standard
+ 
+\begin_inset Graphics 
+	filename plots/momentumCorrection/Run4_Water/Contained_SignalPions_NonHadronic_Calib_reco_vs_true_p
+	width 48text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+
+\begin_layout Standard
+ 
+\begin_inset Graphics 
+	filename plots/momentumCorrection/Run4_Water/Contained_SignalPions_NonHadronic_Calib_reco_p_bias
+	width 48text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+
+\begin_inset Argument 1
+status collapsed
+
+
+\begin_layout Standard
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+p
+\end_layout
+
+\end_inset
+
+0d Water-In Contained Pion track Momentum and Resolution After Applying Calibrations Without Hadronic Interactions
+\end_layout
+
+\end_inset
+
+The result of applying the bias corrections to 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+p
+\end_layout
+
+\end_inset
+
+0d water-in contained pion tracks with cuts applied to remove hadronic interactions. The Gaussian fit (blue, dashed) mean and width in (b) are shown as dash-dot and solid lines in (a), respectively. 
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:R4WContainedSignalPionsNonHadronicCalibrecovstruepandbias"
+
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\begin_inset Float figure
+placement h!
+wide false
+sideways false
+status open
+
+
+\begin_layout Standard
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+centering
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+
+\begin_layout Standard
+ 
+\begin_inset Graphics 
+	filename plots/momentumCorrection/Run4_Water/Contained_SignalPions_Calib_reco_vs_true_p
+	width 48text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+
+\begin_layout Standard
+ 
+\begin_inset Graphics 
+	filename plots/momentumCorrection/Run4_Water/Contained_SignalPions_Calib_reco_p_bias
+	width 48text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+
+\begin_inset Argument 1
+status collapsed
+
+
+\begin_layout Standard
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+p
+\end_layout
+
+\end_inset
+
+0d Water-In Contained Pion track Momentum and Resolution After Applying Calibrations With All Interactions Included
+\end_layout
+
+\end_inset
+
+The result of applying the bias corrections to 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+p
+\end_layout
+
+\end_inset
+
+0d contained water-in pion tracks with all interactions included. The Gaussian fit (blue, dashed) mean and width in (b) is the same fit from 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+cref
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+{
+\end_layout
+
+\end_inset
+
+fig:R4WContainedSignalPionsNonHadronicCalibrecovstruepandbias
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+}
+\end_layout
+
+\end_inset
+
+. 
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:R4WContainedSignalPionsCalibrecovstruepandbias"
+
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+p
+\end_layout
+
+\end_inset
+
+0d Water-In 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+p
+\end_layout
+
+\end_inset
+
+0d-to-TPC1 Muon Kalman tracks
+\end_layout
+
+\begin_layout Standard
+
+\begin_inset CommandInset label
+LatexCommand label
+name "subsubsec:MomToolP2TMuons"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The sample used for calibration required that the 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+p
+\end_layout
+
+\end_inset
+
+0d and TPC1 tracks were correctly matched. The reconstructed and true momentum for muons entering TPC1 both begin at 250 MeV/c and have an angular acceptance of 0 to 50 deg 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+wrt
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+{}
+\end_layout
+
+\end_inset
+
+ the beam direction. As seen in 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+cref
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+{
+\end_layout
+
+\end_inset
+
+fig:R4WP2TMuonsUnCalibrecovstruepandbias
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+}
+\end_layout
+
+\end_inset
+
+, the muon momentum distribution is peaked at 500 MeV/c with a long tail for higher momenta. The -X direction anomaly, while present in this sub-sample, has a negligible effect on calibration.
+\end_layout
+
+\begin_layout Standard
+The shape of the resolution function is different from the 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+p
+\end_layout
+
+\end_inset
+
+0d contained sub-sample, with tails on both sides. While a Gaussian PDF was used with the 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+p
+\end_layout
+
+\end_inset
+
+0d contained sub-samples to describe the width of the resolution histogram, a Cauchy/Lorentzian PDF better describes the tails of the 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+p
+\end_layout
+
+\end_inset
+
+0d exiting resolution distribution. The following equation, 
+\begin_inset Formula $L(x)$
+\end_inset
+
+, to fit the resolution histogram was used:
+\end_layout
+
+\begin_layout Standard
+
+\begin_inset Formula \begin{equation}\label{eqn:LorentzianEqn}
+    L(x) = \text{C}
+    \left[\frac{{(\gamma/2)}^2}{{\left(x-\mu\right)}^2+{(\gamma/2)}^2}\right]\,
+\end{equation}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+{}
+\end_layout
+
+\end_inset
+
+where the free parameters of the fit are C which is a constant describing the height, 
+\begin_inset Formula $\gamma$
+\end_inset
+
+ which is the full width, half maximum (FWHM), and 
+\begin_inset Formula $\mu$
+\end_inset
+
+ which is the mean. The resolution has a mean of 7.2% and has a FWHM of 14%.
+\end_layout
+
+\begin_layout Standard
+
+\begin_inset Float figure
+placement h!
+wide false
+sideways false
+status open
+
+
+\begin_layout Standard
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+centering
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+
+\begin_layout Standard
+ 
+\begin_inset Graphics 
+	filename plots/momentumCorrection/Run4_Water/P2T_SignalMuons_UnCalib_reco_vs_true_p
+	width 48text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+
+\begin_layout Standard
+ 
+\begin_inset Graphics 
+	filename plots/momentumCorrection/Run4_Water/P2T_SignalMuons_UnCalib_reco_p_bias
+	width 48text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+
+\begin_inset Argument 1
+status collapsed
+
+
+\begin_layout Standard
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+p
+\end_layout
+
+\end_inset
+
+0d Water-In 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+p
+\end_layout
+
+\end_inset
+
+0d-to-TPC1 Muon track Momentum And Resolution Before Applying Calibrations
+\end_layout
+
+\end_inset
+
+The true vs reconstructed momentum (a) and the resolution (b) for 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+p
+\end_layout
+
+\end_inset
+
+0d water-in muon tracks that enter TPC1. A Cauchy/Lorentzian distribution describes the shape. Muons with p
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+textgreater
+\end_layout
+
+\end_inset
+
+3 GeV/c are not shown in (a) whereas all track momenta are shown in (b). The Cauchy/Lorentzian fit (blue, dashed) mean and FWHM in (b) are shown as dash-dot and solid lines in (a), respectively. 
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:R4WP2TMuonsUnCalibrecovstruepandbias"
+
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The momentum resolution for this sub-sample rises rapidly from 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+numrange
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+{
+\end_layout
+
+\end_inset
+
+250
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+{
+\end_layout
+
+\end_inset
+
+600
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+}
+\end_layout
+
+\end_inset
+
+ MeV/c to around 10% and decays to 
+\begin_inset Formula $\sim$
+\end_inset
+
+1% as shown in 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+cref
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+{
+\end_layout
+
+\end_inset
+
+fig:R4WP2TMuonsUnCalibrecopbiasFit
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+}
+\end_layout
+
+\end_inset
+
+. The resulting fit needed to take into account these two behaviors. The product of two different functions can be used to describe this behavior, one function being linear to describe the initial rise, and the other to describe the exponential fall: 
+\begin_inset Formula \begin{equation}\label{eqn:expLinearFunc}
+    f(x) = A + f_{\text{Linear}}(x) \times f_{\text{Exponential}}(x),
+\end{equation}
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+{}
+\end_layout
+
+\end_inset
+
+where 
+\begin_inset Formula $A$
+\end_inset
+
+ is some initial offset. The results of this parameterization is given in 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+cref
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+{
+\end_layout
+
+\end_inset
+
+fig:R4WP2TMuonsUnCalibrecopbiasFit
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+}
+\end_layout
+
+\end_inset
+
+ and 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+cref
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+{
+\end_layout
+
+\end_inset
+
+tab:R4WP0DtoTPCMuonBiasCorrections
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+}
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\begin_inset Float figure
+placement h!
+wide false
+sideways false
+status open
+
+
+\begin_layout Standard
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+centering
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Graphics 
+	filename plots/momentumCorrection/Run4_Water/P2T_SignalMuons_UnCalib_reco_p_biasFit
+	width 50text%
+
+\end_inset
+
+ 
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+
+\begin_inset Argument 1
+status collapsed
+
+
+\begin_layout Standard
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+p
+\end_layout
+
+\end_inset
+
+0d Water-In 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+p
+\end_layout
+
+\end_inset
+
+0d-to-TPC1 Muon track Momentum Resolution as a Function of Reconstructed Momentum
+\end_layout
+
+\end_inset
+
+The 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+p
+\end_layout
+
+\end_inset
+
+0d water-in 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+p
+\end_layout
+
+\end_inset
+
+0d-to-TPC1 muon track momentum bias as a function of the reconstructed momentum.
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:R4WP2TMuonsUnCalibrecopbiasFit"
+
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\begin_inset Float table
+placement !h
+wide false
+sideways false
+status open
+
+
+\begin_layout Standard
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+centering
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Tabular 
+<lyxtabular version="3" rows="5" columns="7">
+<features rotate="0" booktabs="true" tabularvalignment="middle" tabularwidth="0pt">
+<column alignment="left" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell multicolumn="1" alignment="none" valignment="top" usebox="none" special="c">
+\begin_inset Text
+
+\begin_layout Standard
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+p
+\end_layout
+
+\end_inset
+
+0d-to-TPC1 Muon track Momentum Calibration Constants
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" usebox="none">
+\begin_inset Text
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multicolumn="1" alignment="none" valignment="top" usebox="none" special="c">
+\begin_inset Text
+
+\begin_layout Standard
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+p
+\end_layout
+
+\end_inset
+
+0d Water-In Configuration
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" usebox="none">
+\begin_inset Text
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multicolumn="1" alignment="none" valignment="top" usebox="none" special="c">
+\begin_inset Text
+
+\begin_layout Standard
+
+\begin_inset Formula $R(p) = A + (p - B)\exp{(C+Dp)}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" usebox="none">
+\begin_inset Text
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+Low P [GeV/c] 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+High P [GeV/c] 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+A 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+B 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+C 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+D
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+0.0 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+5.0 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+0.0287 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+0.264 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+\begin_inset Formula $-4.81 \times 10^{-3}$
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+-2.46 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+
+\begin_inset Argument 1
+status collapsed
+
+
+\begin_layout Standard
+Calibration Constants for 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+p
+\end_layout
+
+\end_inset
+
+0d Water-In 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+p
+\end_layout
+
+\end_inset
+
+0d-to-TPC1 Muon tracks
+\end_layout
+
+\end_inset
+
+The 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+p
+\end_layout
+
+\end_inset
+
+0d water-in 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+p
+\end_layout
+
+\end_inset
+
+0d-to-TPC1 muon track momentum bias corrections. 
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:R4WP0DtoTPCMuonBiasCorrections"
+
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The resulting calibrated muon momentum is shown in 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+cref
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+{
+\end_layout
+
+\end_inset
+
+fig:R4WP2TMuonsCalibrecovstruepandbias
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+}
+\end_layout
+
+\end_inset
+
+. The mean bias has been virtually removed and the FWHM has decreased to 12%. The FWHM value on the momentum estimate is consistent with the 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+tn
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+{
+\end_layout
+
+\end_inset
+
+208
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+}
+\end_layout
+
+\end_inset
+
+ T2P momentum uncertainty of 9.2% where they integrated their momentum distribution around the mean until the 
+\begin_inset Formula $1\sigma$
+\end_inset
+
+ (67%) boundary values were found
+\begin_inset CommandInset citation
+LatexCommand cite
+after ""
+key "TN208"
+literal "false"
+
+\end_inset
+
+. It can be shown that the 67% boundary around the mean for a Cauchy PDF that value can be found numerically to be 
+\begin_inset Formula $0.918$
+\end_inset
+
+ times the FWHM which in this study corresponds to about 11%.
+\end_layout
+
+\begin_layout Standard
+
+\begin_inset Float figure
+placement h!
+wide false
+sideways false
+status open
+
+
+\begin_layout Standard
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+centering
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+
+\begin_layout Standard
+ 
+\begin_inset Graphics 
+	filename plots/momentumCorrection/Run4_Water/P2T_SignalMuons_Calib_reco_vs_true_p
+	width 48text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+
+\begin_layout Standard
+ 
+\begin_inset Graphics 
+	filename plots/momentumCorrection/Run4_Water/P2T_SignalMuons_Calib_reco_p_bias
+	width 48text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+
+\begin_inset Argument 1
+status collapsed
+
+
+\begin_layout Standard
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+p
+\end_layout
+
+\end_inset
+
+0d Water-In 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+p
+\end_layout
+
+\end_inset
+
+0d-to-TPC1 Muon track Momentum and Resolution After Applying Calibrations
+\end_layout
+
+\end_inset
+
+The true vs calibrated momentum (a) and the resolution (b) for 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+p
+\end_layout
+
+\end_inset
+
+0d water-in 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+p
+\end_layout
+
+\end_inset
+
+0d-to-TPC1 matched muon tracks. The Cauchy/Lorentzian fit (blue, dashed) mean and FWHM in (b) are shown as dash-dot and solid lines in (a), respectively. 
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:R4WP2TMuonsCalibrecovstruepandbias"
+
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+p
+\end_layout
+
+\end_inset
+
+0d Water-In 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+p
+\end_layout
+
+\end_inset
+
+0d-to-TPC1 Pion Kalman tracks
+\end_layout
+
+\begin_layout Standard
+
+\begin_inset CommandInset label
+LatexCommand label
+name "subsubsec:MomToolP2TPions"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+While SI-pions interactions had a significant impact on 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+p
+\end_layout
+
+\end_inset
+
+0d contained pions calibrations, few exiting pions undergo SI\SpecialChar endofsentence
+ The matching trajectory requirement eliminates 
+\begin_inset Formula $\sim36$
+\end_inset
+
+% of pion tracks as opposed to 2% of muon tracks. The momenta distributions shown in 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+cref
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+{
+\end_layout
+
+\end_inset
+
+fig:R4WP2TSignalPionsUnCalibrecovstruepandbias
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+}
+\end_layout
+
+\end_inset
+
+ are qualitatively the same as the muon distributions shown in 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+cref
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+{
+\end_layout
+
+\end_inset
+
+subsubsec:MomToolP2TMuons
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+}
+\end_layout
+
+\end_inset
+
+. The same linear and exponential function combination are used to characterize the bias profile as seen in 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+cref
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+{
+\end_layout
+
+\end_inset
+
+fig:R4WP2TSignalPionsUnCalibrecopbiasFit
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+}
+\end_layout
+
+\end_inset
+
+. The calibration extracted from the profile histogram fit are given in 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+cref
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+{
+\end_layout
+
+\end_inset
+
+tab:R4WP0DtoTPCPionBiasCorrections
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+}
+\end_layout
+
+\end_inset
+
+. The calibrated pion momentum is shown in 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+cref
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+{
+\end_layout
+
+\end_inset
+
+fig:R4WP2TSignalPionsCalibrecovstruepandbias
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+}
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\begin_inset Float figure
+placement h!
+wide false
+sideways false
+status open
+
+
+\begin_layout Standard
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+centering
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+
+\begin_layout Standard
+ 
+\begin_inset Graphics 
+	filename plots/momentumCorrection/Run4_Water/P2T_SignalPions_UnCalib_reco_vs_true_p
+	width 48text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+
+\begin_layout Standard
+ 
+\begin_inset Graphics 
+	filename plots/momentumCorrection/Run4_Water/P2T_SignalPions_UnCalib_reco_p_bias
+	width 48text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+
+\begin_inset Argument 1
+status collapsed
+
+
+\begin_layout Standard
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+p
+\end_layout
+
+\end_inset
+
+0d Water-In 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+p
+\end_layout
+
+\end_inset
+
+0d-to-TPC1 Pion track Momentum and Resolution Before Applying Calibrations
+\end_layout
+
+\end_inset
+
+The true vs reconstructed momentum (a) and the resolution (b) for 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+p
+\end_layout
+
+\end_inset
+
+0d water-in 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+p
+\end_layout
+
+\end_inset
+
+0d-to-TPC1 pion tracks. No cuts are needed to eliminate SI effects since hadronic interactions in TPC1 are negligible. The Cauchy/Lorentzian fit (blue, dashed) mean and width in (b) are shown as dash-dot and solid lines in (a), respectively. 
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:R4WP2TSignalPionsUnCalibrecovstruepandbias"
+
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\begin_inset Float figure
+placement h!
+wide false
+sideways false
+status open
+
+
+\begin_layout Standard
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+centering
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Graphics 
+	filename plots/momentumCorrection/Run4_Water/P2T_SignalPions_UnCalib_reco_p_biasFit
+	width 50text%
+
+\end_inset
+
+ 
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+
+\begin_inset Argument 1
+status collapsed
+
+
+\begin_layout Standard
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+p
+\end_layout
+
+\end_inset
+
+0d Water-In 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+p
+\end_layout
+
+\end_inset
+
+0d-to-TPC1 Pion track Momentum Resolution as a Function of Reconstructed Momentum
+\end_layout
+
+\end_inset
+
+The 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+p
+\end_layout
+
+\end_inset
+
+0d water-in 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+p
+\end_layout
+
+\end_inset
+
+0d-to-TPC1 pion momentum bias as a function of the reconstructed momentum. While most of the pions are below 1 GeV/c, the product of a linear and exponential function still produces a reasonable fit for higher values of momentum.
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:R4WP2TSignalPionsUnCalibrecopbiasFit"
+
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\begin_inset Float table
+placement !h
+wide false
+sideways false
+status open
+
+
+\begin_layout Standard
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+centering
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Tabular 
+<lyxtabular version="3" rows="5" columns="7">
+<features rotate="0" booktabs="true" tabularvalignment="middle" tabularwidth="0pt">
+<column alignment="left" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell multicolumn="1" alignment="none" valignment="top" usebox="none" special="c">
+\begin_inset Text
+
+\begin_layout Standard
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+p
+\end_layout
+
+\end_inset
+
+0d-to-TPC1 Pion track Momentum Calibration Constants
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" usebox="none">
+\begin_inset Text
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multicolumn="1" alignment="none" valignment="top" usebox="none" special="c">
+\begin_inset Text
+
+\begin_layout Standard
+
+\begin_inset Formula $R(p) = A + (p - B)\exp{(C+Dp)}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" usebox="none">
+\begin_inset Text
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+Low P [GeV/c] 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+High P [GeV/c] 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+A 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+B 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+C 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+D
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+0.0 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+5.0 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+0.0563 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+0.412 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+0.171 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+-3.047 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+%5.0 & $
+\backslash
+infty$    & 0.0 & 0.0 & -1E99 & 0.0 
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+
+\begin_inset Argument 1
+status collapsed
+
+
+\begin_layout Standard
+Calibration Constants for 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+p
+\end_layout
+
+\end_inset
+
+0d Water-In 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+p
+\end_layout
+
+\end_inset
+
+0d-to-TPC1 Pion tracks
+\end_layout
+
+\end_inset
+
+The 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+p
+\end_layout
+
+\end_inset
+
+0d water-in 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+p
+\end_layout
+
+\end_inset
+
+0d-to-TPC1 pion track momentum bias corrections.
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:R4WP0DtoTPCPionBiasCorrections"
+
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\begin_inset Float figure
+placement h!
+wide false
+sideways false
+status open
+
+
+\begin_layout Standard
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+centering
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+
+\begin_layout Standard
+ 
+\begin_inset Graphics 
+	filename plots/momentumCorrection/Run4_Water/P2T_SignalPions_Calib_reco_vs_true_p
+	width 48text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+
+\begin_layout Standard
+ 
+\begin_inset Graphics 
+	filename plots/momentumCorrection/Run4_Water/P2T_SignalPions_Calib_reco_p_bias
+	width 48text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+
+\begin_inset Argument 1
+status collapsed
+
+
+\begin_layout Standard
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+p
+\end_layout
+
+\end_inset
+
+0d Water-In 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+p
+\end_layout
+
+\end_inset
+
+0d-to-TPC1 Pion track Momentum and Resolution After Applying Calibrations
+\end_layout
+
+\end_inset
+
+The true vs calibrated momentum (a) and the resolution (b) for 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+p
+\end_layout
+
+\end_inset
+
+0d exiting water-in pion tracks. The Cauchy/Lorentzian fit (blue, dashed) mean and width in (b) are shown as dash-dot and solid lines in (a), respectively. 
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:R4WP2TSignalPionsCalibrecovstruepandbias"
+
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+p
+\end_layout
+
+\end_inset
+
+0d Contained Muon and Pion Cluster tracks
+\end_layout
+
+\begin_layout Standard
+
+\begin_inset CommandInset label
+LatexCommand label
+name "subsubsec:MomToolMuPiClustertracks"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+MC studies show that there are far fewer Cluster track muons than pions. Thus, we present results obtained for pions and extend the same conclusions and calibrations to muons. It should be noted that the angular acceptance of this sub-sample is 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+numrange
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+{
+\end_layout
+
+\end_inset
+
+0
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+{
+\end_layout
+
+\end_inset
+
+140
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+}
+\end_layout
+
+\end_inset
+
+ degrees 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+wrt
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+{}
+\end_layout
+
+\end_inset
+
+ the beam direction which is much higher than any Kalman tracks.
+\end_layout
+
+\begin_layout Standard
+It is difficult to obtain an accurate measurement of Cluster track momentum due to the 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+p
+\end_layout
+
+\end_inset
+
+0d's spatial resolution. The MT is designed to describe energy loss via ionization, first integrating energy lost along the rapidly changing slope (
+\begin_inset Formula $\beta\gamma \lesssim 1$
+\end_inset
+
+) and then along flat MIP region (
+\begin_inset Formula $\beta\gamma \gtrsim 1$
+\end_inset
+
+) as compared with 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+cref
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+{
+\end_layout
+
+\end_inset
+
+fig:waterdTdxBG
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+}
+\end_layout
+
+\end_inset
+
+. When given a Cluster track, there are fewer points along the stopping power curve to integrate. Therefore the resulting momentum estimate is highly dependent on the Cluster track's reconstructed angle. Furthermore any non-ionization energy loss like SI will cause the MT to under estimate the momentum result. The reconstructed momentum algorithm captures single particle momenta of 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+numrange
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+{
+\end_layout
+
+\end_inset
+
+150
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+{
+\end_layout
+
+\end_inset
+
+350
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+}
+\end_layout
+
+\end_inset
+
+ MeV/c as shown in 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+cref
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+{
+\end_layout
+
+\end_inset
+
+fig:R4WClusterSignalPionsUnCalibrecovstruepandbias
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+}
+\end_layout
+
+\end_inset
+
+, the true momentum of pion particles exceeds that. Since the momentum is highly skewed due to non-ionization related energy depositions from hadronic interactions, mostly the same cuts from 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+cref
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+{
+\end_layout
+
+\end_inset
+
+subsubsec:MomToolP0DConPions
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+}
+\end_layout
+
+\end_inset
+
+ are used to remove tracks that experience hadronic interactions.
+\end_layout
+
+\begin_layout Standard
+
+\begin_inset Float figure
+placement h!
+wide false
+sideways false
+status open
+
+
+\begin_layout Standard
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+centering
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+
+\begin_layout Standard
+ 
+\begin_inset Graphics 
+	filename plots/momentumCorrection/Run4_Water/Cluster_SignalPions_UnCalib_reco_vs_true_p
+	width 48text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+
+\begin_layout Standard
+ 
+\begin_inset Graphics 
+	filename plots/momentumCorrection/Run4_Water/Cluster_SignalPions_UnCalib_reco_p_bias
+	width 48text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+
+\begin_inset Argument 1
+status collapsed
+
+
+\begin_layout Standard
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+p
+\end_layout
+
+\end_inset
+
+0d Water-In Cluster Pion track Momentum And Resolution Before Applying Calibrations
+\end_layout
+
+\end_inset
+
+The 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+p
+\end_layout
+
+\end_inset
+
+0d water-in pion Cluster track true vs reconstructed momentum (a) and the resolution (b) for all Cluster track pions. We see that the majority of Cluster track pions have a systematic under-estimate of the true momentum.
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:R4WClusterSignalPionsUnCalibrecovstruepandbias"
+
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+After removing hadronic interactions in the pion Cluster track sample, the distributions in 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+cref
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+{
+\end_layout
+
+\end_inset
+
+fig:R4WClusterSignalPionsNonHadronicUnCalibrecovstruepandbias
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+}
+\end_layout
+
+\end_inset
+
+ show a linear relationship between the true and reconstructed momentum. The corresponding linear function calibrations are shown in 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+cref
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+{
+\end_layout
+
+\end_inset
+
+tab:R4WClusterBiasCorrections
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+}
+\end_layout
+
+\end_inset
+
+ with corresponding fit in 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+cref
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+{
+\end_layout
+
+\end_inset
+
+fig:R4WClusterPionsNonHadronicUnCalibrecopbiasFit
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+}
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\begin_inset Float figure
+placement h!
+wide false
+sideways false
+status open
+
+
+\begin_layout Standard
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+centering
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+
+\begin_layout Standard
+ 
+\begin_inset Graphics 
+	filename plots/momentumCorrection/Run4_Water/Cluster_SignalPions_NonHadronic_UnCalib_reco_vs_true_p
+	width 48text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+
+\begin_layout Standard
+ 
+\begin_inset Graphics 
+	filename plots/momentumCorrection/Run4_Water/Cluster_SignalPions_NonHadronic_UnCalib_reco_p_bias
+	width 48text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+
+\begin_inset Argument 1
+status collapsed
+
+
+\begin_layout Standard
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+p
+\end_layout
+
+\end_inset
+
+0d Water-In Cluster Pion track Momentum And Resolution With Hadronic Interactions Removed Before Applying Calibrations
+\end_layout
+
+\end_inset
+
+The 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+p
+\end_layout
+
+\end_inset
+
+0d water-in Cluster track momentum bias as a function of the reconstructed momentum that do no interact hadronically in the 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+p
+\end_layout
+
+\end_inset
+
+0d are shown. Due to low statistics of the Cluster track algorithm for muons in the MC, pions are used to develop the calibrations as well.
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:R4WClusterSignalPionsNonHadronicUnCalibrecovstruepandbias"
+
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\begin_inset Float figure
+placement h!
+wide false
+sideways false
+status open
+
+
+\begin_layout Standard
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+centering
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Graphics 
+	filename plots/momentumCorrection/Run4_Water/Cluster_SignalPions_NonHadronic_UnCalib_reco_p_biasFit
+	width 50text%
+
+\end_inset
+
+ 
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+
+\begin_inset Argument 1
+status collapsed
+
+
+\begin_layout Standard
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+p
+\end_layout
+
+\end_inset
+
+0d Water-In Cluster Pion track Momentum Resolution as a Function of Reconstructed Momentum
+\end_layout
+
+\end_inset
+
+The 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+p
+\end_layout
+
+\end_inset
+
+0d water-in Cluster track momentum bias as a function of the reconstructed momentum for pions that do no interact hadronically in the 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+p
+\end_layout
+
+\end_inset
+
+0d are shown. Due to low statistics of the Cluster track algorithm for muons in the MC, pions are used to develop the calibrations as well.
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:R4WClusterPionsNonHadronicUnCalibrecopbiasFit"
+
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\begin_inset Float table
+placement h
+wide false
+sideways false
+status open
+
+
+\begin_layout Standard
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+centering
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Tabular 
+<lyxtabular version="3" rows="5" columns="4">
+<features rotate="0" booktabs="true" tabularvalignment="middle" tabularwidth="0pt">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell multicolumn="1" alignment="none" valignment="top" usebox="none" special="c">
+\begin_inset Text
+
+\begin_layout Standard
+Cluster track Momentum Calibration Constants For Muons and Pions
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multicolumn="1" alignment="none" valignment="top" usebox="none" special="c">
+\begin_inset Text
+
+\begin_layout Standard
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+p
+\end_layout
+
+\end_inset
+
+0d Water-In Configuration
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multicolumn="1" alignment="none" valignment="top" usebox="none" special="c">
+\begin_inset Text
+
+\begin_layout Standard
+
+\begin_inset Formula $R(p) = A + B p$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+Low P [GeV/c] 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+High P [GeV/c] 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+A 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+B
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+0.1 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+0.35 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+-0.253429 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+0.497429 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+
+\begin_inset Argument 1
+status collapsed
+
+
+\begin_layout Standard
+Calibration Constants For 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+p
+\end_layout
+
+\end_inset
+
+0d Water-In Cluster Pion track Momentum
+\end_layout
+
+\end_inset
+
+The 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+p
+\end_layout
+
+\end_inset
+
+0d water-in Cluster track momentum bias corrections is shown for both muons and pions.
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:R4WClusterBiasCorrections"
+
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+After applying the calibrations on MIP-pions only, we see that the momentum bias for pions was improved to nearly no bias and 15% width as shown in 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+cref
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+{
+\end_layout
+
+\end_inset
+
+fig:R4WClusterSignalPionsNonHadronicCalibrecovstruepandbias
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+}
+\end_layout
+
+\end_inset
+
+. However, when SI-pions are reintroduced into the sub-sample as in 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+cref
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+{
+\end_layout
+
+\end_inset
+
+fig:R4WClusterSignalPionsCalibrecovstruepandbias
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+}
+\end_layout
+
+\end_inset
+
+, the momentum bias is shifted down to -12% with a 23% width. This retrogression with the momentum resolution is expected since it was poor to begin with due to SI\SpecialChar endofsentence
+ As a result only a single momentum estimate in the range of 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+numrange
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+{
+\end_layout
+
+\end_inset
+
+150
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+{
+\end_layout
+
+\end_inset
+
+400
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+}
+\end_layout
+
+\end_inset
+
+ MeV/c can be established using the Momentum Tool's measurement itself.
+\end_layout
+
+\begin_layout Standard
+
+\begin_inset Float figure
+placement h!
+wide false
+sideways false
+status open
+
+
+\begin_layout Standard
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+centering
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+
+\begin_layout Standard
+ 
+\begin_inset Graphics 
+	filename plots/momentumCorrection/Run4_Water/Cluster_SignalPions_NonHadronic_Calib_reco_vs_true_p
+	width 48text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+
+\begin_layout Standard
+ 
+\begin_inset Graphics 
+	filename plots/momentumCorrection/Run4_Water/Cluster_SignalPions_NonHadronic_Calib_reco_p_bias
+	width 48text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+
+\begin_inset Argument 1
+status collapsed
+
+
+\begin_layout Standard
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+p
+\end_layout
+
+\end_inset
+
+0d Water-In Cluster Pion track Momentum And Resolution After Applying Calibrations With Hadronic Interactions Removed
+\end_layout
+
+\end_inset
+
+The 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+p
+\end_layout
+
+\end_inset
+
+0d water-in Cluster pion track true vs reconstructed momentum (a) and the resolution (b) with no hadronic interactions. The Gaussian fit (blue, dashed) mean and width in (b) are shown as dash-dot and solid lines in (a), respectively. 
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:R4WClusterSignalPionsNonHadronicCalibrecovstruepandbias"
+
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\begin_inset Float figure
+placement h!
+wide false
+sideways false
+status open
+
+
+\begin_layout Standard
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+centering
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+
+\begin_layout Standard
+ 
+\begin_inset Graphics 
+	filename plots/momentumCorrection/Run4_Water/Cluster_SignalPions_Calib_reco_vs_true_p
+	width 48text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+
+\begin_layout Standard
+ 
+\begin_inset Graphics 
+	filename plots/momentumCorrection/Run4_Water/Cluster_SignalPions_Calib_reco_p_bias
+	width 48text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+
+\begin_inset Argument 1
+status collapsed
+
+
+\begin_layout Standard
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+p
+\end_layout
+
+\end_inset
+
+0d Water-In Cluster Pion track Momentum And Resolution After Applying Calibrations
+\end_layout
+
+\end_inset
+
+The 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+p
+\end_layout
+
+\end_inset
+
+0d water-in Cluster pion track true vs reconstructed momentum (a) and the resolution (b) with hadronic interactions included. The Gaussian fit (blue, dashed) mean and width in (b) is the same fit from 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+cref
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+{
+\end_layout
+
+\end_inset
+
+fig:R4WClusterSignalPionsNonHadronicCalibrecovstruepandbias
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+}
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:R4WClusterSignalPionsCalibrecovstruepandbias"
+
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+A second, similar estimator of the Cluster track momentum can be obtained from geometrical considerations. The primary reason tracks fail the Kalman filter and are reconstructed as cluster tracks is that they do not cross enough layers in the p0d to be reconstructed. This means that cluster tracks are either low momentum and short forward going tracks, or any momentum high angle tracks. This relationship between angle and momentum for cluster MIP-pions only is shown in 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+cref
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+{
+\end_layout
+
+\end_inset
+
+fig:R4WClusterPionsNonHadronicTrueMomentumRecoAngleRelationship
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+}
+\end_layout
+
+\end_inset
+
+ where there is clear separation between higher and lower momentum pions. The highest momentum pions above 280 MeV/c reside in 
+\begin_inset Formula $|\cos\left(\theta^\text{Beam}\right)|<0.5$
+\end_inset
+
+ while the rest are below 240 MeV/c. This shows us that the reconstructed angle of the Cluster track is a better estimator of the cluster momentum.
+\end_layout
+
+\begin_layout Standard
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+%Higher-angle particles must cross more material than more
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+%forward-going particles, thus depositing more energy in its path. If a
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+%particle is captured with the Cluster track, the higher angle ones
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+%must describe higher energy particles than the more forward- or
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+%backwards-going particles. Otherwise the particle would be captured by
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+%the Kalman filter.  This relationship for MIP-pions only is shown in
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+%
+\backslash
+cref{fig:R4WClusterPionsNonHadronicTrueMomentumRecoAngleRelationship}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+%where there is clear separation between higher and lower momentum
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+%pions.  The highest momentum pions above 280 MeV/c reside in
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+%$|
+\backslash
+cos
+\backslash
+left(
+\backslash
+theta^
+\backslash
+text{Beam}
+\backslash
+right)|<0.5$ while the rest are below
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+%240 MeV/c the reconstructed angle of the Cluster track is a better
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+%estimator of the cluster momentum.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\begin_inset Float figure
+placement h!
+wide false
+sideways false
+status open
+
+
+\begin_layout Standard
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+centering
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+
+\begin_layout Standard
+ 
+\begin_inset Graphics 
+	filename plots/momentumCorrection/Run4_Water/Cluster_SignalPions_AngleMomentumRelationshipTH2D
+	width 48text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+
+\begin_layout Standard
+ 
+\begin_inset Graphics 
+	filename plots/momentumCorrection/Run4_Water/Cluster_SignalPions_AngleMomentumRelationship
+	width 48text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+
+\begin_inset Argument 1
+status collapsed
+
+
+\begin_layout Standard
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+p
+\end_layout
+
+\end_inset
+
+0d Water-In Cluster track True Pion Momentum And track Angle Relationship
+\end_layout
+
+\end_inset
+
+The relationship for between the Cluster track reconstructed neutrino beam angle and true momentum for MIP-pions is shown as a histogram in (a) and profile in (b). In the profile histogram, there is approximately 
+\begin_inset Formula $\sim100$
+\end_inset
+
+ events in each bin except for the bin between -1 and -0.5. The dashed lines highlight that the lowest and highest momentum pions can be separated using rectangular cuts in angle space only.
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:R4WClusterPionsNonHadronicTrueMomentumRecoAngleRelationship"
+
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document

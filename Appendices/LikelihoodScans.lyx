@@ -1,0 +1,473 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass extreport
+\begin_preamble
+% ams math packages
+\usepackage[cmex10]{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+
+% graphics packages
+\usepackage{graphicx} % remove pdftex if you are not compiling to pdf
+%\graphicspath{{./figures/}} % this places all graphics in the figures subdirectory
+
+% allowed graphics extensions
+% uncomment if you prefer to add extension in \includegraphics
+\DeclareGraphicsExtensions{.pdf,.png,.jpg}
+
+% allows the creation of subfigures
+\usepackage[caption=false]{subfig}
+
+% book tables are simple and look nice
+\usepackage{booktabs}
+
+% for specifying urls and links
+\usepackage{url}
+\urlstyle{same} % same style as regular text
+
+% for defining colors
+\usepackage{xcolor}
+
+%\usepackage[labelformat=empty]{caption}
+%\usepackage{subcaption}
+\usepackage{lmodern}
+\usepackage{csquotes}
+\usepackage{multirow}
+\usepackage{multicol}
+\usepackage{hepunits}
+\usepackage{hepnames}
+\usepackage{physics}
+
+\usepackage[%
+  pdfpagelabels,
+  pdfusetitle,
+  %hidelinks,
+  %colorlinks=true,
+  %pdfborder={0 0 0},
+  linkcolor=blue,
+  filecolor=magenta,
+  urlcolor=cyan,
+  pagebackref,
+  bookmarksopen,
+  bookmarksnumbered]{hyperref}
+
+\usepackage{sectsty}
+\chapterfont{\centering}
+
+\usepackage{braket}
+\end_preamble
+\use_default_options true
+\master ../T2K-TN-370.lyx
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "palatino" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format pdf2
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\pdf_title "HoganThesis"
+\pdf_author "Matthew Hogan"
+\pdf_bookmarks true
+\pdf_bookmarksnumbered true
+\pdf_bookmarksopen false
+\pdf_bookmarksopenlevel 1
+\pdf_breaklinks false
+\pdf_pdfborder false
+\pdf_colorlinks true
+\pdf_backref false
+\pdf_pdfusetitle true
+\papersize letterpaper
+\use_geometry true
+\use_package amsmath 0
+\use_package amssymb 0
+\use_package cancel 0
+\use_package esint 0
+\use_package mathdots 0
+\use_package mathtools 0
+\use_package mhchem 0
+\use_package stackrel 0
+\use_package stmaryrd 0
+\use_package undertilde 0
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 0
+\use_minted 0
+\branch Introduction
+\selected 1
+\filename_suffix 0
+\color #faf0e6
+\end_branch
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 1in
+\topmargin 1in
+\rightmargin 1in
+\bottommargin 1in
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+This appendix examines the 
+\begin_inset Formula $\pod$
+\end_inset
+
+-only BANFF fit likelihood term 
+\begin_inset Formula $\chi_{\text{LLR}}^{2}=\chi_{\text{sample}}^{2}$
+\end_inset
+
+ response (scans) to variations in flux and cross section parameters.
+ For the cross section terms, the scans shapes correspond to the shape of
+ the spline weight.
+ In addition, comparison scans are provided for the FGD MaCH3 2017 analysis.
+ Extensive comparisons were made to ensure that the FGD MaCh3 and FGD BANFF
+ analyses have identical splines.
+ So it is an equal comparison with the FGD BANFF as shown in 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "chap:P0DinBANFF"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+ In some cases, the 
+\begin_inset Formula $\pod$
+\end_inset
+
+-only scans indicate higher sensitivity to parameters than the FGD.
+\end_layout
+
+\begin_layout Standard
+These were generously produced by Clarence Wret (c.wret@rochester.edu) of
+ the University of Rochester.
+ The likelihood scans are ordered as such.
+ The first 50 plots 
+\begin_inset Quotes eld
+\end_inset
+
+b_0_sam
+\begin_inset Quotes erd
+\end_inset
+
+ through 
+\begin_inset Quotes eld
+\end_inset
+
+b_49_sam
+\begin_inset Quotes erd
+\end_inset
+
+ are the ND280 flux sample contributions.
+ The next 50 
+\begin_inset Quotes eld
+\end_inset
+
+b_50_sam
+\begin_inset Quotes erd
+\end_inset
+
+ through 
+\begin_inset Quotes eld
+\end_inset
+
+b_99_sam
+\begin_inset Quotes erd
+\end_inset
+
+ are the sample contributions that affect the SK flux.
+ The last scans are variations on the cross section parameters.
+ Due to a bug in plotting script, the scans 2p2h shape location for 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+ce{^{12}C}
+\end_layout
+
+\end_inset
+
+ and 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+ce{^{16}O}
+\end_layout
+
+\end_inset
+
+ were empty for the 
+\begin_inset Formula $\pod$
+\end_inset
+
+.
+ The correct 
+\begin_inset Formula $\pod$
+\end_inset
+
+ scans are shown in 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "fig:Correct-shape-scans"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ with the MaCH3 inputs reproduced as faithfully as possible.
+\end_layout
+
+\begin_layout Standard
+As expected, the SK flux variations are flat with respect to the sample
+ chi-squared.
+ This is due model parameterization in which the ND280 samples only affect
+ the ND280 flux parameters.
+ In other words, the log-likelihood scans for the SK flux parameters have
+ no affect on the ND280 sample events.
+\end_layout
+
+\begin_layout Standard
+Some of cross section parameter splines are reflected about a point in order
+ to properly calculate correlations between parameters.
+ In previous fits to data, the 2p2h 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+ce{^{12}C}
+\end_layout
+
+\end_inset
+
+ and 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+ce{^{16}O}
+\end_layout
+
+\end_inset
+
+ shape location terms hit their physical boundaries at +1.
+ The result was that the fitter MINUIT inaccurately calculated the Hess
+ matrix.
+ The decision was made to reflect, also called 
+\begin_inset Quotes eld
+\end_inset
+
+mirroring
+\begin_inset Quotes erd
+\end_inset
+
+, the splines about a certain point to expand the limit.
+ Tests showed that this did not affect the postfit results for any parameters,
+ but the correlations between all other parameters was calculated to less
+ than 1%
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Bienstock2017"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset External
+	template PDFPages
+	filename Figures/LikeLihoodScans/p0d_vs_mach3_sample.pdf
+	extra LaTeX "nup=3x4,pages={1-129},pagecommand=\thispagestyle{plain}"
+	width 2in
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/LikeLihoodScans/2p2h_shape_C_sam.png
+	lyxscale 50
+	width 45text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/LikeLihoodScans/2p2h_shape_O_sam.png
+	lyxscale 50
+	width 45text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Correct 
+\begin_inset Formula $\pod$
+\end_inset
+
+ scans with faithful reproductions of the MaCh3 scans for the 2p2h shape
+ location cross section parameters.
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+Corrected 2p2h Shape Location Scans
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Correct-shape-scans"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document

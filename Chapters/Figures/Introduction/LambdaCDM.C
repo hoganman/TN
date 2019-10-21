@@ -1,0 +1,41 @@
+void LambdaCDM()
+{
+    gSystem->Load("libP0DBANFF");
+    P0DBANFFInterface interface;
+    const Float_t hubbleConst = 70.4;
+    const Float_t reducedHubbleConst = hubbleConst / 100.;
+    const Float_t omegaDarkEnergy = 0.728;
+    const Float_t omegaDarkMatter = 0.227;
+    const Float_t omegaBaryon = 0.0456;
+    const Float_t omegaNeutrinos = 0.0062 / (reducedHubbleConst * reducedHubbleConst);
+    Float_t sum = 0;
+    Float_t vals[] = {omegaDarkEnergy, omegaDarkMatter, omegaNeutrinos, omegaBaryon};
+    Int_t colors[] = {P0DBANFFInterface::kcbBlue, P0DBANFFInterface::kcbGreen, P0DBANFFInterface::kcbRed, P0DBANFFInterface::kcbSky};
+    //Int_t colors[] = {kBlue, kGreen, kViolet};
+    char* labels[] = {"Dark Energy", "Dark Matter",  "Neutrinos","Atoms"};
+    //char* labels[] = {"Dark Energy (72.9%)", "Dark Matter (22.6%)", "Baryons (4.51%)"};
+    Int_t nvals = sizeof(vals)/sizeof(vals[0]);
+    for(Int_t i = 0; i < nvals; ++i) sum += vals[i];
+    printf("sum = %f\n", sum);
+    TCanvas *cpie = new TCanvas("cpie","TPie test",800,800);
+    TPie *pie3 = new TPie("pie3","",nvals,vals,colors);
+    cpie->cd();
+    //pie3->SetY(.32);
+    //pie3->GetSlice(1)->SetFillStyle(3031);
+    //pie3->SetLabelsOffset(-.1);
+    //pie3->Draw("3d");
+    for(Int_t i = 0; i < nvals; ++i) pie3->SetEntryLabel(i, labels[i]);
+    for(Int_t i = 0; i < nvals; ++i) pie3->GetSlice(i)->SetFillColor(colors[i]);
+    for(Int_t i = 0; i < nvals; ++i) pie3->GetSlice(i)->SetLineWidth(3);
+    //TLegend *pieleg = pie3->MakeLegend();
+    //TPie *pieclone = new TPie(*pie3);
+    //for(Int_t i = 0; i < nvals; ++i) pie3->SetEntryLabel(i, "");
+    pie3->SetLabelFormat("#splitline{%txt}{%perc}");
+    pie3->Draw("nol <");
+    //pieleg->SetBorderSize(0);
+    //pieleg->SetFillColor(0);
+    //pieleg->SetFillStyle(0);
+    //pieleg->SetLineWidth(0);
+    //pieleg->Draw();
+    //pieleg->SetY1(.56); pieleg->SetY2(.86);
+}

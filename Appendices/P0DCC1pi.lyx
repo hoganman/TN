@@ -1,0 +1,1007 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass csuthesisLyx
+\begin_preamble
+% ams math packages
+\usepackage[cmex10]{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+
+% graphics packages
+\usepackage{graphicx} % remove pdftex if you are not compiling to pdf
+%\graphicspath{{./figures/}} % this places all graphics in the figures subdirectory
+
+% allowed graphics extensions
+% uncomment if you prefer to add extension in \includegraphics
+\DeclareGraphicsExtensions{.pdf,.png,.jpg}
+
+% allows the creation of subfigures
+\usepackage[caption=false]{subfig}
+
+% book tables are simple and look nice
+\usepackage{booktabs}
+
+% for specifying urls and links
+\usepackage{url}
+\urlstyle{same} % same style as regular text
+
+% for defining colors
+\usepackage{xcolor}
+
+%\usepackage[labelformat=empty]{caption}
+%\usepackage{subcaption}
+\usepackage{lmodern}
+\usepackage{csquotes}
+\usepackage{multirow}
+\usepackage{multicol}
+\usepackage{hepunits}
+\usepackage{hepnames}
+\usepackage{physics}
+
+\usepackage[%
+  pdfpagelabels,
+  pdfusetitle,
+  %hidelinks,
+  %colorlinks=true,
+  %pdfborder={0 0 0},
+  linkcolor=blue,
+  filecolor=magenta,
+  urlcolor=cyan,
+  pagebackref,
+  bookmarksopen,
+  bookmarksnumbered]{hyperref}
+
+\usepackage{sectsty}
+\chapterfont{\centering}
+
+\usepackage{braket}
+\end_preamble
+\options doctor
+\use_default_options true
+\master ../Thesis.lyx
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "palatino" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format pdf2
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\pdf_title "HoganThesis"
+\pdf_author "Matthew Hogan"
+\pdf_bookmarks true
+\pdf_bookmarksnumbered true
+\pdf_bookmarksopen false
+\pdf_bookmarksopenlevel 1
+\pdf_breaklinks false
+\pdf_pdfborder false
+\pdf_colorlinks true
+\pdf_backref false
+\pdf_pdfusetitle true
+\papersize letterpaper
+\use_geometry true
+\use_package amsmath 0
+\use_package amssymb 0
+\use_package cancel 0
+\use_package esint 0
+\use_package mathdots 0
+\use_package mathtools 0
+\use_package mhchem 0
+\use_package stackrel 0
+\use_package stmaryrd 0
+\use_package undertilde 0
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 0
+\use_minted 0
+\branch Introduction
+\selected 1
+\filename_suffix 0
+\color #faf0e6
+\end_branch
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 1in
+\topmargin 1in
+\rightmargin 1in
+\bottommargin 1in
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+Prior to the work on the near detector constraint, I participated in the
+ 
+\begin_inset Formula $\pod$
+\end_inset
+
+ 
+\begin_inset Formula $\numu$
+\end_inset
+
+ CC-
+\begin_inset Formula $1\pi$
+\end_inset
+
+ cross section on water analysis.
+ This was a second generation analysis designed to make significant improvements
+ to the first generation analysis, which was a single bin measurement
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Assylbekov2014"
+literal "false"
+
+\end_inset
+
+.
+ The primary goal of the analysis was to provide a differential measurement
+ in muon kinematics.
+ The challenges were to identify the muon and pion while measuring their
+ respective momenta.
+ The results of the analysis are given in the following thesis
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Schwehr2018"
+literal "false"
+
+\end_inset
+
+ and a publication is in preparation.
+\end_layout
+
+\begin_layout Standard
+My primary contributions to the analysis included developing the particle
+ identification (PID) tools and momentum calibration for muon and pion tracks.
+ Machine learning based selection cuts were added in the analysis chain
+ that were exclusively designed to exploit the 
+\begin_inset Formula $\pod$
+\end_inset
+
+ local reconstruction since the ND280 global reconstruction was not available
+ during development.
+ These selection cuts provided the means to make PID cuts to select only
+ one muon and one pion in a two track event.
+ To provide a differential cross section measurement in the muon kinematics,
+ a momentum measurement was developed and calibrated for the analysis.
+\end_layout
+
+\begin_layout Standard
+The first section describes my contributions to the development of the machine
+ learning PID tools.
+ The second section includes the description of the momentum measurement
+ and calibration method.
+\end_layout
+
+\begin_layout Section
+Particle Identification Tools
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+The PID Tools
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Since there are no particle identification (PID) tools in the local 
+\begin_inset Formula $\pod$
+\end_inset
+
+ reconstruction, the 
+\begin_inset Formula $\pod$
+\end_inset
+
+ CC-
+\begin_inset Formula $1\pi$
+\end_inset
+
+ analysis developed a unique set of tools were designed specifically to
+ select muon and pion tracks.
+ These details are explained in further detail in the following thesis
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Schwehr2018"
+literal "false"
+
+\end_inset
+
+.
+ The approach taken by this analysis was to use machine learning techniques
+ for event selection and PID for each track.
+ Only reconstructed topological information were used to minimize interaction
+ vertex model and detector model dependencies.
+\end_layout
+
+\begin_layout Standard
+Machine learning is a rapidly developing field of study in which a computer
+ system can perform a certain task without explicit instructions.
+ For classification based problems, the goal is to assign two or more labels
+ to a set of input vectors.
+ Training a classifier requires a sample of pre-classified data to determine
+ which attributes of each datum can be used to best separate data of unknown
+ classification.
+ Unclassified data are then assigned a classification based on their position
+ in attribute space.
+\end_layout
+
+\begin_layout Standard
+The specific machine learning technique used in this analysis is a random
+ forest method called Boosted Decision Tree (BDT) implemented in the ROOT
+\begin_inset CommandInset citation
+LatexCommand cite
+key "BRUN199781"
+literal "false"
+
+\end_inset
+
+ Toolkit for Multivariate Analysis (TMVA) package
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Hocker:2007ht"
+literal "false"
+
+\end_inset
+
+.
+ A decision tree is a binary tree classifier that applies rectangular cuts
+ on inputs features until a stop condition is reached.
+ In order to prevent model overfitting to the training set, a set of decision
+ trees (forest) are generated by scaling misclassified events by a 
+\begin_inset Quotes eld
+\end_inset
+
+boost
+\begin_inset Quotes erd
+\end_inset
+
+ weight.
+ By averaging the results over the forest, an enhancement of the model performan
+ce is achieved.
+\end_layout
+
+\begin_layout Standard
+The inputs for the BDTs were developed from topological track information
+ in both the longitudinal and transverse directions of 
+\begin_inset Formula $\pod$
+\end_inset
+
+ tracks.
+ A traditional longitudinal track measurement is the mean energy deposition
+ in a tracking calorimeter or TPC, or the 
+\begin_inset Quotes eld
+\end_inset
+
+dE/dx
+\begin_inset Quotes erd
+\end_inset
+
+ of the track.
+ The idea behind using topological information is that they reduce neutrino
+ interaction model dependence.
+ This should also minimize the detector model dependence assuming the detector
+ systematics have been studied sufficiently with control samples.
+ The inputs I developed for the BDTs were motivated from the work done at
+ MINOS to select tracks using machine learning classifiers
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Yang2009"
+literal "false"
+
+\end_inset
+
+.
+ Many of the input features provided discriminating power for minimizing
+ ionizing particle (MIP) tracks from other non-MIP particle tracks like
+ protons.
+ Examples of the longitudinal and transverse topological features I developed
+ are shown in 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+Figure~
+\backslash
+ref{fig:Topological-track-features}
+\end_layout
+
+\end_inset
+
+.
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/P0DCC1pi/YZMeandEdx_k_byPDG.png
+	lyxscale 50
+	width 48text%
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename Figures/P0DCC1pi/YZMeandEdx_k_mipOver.png
+	lyxscale 50
+	width 48text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Longitudinal feature
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/P0DCC1pi/XZTransverseFWHMOverQmax_k_byPDG.png
+	lyxscale 50
+	width 48text%
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename Figures/P0DCC1pi/XZTransverseFWHMOverQmax_k_mipOver.png
+	lyxscale 50
+	width 48text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Transverse feature
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Topological track features developed for the machine learning classifier
+ cuts.
+ The top figure shows a longitudinal feature and the bottom shows a transverse
+ feature.
+ The left figures categorize tracks by their particle species while the
+ right figures consider MIP and not-MIP distinctions.
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+Topological Features Developed for CC-
+\begin_inset Formula $1\pi$
+\end_inset
+
+ Analysis
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Topological-track-features"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The CC-
+\begin_inset Formula $1\pi$
+\end_inset
+
+ analysis used two BDTs classifiers to make event selections.
+ The first classifier provided a continuous discriminator to classify tracks
+ as MIP-like or not.
+ Selected events are those that have two MIP tracks.
+ The second BDT classifier helps assign which track is the muon and pion
+ using a likelihood cut describe.
+\end_layout
+
+\begin_layout Standard
+In developing the BDT classifiers, cross validation studies were performed
+ to identify the best input features.
+ Cross validation is a model validation technique that assess how the model
+ generalizes to independent data sets.
+ In particular, the model is trained on a 
+\begin_inset Quotes eld
+\end_inset
+
+training
+\begin_inset Quotes erd
+\end_inset
+
+ set and it evaluated on a 
+\begin_inset Quotes eld
+\end_inset
+
+testing
+\begin_inset Quotes erd
+\end_inset
+
+ set to ensure the results are similar between them.
+ The training and testing sets were equally populated using random sampling
+ of the input data.
+ This is especially important since I needed to perform data imputation
+ for any missing information in the training, which can affect the results
+ of the model.
+ The chosen method of data imputation was to assign a handpicked default
+ value based on feature distribution.
+\end_layout
+
+\begin_layout Standard
+Also in the cross validation procedure, variable selection was determined
+ by training models with and without the variable to assess the variable's
+ importance.
+ A variable was removed from the final BDT model if removing it had minimal
+ impact on the receiver operating characteristic curve, which is a diagnostic
+ on the performance of a binary classifier.
+ This procedure dramatically reduced the number of input features selected
+ in the BDT models.
+\end_layout
+
+\begin_layout Standard
+The selection purity and efficiency for the analysis are shown in 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "tab:Selection-statistics-for"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+ Compared to the first generation analysis, the selected signal efficiency
+ increased by a factor of two from around 6% to 12%, and the its purity
+ also increased from 50% to 61%
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Assylbekov2014"
+literal "false"
+
+\end_inset
+
+.
+\begin_inset Float table
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Selection statistics for the CC-
+\begin_inset Formula $1\pi$
+\end_inset
+
+ analysis.
+ For each event passing the pre-selection cuts, to select 
+\begin_inset Formula $\numu$
+\end_inset
+
+ events, there must be one muon-like track passing the MIP BDT.
+ The result of the second track MIP BDT determined if it was selected as
+ a CC-
+\begin_inset Formula $1\pi$
+\end_inset
+
+ event or a sideband event.
+ Two sidebands, labeled 
+\begin_inset Quotes eld
+\end_inset
+
+near
+\begin_inset Quotes erd
+\end_inset
+
+ and 
+\begin_inset Quotes eld
+\end_inset
+
+far
+\begin_inset Quotes erd
+\end_inset
+
+, where used to help constrain backgrounds in the analysis 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Schwehr2018"
+literal "false"
+
+\end_inset
+
+.
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+Selection Statistics for the 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+podtitle{}
+\end_layout
+
+\end_inset
+
+ CC-1
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+pititle{}
+\end_layout
+
+\end_inset
+
+ Analysis
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:Selection-statistics-for"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="6" columns="5">
+<features booktabs="true" tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Selection
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Total events
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Signal events
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Purity
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Efficiency
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+After pre-selection
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+6258.6
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1278.2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.204
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.269
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+One MIP-like track
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3533.3
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+998.4
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.283
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.210
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Selected signal
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+970.2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+598.7
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.617
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.126
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Quotes eld
+\end_inset
+
+Near
+\begin_inset Quotes erd
+\end_inset
+
+ sideband
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+757.3
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+255.7
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.338
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.0538
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Quotes eld
+\end_inset
+
+Far
+\begin_inset Quotes erd
+\end_inset
+
+ sideband
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1805.8
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+144.0
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.0798
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.0303
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand input
+filename "momentumCorrection.tex"
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document

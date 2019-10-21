@@ -1,0 +1,252 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass extreport
+\begin_preamble
+% ams math packages
+\usepackage[cmex10]{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+
+% graphics packages
+\usepackage{graphicx} % remove pdftex if you are not compiling to pdf
+%\graphicspath{{./figures/}} % this places all graphics in the figures subdirectory
+
+% allowed graphics extensions
+% uncomment if you prefer to add extension in \includegraphics
+\DeclareGraphicsExtensions{.pdf,.png,.jpg}
+
+% allows the creation of subfigures
+\usepackage[caption=false]{subfig}
+
+% book tables are simple and look nice
+\usepackage{booktabs}
+
+% for specifying urls and links
+\usepackage{url}
+\urlstyle{same} % same style as regular text
+
+% for defining colors
+\usepackage{xcolor}
+
+%\usepackage[labelformat=empty]{caption}
+%\usepackage{subcaption}
+\usepackage{lmodern}
+\usepackage{csquotes}
+\usepackage{multirow}
+\usepackage{multicol}
+\usepackage{hepunits}
+\usepackage{hepnames}
+\usepackage{physics}
+
+\usepackage[%
+  pdfpagelabels,
+  pdfusetitle,
+  %hidelinks,
+  %colorlinks=true,
+  %pdfborder={0 0 0},
+  linkcolor=blue,
+  filecolor=magenta,
+  urlcolor=cyan,
+  pagebackref,
+  bookmarksopen,
+  bookmarksnumbered]{hyperref}
+
+\usepackage{sectsty}
+\chapterfont{\centering}
+
+\usepackage{braket}
+\end_preamble
+\use_default_options true
+\master ../T2K-TN-370.lyx
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "palatino" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format pdf2
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\pdf_title "HoganThesis"
+\pdf_author "Matthew Hogan"
+\pdf_bookmarks true
+\pdf_bookmarksnumbered true
+\pdf_bookmarksopen false
+\pdf_bookmarksopenlevel 1
+\pdf_breaklinks false
+\pdf_pdfborder false
+\pdf_colorlinks true
+\pdf_backref false
+\pdf_pdfusetitle true
+\papersize letterpaper
+\use_geometry true
+\use_package amsmath 0
+\use_package amssymb 0
+\use_package cancel 0
+\use_package esint 0
+\use_package mathdots 0
+\use_package mathtools 0
+\use_package mhchem 0
+\use_package stackrel 0
+\use_package stmaryrd 0
+\use_package undertilde 0
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 0
+\use_minted 0
+\branch Introduction
+\selected 1
+\filename_suffix 0
+\color #faf0e6
+\end_branch
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 1in
+\topmargin 1in
+\rightmargin 1in
+\bottommargin 1in
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+The receiver operating characteristic (ROC) curves for the 
+\begin_inset Formula $\pod$
+\end_inset
+
+ vs FGD-only fits are provided in this appendix.
+ They provide a graphical diagnostic to interpret each fit's sensitivity
+ in the fit parameter space.
+ The first 50 (0-49) are the ND280 flux parameters.
+ The next 50 (50-99) are the Super-Kamiokande flux parameters.
+ The final set (100 - 131) are the cross section parameters.
+\end_layout
+
+\begin_layout Standard
+The ROC curves are generated in the following manner.
+ Each ROC curve measures the agreement of the 
+\begin_inset Formula $\pod$
+\end_inset
+
+-only fit parameter estimate (
+\begin_inset Formula $\pod$
+\end_inset
+
+ coverage) as a function of the FGD-only parameter estimate (FGD coverage).
+ Since the postfit parameter uncertainties are assumed to be normally distribute
+d, two normal distributions are used to evaluate the agreement using the
+ respective fit mean and fit standard deviation.
+ Each point on the ROC curve is the integrated overlap of each normal distributi
+on.
+\end_layout
+
+\begin_layout Standard
+The level of agreement is quantified using the Gini coefficient, which measures
+ the inequality of the fit parameter space coverage.
+ A Gini coefficient of 0 indicates maximal agreement of the two parameters
+ mean and standard deviation, while a value of close to 1 indicates estimates
+ are in strong tension.
+ The coefficient is defined as the absolute difference in area between the
+ ROC curve and the diagonal (no-discrimination) line multiplied by two.
+ It is explicitly calculated as
+\begin_inset Formula 
+\[
+\begin{aligned}\text{Gini} & =2\left|\int_{0}^{1}\left(\text{ROC}(x)-x\right)dx\right|\\
+ & =\left|2\int_{0}^{1}\text{ROC}(x)dx-1\right|,
+\end{aligned}
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $\text{ROC}(x)$
+\end_inset
+
+ is the 
+\begin_inset Formula $\pod$
+\end_inset
+
+ fit parameter space ROC curve as a function of the FGD fit parameter space
+ coverage.
+ This no-discrimination line is provided in each curve for the readers convenien
+ce.
+\end_layout
+
+\begin_layout Standard
+When the ROC curve is only above (below) the no-discrimination line, that
+ means the 
+\begin_inset Formula $\pod$
+\end_inset
+
+-only fit estimate prefers parameter values larger (smaller) than the FGD-only
+ estimate.
+ If the curve crosses the line once between 
+\begin_inset Formula $(0,1)$
+\end_inset
+
+, then the estimates are nearly identical and have a small Gini coefficient.
+ If the ROC curve is diagonal, then the estimates are exactly the same with
+ a Gini coefficient of zero.
+ And finally, if the curve is a step function with the discontinuity at
+ FGD coverage = 0, the parameter estimates are very different with a Gini
+ coefficient of one.
+\end_layout
+
+\begin_layout Standard
+\begin_inset External
+	template PDFPages
+	filename /home/mhogan/Documents/graduateDisseration/Chapters/Figures/Discussion/ROC.pdf
+	extra LaTeX "nup=3x5,pages={1-131},pagecommand=\thispagestyle{plain}"
+	width 2in
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document

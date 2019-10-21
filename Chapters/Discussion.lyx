@@ -1,0 +1,3701 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass extreport
+\begin_preamble
+% ams math packages
+\usepackage[cmex10]{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+
+% graphics packages
+\usepackage{graphicx} % remove pdftex if you are not compiling to pdf
+%\graphicspath{{./figures/}} % this places all graphics in the figures subdirectory
+
+% allowed graphics extensions
+% uncomment if you prefer to add extension in \includegraphics
+\DeclareGraphicsExtensions{.pdf,.png,.jpg}
+
+% allows the creation of subfigures
+\usepackage[caption=false]{subfig}
+
+% book tables are simple and look nice
+\usepackage{booktabs}
+
+% for specifying urls and links
+\usepackage{url}
+\urlstyle{same} % same style as regular text
+
+% for defining colors
+\usepackage{xcolor}
+
+%\usepackage[labelformat=empty]{caption}
+%\usepackage{subcaption}
+\usepackage{lmodern}
+\usepackage{csquotes}
+\usepackage{multirow}
+\usepackage{multicol}
+\usepackage{hepunits}
+\usepackage{hepnames}
+\usepackage{physics}
+
+\usepackage[%
+  pdfpagelabels,
+  pdfusetitle,
+  %hidelinks,
+  %colorlinks=true,
+  %pdfborder={0 0 0},
+  linkcolor=blue,
+  filecolor=magenta,
+  urlcolor=cyan,
+  pagebackref,
+  bookmarksopen,
+  bookmarksnumbered]{hyperref}
+
+\usepackage{sectsty}
+\chapterfont{\centering}
+
+\usepackage{braket}
+\end_preamble
+\use_default_options true
+\master ../T2K-TN-370.lyx
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "palatino" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format pdf2
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\pdf_title "HoganThesis"
+\pdf_author "Matthew Hogan"
+\pdf_bookmarks true
+\pdf_bookmarksnumbered true
+\pdf_bookmarksopen false
+\pdf_bookmarksopenlevel 1
+\pdf_breaklinks false
+\pdf_pdfborder false
+\pdf_colorlinks true
+\pdf_backref false
+\pdf_pdfusetitle true
+\papersize letterpaper
+\use_geometry true
+\use_package amsmath 0
+\use_package amssymb 0
+\use_package cancel 0
+\use_package esint 0
+\use_package mathdots 0
+\use_package mathtools 0
+\use_package mhchem 0
+\use_package stackrel 0
+\use_package stmaryrd 0
+\use_package undertilde 0
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 0
+\use_minted 0
+\branch Introduction
+\selected 1
+\filename_suffix 0
+\color #faf0e6
+\end_branch
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 1in
+\topmargin 1in
+\rightmargin 1in
+\bottommargin 1in
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+This chapter serves to summarize the methods and results shown in this thesis.
+ The Tokai to Kamioka (T2K) experiment is a long baseline, neutrino oscillation
+ experiment designed to observe a 
+\begin_inset Formula $\numu$
+\end_inset
+
+ beam oscillate into 
+\begin_inset Formula $\nue$
+\end_inset
+
+.
+ With the aid of the Japan Proton Accelerator Research Complex (J-PARC),
+ a dedicated near detector called ND280 is located downstream of the neutrino
+ production source to observe the beam before oscillations occur.
+ Since the start of data collection, the fine grain detector (FGD) in ND280
+ has provided constraints on the neutrino flux and neutrino-water interaction
+ modes important to the oscillation analysis.
+ This thesis is an analysis of an independent measurement of the ND280 constrain
+t using a maximum likelihood estimate in the Beam and Near Detector Flux
+ Task Force (BANFF) framework with samples from the pi-zero detector (
+\begin_inset Formula $\pod$
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Standard
+Analysis samples have been developed with the 
+\begin_inset Formula $\pod$
+\end_inset
+
+ to capture a wide variety of interaction modes in T2K, importantly interactions
+ classified as charged current quasi-elastic (CCQE) which constitute the
+ highest cross section in the T2K neutrino energy spectrum.
+ While the 
+\begin_inset Formula $\pod$
+\end_inset
+
+ has a larger volume compared to the FGD, which means it has more neutrino
+ interactions to select, the 
+\begin_inset Formula $\pod$
+\end_inset
+
+ is less sensitive to non-CCQE interactions like CC single pion production.
+ This limitation is largely due to the design of the detector and sample
+ selection which reduce its 
+\begin_inset Formula $\left(p,\cos\theta\right)$
+\end_inset
+
+ sensitivity to the lower energy outgoing muons.
+ The systematic uncertainties inherent in the samples were controlled for
+ in a similar manner with previous BANFF analyses.
+\end_layout
+
+\begin_layout Standard
+The 
+\begin_inset Formula $\pod$
+\end_inset
+
+-only data fit shows very good agreement with the FGD-only result using
+ the same flux and cross section parameters.
+ Trends in the postfit parameters like the flux shape and the quantum mechanical
+ correlation affects on the observable cross section were observed in both
+ sets of fits.
+ 
+\end_layout
+
+\begin_layout Standard
+Other topics discussed in this chapter are presented in the following order.
+ First shown is a prediction of the oscillated samples at SK using the ND
+ constraint in 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "sec:Prediction-of-the"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+ Possible analysis improvements are discussed in 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "sec:Analysis-Improvements"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+ Finally, the prospect of a joint 
+\begin_inset Formula $\pod$
+\end_inset
+
+ and FGD fit are discussed in 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "sec:Future-Prospects:-Joint"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Section
+Prediction of the T2K Oscillation Analysis Samples
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:Prediction-of-the"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+In this section, we analyze the BANFF fit as the input for the oscillation
+ analysis.
+ We are explicitly NOT performing the oscillation analysis, but we are building
+ a prediction of the oscillated neutrino samples using the frequentist framework
+ described in the 2017 oscillation analysis publication
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Abe:2017vif"
+literal "false"
+
+\end_inset
+
+.
+ We then compare the prediction with the observed neutrino energy spectra
+ of the four CCQE-enriched samples at Super-Kamiokande (SK).
+ These samples are the FHC mode (
+\begin_inset Formula $\nu$
+\end_inset
+
+-mode) 
+\begin_inset Formula $\numu$
+\end_inset
+
+ sample, the RHC mode (
+\begin_inset Formula $\antinu$
+\end_inset
+
+-mode) 
+\begin_inset Formula $\numubar$
+\end_inset
+
+ sample, the 
+\begin_inset Formula $\nu$
+\end_inset
+
+-mode 
+\begin_inset Formula $\nue$
+\end_inset
+
+ sample, and the 
+\begin_inset Formula $\antinu$
+\end_inset
+
+-mode 
+\begin_inset Formula $\nuebar$
+\end_inset
+
+ sample.
+\end_layout
+
+\begin_layout Standard
+The SK prediction is built with the following ingredients: the flux and
+ cross section parameter estimates from the BANFF fit parameter estimates
+ and covariance matrix, the nominal set of SK detector systematics in the
+ frequentist analysis software, and the full three-flavor oscillation probabilit
+ies.
+ The full three-flavor oscillation parameters used are the same as listed
+ in TABLE II in the 2018 CP violation search paper
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Abe:2018wpn"
+literal "false"
+
+\end_inset
+
+, which are shown in 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "tab:Oscillation-parameters-used"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ for convenience.
+ The observed spectra are also taken from the 2018 CP violation search paper,
+ which had a integrated luminosity of 
+\begin_inset Formula $2.2\times10^{21}$
+\end_inset
+
+ POT.
+\end_layout
+
+\begin_layout Standard
+The spectra are shown in the following order.
+ First are the of the 
+\begin_inset Formula $\numu$
+\end_inset
+
+ CCQE and 
+\begin_inset Formula $\numubar$
+\end_inset
+
+ CCQE-enriched samples together shown in 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "fig:Predicted-reconstructed-neutrino"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+ Next is the 
+\begin_inset Formula $\nue$
+\end_inset
+
+ CCQE-enriched sample shown in 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "fig:Reconstructed-nue-CCQE-enriched"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+ Finally is the 
+\begin_inset Formula $\nuebar$
+\end_inset
+
+ CCQE-enriched sample shown in 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "fig:Reconstructed-nuebar-CCQE-enriched"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+ The integrated spectra are tabulated in 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "tab:Number-of-events-SK-CCQE"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Oscillation parameters used as inputs for studies of simulated data.
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+Oscillation Parameters Used as Inputs for Studies of Simulated Data
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:Oscillation-parameters-used"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="12" columns="3">
+<features booktabs="true" tabularvalignment="middle">
+<column alignment="left" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Parameter
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Value
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Units
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Mass hierarchy
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="1" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Normal
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\Delta m_{21}^{2}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+7.53
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $10^{-5}\text{ eV}^{2}/c^{4}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\left|\Delta m_{32}^{2}\right|$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2.509
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $10^{-3}\text{ eV}^{2}/c^{4}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\sin^{2}\theta_{23}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.528
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\sin^{2}2\theta_{12}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.846
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\sin^{2}2\theta_{13}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.0857
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\deltacp$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+-1.601
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+rad
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $e^{-}$
+\end_inset
+
+ density
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2.6
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\text{g}/\text{cm}^{3}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Baseline length
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+295
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+km
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\nu$
+\end_inset
+
+-mode luminosity
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+14.7
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $10^{20}$
+\end_inset
+
+ POT
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\antinu$
+\end_inset
+
+-mode luminosity
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+7.6
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $10^{20}$
+\end_inset
+
+ POT
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/Discussion/hNumuNumubarPrediction.png
+	lyxscale 40
+	width 80text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Prediction
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/Discussion/numu_numubar_PRL1211718022018.png
+	lyxscale 50
+	width 80text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Observed
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Reconstructed 
+\begin_inset Formula $\numu$
+\end_inset
+
+ (left) and 
+\begin_inset Formula $\numubar$
+\end_inset
+
+ (right) CCQE-enriched energy distributions at SK.
+ The top figure is the predicted spectra while the bottom is the observed
+ spectra.
+ The observed spectra is taken from the 2018 CP violation search publication
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Abe:2018wpn"
+literal "false"
+
+\end_inset
+
+.
+ 
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+Reconstructed 
+\begin_inset Formula $\numu$
+\end_inset
+
+ and 
+\begin_inset Formula $\numubar$
+\end_inset
+
+ CCQE-enriched Energy Distributions at SK
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Predicted-reconstructed-neutrino"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/Discussion/hNueFHCPrediction.png
+	lyxscale 50
+	height 1.9in
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Prediction
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/Discussion/nue_PRL1211718022018.png
+	lyxscale 25
+	height 1.9in
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Observed
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Reconstructed 
+\begin_inset Formula $\nue$
+\end_inset
+
+ CCQE-enriched energy distribution at SK.
+ The observed spectra is taken from the 2018 CP violation search publication
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Abe:2018wpn"
+literal "false"
+
+\end_inset
+
+.
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+Reconstructed 
+\begin_inset Formula $\nue$
+\end_inset
+
+ CCQE-enriched Energy Distribution at SK
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Reconstructed-nue-CCQE-enriched"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/Discussion/hNuebarRHCPrediction.png
+	lyxscale 50
+	height 1.9in
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Prediction
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/Discussion/nuebar_PRL1211718022018.png
+	lyxscale 25
+	height 1.9in
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Observed
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Reconstructed 
+\begin_inset Formula $\nuebar$
+\end_inset
+
+ CCQE-enriched energy distribution at SK.
+ The observed spectra is taken from the 2018 CP violation search publication
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Abe:2018wpn"
+literal "false"
+
+\end_inset
+
+.
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+Reconstructed 
+\begin_inset Formula $\nue$
+\end_inset
+
+ CCQE-Enriched Energy Distribution at SK
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Reconstructed-nuebar-CCQE-enriched"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Number of events expected in the SK CCQE-enriched samples.
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+Number of Events Expected in the SK CCQE-enriched Samples
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:Number-of-events-SK-CCQE"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="5" columns="5">
+<features booktabs="true" tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Prefit
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\pod$
+\end_inset
+
+-only
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+FGD-only
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Observed
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\numu$
+\end_inset
+
+ CCQE (
+\begin_inset Formula $<2.3$
+\end_inset
+
+ GeV)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+207.34
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+252.41
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+228.07
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+201
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\numubar$
+\end_inset
+
+ CCQE (
+\begin_inset Formula $<2.3$
+\end_inset
+
+ GeV)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+49.67
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+58.14
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+52.47
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+57
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\nue$
+\end_inset
+
+ CCQE (
+\begin_inset Formula $<1.3$
+\end_inset
+
+ GeV)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+65.61
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+83.01
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+74.71
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+74
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\nuebar$
+\end_inset
+
+ CCQE (
+\begin_inset Formula $<1.3$
+\end_inset
+
+ GeV)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+7.74
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+9.03
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+8.15
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+7
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+We observe that each 
+\begin_inset Formula $\pod$
+\end_inset
+
+-only predicted spectrum is systematically higher than each FGD-only predicted
+ spectrum.
+ However, the more interesting differences are the integrated prediction.
+ While the FGD-only prediction has better agreement with both the 
+\begin_inset Formula $\nue$
+\end_inset
+
+ and 
+\begin_inset Formula $\numu$
+\end_inset
+
+ CCQE samples, the 
+\begin_inset Formula $\pod$
+\end_inset
+
+-only prediction is agrees well with the 
+\begin_inset Formula $\numubar$
+\end_inset
+
+ CCQE sample.
+ It is difficult to judge the agreement of the 
+\begin_inset Formula $\nuebar$
+\end_inset
+
+ CCQE sample due to small statistics.
+ However, this all suggests that including the 
+\begin_inset Formula $\pod$
+\end_inset
+
+ data samples can improve the ND constraint in RHC mode.
+\end_layout
+
+\begin_layout Section
+Analysis Improvements
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:Analysis-Improvements"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Looking forward, the 
+\begin_inset Formula $\pod$
+\end_inset
+
+-only analysis can be improved significantly.
+ The 
+\begin_inset Formula $\pod$
+\end_inset
+
+ selections in this thesis are simplistic compared to the recent developments
+ in the T2K experiment.
+ The author was a part of the second generation cross section analysis of
+ single pion production in the 
+\begin_inset Formula $\pod$
+\end_inset
+
+, which utilized deep learning techniques, to select a relatively pure CC-
+\begin_inset Formula $1\pi$
+\end_inset
+
+ sample.
+ These details are provided in Appendix 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "app:podcc1pi"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+ Additionally, the 
+\begin_inset Formula $\pod$
+\end_inset
+
+ 
+\begin_inset Formula $\numubar$
+\end_inset
+
+ CC-
+\begin_inset Formula $0\pi$
+\end_inset
+
+ analysis
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Campbell2018a"
+literal "false"
+
+\end_inset
+
+ was able to achieve a high-purity CCQE-like sample using almost identical
+ cuts as presented in this thesis.
+ However, both the CC-
+\begin_inset Formula $1\pi$
+\end_inset
+
+ and CC-
+\begin_inset Formula $0\pi$
+\end_inset
+
+ analyses use cuts that are not yet available in the BANFF framework due
+ to technical difficulties and lack of expertise in the collaboration.
+\end_layout
+
+\begin_layout Standard
+Also more validation studies could be done to understand the sensitivity
+ of the 
+\begin_inset Formula $\pod$
+\end_inset
+
+ samples.
+ A test of the biases of the fit parameters requires fitting an ensemble
+ of 
+\begin_inset Quotes eld
+\end_inset
+
+fake data
+\begin_inset Quotes erd
+\end_inset
+
+ sets, which are variations of the Asimov set.
+ This all requires significant amount of computational time to complete
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+Also not to mention the carbon footprint left afterwards.
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+There are other possible improvements to the ND constraint analysis using
+ the methods developed for machine learning applications.
+ The following two sections are on topics to improve the BANFF fit analysis
+ in its current state.
+ These methods are quite general and rely on the fundamentals of parameter
+ estimation techniques in statistics.
+ A section summary is provided to summarize their details.
+\end_layout
+
+\begin_layout Standard
+First is a discussion on applying a different regularization strength.
+ Second is a method to reduce the number of effective bin normalization
+ parameters using a different penalty function called the Lasso.
+\end_layout
+
+\begin_layout Subsection
+Regularization Strength
+\end_layout
+
+\begin_layout Standard
+Recall that the BANFF ND constraint test statistic is defined as
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\begin{aligned}\chi_{\text{ND280}}^{2} & =\chi_{\text{LLR}}^{2}\left(\vec{N}^{d},\vec{N}^{p}\right)+\chi_{\text{Penalty}}^{2}\left(\Delta\vec{y}\right)\end{aligned}
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $\vec{N}^{d}$
+\end_inset
+
+ and 
+\begin_inset Formula $\vec{N}^{p}$
+\end_inset
+
+ are the binned data and prediction measurements, respectively, and 
+\begin_inset Formula $\Delta\vec{y}$
+\end_inset
+
+ is the difference between postfit and prefit parameter values in the fit.
+ This equation is similar to the general class of parameter regression using
+ regularization 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "springer_series978-0-387-84858-7"
+literal "false"
+
+\end_inset
+
+ 
+\begin_inset Formula 
+\begin{equation}
+\begin{aligned}\hat{\beta} & =\underset{f\in\mathcal{F},\beta\in\mathbb{R}^{d}}{\text{argmin}}\left\{ L\left(\eta,f\left(\vec{\beta}\right)\right)+\lambda J\left(f\right)\right\} \end{aligned}
+,\label{eq:GeneralRegularization}
+\end{equation}
+
+\end_inset
+
+where 
+\begin_inset Formula $L$
+\end_inset
+
+ is a loss function
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+\begin_inset Formula $L$
+\end_inset
+
+ is also called an objective function.
+\end_layout
+
+\end_inset
+
+ of measurements 
+\begin_inset Formula $\eta$
+\end_inset
+
+, 
+\begin_inset Formula $J\left(f\right)$
+\end_inset
+
+ is a penalty function, 
+\begin_inset Formula $f\left(\vec{\beta}\right)$
+\end_inset
+
+ is a 
+\begin_inset Formula $d$
+\end_inset
+
+-dimensional function of 
+\begin_inset Formula $\vec{\beta}$
+\end_inset
+
+, 
+\begin_inset Formula $\lambda$
+\end_inset
+
+ is the regularization parameter, and 
+\begin_inset Formula $\mathcal{F}$
+\end_inset
+
+ is a space of function on which 
+\begin_inset Formula $J\left(f\right)$
+\end_inset
+
+ is defined.
+ In regularized regression problems, the penalty term serves to solve an
+ ill posed problem by adding external information.
+ Similarly, the regularization parameter controls the importance of the
+ penalty.
+ We recognize that the loss function 
+\begin_inset Formula $L$
+\end_inset
+
+ is the log-likelihood ratio term 
+\begin_inset Formula $\chi_{\text{LLR}}^{2}$
+\end_inset
+
+, and penalty term is 
+\begin_inset Formula $J=\chi_{\text{Penalty}}^{2}$
+\end_inset
+
+ with regularization strength 
+\begin_inset Formula $\lambda=1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+In defining the BANFF test statistic in 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "chap:BANFF-Likelihood"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, the regularization term 
+\begin_inset Formula $\lambda$
+\end_inset
+
+ was set to 1 without justification.
+ We can test the effectiveness of this choice using cross-validation.
+ Cross-Validation provides an estimate on the prediction error as well as
+ determines the 
+\begin_inset Quotes eld
+\end_inset
+
+optimal
+\begin_inset Quotes erd
+\end_inset
+
+ choice of regularization.
+ In cross-validation, the input data is randomly split into 
+\begin_inset Formula $K$
+\end_inset
+
+ equal sized partitions.
+ For the 
+\begin_inset Formula $k\in K$
+\end_inset
+
+ data partition, we fit the model to the other 
+\begin_inset Formula $K-1$
+\end_inset
+
+ parts of the data and calculate a prediction error 
+\begin_inset Formula $P$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+In this verification of the regularization strength, the test statistic
+ is altered to include a regularization term
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\begin{aligned}\chi_{\text{ND280}}^{2} & =\chi_{\text{LLR}}^{2}+\lambda\chi_{\text{Penalty}}^{2}\left(\vec{y}\right)\\
+ & =\chi_{\text{LLR}}^{2}+\lambda\left(\vec{y}-\vec{y}_{0}\right)^{T}V^{-1}\left(\vec{y}-\vec{y}_{0}\right),
+\end{aligned}
+\label{eq:RegularizedDeltaChi2ND280}
+\end{equation}
+
+\end_inset
+
+and the data is split into 
+\begin_inset Formula $K=5$
+\end_inset
+
+ partitions.
+ The prediction error, 
+\begin_inset Formula $P$
+\end_inset
+
+, in this analysis is defined as 
+\begin_inset Formula 
+\begin{equation}
+P_{k}\left(\left(\chi_{\text{train}}^{2}\right)^{-k},\left(\chi_{\text{test}}^{2}\right)^{k}\right)=\left|\left(\chi_{\text{train}}^{2}\right)^{-k}-\left(\chi_{\text{test}}^{2}\right)^{k}\right|\label{eq:predictionerror}
+\end{equation}
+
+\end_inset
+
+where 
+\begin_inset Formula $\left(\chi_{\text{train}}^{2}\right)^{-k}$
+\end_inset
+
+ is the fitted model statistic on all but the 
+\begin_inset Formula $k$
+\end_inset
+
+th partition, and 
+\begin_inset Formula $\left(\chi_{\text{test}}^{2}\right)^{k}$
+\end_inset
+
+ is prediction from the fitted model on the 
+\begin_inset Formula $k$
+\end_inset
+
+th partition.
+ This definition of 
+\begin_inset Formula $P$
+\end_inset
+
+ is useful since the penalty terms cancel, leaving only the difference in
+ log-likelihood terms.
+ The optimal regularization strength is determined by minimizing the cross-valid
+ation error, 
+\begin_inset Formula 
+\begin{equation}
+\begin{aligned}\text{CV}\left(\lambda\right) & =\left\langle \left|\chi_{\text{train}}^{2}-\chi_{\text{test}}^{2}\right|\right\rangle \\
+ & =\frac{1}{5}\sum_{k=1}^{5}P_{k}\left(\left(\chi_{\text{train}}^{2}\right)^{-k},\left(\chi_{\text{test}}^{2}\right)^{k}\right),
+\end{aligned}
+\label{eq:CVerror}
+\end{equation}
+
+\end_inset
+
+which is the average prediction error.
+\end_layout
+
+\begin_layout Standard
+Results of the cross-validation are shown in 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "fig:Cross-validation"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+ We see that while the penalty strength of 
+\begin_inset Formula $\lambda=1$
+\end_inset
+
+ nearly minimizes the cross-validation error, slightly larger penalties
+ are preferred.
+ The cross-validation error curve is minimized roughly at 
+\begin_inset Formula $\lambda=1.4$
+\end_inset
+
+, and it is roughly quadratic in the neighborhood around the minimum.
+ Therefore, a more regularized solution is preferred with the data sample.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/Discussion/CrossValidationScan.png
+	width 45text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Wide view
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/Discussion/CrossValidationScanZoom.png
+	width 45text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Narrow view
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Cross-validation curve for the BANFF fit regularization strength.
+ Figure (a) examines the cross-validation error for a wide range of regularizati
+on strengths.
+ Figure (b) zooms in on the minimized error.
+ The error bars shown are statistical only.
+ 
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+Cross-Validation Curve for the BANFF Fit Regularization Strength.
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Cross-validation"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Another data fit with 
+\begin_inset Formula $\lambda=1.4$
+\end_inset
+
+ was performed with the following results.
+ The MINUIT optimization routine required 175602 (149661) iterations to
+ find the global minimum at 
+\begin_inset Formula $\hat{\chi}_{\text{ND}280}^{2}=1344.89$
+\end_inset
+
+ (
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $1412.28$
+\end_inset
+
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+) with the regularized (non-regularized) penalty term.
+ The flux parameters have significantly reduced uncertainties compared to
+ the 
+\begin_inset Formula $\lambda=1$
+\end_inset
+
+ result.
+ The cross section parameters are relatively the same as before except for
+ the CC coherent uncertainties which are much smaller.
+ The was no observed changes in the bin normalization parameters as well.
+ This suggests that the flux covariance matrix input needs to reexamined
+ for future BANFF fit analyses.
+ The postfit parameters are presented in Appendix 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "app:Regularized-Solution"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+Alternative Penalty
+\end_layout
+
+\begin_layout Standard
+Consider solving the linear regression problem 
+\begin_inset Formula 
+\begin{equation}
+\vec{\eta}=X\vec{\beta}\label{eq:LinearProblem}
+\end{equation}
+
+\end_inset
+
+where 
+\begin_inset Formula $X$
+\end_inset
+
+ is a 
+\begin_inset Formula $p\times d$
+\end_inset
+
+ matrix of 
+\begin_inset Formula $d$
+\end_inset
+
+ model features from 
+\begin_inset Formula $p$
+\end_inset
+
+ measurements, 
+\begin_inset Formula $\vec{\beta}$
+\end_inset
+
+ is a vector of regression weights with 
+\begin_inset Formula $p$
+\end_inset
+
+ rows, and 
+\begin_inset Formula $\vec{\eta}$
+\end_inset
+
+ is a response vector.
+ There are many approaches to solving 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:LinearProblem"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ using 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:GeneralRegularization"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+ A popular solution is the 
+\begin_inset Formula $l_{2}$
+\end_inset
+
+-regularization constraint
+\begin_inset CommandInset citation
+LatexCommand cite
+key "springer_series978-0-387-84858-7"
+literal "false"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\underset{\vec{\beta}\in\mathbb{R}^{d}}{\text{argmin}}\left\{ L\left(\vec{\eta},\vec{\beta}\right)+\lambda\sum_{i}\left|\beta_{i}\right|^{2}\right\} \label{eq:RidgeRegressionGeneral}
+\end{equation}
+
+\end_inset
+
+where the sum of squares of the weights 
+\begin_inset Formula $\beta_{i}$
+\end_inset
+
+ sets the constraint and 
+\begin_inset Formula $L$
+\end_inset
+
+ is the loss function.
+ A popular choice of 
+\begin_inset Formula $L$
+\end_inset
+
+ is using ordinary least squares 
+\begin_inset Formula 
+\[
+L\left(\vec{\eta},\vec{\beta}\right)=\sum_{j}\left|\vec{\eta}-X\vec{\beta}\right|^{2},
+\]
+
+\end_inset
+
+which provides the lowest variance in parameter weights.
+ 
+\end_layout
+
+\begin_layout Standard
+With some algebra, we can rewrite the BANFF test statistic 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:minBANFFDeltaChiSqr"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ into the form of 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:RidgeRegressionGeneral"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+ We again recognize 
+\begin_inset Formula $\chi_{\text{LLR}}^{2}$
+\end_inset
+
+ is the loss function 
+\begin_inset Formula $L$
+\end_inset
+
+ which leaves the penalty term to be tackled.
+ The (inverse) covariance matrix is symmetric and real and can be decomposed
+ as
+\begin_inset Formula 
+\[
+V^{-1}=U^{T}\Lambda U
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $U$
+\end_inset
+
+ and 
+\begin_inset Formula $\Lambda$
+\end_inset
+
+ are the matrix of the eigenvectors and eigenvalues, respectively, of 
+\begin_inset Formula $V^{-1}$
+\end_inset
+
+.
+ Since the eigenvalues are real and positive, the matrix 
+\begin_inset Formula $\Lambda$
+\end_inset
+
+ can be expressed as the square of a diagonal matrix 
+\begin_inset Formula $\Gamma$
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\Lambda=\Gamma^{2}.
+\]
+
+\end_inset
+
+We can now rewrite the penalty term as an inner product of two vectors.
+ 
+\begin_inset Formula 
+\[
+\begin{aligned}\chi_{\text{Penalty}}^{2} & =\left(\Delta\vec{y}\right)^{T}V^{-1}\left(\Delta\vec{y}\right)\\
+ & \left(\Delta\vec{y}\right)^{T}U^{T}\Gamma^{2}U\left(\Delta\vec{y}\right)\\
+ & =\left(\Gamma U\Delta\vec{y}\right)^{T}\left(\Gamma U\Delta\vec{y}\right).
+\end{aligned}
+\]
+
+\end_inset
+
+If we let 
+\begin_inset Formula $\vec{\psi}=\Gamma U\Delta\vec{y}$
+\end_inset
+
+, then the penalty term becomes
+\begin_inset Formula 
+\[
+\begin{aligned}\chi_{\text{Penalty}}^{2} & =\left(\vec{\psi}\right)^{T}\vec{\psi}=\sum_{j}\left|\psi_{j}\right|^{2}\end{aligned}
+\]
+
+\end_inset
+
+and test statistic is now
+\begin_inset Formula 
+\begin{equation}
+\begin{aligned}\chi_{\text{ND280}}^{2} & =\chi_{\text{LLR}}^{2}\left(N^{d},N^{p}\right)+\left|\left|\psi\right|\right|_{2}^{2}\end{aligned}
+,\label{eq:DeltaChiSqND280RidgeRegressionForm}
+\end{equation}
+
+\end_inset
+
+where 
+\begin_inset Formula $\left|\left|\ \right|\right|_{2}^{2}$
+\end_inset
+
+ is shorthand for the 
+\begin_inset Formula $l_{2}$
+\end_inset
+
+-regularization constraint sum of squares.
+ We see that the BANFF test statistic is indeed a 
+\begin_inset Formula $l_{2}$
+\end_inset
+
+-regularized solution with 
+\begin_inset Formula $\Delta\vec{y}$
+\end_inset
+
+, recast as 
+\begin_inset Formula $\vec{\psi}$
+\end_inset
+
+, acting as the parameter weight vector and has the regularization strength
+ 
+\begin_inset Formula $\lambda=1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Consider now another solution to 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:LinearProblem"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ using the 
+\begin_inset Formula $l_{1}$
+\end_inset
+
+-regularization constraint or least absolute shrinkage and selection operator
+ (Lasso)
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+The Lasso or 
+\begin_inset Formula $l_{1}$
+\end_inset
+
+-regularization constraint is commonly employed in parameter estimation
+ problems in linear systems.
+ The Lasso has been shown to work with generalized linear models
+\begin_inset CommandInset citation
+LatexCommand cite
+key "JSSv033i01"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\underset{\vec{\beta}\in\mathbb{R}^{d}}{\text{argmin}}\left\{ L\left(\vec{\eta},\vec{\beta}\right)+\lambda\left|\left|\beta\right|\right|_{1}\right\} ,\label{eq:LassoRegressionGeneral}
+\end{equation}
+
+\end_inset
+
+where 
+\begin_inset Formula $\left|\left|\ \right|\right|_{1}$
+\end_inset
+
+ indicates the sum of absolute values of the parameter weight terms.
+ What is unique about the Lasso is its ability to promote model solutions
+ with few nonzero coefficient weights, sometimes called sparse solutions.
+ In other words, predictor parameters with no model impact are excluded
+ in the solution using the 
+\begin_inset Formula $l_{1}$
+\end_inset
+
+-regularized constraint.
+ Thus the Lasso has the advantage of providing an interpretable model in
+ situations with very high parameter spaces.
+ However, the Lasso does not handle highly correlated variables very well.
+ This is overcome by combining the Lasso with 
+\begin_inset Formula $l_{2}$
+\end_inset
+
+-regularization which is called the elastic net constraint
+\begin_inset Formula 
+\[
+\underset{\vec{\beta}\in\mathbb{R}^{d}}{\text{argmin}}\left\{ L\left(\vec{\eta},\vec{\beta}\right)+\lambda\left(\frac{1}{2}\left(1-\alpha\right)\left|\left|\beta_{i}\right|\right|_{2}^{2}+\alpha\left|\left|\beta_{i}\right|\right|_{1}\right)\right\} ,
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ is the 
+\begin_inset Quotes eld
+\end_inset
+
+budget
+\begin_inset Quotes erd
+\end_inset
+
+ between the Lasso and 
+\begin_inset Formula $l_{2}$
+\end_inset
+
+-regularization.
+ The results of using the Lasso and elastic net with highly correlated variables
+ is shown in 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "fig:The-Lasso-vs-elastic-net"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+ The elastic net controls for strong within-group correlations and has a
+ unique solution.
+ Further details about the Lasso and elastic net can be found in the following
+ reference 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "alma991031702535903361"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Figures/Discussion/LassoVsElasticNet.png
+	lyxscale 50
+	width 75text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+The Lasso vs elastic net constraint.
+ Six variables are shown and the highly correlated variables are in groups
+ of three.
+ The Lasso estimate, left, estimate exhibits erratic behavior as the regularizat
+ion strength 
+\begin_inset Formula $\lambda$
+\end_inset
+
+ is varied.
+ The elastic net, right, pulls highly correlated variables together.
+ In both panels, the vertical axis is the magnitude of the parameter weights
+ (coefficients), the bottom horizontal axis is the regularization strength
+ as measured by the estimate
+\begin_inset Formula $\left|\left|\hat{\beta}\right|\right|_{1}$
+\end_inset
+
+, and top horizontal axis is the count of non-zero parameter weights.
+ This figure was taken directly from the following reference
+\begin_inset CommandInset citation
+LatexCommand cite
+key "alma991031702535903361"
+literal "false"
+
+\end_inset
+
+.
+ 
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+The Lasso vs Elastic Net Constraint
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:The-Lasso-vs-elastic-net"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+We can potentially reduce the dimensionality of the ND constraint by utilizing
+ the elastic net.
+ Using the elastic net constraint provides a data-driven method to determine
+ the number of important bin normalizations in the analysis.
+ The method to define the fit binning described in 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "chap:P0DinBANFF"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ would be unchanged.
+ What changes is that instead of merging fit bins prior to the fit, the
+ elastic net determines which bin normalizations are important or not important.
+ Along with cross-validation, fit bins with minimal to no impact on the
+ fit can be excluded or combined with important fit bins.
+ Then the best fit parameters and covariance matrix using the current BANFF
+ machinery can still be found.
+\end_layout
+
+\begin_layout Standard
+Another possibility in the future is for the BANFF fit to use the elastic
+ net to directly estimate the flux and cross section parameters.
+ The challenge with this approach is that using non-Gaussian priors, the
+ covariance matrix is no longer calculable using the Hess matrix.
+ This is a general critique of the BANFF fit postfit error estimates since
+ there are non-Gaussian priors for many of the cross section parameters.
+ Instead, bootstrap methods could be employed to infer the parameter covariances.
+ This is further discussed in the following reference 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "springer_series978-0-387-84858-7"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+Analysis Improvement Summary
+\end_layout
+
+\begin_layout Standard
+We have explored topics that can potentially improve the BANFF fit analysis.
+ Improved sensitivity to CC-
+\begin_inset Formula $0\pi$
+\end_inset
+
+ and CC-
+\begin_inset Formula $1\pi$
+\end_inset
+
+ model parameters using already developed 
+\begin_inset Formula $\pod$
+\end_inset
+
+ selections is possible if the BANFF software is updated.
+ We also examined two topics developed in machine learning practices to
+ improve parameter estimation.
+ The first was a study on the strength of the penalty term.
+ It was shown that we can find a tuning, or regularization, parameter for
+ the penalty term that reduces the parameter variance but at cost of some
+ parameter bias.
+ The second topic was a general discussion on using a different BANFF fit
+ test statistic called the Lasso.
+ The Lasso has the attractive feature, without user input, of determining
+ which parameters are unimportant in a model fit.
+ The implication here is that the number bin normalization parameters in
+ the BANFF fit can be effectively shrunk using the data itself.
+\end_layout
+
+\begin_layout Section
+Future Prospects: Joint 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+podtitle{}
+\end_layout
+
+\end_inset
+
++FGD Fit
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:Future-Prospects:-Joint"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+There are potential improvements in a 
+\begin_inset Quotes eld
+\end_inset
+
+joint
+\begin_inset Quotes erd
+\end_inset
+
+ 
+\begin_inset Formula $\pod$
+\end_inset
+
++FGD BANFF fit for the T2K experiment.
+ As shown in the previous chapter, the number of neutrino-carbon and neutrino-ox
+ygen events can be significantly increased by including the 
+\begin_inset Formula $\pod$
+\end_inset
+
+ data.
+ This will enhance the fit's sensitivity, and possibly improve constraints
+ on poorly constrained parameters like that of the 2p2h interaction.
+ There is an additional observed tension in each of the predicted SK sample
+ spectrum between the 
+\begin_inset Formula $\pod$
+\end_inset
+
+-only and FGD-only fits, which needs to be resolved.
+\end_layout
+
+\begin_layout Standard
+However, since the fits were performed on different T2K run periods, an
+ equal POT exposure comparison is useful here.
+ Proposing to run a 
+\begin_inset Quotes eld
+\end_inset
+
+joint
+\begin_inset Quotes erd
+\end_inset
+
+ 
+\begin_inset Formula $\pod$
+\end_inset
+
++FGD ND constraint using T2K runs 2 - 8, the updated neutrino-nucleus exposures
+ are given in 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "tab:Neutrino-exposure-P0DFGD-EqualPOT"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+ We see that while the number of neutrino-carbon events is still larger
+ in the 
+\begin_inset Formula $\pod$
+\end_inset
+
+.
+ However, the 
+\begin_inset Formula $\pod$
+\end_inset
+
+ has 25% fewer neutrino-oxygen events in FHC mode and 9% more in RHC mode.
+ We can estimate the fractional statistical error (
+\begin_inset Formula $\delta N$
+\end_inset
+
+) reduction in a joint fit using the data from 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "tab:Neutrino-exposure-P0DFGD-EqualPOT"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ assuming the FGD fit is the nominal ND constraint.
+ The fractional errors decrease approximately by
+\begin_inset Formula 
+\[
+\begin{aligned}\delta N_{^{12}C}^{\text{FGD1-FHC}} & =\frac{1}{\sqrt{N_{^{12}C}^{\text{FGD1-FHC}}}}\overset{+\pod\text{ Air}}{\longrightarrow}\frac{1}{\sqrt{(1+2.01)N_{^{12}C}^{\text{FGD1-FHC}}}}\sim\frac{1}{\sqrt{3.01}}\approx0.576\\
+\delta N_{^{16}O}^{\text{FGD2-FHC}} & =\frac{1}{\sqrt{N_{^{16}O}^{\text{FGD2-FHC}}}}\overset{+\pod\text{ Water}}{\longrightarrow}\frac{1}{\sqrt{(1+0.72)N_{^{12}C}^{\text{FGD1-FHC}}}}\sim\frac{1}{\sqrt{1.72}}\approx0.762\\
+\delta N_{^{12}C}^{\text{FGD1-RHC}} & =\frac{1}{\sqrt{N_{^{12}C}^{\text{FGD1-RHC}}}}\overset{+\pod\text{ Air}}{\longrightarrow}\frac{1}{\sqrt{(1+1.60)N_{^{12}C}^{\text{FGD1-RHC}}}}\sim\frac{1}{\sqrt{2.60}}\approx0.620\\
+\delta N_{^{16}O}^{\text{FGD2-RHC}} & =\frac{1}{\sqrt{N_{^{16}O}^{\text{FGD2-RHC}}}}\overset{+\pod\text{ Water}}{\longrightarrow}\frac{1}{\sqrt{(1+1.04)N_{^{12}C}^{\text{FGD2-RHC}}}}\sim\frac{1}{\sqrt{2.04}}\approx0.700,
+\end{aligned}
+\]
+
+\end_inset
+
+where combinations of FGD1/2 and FHC/RHC represent the FGD in the different
+ beam modes, and an right-pointing arrow indicates adding the 
+\begin_inset Formula $\pod$
+\end_inset
+
+ data.
+ These results indicate a fractional statistical error reductions around
+ 
+\begin_inset Formula $1/\sqrt{2}$
+\end_inset
+
+ for both neutrino-oxygen events and also potentially stronger flux constraint
+ from higher statistics.
+\end_layout
+
+\begin_layout Standard
+Employing both the FGD and 
+\begin_inset Formula $\pod$
+\end_inset
+
+ in a joint BANFF fit was attempted, but the fit failed to converge due
+ to machine precision limits.
+ Including both detectors with the FGD parameterization described in reference
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Bienstock2017"
+literal "false"
+
+\end_inset
+
+ more than doubles the number of parameters and events than a single detector-on
+ly fit.
+ This not only requires more iterations to ensure the test statistic global
+ minimum is found, but also requires more calculations per iteration as
+ well.
+ For instance, the required time to ensure the joint 
+\begin_inset Formula $\pod$
+\end_inset
+
++FGD Asimov fit started at the global minimum took 10 times larger than
+ the 
+\begin_inset Formula $\pod$
+\end_inset
+
+-only Asimov fit.
+ So parameter shrinkage must be performed on both analyses if reasonable
+ computational speed and maximum statistical power are desired in the BANFF
+ fit.
+ This is further discussed in Appendix 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "chap:Computing-Resources"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{landscape}%
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Neutrino-nucleon exposure on target elements in a joint 
+\begin_inset Formula $\pod$
+\end_inset
+
+ and FGD analysis using T2K runs 2 - 8.
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:Neutrino-exposure-P0DFGD-EqualPOT"
+
+\end_inset
+
+
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+Neutrino-Nucleon Exposure on Target Elements in a 
+\begin_inset Formula $\pod$
+\end_inset
+
++FGD Joint Fit
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="10" columns="7">
+<features booktabs="true" tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell multirow="3" alignment="center" valignment="middle" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Detector
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="1" alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+POT 
+\begin_inset Formula $\left(10^{20}\right)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+kg POT
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="1" alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\pod$
+\end_inset
+
+-to-FGD (kg POT)
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multirow="4" alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+FHC
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+RHC
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\left(10^{24}\right)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+ce{^{12}C}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+ce{^{16}O}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+other
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\pod$
+\end_inset
+
+ Water-out
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+7.872
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+-
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2.81
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="3" alignment="center" valignment="middle" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2.01
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="3" alignment="center" valignment="middle" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+-
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="3" alignment="center" valignment="middle" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+4.64
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+FGD1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+11.529
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+-
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1.14
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="4" alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="4" alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="4" alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\pod$
+\end_inset
+
+ Water-In
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3.657
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+-
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2.00
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="3" alignment="center" valignment="middle" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+5.36
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="3" alignment="center" valignment="middle" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.724
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="3" alignment="center" valignment="middle" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+4.06
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+FGD2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+11.529
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+-
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1.12
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="4" alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="4" alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="4" alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\pod$
+\end_inset
+
+ Water-out
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+-
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3.382
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1.207
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="3" alignment="center" valignment="middle" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1.60
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="3" alignment="center" valignment="middle" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+-
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="3" alignment="center" valignment="middle" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3.69
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+FGD1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+-
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+6.234
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.614
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="4" alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="4" alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="4" alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\pod$
+\end_inset
+
+ Water-In
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+-
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2.852
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1.56
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="3" alignment="center" valignment="middle" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+7.72
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="3" alignment="center" valignment="middle" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1.04
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="3" alignment="center" valignment="middle" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+5.85
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+FGD2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+-
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+6.234
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.606
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="4" alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="4" alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="4" alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{landscape}%
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document
